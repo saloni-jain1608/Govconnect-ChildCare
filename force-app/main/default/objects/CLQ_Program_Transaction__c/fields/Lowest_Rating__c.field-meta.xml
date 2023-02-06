@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lowest_Rating__c</fullName>
+    <description>DrawLoop: Created for Forms &amp; Reports.</description>
+    <externalId>false</externalId>
+    <formula>MIN( 
+VALUE( Learning_And_Development_Domain_Rating__c) ,
+  VALUE(A_LP_Domain_Ratings__c) , 
+VALUE(SQ_PD_Domain_Rating__c) , 
+VALUE(F_CP_Domain_Ratings__c) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lowest Rating</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

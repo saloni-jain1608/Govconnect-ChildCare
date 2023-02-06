@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values1</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Returned for Revision__Not Submitted==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Returned for Revision__Submitted==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Returned for Revision__Under Reviewer Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Returned for Revision__Returned for Revision==Returned for Revision**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">Case===&gt;Not Submitted==Not Submitted
+Case===&gt;Submitted==Submitted
+Case===&gt;Under Review==Under Review
+Case===&gt;Complete==Complete
+Case===&gt;Pending Approval==Pending Approval
+Case===&gt;Return to Specialist/Reviewer==Under Review</value>
+    </values>
+</CustomMetadata>

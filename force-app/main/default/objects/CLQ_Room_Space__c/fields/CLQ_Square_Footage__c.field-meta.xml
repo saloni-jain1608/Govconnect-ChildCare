@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Square_Footage__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(ISPICKVAL(CLQ_Room_Space_Shape__c,&apos;Square/Rectangle/L-Shaped&apos;) ,(((CLQ_Width_Feet__c * 12+  CLQ_Width_Inches__c ) * ( CLQ_Length_Feet__c * 12 +  CLQ_Length_Inches__c )) + 
+((CLQ_Width2_Feet__c * 12+  CLQ_Width2_Inches__c  ) * (  CLQ_Length2_Feet__c * 12 +   CLQ_Length2_Inches__c )))/144,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Square Footage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

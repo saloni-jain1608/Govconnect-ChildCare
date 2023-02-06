@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Relationship_cannot_be_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(CLQ_Role__c,&apos;Resident&apos;),
+NOT(ISPICKVAL( Relationship__c ,&apos;Related&apos;)),NOT(ISPICKVAL(Relationship__c,&apos;Not related&apos;)))</errorConditionFormula>
+    <errorDisplayField>Relationship__c</errorDisplayField>
+    <errorMessage>Relationship cannot be Blank if the Role is &apos;Resident&apos;.</errorMessage>
+</ValidationRule>

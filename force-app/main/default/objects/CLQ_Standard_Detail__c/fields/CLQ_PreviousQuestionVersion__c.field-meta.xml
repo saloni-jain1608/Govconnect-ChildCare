@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_PreviousQuestionVersion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Previous Question Version</description>
+    <externalId>false</externalId>
+    <label>Previous Question Version</label>
+    <referenceTo>CLQ_Standard_Detail__c</referenceTo>
+    <relationshipLabel>Previous Question Version</relationshipLabel>
+    <relationshipName>Standard_Details1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

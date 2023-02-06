@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Inspection_Date_is_Required</fullName>
+    <active>true</active>
+    <description>If the follow inspection required is &apos;Yes&apos; inspection follow up date is required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(CLQ_Is_Follow_Up_Inspection_Required__c,&apos;Yes&apos;), ISNULL(CLQ_Follow_Up_Inspection_Date__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Follow_Up_Inspection_Date__c</errorDisplayField>
+    <errorMessage>Follow Up Inspection Date is Required.</errorMessage>
+</ValidationRule>

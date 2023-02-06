@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Approval previously terminated within la</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Approval previously terminated within last 2 years?</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Approval_terminated_2_years__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Genehmigung bereits innerhalb der letzten 2 Jahre beendet?</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Role__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿La aprobación terminó previamente en los últimos 2 años?</value>
+    </values>
+</CustomMetadata>

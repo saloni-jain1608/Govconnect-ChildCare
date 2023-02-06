@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reason_for_Closure__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Closure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Revoked</fullName>
+                <default>false</default>
+                <label>Revoked</label>
+            </value>
+            <value>
+                <fullName>ODJFS Withdrawal</fullName>
+                <default>false</default>
+                <label>ODJFS Withdrawal</label>
+            </value>
+            <value>
+                <fullName>CDJFS Withdrawal</fullName>
+                <default>false</default>
+                <label>CDJFS Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Voluntary Closure</fullName>
+                <default>false</default>
+                <label>Voluntary Closure</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Recommendation Closed</fullName>
+                <default>false</default>
+                <label>Recommendation Closed</label>
+            </value>
+            <value>
+                <fullName>Created in Error</fullName>
+                <default>false</default>
+                <label>Created in Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

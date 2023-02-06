@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "7c2df5a2-5c68-4aff-94b2-1e0417f2fd6b",
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "configurationTags" : [ ],
+  "id" : "c97a2310-0a46-4684-bd10-76406ae01dbc",
+  "label" : "Home Landing Page",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-home-landing-page",
+  "type" : "route",
+  "urlPrefix" : "home-landing-page"
+}

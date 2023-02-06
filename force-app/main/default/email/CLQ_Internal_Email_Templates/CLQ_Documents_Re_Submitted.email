@@ -1,0 +1,7 @@
+{!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c} has resubmitted documents that were returned for revision for {!CLQ_Program_Transaction__c.clq_recordtypename__c} {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c}
+
+Contact the Child Care Help Desk for additional assistance at {!$Label.ChildHelpDeskNum}.
+
+The {!$Label.StateName} Child Licensing and Quality System Team.
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.

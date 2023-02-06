@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facility Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Facility Schedules</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>ODE_Integration</name>
+    </fieldSets>
+    <layouts>
+        <layout>Facility Schedule Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Hours of Operation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Schedule of Operations</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Source</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Cannot_Change_Owner_From_Queue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Funding_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Summeronly_Allround</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Summeronly_YearRound_SchoolYear</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Delete</name>
+    </webLinks>
+</CustomObjectTranslation>

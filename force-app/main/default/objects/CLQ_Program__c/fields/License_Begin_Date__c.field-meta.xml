@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Begin_Date__c</fullName>
+    <description>DrawLoop: Created for Forms &amp; Reports.</description>
+    <externalId>false</externalId>
+    <formula>CASE(  
+CLQ_License_Type__c  , 
+ &apos;Provisional&apos;, TEXT(MONTH(CLQ_License_Issue_Date__c ))+ &quot;/&quot; + TEXT(DAY(CLQ_License_Issue_Date__c )) + &quot;/&quot; +   TEXT(YEAR(CLQ_License_Issue_Date__c ))  ,
+
+ &apos;Continuous&apos;, TEXT(MONTH(CLQ_Continuous_License_Begin_Date__c )) + &quot;/&quot; + TEXT(DAY(CLQ_Continuous_License_Begin_Date__c )) + &quot;/&quot;  + TEXT(YEAR(CLQ_Continuous_License_Begin_Date__c )), 
+
+
+
+Null
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>License Begin Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

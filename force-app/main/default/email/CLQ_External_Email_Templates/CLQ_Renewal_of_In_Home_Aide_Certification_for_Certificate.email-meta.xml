@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>CLQ_Renewal of In-Home Aide Certification for Certificate</name>
+    <style>formalLetter</style>
+    <subject>Renewal of In-Home Aide Certification for Certificate # {!CLQ_Program__c.CLQ_Program_Number__c}</subject>
+    <textOnly>This is to notify you that the In-home Aide Certification for {!CLQ_Program__c.00N8G000000YLI4},{!CLQ_Program__c.00N8G000000YLIK},{!CLQ_Program__c.CLQ_Program_Number__c}, will expire on {!CLQ_Program__c.CLQ_Expiration_Date__c}. To continue your certification you must log on to the OCLQS system at {!CLQ_Program__c.Link} to complete the renewal process. 
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. 
+
+The Ohio Child Licensing and Quality System Team. 
+
+ref: {!CLQ_Program_Transaction__c.Id}
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

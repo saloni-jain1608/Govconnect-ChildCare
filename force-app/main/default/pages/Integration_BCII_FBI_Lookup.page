@@ -1,0 +1,150 @@
+<!--
+/*************************************************************************************************************
+** User Story: 
+**************************************************************************************************************
+** Name             : Integration_BCII_FBI_Lookup_Ctrl
+** Description      : Integration VFP for BCII FBI Lookup
+** Version          : 1.0
+**------------------------------------------------------------------------------------------------------------
+** Modification Log:
+**------------------
+** Developer                         Date                    Version                      Description
+**------------------------------------------------------------------------------------------------------------
+** Sanjeev Chahar                July-2016                    1.0                          Created
+**
+************************************************************************************/ 
+-->
+<apex:page controller="Integration_BCII_FBI_Lookup_Ctrl" sidebar="false">
+      <apex:includeScript value="{!$Resource.JQueryMin}" />
+      <style type="text/css">body.wait, body.wait * { cursor: wait !important; }</style>
+
+
+  <apex:form >
+      <apex:pageMessages id="errors" />
+      <apex:pageBlock title="BCII FBI Lookup(Top 100 Matches)" mode="edit">
+          <table width="100%" border="0">
+              <tr>  
+                <td width="200" valign="top">
+                  <apex:pageBlock title="Parameters" mode="edit" id="criteria">
+                    
+                          <script type="text/javascript">
+                              $j = jQuery.noConflict();
+                              var busyCursorOn = function() {
+                                      $j('#btnSearchBCIILookup').attr("disabled", "disabled");
+                                      $j('#btnSearchBCIILookup').html('Please Wait..');
+                                      $j('body').addClass('wait');
+                              };
+                         
+                              var busyCursorOff = function() {
+                                    $j('#btnSearchBCIILookup').removeAttr('disabled');
+                                    $j('#btnSearchBCIILookup').html('Search');
+                                    $j('body').removeClass('wait');
+                              };
+                          
+                          
+                              function doSearch() {
+                                    var dob_year = document.getElementById("selDobYear").options[document.getElementById("selDobYear").selectedIndex].value;
+                                    var dob_month = document.getElementById("selDobMonth").options[document.getElementById("selDobMonth").selectedIndex].value;
+                                    var dob_day = document.getElementById("selDobDay").options[document.getElementById("selDobDay").selectedIndex].value;
+                                    var tempLen = dob_year.length + dob_month.length + dob_day.length ;
+                                    var dob_forSearch = '';
+                                    var dob = '';
+                                    if (tempLen > 0){if ( tempLen != 8){alert('Please select valid date of birth');return ;} else{dob_forSearch = dob_year + '-' + dob_month + '-' + dob_day;}}//endif tempLen>0
+                    
+                                    busyCursorOn(); 
+                     
+                                    searchServer(
+                                      document.getElementById("CLQ_First_Name__c").value,
+                                      document.getElementById("CLQ_Last_Name__c").value,
+                                      document.getElementById("CLQ_Middle_Name__c").value,
+                                      dob_forSearch,
+                                      document.getElementById("CLQ_SSN_Integration__c").value
+                                      );
+                                  }
+                         </script> 
+                
+              <apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,summary,errors">
+                  <apex:param name="firstName" value="" />
+                  <apex:param name="lastName" value="" />
+                  <apex:param name="middlename" value="" />
+                  <apex:param name="dob" value="" />
+                  <apex:param name="ssn" value="" />
+              </apex:actionFunction>
+        
+      <table cellpadding="2" cellspacing="2">
+              <tr>
+                <td style="font-weight:bold;">First Name<br/>
+                <input type="text" id="CLQ_First_Name__c"/>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:bold;">Last Name<br/>
+                <input type="text" id="CLQ_Last_Name__c"/>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:bold;">Middle Name<br/>
+                <input type="text" id="CLQ_Middle_Name__c"/>
+                </td>
+              </tr>
+        
+              <tr>
+                <td style="font-weight:bold;">Date of Birth(MM/DD/YYYY)<br/>
+                      <select id="selDobMonth">
+                            <option value=""></option>
+                                <apex:repeat value="{!dob_Month}" var="month">
+                                    <option value="{!month}">{!month}</option>
+                                </apex:repeat>
+                      </select>&nbsp;/&nbsp;&nbsp;     
+                      <select id="selDobDay">
+                            <option value=""></option>
+                                <apex:repeat value="{!dob_Day}" var="day">
+                                    <option value="{!day}">{!day}</option>
+                                </apex:repeat>
+                      </select>&nbsp;/&nbsp;&nbsp;     
+                       <select id="selDobYear">
+                            <option value=""></option>
+                                <apex:repeat value="{!dob_Year}" var="year">
+                                    <option value="{!year}">{!year}</option>
+                                </apex:repeat>
+                      </select>
+
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:bold;">SSN<br/>
+                <input type="text" id="CLQ_SSN_Integration__c"/>
+                </td>
+              </tr>
+          </table>
+        
+         <button type="button" id="btnSearchBCIILookup" onclick="doSearch();" style="float:left;margin-bottom:15px;width:90px;height:30px">Search</button>
+         <apex:commandButton value="New" action="{!URLFOR($Action.CLQ_BCII_FBI__c.New)}" style="float:left;margin-bottom:15px;width:90px;height:30px"/>
+         
+         <apex:pageBlock id="summary"><apex:outputText value="{!contactCountDetails}" /></apex:pageBlock>
+    
+   </apex:pageBlock>
+  </td>
+  <td valign="top">
+    <apex:pageBlock mode="edit" id="results">
+          <apex:pageBlockTable value="{!contacts}" var="contact">
+                 <apex:column value="{!contact.CLQ_First_Name__c}" headerValue="First Name" />
+                 <apex:column value="{!contact.CLQ_Last_Name__c}" headerValue="Last Name" />
+                 <apex:column value="{!contact.CLQ_Middle_Name__c}" headerValue="Middle Name" />
+                 <apex:column value="{!contact.CLQ_Date_of_Birth__c}" headerValue="Date of Birth" />
+                 <!-- <apex:column value="{!contact.CLQ_Last_Four_Digits_of_SSN__c}" headerValue="SSN Last 4 Digits" /> -->
+                 <apex:column value="{!contact.CLQ_SSN_Integration__c}" headerValue="SSN" />
+                 <apex:column value="{!contact.CLQ_Date_Received_At_BCI__c}" headerValue="Date Received at BCI" />
+                 <apex:column value="{!contact.CLQ_Record_Check_Results__c}" headerValue="Record Check Result" />
+                 <apex:column value="{!contact.CLQ_Result_Type__c}" headerValue="Result Type" />
+                 <apex:column value="{!contact.CLQ_Transaction_Authentication__c}" headerValue="Authorization Number" />
+                 <apex:column value="{!contact.CLQ_Transaction_Type__c}" headerValue="Transaction Type" />
+        </apex:pageBlockTable>
+       <script type="text/javascript">setTimeout(busyCursorOff, 100);</script>
+    </apex:pageBlock>
+  </td>
+  </tr>
+  </table>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Cant_be_linked</fullName>
+    <active>true</active>
+    <description>Inspection Can&apos;t be linked if no investigation required checkbox is true.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(NOT(ISBLANK(CLQ_Inspection__c)),CLQ_No_Investigation_Required__c = true)</errorConditionFormula>
+    <errorMessage>Inspection cannot be linked if the the No Investigation Required Checkbox is True.</errorMessage>
+</ValidationRule>

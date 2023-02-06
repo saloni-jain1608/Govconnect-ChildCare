@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_Inspection_Revised__c</fullName>
+    <description>[DrawLoop]: Used in Outbound Messages
+[Task 11630] DDP = Licensing Inspection Full Report ; Delivery = SMTP - Insp Revised</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Inspection__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000xtEP;Deploy:a0135000000kgnf&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Drawloop_Next_Inspection_Revised</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

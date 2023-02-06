@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CAP Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CAP Documents</value>
+    </caseValues>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>DeniedLTNG</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Test</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Document</name>
+    </quickActions>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Comment_Field_is_Blank</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Approve</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Denied</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Not_Verified</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Return_for_Revision</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Upload_Document</name>
+    </webLinks>
+</CustomObjectTranslation>

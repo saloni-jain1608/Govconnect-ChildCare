@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_On_Site_Representative_Validation</fullName>
+    <active>true</active>
+    <description>On site representative is mandatory If &apos;yes&apos; is selected for On-site representative present.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; (IF
+(AND
+(ISPICKVAL(CLQ_On_Site_Representative_Present__c ,&quot;Yes&quot;), ISBLANK(CLQ_On_Site_Representative__c)), true,false))</errorConditionFormula>
+    <errorDisplayField>CLQ_On_Site_Representative__c</errorDisplayField>
+    <errorMessage>Please enter On Site Representative</errorMessage>
+</ValidationRule>

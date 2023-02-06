@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Position__c</fullName>
+    <externalId>false</externalId>
+    <label>Position</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lead teacher/head teacher/co-teacher</fullName>
+                <default>false</default>
+                <label>Lead teacher/head teacher/co-teacher</label>
+            </value>
+            <value>
+                <fullName>Administrator/Director</fullName>
+                <default>false</default>
+                <label>Administrator/Director</label>
+            </value>
+            <value>
+                <fullName>Floater</fullName>
+                <default>false</default>
+                <label>Floater</label>
+            </value>
+            <value>
+                <fullName>Substitute</fullName>
+                <default>false</default>
+                <label>Substitute</label>
+            </value>
+            <value>
+                <fullName>Cook/Nutrition/Dietician</fullName>
+                <default>false</default>
+                <label>Cook/Nutrition/Dietician</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Assistant director/ Assistant Administrator</fullName>
+                <default>false</default>
+                <label>Assistant director/ Assistant Administrator</label>
+            </value>
+            <value>
+                <fullName>Support Staff/Administrative</fullName>
+                <default>false</default>
+                <label>Support Staff/Administrative</label>
+            </value>
+            <value>
+                <fullName>Teacher&apos;s aide, teacher assistant/student aide</fullName>
+                <default>false</default>
+                <label>Teacher&apos;s aide, teacher assistant/student aide</label>
+            </value>
+            <value>
+                <fullName>Family Service Worker</fullName>
+                <default>false</default>
+                <label>Family Service Worker</label>
+            </value>
+            <value>
+                <fullName>Bus Driver/Bus aide/Bus monitor</fullName>
+                <default>false</default>
+                <label>Bus Driver/Bus aide/Bus monitor</label>
+            </value>
+            <value>
+                <fullName>Education specialist/ Education Coordinator</fullName>
+                <default>false</default>
+                <label>Education specialist/ Education Coordinator</label>
+            </value>
+            <value>
+                <fullName>Specialist/Therapist (speech/language, etc.)</fullName>
+                <default>false</default>
+                <label>Specialist/Therapist (speech/language, etc.)</label>
+            </value>
+            <value>
+                <fullName>Social Worker</fullName>
+                <default>false</default>
+                <label>Social Worker</label>
+            </value>
+            <value>
+                <fullName>Director ( Administrator)</fullName>
+                <default>false</default>
+                <label>Director ( Administrator)</label>
+            </value>
+            <value>
+                <fullName>Head teacher</fullName>
+                <default>false</default>
+                <label>Head teacher</label>
+            </value>
+            <value>
+                <fullName>Teacher</fullName>
+                <default>false</default>
+                <label>Teacher</label>
+            </value>
+            <value>
+                <fullName>Preschool Staff member</fullName>
+                <default>false</default>
+                <label>Preschool Staff member</label>
+            </value>
+            <value>
+                <fullName>Non-Teaching Employee</fullName>
+                <default>false</default>
+                <label>Non-Teaching Employee</label>
+            </value>
+            <value>
+                <fullName>Extended care staff</fullName>
+                <default>false</default>
+                <label>Extended care staff</label>
+            </value>
+            <value>
+                <fullName>Second adult</fullName>
+                <default>false</default>
+                <label>Second adult</label>
+            </value>
+            <value>
+                <fullName>Infant toddler care staff</fullName>
+                <default>false</default>
+                <label>Infant toddler care staff</label>
+            </value>
+            <value>
+                <fullName>Substitute teacher</fullName>
+                <default>false</default>
+                <label>Substitute teacher</label>
+            </value>
+            <value>
+                <fullName>Substitute staff</fullName>
+                <default>false</default>
+                <label>Substitute staff</label>
+            </value>
+            <value>
+                <fullName>Volunteer</fullName>
+                <default>false</default>
+                <label>Volunteer</label>
+            </value>
+            <value>
+                <fullName>Coordinator</fullName>
+                <default>false</default>
+                <label>Coordinator</label>
+            </value>
+            <value>
+                <fullName>Team leader</fullName>
+                <default>false</default>
+                <label>Team leader</label>
+            </value>
+            <value>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+                <label>Assistant</label>
+            </value>
+            <value>
+                <fullName>Responsible Individual</fullName>
+                <default>false</default>
+                <label>Responsible Individual</label>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Vocational Student</fullName>
+                <default>false</default>
+                <label>Vocational Student</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Close Application after 395 days of submission if it&apos;s not approved/denied</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>JFS Application Closed</name>
+    <style>formalLetter</style>
+    <subject>Application for Licensure Submitted for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c},  {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} Closed</subject>
+    <textOnly>JFS has reviewed the submitted application for licensure for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c},  {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}.
+
+Your application has been closed for the following reason(s):
+
+Application has been on file more than 12 months and all requirements were not completed.
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VDSS_Inspection_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>CLQ_Program__c</fields>
+    <fields>CLQ_Inspection_Type__c</fields>
+    <fields>CLQ_Inspection_Status__c</fields>
+    <fields>CLQ_Visit_Status__c</fields>
+    <fields>CLQ_CAP_Generated__c</fields>
+    <label>VDSS Inspection Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Transaction_County__c</fullName>
+    <description>This field is created to get the name of county. This field is being used to fix bug 11762</description>
+    <externalId>false</externalId>
+    <formula>IF(CLQ_New_County__c != null, CLQ_New_County__r.Name, IF(CLQ_ProgTrans_County__c!= null, CLQ_ProgTrans_County__r.Name,CLQ_Program__r.CLQ_County__r.Name))</formula>
+    <label>Program Transaction County</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CLQ_Email_alert_to_Licensing_Specialist_for_Inactive_Program_after_335_days_of_c</fullName>
+        <description>Email alert to Licensing Specialist for Inactive Program after 335 days of Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Program_Inactive_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_alert_to_Licensing_Specialist_for_Inactive_Program_after_335days_of_Cr</fullName>
+        <description>Email alert to Licensing Specialist for Inactive Program after 335 days of Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Program_Inactive_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_IHA_Program_Application_Renewal_Alert</fullName>
+        <description>IHA Program Application Renewal Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Program_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_IHA_Program_Application_Renewal_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Provisional_Period_Exceeded</fullName>
+        <description>JFS Provisional Period Exceeded</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Provisional_Period_Exceeded</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Provisional_Period_Exceeded</fullName>
+        <description>ODE Provisional Period Exceeded</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Provisional_Period_Exceeded</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Renewal_of_In_Home_Aide_Certification_for_Certificate</fullName>
+        <description>CLQ_Renewal of In-Home Aide Certification for Certificate</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Program_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Renewal_of_In_Home_Aide_Certification_for_Certificate</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Total_Points_Assessed_13_ODE</fullName>
+        <description>Total Points Assessed_13-ODE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Total_Points_Assessed_13_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Total_Points_Assessed_13_ODJFS</fullName>
+        <description>Total Points Assessed_13-ODJFS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Reviewer_s_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Total_Points_Assessed_13_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Total_Points_Assessed_9_ODE</fullName>
+        <description>Total Points Assessed_9-ODE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Total_Points_Assessed_9_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Total_Points_Assessed_9_ODJFS</fullName>
+        <description>Total Points Assessed_9-ODJFS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Reviewer_s_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Total_Points_Assessed_9_ODJFS</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CLQ_2_Star_Rating_Field_Update</fullName>
+        <field>CLQ_2_Star_Reapplying_Date__c</field>
+        <formula>DATE(YEAR(Rating_Expiration_Date__c ) +4,
+   MONTH(Rating_Expiration_Date__c ), 
+
+   DAY(Rating_Expiration_Date__c ))</formula>
+        <name>2 Star Rating Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_License_Number</fullName>
+        <field>CLQ_License_Number__c</field>
+        <formula>CLQ_Program_Number__c</formula>
+        <name>CLQ_License Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_City</fullName>
+        <field>CLQ_Mailing_City__c</field>
+        <formula>CLQ_City__c</formula>
+        <name>CLQ Update Mailing City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Street_1</fullName>
+        <field>CLQ_Mailing_Address__c</field>
+        <formula>CLQ_Street_Address_1__c</formula>
+        <name>CLQ Update Mailing Street 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Street_2</fullName>
+        <field>CLQ_Mailing_Address_2__c</field>
+        <formula>CLQ_Street_Address_2__c</formula>
+        <name>CLQ Update Mailing Street 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Zipcode</fullName>
+        <field>CLQ_Mailing_ZIP_Code__c</field>
+        <formula>CLQ_Zip_Code__c</formula>
+        <name>CLQ Update Mailing Zipcode</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_ODJFS_Requirement_Met_To_No</fullName>
+        <description>To update ODJFS Requirement Met to No</description>
+        <field>Approved_to_do_a_Provider_Agreement__c</field>
+        <literalValue>No</literalValue>
+        <name>CLQ Update ODJFS Requirement Met To No</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Program_Status</fullName>
+        <field>CLQ_Program_Status__c</field>
+        <literalValue>Closed by System</literalValue>
+        <name>CLQ_Update Program Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Program_Status_Change_Date</fullName>
+        <field>CLQ_Program_Status_Change_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Program Status Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Not Registered</literalValue>
+        <name>CLQ_Update Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_CLQ_2_Star_Reapplying_Date_c</fullName>
+        <description>Clear 2 Star Reapplying Date</description>
+        <field>CLQ_2_Star_Reapplying_Date__c</field>
+        <name>Clear CLQ_2_Star_Reapplying_Date__c</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Testing_field_update</fullName>
+        <field>CLQ_Closure_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Testing field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ToRemove_updateCity</fullName>
+        <field>City__c</field>
+        <formula>&apos;Testing WF update&apos;</formula>
+        <name>ToRemove_updateCity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>To_update_Manager_s_Email</fullName>
+        <description>[6/14/2017]  Prakriti: CR#11200:Updates LSR&apos;s Manager email</description>
+        <field>Reviewer_s_Manager_Email__c</field>
+        <formula>CLQ_Licensing_Specialist__r.Manager.Email</formula>
+        <name>To update LSR Manager Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_Provider_Agreement_Check</fullName>
+        <field>Approved_to_do_a_Provider_Agreement__c</field>
+        <literalValue>Yes</literalValue>
+        <name>Update Approved Provider Agreement Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Closure_Date</fullName>
+        <field>CLQ_Closure_Date__c</field>
+        <formula>CLQ_Certificate_Expiry_Date__c</formula>
+        <name>Update Closure Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Program_Status_Expired</fullName>
+        <field>CLQ_Program_Status__c</field>
+        <literalValue>Expired</literalValue>
+        <name>Update Program Status Expired</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Not Registered</literalValue>
+        <name>Update Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SUTQ_Cont_Rated_Date_to_NULL</fullName>
+        <description>Changes Program.CLQ_SUTQ_Continuous_Rated_Date__c to NULL</description>
+        <field>CLQ_SUTQ_Continuous_Rated_Date__c</field>
+        <name>Update SUTQ Cont Rated Date to NULL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SUTQ_Cont_Rated_Date_to_R_E_Dt</fullName>
+        <description>Updates CLQ_SUTQ_Continuous_Rated_Date__c to Rating_Effective_Dt__c</description>
+        <field>CLQ_SUTQ_Continuous_Rated_Date__c</field>
+        <formula>Rating_Effective_Dt__c</formula>
+        <name>Update SUTQ Cont Rated Date to R E Dt</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CLQ_Rule to update Program if Inactive for 335 days</fullName>
+        <active>true</active>
+        <description>Notify the assigned internal user and the internal supervisor/approver when a program has been continuously inactive for 335 days</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;   ISPICKVAL(CLQ_Program_Status__c,&apos;Inactive&apos;) &amp;&amp;  CLQ_Licensing_Specialist__c != NULL</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_Email_alert_to_Licensing_Specialist_for_Inactive_Program_after_335days_of_Cr</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>CLQ_Program__c.CLQ_Program_Status_Change_Date__c</offsetFromField>
+            <timeLength>335</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Out of State Expired</fullName>
+        <active>true</active>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;  CLQ_Program_Record_Type__c = &apos;Out of State Registration&apos; &amp;&amp;  NOT(CLQ_Expiration_Date__c  = NULL)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Program_Status_Expired</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Update_Registration_Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CLQ_Program__c.CLQ_Expiration_Date__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update Closure Date for IHA</fullName>
+        <active>true</active>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;  ISPICKVAL( CLQ_Certification_Status__c , &apos;Certified&apos;) &amp;&amp; RecordType.Name = &apos;In-Home Aide&apos; &amp;&amp;  NOT(ISBLANK(CLQ_Certificate_Expiry_Date__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Closure_Date</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CLQ_Program__c.CLQ_Certificate_Expiry_Date__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <offsetFromField>CLQ_Program__c.CLQ_Certificate_Expiry_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Continuous_License_Recommendation</fullName>
+        <assignedTo>arrelekar@govtconnect.dev</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Please consider this license for continuous renewal</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Program__c.CLQ_License_Expiration_Date__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Continuous License Recommendation</subject>
+    </tasks>
+</Workflow>

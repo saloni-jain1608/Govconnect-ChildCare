@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <circle id="a" cx="12" cy="12" r="12"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <circle cx="12" cy="12" r="11.5" stroke="#626469"/>
+        <ellipse cx="11.9" cy="8.615" stroke="#626469" stroke-linecap="round" stroke-linejoin="round" stroke-width=".916" mask="url(#b)" rx="3.659" ry="4.615"/>
+        <circle cx="12" cy="23" r="7.5" stroke="#626469" mask="url(#b)"/>
+    </g>
+</svg>

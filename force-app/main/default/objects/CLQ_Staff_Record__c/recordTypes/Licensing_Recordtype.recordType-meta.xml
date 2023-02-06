@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licensing_Recordtype</fullName>
+    <active>true</active>
+    <label>Licensing Recordtype</label>
+    <picklistValues>
+        <picklist>CLQ_BCI_Processed__c</picklist>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Conviction%2FChild Removed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Incomplete results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Rehabilitation Doc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Not Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Pending verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Previous employer%E2%80%99s record on file</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Refused to be fingerprinted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Rehired%2C No Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Onsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Sent to Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Sent to State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Returned%2C Not Resubmitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_CDA_Verified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_CPR_Details__c</picklist>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Does Not Meet Req%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Original Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trainer Qualifications</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Career_Pathways_Level__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Child_Abuse__c</picklist>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Does Not Meet Req%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No One Hour Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Original Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trainer Qualifications</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Communicable_Disease__c</picklist>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Does Not Meet Req%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Original Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trainer Qualifications</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Driver_Training_Completed__c</picklist>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Driver Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Driver_s_License_on_File__c</picklist>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Not on File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Valid License</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Education_Verified__c</picklist>
+        <values>
+            <fullName>College Credit Information Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HS Needs Translated%2FEquivalency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home School Documentation Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Refugee Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Educational Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not High School Grad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocational Information Missing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_FBI_Processed__c</picklist>
+        <values>
+            <fullName>In_Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Conviction%2FChild Removed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Incomplete results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Rehabilitation Doc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Not Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Pending verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Previous employer%E2%80%99s record on file</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Refused to be fingerprinted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Rehired%2C No Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Onsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Sent to Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Results Not Sent to State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Returned%2C Not Resubmitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_First_Aid__c</picklist>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Does Not Meet Req%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Original Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trainer Qualifications</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Highest_Education_Level__c</picklist>
+        <values>
+            <fullName>2 year-vocational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AA or AS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAN or ASN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA or BS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAN or BSN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Level%2C No Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate level beyond Masters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High School Diploma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In 2nd year of Vocational School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master%27s Degree or M%2E Ed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2E D%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type B Prior to 2003</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Highest_Verified_Education_Level__c</picklist>
+        <values>
+            <fullName>2 year-vocational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AA or AS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAN or ASN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA or BS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAN or BSN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma in Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Earned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Level%2C No Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate level beyond Masters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High School Diploma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In 2nd year of Vocational School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master%27s Degree or M%2E Ed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2E D%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type B Prior to 2003</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Medical__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Medical_on_File__c</picklist>
+        <values>
+            <fullName>Date of Exam Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor Does Not Meet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor Info Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immunization Info Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Not Within 1 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Exam Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required Statement Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signature Missing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Non_conviction_Statement_Signed__c</picklist>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE - Not updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Admin%2E Signature Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Dates Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Missing Back Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Annual Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - No Statement on File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS - Pending verification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_ODJFS_Approval_Letter__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_PD_Class1_Taken__c</picklist>
+        <values>
+            <fullName>Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_PD_Class2_Taken__c</picklist>
+        <values>
+            <fullName>Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Policy_Statement__c</picklist>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Compliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Position__c</picklist>
+        <values>
+            <fullName>Administrator%2FDirector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant director%2F Assistant Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bus Driver%2FBus aide%2FBus monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cook%2FNutrition%2FDietician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director %28 Administrator%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education specialist%2F Education Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extended care staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Service Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Head teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant toddler care staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead teacher%2Fhead teacher%2Fco-teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Teaching Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preschool Staff member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Responsible Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Second adult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialist%2FTherapist %28speech%2Flanguage%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substitute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substitute staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substitute teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Staff%2FAdministrative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher%27s aide%2C teacher assistant%2Fstudent aide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocational Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volunteer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Professional_Development_Completed__c</picklist>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enough PD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Not Acceptable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Staff_Member_Will_Operate_Vehicles__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Staff_Orientation_Training_Completed__c</picklist>
+        <values>
+            <fullName>Falsified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Orientation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Orientation %E2%80%93 Sole Responsibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Verification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Still_Employed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Training_Met__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SUTQ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Orientation_Complete__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PD_Compliance_Code__c</picklist>
+        <values>
+            <fullName>In Compiance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient PD Hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

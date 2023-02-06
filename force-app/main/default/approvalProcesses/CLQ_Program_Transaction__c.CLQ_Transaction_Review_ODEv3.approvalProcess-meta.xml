@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>RecordType</field>
+        <field>CLQ_Program__c</field>
+        <field>CLQ_Transaction_Assigned_To__c</field>
+        <field>CLQ_Submitter__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Closure / Continuous Approvals</description>
+        <label>Approval Step 1</label>
+        <name>County_Approver_non_FCC_CCC</name>
+    </approvalStep>
+    <description>Applicable to CC and ODE programs. This process will allow a licensor to send a transaction (mostly Licensing Closure, Registration Closure and Continuous License) to his/her manager for review and approval.</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>(ISPICKVAL(CLQ_Transaction_Status__c , &quot;Under Reviewer Review&quot;) || ISPICKVAL(CLQ_Transaction_Status__c , &quot;Returned to Reviewer&quot;))   &amp;&amp;  
+
+((CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Child Care Center&quot;) &amp;&amp;
+RecordType.Name = &quot;Licensing - Closure&quot;) 
+
+|| (CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Pre School&quot;) &amp;&amp;
+RecordType.Name = &quot;Licensing - Closure&quot;)
+
+|| (CONTAINS(CLQ_Program__r.RecordType.Name, &quot;School Age Child Care&quot;) &amp;&amp;
+RecordType.Name = &quot;Licensing - Closure&quot;)
+
+
+|| ((CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Child Care Center&quot;) || CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Pre School&quot;) || CONTAINS(CLQ_Program__r.RecordType.Name, &quot;School Age Child Care&quot;)) &amp;&amp;
+RecordType.Name = &quot;Continuous License&quot;))    &amp;&amp;
+
+ (ISPICKVAL(CLQ_Recommendation__c,&quot;Approve&quot;) || ISPICKVAL(CLQ_Recommendation__c,&quot;Deny&quot;) || ISPICKVAL(CLQ_Recommendation__c,&quot;Withdraw&quot;))&amp;&amp;
+ CLQ_Start_Approval__c = true</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CLQ_Set_Approved_by_Manager_to_True</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Transaction_Approved</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_Check_ODE</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Change_Status_to_Returned_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Flag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Transaction_Rejected</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_ODE</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CLQ_Change_Transaction_Status_to_ARP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Reset_Approved_by_Manager_Flag</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Update_Manager_s_Email_Address</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Transaction Review ODE v3</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>12</processOrder>
+    <recallActions>
+        <action>
+            <name>CLQ_Unflag_Approval_Check</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Recall_Status_Returned_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

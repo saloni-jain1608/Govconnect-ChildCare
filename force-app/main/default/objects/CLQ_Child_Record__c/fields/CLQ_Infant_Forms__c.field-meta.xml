@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Infant_Forms__c</fullName>
+    <externalId>false</externalId>
+    <label>Infant Forms</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Infant Daily Form</fullName>
+                <default>false</default>
+                <label>No Infant Daily Form</label>
+            </value>
+            <value>
+                <fullName>Daily Form Incomplete</fullName>
+                <default>false</default>
+                <label>Daily Form Incomplete</label>
+            </value>
+            <value>
+                <fullName>No Written Feeding Instructions</fullName>
+                <default>false</default>
+                <label>No Written Feeding Instructions</label>
+            </value>
+            <value>
+                <fullName>Written Feeding Instructions Incomplete</fullName>
+                <default>false</default>
+                <label>Written Feeding Instructions Incomplete</label>
+            </value>
+            <value>
+                <fullName>Written Feeding Instructions Not Updated</fullName>
+                <default>false</default>
+                <label>Written Feeding Instructions Not Updated</label>
+            </value>
+            <value>
+                <fullName>No Sleep Waiver</fullName>
+                <default>false</default>
+                <label>No Sleep Waiver</label>
+            </value>
+            <value>
+                <fullName>No Cot Permission</fullName>
+                <default>false</default>
+                <label>No Cot Permission</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

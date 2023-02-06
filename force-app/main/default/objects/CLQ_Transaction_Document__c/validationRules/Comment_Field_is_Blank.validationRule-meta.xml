@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comment_Field_is_Blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL( CLQ_Document_Status__c ,&quot;Returned for Revision&quot;), 
+  LEN(CLQ_All_Comments__c)=0
+ )</errorConditionFormula>
+    <errorMessage>Document Comments should be required when the Document status is is Returned for Revision</errorMessage>
+</ValidationRule>

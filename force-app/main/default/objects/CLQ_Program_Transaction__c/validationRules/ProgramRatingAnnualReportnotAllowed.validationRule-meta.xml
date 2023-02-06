@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProgramRatingAnnualReportnotAllowed</fullName>
+    <active>true</active>
+    <description>When the program rating is  &lt;= 2 annual report shouldn&apos;t apply.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT( Skip_Validation__c) &amp;&amp; AND(NOT(ISCHANGED( CLQ_ProgTrans_Program_Email_Address__c )),
+RecordType.DeveloperName == &apos;Annual_Report&apos;, OR(  TEXT(CLQ_Program__r.Program_Rating__c)  == &apos;0&apos;,TEXT(CLQ_Program__r.Program_Rating__c)  == &apos;1&apos;,TEXT(CLQ_Program__r.Program_Rating__c)  == &apos;2&apos;),NOT(IsApproved_PrgTran__c))</errorConditionFormula>
+    <errorMessage>Program rating should be &gt; 2</errorMessage>
+</ValidationRule>

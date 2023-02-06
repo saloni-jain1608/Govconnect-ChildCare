@@ -1,0 +1,18 @@
+<aura:component
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+    access="global" extends="c:ActionsBase">
+
+    <aura:attribute name="recordId" type="String" />
+
+    <c:customLightningAction recordId="{!v.recordId}" objectApiName="CLQ_Program_Transaction__c" 
+        buttonLabel="Submit"
+        apexClassName="CAP_Document_Action"
+        apexMethodName="CAP_Document_Denied"
+        validate="true"
+        validationMethod="validate"
+        callApexOrLaunchComponent="Apex"
+        fireOnLoad="true"
+        oncloseQuickAction="{!c.closeModal}">
+    </c:customLightningAction>
+
+</aura:component>

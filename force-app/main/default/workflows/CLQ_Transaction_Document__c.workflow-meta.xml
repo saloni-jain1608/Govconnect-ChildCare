@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CLQ_Transaction_Document_re_Submitted</fullName>
+        <description>Transaction Document re-Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_User_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Documents_Re_Submitted</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>All_Comments_Append_Update</fullName>
+        <field>CLQ_Document_Comments__c</field>
+        <formula>$User.FirstName &amp; BR() &amp;  TEXT(NOW())</formula>
+        <name>All Comments Append Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>All_Comments_Append_Update_Name_and_Time</fullName>
+        <field>CLQ_All_Comments__c</field>
+        <formula>BR() &amp; &quot;&lt;br&gt;&quot;&amp; CLQ_All_Comments__c &amp; BR() &amp; &quot;&lt;br&gt;&quot;&amp;CLQ_Document_Comments__c &amp; BR() &amp;&quot;&lt;br&gt;&quot;&amp;$User.FirstName &amp; BR() &amp;  $User.LastName &amp; BR()&amp; TEXT(NOW())</formula>
+        <name>All Comments Append Update Name and Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Blank_Out_Document_Comment</fullName>
+        <field>CLQ_Document_Comments__c</field>
+        <name>Blank Out Document Comment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Set_Assigned_User_Email_on_Trans_Doc</fullName>
+        <field>CLQ_Assigned_User_Email__c</field>
+        <formula>CLQ_Assigned_to_email__c</formula>
+        <name>Set Assigned User Email on Trans Doc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

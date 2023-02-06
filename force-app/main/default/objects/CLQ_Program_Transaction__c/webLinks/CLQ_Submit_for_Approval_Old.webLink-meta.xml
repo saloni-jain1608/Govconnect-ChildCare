@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Submit_for_Approval_Old</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Approval Old</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+var url = parent.location.href; 
+var transObj = new sforce.SObject(&quot;CLQ_Program_Transaction__c&quot;); 
+transObj.Id = &apos;{!CLQ_Program_Transaction__c.Id}&apos;; 
+var Ins = sforce.connection.query(&quot;Select Id,Name,CLQ_Inspection_Status__c, CLQ_Program_Transaction__c from CLQ_Inspection__c where CLQ_Program_Transaction__c =&apos;{!CLQ_Program_Transaction__c.Id}&apos; AND CLQ_Inspection_Status__c!=&apos;Approved&apos; AND CLQ_Inspection_Status__c!=&apos;Deleted&apos; AND CLQ_Inspection_Status__c!=&apos;Under Approver Review&apos;&quot;);
+Inslist = Ins.getArray(&quot;records&quot;);
+
+var UserManager =sforce.connection.query(&quot;Select id,name,ManagerId from User where id=&apos;{!CLQ_Program_Transaction__c.OwnerId}&apos;&quot;);
+UsrRecord = UserManager.getArray(&quot;records&quot;);
+
+var Roles = sforce.connection.query(&quot;Select Id,Name,CLQ_Program_Transaction_Source__c from CLQ_Role__c where CLQ_Program_Transaction_Source__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND CLQ_Decision__c != &apos;Approved&apos; AND CLQ_Decision__c != &apos;Denied&apos;&quot;); 
+iiList = Roles.getArray(&quot;records&quot;); 
+
+var Approles = sforce.connection.query(&quot;Select Id,Name,CLQ_Program_Transaction_Source__c from CLQ_Role__c where CLQ_Program_Transaction_Source__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND CLQ_Decision__c = &apos;Approved&apos;&quot;);
+AppList = Approles.getArray(&quot;records&quot;);
+
+var Docs = sforce.connection.query(&quot;Select Id,Name,CLQ_Program_Transaction__c,CLQ_Document_Status__c from CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND CLQ_Document_Status__c != &apos;Approved&apos; AND CLQ_Document_Status__c != &apos;Denied&apos;&quot;); 
+DocList = Docs.getArray(&quot;records&quot;);
+
+ if(&apos;{!CLQ_Program_Transaction__c.OwnerId}&apos; != &apos;{!$User.Id}&apos;) 
+{ 
+alert(&apos;Only Owner of the record can Submit for Approval&apos;); 
+}
+else if(UsrRecord[0].ManagerId == null)
+{
+alert(&apos;User Manager is missing. Please update and Submit for Approval&apos;); 
+}
+else if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Reactivate Transaction&apos;&amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - Change of Administrator&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment- FCC - Change of Capacity / Space&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - ODE and Center - Change of Capacity / Space&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Registration - Out of State&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - ODE - Change of Location&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - FCC - Change of Location&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - Center - Change of Location&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;In-Home Aide&apos;) { 
+
+if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;Approve&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;Deny&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;Withdraw&apos;) { 
+alert(&apos;Please select a Recommendation&apos;); 
+} else if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Withdraw&apos;) ) { 
+
+if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.CLQ_License_Start_Date__c}&apos; == &apos;&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Licensing - Closure&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Registration Closure&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - ODE - Change of Location&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - Center - Change of Location&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - FCC - Change of Location&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Continuous License&apos; &amp;&amp;
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment- FCC - Change of Capacity / Space&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - ODE and Center - Change of Capacity / Space&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Registration - Out of State&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;In-Home Aide&apos;) { 
+
+
+alert(&apos;Please enter License Start Date&apos;); 
+} else { 
+
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload(); 
+} 
+} 
+} 
+else if(&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - Change of Administrator&apos; &amp;&amp; iiList.length ==0){ 
+if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;Approve&apos; &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;Deny&apos;) { 
+alert(&apos;Please select a Recommendation&apos;); 
+}else if(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos;||(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos;&amp;&amp; AppList.length==0)) { 
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload(); 
+}else if(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos;&amp;&amp; AppList.length&gt;0){
+alert(&apos;One or More Admins have been approved&apos;);
+}
+}else if(&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - Change of Administrator&apos; &amp;&amp; iiList.length&gt;0){ 
+alert(&apos;All the administrators need to be Reviewed.&apos;); 
+}else if((&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Submitted&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos;) &amp;&amp; 
+&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Reactivate Transaction&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; != &apos;Amendment - Change of Administrator&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;){ 
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload(); 
+} else if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Reactivate Transaction&apos;){
+alert(&apos;Please select a Recommendation to Submit for Approval&apos;);
+}else if( (&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment- FCC - Change of Capacity / Space&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - ODE and Center - Change of Capacity / Space&apos;) &amp;&amp; (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos; &amp;&amp; DocList.length==0 &amp;&amp; Inslist.length==0){
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload();
+}else if((&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment- FCC - Change of Capacity / Space&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - ODE and Center - Change of Capacity / Space&apos;) &amp;&amp; (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) &amp;&amp;Inslist.length&gt;0){
+alert(&apos;Linked Inspection is not submitted for approval&apos;);
+}
+else if((&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment- FCC - Change of Capacity / Space&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - ODE and Center - Change of Capacity / Space&apos;) &amp;&amp; (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;&apos;){
+alert(&apos;Please select a Recommendation&apos;);
+}else if(&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Registration - Out of State&apos; ){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Registration&apos;){
+if((&apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Returned to Reviewer&apos;) ){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Payment_County__c}&apos; != &apos;&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Program_Start_Date__c}&apos; != &apos;&apos;){
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload();
+}else if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Withdraw&apos; ) &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Reviewer_Notes__c}&apos; != &apos;&apos; ){
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload();
+}else{
+alert(&apos;If Recommendation is Approve, fill in Program Start Date. If Recommendation is Deny or Withdraw , Please make sure to fill in Reviewer Comments&apos;);
+}}else{
+alert(&apos;Transaction Assigned to, Payment County and Recommendation Cannot be Null&apos;);
+}}else{
+alert(&apos;Registration Status Must be either Under Reviewer Review or Returned to Reviewer&apos;);
+}}else{
+alert(&apos;Approval Process can be done only for Registration Transaction Type&apos;);
+}}
+else if((&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - Center - Change of Location&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - FCC - Change of Location&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Amendment - ODE - Change of Location&apos;) &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Ready_for_Approval__c}&apos; == true ){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;){
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload();
+}else{
+alert(&apos;Please select a Recommendation&apos;);
+}
+}else{
+alert(&apos;Transaction Status must be either Under Reviewer Review or Returned to Reviewer&apos;);
+}}else if(&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;In-Home Aide&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos;) {
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Initial Application&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Recertification&apos;){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Returned to Reviewer&apos;){
+if(&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;){
+transObj.CLQ_Start_Approval__c = true; 
+var result = sforce.connection.update([transObj]); 
+window.location.reload();
+}else{
+alert(&apos;Please select a Recommendation&apos;);
+}
+}else{
+alert(&apos;Registration Status must be either Under Reviewer Review or Returned to Reviewer&apos;);
+}
+}else{
+alert(&apos;Approval can be done only for Initial Application and Recertification&apos;);
+} 
+}else{ 
+alert(&apos;Internal Review on Transaction is incomplete&apos;); 
+}</url>
+</WebLink>

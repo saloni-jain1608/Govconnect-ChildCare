@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Informatica</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Applicable_To__c</columns>
+    <columns>CLQ_Application_To_Inspection_Type__c</columns>
+    <columns>CLQ_Applicable_To_Scope__c</columns>
+    <columns>CLQ_Description__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Informatica User</value>
+    </filters>
+    <label>All_Informatica</label>
+</ListView>

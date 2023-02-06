@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Staff Training</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Staff Training</value>
+    </caseValues>
+    <layouts>
+        <layout>Health &amp; Safety</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Health &amp; Safety Training</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Professional Development</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Professional Development Training</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Staff Training Layout</layout>
+        <sections>
+            <label></label>
+            <section>Course Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Expiration Date</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Health_Safety_Training</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Professional_Development_Training</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Program_Tran_Onsite_Visit_Pending_Status</name>
+    </validationRules>
+</CustomObjectTranslation>

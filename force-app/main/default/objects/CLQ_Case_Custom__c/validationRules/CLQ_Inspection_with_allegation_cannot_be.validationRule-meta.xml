@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_with_allegation_cannot_be</fullName>
+    <active>true</active>
+    <description>Inspection cannot be linked without Alleged Rule Violation</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( OR(CLQ_Alleged_Violation_Rule_Count__c &lt;= 0, ISNULL(CLQ_Alleged_Violation_Rule_Count__c), ISBLANK( CLQ_Alleged_Violation_Rule_Count__c)), NOT(ISBLANK( CLQ_Inspection__c)),  CLQ_No_Investigation_Required__c = false,  OR(RecordType.Name = &apos;Incident Injury Submitted&apos;, RecordType.Name = &apos;Incident / Injury / Illness&apos;))</errorConditionFormula>
+    <errorMessage>Inspection cannot be linked without Alleged Rule Violation</errorMessage>
+</ValidationRule>

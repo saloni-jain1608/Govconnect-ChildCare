@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_hasSeriousRiskFinding__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to check if the rule is having any serious finding or not</description>
+    <externalId>false</externalId>
+    <label>hasSeriousRiskFinding</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

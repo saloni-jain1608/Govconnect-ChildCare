@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_DC_IA_Submitted__c</fullName>
+    <description>[Drawloop]: Used in WF: [Day Camp Initial Application Submitted] Outbound Message
+DDP = Child Day Camp Licensing Application Summary Report | Delivery Option: SMTP - ODJFS IA Submitted</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000zIPk;Deploy:a01r0000001M1ed&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Drawloop_Next_DC_IA_Submitted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

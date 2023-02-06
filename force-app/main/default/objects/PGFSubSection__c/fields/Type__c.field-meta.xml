@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Sub-section type</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fieldset</fullName>
+                <default>false</default>
+                <label>Fieldset</label>
+            </value>
+            <value>
+                <fullName>Component</fullName>
+                <default>false</default>
+                <label>Component</label>
+            </value>
+            <value>
+                <fullName>Textblock</fullName>
+                <default>false</default>
+                <label>Textblock</label>
+            </value>
+            <value>
+                <fullName>Hidden Fieldset</fullName>
+                <default>false</default>
+                <label>Hidden Fieldset</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

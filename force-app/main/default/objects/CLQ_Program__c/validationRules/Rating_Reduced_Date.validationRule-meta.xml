@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Reduced_Date</fullName>
+    <active>true</active>
+    <description>Add a validation that when Rating Reduced is selected, then a Rating Reduction Date is mandatory.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Unable_to_Rate_Reasons__c, &quot;Rating Reduced&quot;),
+ ISNULL(Rating_Reduction_Date__c) 
+)</errorConditionFormula>
+    <errorMessage>Please select Rating Reduction Date.</errorMessage>
+</ValidationRule>

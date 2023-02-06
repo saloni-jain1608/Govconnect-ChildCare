@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test</fullName>
+    <availability>online</availability>
+    <description>DO NOT USE</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Test</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if({!NOT(ISNULL($UserRole.Name))} &amp;&amp; {!CONTAINS(&apos;LOWER($UserRole.Name)&apos;, &apos;county&apos;)}
+&amp;&amp; {!NOT(CONTAINS( &apos;LOWER($UserRole.Name)&apos; ,  &apos;LOWER(CLQ_Program_Transaction__c.Program_Transaction_County__c)&apos;))} &amp;&amp;
+&amp;&amp; {!CONTAINS($Label.JFS_County_Program_Record_Type, CLQ_Program_Transaction__c.CLQ_Program_Record_Type__c)}){
+alert(&apos;Test Alert&apos;);
+}else{
+alert(&apos;Else Loop&apos;);
+}</url>
+</WebLink>

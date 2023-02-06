@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_2_Star_Ongoing_Not_180_to_270</fullName>
+    <active>false</active>
+    <description>2 star rated programs must submit an ongoing registration for a 1, 3, 4 or 5 star rating between 180 days and 270 days after the 2 star rating effective date. If a program fails to do this, the rating shall be set to 0 and the program must wait 6 months.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(!00N8G000000YLDC.00N8G000000YLKC,
+ RecordType.Name == &quot;SUTQ - Ongoing Registration&quot;,
+ (TEXT(CLQ_Program__r.Program_Rating__c)) == &apos;2&apos;,
+OR (ISPICKVAL(Rating_Proposed_By_Program__c, &quot;1&quot;),
+ISPICKVAL(Rating_Proposed_By_Program__c, &quot;3&quot;),
+ISPICKVAL(Rating_Proposed_By_Program__c, &quot;4&quot;),
+ISPICKVAL(Rating_Proposed_By_Program__c, &quot;5&quot;)),
+OR((CLQ_Program__r.Rating_Effective_Date__c + 180) &gt; TODAY(),
+(CLQ_Program__r.Rating_Effective_Date__c + 270) &lt; TODAY())
+)</errorConditionFormula>
+    <errorMessage>Your program cannot submit an Ongoing Registration because it is not between 180-270 days of your two star rating effective date.</errorMessage>
+</ValidationRule>

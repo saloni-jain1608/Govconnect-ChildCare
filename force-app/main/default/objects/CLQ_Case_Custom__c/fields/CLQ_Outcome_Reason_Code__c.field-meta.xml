@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Outcome_Reason_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Case Closure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CLQ_Activity_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+                <label>Suspended</label>
+            </value>
+            <value>
+                <fullName>Revoked</fullName>
+                <default>false</default>
+                <label>Revoked</label>
+            </value>
+            <value>
+                <fullName>Voluntary Closure</fullName>
+                <default>false</default>
+                <label>Voluntary Closure</label>
+            </value>
+            <value>
+                <fullName>SO Withdrawn - State</fullName>
+                <default>false</default>
+                <label>SO Withdrawn - State</label>
+            </value>
+            <value>
+                <fullName>SO Withdrawn - County</fullName>
+                <default>false</default>
+                <label>SO Withdrawn - County</label>
+            </value>
+            <value>
+                <fullName>PAO Withdrawn - State</fullName>
+                <default>false</default>
+                <label>PAO Withdrawn - State</label>
+            </value>
+            <value>
+                <fullName>PAO Withdrawn - County</fullName>
+                <default>false</default>
+                <label>PAO Withdrawn - County</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Denied Application</fullName>
+                <default>false</default>
+                <label>Denied Application</label>
+            </value>
+            <value>
+                <fullName>Not Revoked</fullName>
+                <default>false</default>
+                <label>Not Revoked</label>
+            </value>
+            <value>
+                <fullName>Suspension Overturned</fullName>
+                <default>false</default>
+                <label>Suspension Overturned</label>
+            </value>
+            <value>
+                <fullName>Ministerial Closing</fullName>
+                <default>false</default>
+                <label>Ministerial Closing</label>
+            </value>
+            <value>
+                <fullName>Created in Error</fullName>
+                <default>false</default>
+                <label>Created in Error</label>
+            </value>
+            <value>
+                <fullName>Not Accepted</fullName>
+                <default>false</default>
+                <label>Not Accepted</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <valueName>Revoked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Voluntary Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <valueName>PAO Withdrawn - State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <valueName>PAO Withdrawn - County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Settlement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <valueName>Denied Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <valueName>Not Revoked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Ministerial Closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Created in Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enforcement</controllingFieldValue>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Not Accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Suspended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>SO Withdrawn - State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>SO Withdrawn - County</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspension</controllingFieldValue>
+            <valueName>Suspension Overturned</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

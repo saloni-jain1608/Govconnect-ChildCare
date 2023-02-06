@@ -1,0 +1,147 @@
+<apex:page controller="ReviewPdfPageController" renderAs="PDF" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    <html>
+        <head style="text-align: center">
+            <style>
+                @page {
+                size: letter;
+                
+                @bottom-left {
+                content: element(footer); 
+                }
+                
+                @bottom-right {
+                content: counter(page) "/" counter(pages);
+                }
+                }
+                
+                div.footer {
+                
+                display: block;
+                
+                padding: 5px;
+                
+                position: running(footer);
+                
+                }
+                
+                #relatedRecs {
+                font-family: Arial;
+                font-size: 80%;
+                border-collapse: collapse;
+                width: 100%;
+                }
+                
+                #relatedRecs td, #relatedRecs th {
+                border: 1px solid #ddd;
+                /* padding: 8px; */
+                }
+                
+                tr.paddingUnder>td {
+                padding-bottom: 1em;
+                }
+                #relatedRecs tr:nth-child(even){background-color: #f2f2f2;}
+                
+                
+                #relatedRecs th {
+                /* padding-top: 12px;
+                padding-bottom: 12px; */
+                text-align: left;
+                }
+                
+                #conditions {
+                font-family: Arial;
+                font-size: 80%;
+                border-collapse: collapse;
+                width: 100%;
+                }
+                
+                #conditions td, #conditions th {
+                border: 1px solid #ddd;
+                /* padding: 8px; */
+                }
+                
+                #conditions tr:nth-child(even){background-color: #f2f2f2;}
+                
+                
+                #conditions th {
+                /* padding-top: 12px;
+                padding-bottom: 12px; */
+                text-align: left;
+                }
+                
+                th, td {
+                padding-bottom: 10px;
+                padding-right: 10px;
+                vertical-align: top;
+                }
+                
+            </style>
+            
+            <!-- IMAGE ON LEFT -->
+            
+            <!-- WEBSITE / PHONE and Report Generated Date (i.e. today's date) ON THE RIGHT -->
+            
+            <!-- Name of form -->
+            
+            
+            
+        </head>
+        <body>
+            
+            <p style= "font-size: 100%;font-weight:bold; text-align: center">
+                PROGRAM APPLICATION FORM
+            </p>
+            
+            
+            
+            <apex:repeat value="{!pageSec}" var="section" id="thepage" >
+                <br/>
+                <b><apex:outputText style="font:30px;" value="{!section.Name}" id="theValue"/><br/></b>
+                <apex:repeat value="{!section.SubSections}" var="subsection" id="thepage1">
+                    <br/>
+                    <apex:outputText style="font:25px;" rendered="{!IF(CONTAINS(subsection.Label, 'Hidden')||subsection.Type=='Textblock',false,true)}" value="{!subsection.Label}" id="theValue1"/>
+                    <br/>
+                    <apex:outputText style="font:20px;" rendered="{!IF(CONTAINS(subsection.Label, 'Required Documentation List'),true,false)}" value="{!section.Status}" id="theValue5"/>
+                    <br/><br/>
+                    <apex:repeat value="{!files}" var="f">
+                        <div class="col col-6 col-md-4 col-lg-3 col-xl-2 my_vertmargin5">
+                            <div class="my_padded5 my_panel">
+                                <apex:image rendered="{!IF(CONTAINS(subsection.Label, 'Signature'),true,false)}" url="/sfc/servlet.shepherd/version/download/{!f.ContentDocument.LatestPublishedVersionId}"
+                                            alt="{!f.ContentDocument.LatestPublishedVersion.Title}" height="150px"/>
+                            </div>
+                        </div>
+                    </apex:repeat>
+                    
+                    <apex:form rendered="{!IF((subsection.lstObjs!=null),true,false)}">
+                        <table style="...">
+                            <tbody style="...">
+                                <tr style="display:table-row;">
+                                    <apex:repeat value="{!subsection.TableInfo}" var="col" id="thepage6">
+                                        <th style="...">{!col.Label}</th>
+                                    </apex:repeat>
+                                </tr>
+                                <apex:repeat value="{!subsection.lstObjs}" var="obj" >
+                                    <tr style="display:table-row;">
+                                        <apex:repeat value="{!subsection.TableInfo}" var="col" id="thepage9">
+                                            <td style = "...">{!obj[col.FieldName]}</td>
+                                        </apex:repeat>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </apex:form>
+                    
+                    
+                    
+                    <apex:repeat value="{!subsection.Fields}" var="fields" id="thepage2">
+                        <apex:outputText style="font:20px;" value="{!fields.Label}" id="theValue2"/><br/>
+                        <apex:outputText value="{!fields.Value}" id="theValue3"/><br/>                       
+                                <br/>
+                            </apex:repeat>
+                            <br/>
+                        </apex:repeat>
+                    </apex:repeat>
+                    
+                </body>
+            </html>
+        </apex:page>

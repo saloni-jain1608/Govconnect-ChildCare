@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Revise_Visit_Status_on_Prelicese</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR(AND(TEXT(CLQ_Inspection_Type__c) != &apos;Pre-license&apos;,
+ CLQ_Revise_Visit_Status__c = true
+),
+AND(TEXT(CLQ_Inspection_Type__c) == &apos;Pre-license&apos;,
+CLQ_Revise_Visit_Status__c = true, 
+TEXT(CLQ_Visit_Status__c) != &apos;Visit Completed&apos;))</errorConditionFormula>
+    <errorDisplayField>CLQ_Visit_Status__c</errorDisplayField>
+    <errorMessage>Revise Visit Status is only applicable to Pre-license Inspection Type and for changes after Visit is Completed</errorMessage>
+</ValidationRule>

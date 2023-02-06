@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Instruction 2</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Provide the information necessary for the application. You may save and return to complete your application as necessary. Applicants will be required to upload all required documents, as determined by the type of application, prior to submitting the application.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Prior to submitting, the application must be completed in entirety, including payment of a non-refundable fee if you are applying as a child care center, family child care type A home, family child care type B home or child day camp. There are no fees for Pre-School programs and School-Age programs. In addition, Out-of-State programs and In-home Aides will not be required to pay a fee. To pay any required application fee you must have a valid credit card.&lt;/p&gt;</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">Instructions_to_Application</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Geben Sie die für den Antrag erforderlichen Informationen an. Sie können speichern und zurückkehren, um Ihre Bewerbung bei Bedarf zu vervollständigen. Bewerber müssen vor dem Einreichen des Antrags alle erforderlichen Dokumente hochladen, die von der Art des Antrags bestimmt werden.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Vor dem Einreichen muss der Antrag ausgefüllt werden vollständig, einschließlich der Zahlung einer nicht erstattungsfähigen Gebühr, wenn Sie sich als Kindertagesstätte, Familienkinderheim Typ A, Familienkinderheim Typ B oder Kindertageslager bewerben. Für Vorschulprogramme und Schulprogramme fallen keine Gebühren an. Darüber hinaus müssen außerstaatliche Programme und Haushaltshilfen keine Gebühr zahlen. Um eine erforderliche Anmeldegebühr zu zahlen, müssen Sie über eine gültige Kreditkarte verfügen.&lt;/p&gt;</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">Day Camp</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Proporcione la información necesaria para la aplicación. Puede guardar y regresar para completar su solicitud según sea necesario. Los solicitantes deberán cargar todos los documentos requeridos, según lo determine el tipo de solicitud, antes de enviar la solicitud.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Antes de enviarla, se debe completar la solicitud en su totalidad, incluido el pago de una tarifa no reembolsable si presenta la solicitud como centro de cuidado infantil, hogar de cuidado infantil familiar tipo A, hogar de cuidado infantil familiar tipo B o campamento diurno infantil. No hay tarifas para los programas de preescolar y los programas para niños en edad escolar. Además, los programas fuera del estado y los asistentes en el hogar no estarán obligados a pagar una tarifa. Para pagar cualquier tarifa de solicitud requerida, debe tener una tarjeta de crédito válida.&lt;/p&gt;</value>
+    </values>
+</CustomMetadata>

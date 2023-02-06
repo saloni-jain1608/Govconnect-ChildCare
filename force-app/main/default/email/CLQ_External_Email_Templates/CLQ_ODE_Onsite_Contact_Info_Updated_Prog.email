@@ -1,0 +1,118 @@
+<messaging:emailTemplate subject=" {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} Onsite Contact Info Program" recipientType="User" relatedToType="CLQ_Program_Transaction__c">
+<messaging:htmlEmailBody >
+
+<p>The program {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} has been Updated. The list of fields that has been updated are:</p>
+<table border="1" rules="all" style="padding-top:3rem;padding-bottom:3rem;">
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Program Name</td>
+    <td>{!relatedTo.CLQ_Prior_Program_Name__c}</td>
+    <td>{!relatedTo.CLQ_Program_Name_OOS__c}</td>
+   </tr>
+    <tr>
+    <td>Mailing Street Address</td>
+    <td>{!relatedTo.CLQ_Prior_Mailing_Street__c}</td>
+    <td>{!relatedTo.CLQ_Mailing_Street_Address__c}</td>
+   </tr> 
+   <tr>
+    <td>Mailing Street Address 2</td>
+    <td>{!relatedTo.CLQ_Prior_Mailing_Street_2__c}</td>
+    <td>{!relatedTo.CLQ_Mailing_Street_Address_2__c}</td>
+   </tr> 
+   <tr>
+    <td>Mailing City</td>
+    <td>{!relatedTo.CLQ_Prior_Mailing_City__c}</td>
+    <td>{!relatedTo.CLQ_Mailing_City__c}</td>
+   </tr> 
+   <tr>
+    <td>Mailing State </td>
+    <td>{!relatedTo.CLQ_Prior_Mailing_State__c}</td>
+    <td>{!relatedTo.CLQ_Mailing_State__c}</td>
+   </tr>
+      <tr>
+    <td>Mailing County </td>
+    <td>{!relatedTo.CLQ_Prior_County__c}</td>
+    <td>{!relatedTo.CLQ_ProgTrans_County__r.Name}</td>
+   </tr>
+      <tr>
+    <td>Mailing Zipcode </td>
+    <td>{!relatedTo.CLQ_Prior_Mailing_Zipcode__c}</td>
+    <td>{!relatedTo.CLQ_Mailing_ZipCode__c}</td>
+   </tr>
+      <tr>
+    <td>Phone </td>
+    <td>{!relatedTo.CLQ_Prior_Phone__c}</td>
+    <td>{!relatedTo.CLQ_ProgTrans_Phone__c}</td>
+   </tr>
+      <tr>
+    <td>Phone Extension </td>
+    <td>{!relatedTo.CLQ_Prior_Phone_Extension__c}</td>
+    <td>{!relatedTo.CLQ_ProgTrans_Phone_Extension__c}</td>
+   </tr>
+      <tr>
+    <td>Program Email Address</td>
+    <td>{!relatedTo.CLQ_Prior_Program_Email_Address__c}</td>
+    <td>{!relatedTo.CLQ_ProgTrans_Program_Email_Address__c}</td>
+   </tr>
+</tbody>
+</table>
+
+<apex:repeat value="{!relatedTo.Roles__r}" var="r">
+ <apex:outputText label="Role Name" >{!r.name}</apex:outputText> 
+<table border="1" rules="all" style="padding-top:3rem;padding-bottom:3rem;">
+
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Role</td>
+    <td>{!r.CLQ_Prior_Role__c}</td>
+    <td>{!r.CLQ_Role__c}</td>
+   </tr>
+    <tr>
+    <td>Contact</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+   </tr>
+    <tr>
+    <td>Start Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_Start_Date__c}" /></apex:outputText></td>    
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Start_Date__c}" /></apex:outputText></td>
+   </tr>
+      <tr>
+    <td>End Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_End_Date__c}" /></apex:outputText></td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_End_Date__c}" /></apex:outputText></td>
+   </tr>
+   <tr>
+    <td>Contact Age</td>
+    <td>{!r.CLQ_Age_Formula__c}</td>
+    <td></td>
+   </tr>  
+</tbody>
+</table>
+</apex:repeat>
+
+
+
+
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

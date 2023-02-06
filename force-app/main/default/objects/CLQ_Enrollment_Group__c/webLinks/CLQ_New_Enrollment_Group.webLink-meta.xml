@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_New_Enrollment_Group</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Enrollment Group</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a0V/e?CF00Nr0000000dwzF={!CLQ_Room_Space_Inspection__c.Name}&amp;CF00Nr0000000dwzF_lkid={!CLQ_Room_Space_Inspection__c.Id}&amp;CF00Nr0000000QeCB={!CLQ_Room_Space_Inspection__c.CLQ_Inspection__c}&amp;CF00Nr0000000QeCB__lkid={!CLQ_Room_Space_Inspection__c.CLQ_InspectionId__c}&amp;retURL=%2F{!CLQ_Room_Space_Inspection__c.Id}</url>
+</WebLink>

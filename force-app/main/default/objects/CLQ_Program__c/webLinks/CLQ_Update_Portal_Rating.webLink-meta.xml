@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Update_Portal_Rating</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Update Portal Rating</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var clqtd= new sforce.SObject(&quot;CLQ_Program__c&quot;); 
+clqtd.Id = &apos;{!CLQ_Program__c.Id}&apos;; 
+var dt; 
+
+var today = new Date(); 
+
+function fixTime(time){ 
+if(time &lt; 10) {time = &quot;0&quot; + time}; 
+return time; 
+} 
+function fixDate(date){ 
+var Month = fixTime(date.getMonth() + 1); 
+var Day = fixTime(date.getDate()); 
+
+return new Date(Month + &quot;/&quot; + Day + &quot;/&quot; + date.getFullYear()) ; 
+} 
+
+dt = fixDate(today); 
+var rating = &apos;{!CLQ_Program__c.Program_Rating__c}&apos;; 
+var rating1 = &apos;{!CLQ_Program__c.Rating_Expiration_Date__c}&apos;; 
+var rating2 = &apos;{!CLQ_Program__c.Rating_Effective_Date__c}&apos;; 
+var rating3 = &apos;{!CLQ_Program__c.Rating_Discontinue__c}&apos;;
+
+var dateToCheck	; 
+// 14704 
+if(rating2 != null &amp;&amp; rating2!=&apos;&apos;) 
+dateToCheck = new Date(rating2); // effective date 
+else 
+dateToCheck = null; // blanking out date to check if curr eff is null 13787 
+
+var dateToCheck1 ; 
+if(rating3!= null &amp;&amp; rating3!=&apos;&apos;) 
+dateToCheck1 = new Date(rating3); // discontinue date 
+
+var dateToCheck2; 
+if(rating1 != null &amp;&amp; rating1!=&apos;&apos;){ 
+dateToCheck2 = new Date(rating1); // expiration date 
+}else{ 
+//var dateToCheck3; 
+//if(rating1 == null &amp;&amp; rating1==&apos;&apos;) // expiration date 
+dateToCheck2 = null; 
+} 
+
+if ( (dateToCheck!=&apos;undefined&apos; &amp;&amp; dt &gt;= dateToCheck) ||( dateToCheck1!=&apos;undefined&apos; &amp;&amp; dt &gt;= dateToCheck1) )
+{ 
+clqtd.CLQ_Current_Rating__c = +(rating.replace(/,/,&apos;.&apos;)); 
+clqtd.CLQ_Current_Rating_Expiration_Date__c = dateToCheck2; 
+clqtd.Rating_Effective_Dt__c = dateToCheck; // blanking out date to check if curr eff is null 13787 //14704
+clqtd.RatingChangedDate__c = dt; //14798
+var result = sforce.connection.update([clqtd]); 
+if(result[0].getBoolean(&quot;success&quot;)) 
+{ 
+alert(&apos;Current Rating, Exp Date and Rating Changed Date values updated&apos;); 
+window.location.reload(); 
+} 
+} 
+
+else 
+{ 
+alert(&apos;Rating effective date or Rating Discontinue date is in the future, current portal rating is not updated&apos;); 
+}</url>
+</WebLink>

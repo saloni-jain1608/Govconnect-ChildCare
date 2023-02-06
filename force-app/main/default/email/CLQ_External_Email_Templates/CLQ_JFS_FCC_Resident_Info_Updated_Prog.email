@@ -1,0 +1,105 @@
+<messaging:emailTemplate subject="  {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} FCC Resident Info Program Transaction has been Updated" recipientType="User" relatedToType="CLQ_Program_Transaction__c">
+<messaging:htmlEmailBody >
+
+<p>The program {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} has been Updated.</p>
+
+<p>The list of fields that has been updated are:</p>
+<table border="3" rules="all" style="padding-top:5rem;padding-bottom:5rem;">
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th> Original Value </th>
+       <th> New Value </th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Number of Residents</td>
+    <td>{!relatedTo.CLQ_XPrior_Number_of_Residents__c}</td>
+    <td>{!relatedTo.CLQ_Number_of_Residents__c}</td>
+   </tr>
+    <tr>
+    <td>Foster Parent</td>
+   <td>{!relatedTo.CLQ_XPrior_Are_you_a_Foster_Parent__c}</td>
+    <td>{!relatedTo.CLQ_Are_you_a_foster_parent__c}</td>
+   </tr> 
+   <tr>
+    <td>Foster Children</td>
+    <td>{!relatedTo.CLQ_XPrior_Foster_Children__c}</td>
+    <td>{!relatedTo.CLQ_Foster_Children__c}</td>
+   </tr> 
+   <tr>
+    <td>Specialized Foster Home</td>
+    <td>{!relatedTo.CLQ_XPrior_Specialized_Foster_Home__c}</td>
+    <td>{!relatedTo.CLQ_Specialized_Foster_Home__c}</td>
+   </tr> 
+
+</tbody>
+</table>
+
+
+<apex:repeat value="{!relatedTo.Roles__r}" var="r">
+<apex:outputText rendered="{!(NOT(ISBLANK(r.CLQ_Prior_Age__c)) || NOT(ISBLANK(r.CLQ_Prior_End_Date__c)) || NOT(ISBLANK(r.CLQ_Prior_Relationship__c)) || NOT(ISBLANK(r.CLQ_Prior_Role__c)) || NOT(ISBLANK(r.CLQ_Prior_Start_Date__c)))}" label="Role Name" >{!r.name}<br/><br/> 
+<table border="3" rules="all" style="padding-top:5rem;padding-bottom:5rem;">
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Role</td>
+    <td>{!r.CLQ_Prior_Role__c}</td>
+    <td>{!r.CLQ_Role__c}</td>
+   </tr>
+    <tr>
+    <td>Contact</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+   </tr>
+      <tr>
+    <td>Relationship</td>
+    <td>{!r.CLQ_Prior_Relationship__c}</td>
+    <td>{!r.Relationship__c}</td>
+   </tr>
+    <tr>
+    <td>Start Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_Start_Date__c}" /></apex:outputText></td>    
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Start_Date__c}" /></apex:outputText></td>
+   </tr>
+      <tr>
+    <td>End Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_End_Date__c}" /></apex:outputText></td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_End_Date__c}" /></apex:outputText></td>
+   </tr>
+      <tr>
+    <td>Contact Age</td>
+    <td>{!r.CLQ_Age_Formula__c}</td>
+    <td></td>
+   </tr>  
+</tbody>
+</table>
+</apex:outputText>
+</apex:repeat>
+
+<br/><br/>List of newly added Residents:<br/>
+<apex:repeat value="{!relatedTo.Roles__r}" var="r">
+ <Strong><apex:outputText rendered="{!NOT(r.CLQ_XExisting_Role__c)}" label="Resident Name"> {!r.CLQ_Contact__r.Name}</apex:outputText><br/> </strong>
+</apex:repeat>
+
+
+<p>Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</p>
+
+<p>The Ohio Child Licensing and Quality System Team.</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

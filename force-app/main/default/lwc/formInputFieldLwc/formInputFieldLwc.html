@@ -1,0 +1,86 @@
+<template>
+    <div class="slds-p-right_small">
+        <template if:true={isTextField}>
+            <lightning-input label={field.Label_Lang} 
+                value={field.Value} 
+                type={field.Type} 
+                data-id={field.Label} 
+                required={field.Required} 
+                onchange={handleInputChange} 
+                disabled={field.ReadOnly} 
+                class="inputfields">                                        
+            </lightning-input>
+        </template>
+        <template if:true={isPicklistField}>
+            <lightning-combobox
+                name={field.Label}
+                label={field.Label_Lang}
+                value={field.Value}
+                placeholder="--None--"
+                data-id={field.Label}
+                options={field.PicklistValues}
+                required={field.Required}
+                disabled={field.ReadOnly}
+                class="inputfields"
+                onchange={handlePicklistChange} >
+            </lightning-combobox>
+        </template>
+        <template if:true={isRadioField}>
+            <lightning-radio-group name={field.Label}
+                          label={field.Label_Lang}
+                          data-id={field.Label} 
+                          options={field.options}
+                          disabled={field.ReadOnly}
+                          required={field.Required}
+                          class="inputfields"
+                          value={field.Value}
+                          type="radio">
+            </lightning-radio-group>
+        </template>
+        <template if:true={isMultiPicklistField}>
+            <lightning-checkbox-group name="Checkbox Group"
+                              label={field.Label_Lang}
+                              options={field.PicklistValues}
+                              class="inputfields"
+                              value={field.Value}
+                              disabled={field.ReadOnly}
+                              required={field.Required}
+                              data-id={field.Label} 
+                              onchange={handlePicklistChange}></lightning-checkbox-group>
+
+            <!--lightning-dual-listbox name="languages"
+                            label={field.Label}
+                            source-label="Available"
+                            selected-label="Selected"                            
+                            options={field.options}
+                            disabled={field.ReadOnly}
+                            onchange={handleChange}>
+            </lightning-dual-listbox-->
+        </template>
+        <template if:true={isCheckboxField}>
+            <lightning-input type="checkbox" label={field.Label_Lang} name={field.Label} value={field.Value} required={field.Required} disabled={field.ReadOnly} onchange={handleInputChange} class="inputfields" data-id={field.Label} ></lightning-input>
+        </template>
+        <template if:true={isEmailField}>
+            <lightning-input type="email" label={field.Label} name={field.Label} value={field.Value} required={field.Required} disabled={field.ReadOnly} onchange={handleInputChange} class="inputfields" data-id={field.Label} pattern={field.Pattern} message-when-pattern-mismatch={field.Pattern_Mismatch_Message} ></lightning-input>
+        </template>
+        <template if:true={isTextAreaField}>
+            <lightning-textarea name={field.Label} label={field.Label_Lang} value={field.Value} required={field.Required} disabled={field.ReadOnly} onchange={handleInputChange} class="inputfields" data-id={field.Label} pattern={field.Pattern} message-when-pattern-mismatch={field.Pattern_Mismatch_Message}>
+            </lightning-textarea>
+        </template>
+        <template if:true={isPhoneField}>
+            <lightning-input type="tel" label={field.Label_Lang} name={field.Label} value={field.Value} required={field.Required} disabled={field.ReadOnly} onchange={handleInputChange} class="inputfields" data-id={field.Label} pattern={field.Pattern} message-when-pattern-mismatch={field.Pattern_Mismatch_Message} ></lightning-input>
+        </template>
+        <template if:true={isNumberField}>
+            <lightning-input type="number" label={field.Label_Lang} name={field.Label} value={field.Value} required={field.Required} disabled={field.ReadOnly} onchange={handleInputChange} class="inputfields" data-id={field.Label} pattern={field.Pattern} message-when-pattern-mismatch={field.Pattern_Mismatch_Message} ></lightning-input>
+        </template>
+        <template if:true={isLookupField}>
+            <!--c-custom-lookup-field field-label={field.Label} required onvalueselected={handleValueSelcted}></c-custom-lookup-field-->
+            <lightning-record-edit-form object-api-name={field.ObjectApi}>
+                {field.Label_Lang} 
+                <lightning-input-field class="inputfields_lookup" variant = "label-hidden" required={field.Required}  field-name={field.FieldApi} data-id={field.Label} 
+                    value={field.Value} onchange={handleLookUpChange} disabled={field.ReadOnly} >
+                </lightning-input-field>
+            </lightning-record-edit-form>
+        </template>
+    </div>
+</template>

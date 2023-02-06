@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approve</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Approve</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var doc = sforce.connection.query(&quot;SELECT CLQ_Document__c FROM CLQ_Transaction_Document__c WHERE ID = &apos;{!CLQ_Transaction_Document__c.Id}&apos; AND CLQ_Document__c != &apos;&apos; limit 1&quot;); 
+
+records = doc.getArray(&quot;records&quot;); 
+
+if(records.length == 0 ){ 
+alert(&apos;Standard Document is needed to approve the Transaction Document&apos;); 
+} 
+else{
+
+var clqtd= new sforce.SObject(&quot;CLQ_Transaction_Document__c&quot;); 
+clqtd.Id = &apos;{!CLQ_Transaction_Document__c.Id}&apos;; 
+clqtd.CLQ_Document_Status__c=&apos;Approved&apos;; 
+
+var result = sforce.connection.update([clqtd]); 
+ 
+if(result[0].getBoolean(&quot;success&quot;)) 
+{ 
+var progid = &apos;{!CLQ_Transaction_Document__c.CLQ_Program_TransactionId__c}&apos;;	
+var recordtypePT = sforce.connection.query(&quot;Select RecordTypeId FROM CLQ_Program_Transaction__c WHERE Id= &apos;&quot;+progid+&quot;&apos;&quot;) ; 
+//alert(&quot;Select RecordTypeId FROM CLQ_Program_Transaction__c WHERE Id= &apos;&quot;+progid+&quot;&apos;&quot;); 
+//alert(recordtypePT); 
+var recordTypePTR= recordtypePT.getArray(&quot;records&quot;); 
+var recordtypeResult1 = sforce.connection.query(&quot;Select id FROM RecordType WHERE Name=&apos;SUTQ - Annual Report&apos;&quot;); 
+var recordType1 = recordtypeResult1.getArray(&quot;records&quot;); 
+var recordtypeResult2 = sforce.connection.query(&quot;Select id FROM RecordType WHERE Name=&apos;SUTQ - Initial Registration&apos;&quot;); 
+var recordType2 = recordtypeResult2.getArray(&quot;records&quot;); 
+var recordtypeResult3 = sforce.connection.query(&quot;Select id FROM RecordType WHERE Name=&apos;SUTQ - Ongoing Registration&apos;&quot;); 
+var recordType3 = recordtypeResult3.getArray(&quot;records&quot;); 
+//alert(recordTypePTR[0].Id); 
+//alert(recordType1[0].Id); 
+//if(recordTypePTR[0].RecordTypeId == recordType1[0].Id || recordTypePTR[0].RecordTypeId == recordType2[0].Id || recordTypePTR[0].RecordTypeId == recordType3[0].Id ) 
+
+//alert(&apos;Reached Inside&apos;); 
+var stdDoc= new sforce.SObject(&quot;CLQ_Standard_Document__c&quot;); 
+stdDoc.Id = &apos;{!CLQ_Transaction_Document__c.CLQ_DocumentId__c}&apos;; 
+//alert(stdDoc.Id); 
+
+stdDoc.CLQ_Document_Points__c=&apos;{!TEXT(CLQ_Transaction_Document__c.Document_Points__c )}&apos;; 
+stdDoc.CLQ_Document_Rating__c=&apos;{!TEXT(CLQ_Transaction_Document__c.Rating__c) }&apos;; 
+/*stdDoc.CLQ_Standard_Document_Status__c=&apos;{!TEXT(CLQ_Transaction_Document__c.CLQ_Document_Status__c) }&apos;; */ 
+stdDoc.CLQ_Standard_Document_Status__c = &apos;Approved&apos;; 
+//alert(stdDoc.CLQ_Document_Points__c); 
+if(stdDoc.CLQ_Document_Points__c==&apos;&apos;) 
+stdDoc.CLQ_Document_Points__c =&apos; &apos;; 
+//alert(stdDoc.CLQ_Document_Rating__c); 
+if(stdDoc.CLQ_Document_Rating__c==&apos;&apos;) 
+stdDoc.CLQ_Document_Rating__c=&apos; &apos;; 
+/*stdDoc.CLQ_Document_Points__c=&apos;{!BLANKVALUE(TEXT(CLQ_Transaction_Document__c.Document_Points__c), null)}&apos;; 
+stdDoc.CLQ_Document_Rating__c=&apos;{!BLANKVALUE(TEXT(CLQ_Transaction_Document__c.Rating__c), null)}&apos;; */ 
+
+var result2 = sforce.connection.update([stdDoc]); 
+if(result2[0].getBoolean(&quot;success&quot;)) 
+{ 
+window.location.reload(); 
+} 
+else{ 
+alert(&apos;Error : &apos;+result2); 
+} 
+
+} 
+else{ 
+alert(&apos;Error : &apos;+result); 
+} 
+}</url>
+</WebLink>

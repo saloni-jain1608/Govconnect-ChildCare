@@ -1,0 +1,63 @@
+<template>
+    <lightning-record-view-form object-api-name="CLQ_Rules_Inspected__c" record-id={ruleRecord.Id}>
+        <div class="slds-m-horizontal_medium slds-m-top_medium slds-m-bottom_xx-large" style="min-height: 150px;">
+
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-3">
+                    <b>Rule Name : </b>
+                    <lightning-formatted-rich-text value={ruleRecord.CLQ_Rule_Short_Name__c}>
+                    </lightning-formatted-rich-text>
+
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <b>Findings : </b>
+                    <p>
+                        <lightning-formatted-rich-text value={sfindingCode}></lightning-formatted-rich-text>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                </div>
+            </div>
+
+            <template if:true={showAllegationDescription}>
+                <div class="slds-grid slds-gutters slds-m-top_small">
+                    <div class="slds-col slds-size_1-of-1">
+                        <b>Allegation Description : </b>
+                        <lightning-textarea type="text" value={ruleRecord.CLQ_Allegation_Description__c}
+                            variant="label-hidden"></lightning-textarea>
+                    </div>
+                </div>
+            </template>
+
+            <div class="slds-grid slds-gutters slds-m-top_small">
+                <div class="slds-col slds-size_2-of-3">
+                    <b>Administrative Code: </b>
+                    <p>
+                        <lightning-formatted-rich-text
+                            value={ruleRecord.CLQ_Domain_Rule__r.CLQ_Rule__r.CLQ_Description_Text__c}>
+                        </lightning-formatted-rich-text>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <div class="slds-float_left">
+                        <b>Result: </b>
+                        <lightning-combobox style="max-width: 180px;" name="result" variant="label-hidden"
+                            value={ruleRecord.CLQ_Result__c} options={resultOptionValues} onchange={handleResultChange}>
+                        </lightning-combobox>
+                    </div>
+                    <lightning-button style="margin-top: 19px;" class="slds-float_left slds-m-left_x-small"
+                        label="Edit Findings" onclick={handleEditFindings}></lightning-button>
+                </div>
+            </div>
+
+        </div>
+
+        <template if:true={showModal}>
+            <c-glc-v-m-edit-findings popup-wrapper-list={findingWrapperList}
+                rule-name={ruleRecord.CLQ_Rule_Short_Name__c} rule-result={ruleRecord.CLQ_Result__c}
+                inspection-rec-id={ruleRecord.CLQ_Inspection_No__c} rule-record-id={ruleRecord.Id}>
+            </c-glc-v-m-edit-findings>
+        </template>
+
+    </lightning-record-view-form>
+</template>

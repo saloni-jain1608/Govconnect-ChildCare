@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Record_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Transaction Record Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Transaction_Group_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amendment - Center - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - Center - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - Change of Administrator</fullName>
+                <default>false</default>
+                <label>Amendment - Change of Administrator</label>
+            </value>
+            <value>
+                <fullName>Amendment - FCC - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - FCC - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - ODE - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE and Center - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment - ODE and Center - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Amendment- FCC - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment- FCC - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Application - CC Center</fullName>
+                <default>false</default>
+                <label>Application - CC Center</label>
+            </value>
+            <value>
+                <fullName>Application - FCC</fullName>
+                <default>false</default>
+                <label>Application - FCC</label>
+            </value>
+            <value>
+                <fullName>Application - ODE Program</fullName>
+                <default>false</default>
+                <label>Application - ODE Program</label>
+            </value>
+            <value>
+                <fullName>ApprovalProcess Restricted</fullName>
+                <default>false</default>
+                <label>ApprovalProcess Restricted</label>
+            </value>
+            <value>
+                <fullName>Continuous License</fullName>
+                <default>false</default>
+                <label>Continuous License</label>
+            </value>
+            <value>
+                <fullName>Day Camp</fullName>
+                <default>false</default>
+                <label>Day Camp</label>
+            </value>
+            <value>
+                <fullName>Licensing - Closure</fullName>
+                <default>false</default>
+                <label>Licensing - Closure</label>
+            </value>
+            <value>
+                <fullName>Reactivate Transaction</fullName>
+                <default>false</default>
+                <label>Reactivate Transaction</label>
+            </value>
+            <value>
+                <fullName>Registration - In-Home Aide</fullName>
+                <default>false</default>
+                <label>Registration - In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>Registration - Out of State</fullName>
+                <default>false</default>
+                <label>Registration - Out of State</label>
+            </value>
+            <value>
+                <fullName>Registration Closure</fullName>
+                <default>false</default>
+                <label>Registration Closure</label>
+            </value>
+            <value>
+                <fullName>Renewal - In-Home-Aide</fullName>
+                <default>false</default>
+                <label>Renewal - In-Home-Aide</label>
+            </value>
+            <value>
+                <fullName>Renewal - Out of State</fullName>
+                <default>false</default>
+                <label>Renewal - Out of State</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Annual Report</fullName>
+                <default>false</default>
+                <label>SUTQ - Annual Report</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Initial Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Initial Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Ongoing Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Ongoing Registration</label>
+            </value>
+            <value>
+                <fullName>Update Contact Information</fullName>
+                <default>false</default>
+                <label>Update Contact Information</label>
+            </value>
+            <value>
+                <fullName>Update FCC Resident Information</fullName>
+                <default>false</default>
+                <label>Update FCC Resident Information</label>
+            </value>
+            <value>
+                <fullName>Update Facility Information</fullName>
+                <default>false</default>
+                <label>Update Facility Information</label>
+            </value>
+            <value>
+                <fullName>Update In-Home Aid</fullName>
+                <default>false</default>
+                <label>Update In-Home Aid</label>
+            </value>
+            <value>
+                <fullName>Update In-Home Aide</fullName>
+                <default>false</default>
+                <label>Update In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>Update On-site Contact Information</fullName>
+                <default>false</default>
+                <label>Update On-site Contact Information</label>
+            </value>
+            <value>
+                <fullName>Update Out of State</fullName>
+                <default>false</default>
+                <label>Update Out of State</label>
+            </value>
+            <value>
+                <fullName>Update Outdoor Space Information</fullName>
+                <default>false</default>
+                <label>Update Outdoor Space Information</label>
+            </value>
+            <value>
+                <fullName>Update Space Information</fullName>
+                <default>false</default>
+                <label>Update Space Information</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>Renew Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Renew Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Expedited Rating</fullName>
+                <default>false</default>
+                <label>SUTQ - Expedited Rating</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Expedited Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Expedited Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Change of Owner Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Change of Owner Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Reinstate Rating</fullName>
+                <default>false</default>
+                <label>SUTQ - Reinstate Rating</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Reinstate Rating after Temporary Closure</fullName>
+                <default>false</default>
+                <label>SUTQ - Reinstate Rating after Temporary Closure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Application - CC Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Application - FCC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Application - ODE Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>ApprovalProcess Restricted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Continuous License</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Day Camp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Licensing - Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Reactivate Transaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Registration - In-Home Aide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Registration - Out of State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Registration Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Renewal - In-Home-Aide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Renewal - Out of State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Application - Day Camp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>License Card</controllingFieldValue>
+            <valueName>Renew Application - Day Camp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment - Center - Change of Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment - Change of Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment - FCC - Change of Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment - ODE - Change of Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment - ODE and Center - Change of Capacity / Space</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amendment</controllingFieldValue>
+            <valueName>Amendment- FCC - Change of Capacity / Space</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Annual Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Initial Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Ongoing Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Expedited Rating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Change of Owner Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUTQ Card</controllingFieldValue>
+            <valueName>SUTQ - Reinstate Rating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update Contact Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update FCC Resident Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update Facility Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update In-Home Aid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update In-Home Aide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update On-site Contact Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update Out of State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update Outdoor Space Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updates</controllingFieldValue>
+            <valueName>Update Space Information</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

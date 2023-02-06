@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template if an application is successfully submitted for certification as an In-Home Aide</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>IHA Application Received Template</name>
+    <style>formalLetter</style>
+    <subject>Application Received for In-Home Aide for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}</subject>
+    <textOnly>You have successfully submitted an application for certification as an In-Home Aide. A county representative will contact you about next steps in the process. It can take a minimum of 60 days from the application submission date to be approved for a certification.
+Please contact your County Agency with additional questions.
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. 
+
+The Ohio Child Licensing and Quality System Team.  
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Medical_Statement__c</fullName>
+    <description>Select Multiple Options if applicable.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Multiple Options if applicable.</inlineHelpText>
+    <label>Child Medical Statement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>No Medical</fullName>
+                <default>false</default>
+                <label>No Medical</label>
+            </value>
+            <value>
+                <fullName>Medical Expired</fullName>
+                <default>false</default>
+                <label>Medical Expired</label>
+            </value>
+            <value>
+                <fullName>Child Name/DOB Missing</fullName>
+                <default>false</default>
+                <label>Child Name/DOB Missing</label>
+            </value>
+            <value>
+                <fullName>Date of Exam Missing</fullName>
+                <default>false</default>
+                <label>Date of Exam Missing</label>
+            </value>
+            <value>
+                <fullName>Doctor Signature Missing</fullName>
+                <default>false</default>
+                <label>Doctor Signature Missing</label>
+            </value>
+            <value>
+                <fullName>Doctor Info Missing</fullName>
+                <default>false</default>
+                <label>Doctor Info Missing</label>
+            </value>
+            <value>
+                <fullName>Doctor Does Not Meet</fullName>
+                <default>false</default>
+                <label>Doctor Does Not Meet</label>
+            </value>
+            <value>
+                <fullName>No Immunization Record</fullName>
+                <default>false</default>
+                <label>No Immunization Record</label>
+            </value>
+            <value>
+                <fullName>No Immunization Waiver</fullName>
+                <default>false</default>
+                <label>No Immunization Waiver</label>
+            </value>
+            <value>
+                <fullName>Suitable for Group Care Missing</fullName>
+                <default>false</default>
+                <label>Suitable for Group Care Missing</label>
+            </value>
+            <value>
+                <fullName>Pending Verification</fullName>
+                <default>false</default>
+                <label>Pending Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

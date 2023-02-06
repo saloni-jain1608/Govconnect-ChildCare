@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_alert_to_Licensing_Specialist_for_Inactive_Program</name>
+        <label>Email alert to Licensing Specialist for Inactive Program</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <actionName>CLQ_Program__c.CLQ_Email_alert_to_Licensing_Specialist_for_Inactive_Program_after_335days_of_Cr</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <interviewLabel>Program CLQ_Rule to update Program if Inactive for 335 days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Program CLQ_Rule to update Program if Inactive for 335 days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CLQ_Program_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Licensing_Specialist__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>CLQ_Program__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X335_Days_After_Program_Program_Status_Change_Date</name>
+            <connector>
+                <targetReference>Email_alert_to_Licensing_Specialist_for_Inactive_Program</targetReference>
+            </connector>
+            <label>335 Days After Program: Program Status Change Date</label>
+            <offsetNumber>335</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>CLQ_Program_Status_Change_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

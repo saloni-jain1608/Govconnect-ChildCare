@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rules Inspected</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rules Inspected</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>ODE_Integration</name>
+    </fieldSets>
+    <layouts>
+        <layout>Rules Inspected Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description / Comments</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Rules Inspected Layout for SA-SU</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description / Comments</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Address_Reqd_for_OOS_Registration</fullName>
+    <active>true</active>
+    <description>Physical Address Required for OOS if Transaction type = Registration</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(  CLQ_Registration_Status__c , &apos;Submitted&apos;), ISPICKVAL( CLQ_Transaction_Type__c , &apos;Registration&apos;), RecordType.Name = &apos;Registration - Out of State&apos;,  OR( ISBLANK( CLQ_ProgTrans_Street_Address__c ),ISBLANK(  CLQ_ProgTrans_City__c ),ISBLANK(  CLQ_ProgTrans_Zip_Code__c ),ISBLANK(  CLQ_ProgTrans_Program_Email_Address__c ),ISBLANK(  TEXT(  CLQ_ProgTrans_State__c ) ),ISBLANK(  TEXT(   State_of_License_Certification_Exemption__c ) ) )  )</errorConditionFormula>
+    <errorMessage>Program Information and Physical Address is Required for Registration</errorMessage>
+</ValidationRule>

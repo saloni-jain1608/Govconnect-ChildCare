@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="907px" viewBox="0 0 1440 907" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>5942208F-19AE-4617-8D33-5E3D5502632A</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="23.1181627%" y1="0%" x2="85.9070401%" y2="103.951741%" id="linearGradient-1">
+            <stop stop-color="#105CDF" offset="0%"></stop>
+            <stop stop-color="#00BAFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="61" y="0" width="1548" height="1094"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1548" height="1094" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+    </defs>
+    <g id="Public-Content" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Community-Partners-Page">
+            <g id="Group-4" transform="translate(-100.000000, -187.000000)">
+                <use id="Rectangle-4" stroke="#979797" mask="url(#mask-3)" stroke-width="2" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <g id="Group-3" transform="translate(0.000000, 42.000000)" stroke="#2C2C2C" stroke-opacity="0.1">
+                    <circle id="Oval-8" stroke-width="3" cx="140.5" cy="257.5" r="140.5"></circle>
+                    <circle id="Oval-8" stroke-width="3" cx="497.5" cy="603.5" r="140.5"></circle>
+                    <circle id="Oval-8" stroke-width="3" cx="846.5" cy="140.5" r="140.5"></circle>
+                    <circle id="Oval-8" stroke-width="3" cx="1468.5" cy="163.5" r="140.5"></circle>
+                    <circle id="Oval-8" stroke-width="3" cx="1077.5" cy="501.5" r="140.5"></circle>
+                    <path d="M282,256 L713,188" id="Line" stroke-width="6"></path>
+                    <path d="M1205,440 L1396,285" id="Line" stroke-width="6"></path>
+                    <path d="M610,600 L936,509" id="Line" stroke-width="6"></path>
+                    <path d="M908,268 L991,389" id="Line" stroke-width="6"></path>
+                    <path d="M388,514 L217,377" id="Line" stroke-width="6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

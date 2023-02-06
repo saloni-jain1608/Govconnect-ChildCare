@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalRestrictRelatedList</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR(AND( Program_Transaction__r.IsPending__c = true,$Profile.Name !=&apos;System Administrator&apos;,$User.Id != Program_Transaction__r.Next_Approver__c ), AND( Program_Transaction__r.IsApproved_PrgTran__c ,$Profile.Name !=&apos;System Administrator&apos;) )</errorConditionFormula>
+    <errorMessage>you can not create/update answer as associated program transaction approval is in either pending or approved status.</errorMessage>
+</ValidationRule>

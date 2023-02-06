@@ -1,0 +1,12 @@
+<apex:page standardController="CLQ_Inspection__c" extensions="CLQ_CompleteVisitModeExtn" action="{!onLoad}">
+    <apex:form >
+        
+        <apex:pageBlock >
+            <apex:pageMessages >
+            </apex:pageMessages>
+            <apex:pageblockButtons >
+                <apex:commandButton value="Ok" action="{!onOk}"/>
+            </apex:pageblockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

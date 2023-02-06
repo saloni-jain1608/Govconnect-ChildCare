@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Room_Space_Shape_Validation</fullName>
+    <active>false</active>
+    <description>If CLQ_Room_Space_Shape__c = &apos;Square..&apos; then CLQ_Square_Footage_Irregular__c should be blank</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(NOT(TEXT(CLQ_Room_Space_Shape__c) = &apos;Irregular&apos;), CLQ_Square_Footage_Irregular__c &gt; 0)</errorConditionFormula>
+    <errorDisplayField>CLQ_Square_Footage_Irregular__c</errorDisplayField>
+    <errorMessage>If Room/Space shape is not irregular then Square Footage Irregular should be 0</errorMessage>
+</ValidationRule>

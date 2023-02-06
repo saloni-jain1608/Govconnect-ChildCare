@@ -1,0 +1,11 @@
+.divClass{
+    height:4rem;
+}
+.leftnav-items {
+    position: relative;
+}
+.tick-img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}

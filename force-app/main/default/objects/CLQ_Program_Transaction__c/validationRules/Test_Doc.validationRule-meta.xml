@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Doc</fullName>
+    <active>false</active>
+    <errorConditionFormula>Transaction_Document_Count__c = 0 &amp;&amp;  
+RecordType.Name == &apos;Application - CC Center&apos;</errorConditionFormula>
+    <errorMessage>Error in submitting documents</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Child_unattended_on_site_inside_pgm__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Child unattended on-site inside program</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

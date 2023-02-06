@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Validate_ApprovedTransaction</fullName>
+    <active>true</active>
+    <description>Do not allow reviewers to update approved Transaction</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ($Profile.Name == &apos;ODE Licensing Reviewer - State User&apos; || $Profile.Name == &apos;ODE Lic and SUTQ Reviewer - State User&apos;) &amp;&amp;  NOT(ISNEW()) &amp;&amp; ISPICKVAL(CLQ_Transaction_Status__c ,&apos;Approved&apos;)</errorConditionFormula>
+    <errorMessage>You are not allowed to update Approved Transactions.</errorMessage>
+</ValidationRule>

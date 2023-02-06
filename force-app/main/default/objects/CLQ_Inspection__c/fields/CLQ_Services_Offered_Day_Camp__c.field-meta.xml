@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Services_Offered_Day_Camp__c</fullName>
+    <description>Created to capture Services Offered for Application day camp</description>
+    <externalId>false</externalId>
+    <label>Services Offered Day Camp</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Meals Provided</fullName>
+                <default>false</default>
+                <label>Meals Provided</label>
+            </value>
+            <value>
+                <fullName>Evening Care</fullName>
+                <default>false</default>
+                <label>Evening Care</label>
+            </value>
+            <value>
+                <fullName>Swimming/Water Activities</fullName>
+                <default>false</default>
+                <label>Swimming/Water Activities</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Overnight Camping</fullName>
+                <default>false</default>
+                <label>Overnight Camping</label>
+            </value>
+            <value>
+                <fullName>Field Trips</fullName>
+                <default>false</default>
+                <label>Field Trips</label>
+            </value>
+            <value>
+                <fullName>Specialized Activities</fullName>
+                <default>false</default>
+                <label>Specialized Activities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

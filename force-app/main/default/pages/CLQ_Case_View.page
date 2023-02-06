@@ -1,0 +1,40 @@
+<!-- 
+/**************************************************************************************************************
+** Name             : CLQ_Case_View
+** Version          : 1.1
+**------------------------------------------------------------------------------------------------------------
+** Modification Log:
+**------------------
+**  Developer           Date            Version     Description
+**------------------------------------------------------------------------------------------------------------
+**  Rohit Gowrishetty   7/16/2018		1.1			TFS#11923 : Created the page to disable the button if clicked more than once
+**************************************************************************************************************/ 
+-->
+<apex:page standardController="Case" >
+	<apex:includeScript value="{!$Resource.JQueryMin}" />
+	<style type="text/css">                  
+		.btn.disabled, .btn[disabled] {
+            cursor: default;
+            background-image: none;
+            opacity: 0.65;
+            filter: alpha(opacity=65);
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            color: #333;
+            background-color: #E6E6E6;
+		}    								
+	</style>
+    
+	<apex:detail subject="{!Case}" relatedList="true" title="true" />
+	
+	<script type="text/javascript">
+        $j = jQuery.noConflict();
+        $j(document).ready(function() { 
+            $j("input[value='Create Inspection']").click(function() {
+				$j("input[value='Create Inspection']").prop('disabled', true);
+			});
+
+        });
+    </script>
+</apex:page>

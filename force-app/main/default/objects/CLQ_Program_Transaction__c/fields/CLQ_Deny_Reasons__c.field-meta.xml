@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Deny_Reasons__c</fullName>
+    <externalId>false</externalId>
+    <label>Deny Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CLQ_Recommendation__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Enforcement</fullName>
+                <default>false</default>
+                <label>Enforcement</label>
+            </value>
+            <value>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+                <label>Not Qualified</label>
+            </value>
+            <value>
+                <fullName>Does Not Meet Rehabilitation Standards</fullName>
+                <default>false</default>
+                <label>Does Not Meet Rehabilitation Standards</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Deny</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deny</controllingFieldValue>
+            <valueName>Not Applicable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deny</controllingFieldValue>
+            <valueName>Enforcement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deny</controllingFieldValue>
+            <valueName>Not Qualified</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deny</controllingFieldValue>
+            <valueName>Does Not Meet Rehabilitation Standards</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

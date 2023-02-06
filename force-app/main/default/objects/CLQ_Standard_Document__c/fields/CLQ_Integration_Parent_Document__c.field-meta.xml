@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Integration_Parent_Document__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>field to store the immediate parent document</description>
+    <externalId>false</externalId>
+    <label>Version Immediate Parent Document</label>
+    <referenceTo>CLQ_Standard_Document__c</referenceTo>
+    <relationshipLabel>Standard Documents</relationshipLabel>
+    <relationshipName>Integration_Parent_Documents</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

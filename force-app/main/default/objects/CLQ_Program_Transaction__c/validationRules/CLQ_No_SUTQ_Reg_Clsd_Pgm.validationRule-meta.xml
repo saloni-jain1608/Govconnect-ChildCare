@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_No_SUTQ_Reg_Clsd_Pgm</fullName>
+    <active>true</active>
+    <description>Do not allow a Registration transaction to be done on a program with a closed status</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT(Skip_Validation__c) &amp;&amp; AND(ISPICKVAL( CLQ_Program__r.CLQ_Program_Status__c , &quot;Closed&quot;), (OR (RecordType.Name == &quot;SUTQ - Initial Registration&quot;, RecordType.Name == &quot;SUTQ - Ongoing Registration&quot;)))</errorConditionFormula>
+    <errorMessage>This program is not eligible to submit a Step Up To Quality (SUTQ) Initial/Ongoing Registration due to the following:  The program is in a Closed status.</errorMessage>
+</ValidationRule>

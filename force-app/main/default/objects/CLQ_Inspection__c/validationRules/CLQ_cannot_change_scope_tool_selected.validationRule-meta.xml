@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_cannot_change_scope_tool_selected</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name = &apos;Inspection&apos;,ISCHANGED(CLQ_Scope__c) &amp;&amp; (NOT(ISBLANK(CLQ_Inspection_Tool__c)) || NOT(ISBLANK(CLQ_Recommended_Inspection_Tool__c))))</errorConditionFormula>
+    <errorMessage>Scope of the Inspection cannot be changed when Inspection tool is already selected</errorMessage>
+</ValidationRule>

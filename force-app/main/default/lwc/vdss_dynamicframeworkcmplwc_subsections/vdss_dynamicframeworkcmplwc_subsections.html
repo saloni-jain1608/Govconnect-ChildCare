@@ -1,0 +1,38 @@
+<template>
+    <div class="slds-p-around_large">
+        <!-- Sub-section Type = Textblock -->
+        <template if:true={isTextBlock}>
+            <h1 class="sub-section-text-block" key={subsection.Label}>
+                <lightning-formatted-rich-text value={subsection.TextBlockBody}></lightning-formatted-rich-text>
+            </h1>
+        </template>
+        <!-- Sub-section Type = Fieldset -->
+        <template if:true={isFieldset}>
+            <h1 class="sub-section" key={subsection.Label}>{subsection.Label}</h1>
+                <div class="slds-grid slds-wrap">
+                    <template for:each={subsection.Fields} for:item="field" for:index="fieldIndex">  
+                        <div key={field.Label} class={field.CSSClasses}>
+                            <c-form-input-field-lwc field={field} data-id={index} data-name={fieldIndex} onvaluechange={handleValueChange}></c-form-input-field-lwc>
+                            </div>
+                    </template>
+                </div>  
+        </template>
+        <!-- Sub-section Type = Component -->
+        <template if:true={isComponent}>
+            <h1 class="sub-section" key={subsection.Label}>{subsection.Label}</h1>
+            <div class="slds-wrap">
+                <template if:true={isTableTypeComp}>
+                    <!--c-dynamictablecmp json-data={subsection}></c-dynamictablecmp-->
+                    <!--c-testlwcsave></c-testlwcsave-->
+                    <c-dynamic-table-form-cmp sub-section-info={subsection} program-id={programId} languageselected={languageselected} program-transaction-id={programTransactionId}></c-dynamic-table-form-cmp>
+                </template>
+                <template if:true={isFileUploadComp}>
+                    <c-vdss_dynamicframeworkcmplwc_fileupload sub-section-info={subsection} languageselected={languageselected}  program-transaction-id={programTransactionId} onvaluechange={handleValueChange} ></c-vdss_dynamicframeworkcmplwc_fileupload>
+                </template>
+                <template if:true={Signature}>
+                    <c-signature sub-section-info={subsection} languageselected={languageselected}  program-transaction-id={programTransactionId} onvaluechange={handleValueChange} ></c-signature>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

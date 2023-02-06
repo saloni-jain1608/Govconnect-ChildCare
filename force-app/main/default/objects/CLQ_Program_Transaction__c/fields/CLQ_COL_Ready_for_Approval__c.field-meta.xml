@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_COL_Ready_for_Approval__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(NOT(CONTAINS(RecordType.Name, &quot;SUTQ&quot;)), 
+CONTAINS(RecordType.Name, &quot;Change of Location&quot;), 
+CLQ_Ready_for_Approval__c = True, 
+OR( 
+AND( 
+TEXT(CLQ_Recommendation__c) = &quot;Approve&quot;, 
+CLQ_Inspection_Created__c =True, 
+CLQ_Complete_Inspection__c = True, 
+CLQ_Document_Review_Complete__c = True), 
+TEXT(CLQ_Recommendation__c) = &quot;Deny&quot;, 
+TEXT(CLQ_Recommendation__c) = &quot;Withdraw&quot; 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>XCOL Ready for Approval</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

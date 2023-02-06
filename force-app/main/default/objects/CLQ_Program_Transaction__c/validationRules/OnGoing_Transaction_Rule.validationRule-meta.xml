@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnGoing_Transaction_Rule</fullName>
+    <active>false</active>
+    <description>CR Item: 11158 - edited validation rule error message</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(!CLQ_PT_ByPassUtil__c,! CLQ_Program__r.OnGoing_Transaction_Rule__c ,RecordType.Name == &apos;SUTQ - Ongoing Registration&apos;, !ISPICKVAL( CLQ_Program__r.Unable_to_Rate_Reasons__c , &apos;Change of Owner Rating&apos;),!ISPICKVAL( CLQ_Program__r.Unable_to_Rate_Reasons__c , &apos;Expedited Rating&apos;), 	OR(
+		Date(YEAR(CLQ_Program__r.Rating_Effective_Date__c),MONTH(CLQ_Program__r.Rating_Effective_Date__c),DAY(CLQ_Program__r.Rating_Effective_Date__c)) +180 &gt; Today(),
+		Date(YEAR(CLQ_Program__r.Rating_Expiration_Date__c),MONTH(CLQ_Program__r.Rating_Expiration_Date__c),DAY(CLQ_Program__r.Rating_Expiration_Date__c)) -90 &lt; Today()
+	),
+	ISPICKVAL(CLQ_Transaction_Status__c , &apos;Not Complete&apos;)
+)</errorConditionFormula>
+    <errorMessage>Ongoing Registrations may not be initiated until 180 days after a rating is awarded and must be submitted 90 days prior to the Rating Expiration Date.</errorMessage>
+</ValidationRule>

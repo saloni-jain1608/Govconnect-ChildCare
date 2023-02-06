@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Action_Taken_Required_For_Injury_ill</fullName>
+    <active>true</active>
+    <description>If any  of the checkbox in the ‘Type of Injury or Illness’ is checked and none of the Action Taken options are checked, error message is displayed: Must select an “Action Taken”</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( OR( RecordType.Name = &apos;Incident / Injury / Illness&apos;, RecordType.Name = &apos;Incident Injury Submitted&apos;),
+(OR( CLQ_Allergic_Reaction_Asthma_Attack__c , CLQ_Blow_or_Bump_to_the_Head__c , CLQ_Broken_Disclosed_Bone__c,  CLQ_Outbreak_of_illness__c,  CLQ_Collapse_Faint__c,  CLQ_Deep_Cut_Laceration__c,  CLQ_No_Pulse_Not_Breathing__c ,  CLQ_Object_inserted_into_body_part__c ,  CLQ_Poisoning__c , CLQ_Seizure__c ,  CLQ_Sprain_Strain__c ,  CLQ_Suspected_broken_bone_dislocation__c ,  CLQ_Tooth_injury__c , CLQ_Other_injury_requiring_medical_trmt__c   ) &amp;&amp;  
+
+AND(  !CLQ_Public_Children_Services_Agency_Cnt__c ,  !CLQ_Poison_Control_Contacted__c , !CLQ_Emergency_Services_police_fire_amb__c , !CLQ_Emergency_Services_Transported_Child__c , !CLQ_Parent_followed_up_with_Medical__c ,  !CLQ_Program_Recom_Medical_Dental_Care__c , !CLQ_Local_Health_Department_Contacted__c, !CLQ_Othercbx__c  )
+))</errorConditionFormula>
+    <errorMessage>If a Type of Child Injury or Illness is selected you must select an “Action Taken”</errorMessage>
+</ValidationRule>

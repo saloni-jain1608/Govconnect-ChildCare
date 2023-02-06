@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Restrict_Edit_for_Help_Desk_User</fullName>
+    <active>true</active>
+    <description>If the case status is submitted(validation checkbox is true) the help desk user should not be able to edit the record.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(CLQ_Validation_Check__c= true,$User.FirstName =&apos;Help Desk&apos;,NOT(ISCHANGED(CLQ_Additional_Information__c)))</errorConditionFormula>
+    <errorMessage>You do not have the permission to edit the record except for additional information.</errorMessage>
+</ValidationRule>

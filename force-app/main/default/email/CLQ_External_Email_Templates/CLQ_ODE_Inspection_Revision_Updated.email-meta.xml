@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE Inspection Revision Updated</name>
+    <style>formalLetter</style>
+    <subject>Inspection Updated for {!CLQ_Inspection__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Inspection__c.Program_Number__c}{!CLQ_Role__c.CLQ_Program_Number_Formula__c}</subject>
+    <textOnly>The purpose of this email is to notify you that the results of the inspection for {!CLQ_Inspection__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Inspection__c.Program_Number__c}{!CLQ_Role__c.CLQ_Program_Number_Formula__c} completed on {!CLQ_Inspection__c.CLQ_Inspection_End_Date__c} {!CLQ_Role__c.CLQ_Inspection_End_Date__c} has been revised.
+
+A copy of the revised report is attached. Please discard the previous version. The licensing inspection report will identify if a corrective action response is required. The program must submit the corrective action plan through OCLQS for each noncompliance that requires a response.
+
+If you have any questions regarding the inspection report revisions, contact your department representative or the Child Care Help Desk at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

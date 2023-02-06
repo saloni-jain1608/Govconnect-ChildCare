@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CountyAdmin_Cannot_Change_OTHC_Owner</fullName>
+    <active>true</active>
+    <description>County Admin Can Only change their own county Program Owner</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(
+  $Profile.Name = &quot;ODJFS County Admin - County Role&quot;,
+  ISCHANGED(OwnerId),
+  !CONTAINS(UPPER($UserRole.Name),CLQ_County__r.Name )  
+)</errorConditionFormula>
+    <errorMessage>You cannot change other county record ownership</errorMessage>
+</ValidationRule>

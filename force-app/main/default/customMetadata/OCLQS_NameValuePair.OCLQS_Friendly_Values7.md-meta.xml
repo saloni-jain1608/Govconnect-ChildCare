@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values7</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Closed==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__In Progress==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Closed by System==Attached**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Resubmitted==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Denied==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Approved==Attached**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Under Reviewer Review==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Returned for Revision==Attached**YES</value>
+    </values>
+</CustomMetadata>

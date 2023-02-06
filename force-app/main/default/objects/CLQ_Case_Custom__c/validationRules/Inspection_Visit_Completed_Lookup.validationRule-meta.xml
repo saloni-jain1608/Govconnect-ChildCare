@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inspection_Visit_Completed_Lookup</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR( RecordType.Name = &apos;Incident / Injury / Illness&apos;, RecordType.Name = &apos;Incident Injury Submitted&apos;, RecordType.Name = &apos;Complaint&apos;, RecordType.Name = &apos;Complaint Submitted&apos;) &amp;&amp; OR((ISNEW() &amp;&amp;  ISPICKVAL(CLQ_Inspection__r.CLQ_Visit_Status__c, &apos;Visit Completed&apos;) ), (NOT(ISNEW()) &amp;&amp;  ISCHANGED( CLQ_Inspection__c ) &amp;&amp; ISPICKVAL(CLQ_Inspection__r.CLQ_Visit_Status__c, &apos;Visit Completed&apos;) ))</errorConditionFormula>
+    <errorMessage>Inspections with Visit Status = Visit Completed cannot be selected</errorMessage>
+</ValidationRule>

@@ -1,0 +1,167 @@
+/* Override standard classes */
+
+button{
+    font-size:large;
+    padding: 0.5rem;
+}
+
+textarea{
+    min-height:6rem;
+}
+
+
+.slds-button_brand{
+    background: #2F90E4;
+}
+
+.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action{
+    background: #2F90E4!important;
+    color: #FFF!important;
+    box-shadow: none!important;
+    text-decoration: none!important;
+}
+
+.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action svg{
+	fill: #FFF;
+}
+
+
+.slds-checkbox_faux{
+    width: 2rem!important;
+    height: 2rem!important;
+    margin: 0.5rem!important;
+    border-radius: 0.5rem!important;
+}
+
+.slds-checkbox_faux::after{
+    width: 0.75rem!important;
+    height: 0.35rem!important;
+}
+
+
+.slds-form-element__label{
+    font-size: medium!important;
+}
+
+.slds-nav-vertical__action{
+    padding:1rem;
+}
+
+.slds-form-element{
+    padding: 0.25rem;
+}
+
+lightning-input-field,lightning-lookup{
+    padding:0!important;
+}
+
+
+/* Override custom classes */
+.sub-section, .page-title{
+	font-size: x-large;
+}
+
+.sub-section-text-block{
+    font-size: medium;
+}
+
+.sub-section-text-block a{
+    color:rgb(0, 109, 204)!important;
+}
+
+.page-title{
+    background-color: #FFF;
+    font-size: x-large;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+
+.left-nav-pane{
+    background:#FFF;
+    font-size: large;
+    min-height: 18rem;
+    border-radius: 0.5rem;
+}
+
+.instruction-headerText{
+    font-size: xx-large;
+}
+
+.program-cards{
+    /*box-shadow: 0 0 5px #ddd;*/
+    border-radius: 0.5rem;
+    background: #FFF;
+    border: 1px solid #ccc;
+    min-height: 25rem;
+}
+
+.program-cards:hover{
+    box-shadow: 0 0 5px #ccc;
+    border: none;
+}
+
+.instruction-icon svg{
+    zoom:3;
+    fill:rgba(0,0,0,0.6);;
+}
+
+.page-header-title{
+    padding: 0 1rem;
+}
+
+.dynamic-comp-main-body{
+    margin: 1rem 0;
+}
+
+
+/* For desktop and higher */
+@media only screen 
+    and (min-width: 800px) {
+        .instruction-card-layout{
+            width: 55%;
+        }
+
+        .instuction-text{
+            padding: 1rem 5rem;
+        }
+
+        .custom-position-left{
+            float:left;
+        }
+
+        .custom-position-right{
+            float:right;
+        }
+
+        .dynamic-comp-main-body{
+            margin: 0 1rem;
+        }
+        
+    }
+
+    /* For lower than desktops */
+@media only screen 
+    and (max-width: 750px) {
+        .page-title{
+            width:85%;
+        }
+
+        .page-title-icon{
+            zoom:1.5;
+            width:15%;
+            vertical-align: text-bottom;
+        }
+
+         .page-header-title{
+            padding: 1rem;
+        }
+
+        .slds-button{
+            min-width: 14rem;
+            min-height: 3rem;
+        }
+
+    }
+

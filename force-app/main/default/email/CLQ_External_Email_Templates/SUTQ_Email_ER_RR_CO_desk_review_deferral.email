@@ -1,0 +1,7 @@
+A SUTQ (Expedited Rating/Change of Owner/Reinstatement) has been completed for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}. Your program was not able to demonstrate that it meets the standards for SUTQ, and has been given a deferral. Please use the attached report to determine the required documentation you must submit in order to meet the deferral requirements by {!CLQ_Program_Transaction__c.DeferralDueDate__c}. All deferral materials should be sent to {!CLQ_Program_Transaction__c.CLQ_Assigned_To_Email__c}. 
+
+If you have further questions, contact the specialist listed on the attached report. 
+
+The Ohio Child Licensing and Quality System Team 
+
+Reference Id ref: {!CLQ_Program_Transaction__c.Id}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Edit_Closed_Programs__c</fullName>
+    <defaultValue>&quot;, System Administrator, Admin Read-Only&quot;</defaultValue>
+    <description>These Profile Names are allowed to edit programs that are closed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comma separated list of Profile names.</inlineHelpText>
+    <label>Can Edit Closed Programs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

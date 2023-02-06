@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>How many people, NOT including yourself,</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">How many people, NOT including yourself, currently live in your home? (This number should include: children, foster children, relatives, and boarders)</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Number_of_Residents__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Wie viele Personen, Sie selbst NICHT eingeschlossen, leben derzeit in Ihrem Haus? (Diese Zahl sollte umfassen: Kinder, Pflegekinder, Verwandte und Internatsschüler)</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Program_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿Cuántas personas, SIN incluirlo usted mismo, viven actualmente en su casa? (Este número debe incluir: hijos, hijos adoptivos, parientes y huéspedes)</value>
+    </values>
+</CustomMetadata>

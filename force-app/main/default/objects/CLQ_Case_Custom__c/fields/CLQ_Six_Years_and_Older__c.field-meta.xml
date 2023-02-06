@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Six_Years_and_Older__c</fullName>
+    <description>Number of involved children who are 6 years and older.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of involved children who are between the ages 2 and 6.</inlineHelpText>
+    <label>Six Years and Older</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

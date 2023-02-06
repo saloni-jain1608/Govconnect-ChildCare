@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Update_Allow_State_Admin</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT(ISNEW()) &amp;&amp; CONTAINS($Label.Approvers_and_Reviewers_for_Case_Inspection_Update, $UserRole.Name) &amp;&amp; $Profile.Name &lt;&gt; &apos;System Administrator&apos; &amp;&amp;
+OR(RecordType.Name=&apos;Complaint&apos;,RecordType.Name=&apos;Complaint Submitted&apos;,RecordType.Name=&apos;Incident / Injury / Illness&apos;,RecordType.Name=&apos;Incident Injury Submitted&apos;) &amp;&amp;
+ISCHANGED(CLQ_Inspection__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(CLQ_Inspection__c)))</errorConditionFormula>
+    <errorDisplayField>CLQ_Inspection__c</errorDisplayField>
+    <errorMessage>You cannot delete the Inspection from this record</errorMessage>
+</ValidationRule>

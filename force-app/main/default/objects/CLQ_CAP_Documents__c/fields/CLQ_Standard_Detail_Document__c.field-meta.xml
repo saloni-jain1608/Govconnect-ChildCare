@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Standard_Detail_Document__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Standard Detail Document</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>CLQ_Standard_Detail__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Document</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CLQ_Standard_Detail__c</referenceTo>
+    <relationshipLabel>CAP Documents</relationshipLabel>
+    <relationshipName>CAP_Documents</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

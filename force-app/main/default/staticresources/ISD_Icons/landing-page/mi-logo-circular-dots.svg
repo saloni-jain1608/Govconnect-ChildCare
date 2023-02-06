@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="375" viewBox="0 0 375 375">
+    <defs>
+        <filter id="a" width="103.2%" height="106.3%" x="-.8%" y="-1.3%" filterUnits="objectBoundingBox">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.0470588235 0 0 0 0 0.109803922 0 0 0 0 0.2 0 0 0 0.12 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(5 5)">
+        <circle cx="182.5" cy="182.5" r="182.5" stroke="#66788C" stroke-dasharray="1,40" stroke-linecap="round" stroke-opacity=".2" stroke-width="10"/>
+        <circle cx="182.5" cy="182.5" r="110.5" stroke="#66788C" stroke-dasharray="1,40" stroke-linecap="round" stroke-opacity=".2" stroke-width="10"/>
+        <g fill="#068BFF" filter="url(#a)" transform="translate(120 143)">
+            <path d="M76.634 4.738l-11.172.02A2 2 0 0 0 63.6 7.48l19.5 50.292a2 2 0 0 0 1.81 1.276l10.554.285a2 2 0 0 0 1.928-2.698L78.512 6.038a2 2 0 0 0-1.878-1.3zM38.343 4.788H26.54c-1.027 0-1.858.68-1.858 1.519 0 .188.042.375.126.551l19.456 40.85c.278.584.965.969 1.731.969H57.06c1.026 0 1.858-.68 1.858-1.52 0-.12-6.278-13.915-18.834-41.383-.272-.593-.965-.986-1.74-.986z"/>
+            <path d="M121.312 68.15l2.769 8.21a2 2 0 0 1-1.895 2.64H8.874a8 8 0 0 1-7.49-10.81L24.66 6.136a2 2 0 0 1 1.864-1.297l11.822-.05a2 2 0 0 1 1.872 2.725L18.776 62.541a3 3 0 0 0 2.79 4.089l97.854.16a2 2 0 0 1 1.892 1.36z"/>
+            <path d="M65.708 4.788l12.051.2c1.048.016 1.88.707 1.858 1.542-.002.115-6.501 13.84-19.496 41.171-.284.598-1.01.988-1.812.975l-11.864-.196c-1.048-.017-1.88-.707-1.859-1.542.005-.172.046-.341.121-.502L63.893 5.768c.284-.6 1.01-.993 1.815-.98z"/>
+            <rect width="11.943" height="54.263" x="106.688" y="4.788" rx="2"/>
+        </g>
+    </g>
+</svg>

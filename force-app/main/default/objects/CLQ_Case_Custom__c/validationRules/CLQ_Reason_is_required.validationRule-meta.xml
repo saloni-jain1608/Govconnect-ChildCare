@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reason_is_required</fullName>
+    <active>true</active>
+    <description>When no inspection required checkbox is checked, reason is required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(CLQ_No_Investigation_Required__c = true,ISBLANK(TEXT(CLQ_Reason_for_No_Investigation__c )) )</errorConditionFormula>
+    <errorMessage>Reason for No Inspection is Required.</errorMessage>
+</ValidationRule>

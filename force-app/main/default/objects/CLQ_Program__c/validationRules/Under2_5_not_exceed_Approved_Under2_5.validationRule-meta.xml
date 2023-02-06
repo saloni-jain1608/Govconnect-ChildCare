@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Under2_5_not_exceed_Approved_Under2_5</fullName>
+    <active>false</active>
+    <description>Current Under 2.5 capacity cannot exceed Approved under 2.5 capacity</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(NOT(ISNULL( CLQ_Total_Enrollment_Under_2_5_years__c  )),
+ CLQ_Total_Enrollment_Under_2_5_years__c &gt;  CLQ_Approved_Capacity_Under_2_5__c )</errorConditionFormula>
+    <errorDisplayField>CLQ_Total_Enrollment_Under_2_5_years__c</errorDisplayField>
+    <errorMessage>Current under 2.5 capacity cannot exceed approved under 2.5 capacity</errorMessage>
+</ValidationRule>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Standard Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Standard Details</value>
+    </caseValues>
+    <layouts>
+        <layout>CLQ_Document</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Fee</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_News</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Question</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS_Button</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS_Maintenance</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Standard Detail Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Button</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Document</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Fee</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Question</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Maintenance</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>News</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Action_Enforcement</fullName>
+    <active>true</active>
+    <label>Case Action - Enforcement</label>
+    <picklistValues>
+        <picklist>CLQ_Actions__c</picklist>
+        <values>
+            <fullName>AO Appealed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Appealed with a Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Certification Date%2FClosure Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Mailed Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Mailed Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Returned by USPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Sent to OLAS for Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Signature Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Supporting Documents Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker Notices Mailed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Documents Sent to AAG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Received by Enforcement Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Mailed Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Mailed Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Returned by USPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Signature Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO to  Deputy Director for Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO to Enforcement Supervisor for Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO to Licensing for Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO to OLAS for Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Hearing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Closed in the System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Closure Notice Mailed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report %26 Recommendation Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report %26 Recommendation Received by Enforcement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Alleged_Operation_Action__c</picklist>
+        <values>
+            <fullName>Letter sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Enforcement_Action__c</picklist>
+        <values>
+            <fullName>AO Appeal with Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Appeal without a Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Issued Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Mailed via Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Received by Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker Letter Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cease and Desist Letter Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Case Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Case Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Occurred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Issued Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Mailed Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Received by Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Recommended by County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Recommended by State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked Date Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Lifted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Recommended by County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Recommended by State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Closure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

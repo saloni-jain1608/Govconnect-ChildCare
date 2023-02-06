@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="177" viewBox="0 0 176 177">
+    <defs>
+        <ellipse id="a" cx="84" cy="83.95" rx="84" ry="83.95"/>
+        <path id="b" d="M0 6.952v48.224a6.175 6.175 0 0 0 6.175 6.175h74.106a6.175 6.175 0 0 0 6.175-6.175V6.952A6.175 6.175 0 0 0 80.281.777H6.175A6.175 6.175 0 0 0 0 6.952z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(4 4.333)">
+            <use fill="#068BFF" xlink:href="#a"/>
+            <ellipse cx="84" cy="83.95" stroke="#FFF" stroke-width="8" rx="80" ry="79.95"/>
+            <ellipse cx="84" cy="83.95" stroke="#068BFF" stroke-width="4" rx="86" ry="85.95"/>
+        </g>
+        <g transform="translate(44 52.333)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#b"/>
+            </mask>
+            <use fill="#E2E2E2" fill-rule="nonzero" xlink:href="#b"/>
+            <path fill="#F6F6F6" fill-rule="nonzero" d="M47.806 35.113c-2.528 2.27-6.627 2.27-9.155 0l-3.223-2.863C25.348 41.3 0 61.351 0 61.351H86.456s-25.348-20.05-35.428-29.1l-3.222 2.862z" mask="url(#c)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M0 .777l38.65 34.336c2.528 2.27 6.627 2.27 9.156 0L86.456.777H0z" mask="url(#c)"/>
+        </g>
+        <path fill="#16325C" fill-rule="nonzero" d="M131.548 121.905l-10.494-10.557 10.009-5.033-27.23-10.093 10.034 27.394 5.004-10.071 10.494 10.557a1.535 1.535 0 0 0 2.183 0 1.558 1.558 0 0 0 0-2.197z"/>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Complete_Document_Review</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Complete Document Review</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+
+var Docs = sforce.connection.query(&quot;Select Id,Name,CLQ_Document_Status__c,CLQ_Program_Transaction__c from CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND CLQ_Document_Status__c != &apos;Approved&apos; AND CLQ_Document_Status__c != &apos;Denied&apos; AND CLQ_Document_Status__c != &apos;Under Review&apos; AND CLQ_Document_Status__c != &apos;Not Verified&apos; &quot;);
+
+iiList = Docs.getArray(&quot;records&quot;);
+
+if( &apos;{!CLQ_Program_Transaction__c.RecordType}&apos;.includes(&apos;SUTQ&apos;) ){
+alert( &apos;test&apos;  );
+}
+
+
+
+if(iiList.length &gt; 0){
+	alert(&apos;Document Review Incomplete&apos;);
+}else{
+    window.location.href=&apos;/apex/CLQ_NotifyApplicantpage?id={!CLQ_Program_Transaction__c.Id}&apos;;
+}</url>
+</WebLink>

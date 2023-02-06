@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Visit_Mode</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Visit Mode</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+if({!IF( TEXT(CLQ_Inspection__c.CLQ_Visit_Status__c) == &apos;To be Scheduled&apos;, true,false)}){
+alert(&apos;Please schedule an Inspection to initiate Visit Mode.&apos;);
+
+}
+else {if({!IF( ISNULL(CLQ_Inspection__c.CLQ_Inspection_Tool__c), true,false)}){
+alert(&apos;Please select a tool to enter the visit mode.&apos;);
+
+
+}else{
+
+if({!IF (AND(TEXT(CLQ_Inspection__c.CLQ_Inspection_Status__c) != &apos;Approved&apos;, 
+TEXT(CLQ_Inspection__c.CLQ_Inspection_Status__c) != &apos;Closed&apos; , 
+TEXT(CLQ_Inspection__c.CLQ_Inspection_Status__c) != &apos;Revised&apos;),true,false)}){
+
+var o = new sforce.SObject(&quot;CLQ_Inspection__c&quot;); 
+o.id = &quot;{!CLQ_Inspection__c.Id}&quot;;
+o.CLQ_CAP_Generated__c = false;
+sforce.connection.update([o]);
+}
+
+window.location.href = &apos;/apex/CLQ_VisitModePageMobile?id={!CLQ_Inspection__c.Id }&apos;;
+}
+}</url>
+</WebLink>

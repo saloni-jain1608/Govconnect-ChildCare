@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Infant</fullName>
+        <default>false</default>
+        <label>Infant</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-school</fullName>
+        <default>false</default>
+        <label>Pre-school</label>
+    </customValue>
+    <customValue>
+        <fullName>School-Age</fullName>
+        <default>false</default>
+        <label>School-Age</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Toddler</fullName>
+        <default>false</default>
+        <label>Young Toddler</label>
+    </customValue>
+    <customValue>
+        <fullName>Older Toddler</fullName>
+        <default>false</default>
+        <label>Older Toddler</label>
+    </customValue>
+    <description>Global picklist for objects Program, Program Transaction and Inspection</description>
+    <masterLabel>Age Groups Served</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

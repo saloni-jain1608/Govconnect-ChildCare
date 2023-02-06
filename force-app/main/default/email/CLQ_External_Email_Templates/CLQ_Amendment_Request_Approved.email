@@ -1,0 +1,14 @@
+The Change of Location Request for {!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c}, was approved on <#Approval Date#> .  
+
+The approved first day of operation at the new location is <#Approved First Day of Operation at New Location#>. 
+
+ {!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c} , may no longer operate at the original location on or after  the approved first day of operation at the new location.
+
+To view the details of this request, log into {!$Label.ChildLicensingQualitySystem}.  Select the Licensing Amendment tab under My programs screen. and then the “Amendment   Activities” sub tab. 
+
+SIGNATURE: (Based on the program type)
+{!$Label.JobFamilyDept} Signature
+{!$Label.EducationDept} Signature
+
+ATTACHED DOCUMENTS:
+License Face Certificate.

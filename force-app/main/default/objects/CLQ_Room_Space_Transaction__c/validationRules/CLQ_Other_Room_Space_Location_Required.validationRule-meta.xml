@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Other_Room_Space_Location_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISBLANK( CLQ_Other_Room_Space_Location__c ) , ISPICKVAL( CLQ_Room_Space_Location__c , &apos;Other&apos;) )</errorConditionFormula>
+    <errorDisplayField>CLQ_Other_Room_Space_Location__c</errorDisplayField>
+    <errorMessage>Specify Other Room/Space Location</errorMessage>
+</ValidationRule>

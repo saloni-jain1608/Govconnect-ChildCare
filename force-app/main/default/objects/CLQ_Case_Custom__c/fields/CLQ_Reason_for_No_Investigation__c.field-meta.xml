@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reason_for_No_Investigation__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for No Inspection</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No alleged licensing rule violations</fullName>
+                <default>false</default>
+                <label>No alleged licensing rule violations</label>
+            </value>
+            <value>
+                <fullName>No 6 point serious risk violation</fullName>
+                <default>false</default>
+                <label>No 6 point serious risk violation</label>
+            </value>
+            <value>
+                <fullName>License closed</fullName>
+                <default>false</default>
+                <label>License closed</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Created in Error</fullName>
+                <default>false</default>
+                <label>Created in Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

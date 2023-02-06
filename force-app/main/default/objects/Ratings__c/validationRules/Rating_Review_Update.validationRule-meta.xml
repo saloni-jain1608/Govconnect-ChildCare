@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Review_Update</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; PRIORVALUE( CLQ_Program_Rating__c ) &lt; CLQ_Program_Rating__c</errorConditionFormula>
+    <errorDisplayField>Program_Rating__c</errorDisplayField>
+    <errorMessage>You should lower the value but not increase.</errorMessage>
+</ValidationRule>

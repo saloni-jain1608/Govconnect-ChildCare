@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Cannot_Change_Owner_From_Queue</fullName>
+    <active>true</active>
+    <description>If the owner is Community Queue, users should be able to change the owner</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISCHANGED(OwnerId), Owner:Queue.QueueName &lt;&gt; &apos;Community&apos;,   LEFT(OwnerId, 3) = &apos;005&apos;)</errorConditionFormula>
+    <errorMessage>Owner cannot be changed from Community queue</errorMessage>
+</ValidationRule>

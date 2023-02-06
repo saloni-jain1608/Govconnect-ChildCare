@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_General_Information__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should contain general information regarding the complaint allegation and will print on the Complaint Intake/Disposition report and should not include names, contact information or any other details that might be used to identify the reporter.</inlineHelpText>
+    <label>General Information</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

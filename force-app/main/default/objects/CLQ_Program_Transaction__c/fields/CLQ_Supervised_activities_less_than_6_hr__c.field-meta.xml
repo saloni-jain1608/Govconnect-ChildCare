@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Supervised_activities_less_than_6_hr__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Supervised training, instruction, or activities of children in specific areas, including, but not limited to: art; drama; dance; music; gymnastics, swimming, or another athletic skill or sport; computers; or an educational subject conducted on an organized or periodic basis, no more than one day a week, and for no more than six hours duration.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supervised training, instruction, or activities of children in specific areas, including, but not limited to: art; drama; dance; music; gymnastics, swimming, or another athletic skill or sport; computers; or an educational subject conducted on an organize</inlineHelpText>
+    <label>Supervised activities less than 6 hours</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

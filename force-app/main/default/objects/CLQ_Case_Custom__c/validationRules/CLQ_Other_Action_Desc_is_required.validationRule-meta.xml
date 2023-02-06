@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Other_Action_Desc_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name  = &apos;Incident / Injury / Illness&apos;,   CLQ_Othercbx__c = true, CLQ_Other_Action_Description__c  =null)</errorConditionFormula>
+    <errorDisplayField>CLQ_Other_Action_Description__c</errorDisplayField>
+    <errorMessage>If &apos;Other Action&apos; Describe is required.</errorMessage>
+</ValidationRule>

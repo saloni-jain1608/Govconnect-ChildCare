@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-grid slds-wrap slds-m-around_medium instruction-card-layout">
+        <div class="slds-size_1-of-1 instructon-header">
+            <div class="slds-size_1-of-1 slds-text-align--center instruction-headerText">{Instructions}</div>
+            <div class="slds-size_1-of-1 instruction-icon">
+                <lightning-icon icon-name="utility:info_alt" alternative-text="Info Icon" title="Information Page Icon"></lightning-icon>
+            </div>
+        </div>
+        <div class="slds-size_1-of-1 instuction-text">
+            <lightning-formatted-rich-text value={instructionText}></lightning-formatted-rich-text>
+          </div>
+        <div class="divClass slds-size_1-of-1" style="margin: 1rem auto;padding: 0 3rem 1rem;">
+            <lightning-button class="custom-position-left" data-id="backbtn-prescreen"  label={Cancel} onclick={handle_CancelFlow}></lightning-button>
+            <lightning-button class="custom-position-right" data-id="continuebtn-prescreen" label={Continue_to_Application} onclick={handle_ContinueFlow} variant="brand"></lightning-button>
+        </div>
+    </div>
+</template>

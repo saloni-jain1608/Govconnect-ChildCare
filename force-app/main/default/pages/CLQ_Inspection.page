@@ -1,0 +1,54 @@
+<apex:page standardController="CLQ_Inspection__c" extensions="CLQ_InspectionController">
+    <apex:includeScript value="{!$Resource.JQueryMin}" />
+
+    <apex:detail subject="{!CLQ_Inspection__c}" relatedList="true" title="true" />
+
+    <script type="text/javascript">
+        $j = jQuery.noConflict();
+        $j(document).ready(function() {
+
+            //Disable the buttons if the Inspection has a specific Status
+            //Disable the buttons if the Program has specific status
+            var ProfName = "{!$Profile.Name}";
+            var AllowedEdit = ["System Administrator", "Admin Read-Only", "State Program Admin-State User"];
+            var ProfileAllowsEdit = AllowedEdit.indexOf(ProfName) > -1 ||
+                				ProfName.indexOf("Approver") > -1 ||
+                				ProfName.indexOf("Supervisor") > -1 ||
+                				ProfName.indexOf("Reviewer") > -1;
+                				            
+            var Locked = "{!CLQ_Inspection__c.CLQ_Is_Locked_by_Status__c}";
+            var CanEdit = "{!CanEdit}";
+            if ((Locked == "true" || CanEdit != "true") && !ProfileAllowsEdit) {
+                $j("input[name=edit]").hide();
+                $j("input[name=del]").hide();
+                $j("input[name=clone]").hide();
+                $j("input[name=share]").hide();
+                $j("input[name=clq_delete_inspection]").hide();
+                $j("input[name=clq_select_inspection_tool]").hide();
+                $j("input[name=clq_visit_mode]").hide();
+                $j("input[name=visit_mode_mobile]").hide();
+                if("{!CLQ_Inspection__c.CLQ_Inspection_Status__c}" != "Approved" || CanEdit != "true")  $j("input[name=clq_create_follow_up]").hide(); 
+                $j("input[name=task]").hide();
+                $j("input[name=event]").hide();
+                $j("input[name=new]").hide();
+                $j("input[name=mm]").hide();
+                $j("input[name=email]").hide();
+                $j("input[value='New Rules Inspected']").hide();
+                $j("input[value='New Inspection']").hide();
+                $j("input[value='New Child Record']").hide();
+                $j("input[value='New Staff Record']").hide();
+                $j("input[value='New Room/Space Inspection']").hide();
+                $j("input[value='New Ratio']").hide();
+                $j("input[value='New Staff Training']").hide();
+                $j("input[value='New Corrective Action Plan']").hide();
+                $j("input[value='New Facility Schedule']").hide();
+                $j("input[value='New Building Approval']").hide();
+                $j("input[value='New Case']").hide();
+                $j("input[value='New Inspection Document']").hide();
+                $j("input[value='Submit for Approval']").hide();
+                $j("input[value='New Inspector']").hide();
+                $j("input[value='New Enrollment Group']").hide();
+            }
+
+    </script>
+</apex:page>

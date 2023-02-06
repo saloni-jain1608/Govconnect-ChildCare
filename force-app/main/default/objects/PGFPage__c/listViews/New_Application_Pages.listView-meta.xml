@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Application_Pages</fullName>
+    <columns>NAME</columns>
+    <columns>DDP_Report_Name__c</columns>
+    <columns>Area__c</columns>
+    <columns>PageTitle__c</columns>
+    <columns>PageType__c</columns>
+    <columns>Success_Title__c</columns>
+    <columns>Transaction_SubmissionStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>Licensing - New Application</value>
+    </filters>
+    <label>New Application Pages</label>
+</ListView>

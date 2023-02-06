@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+<aura:attribute name="recordId" type="String" />
+<lightning:quickActionAPI aura:id="quickActionAPI"/>
+    <c:customActionButton objectApiName="CLQ_CAP_Documents__c" recordId="{!v.recordId}" ontesteventalert="{!c.ontesteventalert}"></c:customActionButton>
+
+</aura:component>

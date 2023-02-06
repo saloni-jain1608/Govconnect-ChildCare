@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_IHA_Certification_Issue_Date_Approve</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name = &apos;In-Home Aide&apos;,  ISPICKVAL( CLQ_Recommendation__c , &apos;Approve&apos;),  ISBLANK( CLQ_Certificate_Issue_Date__c )   )</errorConditionFormula>
+    <errorDisplayField>CLQ_Certificate_Issue_Date__c</errorDisplayField>
+    <errorMessage>Certificate Issue Date Mandatory for Recommendation of Approve</errorMessage>
+</ValidationRule>

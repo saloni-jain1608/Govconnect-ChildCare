@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Written_confirmation_of_program_director__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Written confirmation of program director</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

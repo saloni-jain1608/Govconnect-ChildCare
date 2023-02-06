@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <div style="min-height: 30px;">
+            <c-custom-lightning-action button-label="Visit Mode" object-api-name="CLQ_Inspection__c"
+                call-apex-or-launch-component="Component" component-name="c:GLC_VisitMode" component-load-type="Modal"
+                record-id-attribute="recordId" record-id={recordId}>
+            </c-custom-lightning-action>
+
+            <c-custom-lightning-action button-label="Review Inspection Tool" object-api-name="CLQ_Inspection__c"
+                call-apex-or-launch-component="Component" component-name="c:auraInspectionToolCmp"
+                component-load-type="Modal" record-id-attribute="recordId" record-id={recordId}>
+            </c-custom-lightning-action>
+        </div>
+    </lightning-card>
+</template>

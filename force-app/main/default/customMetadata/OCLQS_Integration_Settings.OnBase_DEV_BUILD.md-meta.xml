@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OnBase</label>
+    <protected>false</protected>
+    <values>
+        <field>Attribute_1_Description__c</field>
+        <value xsi:type="xsd:string">Maximum upload document size in MB, enter number only</value>
+    </values>
+    <values>
+        <field>Attribute_1_Value__c</field>
+        <value xsi:type="xsd:string">10</value>
+    </values>
+    <values>
+        <field>Attribute_2_Description__c</field>
+        <value xsi:type="xsd:string">Document size in bytes which qualify document as empty/corrupted. 
+Enter Number only.</value>
+    </values>
+    <values>
+        <field>Attribute_2_Value__c</field>
+        <value xsi:type="xsd:string">10</value>
+    </values>
+    <values>
+        <field>Attribute_3_Description__c</field>
+        <value xsi:type="xsd:string">Enable extended logging.
+Values: &quot;YES&quot; and &quot;NO&quot;(uppercase always)
+Default or null value means &quot;NO&quot;</value>
+    </values>
+    <values>
+        <field>Attribute_3_Value__c</field>
+        <value xsi:type="xsd:string">YES</value>
+    </values>
+    <values>
+        <field>Attribute_4_Description__c</field>
+        <value xsi:type="xsd:string">Display error to end user when document is empty or document size is less then parameter &quot;Attribute 2 Value&quot; is &quot;YES&quot;
+Values: &quot;YES&quot; and &quot;NO&quot;(uppercase always)
+Default or null value means &quot;NO&quot;</value>
+    </values>
+    <values>
+        <field>Attribute_4_Value__c</field>
+        <value xsi:type="xsd:string">YES</value>
+    </values>
+    <values>
+        <field>Attribute_5_Description__c</field>
+        <value xsi:type="xsd:string">Error message to display to user when document is empty and parameter &quot;Attribute 4 Value&quot; is &quot;YES&quot;</value>
+    </values>
+    <values>
+        <field>Attribute_5_Value__c</field>
+        <value xsi:type="xsd:string">Document is corrupted. Please contact Administrator!</value>
+    </values>
+    <values>
+        <field>Attribute_6_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_6_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_7_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_7_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Capture_Messages__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Enable_Debug__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Environment_Name__c</field>
+        <value xsi:type="xsd:string">DEVBUILD</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification_Group__c</field>
+        <value xsi:type="xsd:string">neojha@deloitte.com</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Target_Connection_Port__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Connection_URL__c</field>
+        <value xsi:type="xsd:string">https://ace-uat.jfs.ohio.gov/OCLQS_OnBase</value>
+    </values>
+    <values>
+        <field>Target_Credentail_Token_OAuth_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Id__c</field>
+        <value xsi:type="xsd:string">IIB_UAT</value>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Password__c</field>
+        <value xsi:type="xsd:string">ajkdujiuu!8^*</value>
+    </values>
+</CustomMetadata>

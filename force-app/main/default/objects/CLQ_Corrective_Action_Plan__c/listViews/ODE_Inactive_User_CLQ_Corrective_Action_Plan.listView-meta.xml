@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ODE_Inactive_User_CLQ_Corrective_Action_Plan</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ODE - Inactive User</label>
+    <queue>ODE_Inactive_User</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

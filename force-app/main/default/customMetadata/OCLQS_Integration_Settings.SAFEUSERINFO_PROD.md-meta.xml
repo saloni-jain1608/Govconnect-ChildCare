@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SAFE_USERINFO</label>
+    <protected>false</protected>
+    <values>
+        <field>Attribute_1_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_1_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_2_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_2_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_3_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_3_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_4_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_4_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_5_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_5_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_6_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_6_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_7_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_7_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Capture_Messages__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Connection Details for IIB API services to get SAFE User information</value>
+    </values>
+    <values>
+        <field>Enable_Debug__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Environment_Name__c</field>
+        <value xsi:type="xsd:string">PROD</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification_Group__c</field>
+        <value xsi:type="xsd:string">schahar@deloitte.com,shselvaraj@deloitte.com,rgurivelli@deloitte.com,vivprasad@deloitte.com,gansakhalkar@deloitte.com</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Target_Connection_Port__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Connection_URL__c</field>
+        <value xsi:type="xsd:string">https://jfsiib-prd.jfs.ohio.gov/OCLQS_UserInfoSAFE</value>
+    </values>
+    <values>
+        <field>Target_Credentail_Token_OAuth_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Id__c</field>
+        <value xsi:type="xsd:string">OCLQSPRODADMIN</value>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Password__c</field>
+        <value xsi:type="xsd:string">@]?vZ6Ct%H4UG4G6</value>
+    </values>
+</CustomMetadata>

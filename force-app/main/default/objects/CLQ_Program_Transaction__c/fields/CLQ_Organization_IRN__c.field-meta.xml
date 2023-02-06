@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Organization_IRN__c</fullName>
+    <description>What is the Information Retrieval Number (IRN) for the Organization/Affiliation that will operate this program?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the Information Retrieval Number (IRN) for the Organization/Affiliation that will operate this program?</inlineHelpText>
+    <label>Organization IRN</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

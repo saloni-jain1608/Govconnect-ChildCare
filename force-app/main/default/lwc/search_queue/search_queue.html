@@ -1,0 +1,112 @@
+<template>
+    <div if:false={showform}>
+        <lightning-button-icon class="slds-float_right"
+        icon-name="utility:close"
+        variant="brand"
+        onclick={closeform}
+        alternative-text="Back to Search"
+    >
+    </lightning-button-icon>
+    </div>
+
+    <div if:true={showform}>
+   <lightning-card >
+      <div class="slds-grid slds-wrap">
+         <div if:true={appTypePicklistValues.data} class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <lightning-combobox
+                label="Application Type"
+                value={applicationType}
+                options={appTypePicklistValues.data.values}
+                onchange={applicationTypeChanged}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small"> 
+            <lightning-input type="text" value={firstName} label="First Name" data-id="in1"></lightning-input></div>
+        <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+         <lightning-input type="text" value={lastName} label="Last Name" data-id="in2"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <lightning-input type="text" value={ssn} label="SSN" data-id="in3"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+               <lightning-input type="date"  label="Date Of Birth" data-id="in4"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+                  <lightning-input type="text"  label="Program Name" data-id="in5"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+                     <lightning-input type="text"  label="Program Number" data-id="in6"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+                  <lightning-input type="text"  label="Applicant Name" data-id="in7"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+                     <lightning-input type="text"  label="Location Address" data-id="in8"></lightning-input></div>
+         <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <c-custom-lookup obj-name="CLQ_County__c" search-placeholder="Search County" data-id="in9" search-label="Select County" onlookupselected={handleAccountSelection}> 
+             </c-custom-lookup>
+          </div>
+          <div class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <lightning-input type="date"  label="Consent Received Date" data-id="in10"></lightning-input></div>
+          <div if:true={juvenilePicklistValues.data} class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <lightning-combobox
+                label="Juvenile"
+                value={juvenile}
+                options={juvenilePicklistValues.data.values}
+                onchange={juvenileChanged}>
+            </lightning-combobox>
+        </div>
+        <div if:true={bgStatusPicklistValues.data} class="slds-size_1-of-6 slds-text-align_left slds-m-around_x-small">
+            <lightning-combobox
+                label="Status"
+                value={applicationType}
+                options={bgStatusPicklistValues.data.values}
+                onchange={statusChanged}>
+            </lightning-combobox>
+        </div>
+      </div>
+      <div>
+         <lightning-button class="slds-text-align_left slds-m-around_x-small" label="Search" onclick={handleSearchKeyword} variant="brand"></lightning-button>
+         <lightning-button class="slds-text-align_left slds-m-around_x-small" label="Clear" onclick={handleClearKeyword} variant="brand"></lightning-button>
+      </div>
+    </lightning-card>
+    <br/>  
+         <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={contactsRecord}
+                    show-row-number-column
+                    columns={columns}
+                    onrowaction={viewRecord}
+                    hide-checkbox-column="true"
+                    sorted-by={sortBy}
+                    sorted-direction={sortDirection}
+                    onsort={doSorting}
+                    >
+                    
+            </lightning-datatable>
+        </div>
+         <div if:true={isDisplay}>
+         <br/>
+          <div class="slds-align_absolute-center"> 
+            <div class="slds-p-right_xx-small">
+                     
+                <lightning-button label="Prev"
+                disabled={isPrev} onclick={handlePrev}
+                                    variant="brand"
+                                    icon-name="utility:back"
+                                    name="prev"></lightning-button>  
+            </div>
+            <span class="slds-badge slds-badge_lightest">
+                Page {pageNumber} of {totalPages}
+            </span>
+            <div class="slds-p-left_xx-small">
+                <lightning-button label="Next"
+                disabled={isNext} onclick={handleNext}
+                                    variant="brand"
+                                    icon-name="utility:forward"
+                                    icon-position="right"
+                                    name="next"></lightning-button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div if:false={showform}>
+       <c-child-component current-index = {currentParentIndex}  record-list={idsList} current-child-id = {currentId}></c-child-component>
+    </div>
+    
+ </template>

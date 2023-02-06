@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Camp_Req_Met_Changed_State_Admin</fullName>
+    <active>true</active>
+    <description>Check the Approved to do a provide agreement only if BCA JFS and ACA is approved</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+RecordType.Name = &apos;Day Camp&apos; &amp;&amp;
+$Profile.Name != &apos;State Admin - State user&apos; &amp;&amp; $Profile.Name != &apos;System Administrator&apos; &amp;&amp;
+ISCHANGED(Approved_to_do_a_Provider_Agreement__c)</errorConditionFormula>
+    <errorMessage>The ODJFS Requirements Met field cannot be edited</errorMessage>
+</ValidationRule>

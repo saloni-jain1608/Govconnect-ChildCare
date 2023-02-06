@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_IA_Approved__c</fullName>
+    <description>[DrawLoop]: Used in WF Outbound Message
+[Task 11630] DDP = License Face Certificate ; Delivery = SMTP - ODJFS IA Approved &amp; SMTP - ODE IA Approved</description>
+    <externalId>false</externalId>
+    <formula>CASE( RecordType.Name ,
+&quot;Application - CC Center&quot;, &quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf0;Deploy:a0135000000kgn6&quot;,
+&quot;Application - FCC&quot;, &quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf0;Deploy:a0135000000kgn6&quot;,
+&quot;Application - ODE Program&quot;, &quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000xtEJ;Deploy:a01r0000001LWRz&quot;,
+&quot;&quot;)</formula>
+    <label>Drawloop_Next IA Approved</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

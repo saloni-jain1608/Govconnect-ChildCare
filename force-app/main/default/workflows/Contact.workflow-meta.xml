@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>OCLQS_User_Activation</fullName>
+        <description>OCLQS User Activation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/OCLQS_UserActivation</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Integration_Contact_DOB_TextField_Update</fullName>
+        <field>BirthdateText_DoNotDisplay__c</field>
+        <formula>TEXT(CLQ_Date_of_Birth__c)</formula>
+        <name>Integration_Contact_DOB_TextField_Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>owner_field</fullName>
+        <field>OwnerId</field>
+        <lookupValue>jshivakumar@govconnect.childcarelicesing.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>owner field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

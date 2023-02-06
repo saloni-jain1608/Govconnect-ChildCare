@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Religious_Activities_No_Childcare__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Religious activities which do not provide child care.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Religious activities which do not provide child care.</inlineHelpText>
+    <label>DEL Religious Activities No Childcare</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

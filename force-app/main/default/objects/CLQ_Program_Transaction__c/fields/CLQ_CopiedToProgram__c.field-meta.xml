@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_CopiedToProgram__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>this checkbox will be used in schedule job which will confirm if the values are picked and copied to Program or not</description>
+    <externalId>false</externalId>
+    <label>CopiedToProgram</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

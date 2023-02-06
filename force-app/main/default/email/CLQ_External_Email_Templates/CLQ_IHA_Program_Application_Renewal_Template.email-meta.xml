@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template if an application is submitted for renewal for certification as an In-Home Aide</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>IHA Program Application Renewal Template</name>
+    <style>formalLetter</style>
+    <subject>Renew Application for In-Home Aide for {!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c}</subject>
+    <textOnly>It is time to renew your certificate as an In-Home Aide. To complete your application for renewal log on to the OCLQS system at https://oclqs.force.com/oclqs_home 
+
+Please contact your County Agency with additional questions about renewal of your certification. 
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. 
+
+The Ohio Child Licensing and Quality System Team.
+
+ref: {!CLQ_Program_Transaction__c.Id}
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

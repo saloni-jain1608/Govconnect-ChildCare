@@ -1,0 +1,72 @@
+{
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "7c2df5a2-5c68-4aff-94b2-1e0417f2fd6b",
+  "label" : "Home Landing Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2d0e873d-d58f-46a5-b83b-ff2b597b4f1b",
+          "columns" : [ {
+            "UUID" : "da6e7717-0448-4007-85af-912fb447379b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2d0e873d-d58f-46a5-b83b-ff2b597b4f1b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:vdss_allprogramslwccmp",
+          "id" : "1682b04b-24cc-4289-bcd9-cbfc5811d8d0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:vdss_newscard",
+          "id" : "16bf6d73-b556-4ed9-aa2f-b5f1fc4ed5a4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "da6e7717-0448-4007-85af-912fb447379b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "49e34448-450d-419f-967c-fb3c74438dff",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "title" : "My Dashboard"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "220f24e6-199d-4962-94ed-d9d0c40c8a96",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "43055622-03cb-41fb-8084-c8470a151537",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-home-landing-page"
+}

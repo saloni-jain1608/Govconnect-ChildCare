@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>An email is sent to the program notifying that their change of location request has been withdrawn</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE COL Request Withdrawn</name>
+    <style>formalLetter</style>
+    <subject>Change of Location Request Withdrawn for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}</subject>
+    <textOnly>The Change of Location Request for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c} was withdrawn on {!CLQ_Program_Transaction__c.CLQ_Transaction_Status_Date__c} {!CLQ_Role__c.CLQ_PT_Status_Date__c}. If you have questions about this action, contact your department representative.
+To view the details of this request, log on to OCLQS.  (insert OCLQS log in link) Select the Licensing Amendment tab under My programs screen. and then click the “Amendment   Activities” sub tab
+The Ohio Child Licensing and Quality System Team.  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

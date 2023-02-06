@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rejection status information to user custom</name>
+    <style>none</style>
+    <subject>Complaint rejected for {!CLQ_Case_Custom__c.CLQ_Program_Name_Formula__c},{!CLQ_Case_Custom__c.CLQ_Program_Number_Formula__c} on {!CLQ_Case_Custom__c.CLQ_Intake_Date__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

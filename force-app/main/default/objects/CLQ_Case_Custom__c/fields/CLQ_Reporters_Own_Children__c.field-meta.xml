@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reporters_Own_Children__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if the reporter&apos;s children are involved.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if the reporter&apos;s children are involved.</inlineHelpText>
+    <label>Reporter&apos;s Own Children</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

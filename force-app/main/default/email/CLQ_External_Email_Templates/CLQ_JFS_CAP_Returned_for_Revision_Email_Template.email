@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font style="font-family: Verdana, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;">The Corrective Action Plan (CAP) submitted in response to the {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} inspection has been reviewed. The CAP has been evaluated as incomplete and returned for revisions. 
+
+
+To review comments and make revisions to the CAP login to OCLQS at &lt;OCLQS external website&gt;. Submit the revised CAP within five business days.
+
+</span></font><span style="font-family: Verdana, Helvetica, sans-serif; font-size: small; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team.
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

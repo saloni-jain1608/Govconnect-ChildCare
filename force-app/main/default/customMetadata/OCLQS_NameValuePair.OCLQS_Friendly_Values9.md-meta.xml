@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values9</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Onsite Visit Pending==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Rating Recommended for Review==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Supervisor On-Site Review==Attached**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Annual Report Disapproved==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Rating Assessment Complete==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Completed==Attached**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Attached__Return for Revision==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Supervisor Desk Review==Attached**YES
+CLQ_Transaction_Document__c===&gt;Attached__Unable to Rate==Attached**YES</value>
+    </values>
+</CustomMetadata>

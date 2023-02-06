@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Will children in this room be over or un</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Will children in this room be over or under 2 1/2 years?</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Used_by_Under_or_Over_2_1_2__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Werden Kinder in diesem Zimmer über oder unter 2 1/2 Jahre alt sein?</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Room_Space_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿Los niños de esta habitación tendrán más de 2 años y medio o menos?</value>
+    </values>
+</CustomMetadata>

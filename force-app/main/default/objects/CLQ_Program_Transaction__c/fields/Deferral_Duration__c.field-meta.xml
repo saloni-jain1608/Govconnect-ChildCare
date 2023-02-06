@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deferral_Duration__c</fullName>
+    <externalId>false</externalId>
+    <label>Deferral Duration</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Annual_Report_Overall_Requirements__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>14 Days</fullName>
+                <default>false</default>
+                <label>14 Days</label>
+            </value>
+            <value>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+                <label>30 Days</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Deferral</controllingFieldValue>
+            <valueName>14 Days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deferral</controllingFieldValue>
+            <valueName>30 Days</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

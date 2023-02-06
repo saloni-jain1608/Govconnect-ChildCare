@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Full_Part_Time_Options_is_required</fullName>
+    <active>true</active>
+    <description>If Recommendation is Approve CLQ_Full_Part_Time_Options_Global__c is required on Applns and COL recordtypes</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(
+TEXT(CLQ_Recommendation__c ) = &apos;Approve&apos;, 
+OR(
+AND(CONTAINS(RecordType.Name,&apos;Application&apos;), 
+OR(CONTAINS(RecordType.Name,&apos;FCC&apos;), 
+CONTAINS(RecordType.Name,&apos;Center&apos;))), 
+
+AND(CONTAINS(RecordType.Name,&apos;Change of Location&apos;), 
+OR(CONTAINS(RecordType.Name,&apos;FCC&apos;), 
+CONTAINS(RecordType.Name,&apos;Center&apos;)))
+),
+
+(IF(INCLUDES(CLQ_Full_Part_Time_Options_Global__c, &quot;Full Time&quot;),1,0) + IF(INCLUDES(CLQ_Full_Part_Time_Options_Global__c, &quot;Part Time&quot;),1,0) &lt; 1) 
+
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Full_Part_Time_Options_Global__c</errorDisplayField>
+    <errorMessage>If Recommendation is “Approve” you must provide  &quot;Full/Part -Time Options”</errorMessage>
+</ValidationRule>

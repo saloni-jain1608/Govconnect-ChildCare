@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Enforcement_Action__c</fullName>
+    <externalId>false</externalId>
+    <label>Enforcement Action</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AO Appeal without a Stay</fullName>
+                <default>false</default>
+                <label>AO Appeal without a Stay</label>
+            </value>
+            <value>
+                <fullName>AO Appeal with Stay</fullName>
+                <default>false</default>
+                <label>AO Appeal with Stay</label>
+            </value>
+            <value>
+                <fullName>AO Issued Certified Mail</fullName>
+                <default>false</default>
+                <label>AO Issued Certified Mail</label>
+            </value>
+            <value>
+                <fullName>AO Mailed via Certificate of Mailing</fullName>
+                <default>false</default>
+                <label>AO Mailed via Certificate of Mailing</label>
+            </value>
+            <value>
+                <fullName>AO Received by Program</fullName>
+                <default>false</default>
+                <label>AO Received by Program</label>
+            </value>
+            <value>
+                <fullName>Caretaker Letter Sent</fullName>
+                <default>false</default>
+                <label>Caretaker Letter Sent</label>
+            </value>
+            <value>
+                <fullName>CDJFS Withdrawal</fullName>
+                <default>false</default>
+                <label>CDJFS Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Cease and Desist Letter Issued</fullName>
+                <default>false</default>
+                <label>Cease and Desist Letter Issued</label>
+            </value>
+            <value>
+                <fullName>Enforcement Case Accepted</fullName>
+                <default>false</default>
+                <label>Enforcement Case Accepted</label>
+            </value>
+            <value>
+                <fullName>Enforcement Case Rejected</fullName>
+                <default>false</default>
+                <label>Enforcement Case Rejected</label>
+            </value>
+            <value>
+                <fullName>Hearing Decision</fullName>
+                <default>false</default>
+                <label>Hearing Decision</label>
+            </value>
+            <value>
+                <fullName>Hearing Occurred</fullName>
+                <default>false</default>
+                <label>Hearing Occurred</label>
+            </value>
+            <value>
+                <fullName>Hearing Requested</fullName>
+                <default>false</default>
+                <label>Hearing Requested</label>
+            </value>
+            <value>
+                <fullName>ODJFS Withdrawal</fullName>
+                <default>false</default>
+                <label>ODJFS Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PAO Issued Certified Mail</fullName>
+                <default>false</default>
+                <label>PAO Issued Certified Mail</label>
+            </value>
+            <value>
+                <fullName>PAO Mailed Certificate of Mailing</fullName>
+                <default>false</default>
+                <label>PAO Mailed Certificate of Mailing</label>
+            </value>
+            <value>
+                <fullName>PAO Received by Program</fullName>
+                <default>false</default>
+                <label>PAO Received by Program</label>
+            </value>
+            <value>
+                <fullName>Revocation Recommended by County</fullName>
+                <default>false</default>
+                <label>Revocation Recommended by County</label>
+            </value>
+            <value>
+                <fullName>Revocation Recommended by State</fullName>
+                <default>false</default>
+                <label>Revocation Recommended by State</label>
+            </value>
+            <value>
+                <fullName>Revocation Rejected</fullName>
+                <default>false</default>
+                <label>Revocation Rejected</label>
+            </value>
+            <value>
+                <fullName>Revoked Date</fullName>
+                <default>false</default>
+                <label>Revoked Date</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Suspension Accepted</fullName>
+                <default>false</default>
+                <label>Suspension Accepted</label>
+            </value>
+            <value>
+                <fullName>Suspension Lifted</fullName>
+                <default>false</default>
+                <label>Suspension Lifted</label>
+            </value>
+            <value>
+                <fullName>Suspension Recommended by County</fullName>
+                <default>false</default>
+                <label>Suspension Recommended by County</label>
+            </value>
+            <value>
+                <fullName>Suspension Recommended by State</fullName>
+                <default>false</default>
+                <label>Suspension Recommended by State</label>
+            </value>
+            <value>
+                <fullName>Suspension Rejected</fullName>
+                <default>false</default>
+                <label>Suspension Rejected</label>
+            </value>
+            <value>
+                <fullName>Voluntary Closure</fullName>
+                <default>false</default>
+                <label>Voluntary Closure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

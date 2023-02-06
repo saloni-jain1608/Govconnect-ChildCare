@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_2Star_Not_In180_270Days</fullName>
+    <active>false</active>
+    <description>Do not allow a Registration transaction to be done on a program with a 2 star rating and outside the 180-270 Day period (2 star rating effective date)</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND (ISPICKVAL( CLQ_Program__r.Program_Rating__c, &quot;2&quot;), (RecordType.Name == &quot;SUTQ - Ongoing Registration&quot;), OR((CLQ_Program__r.Rating_Effective_Date__c - TODAY() &lt; 180 ), CLQ_Program__r.Rating_Effective_Date__c - TODAY() &gt; 270 ))</errorConditionFormula>
+    <errorMessage>Your program cannot submit an Ongoing Registration because it is not between 180-270 days of your two star rating effective date.</errorMessage>
+</ValidationRule>

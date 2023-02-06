@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Object_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Object Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Domain</fullName>
+                <default>false</default>
+                <label>Domain</label>
+            </value>
+            <value>
+                <fullName>Rule</fullName>
+                <default>false</default>
+                <label>Rule</label>
+            </value>
+            <value>
+                <fullName>Standard Findings</fullName>
+                <default>false</default>
+                <label>Standard Findings</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

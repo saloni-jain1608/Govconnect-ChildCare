@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OOS Family Child Care</fullName>
+                <default>false</default>
+                <label>OOS Family Child Care</label>
+            </value>
+            <value>
+                <fullName>OOS Center Home</fullName>
+                <default>false</default>
+                <label>OOS Center Home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

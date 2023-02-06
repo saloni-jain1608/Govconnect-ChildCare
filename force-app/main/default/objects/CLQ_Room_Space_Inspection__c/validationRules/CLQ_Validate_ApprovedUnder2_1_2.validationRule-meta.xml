@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Validate_ApprovedUnder2_1_2</fullName>
+    <active>false</active>
+    <description>Validates Approved for under 2 1/2 if Approved is set to false</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; (ISCHANGED(CLQ_Approved_for_under_2_1_2__c) || ISCHANGED(CLQ_Approved_Room_Space__c)) &amp;&amp; ISPICKVAL(CLQ_Approved_for_under_2_1_2__c, &apos;Yes&apos;) &amp;&amp; NOT(CLQ_Approved_Room_Space__c)</errorConditionFormula>
+    <errorDisplayField>CLQ_Approved_for_under_2_1_2__c</errorDisplayField>
+    <errorMessage>Approved must be true if Approved Under 2 1/2 is Yes.</errorMessage>
+</ValidationRule>

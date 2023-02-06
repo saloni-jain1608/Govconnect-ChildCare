@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>AA7848A4-F6A1-43A4-A938-832D39F40BEB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="23.1181627%" y1="0%" x2="85.9070401%" y2="103.951741%" id="linearGradient-1">
+            <stop stop-color="#105CDF" offset="0%"></stop>
+            <stop stop-color="#00BAFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="264" y="0" width="1548" height="1094"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1548" height="1094" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="User-Registration-Background-IMG-Asset">
+            <g id="Group" transform="translate(-330.000000, -35.000000)">
+                <use id="Rectangle-4" stroke="#979797" mask="url(#mask-3)" stroke-width="2" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <path d="M0,1056.9026 C0,1056.9026 240.124961,949.890682 443.791952,940.990357 C647.458943,932.090031 694.912573,1013.16927 1018.81281,1012.38008 C1342.71306,1011.5909 1418.15154,927.245776 1697.13617,937.936576 C1976.1208,948.627377 1994.33623,1049.76252 1994.33623,1049.76252 L0,1056.9026 Z" id="Path-3-Copy-3" fill-opacity="0.300000012" fill="#07366D"></path>
+                <path d="M765,1061.9026 C765,1061.9026 1005.12496,954.890682 1208.79195,945.990357 C1412.45894,937.090031 1459.91257,1018.16927 1783.81281,1017.38008 C2107.71306,1016.5909 2183.15154,932.245776 2462.13617,942.936576 C2741.1208,953.627377 2759.33623,1054.76252 2759.33623,1054.76252 L765,1061.9026 Z" id="Path-3-Copy-2" fill-opacity="0.300000012" fill="#07366D"></path>
+                <path d="M323,1077.63596 C323,1077.63596 576.930874,952.119719 792.307638,941.680363 C1007.6844,931.241007 1057.86636,1026.34034 1400.38915,1025.41469 C1742.91194,1024.48904 1822.68774,925.559091 2117.71251,938.098528 C2412.73728,950.637964 2432,1069.26124 2432,1069.26124 L323,1077.63596 Z" id="Path-3-Copy" fill-opacity="0.300000012" fill="#07366D"></path>
+                <path d="M295.485101,1078.2893 C295.485101,1078.2893 239.611104,982.532111 293.326313,974.657345 C347.041523,966.78258 437.286992,1032.15032 572.07847,1037.74012 C706.869948,1043.32992 762.690471,1004.29095 965.637904,1002.53808 C1168.58534,1000.78522 1158.36577,1036.71285 1413.21179,1030.47522 C1668.05781,1024.2376 1841.5691,981.098737 1841.5691,981.098737 L1843.59367,1079 L295.485101,1078.2893 Z" id="Path-5-Copy" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

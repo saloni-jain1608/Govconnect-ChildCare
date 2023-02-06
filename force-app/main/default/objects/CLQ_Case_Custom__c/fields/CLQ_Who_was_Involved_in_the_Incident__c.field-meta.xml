@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Who_was_Involved_in_the_Incident__c</fullName>
+    <externalId>false</externalId>
+    <label>Who was Involved in the Incident</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Entire Group</fullName>
+                <default>false</default>
+                <label>Entire Group</label>
+            </value>
+            <value>
+                <fullName>Entire Program</fullName>
+                <default>false</default>
+                <label>Entire Program</label>
+            </value>
+            <value>
+                <fullName>One or more Individual Children</fullName>
+                <default>false</default>
+                <label>One or more Individual Children</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

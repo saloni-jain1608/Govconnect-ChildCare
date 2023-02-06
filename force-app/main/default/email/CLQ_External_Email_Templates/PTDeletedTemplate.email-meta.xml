@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify the group when a PT is deleted.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>PTDeletedTemplate</name>
+    <style>freeForm</style>
+    <subject>{!CLQ_Program_Transaction__c.clq_recordtypename__c} , {!CLQ_Program_Transaction__c.Name} Deleted</subject>
+    <textOnly>Team,
+
+
+
+This is to notify that the below Program Transaction was deleted,
+
+
+
+Program Transaction number : {!CLQ_Program_Transaction__c.Name}
+
+Program Name : {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}
+
+Program Number : {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}
+
+
+
+Please review it once and take necessary actions against it.
+
+
+
+
+
+
+
+The Ohio Child Licensing and Quality System Team.
+
+
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <div style="min-height: 30px;">
+            <c-custom-lightning-action button-label="Create Inspection" object-api-name="CLQ_Program_Transaction__c"
+                call-apex-or-launch-component="Apex" apex-class-name="InspectionCtrl" apex-method-name="createInspection" component-load-type="Modal"
+                record-id-attribute="recordId" record-id={recordId} refresh-page="true" success-message="Inspection created successfully" failure-message="An error occurred while processing the request">
+            </c-custom-lightning-action>
+        </div>
+    </lightning-card>
+</template>

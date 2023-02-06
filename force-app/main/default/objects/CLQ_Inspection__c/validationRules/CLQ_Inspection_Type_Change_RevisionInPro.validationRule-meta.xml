@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Type_Change_RevisionInPro</fullName>
+    <active>true</active>
+    <description>TFS#15828
+Inspection type can not be changed when Inspection is in Revision In Progress status.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+AND( NOT(ISNEW()), 
+ISCHANGED(CLQ_Inspection_Type__c), 
+AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Status__c),&quot;Revision in Progress&quot;),ISPICKVAL(CLQ_Inspection_Status__c,&quot;Revision in Progress&quot;)),
+NOT(Contains($Label.State_Admin_Profiles, $Profile.Name)) 
+)</errorConditionFormula>
+    <errorMessage>Inspection type can not be changed when Inspection is in Revision In Progress status.</errorMessage>
+</ValidationRule>

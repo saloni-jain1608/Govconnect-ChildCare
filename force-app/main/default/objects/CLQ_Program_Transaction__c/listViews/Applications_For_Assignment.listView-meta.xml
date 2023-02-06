@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applications_For_Assignment</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Transaction_Type__c</columns>
+    <columns>CLQ_Transaction_Status__c</columns>
+    <columns>CLQ_Program__c</columns>
+    <columns>CLQ_Proposed_Open_Date__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CLQ_Transaction_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved</value>
+    </filters>
+    <label>Applications For Assignment</label>
+    <queue>JFS_CCC_VDSS_CHILD_WELFARE_LICENSING</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

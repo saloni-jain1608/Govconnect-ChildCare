@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Docs_Returned_for_Revision__c</fullName>
+    <description>This field displays a count of all the child &quot;Transaction Document&quot; records which have their status set to &quot;Returned for Revision.&quot;</description>
+    <externalId>false</externalId>
+    <label>Transaction Docs Returned for Revision</label>
+    <summaryFilterItems>
+        <field>CLQ_Transaction_Document__c.CLQ_Document_Status__c</field>
+        <operation>equals</operation>
+        <value>Returned for Revision</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CLQ_Transaction_Document__c.CLQ_Program_Transaction__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

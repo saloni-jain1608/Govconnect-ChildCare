@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Log__c</fullName>
+    <externalId>false</externalId>
+    <label>Transaction Log</label>
+    <referenceTo>OCLQS_Transaction_Log__c</referenceTo>
+    <relationshipLabel>Integration Monitor</relationshipLabel>
+    <relationshipName>Int_rel_PIntLog_CIntError</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

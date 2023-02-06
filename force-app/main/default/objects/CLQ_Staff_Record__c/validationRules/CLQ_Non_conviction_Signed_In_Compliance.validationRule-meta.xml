@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Non_conviction_Signed_In_Compliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;In Compliance&apos;), 
+OR( 
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODE - Not available&apos;), INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODE - Missing Signature&apos;), 
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODE - Not updated&apos;), 
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODJFS - No Statement on File&apos;), INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;DJFS - No Annual Update&apos;), 
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODJFS - Dates Missing&apos;),
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODJFS - Admin. Signature Missing&apos;),
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODJFS - Missing Back Page&apos;),
+INCLUDES(CLQ_Non_conviction_Statement_Signed__c, &apos;ODJFS - Pending verification&apos;)
+) 
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Non_conviction_Statement_Signed__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Non-conviction Statement Signed.</errorMessage>
+</ValidationRule>

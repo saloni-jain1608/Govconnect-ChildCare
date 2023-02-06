@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Radon_Gas_is_Required</fullName>
+    <active>true</active>
+    <description>Level of Radon Gas is Required if Randon Gas = Yes</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(CLQ_Radon_Gas__c,&apos;Yes&apos;),ISBLANK( CLQ_Level_of_Radon_Gas__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Level_of_Radon_Gas__c</errorDisplayField>
+    <errorMessage>Level of Radon Gas is Required if Radon Gas is YES</errorMessage>
+</ValidationRule>

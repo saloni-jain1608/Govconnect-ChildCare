@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Intake_Date_cannot_be_a_Future_date</fullName>
+    <active>true</active>
+    <description>The Intake Date cannot be a Future date</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Intake_Date__c &gt; TODAY()</errorConditionFormula>
+    <errorMessage>Intake Date cannot be a future date</errorMessage>
+</ValidationRule>

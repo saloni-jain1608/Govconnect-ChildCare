@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_CopiedToProgramDate__c</fullName>
+    <description>Used in Batch job. Set to Today() when successfully processed by nightly batch job</description>
+    <externalId>false</externalId>
+    <label>CopiedToProgramDate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>RecordType</field>
+        <field>CLQ_Program__c</field>
+        <field>CLQ_Transaction_Assigned_To__c</field>
+        <field>CLQ_Submission_Date__c</field>
+        <field>CLQ_Submitter__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>CLQ_Update_Queue_Name</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>JFS Initial Application Approvals</description>
+        <label>Approval Step 1</label>
+        <name>County_Approver</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>CLQ_FCC_App_Unit</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>JFS Initial Application Approvals - FCC AppUnit</description>
+        <entryCriteria>
+            <formula>(CLQ_Program__r.RecordType.Name =  $Label.CLQ_Program_FCC_Type_B_Home ||
+CLQ_Program__r.RecordType.Name = $Label.CLQ_Program_FCC_Type_A_Home ) &amp;&amp; (RecordType.Name =  $Label.CLQ_Program_App_Application_FCC_RecType  )</formula>
+        </entryCriteria>
+        <label>Approval Step 2</label>
+        <name>State_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process for JFS</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>(RecordType.Name = $Label.CLQ_Program_App_Application_CC_Center_RecType || RecordType.Name =  $Label.CLQ_Program_App_Application_FCC_RecType )
+&amp;&amp; ( TEXT(CLQ_Transaction_Status__c) =  $Label.CLQ_Program_App_Transaction_Status_Returned_to_Reviewer
+|| TEXT(CLQ_Transaction_Status__c) =  $Label.CLQ_Program_App_Transaction_Status_Under_Reviewer_Review) &amp;&amp;  CLQ_Start_Approval__c = True</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CLQ_Clear_Queue_Name</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Set_Approved_by_Manager_to_True</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_Check</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Application_Approved_Date_field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Change_Status_to_Returned_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Clear_Queue_Name</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Flag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CLQ_Change_Transaction_Status_to_ARP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Reset_Approved_by_Manager_Flag</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Application Approval JFS</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>3</processOrder>
+    <recallActions>
+        <action>
+            <name>CLQ_Change_Status_to_UnderReviewerReview</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Clear_Queue_Name</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Approved_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_Recall</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

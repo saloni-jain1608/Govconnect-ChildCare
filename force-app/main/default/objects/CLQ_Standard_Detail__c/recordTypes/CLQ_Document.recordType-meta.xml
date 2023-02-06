@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Document</fullName>
+    <active>true</active>
+    <label>Document</label>
+    <picklistValues>
+        <picklist>CLQ_Integration_Document_Type__c</picklist>
+        <values>
+            <fullName>JFS - OCLQS - Accreditation Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Adjudicated a Delinquent Child Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Administrator Education%2FExperience%2FQualifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Administrator Non-Conviction Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Administrator Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Annual Survey Process and Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Annual Vehicle Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Articles of Incorporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Assistant Teacher Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Attendance Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Background Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Building Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Child Abuse and Neglect Training %28IHA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Child Assessment Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Child Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Classroom Self Assessment Tool Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Classroom Self-Assessment Action Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Community Partner Agreements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Community Resources Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Continuous Improvement Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Copy of License%2FCertification%2FExemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Crib Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Curriculum Assessment Alignment Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Curriculum Selection Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Daily Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Description of PD Planning Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Description of Supports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Developmental Screening Referral Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Developmental Screening Tool Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Developmental and Educational Goals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Driver Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Emergency Postings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Emergency Substitute Caregiver Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Employee Record Chart and Childrens Record Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Enrollment Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Equipment Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Evening Care Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - FCC Provider Education%2FExperience%2FQualifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Family Education Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Family Engagement Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Family Engagement Model</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Family Information Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Fire Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Fire Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Floor Plan Diagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Food License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Food License Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Food Service Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Food Service License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Guidance Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Handbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health Care Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health Referral Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health Screening Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health and Child Development Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health and Safety Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Health%2FSafety Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Immunization Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - In Home Aide Assurances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - In Home Aide Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Incident Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Indoor Diagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Indoor Space Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Infant Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Inspection Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Lead Teacher Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Liability Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - License Face Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Application Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Complaint Alleged Op Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Compliance Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Corrective Action Plan Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Day Camp Registration Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Incident Injury Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Inspection Complaint Full Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Summary Report Full Inspection Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Meal Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Medical Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Medication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Menu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Non-Conviction Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - ODE Professional Development Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Observation Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Outdoor Diagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Outdoor Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Owner Non-Conviction Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Owner%27s Authorized Representative%2FPartnership Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Parent Group Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Parent Handbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Payment Processing Receipt Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Permission Slips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Pet Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Plan of Operation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Playground Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Process to Use Child Assessment Results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Professional Development Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Professional Development Plan Annual Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Program Self-Assessment Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Program Transition Policies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Provider Non-Conviction Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Provider Req for Child Abuse and Neglect Report Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Records Transfer Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Req for Child Abuse and Neglect  Report Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Resident Non-Conviction Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Annual Report Desk Review Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Annual Report Registration Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Desk Review Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Expedited Program List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ On-site Verification Summary Report - Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Rating Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Registration Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Safe Environment Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Sample Daily Activity Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Sample Professional Development Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Sample Teacher Observation form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Sample Transition Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Sanitary Environment Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Space Heater Permission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Staff Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Swimming Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Teacher Observation Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Transition Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Transition Meeting Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Transportation Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Verification of Pre-Certification Training %28IHA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Water Test Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Weekly Vehicle Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Written Policies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Written Procedures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Written Wage Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Zoning Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCLQS - Inspection Documents</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Program_Transaction_Type__c</picklist>
+        <values>
+            <fullName>Licensing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_QuestionType__c</picklist>
+        <values>
+            <fullName>Instruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Picklist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes-No</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Show_For__c</picklist>
+        <values>
+            <fullName>Annual Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rating Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Application</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type__c</picklist>
+        <values>
+            <fullName>Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Required_for_Role__c</picklist>
+        <values>
+            <fullName>Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorized Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Domain__c</picklist>
+        <values>
+            <fullName>Accreditation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrative %26 Leadership Practices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extra Points</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family %26 Community Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Points 4 %26 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ratio %26 Group Size</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Qualifications %26 Professional Development</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OCLQS_Role_Allowed__c</picklist>
+        <values>
+            <fullName>ODE OCLQSLicensing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OCLQS_Transaction_Status__c</picklist>
+        <values>
+            <fullName>Annual Report Disapproved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Revised</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approver Review In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed by System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite Visit Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rating Assessment Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rating Recommended for Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resubmitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return for Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned for Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to Reviewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervisor Desk Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervisor On-Site Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Deleted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Reviewer Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdraw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn at Applicant%27s Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role_Type__c</picklist>
+        <values>
+            <fullName>JFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Group_Type__c</picklist>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>License Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updates</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Record_Type__c</picklist>
+        <values>
+            <fullName>Amendment - Center - Change of Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment - Change of Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment - FCC - Change of Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment - ODE - Change of Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment - ODE and Center - Change of Capacity %2F Space</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment- FCC - Change of Capacity %2F Space</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application - CC Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application - Day Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application - FCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application - ODE Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ApprovalProcess Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continuous License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensing - Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactivate Transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration - In-Home Aide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration - Out of State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal - In-Home-Aide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal - Out of State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ - Annual Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ - Expedited Rating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ - Expedited Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ - Initial Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUTQ - Ongoing Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update FCC Resident Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Facility Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update In-Home Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update In-Home Aide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update On-site Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Out of State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Outdoor Space Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Space Information</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

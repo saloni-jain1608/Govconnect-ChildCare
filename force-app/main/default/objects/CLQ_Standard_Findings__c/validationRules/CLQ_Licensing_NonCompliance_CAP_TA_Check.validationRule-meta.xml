@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Licensing_NonCompliance_CAP_TA_Check</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( 
+(TEXT(CLQ_Finding_Applicable_To__c)=&apos;Licensing&apos;),
+(TEXT( CLQ_Finding_Type__c )= &apos;Non-Compliance&apos;),CLQ_CAP__c = false, CLQ_TA__c = false)</errorConditionFormula>
+    <errorMessage>For Licensing Finding of Non-Compliance Type, either CAP or TA is required</errorMessage>
+</ValidationRule>

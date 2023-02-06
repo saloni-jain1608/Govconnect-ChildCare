@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values19</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Resubmitted__Resubmitted==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Denied==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Approved==Resubmitted**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Resubmitted__Approver Review In Progress==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Licensed==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Withdraw==Resubmitted**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Resubmitted__Closed==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__In Progress==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Closed by System==Resubmitted**YES</value>
+    </values>
+</CustomMetadata>

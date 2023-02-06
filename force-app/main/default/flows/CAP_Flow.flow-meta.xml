@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>CAP_Decision</name>
+        <label>CAP Decision</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>CAP_Decision_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CAP_Status_Change_for_Email</name>
+            <conditionLogic>(1 OR 2 OR 3) AND (4 OR 5) AND 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CLQ_CAP_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_CAP_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Returned for Revision</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_CAP_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Report Revised - Not Required</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_CAP_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Setup.ExecutionControlSetting__c.Run_Workflow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_Date</targetReference>
+            </connector>
+            <label>CAP Status Change for Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CAP_Decision_0</name>
+        <label>CAP Decision</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>CAP_Decision_0_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CLQ_Status_Change_Date_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.ExecutionControlSetting__c.Run_Workflow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_CAP_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CLQ_Update_Status_Date_0</targetReference>
+            </connector>
+            <label>CLQ_Status Change Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CAP_Decision_0_0</name>
+        <label>CAP Decision</label>
+        <locationX>182</locationX>
+        <locationY>1007</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CLQ_Update_Program_Email_Address_0_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.ExecutionControlSetting__c.Run_Workflow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_Program__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Program_Email_Address_0</targetReference>
+            </connector>
+            <label>CLQ_Update Program Email Address</label>
+        </rules>
+    </decisions>
+    <description>Converted Workflow rule into Flows.</description>
+    <interviewLabel>CAP Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CAP Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>CLQ_Update_Status_Date_0</name>
+        <label>CLQ_Update Status Date</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>CAP_Decision_0_0</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CLQ_Status_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Program_Email_Address_0</name>
+        <label>Update Program Email Address</label>
+        <locationX>50</locationX>
+        <locationY>1127</locationY>
+        <inputAssignments>
+            <field>CLQ_Program_Email_Address__c</field>
+            <value>
+                <elementReference>$Record.CLQ_Program__r.CLQ_Program_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Status_Date</name>
+        <label>Update Status Date</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>CAP_Decision_0</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CLQ_CAP_Email_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CLQ_CAP_Status_Change_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CAP_Decision</targetReference>
+        </connector>
+        <object>CLQ_Corrective_Action_Plan__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

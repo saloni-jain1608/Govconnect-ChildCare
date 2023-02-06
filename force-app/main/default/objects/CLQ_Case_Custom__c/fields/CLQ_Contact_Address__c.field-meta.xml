@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Contact_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>ContactId__r.MailingStreet + &apos; &apos; + ContactId__r.MailingCity + &apos; &apos; + ContactId__r.MailingState + &apos; &apos; +  ContactId__r.MailingPostalCode</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

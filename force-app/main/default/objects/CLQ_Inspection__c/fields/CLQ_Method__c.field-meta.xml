@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CLQ_Inspection_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On-site Inspection</fullName>
+                <default>false</default>
+                <label>On-site Inspection</label>
+            </value>
+            <value>
+                <fullName>Telephone Contact</fullName>
+                <default>false</default>
+                <label>Telephone Contact</label>
+            </value>
+            <value>
+                <fullName>In-Office Meeting</fullName>
+                <default>false</default>
+                <label>In-Office Meeting</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Technical Assistance</controllingFieldValue>
+            <controllingFieldValue>Pre-license</controllingFieldValue>
+            <controllingFieldValue>Provisional</controllingFieldValue>
+            <controllingFieldValue>Annual</controllingFieldValue>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <controllingFieldValue>Follow-up</controllingFieldValue>
+            <controllingFieldValue>Monitor</controllingFieldValue>
+            <controllingFieldValue>Incident / Injury / Illness</controllingFieldValue>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <controllingFieldValue>Amendment - change of location</controllingFieldValue>
+            <controllingFieldValue>Amendment - change of capacity</controllingFieldValue>
+            <valueName>On-site Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technical Assistance</controllingFieldValue>
+            <controllingFieldValue>Monitor</controllingFieldValue>
+            <controllingFieldValue>Incident / Injury / Illness</controllingFieldValue>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <controllingFieldValue>Amendment - change of location</controllingFieldValue>
+            <controllingFieldValue>Amendment - change of capacity</controllingFieldValue>
+            <valueName>Telephone Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technical Assistance</controllingFieldValue>
+            <valueName>In-Office Meeting</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

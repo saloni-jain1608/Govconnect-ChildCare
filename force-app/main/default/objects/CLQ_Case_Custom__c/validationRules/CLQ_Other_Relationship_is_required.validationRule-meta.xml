@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Other_Relationship_is_required</fullName>
+    <active>true</active>
+    <description>Other Relationship is required if ‘Other’ is selected for ‘Relationship to Alleged Operator.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name  = &apos;Alleged Ops&apos;,
+ ISPICKVAL( CLQ_Relationship_to_Program__c, &apos;Other&apos;),  ISBLANK( Other_Relationship__c )  )</errorConditionFormula>
+    <errorMessage>Other Relationship is required if ‘Other’ is selected for ‘Relationship to Alleged Operator.</errorMessage>
+</ValidationRule>

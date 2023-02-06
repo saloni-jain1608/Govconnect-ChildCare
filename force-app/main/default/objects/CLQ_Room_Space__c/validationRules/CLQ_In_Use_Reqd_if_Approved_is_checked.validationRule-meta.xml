@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_In_Use_Reqd_if_Approved_is_checked</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( CLQ_Approved_Room_Space__c = true,   ISBLANK(TEXT( CLQ_Currently_In_Use__c )) )</errorConditionFormula>
+    <errorDisplayField>CLQ_Currently_In_Use__c</errorDisplayField>
+    <errorMessage>Indicate whether the room will be used or not</errorMessage>
+</ValidationRule>

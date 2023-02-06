@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CLQ_Reason_why_Suspension_Denied__c</name>
+    <picklistValues>
+        <masterLabel>Does not meet rule requirements</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient Evidence</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

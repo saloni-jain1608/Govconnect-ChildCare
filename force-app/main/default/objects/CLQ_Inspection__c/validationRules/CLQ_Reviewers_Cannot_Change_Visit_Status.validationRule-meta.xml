@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reviewers_Cannot_Change_Visit_Status</fullName>
+    <active>false</active>
+    <description>#14785 - Reviewers should not be able to edit Visit status manually</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp;
+CONTAINS($Profile.Name, &apos;Reviewer&apos;) &amp;&amp;  ISCHANGED(CLQ_Visit_Status__c )</errorConditionFormula>
+    <errorMessage>You cannot manually change the Visit Status</errorMessage>
+</ValidationRule>

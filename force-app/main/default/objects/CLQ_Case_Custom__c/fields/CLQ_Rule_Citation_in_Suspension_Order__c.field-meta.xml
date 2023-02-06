@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Rule_Citation_in_Suspension_Order__c</fullName>
+    <externalId>false</externalId>
+    <label>Rule Citation in Suspension Order</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child died or suffered serious injury</fullName>
+                <default>false</default>
+                <label>Child died or suffered serious injury</label>
+            </value>
+            <value>
+                <fullName>PCSA Abuse or Neglect</fullName>
+                <default>false</default>
+                <label>PCSA Abuse or Neglect</label>
+            </value>
+            <value>
+                <fullName>Charged with Abuse or Neglect</fullName>
+                <default>false</default>
+                <label>Charged with Abuse or Neglect</label>
+            </value>
+            <value>
+                <fullName>Serious risk to health or safety</fullName>
+                <default>false</default>
+                <label>Serious risk to health or safety</label>
+            </value>
+            <value>
+                <fullName>Charged with Fraud</fullName>
+                <default>false</default>
+                <label>Charged with Fraud</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PD_Compliance_Code__c</fullName>
+    <description>licensing_pd_compliance_reasons from API</description>
+    <externalId>false</externalId>
+    <label>PD Compliance Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Compiance</fullName>
+                <default>false</default>
+                <label>In Compiance</label>
+            </value>
+            <value>
+                <fullName>Insufficient PD Hours</fullName>
+                <default>false</default>
+                <label>Insufficient PD Hours</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

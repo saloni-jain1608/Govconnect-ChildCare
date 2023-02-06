@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Org_Wide_Email_Addresses__c</fullName>
+    <description>This field includes email addresses for all persons connected to this Organization though a Role. The Role Trigger updates this field, so it can be used to send out emails to all recipients.</description>
+    <externalId>false</externalId>
+    <label>Org Wide Email Addresses</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

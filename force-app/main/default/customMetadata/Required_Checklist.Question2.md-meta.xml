@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Question2</label>
+    <protected>false</protected>
+    <values>
+        <field>Question__c</field>
+        <value xsi:type="xsd:string">Annual operating budget (see pages 8-9 of this application)
+The budget form on the public website containsthe information required for initial application. It is a model form so
+applicants may submit their own budget or one from their accountant as along asthe budget containsinformation similar
+to that on the model form.</value>
+    </values>
+</CustomMetadata>

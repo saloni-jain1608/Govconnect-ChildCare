@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Applicable_To__c</fullName>
+    <externalId>false</externalId>
+    <label>Applicable To</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alleged Ops</fullName>
+                <default>false</default>
+                <label>Alleged Ops</label>
+            </value>
+            <value>
+                <fullName>Child Care Center</fullName>
+                <default>false</default>
+                <label>Child Care Center</label>
+            </value>
+            <value>
+                <fullName>Day Camp</fullName>
+                <default>false</default>
+                <label>Day Camp</label>
+            </value>
+            <value>
+                <fullName>In-Home Aid</fullName>
+                <default>false</default>
+                <label>In-Home Aid</label>
+            </value>
+            <value>
+                <fullName>Out of State Registration</fullName>
+                <default>false</default>
+                <label>Out of State Registration</label>
+            </value>
+            <value>
+                <fullName>Pre School</fullName>
+                <default>false</default>
+                <label>Pre School</label>
+            </value>
+            <value>
+                <fullName>School Age Child Care</fullName>
+                <default>false</default>
+                <label>School Age Child Care</label>
+            </value>
+            <value>
+                <fullName>Type A Home</fullName>
+                <default>false</default>
+                <label>Type A Home</label>
+            </value>
+            <value>
+                <fullName>Type B Home</fullName>
+                <default>false</default>
+                <label>Type B Home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

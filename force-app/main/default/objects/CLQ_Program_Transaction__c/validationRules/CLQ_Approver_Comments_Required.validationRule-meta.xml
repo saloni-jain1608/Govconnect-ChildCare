@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approver_Comments_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND($User.Id = CLQ_Transaction_Assigned_To__r.ManagerId,
+ RecordType.Name = &apos;Application - FCC&apos;,
+ISBLANK(CLQ_Approver_Notes__c), CLQ_Rejected_By_Manager__c=true,
+ OR(ISPICKVAL(CLQ_Transaction_Status__c, &apos;Approver Review In Progress&apos;),
+  ISPICKVAL(CLQ_Transaction_Status__c, &apos;Under Reviewer Review&apos;)) 
+)</errorConditionFormula>
+    <errorMessage>Approver Comments are required to reject the record.</errorMessage>
+</ValidationRule>

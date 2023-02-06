@@ -1,0 +1,5 @@
+{!CLQ_Case_Custom__c.CLQ_Program_Name_Formula__c}, {!CLQ_Case_Custom__c.CLQ_Program_Number_Formula__c} , {!CLQ_Case_Custom__c.CLQ_Program_Street_Address1__c}, {!CLQ_Case_Custom__c.CLQ_Program_State__c}, {!CLQ_Case_Custom__c.CLQ_Program_Zipcode__c} is currently in the enforcement process with the {!$Label.StateName} Department of Job and Family Services ({!$Label.JobFamilyDept}) to deny an application or revoke the program's license.   Legal notification of the enforcement process has been mailed to the address of record, however, it has been returned to this office.   The program has left no forwarding address.  As a result, the {!$Label.JobFamilyDept} is unable to serve the Order to the program and has placed the program in an “unable to locate” status. The enforcement process will remain in this status until the program has been located and the Order is successfully delivered.  If the county agency becomes aware of updated contact information for this program, it is requested that the information be shared with the assigned enforcement worker.
+
+Thank you.
+
+The {!$Label.StateName} Child Licensing and Quality System Team.

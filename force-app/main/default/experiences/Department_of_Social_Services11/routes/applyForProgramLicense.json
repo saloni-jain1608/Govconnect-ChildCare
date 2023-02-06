@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "1d4ad850-8380-45be-a425-da91a3ede941",
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "configurationTags" : [ ],
+  "id" : "5567d77c-118a-4f5a-b157-1650334fdbbc",
+  "label" : "Apply for Program License",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-program-license",
+  "type" : "route",
+  "urlPrefix" : "program-license"
+}

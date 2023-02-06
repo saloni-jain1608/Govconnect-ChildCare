@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Education_Verified_In_Compliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Education_Verified__c, &apos;In Compliance&apos;),
+OR(
+INCLUDES(CLQ_Education_Verified__c, &apos;ODE - Not available&apos;),  INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - No Educational Verification&apos;), 
+INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Vocational Information Missing&apos;), 
+INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - HS Not Translated&apos;), INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Home School Info Missing&apos;), INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Not HS Grad&apos;), INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Incomplete Documentation&apos;), INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Pending Verification&apos;), INCLUDES(CLQ_Education_Verified__c, &apos;ODJFS - Not Applicable&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Education_Verified__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Education Verified</errorMessage>
+</ValidationRule>

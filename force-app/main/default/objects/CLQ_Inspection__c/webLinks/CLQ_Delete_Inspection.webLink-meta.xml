@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Delete_Inspection</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Delete Inspection</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+var Sure = confirm(&quot;Are you sure you want to delete the inspection?&quot;);
+var ApproveDeleteFlag=0;//TFS#15819
+var alertFlag=0;//TFS#15819
+if(Sure == true){
+var Ins= new sforce.SObject(&quot;CLQ_Inspection__c&quot;);
+Ins.Id = &apos;{!CLQ_Inspection__c.Id}&apos;;
+var username = sforce.connection.getUserInfo().userFullName;
+var inspectionStatus=&apos;&apos;;
+var InspOwnerId = &apos;{!CLQ_Inspection__c.OwnerId}&apos;;
+alert(&apos;{!CLQ_Inspection__c.CLQ_Owner_Manager__c}&apos;);
+alert(&apos;11-&apos; + &quot;{!CLQ_Inspection__c.CLQ_Owner_Manager__c}&quot; == &quot;{!$User.Id}&quot;);
+
+if(&apos;{!$UserRole.Name}&apos; == &apos;JFS State Admin&apos; || &apos;{!$UserRole.Name}&apos; == &apos;ODE State Admin&apos;){
+if(&apos;{!$UserRole.Name}&apos; == &apos;JFS State Admin&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.Program_Jurisdiction__c}&apos; == &apos;ODE&apos;){
+alert(&apos;JFS users are not authorized to delete ODE Inspections&apos;);
+alertFlag=1;
+}else if(&apos;{!$UserRole.Name}&apos; == &apos;ODE State Admin&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.Program_Jurisdiction__c}&apos; == &apos;JFS&apos;){
+alert(&apos;ODE users are not authorized to delete JFS inspections&apos;);
+alertFlag=1;
+}else if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Approved&apos;){
+inspectionStatus=&apos;Deleted&apos;;
+} //TFS#15819 starts
+else if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Approved&apos;){
+ApproveDeleteFlag=1;
+}//TFS#15819 ends
+}else{
+var userProf = &apos;{!$Profile.Name}&apos;;
+    var userrle = &quot;{!$UserRole.Name}&quot;;
+    var insCounty = &quot;{!CLQ_Inspection__c.CLQ_County__c}&quot;;
+    alert(userProf + &apos;--&apos; + userrle + &apos;--&apos; + insCounty);
+    alert(&apos;1-&apos; + userProf.includes(&apos;Approver&apos;) + &apos;2-&apos; + userrle.includes(insCounty));
+if (InspOwnerId.indexOf(&quot;{!$User.Id}&quot;) != 0 &amp;&amp; 
+        !(&quot;{!CLQ_Inspection__c.CLQ_Owner_Manager__c}&quot; == &quot;{!$User.Id}&quot;)) { //TFS#16030 - Ends
+alert(&apos;You are not authorized to delete this inspection&apos;);
+alertFlag=1;
+}else if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Pending Processing&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; != &apos;Pre-license&apos;){
+alert(&quot;You cannot delete an inspection that has been submitted for approval&quot;);
+alertFlag=1;
+}else if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Pre-license&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Visit_Status__c}&apos; == &apos;Visit Completed&apos;){
+alert(&quot;Completed Inspection Cannot be Deleted&quot;);
+alertFlag=1;
+}else if(&apos;{!CLQ_Inspection__c.CLQ_Denial_Reason__c}&apos;==&apos;&apos;){
+alert(&quot;Please enter a deletion reason&quot;);
+alertFlag=1;
+}else if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Approved&apos;) //TFS#15819
+{
+ApproveDeleteFlag=1; //TFS#15819
+}
+else{
+inspectionStatus =&apos;Deleted&apos;;
+}
+}//TFS#15819 starts
+if((&apos;{!$Profile.Name}&apos;==&apos;ODE State Admin - State User&apos; || &apos;{!$Profile.Name}&apos;==&apos;ODE Super State Admin - State user&apos;|| &apos;{!$Profile.Name}&apos;==&apos;ODJFS County Admin - County Role&apos; || &apos;{!$Profile.Name}&apos;==&apos;State Admin - State user&apos; || &apos;{!$Profile.Name}&apos;==&apos;State Program Admin State User&apos; || &apos;{!$Profile.Name}&apos;==&apos;Super State Admin - State user&apos; || &apos;{!$Profile.Name}&apos;==&apos;System Administrator&apos;) &amp;&amp; InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 &amp;&amp; ApproveDeleteFlag==1)
+{
+inspectionStatus=&apos;Deleted&apos;;
+}
+else if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Approved&apos; &amp;&amp; alertFlag==0)
+{
+alert(&apos;You are not authorized to delete this inspection&apos;);
+} //TFS#15819 ends
+if(inspectionStatus != &apos;&apos;){
+Ins.CLQ_Inspection_Status__c= inspectionStatus;
+var result = sforce.connection.update([Ins]);
+if(result[0].getBoolean(&quot;success&quot;))
+{
+window.location.reload();
+}
+else{
+alert(&apos;Error : &apos;+result);
+}
+}
+}else
+{
+}</url>
+</WebLink>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforcement</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Program__c</columns>
+    <columns>CLQ_Inspection_Status__c</columns>
+    <columns>Inspection_Status__c</columns>
+    <columns>CLQ_Inspection_Type__c</columns>
+    <columns>CLQ_Type__c</columns>
+    <columns>CLQ_Program_Name__c</columns>
+    <columns>CLQ_Program_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Program_Status__c</field>
+        <operation>equals</operation>
+        <value>Enforcement</value>
+    </filters>
+    <label>Enforcement</label>
+</ListView>

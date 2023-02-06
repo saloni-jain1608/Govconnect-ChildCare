@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+body { font-family: 'Open Sans', sans-serif; }
+
+.slds-button_brand { background-image: -webkit-gradient(linear, left top, left bottom, from(#35456d), to(#465b8f)); background-image: -webkit-linear-gradient(top, #35456d, #465b8f); background-image: -o-linear-gradient(top, #35456d, #465b8f); background-image: linear-gradient(to bottom, #35456d, #465b8f); text-transform: uppercase; font-size: 14px; font-weight: 400; }
+
+.slds-button_brand:hover { background-image: -webkit-gradient(linear, left top, left bottom, from(#10276d), to(#173799)); background-image: -webkit-linear-gradient(top, #10276d, #173799); background-image: -o-linear-gradient(top, #10276d, #173799); background-image: linear-gradient(to bottom, #10276d, #173799); }
+
+.vc-wrapper { min-height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background-image: url(../img/bg_texture.jpg); background-color: white; }
+
+.vc-header { width: 100%; }
+
+.vc-header .brand-logo img { height: 60px; width: auto; }
+
+.vc-footer { margin-top: auto; background-color: #d9d9d9; border-top: 10px solid #999; }
+
+.vc-footer .brand-logo img { height: 60px; width: auto; }
+
+.vc-footer .footer-nav { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+
+.vc-footer .footer-nav ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; }
+
+.vc-footer .footer-nav ul a { color: #10276d; font-weight: 600; font-size: 14px; text-decoration: underline; }
+
+.login-container { border-radius: 3px; width: 100%; padding: 25px; background-color: #fff; -webkit-box-shadow: 0 0 3px #999; box-shadow: 0 0 3px #999; }
+
+.login-header { color: gray; }
+
+.login-header h1 { font-family: 'Open Sans', sans-serif; font-size: 2.1em; color: #10276d; font-weight: bold; }
+
+.login-header p { font-size: 16px; margin-bottom: 15px; }
+
+.login-form--body { background-image: url(../img/login-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center; border: 5px solid #d9d9d9; padding: 100px 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+
+.login-form--body .slds-form-element__label { font-size: 14px; font-weight: 700; }
+
+.login-form--header { background-color: #35456d; background-image: -webkit-gradient(linear, left top, left bottom, from(#35456d), to(#465b8f)); background-image: -webkit-linear-gradient(top, #35456d, #465b8f); background-image: -o-linear-gradient(top, #35456d, #465b8f); background-image: linear-gradient(to bottom, #35456d, #465b8f); background-repeat: repeat-x; margin: 10px -5px; padding: 3px 15px; color: white; }
+
+.login-form--header h4 { font-size: 1.4em; color: #fff; margin: 0; padding: 0; }
+
+.login-form--header p { font-style: italic; color: #ccc; }
+
+.login-form--card { background: rgba(255, 255, 255, 0.7); max-width: 500px; }
+
+.login-form--footer { background-color: white; }
+
+.comm-page-login-home .slds-col--padded.contentRegion.comm-layout-column { padding-left: 0; padding-right: 0; }
+
+/*# sourceMappingURL=main.css.map */

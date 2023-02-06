@@ -1,0 +1,7 @@
+The complaint number {!CLQ_Case_Custom__c.Id} has been Rejected by the approver.
+
+Please log in at https://oclqs.my.salesforce.com/{!CLQ_Case_Custom__c.Id} to view the complaint details.
+
+The Ohio Child Licensing and Quality System Team.
+
+Reference Id ref: {!CLQ_Case_Custom__c.Name}

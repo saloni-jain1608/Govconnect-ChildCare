@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_SUTQ_Certificate__c</fullName>
+    <description>[Forms &amp; Reports]: Created to get criteria to print SUTQ Certificate</description>
+    <externalId>false</externalId>
+    <formula>IF( OR( ISPICKVAL( Onsite_Rating__c , &quot;1&quot;) ,ISPICKVAL( Onsite_Rating__c , &quot;2&quot;),ISPICKVAL( Onsite_Rating__c , &quot;3&quot;),ISPICKVAL( Onsite_Rating__c , &quot;4&quot;),ISPICKVAL( Onsite_Rating__c , &quot;5&quot;)) ,  IF( CLQ_Program_Transaction__r.CLQ_Program__r.CLQ_Jurisdiction__c  = &quot;ODE&quot;, &quot;OnsiteODE&quot;, &quot;OnsiteJFS&quot;) , &quot;OnsiteNotRated&quot;)</formula>
+    <label>Onsite SUTQ Certificate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

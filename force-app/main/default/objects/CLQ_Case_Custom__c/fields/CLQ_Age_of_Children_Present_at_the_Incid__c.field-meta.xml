@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Age_of_Children_Present_at_the_Incid__c</fullName>
+    <description>The age of children who were present at the time of the incident/injury.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The age of children who were present at the time of the incident/injury.</inlineHelpText>
+    <label>Age of Children Present at the Incident</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Infant</fullName>
+                <default>false</default>
+                <label>Infant</label>
+            </value>
+            <value>
+                <fullName>Toddler</fullName>
+                <default>false</default>
+                <label>Toddler</label>
+            </value>
+            <value>
+                <fullName>Pre-School</fullName>
+                <default>false</default>
+                <label>Pre-School</label>
+            </value>
+            <value>
+                <fullName>School Age</fullName>
+                <default>false</default>
+                <label>School Age</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

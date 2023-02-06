@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>JFS_Application_at_Risk_Email_Alert</name>
+        <label>JFS Application at Risk Email Alert</label>
+        <locationX>176</locationX>
+        <locationY>288</locationY>
+        <actionName>CLQ_Program_Transaction__c.CLQ_JFS_Application_at_Risk_Email_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>JFS_Application_is_Closed</name>
+        <label>JFS Application is Closed</label>
+        <locationX>440</locationX>
+        <locationY>408</locationY>
+        <actionName>CLQ_Program_Transaction__c.CLQ_JFS_Application_is_Closed</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <interviewLabel>Program Application Time Dependent {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Program Application Time Dependent</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Transaction_Status</name>
+        <label>Update Transaction Status</label>
+        <locationX>440</locationX>
+        <locationY>288</locationY>
+        <connector>
+            <targetReference>JFS_Application_is_Closed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CLQ_Transaction_Status__c</field>
+            <value>
+                <stringValue>Closed by System</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>( 1 OR 2 OR 3 OR 4 OR 5 ) AND ( 6 OR 7 OR 8 OR 9 OR 10 OR 11 ) AND (12 OR 13 OR 14 OR 15 OR 16 OR 17)</filterLogic>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Under Reviewer Review</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approver Review In Progress</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Returned to Reviewer</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Returned for Revision</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Child Care Center</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>FCC - Type A Home</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>FCC - Type B Home</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Day Camp</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>In-Home Aide</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Out of State Registration</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application - CC Center</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application - FCC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application - ODE Program</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Registration - Day Camp</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Registration - Out of State</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Registration - In-Home Aid</stringValue>
+            </value>
+        </filters>
+        <object>CLQ_Program_Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X335_Days_After_Program_Application_XOld_Submission_Date1</name>
+            <connector>
+                <targetReference>JFS_Application_at_Risk_Email_Alert</targetReference>
+            </connector>
+            <label>335 Days After Program Application: XOld Submission Date1</label>
+            <offsetNumber>335</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>CLQ_Old_Submission_Date1__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>X395_Days_After_Program_Application_Submission_Date</name>
+            <connector>
+                <targetReference>Update_Transaction_Status</targetReference>
+            </connector>
+            <label>395 Days After Program Application: Submission Date</label>
+            <offsetNumber>395</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Submission_Date1__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

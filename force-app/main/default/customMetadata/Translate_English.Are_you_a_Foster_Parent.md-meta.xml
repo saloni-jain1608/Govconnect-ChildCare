@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Are you a Foster Parent?</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Are you a Foster Parent?</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Are_you_a_foster_parent__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Bist du ein Pflegeelternteil?</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Program_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿Eres un padre adoptivo?</value>
+    </values>
+</CustomMetadata>

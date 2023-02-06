@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Domain_Rule_Scope_Validation</fullName>
+    <active>false</active>
+    <description>Do not allow a user to add a Domain Rule to an Inspection Tool unless there is a Scope Match</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; IF(OR(
+	AND(INCLUDES(CLQ_Domain_Rule__r.CLQ_Applicable_To_Scope__c,&quot;Focused&quot;), CONTAINS(TEXT( CLQ_Inspection_Tools__r.CLQ_Applicable_To_Scope__c) , &quot;Focused&quot;)),
+AND(INCLUDES(CLQ_Domain_Rule__r.CLQ_Applicable_To_Scope__c,&quot;Full&quot;), CONTAINS(TEXT( CLQ_Inspection_Tools__r.CLQ_Applicable_To_Scope__c) , &quot;Full&quot;)),
+AND(ISBLANK(CLQ_Domain_Rule__r.CLQ_Applicable_To_Scope__c), ISBLANK(TEXT( CLQ_Inspection_Tools__r.CLQ_Applicable_To_Scope__c))   )
+)
+,FALSE,TRUE)</errorConditionFormula>
+    <errorMessage>The Scope of the Domain Rule and Inspection Tool do not match.</errorMessage>
+</ValidationRule>

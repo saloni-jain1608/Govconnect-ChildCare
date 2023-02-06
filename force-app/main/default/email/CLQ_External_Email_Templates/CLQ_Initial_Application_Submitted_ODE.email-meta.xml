@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Initial Application Submitted ODE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Initial Application Submitted ODE</name>
+    <style>freeForm</style>
+    <subject>Initial Application for Licensure Submitted for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}</subject>
+    <textOnly>You have successfully submitted an application for licensure. A copy of the application is attached to this email.  You will be contacted about the next steps in the process.  Access the Facility Information screen by using your Program Number, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}, through the My Programs tab located at the top of the OCLQS Home screen. This information must be completed prior to license approval.
+
+The Licensing Online Team  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

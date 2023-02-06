@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Status_Change_Approved</fullName>
+    <active>false</active>
+    <description>Description	TFS#16617
+Inspection status can not be changed when Inspection is in Approved status.</description>
+    <errorConditionFormula>AND
+(
+ISCHANGED( CLQ_Inspection_Status__c),
+ISPICKVAL(PRIORVALUE( CLQ_Inspection_Status__c), &quot;Approved&quot;),
+ISPICKVAL( CLQ_Inspection_Status__c, &quot;Approved&quot;) 
+
+)</errorConditionFormula>
+    <errorMessage>Inspection status can not be changed when Inspection is in Approved status.</errorMessage>
+</ValidationRule>

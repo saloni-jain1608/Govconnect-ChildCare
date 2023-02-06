@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Program Type</description>
+    <externalId>false</externalId>
+    <label>Program Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child Care Center</fullName>
+                <default>false</default>
+                <label>Child Care Center</label>
+            </value>
+            <value>
+                <fullName>Day Camp</fullName>
+                <default>false</default>
+                <label>Day Camp</label>
+            </value>
+            <value>
+                <fullName>FCC - Type A Home</fullName>
+                <default>false</default>
+                <label>FCC - Type A Home</label>
+            </value>
+            <value>
+                <fullName>FCC - Type B Home</fullName>
+                <default>false</default>
+                <label>FCC - Type B Home</label>
+            </value>
+            <value>
+                <fullName>In-Home Aide</fullName>
+                <default>false</default>
+                <label>In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>ODE - Pre School</fullName>
+                <default>false</default>
+                <label>ODE - Pre School</label>
+            </value>
+            <value>
+                <fullName>School Age Child Care</fullName>
+                <default>false</default>
+                <label>School Age Child Care</label>
+            </value>
+            <value>
+                <fullName>Out of State</fullName>
+                <default>false</default>
+                <label>Out of State</label>
+            </value>
+            <value>
+                <fullName>Pre School</fullName>
+                <default>false</default>
+                <label>Pre School</label>
+            </value>
+            <value>
+                <fullName>Out of State Registration</fullName>
+                <default>false</default>
+                <label>Out of State Registration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

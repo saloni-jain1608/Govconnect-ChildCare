@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Submit_for_Approval</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+var url = parent.location.href;
+var transObj = new sforce.SObject(&quot;CLQ_Program_Transaction__c&quot;);
+transObj.Id = &apos;{!CLQ_Program_Transaction__c.Id}&apos;;
+
+var UserManager = sforce.connection.query(&quot;Select id,name,ManagerId,Manager.IsActive from User where id=&apos;{!CLQ_Program_Transaction__c.OwnerId}&apos;&quot;);
+UsrRecord = UserManager.getArray(&quot;records&quot;);
+
+var strCombinedCounties = &apos;&apos;;
+var ptCountyUC = &apos;{!CLQ_Program_Transaction__c.Program_Transaction_County__c}&apos;.toUpperCase();
+var rolename = &apos;{!$UserRole.Name}&apos;;
+if (rolename != null &amp;&amp; rolename.toLowerCase().indexOf(&apos;county&apos;) &gt;= 0) {
+    var usrCounty = rolename.substring(0, rolename.toLowerCase().indexOf(&apos;county&apos;)).trim().toUpperCase();
+    var combinedCountyRec = sforce.connection.query(&quot;Select CLQ_Combined_Counties__c from CLQ_Combined_Counties__mdt where DeveloperName = &apos;&quot; + usrCounty + &quot;&apos; and CLQ_Process_Combined_County__c = true&quot;);
+    var records = combinedCountyRec.getArray(&quot;records&quot;);
+
+    if (records.length &gt; 0) {
+        strCombinedCounties = records[0].CLQ_Combined_Counties__c;
+    }
+}
+
+if (&apos;{!CLQ_Program_Transaction__c.OwnerId}&apos; != &apos;{!$User.Id}&apos;) {
+    alert(&apos;Only Owner of the record can Submit for Approval&apos;);
+} else if (UsrRecord[0].ManagerId == null || UsrRecord[0].Manager.IsActive == &apos;false&apos;) {
+    alert(&apos;User Manager is missing or inactive. Please update and Submit for Approval&apos;);
+} 
+/*else if ((strCombinedCounties.length == 0 || strCombinedCounties.indexOf(ptCountyUC) &lt; 0) &amp;&amp; {!NOT(ISNULL($UserRole.Name))} &amp;&amp; {!CONTAINS(LOWER($UserRole.Name), &apos;county&apos;)} &amp;&amp; {!NOT(CONTAINS(LOWER($UserRole.Name), LOWER(CLQ_Program_Transaction__c.Program_Transaction_County__c)))} &amp;&amp; {!CONTAINS($Label.JFS_County_Program_Record_Type, CLQ_Program_Transaction__c.CLQ_Program_Record_Type__c)}) {
+    alert(&apos;{!$Label.Approval_Submit_Error_Message}&apos;);
+}*/
+else {
+    //Check for Transaction RTs Starts here.. ManagerId,
+    //Reviewer Missing Elements Check - RT = Application, COL, COC, COA
+    if ((&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos;.indexOf(&apos;Application&apos;) &gt; -1 ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos;.indexOf(&apos;Location&apos;) &gt; -1 ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos;.indexOf(&apos;Capacity&apos;) &gt; -1 ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos;.indexOf(&apos;Administrator&apos;) &gt; -1 || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Licensing - Closure&apos; ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Registration Closure&apos; || &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Continuous License&apos;)
+        &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos;) {
+        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) {
+            if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Ready_for_Approval2__c}&apos; == true &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos;) || (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Withdraw&apos;)) {
+                transObj.CLQ_Start_Approval__c = true;
+                transObj.CLQ_Task_Created__c = false;
+                var result = sforce.connection.update([transObj]);
+                window.location.reload();
+            }
+            else {
+                alert(&apos;Please check the Missing Elements for Reviewers List&apos;);
+            }
+        }
+        else {
+            alert(&apos;Transaction Status must be either Under Reviewer Review or Returned to Reviewer&apos;);
+        }
+    }// End of Reviewer Missing Elements Checklist
+    else if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; == &apos;&apos;) {
+        alert(&apos;Cannot Submit for Approval if the Assigned to is blank&apos;);
+    }
+
+    //Reactivate Transaction Check...
+    else if (&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Reactivate Transaction&apos;) {
+        if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Submitted&apos; ||
+            &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Returned to Reviewer&apos;) &amp;&amp;
+            &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;) {
+            transObj.CLQ_Start_Approval__c = true;
+            transObj.CLQ_Transaction_Status__c = &apos;Approver Review In Progress&apos;;
+            var result = sforce.connection.update([transObj]);
+            var request = new sforce.ProcessSubmitRequest();
+            request.objectId = &quot;{!CLQ_Program_Transaction__c.Id}&quot;;
+            var processRes = sforce.connection.process([request]);
+            window.location.reload();
+        }
+        else if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;&apos;) {
+            alert(&apos;Please select a Recommendation to Submit for Approval&apos;);
+        }
+    }//End of Reactivation Transaction
+
+    //In-home Aide Check
+    else if (&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;In-Home Aide&apos;) {
+        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos;) {
+            if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Initial Application&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Recertification&apos;) {
+                if (&apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Returned to Reviewer&apos;) {
+                    if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;) {
+                        transObj.CLQ_Start_Approval__c = true;
+                        var result = sforce.connection.update([transObj]);
+                        window.location.reload();
+                    }
+                    else {
+                        alert(&apos;Please select a Recommendation&apos;);
+                    }
+                }
+                else {
+                    alert(&apos;Registration Status must be either Under Reviewer Review or Returned to Reviewer&apos;);
+                }
+            }
+            else {
+                alert(&apos;Approval can be done only for Initial Application and Recertification&apos;);
+            }
+        }
+        else {
+            alert(&apos;Transaction is not assigned&apos;);
+        }
+    }//end of In-home Aide check
+
+    //Registration - Out of State Check..
+    else if (&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;Registration - Out of State&apos;) {
+        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Type__c}&apos; == &apos;Registration&apos;) {
+            if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Under Reviewer Review&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Registration_Status__c}&apos; == &apos;Returned to Reviewer&apos;)) {
+                if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&apos; != &apos;&apos;) {
+                    if (&apos;{!CLQ_Program_Transaction__c.CLQ_Payment_County__c}&apos; != &apos;&apos;) {
+                        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;) {
+                            if ((&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Approve&apos; &amp;&amp; &apos;{!CLQ_Program_Transaction__c.CLQ_Program_Start_Date__c}&apos; != &apos;&apos;) ||
+                                ((&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Deny&apos; || &apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; == &apos;Withdraw&apos;))) {
+                                transObj.CLQ_Start_Approval__c = true;
+                                var result = sforce.connection.update([transObj]);
+                                window.location.reload();
+                            }
+                            else {
+                                alert(&apos;If Recommendation is Approve, fill in Program Start Date. If Recommendation is Deny or Withdraw , Please make sure to fill in Reviewer Comments&apos;);
+                            }
+                        }
+                        else {
+                            alert(&apos;Recommendation Cannot be Null&apos;);
+                        }
+                    }
+                    else {
+                        alert(&apos;Payment County Cannot be Null&apos;);
+                    }
+                }
+                else {
+                    alert(&apos;Transaction Assigned to Cannot be Null&apos;);
+                }
+            }
+            else {
+                alert(&apos;Registration Status Must be either Under Reviewer Review or Returned to Reviewer&apos;);
+            }
+        } //if 2
+        else {
+            alert(&apos;Approval Process can be done only for Registration Transaction Type&apos;);
+        }
+    } // End of Registration - Out of State // Start of SUTQ&apos;s Check for documents
+    else if (&apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;SUTQ - Expedited Registration&apos; ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;SUTQ - Reinstate Rating after Temporary Closure&apos; ||
+        &apos;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&apos; == &apos;SUTQ - Change of Owner Registration&apos;) {
+
+        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&apos; == &apos;Deferral&apos;) {
+            alert(&apos;Deferral transaction(s) can not be submitted.&apos;);
+        }
+        else if (&apos;{!CLQ_Program_Transaction__c.CLQ_Document_Review_Complete__c}&apos; == false) {
+            alert(&apos;Document review is incomplete&apos;);
+        }
+        else if (&apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == &apos;&apos;) {
+            alert(&apos;Recommendation of Desk review rating is incomplete&apos;);
+
+        }// Updated for 15252
+        else if (&apos;{!CLQ_Program_Transaction__c.CLQ_Program_Status__c}&apos; != &apos;Open&apos; &amp;&amp;
+            &apos;{!CLQ_Program_Transaction__c.CLQ_Program_Status__c}&apos; != &apos;Pending&apos; &amp;&amp;
+            &apos;{!CLQ_Program_Transaction__c.CLQ_Program_Status__c}&apos; != &apos;Enforcement&apos;) {
+            alert(&apos;Cannot Submit for Approval, program should be in Pending, Open or Enforcement status.&apos;);
+        } else {
+            transObj.CLQ_Start_Approval__c = true;
+            var result = sforce.connection.update([transObj]);
+            window.location.reload();
+        }
+
+    }
+    //END Of SUTQ&apos;s check
+    //Any Other Missing Transaction Types
+    else {
+        if (&apos;{!CLQ_Program_Transaction__c.CLQ_Recommendation__c}&apos; != &apos;&apos;) {
+            transObj.CLQ_Start_Approval__c = true;
+            var result = sforce.connection.update([transObj]);
+            window.location.reload();
+        }
+        else {
+            alert(&apos;Please select a Recommendation&apos;);
+        }
+    }
+
+    // End for Transaction RTs check
+
+} //end of User Manager Check</url>
+</WebLink>

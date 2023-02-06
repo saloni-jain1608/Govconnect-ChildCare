@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Three_Reference_Letters__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>These are required for all individuals listed in the section for Type of Business Entity under “Identifying Information”. Reference letters must be dated no more than 12 months prior to the date of this application from three persons who are not related to the individual by blood or marriage who have known him/her for at least one month, and who can attest to his/her character and reputation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These are required for all individuals listed in the section for Type of Business Entity under “Identifying Information”. Reference letters must be dated no more than 12 months prior to the date of this application from three persons who are not related</inlineHelpText>
+    <label>Three Reference Letters</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

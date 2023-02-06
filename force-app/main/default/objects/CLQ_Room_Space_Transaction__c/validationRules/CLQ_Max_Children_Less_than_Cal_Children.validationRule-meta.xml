@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Max_Children_Less_than_Cal_Children</fullName>
+    <active>true</active>
+    <description>For Indoor Room/Space Record type</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name = &apos;Indoor Room/Space&apos;,(CLQ_Number_of_Children_Allowed__c &gt; CLQ_Calc_Nb_of_Child_Allowed_Indoor__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Number_of_Children_Allowed__c</errorDisplayField>
+    <errorMessage>Number of Children Allowed cannot be Greater than Calculated Number of children Allowed</errorMessage>
+</ValidationRule>

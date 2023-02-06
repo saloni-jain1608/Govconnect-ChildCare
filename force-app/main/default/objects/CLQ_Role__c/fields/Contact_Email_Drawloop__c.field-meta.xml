@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Email_Drawloop__c</fullName>
+    <description>Forms &amp; Reports: Created to store contact&apos;s email as Text and to use in excel as middleware to send F&amp;R emails</description>
+    <externalId>false</externalId>
+    <formula>CLQ_Contact__r.Email</formula>
+    <label>Contact Email (Drawloop)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

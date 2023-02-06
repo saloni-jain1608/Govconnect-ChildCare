@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Delete</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Delete</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var FS= new sforce.SObject(&quot;CLQ_Facility_Schedule__c&quot;);
+FS.Id = &apos;{! CLQ_Facility_Schedule__c.Id}&apos;;
+FS.CLQ_Status__c =&apos;Pending Inactive&apos;;
+var result = sforce.connection.update([FS]);
+if(result[0].getBoolean(&quot;success&quot;))
+{
+window.location.reload();
+}
+else{
+alert(&apos;Error : &apos;+result);
+}</url>
+</WebLink>

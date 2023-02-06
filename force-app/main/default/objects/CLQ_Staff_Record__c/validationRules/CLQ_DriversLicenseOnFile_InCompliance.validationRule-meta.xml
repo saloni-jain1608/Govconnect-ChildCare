@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_DriversLicenseOnFile_InCompliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Driver_s_License_on_File__c, &apos;In Compliance&apos;),
+OR(
+INCLUDES(CLQ_Driver_s_License_on_File__c, &apos;No License on File&apos;),  INCLUDES(CLQ_Driver_s_License_on_File__c, &apos;License Expired&apos;),
+INCLUDES(CLQ_Driver_s_License_on_File__c, &apos;Wrong Type of License&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Driver_s_License_on_File__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Driver’s License on File</errorMessage>
+</ValidationRule>

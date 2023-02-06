@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>For programs operating only one session</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">For programs operating only one session per day, you may enter your hours of operation as &quot;Start Time 1&quot; and &quot;End Time 1&quot;. For programs operating multiple sessions, you may enter two timeframes for each schedule. For example, if you operate a morning program and an afternoon program, you may enter the start and end time for the morning session in &quot;Start Time 1&quot; and &quot;End Time 1&quot;, and the start and end time for the afternoon session as &quot;Start Time 2&quot; and &quot;End Time 2&quot;.</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Für Programme mit nur einer Sitzung pro Tag können Sie Ihre Betriebszeiten als „Startzeit 1“ und „Endzeit 1“ eingeben. Bei Programmen mit mehreren Sitzungen können Sie zwei Zeitrahmen für jeden Zeitplan eingeben. Wenn Sie beispielsweise ein Vormittagsprogramm und ein Nachmittagsprogramm betreiben, können Sie die Start- und Endzeit für die Vormittagssitzung in „Startzeit 1“ und „Endzeit 1“ und die Start- und Endzeit für die Nachmittagssitzung als eingeben „Startzeit 2“ und „Endzeit 2“.</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">Para los programas que operan solo una sesión por día, puede ingresar sus horas de operación como &quot;Hora de inicio 1&quot; y &quot;Hora de finalización 1&quot;. Para los programas que operan en múltiples sesiones, puede ingresar dos períodos de tiempo para cada horario. Por ejemplo, si opera un programa de la mañana y un programa de la tarde, puede ingresar la hora de inicio y finalización de la sesión de la mañana en &quot;Hora de inicio 1&quot; y &quot;Hora de finalización 1&quot;, y la hora de inicio y finalización de la sesión de la tarde como &quot;Hora de inicio 2&quot; y &quot;Hora de finalización 2&quot;.</value>
+    </values>
+</CustomMetadata>

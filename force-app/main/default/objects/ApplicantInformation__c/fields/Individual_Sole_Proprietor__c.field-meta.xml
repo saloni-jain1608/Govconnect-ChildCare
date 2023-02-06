@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Individual_Sole_Proprietor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>A general partnership (sometimes simply referred to as a “partnership”) is an association of two or more persons to carry on, as co-owners, a business for profit. Each partner contributes money, property and/or services in return for an interest</inlineHelpText>
+    <label>Individual/Sole Proprietor</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

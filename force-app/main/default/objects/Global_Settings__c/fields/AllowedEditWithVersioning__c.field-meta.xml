@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllowedEditWithVersioning__c</fullName>
+    <description>Used in conjunction with the PT Trigger to determine field value changes that are allowed, but do not result in a version snapshot being created, when an external user edits a field in this list.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comma separated list of field API names.</inlineHelpText>
+    <label>AllowedEditWithVersioning</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

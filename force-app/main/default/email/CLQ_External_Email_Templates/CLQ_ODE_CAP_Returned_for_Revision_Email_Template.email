@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2"><font style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space: pre-wrap;">The Corrective Action Plan (CAP) submitted in response to the {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} inspection has been reviewed. The CAP has been evaluated as incomplete and returned for revisions. 
+</span></font><font style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space: pre-wrap;">
+To review comments and make revisions to the CAP login to OCLQS at &lt;OCLQS external website&gt;. Submit the revised CAP within five business days.
+
+</span></font><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;">The Ohio Child Licensing and Quality System Team.</span><font face="arial"><span style="font-size: 12pt; white-space: pre-wrap;">
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span></font></span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><br></span></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">ref: {!CLQ_Program_Transaction__c.Id</span><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">}</span></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

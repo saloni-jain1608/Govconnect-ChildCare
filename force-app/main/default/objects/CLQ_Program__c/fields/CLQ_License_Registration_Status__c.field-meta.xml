@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_License_Registration_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>License Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exempt</fullName>
+                <default>false</default>
+                <label>Exempt</label>
+            </value>
+            <value>
+                <fullName>Licensed</fullName>
+                <default>false</default>
+                <label>Licensed</label>
+            </value>
+            <value>
+                <fullName>Not Licensed</fullName>
+                <default>false</default>
+                <label>Not Licensed</label>
+            </value>
+            <value>
+                <fullName>Licensed/Certified</fullName>
+                <default>false</default>
+                <label>Licensed/Certified</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

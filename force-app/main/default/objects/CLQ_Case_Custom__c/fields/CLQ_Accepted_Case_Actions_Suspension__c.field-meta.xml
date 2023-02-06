@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Accepted_Case_Actions_Suspension__c</fullName>
+    <externalId>false</externalId>
+    <label>#Accepted_Case_Actions_Suspension</label>
+    <summaryFilterItems>
+        <field>CLQ_Case_Action_Details__c.CLQ_Actions__c</field>
+        <operation>equals</operation>
+        <value>Recommendation Accepted</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CLQ_Case_Action_Details__c.CLQ_Case_Custom__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

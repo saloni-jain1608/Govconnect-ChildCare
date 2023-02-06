@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Integration_Document__c</fullName>
+    <description>Field to display document contents from ONBASE Server</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK( &quot;javascript:window.open(&apos;&quot;+Id+&quot;&apos;,&apos;Documents&apos;,&apos;menubar=0,resizable=1,directories=0,titlebar=0,toolbar=0,location=0,status=0,scrollbars=1,fullscreen=0,top=0,left=0&apos;);&quot; , IMAGE(&quot;/img/icon/documents16.png&quot;,&quot;View Document&quot;)&amp;&quot;&quot;&amp;&quot;View Document&quot;,&quot;_self&quot;)</formula>
+    <label>Document</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

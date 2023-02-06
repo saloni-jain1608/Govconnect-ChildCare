@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_FCC_TypeA_Program_Approved_Capacity</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+CLQ_Program_Record_Type__c = &apos;FCC - Type A Home&apos; &amp;&amp; 
+OR( 
+OR(CLQ_Approved_Capacity_Under_2__c &lt; 0,CLQ_Approved_Capacity_Under_2__c &gt; CLQ_Approved_Total_Capacity__c, 
+AND(CLQ_Approved_Capacity_Under_2__c !=0, NOT(ISBLANK(CLQ_Approved_Capacity_Under_2__c)), ISBLANK(CLQ_Approved_Total_Capacity__c))), 
+AND(CONTAINS(RecordType.Name , &apos;Change of Capacity&apos;), OR(CLQ_New_Approved_Under_2_Capacity__c &lt; 0, 
+CLQ_New_Approved_Under_2_Capacity__c &gt; CLQ_New_Approved_All_Groups_Capacity__c, 
+AND (CLQ_New_Approved_Under_2_Capacity__c !=0, NOT(ISBLANK(CLQ_New_Approved_Under_2_Capacity__c)), 
+ISBLANK(CLQ_New_Approved_All_Groups_Capacity__c)))))</errorConditionFormula>
+    <errorMessage>Approved Capacity Under 2 cannot be negative or greater than Approved Total Capacity for Type A Program</errorMessage>
+</ValidationRule>

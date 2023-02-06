@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_LicenseStartDt_ProvisionalExpDt</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name = &apos;Continuous License&apos;,  ISPICKVAL( CLQ_Recommendation__c , &apos;Approve&apos;) , NOT( ISBLANK(CLQ_Provisional_License_Expiration_Date__c) )  ,CLQ_License_Start_Date__c &lt;= CLQ_Provisional_License_Expiration_Date__c  )</errorConditionFormula>
+    <errorDisplayField>CLQ_License_Start_Date__c</errorDisplayField>
+    <errorMessage>Continuous License Cannot begin before the Provisional License Expiry Date.</errorMessage>
+</ValidationRule>

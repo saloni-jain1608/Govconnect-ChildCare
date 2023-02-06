@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Answer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Answers</value>
+    </caseValues>
+    <layouts>
+        <layout>Answer Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>ApprovalRestrictRelatedList</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Rating_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>checkNumericalForProgramNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>noHighProgramRestriction</name>
+    </validationRules>
+</CustomObjectTranslation>

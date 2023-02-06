@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_ACA_Certified_Requires_Day_Camp_Name</fullName>
+    <active>false</active>
+    <description>Name of day camp on ACA required if - Is the Day Camp ACA Certified= Yes</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(  ISPICKVAL(CLQ_Is_the_Day_Camp_ACA_Certified__c , &apos;Yes&apos;),  ISBLANK( CLQ_Name_of_Day_Camp_on_ACA_Certificate__c ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Name_of_Day_Camp_on_ACA_Certificate__c</errorDisplayField>
+    <errorMessage>Name of Day Camp on ACA Certificate is Required</errorMessage>
+</ValidationRule>

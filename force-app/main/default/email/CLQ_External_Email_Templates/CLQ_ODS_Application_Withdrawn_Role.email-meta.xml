@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE Application Withdrawn-Role - DO NOT USE</name>
+    <style>formalLetter</style>
+    <subject>{!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c} Submitted for {!CLQ_Role__c.CLQ_Program_name_Formula__c} ,  Program Number: {!CLQ_Role__c.CLQ_Program_Number_Formula__c} Closed by Request</subject>
+    <textOnly>ODE has closed the submitted {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c}for {!CLQ_Role__c.CLQ_Program_name_Formula__c}, Program Number: {!CLQ_Role__c.CLQ_Program_Number_Formula__c} at the request of the provider.
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

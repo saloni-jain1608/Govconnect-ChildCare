@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Funding_Source</fullName>
+    <active>true</active>
+    <description>Other Funding Source required if  Other is selected</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL( CLQ_Funding_Source_Picklist__c, &apos;Other&apos;), ISBLANK( CLQ_Other_Funding_Source__c )  )</errorConditionFormula>
+    <errorDisplayField>CLQ_Other_Funding_Source__c</errorDisplayField>
+    <errorMessage>Other Funding Source is Required if Funding Source is &quot;Other&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Registration_Not_Allowed</fullName>
+    <active>false</active>
+    <description>If the program has already rating associated with it, we shouldn&apos;t allow to create initial registration.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(!CLQ_Program__r.Initial_Registration_Not_Allowed__c,RecordType.Name == &apos;SUTQ - Initial Registration&apos;, OR(
+ ISPICKVAL(CLQ_Program__r.Program_Rating__c ,&apos;1&apos;),ISPICKVAL(CLQ_Program__r.Program_Rating__c ,&apos;2&apos;),ISPICKVAL(CLQ_Program__r.Program_Rating__c ,&apos;3&apos;),ISPICKVAL(CLQ_Program__r.Program_Rating__c ,&apos;4&apos;),ISPICKVAL(CLQ_Program__r.Program_Rating__c ,&apos;5&apos;)))</errorConditionFormula>
+    <errorMessage>Your program may not begin an Initial Registration because your program is currently rated.</errorMessage>
+</ValidationRule>

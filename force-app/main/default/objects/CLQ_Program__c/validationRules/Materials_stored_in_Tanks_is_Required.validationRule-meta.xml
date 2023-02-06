@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Materials_stored_in_Tanks_is_Required</fullName>
+    <active>false</active>
+    <description>Materials stored in Tanks is Required if Storage of Hazardous/Toxic is true</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL( CLQ_Storage_of_Hazardous_Toxic_Material__c ,&quot;Yes&quot;),
+ISBLANK( CLQ_Materials_stored_in_Tanks__c ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Materials_stored_in_Tanks__c</errorDisplayField>
+    <errorMessage>Please enter Materials stored in Tanks</errorMessage>
+</ValidationRule>

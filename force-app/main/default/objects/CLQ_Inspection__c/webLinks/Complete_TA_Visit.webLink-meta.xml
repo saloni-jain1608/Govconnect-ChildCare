@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_TA_Visit</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Complete TA Visit</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+
+var newInsp = new sforce.SObject(&quot;CLQ_Inspection__c&quot;); 
+newInsp.Id = &apos;{!CLQ_Inspection__c.Id}&apos;;
+var proname=&apos;{!$Profile.Name}&apos;; 
+var rolename = &apos;{!$UserRole.Name}&apos;; //alert(&apos;User Role: &apos; +rolename);
+var InspQry = sforce.connection.query(&quot;SELECT Id, Name, OwnerId, Owner.Type, CLQ_Visit_Status__c, CLQ_Inspection_Status__c, CLQ_Inspection_Owner__r.Manager.IsActive, CLQ_Inspection_Type__c,CLQ_Program_Transaction__r.CLQ_Transaction_Assigned_To__c, CLQ_Program__r.CLQ_Licensing_Specialist__c, CLQ_Inspection__c.CLQ_Program_Transaction__c FROM CLQ_Inspection__c WHERE Id =&apos;{!CLQ_Inspection__c.Id}&apos;&quot;); 
+var InspectionRecs = InspQry.getArray(&apos;records&apos;); 
+var InspOwnerId = &apos;{!CLQ_Inspection__c.OwnerId}&apos;;
+var InspectorsQry = sforce.connection.query(&quot;SELECT Id, Name, CLQ_Inspector_Name__c FROM CLQ_Inspector__c WHERE CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+var Inspectors = InspectorsQry.getArray(&apos;records&apos;); //alert(&apos;Inspectors: &apos; +Inspectors) 
+var InspectorIds = [];
+if(Inspectors != null){
+	for(var i=0; i&lt;Inspectors.length; i++){
+		InspectorIds.push(Inspectors[i].CLQ_Inspector_Name__c);
+	}
+	InspectorIds = InspectorIds.toString().replace(/,/g , &quot;,&quot;);
+	//alert(&apos;InspectorIds: &apos; +InspectorIds);
+}
+var ProgCounty = &apos;{!CLQ_Inspection__c.CLQ_County__c}&apos;;
+var InspectionRT = &apos;{!CLQ_Inspection__c.Inspection_Record_Type__c}&apos;;
+var sfdcAdminProfiles = &apos;{!$Label.SFDC_Admin_Profiles}&apos;;
+var NACOCcounties = &apos;{!$Label.JFS_NACOC_Counties}&apos;;
+var SCcounties = &apos;{!$Label.JFS_SouthCentral_Counties}&apos;;
+var CanSubmitForApproval = false;
+var ErrMsg = &apos;Error - Cannot submit for approvals.&apos;;
+
+var strCombinedCounties = &apos;&apos;;
+var ptCountyUC = ProgCounty.toUpperCase();
+if(rolename != null &amp;&amp; rolename.toLowerCase().indexOf(&apos;county&apos;)&gt;=0){
+	var usrCounty = rolename.substring(0, rolename.toLowerCase().indexOf(&apos;county&apos;)).trim().toUpperCase();
+	var combinedCountyRec = sforce.connection.query(&quot;Select CLQ_Combined_Counties__c from CLQ_Combined_Counties__mdt where DeveloperName = &apos;&quot;+usrCounty+&quot;&apos; and CLQ_Process_Combined_County__c = true&quot;);
+	var records = combinedCountyRec.getArray(&quot;records&quot;);
+
+	if(records.length&gt;0){
+		strCombinedCounties = records[0].CLQ_Combined_Counties__c;
+	}
+}
+if(&apos;{!CLQ_Inspection__c.CLQ_Inspection_Owner__c}&apos; == &apos;&apos; || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Owner__c}&apos; == null)
+	ErrMsg = &apos;Inspection Owner is not assigned - Cannot submit for approvals.&apos;;
+else if({!ISBLANK(CLQ_Inspection__c.CLQ_Owner_Manager__c)} || InspectionRecs[0].CLQ_Inspection_Owner__r.Manager.IsActive == &apos;false&apos; ) 
+	ErrMsg = &apos;User Manager is Missing or Inactive. Please update and submit for approvals.&apos;; 
+else if(InspectionRT == &apos;Inspection&apos; &amp;&amp; (&apos;{!CLQ_Inspection__c.CLQ_Visit_Status__c}&apos; != &apos;Visit Completed&apos; || (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Pending Processing&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Returned to Reviewer&apos;) || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; != &apos;Technical Assistance&apos;)) 
+{ 
+	ErrMsg = &apos;Check the following Entry Criteria before approving :\r\n 1.Visit Status should be Visit Completed \r\n 2.Inspection Status should be Pending Processing or Returned to Reviewer\r\n 3.Inspection Type should be Technical Assistance&apos;; 
+}
+else if(sfdcAdminProfiles.indexOf(proname) != -1)
+	CanSubmitForApproval = true;
+else if(rolename == &apos;&apos; || rolename ==  null)
+	ErrMsg = &apos;You do not have a Role - Cannot submit for approvals. Please contact OCLQS Help Desk.&apos;;
+else if((strCombinedCounties.length == 0 || strCombinedCounties.indexOf(ptCountyUC)&lt;0) &amp;&amp; {!NOT(ISNULL($UserRole.Name))} &amp;&amp; {!CONTAINS(LOWER($UserRole.Name) , &apos;county&apos;)} &amp;&amp; {!NOT(CONTAINS(LOWER($UserRole.Name), LOWER( CLQ_Inspection__c.CLQ_County__c)))} &amp;&amp; {!CONTAINS($Label.JFS_County_Program_Record_Type , CLQ_Inspection__c.CLQ_Program_Record_Type__c )}){ 
+	ErrMsg = &apos;{!$Label.Approval_Submit_Error_Message}&apos;;
+}
+else if( InspectionRT == &apos;Inspection&apos; &amp;&amp; (&quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;Child Care Center&quot;)){
+	
+	var rolenameUC = rolename.toUpperCase(); 
+	var usrCounty = &apos;&apos;; 
+	if(rolenameUC.indexOf(&apos;COUNTY&apos;) &gt;=0){ 
+		usrCounty = rolenameUC.substring(0, rolenameUC.indexOf(&apos;COUNTY&apos;)).trim(); 
+	} 
+
+	if(rolename == &apos;JFS State Admin&apos; || rolename == &apos;JFS Supervisor&apos; || ((rolename == &apos;JFS Specialist&apos; || 
+	(usrCounty != &apos;&apos; &amp;&amp; (&apos;{!$Label.SUTQ_AKRON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_CLEVELAND_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_COLUMBUS_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_DAYTON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_TOLEDO_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0))) &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1)))
+		CanSubmitForApproval = true;
+	else
+		ErrMsg = &apos;You do not have a &quot;JFS State Admin/Supervisor Role&quot; or You are not an Inspector for this Inspection - Cannot submit for approvals.&apos;;
+}
+
+if(CanSubmitForApproval)
+{
+   newInsp.CLQ_Inspection_Status__c = &apos;Approved&apos;;
+   var result = sforce.connection.update([newInsp]);
+   window.location.reload(); 
+}else{
+alert(ErrMsg);
+}</url>
+</WebLink>

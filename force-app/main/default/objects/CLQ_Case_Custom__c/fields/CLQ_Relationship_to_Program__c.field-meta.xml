@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Relationship_to_Program__c</fullName>
+    <description>Relationship of the reporter to the alleged program.</description>
+    <externalId>false</externalId>
+    <label>Relationship to the Alleged Operator</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Parent</fullName>
+                <default>false</default>
+                <label>Parent</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>County Agency</fullName>
+                <default>false</default>
+                <label>County Agency</label>
+            </value>
+            <value>
+                <fullName>PCSA</fullName>
+                <default>false</default>
+                <label>PCSA</label>
+            </value>
+            <value>
+                <fullName>Former Staff</fullName>
+                <default>false</default>
+                <label>Former Staff</label>
+            </value>
+            <value>
+                <fullName>Former Parent</fullName>
+                <default>false</default>
+                <label>Former Parent</label>
+            </value>
+            <value>
+                <fullName>Anonymous</fullName>
+                <default>false</default>
+                <label>Anonymous</label>
+            </value>
+            <value>
+                <fullName>Neighbor</fullName>
+                <default>false</default>
+                <label>Neighbor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

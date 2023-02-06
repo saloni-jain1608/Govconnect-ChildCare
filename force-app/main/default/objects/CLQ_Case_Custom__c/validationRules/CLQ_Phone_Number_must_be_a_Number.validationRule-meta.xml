@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Phone_Number_must_be_a_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR(
+AND(
+OR(RecordType.Name = &apos;Alleged Ops&apos;,
+RecordType.Name =&apos;Alleged Ops Submitted&apos;, 
+RecordType.Name =&apos;Alleged Ops Completed&apos;),
+OR(
+AND(NOT(ISBLANK(CLQ_Alleged_Operator_Phone__c )),OR(NOT(ISNUMBER(CLQ_Alleged_Operator_Phone__c)), NOT(REGEX(CLQ_Alleged_Operator_Phone__c ,&quot;\\D*?(\\d\\D*?){10}&quot;)))), 
+AND(NOT(ISBLANK(CLQ_Complainant_Phone__c)),OR(NOT(ISNUMBER(CLQ_Complainant_Phone__c)),NOT(REGEX(CLQ_Complainant_Phone__c,&quot;\\D*?(\\d\\D*?){10}&quot;)))),
+AND(NOT(ISBLANK(CLQ_Referral_Phone__c)),OR(NOT(ISNUMBER(CLQ_Referral_Phone__c)),NOT(REGEX(CLQ_Referral_Phone__c,&quot;\\D*?(\\d\\D*?){10}&quot;))))
+)), 
+AND( 
+OR(RecordType.Name = &apos;Complaint&apos;, 
+RecordType.Name =&apos;Complaint Submitted&apos;), 
+OR( 
+AND(NOT(ISBLANK(CLQ_Complainant_Phone__c)),OR(NOT(ISNUMBER(CLQ_Complainant_Phone__c)),NOT(REGEX(CLQ_Complainant_Phone__c,&quot;\\D*?(\\d\\D*?){10}&quot;)))), 
+AND(NOT(ISBLANK(CLQ_Referral_Phone__c)),OR(NOT(ISNUMBER(CLQ_Referral_Phone__c)),NOT(REGEX(CLQ_Referral_Phone__c,&quot;\\D*?(\\d\\D*?){10}&quot;)))) 
+))
+)</errorConditionFormula>
+    <errorMessage>Phone Number must be only 10 digits and contain only Numbers</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+.THIS .title-container .main-title h1 {
+    padding-left: 10px;
+    font-size: 3.05rem;
+    line-height: 1.17;
+    color: white;
+}
+
+.THIS .title-container .sub-title {
+    padding: 0 2rem 1.5rem;
+    font-size: 1.5625rem;
+    color: white;
+}
+
+.THIS .title-container .btn-wrapper button {
+    width: 135px;
+    height: 50px;
+    margin: 0 1rem;
+    padding: 0;
+    color: white;
+    border-radius: 4px;
+    /*background-color: token(ISDLPLoginBtn);*/
+    background-color: #0070d2; /*Niranjan [02/13/2019] Defect 31969 Fix MTS */
+    border: solid 2px white;
+    box-sizing: border-box;
+}
+
+.THIS .landing-section{
+    background-color: blue;
+}

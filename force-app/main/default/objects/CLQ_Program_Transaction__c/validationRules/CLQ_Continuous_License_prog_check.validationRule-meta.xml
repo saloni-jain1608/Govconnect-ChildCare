@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Continuous_License_prog_check</fullName>
+    <active>true</active>
+    <description>Continuous License - should not be allowed to submit a continuous license transaction for a program that is already in continuous status</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ISPICKVAL(CLQ_Program__r.CLQ_License_Type__c, &apos;Continuous&apos;) &amp;&amp;  
+RecordType.Name = &apos;Continuous License&apos;  &amp;&amp;
+ (CONTAINS(CLQ_Program__r.RecordType.Name, &apos;FCC&apos;) ||
+  CLQ_Program__r.RecordType.Name = &apos;Child Care Center&apos; ||
+  CONTAINS(CLQ_Program__r.RecordType.Name, &apos;School&apos;))</errorConditionFormula>
+    <errorMessage>You cannot create a continuous license transaction for a program that is already in continuous status</errorMessage>
+</ValidationRule>

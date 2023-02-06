@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Day Camp Audit Email</name>
+    <style>formalLetter</style>
+    <subject>Day Camp {!CLQ_Inspection__c.Name} - {!CLQ_Inspection__c.CLQ_Program__c} BCII Background Check Monitoring Review Notification</subject>
+    <textOnly>The above-referenced camp has been randomly selected for a monitoring review to verify that you have requested criminal records checks for all of your employees.
+
+Ohio law requires child day camps to request new criminal records checks from the Ohio Bureau of Criminal Identification and Investigation (BCII) for all employees or non-employees who are responsible for children, including those younger than 18, prior to employment. Ohio Revised Code (ORC) section 2151.861 designates the Ohio Department of Job and Family Services (ODJFS) with the responsibility for monitoring compliance with this requirement.
+
+Use the links below to access and download the required forms.
+
+Please send the following documentation to ODJFS no later than {!CLQ_Inspection__c.CLQ_Notification_Due_Date__c}:
+
+•	The JFS 01362 Child Day Camp - Roster for BCII Records Checks listing all employees and others for whom a BCII criminal records check has been requested or received.
+•	The JFS 01271 Verification of Five Years of Ohio Residency for Registered Child Day Camps that verifies at least 5-years of Ohio residency.
+•	A completed BCII background check report from BCII or a dated receipt from WebCheck indicating that the background check has been received by BCII. This report is confidential, but must be made available to ODJFS.
+•	A record that the camp has informed each applicant that the criminal records check is required to be completed.
+
+You must present documentation for each employee, or non-employee who is responsible for the care of children, listed on your roster. Send this information to:
+
+ODJFS.
+Attn: BCCLM Program Administrator
+PO Box 183204
+Columbus, OH 43218-3204
+If you have any questions about this process, please call the Office of Family Assistance Child Care Helpdesk at 1-877-302-2347, option 4.
+
+The Ohio Child Licensing and Quality System Team.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

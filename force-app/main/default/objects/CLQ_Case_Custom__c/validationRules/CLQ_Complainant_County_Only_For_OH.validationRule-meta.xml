@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Complainant_County_Only_For_OH</fullName>
+    <active>false</active>
+    <description>if a state other than ohio is picked, then county cannot be populated.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; !ispickval( CLQ_State_Complainant__c ,&quot;OH&quot;) &amp;&amp;   CLQ_County_Complainant__c != null</errorConditionFormula>
+    <errorDisplayField>CLQ_County_Complainant__c</errorDisplayField>
+    <errorMessage>County cannot be populated if the state is not Ohio</errorMessage>
+</ValidationRule>

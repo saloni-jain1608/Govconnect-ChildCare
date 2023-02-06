@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If one or more CAPs have been returned for revisions, the system will generate and send a notification to the provider and the assigned internal user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>JFS CAP Returned for Revision Email Template</name>
+    <style>formalLetter</style>
+    <subject>{!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c} Corrective Action Plan Returned for Revisions</subject>
+    <textOnly>The Corrective Action Plan (CAP) submitted in response to the {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} inspection has been reviewed. The CAP has been evaluated as incomplete and returned for revisions. To review comments and make revisions to the CAP login to OCLQS at &lt;OCLQS external website&gt;. Submit the revised CAP within five business days. Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. The Ohio Child Licensing and Quality System Team. This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

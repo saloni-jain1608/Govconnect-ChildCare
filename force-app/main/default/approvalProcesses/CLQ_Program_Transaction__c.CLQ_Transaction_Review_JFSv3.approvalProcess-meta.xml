@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>RecordType</field>
+        <field>CLQ_Program__c</field>
+        <field>CLQ_Transaction_Assigned_To__c</field>
+        <field>CLQ_Submission_Date__c</field>
+        <field>CLQ_Submitter__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>CLQ_Update_Queue_Name</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Closure / Continuous Approvals</description>
+        <label>Approval Step 1</label>
+        <name>County_Approver</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>CLQ_FCC_App_Unit</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Closure / Continuous Approvals - FCC AppUnit</description>
+        <entryCriteria>
+            <formula>(CLQ_Program__r.RecordType.Name = &quot;FCC - Type B Home&quot; ||
+CLQ_Program__r.RecordType.Name = &quot;FCC - Type A Home&quot;)
+
+&amp;&amp;
+(RecordType.Name = &quot;Amendment - FCC - Change of Location&quot; || RecordType.Name = &quot;Licensing - Closure&quot; ||
+RecordType.Name = &quot;Continuous License&quot; )</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Approval Step 2</label>
+        <name>State_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>CLQ_Application_Unit_2</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Closure / Continuous Approvals - AppUnit 2</description>
+        <entryCriteria>
+            <formula>(CLQ_Program__r.RecordType.Name = &quot;FCC - Type B Home&quot; || 
+CLQ_Program__r.RecordType.Name = &quot;FCC - Type A Home&quot;) 
+
+&amp;&amp; 
+(RecordType.Name = &quot;Amendment - Change of Administrator&quot; || RecordType.Name = &quot;Amendment - Change of Capacity / Space	&quot; )</formula>
+        </entryCriteria>
+        <label>Approval Step 3</label>
+        <name>State_Approval_Application_Unit_2</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Applicable to FCC, DayCamp, OOS and IHA. This process will allow a licensor to send a transaction to his/her manager for review and approval 
+- Continuous License
+- License Closure
+- Registration Closure</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>(ISPICKVAL(CLQ_Transaction_Status__c , &quot;Under Reviewer Review&quot;) || 
+
+ISPICKVAL(CLQ_Transaction_Status__c , &quot;Returned to Reviewer&quot;)) &amp;&amp; ((RecordType.Name = &quot;Update FCC Resident Information&quot;) || 
+
+( (CONTAINS(CLQ_Program__r.RecordType.Name, &quot;FCC&quot;) || CONTAINS(CLQ_Program__r.RecordType.Name, &quot;In-Home Aide&quot;)) &amp;&amp; RecordType.Name = &quot;Licensing - Closure&quot;) ||
+
+((CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Day Camp&quot;) || CONTAINS(CLQ_Program__r.RecordType.Name, &quot;Out of State Registration&quot;) || CONTAINS(CLQ_Program__r.RecordType.Name, &quot;In-Home Aide&quot;) ) &amp;&amp; RecordType.Name = &quot;Registration Closure&quot;) || 
+
+( CONTAINS(CLQ_Program__r.RecordType.Name, &quot;FCC&quot;) &amp;&amp; RecordType.Name = &quot;Continuous License&quot;))&amp;&amp; 
+
+(ISPICKVAL(CLQ_Recommendation__c,&quot;Approve&quot;) || ISPICKVAL(CLQ_Recommendation__c,&quot;Deny&quot;) || ISPICKVAL(CLQ_Recommendation__c,&quot;Withdraw&quot;)) &amp;&amp; 
+
+CLQ_Start_Approval__c = true</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CLQ_Set_Approved_by_Manager_to_True</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Transaction_Approved</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_Check</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Change_Status_to_Returned_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Flag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Transaction_Rejected</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CLQ_Change_Transaction_Status_to_ARP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Reset_Approved_by_Manager_Flag</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Update_Manager_s_Email_Address</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Transaction Review JFS v3</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>11</processOrder>
+    <recallActions>
+        <action>
+            <name>CLQ_UnFlag_Rejected_By_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Unflag_Start_Approval_Recall</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Recall_Status_Returned_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

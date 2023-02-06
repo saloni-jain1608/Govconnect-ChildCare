@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approval_Date_cant_be_in_the_Future</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Approval_Date__c &gt;   TODAY()</errorConditionFormula>
+    <errorDisplayField>CLQ_Approval_Date__c</errorDisplayField>
+    <errorMessage>Approval Date cannot be in the Future</errorMessage>
+</ValidationRule>

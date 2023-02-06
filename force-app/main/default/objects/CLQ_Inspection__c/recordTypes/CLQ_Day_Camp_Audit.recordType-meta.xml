@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Day_Camp_Audit</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>VDSS_Inspection_Compact_Layout</compactLayoutAssignment>
+    <description>Day Camp Audit for Day Camp Registration</description>
+    <label>Day Camp Audit</label>
+    <picklistValues>
+        <picklist>CLQ_Age_Groups_Served_Global__c</picklist>
+        <values>
+            <fullName>Infant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Older Toddler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-school</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School-Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Toddler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_All_Child_Files_In_Compliance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Attendance_Options_Global__c</picklist>
+        <values>
+            <fullName>Drop In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial Week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekends</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_DeferralDuration__c</picklist>
+        <values>
+            <fullName>10 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 Days</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Email_Full_Inspection_Report__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Email_Summay_Report__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Food_Service__c</picklist>
+        <values>
+            <fullName>Food Service License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Service License Exemption</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Full_Part_Time_Options_Global__c</picklist>
+        <values>
+            <fullName>Full Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part Time</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Inspection_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deleted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to Reviewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Approver Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Inspection_Type__c</picklist>
+        <values>
+            <fullName>Amendment - change of capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment - change of location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incident %2F Injury %2F Illness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-license</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provisional</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Is_Follow_Up_Inspection_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Method__c</picklist>
+        <values>
+            <fullName>On-site Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Notice__c</picklist>
+        <values>
+            <fullName>Announced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unannounced</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_On_Site_Representative_Present__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Onsite_Rating_Reasons__c</picklist>
+        <values>
+            <fullName>Change of Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change of Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet requirements of the Administrative Practices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet requirements of the Family and Community Partnership domain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet requirements of the Learning and Development domain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet requirements of the Staff Qualifications and Professional Development domain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCC change of provider type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent to Revoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rating Reduced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rating Removed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntarily Discontinue Participation in SUTQ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Provider_Agreement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Scope__c</picklist>
+        <values>
+            <fullName>Focused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Send_Report_To__c</picklist>
+        <values>
+            <fullName>CDC Web</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>CDCWeb %26 Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Services_Offered_Day_Camp__c</picklist>
+        <values>
+            <fullName>Evening Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Trips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meals Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overnight Camping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialized Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swimming%2FWater Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Services_Offered_Global__c</picklist>
+        <values>
+            <fullName>After School Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Before School Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evening Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meals Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swimming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Site_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Construction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type__c</picklist>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type_of_Audit__c</picklist>
+        <values>
+            <fullName>Desk Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Visit_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be Scheduled</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Visit Completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inspection_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resubmitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return for Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Deleted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdraw</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onsite_Rating__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

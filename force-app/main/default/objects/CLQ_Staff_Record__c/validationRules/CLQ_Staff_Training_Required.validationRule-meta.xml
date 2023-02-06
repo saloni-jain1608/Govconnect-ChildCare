@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Staff_Training_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( CLQ_Used_In_Ratio__c = true, ISBLANK(  (CLQ_Staff_Orientation_Training_Completed__c )))</errorConditionFormula>
+    <errorMessage>Staff Orientation Training Completed is required when Used in Ratio is checked</errorMessage>
+</ValidationRule>

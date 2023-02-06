@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Alleged_Ops</fullName>
+    <active>true</active>
+    <description>Use this record type when reporting against an unlicensed operation</description>
+    <label>Alleged Ops</label>
+    <picklistValues>
+        <picklist>CLQ_Action_Taken__c</picklist>
+        <values>
+            <fullName>Emergency Services %28police%2Ffire%2Fambulance%29 911 Called</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Services Transported Child or Child Transported to the Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Health Department Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent followed up with Medical%2FDental Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poison Control Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Recommended Medical%2FDental Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Children Services Agency Contacted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Activity_Status__c</picklist>
+        <values>
+            <fullName>AO Mailed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Activity_Type__c</picklist>
+        <values>
+            <fullName>Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Age_of_Children_Involved__c</picklist>
+        <values>
+            <fullName>Pre-School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toddler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Age_of_Children_Present_at_the_Incid__c</picklist>
+        <values>
+            <fullName>Infant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toddler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Agency_Referral_Type__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCSA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Alleged_Operator_State__c</picklist>
+        <values>
+            <fullName>AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Caretaker_Letter_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Authorizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Disposition__c</picklist>
+        <values>
+            <fullName>Agreed to Cease Operation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Created in Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensed Type B Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lowered Number of Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Probable Cause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Now Licensed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating Within Legal Limits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Enforcement_Action__c</picklist>
+        <values>
+            <fullName>AO Appeal with Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Appeal without a Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Issued Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Mailed via Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO Received by Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caretaker Letter Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cease and Desist Letter Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Case Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Case Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Occurred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Issued Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Mailed Certificate of Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Received by Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Recommended by County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Recommended by State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Lifted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Recommended by County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Recommended by State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Closure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Enforcement_Type__c</picklist>
+        <values>
+            <fullName>Denial of Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revocation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Hearing_Requested__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Investigation_Outcome__c</picklist>
+        <values>
+            <fullName>Agreed to Cease Operation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Created in Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforcement Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensed Type B Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lowered Number of Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Probable Cause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Now Licensed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating Within Legal Limits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Method_of_Investigation__c</picklist>
+        <values>
+            <fullName>On-site Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_OLAS_Attorney_Assigned__c</picklist>
+        <values>
+            <fullName>Bob Welsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denise Pleska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harvey Sukienik</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Outcome_Reason_Code__c</picklist>
+        <values>
+            <fullName>PAO Withdrawn - County</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO Withdrawn - State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Closure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Reason_for_Closure__c</picklist>
+        <values>
+            <fullName>CDJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Created in Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODJFS Withdrawal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voluntary Closure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Reason_for_No_Investigation__c</picklist>
+        <values>
+            <fullName>License closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No 6 point serious risk violation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No alleged licensing rule violations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Reason_why_Suspension_Denied__c</picklist>
+        <values>
+            <fullName>Does not meet rule requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Evidence</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Relationship_to_Program__c</picklist>
+        <values>
+            <fullName>Anonymous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>County Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neighbor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Relationship_to_the_Program__c</picklist>
+        <values>
+            <fullName>Anonymous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>County Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neighbor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Rule_Citation_in_Suspension_Order__c</picklist>
+        <values>
+            <fullName>Charged with Abuse or Neglect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charged with Fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child died or suffered serious injury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCSA Abuse or Neglect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serious risk to health or safety</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_State_Complainant__c</picklist>
+        <values>
+            <fullName>AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return to Specialist%2FReviewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Substantiated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Times_To_Call_Back__c</picklist>
+        <values>
+            <fullName>12 pm to 2 pm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 pm to 5 pm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 am to 12 pm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>After 5 pm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type_of_Child_Incident__c</picklist>
+        <values>
+            <fullName>Abuse of child by any adult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Unattended On-site Outside Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death of a Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intruder Enters the Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural %2F Man-made Disaster</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type_of_Child_Injury_Illness__c</picklist>
+        <values>
+            <fullName>Allergic Reaction %2F Asthma Attack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blow or Bump to the Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broken %2F Disclosed Bone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collapse %2F Faint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deep Cut %2F Laceration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Pulse %2F Not Breathing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbreak of illness%28County Health Department reportable%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poisoning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sprain %2F Strain</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Visit_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be Scheduled</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Visit Completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Who_was_Involved_in_the_Incident__c</picklist>
+        <values>
+            <fullName>Entire Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entire Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One or more Individual Children</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

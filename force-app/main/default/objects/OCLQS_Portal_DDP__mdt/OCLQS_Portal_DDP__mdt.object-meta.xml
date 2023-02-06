@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Manage which DDP document / report is called for the portals</description>
+    <label>OCLQS Portal DDP</label>
+    <pluralLabel>OCLQS Portal DDP</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><table cellpadding="0" width="500" cellspacing="0" id="topTable" height="450" style="font-family: &quot;Times New Roman&quot;; background-color: rgb(204, 204, 204);"><tbody><tr valign="top"><td style="background-color: rgb(255, 255, 255); vertical-align: top; height: 100px;"></td></tr><tr valign="top"><td style="background-color: rgb(170, 170, 255); height: 5px;"></td></tr><tr valign="top"><td styleinsert="1" height="300" style="background-color: rgb(255, 255, 255); font-size: 12pt; font-family: arial;"><table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="50"><td teditid="c1r1" aeditid="c1r1" locked="0" style="font-size: 12pt;"></td></tr><tr valign="top" height="300"><td teditid="c1r2" aeditid="c1r2" locked="0" style="font-size: 12pt;"><span style="font-size: 12pt;"><span style="white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2">The inspection report completed on {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c}  for {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c</font></span></span><span style="font-family: Verdana, Helvetica, sans-serif; font-size: small; white-space: pre-wrap;">.</span><span style="font-size: 12pt;"><span style="white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2">CLQ_Program_Number__c}  identified one or more  areas of non-compliance that require a corrective action plan to be submitted.  Refer to the inspection report or the individual corrective action plan(s) to view the date by which your response is required to be submitted.
+<br></font></span></span><div><font face="Verdana, Helvetica, sans-serif" size="2"><div><br></div><font face="arial"><span style="font-size: 12pt; white-space: pre-wrap;">To submit a corrective action plan, log in to OCLQS at &lt;insert link&gt; and select the Corrective Action Plan tab under the Licensing section.
+
+If you have any questions, contact your Licensing Specialist.</span></font></font><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><span style="white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team.
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</font></span></div></div></td></tr></tbody></table></td></tr></tbody></table></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

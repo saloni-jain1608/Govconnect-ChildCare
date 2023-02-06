@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>An email is sent to the program notifying that their amendment has been submitted successfully</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE COL Request Submitted</name>
+    <style>formalLetter</style>
+    <subject>Change of Location Submitted for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}</subject>
+    <textOnly>A Change of Location amendment request was successfully submitted on {!CLQ_Program_Transaction__c.Submission_Date1__c}  {!CLQ_Role__c.CLQ_PT_Submission_Date__c} for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}. The requested change will not take effect until it has been approved. A representative will contact the program to schedule the Change of Location Inspection.
+
+Log on to OCLQS to view the details of this request.
+The Ohio Child Licensing and Quality System Team.  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

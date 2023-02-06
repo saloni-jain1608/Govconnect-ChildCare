@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_DriverTrainingCompleted_InCompliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Driver_Training_Completed__c, &apos;In Compliance&apos;),
+OR(
+INCLUDES(CLQ_Driver_Training_Completed__c, &apos;No Training&apos;),  INCLUDES(CLQ_Driver_Training_Completed__c, &apos;No Update&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Driver_Training_Completed__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Driver Training Completed</errorMessage>
+</ValidationRule>

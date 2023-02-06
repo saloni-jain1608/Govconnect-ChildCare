@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Medical_on_File_In_Compliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Medical_on_File__c, &apos;In Compliance&apos;), 
+OR( 
+INCLUDES(CLQ_Medical_on_File__c, &apos;ODE - Not available&apos;), INCLUDES(CLQ_Medical_on_File__c, &apos;ODE - Missing signature&apos;), 
+INCLUDES(CLQ_Medical_on_File__c, &apos;ODJFS - No Medical&apos;), 
+INCLUDES(CLQ_Medical_on_File__c, &apos;ODJFS - Medical Form Incomplete&apos;), INCLUDES(CLQ_Medical_on_File__c, &apos;ODJFS - Not within 12 months of hire&apos;), 
+INCLUDES(CLQ_Medical_on_File__c, &apos;ODJFS - Immunization Info Missing&apos;),
+INCLUDES(CLQ_Medical_on_File__c, &apos;ODJFS - Pending verification&apos;)
+) 
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Medical_on_File__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Medical on File.</errorMessage>
+</ValidationRule>

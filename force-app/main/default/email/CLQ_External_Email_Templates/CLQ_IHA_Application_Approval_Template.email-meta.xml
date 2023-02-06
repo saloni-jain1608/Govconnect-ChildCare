@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template if an application is successfully approved for certification as an In-Home Aide</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>IHA Application Approval Template</name>
+    <style>formalLetter</style>
+    <subject>Application Approved for In-Home Aide for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}</subject>
+    <textOnly>Your application for In-Home Aide certification has been approved by your County Agency. Your certificate is attached.
+
+Prior to providing publicly funded child care services, you must enter into an agreement with the Ohio Department of Job and Family Services (ODJFS) by completing the JFS 01144 ‘Provider Agreement for Publicly Funded Child Care Services,’ including the provider agreement, banking information and rate information. These three forms must be electronically submitted using the CCIDS Provider Portal prior to providing publicly funded child care services.
+
+Additional information about this process is available at www.jfs.ohio.gov/cdc/CCIDS.stm
+
+Please contact your County Agency with additional questions about your certification.
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team.
+
+Reference Id ref: {!CLQ_Program_Transaction__c.Id}
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Lookup_Filter</fullName>
+    <active>false</active>
+    <description>This Validation is created to include a check Inspection Lookup Filed on Case record</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR( RecordType.Name = &apos;Incident / Injury / Illness&apos;, RecordType.Name = &apos;Incident Injury Submitted&apos;, RecordType.Name = &apos;Complaint&apos;, RecordType.Name = &apos;Complaint Submitted&apos;) &amp;&amp;  ISCHANGED(CLQ_Inspection__c) &amp;&amp;  NOT(ISBLANK(PRIORVALUE(CLQ_Inspection__c))) &amp;&amp; NOT(ISBLANK(CLQ_Inspection__c))  &amp;&amp;  NOT(ISPICKVAL(CLQ_Inspection__r.CLQ_Visit_Status__c, &apos;Visit Completed&apos;))</errorConditionFormula>
+    <errorMessage>This is a test message</errorMessage>
+</ValidationRule>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Create_Follow_Up</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Follow Up</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+var url = parent.location.href; 
+
+var iItems = sforce.connection.query(&quot;select Id,CLQ_Inspection_No__c,CLQ_Rule__c, CLQ_Result__c from CLQ_Rules_Inspected__c where CLQ_Inspection_No__c = &apos;{!CLQ_Inspection__c.Id}&apos; AND CLQ_Result__c = &apos;Non-Compliant&apos;&quot;);
+var user = sforce.connection.getUserInfo().userId; 
+var username = sforce.connection.getUserInfo().userFullName; 
+var str = user; 
+str = str.substring(0, str.length - 3); 
+
+iiList = iItems.getArray(&quot;records&quot;); 
+
+if(iiList.length &gt; 0){ 
+var insp = new sforce.SObject(&quot;CLQ_Inspection__c&quot;); 
+insp.CLQ_Inspection_Type__c = &apos;Follow-up&apos;;
+insp.CLQ_Inspection_Owner__c = str;
+insp.CLQ_Visit_Status__c = &apos;To be Scheduled&apos;;
+insp.CLQ_Program__c = &apos;{!CLQ_Inspection__c.CLQ_ProgramId__c}&apos;;
+insp.CLQ_Original_Inspection__c=&apos;{!CLQ_Inspection__c.Id}&apos;;
+insp.CLQ_Scope__c =&apos;Full&apos;;
+insp.CLQ_Inspection_Status__c = &apos;Pending Processing&apos;;
+
+insp.CLQ_Street_Address_1_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_Street_Address_1_at_Site__c}&apos;; 
+insp.CLQ_Street_Address_2_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_Street_Address_2_at_Site__c}&apos;; 
+insp.CLQ_City_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_City_at_Site__c}&apos;; 
+insp.CLQ_County_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_County_at_Site__c}&apos;; 
+insp.CLQ_State_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_State_at_Site__c}&apos;; 
+insp.CLQ_Zip_Code_at_Site__c = &apos;{!CLQ_Inspection__c.CLQ_Zip_Code_at_Site__c}&apos;; 
+
+
+var result=sforce.connection.create([insp]); 
+
+if (result[0].getBoolean(&quot;success&quot;) == false ) 
+{ 
+alert(&quot;An error occurred creating a Follow up Visit.&quot;+result[0].get(&quot;errors&quot;)); 
+} 
+else{
+	window.location = &apos;/&apos;+result[0].id;
+ 
+}
+}
+else{ 
+alert(&quot;Cannot create a Follow-up as there are no &apos;Non-Compliant&apos; Rules for this Visit&quot;); 
+}</url>
+</WebLink>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Square_Footage_Irregular_Required</fullName>
+    <active>false</active>
+    <description>If Room/Space Shape - Irregular is selected in the picklist, then the &quot;Square Footage Irregular&quot; field should be required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(CLQ_Room_Space_Shape__c,&apos;Irregular&apos;), OR(CLQ_Square_Footage_Irregular__c=0, ISBLANK(CLQ_Square_Footage_Irregular__c) , ISNULL(CLQ_Square_Footage_Irregular__c) ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Square_Footage_Irregular__c</errorDisplayField>
+    <errorMessage>Square Footage Irregular cannot be zero or blank.</errorMessage>
+</ValidationRule>

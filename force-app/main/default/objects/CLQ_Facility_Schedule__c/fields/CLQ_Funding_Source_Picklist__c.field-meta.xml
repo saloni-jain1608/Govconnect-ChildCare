@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Funding_Source_Picklist__c</fullName>
+    <externalId>false</externalId>
+    <label>Funding Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tuition</fullName>
+                <default>false</default>
+                <label>Tuition</label>
+            </value>
+            <value>
+                <fullName>Locally Funded</fullName>
+                <default>false</default>
+                <label>Locally Funded</label>
+            </value>
+            <value>
+                <fullName>Preschool Special Education</fullName>
+                <default>false</default>
+                <label>Preschool Special Education</label>
+            </value>
+            <value>
+                <fullName>Board of Developmental Disabilities</fullName>
+                <default>false</default>
+                <label>Board of Developmental Disabilities</label>
+            </value>
+            <value>
+                <fullName>Early Childhood Education Grant</fullName>
+                <default>false</default>
+                <label>Early Childhood Education Grant</label>
+            </value>
+            <value>
+                <fullName>Head Start</fullName>
+                <default>false</default>
+                <label>Head Start</label>
+            </value>
+            <value>
+                <fullName>Publicly Funded Childcare</fullName>
+                <default>false</default>
+                <label>Publicly Funded Childcare</label>
+            </value>
+            <value>
+                <fullName>21st Century Grant</fullName>
+                <default>false</default>
+                <label>21st Century Grant</label>
+            </value>
+            <value>
+                <fullName>ELI</fullName>
+                <default>false</default>
+                <label>ELI</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>School Age Child Care</fullName>
+                <default>false</default>
+                <label>School Age Child Care</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_copy_of_all_forms_to_be_used_by_the_ch__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>A copy of all forms to be used by the child day center, if different from the model forms provided bythe Department of Social Services.</inlineHelpText>
+    <label>A copy of all forms child day center</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

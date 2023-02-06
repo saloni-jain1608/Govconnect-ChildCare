@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Additional_Information__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should be used to add additional information that is obtained after the complaint has been submitted.</inlineHelpText>
+    <label>Additional Information</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

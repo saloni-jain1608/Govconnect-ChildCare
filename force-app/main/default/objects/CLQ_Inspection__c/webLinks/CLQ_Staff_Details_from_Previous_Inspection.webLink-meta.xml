@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Staff_Details_from_Previous_Inspection</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Staff Details from Previous Inspection</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+
+var inspectId = &quot;{!CLQ_Inspection__c.Id}&quot;;
+var retrn= sforce.apex.execute(&apos;CLQ_GlobalWebserviceUtility&apos;, &apos;copyStaffDetails&apos;, 
+{ objectID: inspectId}); 
+var n = retrn.toString();
+if (n.indexOf(&apos;Error -&apos;,0) &gt; -1){
+   alert(n.replace(&apos;Error -&apos;,&apos;&apos;));
+}
+else{
+   window.location.reload();
+}</url>
+</WebLink>

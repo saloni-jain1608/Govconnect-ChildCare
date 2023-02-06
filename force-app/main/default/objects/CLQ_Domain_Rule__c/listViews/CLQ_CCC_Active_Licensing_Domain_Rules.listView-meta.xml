@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_CCC_Active_Licensing_Domain_Rules</fullName>
+    <booleanFilter>1 AND 6 AND (7 OR 8) AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CLQ_Domain__c</columns>
+    <columns>CLQ_Rule_Short_Name__c</columns>
+    <columns>CLQ_Rule__c</columns>
+    <columns>CLQ_Rule_Effective_Date__c</columns>
+    <columns>CLQ_Rule_Expiration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Applicable_To__c</field>
+        <operation>includes</operation>
+        <value>Child Care Center</value>
+    </filters>
+    <filters>
+        <field>CLQ_Domain__c</field>
+        <operation>equals</operation>
+        <value>00 License &amp; Approvals,01 Ratio &amp; Supervision,02 Safe &amp; Sanitary Environment</value>
+    </filters>
+    <filters>
+        <field>CLQ_Domain__c</field>
+        <operation>equals</operation>
+        <value>,03 Postings &amp; Equipment,04 Indoor/Outdoor Space,05 Health &amp; Safety</value>
+    </filters>
+    <filters>
+        <field>CLQ_Domain__c</field>
+        <operation>equals</operation>
+        <value>06 Program Information,07 Diapering &amp; Infant Care,08 Staff Files</value>
+    </filters>
+    <filters>
+        <field>CLQ_Domain__c</field>
+        <operation>equals</operation>
+        <value>09 Children&apos;s Files,10 Written Policies &amp; Procedures</value>
+    </filters>
+    <filters>
+        <field>CLQ_Rule_Effective_Date__c</field>
+        <operation>lessThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>CLQ_Rule_Expiration_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CLQ_Rule_Expiration_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>CCC - Active Licensing Domain Rules</label>
+</ListView>

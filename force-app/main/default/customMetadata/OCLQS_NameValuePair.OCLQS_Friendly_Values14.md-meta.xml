@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values14</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Denied__Withdrawn by Program==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Denied__Closed at Applicant’s Request==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Approved__Not Submitted==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Approved__Submitted==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Approved__Under Reviewer Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Approved__Returned for Revision==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Denied__Returned to Reviewer==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Denied__Cancelled==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Denied__Application Revised==Under Review**YES</value>
+    </values>
+</CustomMetadata>

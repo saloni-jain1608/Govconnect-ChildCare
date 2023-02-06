@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Death_of_a_Child__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Death of a Child</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

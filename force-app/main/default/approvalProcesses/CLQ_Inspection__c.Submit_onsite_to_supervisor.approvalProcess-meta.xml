@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>County_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>JFS_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ODE_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Onsite_Rating__c</field>
+        <field>CLQ_Program__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>SUTQ On-site Visit</description>
+        <label>Submit OnSite task to Supervisor</label>
+        <name>Submit_onsite_task_to_supervisor</name>
+        <rejectionActions>
+            <action>
+                <name>Review_Onsite_Visit_Details</name>
+                <type>Task</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>[Ramana, 6/6/2017]: Updated Criteria, Submitter as per bug# 11199.
+[Pavan, 8/17/2017]: Added &quot;Update Approved Date&quot; for TFS #11629</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>RecordType.Name= $Label.CLQ_Inspection_Onsite_Visit_RecType &amp;&amp; TEXT(CLQ_Inspection_Status__c) &lt;&gt; $Label.CLQ_Inspection_Status_Rating_Assessment_Complete &amp;&amp; Inspection_Complete__c &amp;&amp; CLQ_Event_Information_Count__c &gt; 0 &amp;&amp; NOT(ISNULL(CLQ_Inspection_End_Date__c)) &amp;&amp; NOT(ISBLANK(TEXT(Onsite_Rating__c))) &amp;&amp; (NOT(CONTAINS(CLQ_Program_Record_Type__c, $Label.CLQ_Inspection_Contains_FCC)) || (CONTAINS(CLQ_Program_Record_Type__c, $Label.CLQ_Inspection_Contains_FCC) &amp;&amp; (((CONTAINS($Label.SUTQ_AKRON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_DAYTON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_TOLEDO_District_Counties, UPPER(CLQ_County__c))) &amp;&amp; NOT(TEXT(CLQ_Program_Transaction__r.CLQ_Rating_Confirmed_by_Program__c) = $Label.CLQ_Program_Transaction_Rating_Confirmed_By_Program_1 || TEXT(CLQ_Program_Transaction__r.CLQ_Rating_Confirmed_by_Program__c) = $Label.CLQ_Program_Transaction_Rating_Confirmed_By_Program_2)) || NOT(CONTAINS($Label.SUTQ_AKRON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_DAYTON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_TOLEDO_District_Counties, UPPER(CLQ_County__c))))))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Assessment_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Approved_Date</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UpdateApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>In_Progress_Update</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Update_Insp_stat_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Submit OnSite to Supervisor</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>4</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>CLQ_Intake_By__c</field>
+        <field>CLQ_Approver_Comments__c</field>
+        <field>CLQ_Program_Name_Formula__c</field>
+        <field>CLQ_Status__c</field>
+        <field>CLQ_Assigned_To__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Incident Approvals</description>
+        <label>Step 1</label>
+        <name>CLQ_Step_1</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>CLQ_Start_Approval__c = true &amp;&amp;  (RecordType.Name =  $Label.CLQ_Case_Incident_Injury_Submitted_RecType || RecordType.Name =  $Label.CLQ_Case_Incident_Injury_Illness_RecType )
+&amp;&amp;( CLQ_No_Investigation_Required__c = TRUE ||( TEXT(CLQ_Inspection__r.CLQ_Inspection_Status__c) =  $Label.CLQ_Inspection_Status_Approved || TEXT(CLQ_Inspection__r.CLQ_Inspection_Status__c) =  $Label.CLQ_Inspection_Status_Under_Approver_Review ))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CLQ_Check_Approved_by_Manager_field</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Start_Approval_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Status_Update_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>CLQ_Approval_Start_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Status_Update_Return_to_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Uncheck_Approved_by_Manager_field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CLQ_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Uncheck_Approval_status_field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Incident Injury Approval Process</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>6</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

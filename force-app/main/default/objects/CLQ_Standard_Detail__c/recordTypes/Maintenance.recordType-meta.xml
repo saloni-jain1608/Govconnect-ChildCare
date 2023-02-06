@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maintenance</fullName>
+    <active>true</active>
+    <description>Holds System Maintenance data - start times, end times, and messages to be displayed.</description>
+    <label>Maintenance</label>
+    <picklistValues>
+        <picklist>CLQ_Integration_Document_Type__c</picklist>
+        <values>
+            <fullName>JFS - OCLQS - Accreditation Certificate</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Adjudicated a Delinquent Child Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Employee Record Chart and Childrens Record Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Immunization Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - In Home Aide Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Inspection Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - License Face Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Application Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Complaint Alleged Op Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Compliance Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Corrective Action Plan Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Day Camp Registration Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Incident Injury Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Inspection Complaint Full Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Licensing Summary Report Full Inspection Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - Payment Processing Receipt Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Annual Report Desk Review Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Annual Report Registration Summary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Desk Review Summary Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ On-site Verification Summary Report - Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Rating Certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JFS - OCLQS - SUTQ Registration Report</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Program_Transaction_Type__c</picklist>
+        <values>
+            <fullName>Licensing</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_QuestionType__c</picklist>
+        <values>
+            <fullName>Instruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Options</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Show_For__c</picklist>
+        <values>
+            <fullName>License Application</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLQ_Type__c</picklist>
+        <values>
+            <fullName>Document</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Required_for_Role__c</picklist>
+        <values>
+            <fullName>Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorized Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Domain__c</picklist>
+        <values>
+            <fullName>Accreditation</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OCLQS_Role_Allowed__c</picklist>
+        <values>
+            <fullName>ODE OCLQSLicensing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OCLQS_Transaction_Status__c</picklist>
+        <values>
+            <fullName>Annual Report Disapproved</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role_Type__c</picklist>
+        <values>
+            <fullName>JFS</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Group_Type__c</picklist>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Record_Type__c</picklist>
+        <values>
+            <fullName>Amendment - Center - Change of Location</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

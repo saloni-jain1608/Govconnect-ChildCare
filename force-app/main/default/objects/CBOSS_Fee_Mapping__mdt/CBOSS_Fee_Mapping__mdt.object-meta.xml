@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>CBOSS_Fee_Mapping</label>
+    <pluralLabel>CBOSS_Fee_Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

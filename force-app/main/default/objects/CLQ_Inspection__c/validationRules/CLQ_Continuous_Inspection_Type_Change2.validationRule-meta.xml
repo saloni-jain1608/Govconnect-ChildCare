@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Continuous_Inspection_Type_Change2</fullName>
+    <active>true</active>
+    <description>Program Type = Child Care; PS; SACC; AND License Type= Continuous
+Default Inspection Type = Annual; Option to change to Monitor</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( 
+NOT(ISNEW()), OR(CLQ_Program_Record_Type__c = &quot;Child Care Center&quot;,CLQ_Program_Record_Type__c = &quot;Pre School&quot;,CLQ_Program_Record_Type__c = &quot;	School Age Child Care&quot;) 
+,CLQ_License_Type__c == &quot;Continuous&quot;,ISCHANGED(CLQ_Inspection_Type__c), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Annual&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Monitor&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Monitor&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Annual&quot;))),
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Complaint&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Incident / Injury / Illness&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Incident / Injury / Illness&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Complaint&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Annual&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Follow-up&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Follow-up&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Annual&quot;))) 
+)</errorConditionFormula>
+    <errorMessage>You can change Inspection type to &apos;Monitor&apos;  or &apos;Annual&apos; or &apos;Follow-up&apos; only</errorMessage>
+</ValidationRule>

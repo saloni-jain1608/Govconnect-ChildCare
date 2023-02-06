@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubCategory__c</fullName>
+    <description>Transaction Type</description>
+    <externalId>false</externalId>
+    <label>Transaction Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amendment - Change of Administrator</fullName>
+                <default>false</default>
+                <label>Amendment - Change of Administrator</label>
+            </value>
+            <value>
+                <fullName>Amendment - Change of Capacity-Space</fullName>
+                <default>false</default>
+                <label>Amendment - Change of Capacity-Space</label>
+            </value>
+            <value>
+                <fullName>Amendment - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - Change of Location</label>
+            </value>
+            <value>
+                <fullName>CAP Response</fullName>
+                <default>false</default>
+                <label>CAP Response</label>
+            </value>
+            <value>
+                <fullName>New Application</fullName>
+                <default>false</default>
+                <label>New Application</label>
+            </value>
+            <value>
+                <fullName>Program Close</fullName>
+                <default>false</default>
+                <label>Program Close</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Report Incident/Injury</fullName>
+                <default>false</default>
+                <label>Report Incident/Injury</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Annual Report</fullName>
+                <default>false</default>
+                <label>SUTQ - Annual Report</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Initial Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Initial Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Ongoing Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Ongoing Registration</label>
+            </value>
+            <value>
+                <fullName>Update Contact Information</fullName>
+                <default>false</default>
+                <label>Update Contact Information</label>
+            </value>
+            <value>
+                <fullName>Update Day Camp</fullName>
+                <default>false</default>
+                <label>Update Day Camp</label>
+            </value>
+            <value>
+                <fullName>Update Facility Information</fullName>
+                <default>false</default>
+                <label>Update Facility Information</label>
+            </value>
+            <value>
+                <fullName>Update FCC Resident Information</fullName>
+                <default>false</default>
+                <label>Update FCC Resident Information</label>
+            </value>
+            <value>
+                <fullName>Update In-Home Aide</fullName>
+                <default>false</default>
+                <label>Update In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>Update On-site Contact Information</fullName>
+                <default>false</default>
+                <label>Update On-site Contact Information</label>
+            </value>
+            <value>
+                <fullName>Update Outdoor Space Information</fullName>
+                <default>false</default>
+                <label>Update Outdoor Space Information</label>
+            </value>
+            <value>
+                <fullName>Update Out of State</fullName>
+                <default>false</default>
+                <label>Update Out of State</label>
+            </value>
+            <value>
+                <fullName>Update Space Information</fullName>
+                <default>false</default>
+                <label>Update Space Information</label>
+            </value>
+            <value>
+                <fullName>Day Camp</fullName>
+                <default>false</default>
+                <label>Day Camp</label>
+            </value>
+            <value>
+                <fullName>In-Home Aide</fullName>
+                <default>false</default>
+                <label>In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>Registration - Out of State</fullName>
+                <default>false</default>
+                <label>Registration - Out of State</label>
+            </value>
+            <value>
+                <fullName>Reactivation</fullName>
+                <default>false</default>
+                <label>Reactivation</label>
+            </value>
+            <value>
+                <fullName>Update Authorized Rep</fullName>
+                <default>false</default>
+                <label>Update Authorized Rep</label>
+            </value>
+            <value>
+                <fullName>Application - CC Center</fullName>
+                <default>false</default>
+                <label>Application - CC Center</label>
+            </value>
+            <value>
+                <fullName>Application - FCC</fullName>
+                <default>false</default>
+                <label>Application - FCC</label>
+            </value>
+            <value>
+                <fullName>Application - ODE Program</fullName>
+                <default>false</default>
+                <label>Application - ODE Program</label>
+            </value>
+            <value>
+                <fullName>Amendment - Center - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - Center - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - FCC - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - FCC - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - ODE - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE and Center - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment - ODE and Center - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Amendment- FCC - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment- FCC - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>Renew Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Renew Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Expedited Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Expedited Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Change of Owner Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Change of Owner Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Reinstate Rating after Temporary Closure</fullName>
+                <default>false</default>
+                <label>SUTQ - Reinstate Rating after Temporary Closure</label>
+            </value>
+            <value>
+                <fullName>Licensing - Closure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Licensing - Closure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

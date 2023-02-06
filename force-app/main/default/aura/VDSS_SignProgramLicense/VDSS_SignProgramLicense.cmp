@@ -1,0 +1,137 @@
+<aura:component controller="vdssCommunityProgramsMain"
+    implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:appHostable,force:hasRecordId,force:lightningQuickActionWithoutHeader">
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="pageReference" type="String" />
+    <aura:attribute name="showModal" type="boolean" default="false" />
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+
+    <aura:attribute name="showSign" type="boolean" default="false" />
+
+    <aura:attribute name="recommendedTotCapacity" type="String" default="" />
+    <aura:attribute name="recommendedTotCapacityUnderTH" type="String" default="" />
+    <aura:attribute name="isRepAvailable" type="boolean" default="false" />
+    <aura:attribute name="repName" type="String" default="" />
+    <aura:attribute name="repEmail" type="String" default="" />
+
+    <aura:attribute name="errorMessage" type="String" />
+    <aura:attribute name="showError" type="boolean" default="false" />
+    <aura:attribute name="disabled" type="boolean" default="false" />
+
+    <aura:attribute name="selectedField" type="String" default="" />
+    <aura:attribute name="showSignField" type="boolean" default="false" />
+    <aura:attribute name="signFieldMap" type="Map" />
+    <aura:attribute name="selectedDocSignFieldsList" type="List" />
+    <aura:attribute name="closeModal" type="Aura.Action" />
+    <aura:handler name="init" value="{!this}" action="{!c.init }" />    
+	<lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+
+
+    <ltng:require styles="{!$Resource.signature_pad_css}" scripts="{!join(',',
+                           $Resource.signature_pad_umd_js,
+                           $Resource.main_js
+                           )}" afterScriptsLoaded="{!c.init}" />
+
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+
+        .slds-p-around--medium {
+
+        padding: 0rem !important;
+
+        }
+
+        .slds-modal__content{
+
+        overflow-y:hidden !important;
+
+        height:unset !important;
+
+        max-height:unset !important;
+
+        }
+
+    </aura:html>
+    <section aura:id="generateModal" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate" style="text-align: center;">
+                    Authorise Application</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-scrollable" style="height: 20rem; width: 51rem;">
+                    <aura:if isTrue="{!v.showError}">
+                        <div class="desktop forcePageError" aria-live="assertive" data-aura-rendered-by="2634:0"
+                            data-aura-class="forcePageError">
+                            <div class="genericNotification" data-aura-rendered-by="5173:0">
+                                <span class="genericError uiOutputText" data-aura-rendered-by="5176:0"
+                                    data-aura-class="uiOutputText">
+                                    Review the errors on this page.
+                                </span>
+                            </div>
+                            <ul class="errorsList" data-aura-rendered-by="5519:0">
+                                <li data-aura-rendered-by="5521:0">
+                                    {!v.errorMessage}
+                                </li>
+                            </ul>
+                        </div>
+                    </aura:if>
+
+                    <div class="slds-form slds-form_compound">
+                        <fieldset class="slds-form-element">
+                            <lightning:layout horizontalAlign="spread" multipleRows="true">                                
+                                <lightning:layoutItem size="12" class="slds-p-bottom_small">
+                                    <div id="signature-pad" class="signature-pad">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label for="signature">Signature</label><br />
+                                                <canvas id="signature" width="450" height="100"
+                                                    style="border:2px solid black;width: 564px; height: 200px"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class="signature-pad--footer">
+                                            <div class="description"><b>Sign above</b></div>
+
+                                            <div class="signature-pad--actions">
+                                                <div>
+                                                    <lightning:button type="button" class="button clear" name="clear"
+                                                        onclick="{!c.erase}">Clear</lightning:button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </lightning:layoutItem>
+
+                            </lightning:layout>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning:button label="Cancel" class="slds-m-top--small" variant="neutral"
+                    onclick="{!c.cancelModal}" />
+
+                <lightning:button label="Save" class="slds-m-top--small" variant="brand" onclick="{!c.save}"
+                    disabled="{!v.disabled}" />
+
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+
+</aura:component>

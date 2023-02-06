@@ -1,0 +1,21 @@
+<template>
+    <template if:false={isProgramLicensed}>
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label={Document_Upload} title="Document Upload" onclick={continueApplication} disabled={disablecontinueapp}></lightning-button>
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label={Continue_Application} title="Continue Application" onclick={continueApplication} disabled={disablecontinueapp}></lightning-button>
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label={Withdraw_Application} title="Withdraw Application" onclick={withdrawApplication} data-name='withdraw-application'></lightning-button>
+    </template>
+    <template if:true={isProgramLicensed}>
+        <!--
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label="Request Amendment" title="Request Amendment"></lightning-button>
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label="Update Program" title="Update Program"></lightning-button>
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand" label="Request Closure" title="Request Closure"></lightning-button>
+        -->
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand-outline" label="Download License" title="Download License" onclick={downloadlicense}></lightning-button>
+            
+    </template>
+    <template if:true={capRaised}>
+        <!--
+        <lightning-button class="program-cards-btn slds-col slds-show--inline-block slds-size_1-of-1" variant="brand-outline" label="Inspection Summary Report" title="Inspection Summary Report" onclick={downloadInspectionReport}></lightning-button>
+            -->
+    </template>
+</template>

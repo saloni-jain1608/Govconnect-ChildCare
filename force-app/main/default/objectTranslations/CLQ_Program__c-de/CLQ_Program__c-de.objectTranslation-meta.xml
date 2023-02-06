@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value></value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>ODE_Integration</name>
+    </fieldSets>
+    <gender></gender>
+    <layouts>
+        <layout>CLQ CCC Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Step Up to Quality Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Day Camp Layout</layout>
+        <sections>
+            <label></label>
+            <section>Comments Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Facility Schedule</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ FCC Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Bypass Validation Rules</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Comments Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Facility Schedule</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Step Up to Quality Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ In-Home Aide Layout</layout>
+        <sections>
+            <label></label>
+            <section>Certification Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Comments Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Parent Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Provider Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Non Licensed Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ ODE Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Building Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Bypass Validation Rules</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Comments Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Facility Schedule</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Step Up to Quality Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ OOS Layout</layout>
+        <sections>
+            <label></label>
+            <section>Comments Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Out of State Program Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Registration- Out of State</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Rating Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OutOfStateReg</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Rating Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quality Rating Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Quality Rating Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Site and Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quality Rating for Admin</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Quality Rating Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Site and Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Virginia Back Agent Demo Program Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel></nameFieldLabel>
+    <quickActions>
+        <label></label>
+        <name>Create_Inspection_LTNG</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Child_Care_Center</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Day_Camp</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_FCC_Type_B_Home</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_In_Home_Aide</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Out_of_State_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Pre_School</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_School_Age_Child_Care</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Type_A_Home</name>
+    </recordTypes>
+    <sharingReasons>
+        <label></label>
+        <name>County_Admin_Sharing</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Approver_edit_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Capacity_cannot_exceed_Approved_Capacity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CountyAdmin_Cannot_Change_OTHC_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Day_Camp_Name_is_Required_if_Accredited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Day_Camp_Req_Met_Changed_State_Admin</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Day_Camp_Req_Met_No_Approval_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Desc_Other_Toxic_Subs_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FCC_Approver_County_Role_edit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Foster_Children_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Level_of_Radon_Gas_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>License_Issue_Date_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Materials_stored_in_Tanks_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>OCLQS_Program_Empty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Program_Name_Cannot_be_Edited_Reviewer</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Rating_Discontinue_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Rating_Effective_And_Expiry_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Rating_Reduced_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Rating_Review_Update</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Reviewers_Allowed_Edit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Specialized_Foster_Home_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Under2Cap_not_exceed_Approved_Under2Cap</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Under2_5_not_exceed_Approved_Under2_5</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Create_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_New_Day_Camp_Audit</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Update_Portal_Rating</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Create_Program_Transaction</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Create_TA_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <workflowTasks>
+        <description></description>
+        <name>Continuous_License_Recommendation</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

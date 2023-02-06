@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The system will send a notification to the program when CAPs pass the overdue date on the CAP and Status = Not Submitted</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE CAP Overdue Email Template</name>
+    <style>formalLetter</style>
+    <subject>{!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c} Corrective Action Plan Past Due</subject>
+    <textOnly>The Corrective Action Plan(CAP) for  {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c} for inspection on {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} has not been submitted by the deadline indicated in the report. 
+
+Log in to OCLQS at https://oclqs.force.com/oclqs_home﻿ to submit the required CAP. Your immediate response is required.
+If you have any questions, contact your Licensing Specialist.
+
+The Ohio Child Licensing and Quality System Team.
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Corrective_Action_Plan__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

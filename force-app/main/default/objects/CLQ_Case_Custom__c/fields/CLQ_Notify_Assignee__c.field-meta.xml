@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Notify_Assignee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checks if Email notification needs to be sent - used only in process builder - not on page layouts</description>
+    <externalId>false</externalId>
+    <label>Notify Assignee</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

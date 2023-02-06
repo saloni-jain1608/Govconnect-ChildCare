@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewers_cannot_change_PR_ownership</fullName>
+    <active>false</active>
+    <description>Validation rule to prevent non admins from changing record ownership</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND (ISCHANGED(OwnerId), NOT(ISBLANK(CLQ_Transaction_Assigned_To__c)),
+AND(($Profile.Name != &apos;System Administrator&apos;),($Profile.Name != &apos;OCLQS Customer Community Login User&apos;),($Profile.Name != &apos;OCLQS Customer Community Plus Login User&apos;), ($Profile.Name != &apos;OCLQS Customer Community Plus Login User ODE SSO&apos;),($Profile.Name != &apos;Admin Read-Only&apos;),($Profile.Name != &apos;State Admin - State user&apos;),($Profile.Name != &apos;ODJFS FCC Approver - State User&apos;),($Profile.Name != &apos;ODJFS FCC Approver - County Role&apos;),($Profile.Name != &apos;Approver - State User&apos;),($Profile.Name != &apos;ODE State Admin - State User&apos;),($Profile.Name != &apos;ODE Approver - State User&apos;),($Profile.Name != &apos;ODJFS County Admin - County Role&apos;),($Profile.Name != &apos;ODJFS Licensing Supervisor&apos;), ($Profile.Name != &apos;State Program Admin State User&apos;)))</errorConditionFormula>
+    <errorMessage>You cannot change record ownership</errorMessage>
+</ValidationRule>

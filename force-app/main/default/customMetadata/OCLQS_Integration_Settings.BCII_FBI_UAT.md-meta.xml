@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>BCII_FBI</label>
+    <protected>false</protected>
+    <values>
+        <field>Attribute_1_Description__c</field>
+        <value xsi:type="xsd:string">IIB Search Folder Path for BCII batch file pickup</value>
+    </values>
+    <values>
+        <field>Attribute_1_Value__c</field>
+        <value xsi:type="xsd:string">/opt/files/bcii/</value>
+    </values>
+    <values>
+        <field>Attribute_2_Description__c</field>
+        <value xsi:type="xsd:string">Email alert To address</value>
+    </values>
+    <values>
+        <field>Attribute_2_Value__c</field>
+        <value xsi:type="xsd:string">schahar@deloitte.com,shselvaraj@deloitte.com,rgurivelli@deloitte.com,gansakhalkar@deloitte.com</value>
+    </values>
+    <values>
+        <field>Attribute_3_Description__c</field>
+        <value xsi:type="xsd:string">Program Status considered for BCII\FBI lookup email alert</value>
+    </values>
+    <values>
+        <field>Attribute_3_Value__c</field>
+        <value xsi:type="xsd:string">Open,Suspended,New,Pending,Enforcement,Inactive,Revoked</value>
+    </values>
+    <values>
+        <field>Attribute_4_Description__c</field>
+        <value xsi:type="xsd:string">Program Type included to identify JFS records</value>
+    </values>
+    <values>
+        <field>Attribute_4_Value__c</field>
+        <value xsi:type="xsd:string">FCC - Type A Home,FCC - Type B Home,Child Care Center,Day Camp,Out of State Registration,In-Home Aide</value>
+    </values>
+    <values>
+        <field>Attribute_5_Description__c</field>
+        <value xsi:type="xsd:string">Role of a contact in an organization or program that needs to be included</value>
+    </values>
+    <values>
+        <field>Attribute_5_Value__c</field>
+        <value xsi:type="xsd:string">Administrator,Owner,Resident,Partner</value>
+    </values>
+    <values>
+        <field>Attribute_6_Description__c</field>
+        <value xsi:type="xsd:string">Program Transaction Record Type included</value>
+    </values>
+    <values>
+        <field>Attribute_6_Value__c</field>
+        <value xsi:type="xsd:string">Amendment - Change of Administrator,Application - CC Center,Application - FCC,In-Home Aide</value>
+    </values>
+    <values>
+        <field>Attribute_7_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Attribute_7_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Capture_Messages__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Integration for BCII/FBI Batch Interface</value>
+    </values>
+    <values>
+        <field>Enable_Debug__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Environment_Name__c</field>
+        <value xsi:type="xsd:string">UAT</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification_Group__c</field>
+        <value xsi:type="xsd:string">schahar@deloitte.com,shselvaraj@deloitte.com,rgurivelli@deloitte.com,vivprasad@deloitte.com,gansakhalkar@deloitte.com</value>
+    </values>
+    <values>
+        <field>Error_Email_Notification__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Target_Connection_Port__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Connection_URL__c</field>
+        <value xsi:type="xsd:string">https://jfsiib-uat.jfs.ohio.gov/OCLQS_BCII/getBCIIUpdate</value>
+    </values>
+    <values>
+        <field>Target_Credentail_Token_OAuth_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Id__c</field>
+        <value xsi:type="xsd:string">IIB_UAT</value>
+    </values>
+    <values>
+        <field>Target_Credentail_User_Password__c</field>
+        <value xsi:type="xsd:string">ajkdujiuu!8^*</value>
+    </values>
+</CustomMetadata>

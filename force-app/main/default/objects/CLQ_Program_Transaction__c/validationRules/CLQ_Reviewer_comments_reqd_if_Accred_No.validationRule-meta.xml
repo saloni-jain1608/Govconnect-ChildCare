@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reviewer_comments_reqd_if_Accred_No</fullName>
+    <active>true</active>
+    <description>Reviewer Comments required if Accreditation verified is No</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name = &apos;Day Camp&apos;,ISPICKVAL( CLQ_AccreditationVerified__c, &apos;No&apos;), ISBLANK( CLQ_Reviewer_Notes__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Reviewer_Notes__c</errorDisplayField>
+    <errorMessage>Reviewer Comments are required if Accreditation Verified is No</errorMessage>
+</ValidationRule>

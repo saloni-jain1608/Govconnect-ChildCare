@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Name_is_required_if_not_Anonymous</fullName>
+    <active>true</active>
+    <description>If the Anonymous Complainant check box is not selected and  the Contact name is required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(
+ OR( RecordType.Name = &apos;Alleged Ops&apos;, RecordType.Name  = &apos;Complaint&apos;),
+
+OR(
+
+(AND( CLQ_Anonymous_Complainant__c = true,  
+OR(NOT(ISBLANK( CLQ_Complainant_First_Name__c )), NOT(ISBLANK( CLQ_Complainant_Last_Name__c ))))),
+
+(AND(CLQ_Anonymous_Complainant__c = false,
+OR(ISBLANK( CLQ_Complainant_First_Name__c ), ISBLANK( CLQ_Complainant_Last_Name__c ))))
+
+)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Anonymous_Complainant__c</errorDisplayField>
+    <errorMessage>Enter a First or Last Name for the complainant, or select Anonymous Complainant</errorMessage>
+</ValidationRule>

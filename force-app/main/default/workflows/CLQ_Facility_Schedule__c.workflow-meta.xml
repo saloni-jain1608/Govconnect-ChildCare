@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Days_Of_Operation</fullName>
+        <field>CLQ_Prior_Days_Of_Operation__c</field>
+        <name>Nullify Prior Days Of Operation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Funding_Source</fullName>
+        <field>CLQ_Prior_Funding_Source__c</field>
+        <name>Nullify Prior Funding Source</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Months_Of_Operation</fullName>
+        <field>CLQ_Prior_Months_Of_Operation__c</field>
+        <name>Nullify Prior Months Of Operation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Program_Schedule_Name</fullName>
+        <field>CLQ_Prior_Program_Schedule_Name__c</field>
+        <name>Nullify Prior Program Schedule Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Time_1_End</fullName>
+        <field>CLQ_Prior_Time_1_End__c</field>
+        <name>Nullify Prior Time 1 End</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Time_1_Start</fullName>
+        <field>CLQ_Prior_Time_1_Start__c</field>
+        <name>Nullify Prior Time 1 Start</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Time_2_End</fullName>
+        <field>CLQ_Prior_Time_2_End__c</field>
+        <name>Nullify Prior Time 2 End</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nullify_Prior_Time_2_Start</fullName>
+        <field>CLQ_Prior_Time_2_Start__c</field>
+        <name>Nullify Prior Time 2 Start</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Owner_for_Facility_Schedule</fullName>
+        <description>Updates the owner ID for Facility Schedule objects</description>
+        <field>OwnerId</field>
+        <lookupValue>Community</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update Owner for Facility Schedule</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Effective_And_Expiry_Date</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; IF(  Not(Rating_Effective_Date__c  &lt;=  TODAY() &amp;&amp; Rating_Expiration_Date__c  &gt;=  TODAY()), ISBLANK(CLQ_Program_Rating__c) ,False)</errorConditionFormula>
+    <errorDisplayField>CLQ_Program_Rating__c</errorDisplayField>
+    <errorMessage>Rating should be in a valid period.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Payment Received</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Payments Received</value>
+    </caseValues>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Payment Received Layout</layout>
+        <sections>
+            <label></label>
+            <section>CBOSS Payment Reconciliation Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reference</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Payment Received Layout Read Only</layout>
+        <sections>
+            <label></label>
+            <section>CBOSS Payment Reconciliation Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reference</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label></label>
+        <name>Run_DDP</name>
+    </webLinks>
+</CustomObjectTranslation>

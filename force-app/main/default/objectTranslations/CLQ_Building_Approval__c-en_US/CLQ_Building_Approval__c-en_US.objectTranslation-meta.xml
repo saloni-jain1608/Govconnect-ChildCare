@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Building/Food/Fire Approval</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Building/Food/Fire Approvals</value>
+    </caseValues>
+    <layouts>
+        <layout>Building Approval Layout</layout>
+        <sections>
+            <label></label>
+            <section>Building Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Building Approval Layout</layout>
+        <sections>
+            <label></label>
+            <section>Building Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fire Inspection</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Food Service License/Exemption</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Approval_Date_cant_be_in_the_Future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Fire_Insp_Date_cant_be_in_the_Future</name>
+    </validationRules>
+</CustomObjectTranslation>

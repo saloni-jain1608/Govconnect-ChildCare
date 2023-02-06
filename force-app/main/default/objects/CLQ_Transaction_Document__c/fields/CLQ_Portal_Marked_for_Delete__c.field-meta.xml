@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Portal_Marked_for_Delete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If true, this transaction document was discovered as a record that is no longer needed, as the document is no longer required according to the current questions.</description>
+    <externalId>false</externalId>
+    <label>Portal Marked for Delete</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

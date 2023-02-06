@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Place_of_worship_with_childcare__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Child care in places of worship, during religious activities, when children are cared for while at least one parent, guardian, or custodian of each child is participating in such activities and is readily available.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Child care in places of worship, during religious activities, when children are cared for while at least one parent, guardian, or custodian of each child is participating in such activities and is readily available.</inlineHelpText>
+    <label>DEL Place of worship with childcare</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Licensing Application</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Licensing</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>CLQ_Program__c</tabs>
+    <tabs>CLQ_Program_Transaction__c</tabs>
+    <tabs>CLQ_Inspection__c</tabs>
+    <tabs>CLQ_Case_Custom__c</tabs>
+    <tabs>CLQ_Inspection_Tools__c</tabs>
+    <tabs>CLQ_Corrective_Action_Plan__c</tabs>
+    <tabs>Staff_Search</tabs>
+    <tabs>Background_Check__c</tabs>
+    <tabs>Staff_Background_Inbox</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Licensing_UtilityBar1</utilityBar>
+</CustomApplication>

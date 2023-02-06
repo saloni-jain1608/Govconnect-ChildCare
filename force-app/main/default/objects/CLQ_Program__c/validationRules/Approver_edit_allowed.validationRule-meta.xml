@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approver_edit_allowed</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ($Profile.Name = &apos;Approver - State User&apos; || $Profile.Name = &apos;ODJFS FCC Approver - County Role&apos; ||
+$Profile.Name = &apos;ODJFS FCC Approver - State User&apos; ||
+$Profile.Name = &apos;ODJFS County Admin - County Role&apos; ||
+$Profile.Name = &apos;ODE Approver - State User&apos;) &amp;&amp; !ISCHANGED(CLQ_Licensing_Specialist__c) &amp;&amp; !ISCHANGED(SUTQ_Reviewer__c) &amp;&amp; 
+!ISCHANGED(Enter_new_comments__c)</errorConditionFormula>
+    <errorMessage>Approvers can only update the Licensing Reviewer, SUTQ Reviewer and Comments Section</errorMessage>
+</ValidationRule>

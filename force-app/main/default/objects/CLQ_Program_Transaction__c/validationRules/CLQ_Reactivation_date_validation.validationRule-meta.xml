@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reactivation_date_validation</fullName>
+    <active>true</active>
+    <description>Approved Reopen Date cannot be in the past or before Requested Reopen Date</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISCHANGED(CLQ_Reactivation_Date__c), CLQ_Reactivation_Date__c  &lt;  TODAY(),CLQ_Reactivation_Date__c &lt; CLQ_Requested_Reopen_Date__c  )</errorConditionFormula>
+    <errorDisplayField>CLQ_Reactivation_Date__c</errorDisplayField>
+    <errorMessage>Approved Reopen Date cannot be in the past or before Requested Reopen Date</errorMessage>
+</ValidationRule>

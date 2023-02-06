@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Recommended_Rating__c</field>
+        <field>Rating_Estimated_By_System__c</field>
+        <field>Rating_Proposed_By_Program__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>SUTQ Desk Review rating is 0</description>
+        <label>Submit DR to supervisor</label>
+        <name>Submit_DR_to_supervisor</name>
+        <rejectionActions>
+            <action>
+                <name>Revise_Desk_Review</name>
+                <type>Task</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Akron_District_FCC_SUTQ_queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Submit to Akron District FCC SUTQ queue</description>
+        <entryCriteria>
+            <formula>CLQ_County__c != null &amp;&amp; CONTAINS($Label.SUTQ_AKRON_District_Counties, CLQ_County__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Submit to Akron District Queue</label>
+        <name>Submit_to_Akron_District_Queue</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Cleveland_District_FCC_SUTQ_queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Submit to Cleveland District FCC SUTQ queue</description>
+        <entryCriteria>
+            <formula>CLQ_County__c != null &amp;&amp; CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, CLQ_County__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Submit to Cleveland District Queue</label>
+        <name>Submit_to_Cleveland_District_Queue</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Columbus_District_FCC_SUTQ_queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Submit to Columbus District FCC SUTQ queue</description>
+        <entryCriteria>
+            <formula>CLQ_County__c != null &amp;&amp; CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, CLQ_County__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Submit to Columbus District Queue</label>
+        <name>Submit_to_Columbus_District_Queue</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Dayton_District_FCC_SUTQ_queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Submit to Dayton District FCC SUTQ queue</description>
+        <entryCriteria>
+            <formula>CLQ_County__c != null &amp;&amp; CONTAINS($Label.SUTQ_DAYTON_District_Counties, CLQ_County__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Submit to Dayton District Queue</label>
+        <name>Submit_to_Dayton_District_Queue</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Toledo_District_FCC_SUTQ_queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Submit to Toledo District FCC SUTQ queue</description>
+        <entryCriteria>
+            <formula>CLQ_County__c != null &amp;&amp; CONTAINS($Label.SUTQ_TOLEDO_District_Counties, CLQ_County__c)</formula>
+        </entryCriteria>
+        <label>Submit to Toledo District Queue</label>
+        <name>Submit_to_Toledo_District_Queue</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>SUTQ Approval Process for SUTQ Expedited Process &amp;&amp; SUTQ Change of Owner &amp;&amp; SUTQ Rating Reinstate</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>( 
+OR(RecordType.Name=&apos;SUTQ - Expedited Registration&apos; , RecordType.Name=&apos;SUTQ - Change of Owner Registration&apos; ,RecordType.Name=&apos;SUTQ - Reinstate Rating after Temporary Closure&apos; )
+) &amp;&amp; 
+NOT(ISBLANK(TEXT(Recommended_Rating__c))) &amp;&amp;
+ TEXT(CLQ_Transaction_Status__c) =&apos;Under Reviewer Review&apos;  &amp;&amp;  
+(
+CONTAINS($Label.SUTQ_AKRON_District_Counties, UPPER(CLQ_County__c)) || 
+CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, UPPER(CLQ_County__c)) || 
+CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, UPPER(CLQ_County__c)) || 
+CONTAINS($Label.SUTQ_DAYTON_District_Counties, UPPER(CLQ_County__c)) || 
+CONTAINS($Label.SUTQ_TOLEDO_District_Counties, UPPER(CLQ_County__c))
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>IsApprovedOnGoingCheck</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Approved_Date</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_PT_Status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Update_PT_Status_under_review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Update_PT_status_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>SUTQ  Approval Process</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approve</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Approve</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var Role= new sforce.SObject(&quot;CLQ_Role__c&quot;); 
+Role.Id = &apos;{!CLQ_Role__c.Id}&apos;; 
+var date = new Date(); 
+var str = (date.getMonth() + 1) + &quot;/&quot;; 
+str += date.getDate() + &quot;/&quot;; 
+str += date.getFullYear(); 
+
+
+if(&apos;{!CLQ_Role__c.CLQ_Reason_Codes__c}&apos;== &apos;&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending&apos;) { 
+	alert(&apos;Qualifications are required to Approve an administrator&apos;); 
+	window.location.reload();
+}else{
+	if({!CONTAINS($Label.CLQ_ProfilesToExcludeBCIFBIValidation , $Profile.Name)}){
+		if(&apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending Removal&apos; || &apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending&apos;){
+			Role.CLQ_Decision__c = &apos;Approved&apos;;
+alert(&apos;1&apos;); 
+		}
+	}else{
+		if(&apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_End_Date__c}&apos; == &apos;&apos;&amp;&amp;&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;!=&apos;&apos;&amp;&amp;&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;!=&apos;&apos;){ 
+alert(&apos;2&apos;); 
+			if(&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;1&apos; &amp;&amp;&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;1&apos; ){ 
+alert(&apos;3&apos;); 
+				if(&apos;{!CLQ_Role__c.CLQ_Prohibition_BCI__c}&apos;== &apos;1&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_BCI__c}&apos;== &apos;1&apos; &amp;&amp;&apos;{!CLQ_Role__c.CLQ_Prohibition_FBI__c}&apos;== &apos;1&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_FBI__c}&apos; == &apos;1&apos; ){ 
+alert(&apos;6&apos;); 
+					Role.CLQ_Decision__c =&apos;Approved&apos;; 
+				}else { 
+					alert(&apos;This individual does not meet BCI and FBI Requirements&apos;); 
+				} 
+			}else if((&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;1&apos; &amp;&amp;(&apos;{!CLQ_Role__c.CLQ_Prohibition_BCI__c}&apos;== &apos;2&apos;||&apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_BCI__c}&apos;== &apos;2&apos;))||(&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;1&apos; &amp;&amp;(&apos;{!CLQ_Role__c.CLQ_Prohibition_FBI__c}&apos;== &apos;2&apos;||&apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_FBI__c}&apos;== &apos;2&apos;))){ 
+				alert(&apos;This individual doesnot meet BCI and FBI requirements&apos;); 
+			}else if((&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;1&apos; &amp;&amp;(&apos;{!CLQ_Role__c.CLQ_Prohibition_BCI__c}&apos;== &apos;1&apos;&amp;&amp;&apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_BCI__c}&apos;== &apos;1&apos;))||&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;2&apos;){ 
+alert(&apos;5&apos;); 
+				Role.CLQ_Decision__c =&apos;Approved&apos;; 
+			}else  if((&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;1&apos; &amp;&amp;(&apos;{!CLQ_Role__c.CLQ_Prohibition_FBI__c}&apos;== &apos;1&apos;&amp;&amp;&apos;{!CLQ_Role__c.CLQ_Rehabilitation_Verified_FBI__c}&apos;== &apos;1&apos;))||&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;2&apos;){ 
+alert(&apos;10&apos;); 
+				Role.CLQ_Decision__c =&apos;Approved&apos;; 
+			}else if(&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;2&apos; &amp;&amp;&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;2&apos;){ 
+alert(&apos;11&apos;); 
+				Role.CLQ_Decision__c =&apos;Approved&apos;; 
+			} 
+		} 
+
+		if(&apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending&apos; &amp;&amp; (&apos;{!CLQ_Role__c.CLQ_Criminal_Record_BCI__c}&apos;==&apos;&apos; ||&apos;{!CLQ_Role__c.CLQ_Criminal_Record_FBI__c}&apos;==&apos;&apos;)&amp;&amp;&apos;{!CLQ_Role__c.CLQ_End_Date__c}&apos; == &apos;&apos;){ 
+			alert(&apos;BCI and FBI Verification are Required&apos;); 
+		} 
+
+		if(&apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending Removal&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_End_Date__c}&apos; != &apos;&apos;&amp;&amp;&apos;{!CLQ_Role__c.CLQ_End_Date__c}&apos; !=str){ 
+alert(&apos;12&apos;); 
+			Role.CLQ_Decision__c =&apos;Approved&apos;; 
+		} 
+
+		if (&apos;{!CLQ_Role__c.CLQ_Status__c}&apos; == &apos;Pending Removal&apos; &amp;&amp; &apos;{!CLQ_Role__c.CLQ_End_Date__c}&apos; != &apos;&apos;){ 
+alert(&apos;13&apos;); 
+			Role.CLQ_Decision__c =&apos;Approved&apos;; 
+		} 
+	}
+
+	var result = sforce.connection.update([Role]); 
+	window.location.reload();
+}</url>
+</WebLink>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values22</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Resubmitted__Closed at Applicant’s Request==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Not Submitted==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Submitted==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Not Verified__Under Reviewer Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Returned for Revision==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Closed==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Resubmitted__Cancelled==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Application Revised==Resubmitted**YES
+CLQ_Transaction_Document__c===&gt;Resubmitted__Withdrawn by Program==Resubmitted**YES</value>
+    </values>
+</CustomMetadata>

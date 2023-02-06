@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "c029c9fe-12b7-4757-b8e4-a8babd23d2a1",
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "configurationTags" : [ ],
+  "id" : "7bdeb68c-b152-4d15-a5ef-65fd58525ce7",
+  "label" : "Inspection Detail",
+  "objectApiName" : "CLQ_Inspection__c",
+  "routeType" : "detail-a0G",
+  "type" : "route",
+  "urlPrefix" : "clq-inspection"
+}

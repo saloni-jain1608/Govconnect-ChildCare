@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCC_Approver_County_Role_edit</fullName>
+    <active>false</active>
+    <description>FCC Approver - County User can only edit &amp; create Programs with Record Type: FCC Type A, FCC Type B, or In-Home Aide</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; $Profile.Name = &apos;ODJFS FCC Approver - County Role&apos; &amp;&amp;
+ (RecordType.Name != &apos;FCC - Type A Home&apos; &amp;&amp; 
+  RecordType.Name != &apos;FCC - Type B Home&apos; &amp;&amp; 
+  RecordType.Name != &apos;In-Home Aide&apos;)</errorConditionFormula>
+    <errorMessage>FCC Approver - County User can only edit &amp; create Programs with Record Type: FCC Type A, FCC Type B, or In-Home Aide</errorMessage>
+</ValidationRule>

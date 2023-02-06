@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CLQ_Who_was_Involved_in_the_Incident__c</name>
+    <picklistValues>
+        <masterLabel>Entire Group</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entire Program</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One or more Individual Children</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

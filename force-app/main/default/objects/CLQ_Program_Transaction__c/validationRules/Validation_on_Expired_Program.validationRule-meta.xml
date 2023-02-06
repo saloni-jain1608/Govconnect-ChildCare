@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_on_Expired_Program</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(
+OR(RecordType.Name = &apos;Day Camp&apos;,RecordType.Name = &apos;In-Home Aide&apos;,RecordType.Name = &apos;Registration - Out of State&apos;),
+CLQ_Program_Status__c = &apos;Expired&apos;, TEXT(CLQ_Transaction_Type__c) &lt;&gt; &apos;Renewal&apos;)</errorConditionFormula>
+    <errorDisplayField>CLQ_Transaction_Type__c</errorDisplayField>
+    <errorMessage>Cannot Submit Registration or Update for Expired Programs</errorMessage>
+</ValidationRule>

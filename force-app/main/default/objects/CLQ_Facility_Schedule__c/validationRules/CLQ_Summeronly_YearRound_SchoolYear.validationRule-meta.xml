@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Summeronly_YearRound_SchoolYear</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR(AND(INCLUDES(Months_of_Operation__c, &apos;Summer Only&apos;),INCLUDES(Months_of_Operation__c, &apos;Year Round&apos;)), AND(INCLUDES(Months_of_Operation__c, &apos;Summer Only&apos;),INCLUDES(Months_of_Operation__c, &apos;School Year&apos;)), AND(INCLUDES(Months_of_Operation__c, &apos;School Year&apos;),INCLUDES(Months_of_Operation__c, &apos;Year Round&apos;)))</errorConditionFormula>
+    <errorDisplayField>Months_of_Operation__c</errorDisplayField>
+    <errorMessage>Can only select one among &apos;Summer Only&apos;, &apos;School Year&apos; and &apos;Year Round&apos;</errorMessage>
+</ValidationRule>

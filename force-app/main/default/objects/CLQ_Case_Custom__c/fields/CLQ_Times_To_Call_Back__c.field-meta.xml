@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Times_To_Call_Back__c</fullName>
+    <externalId>false</externalId>
+    <label>Times To Call Back</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>8 am to 12 pm</fullName>
+                <default>false</default>
+                <label>8 am to 12 pm</label>
+            </value>
+            <value>
+                <fullName>12 pm to 2 pm</fullName>
+                <default>false</default>
+                <label>12 pm to 2 pm</label>
+            </value>
+            <value>
+                <fullName>2 pm to 5 pm</fullName>
+                <default>false</default>
+                <label>2 pm to 5 pm</label>
+            </value>
+            <value>
+                <fullName>After 5 pm</fullName>
+                <default>false</default>
+                <label>After 5 pm</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

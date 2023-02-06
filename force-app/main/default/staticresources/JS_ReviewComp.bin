@@ -1,0 +1,436 @@
+//****************************************************************************************************************************
+//*    DATE    * DEV NAME *                                    TFS NUMBER / DESC
+//****************************************************************************************************************************
+//* 06/07/2017 *  AndrewL * TFS_9666 - added code to remove the asterisk at the beginning of a listed question 
+//*			   *		  *            when they are required.
+//* 07/25/2018 * Rohit Gowrishetty   TFS#11961 - Reloaded the attachment records before generating the error nodes
+//* 12/19/2018 * Rohit Gowrishetty	 TFS#15203 - Updated the error message
+//* 06/12/2018 * Vijay Gurusamy 	 TFS#15903 - CR - 1st - Attestation Statement for Out of State
+//* 07/16/2019 * Rohit Gowrishetty	 TFS#15898 - CR - Added validation for 2 Star rE -Registration
+//**************************************************************************************************************************** 
+;REVIEWCOMPNS = {
+    //creating array to store progress bar status for client side components
+    pBarStatusCollectionObj : [],
+
+    loadEvents: function() {
+
+        $("#applicationFinalSubmit").on("click", function() {
+
+            submitting = true;
+
+            // Signature string
+            var signStr = licGlobalObj.contactFirstName + ' ' + licGlobalObj.contactLastName;
+            var userSignStr = '' ;
+            var userSignStrode = '' ;
+            var userSignStrSUTQ = '' ;
+            var userSignStrSUTQAnn = '' ;
+            userSignStr = $("#eSignature");
+            userSignStrode = $("#eSignatureode");
+            userSignStrSUTQ = $("[id$='eSignatureSUTQ']");
+            userSignStrSUTQAnn = $("[id$='initialsIdSUTQAnn']");
+            var todaysDate = new Date(); //15898
+            var reRegDate = new Date($("#2StarReRegistrationDate").val()); //15898
+            var recordTypeName = $("#PTRecordType").val(); //15898
+			
+			
+			if($("#isSUTQRatingComponentAvailableOnPage").val() == 'YES' &&  $("#isSUTQRatingValidationContainer").val() == 'NO' )
+            {
+            	//15203 - Updated the error message
+                $("#sutq_desired_rating_row").addClass("errorElement"); 
+                OH_MODAL_UTILITY.errorMessageModal('Please confirm Your Desired Rating. If no rating is available you may not be eligible to submit this registrations and will need to adjust your registration or withdraw your request');
+            }else if( (recordTypeName == 'SUTQ - Initial Registration' || recordTypeName == 'SUTQ - Ongoing Registration') && reRegDate >= todaysDate && $("[id$='selectedInputRatingHidden']").val() == 2 ){
+            	
+            	$("#sutq_desired_rating_row").addClass("errorElement");
+            	OH_MODAL_UTILITY.errorMessageModal('The program is not eligible to register for a 2-star rating because a 2-star rating was already awarded in the previous 4 years.');
+            }
+            // If attestation section is incomplete (Validating after length check, if element is present)
+            else if (
+                    ($("[id$='iAttest']").length && $("[id$='iAttest']").is(":checked") != true) ||
+                    ($("[id$='iAttestode']").length && $("[id$='iAttestode']").is(":checked") != true) ||
+                    ($("[id$='iAttestSUTQ']").length && $("[id$='iAttestSUTQ']").is(":checked") != true) ||
+                    ($("[id$='iAttestSUTQAnn']").length && $("[id$='iAttestSUTQAnn']").is(":checked") != true) ||
+                    ($("[id$='iAttestOOS']").length && $("[id$='iAttestOOS']").is(":checked") != true) //TFS#15903
+                ) {
+                // Show error
+                OH_MODAL_UTILITY.errorMessageModal('Please complete attestation section for electronic signature.');
+            } else if (
+                    (userSignStr.length && (userSignStr.val().toUpperCase() != signStr.toUpperCase())) ||
+                    (userSignStrode.length && (userSignStrode.val().toUpperCase() != signStr.toUpperCase())) ||
+                    (userSignStrSUTQ.length && (userSignStrSUTQ.val().toUpperCase() != signStr.toUpperCase())) ||
+                    (userSignStrSUTQAnn.length && (userSignStrSUTQAnn.val().toUpperCase() != signStr.toUpperCase()))
+                ) {
+                // Show error
+                OH_MODAL_UTILITY.errorMessageModal('Your signature does not match your First Name and Last Name. Please rectify it before continuing.');
+            }
+            // If all sections are complete
+            else {
+
+                // Start spinner
+                OH_NOTIFICATIONS.spinnerStart();
+
+                // Submit
+                submitRecord();
+            }
+        });
+
+    },
+
+    afterSubmit: function() 
+    {
+        var overAllStatus = REVIEWCOMPNS.checkFinalTransactionStatus();
+        // Update UI
+        if(overAllStatus == true )
+        {
+            $(".applicationReviewComplete").hide();
+            $(".applicationReviewCompleteBtn").hide();
+            $(".submissionConfirmation").show();
+             //adding call to document cleanup here.
+            var inputIds = [];
+            inputIds.push($("#TransactionIdString").text());
+ //           PGFAttachmentDelTxnDoc.removeMarkedTransactions(inputIds);
+        }
+
+        // Stop spinner
+        OH_NOTIFICATIONS.spinnerStop();
+    },
+
+    removeErrors: function() {
+        // Loop through and build markup
+        $.each(validationObj, function(i, val1) {
+
+            // Loop through subsections
+            $.each(val1.subSectionObjMap, function(j, val2) {
+
+                // Loop through fields
+                $.each(val2.fieldObjMap, function(k, val3) {
+
+                    // Add error message
+                    $("#fl" + val3.id).text('');
+                    $("#fl" + val3.id).parent().removeClass("error");
+                });
+            });
+        });
+        
+        $(".tableCompIndError").remove() ;
+    },
+
+
+    handleErrorClick : function(errorElement)
+    {
+        var completeErrorBlock = errorElement.closest(".errorDetail");
+        var nextErrorSection = 0;
+        var reviewSection = parseInt(progressBarWidget.progressbar("getReviewSection"));
+        var currentErrorSection = parseInt(completeErrorBlock.find("#targetSection").val());
+        var nextErrorSection ;
+        // Loop through and build markup
+        $.each(validationObj, function(i, val)
+        {
+            if (val.orderNumber == reviewSection) {
+                val.progressBarStatus = '';
+            }
+
+            if (val.orderNumber == currentErrorSection) {
+                nextErrorSection = validationObj[i + 1].orderNumber;
+            }
+        });
+
+
+        progressBarWidget.progressbar("setActiveSection", completeErrorBlock.find("#targetSection").val());
+        progressBarWidget.progressbar("setNextSection", nextErrorSection);
+
+        PBAR.handleJustContinue();
+
+        var targetElement = $("#" + completeErrorBlock.find("#targetElementId").val() ).parent();
+
+        $('html, body').animate({
+            scrollTop: targetElement.offset().top
+        }, 1000);
+    },
+
+    createHtmlErrorNode : function(section,subSection,errorMessage , targetElementId)
+    {
+        return $("<div>").addClass("errorDetail").append
+        (
+            $("<input>").attr({"type":"hidden", "id":"targetSection"}).val(section.orderNumber),
+            $("<input>").attr({"type":"hidden", "id":"targetElementId"}).val(targetElementId),
+            $("<div>").addClass("reviewsectionerror").append(
+                $("<div>").append($("<span>"))
+            ) ,
+            $("<p>").append(
+                $("<a>").on("click",function(e)
+                {
+                    REVIEWCOMPNS.handleErrorClick($(this));
+                }).html(errorMessage)
+            )
+        ) ;
+    },
+
+    checkAccess : function()
+    {
+          var accessInfo = JSON.parse($("#user_access_information").val())  ;
+    
+            if (accessInfo.userType == 'JFS') {
+                for(var i=0; i<accessInfo.JFSRoles.length; i++){
+                    if(accessInfo.JFSRoles[i] == 'Owner' || accessInfo.JFSRoles[i] == 'Director'){
+                        $(".reviewedErrorsBtn").hide();
+                        $(".reviewedCompleteBtn").show();
+                    } else{
+                        $(".reviewedErrorsBtn").show();
+                        $(".reviewedCompleteBtn").hide();
+                        $(".submitAccess").show();
+
+                    }
+                }
+
+            } else if (accessInfo.userType == 'ODE'){
+                var mainRole = '';
+                if(accessInfo.odeRoles.length > 1) {
+                    if(accessInfo.odeRoles[0] == 'OCLQSOwner' || accessInfo.odeRoles[1] == 'OCLQSOwner') {
+                        mainRole = 'OCLQSOwner';
+                    }
+                    else if(accessInfo.odeRoles[1] == 'OCLQSLicensing' && accessInfo.odeRoles[0] == 'OCLQSSUTQ') {
+                        mainRole = 'OCLQSAdministrator';
+                    }
+                    else if(accessInfo.odeRoles[0] == 'OCLQSLicensing' && accessInfo.odeRoles[1] == 'OCLQSSUTQ') {
+                        mainRole = 'OCLQSAdministrator';
+                    }
+                    else if((accessInfo.odeRoles[0] == 'OCLQSAdministrator' || accessInfo.odeRoles[1] == 'OCLQSAdministrator') && (accessInfo.odeRoles[0] != 'OCLQSOwner' && accessInfo.odeRoles[1] != 'OCLQSOwner')) {
+                        mainRole = 'OCLQSAdministrator';
+                    }
+                    else if(accessInfo.odeRoles[0] == 'OCLQSLicensing' && accessInfo.odeRoles[1] == 'OCLQSLicensing') {
+                        mainRole = 'OCLQSLicensing';
+                    }
+                    else if(accessInfo.odeRoles[0] == 'OCLQSSUTQ' && accessInfo.odeRoles[1] == 'OCLQSSUTQ') {
+                        mainRole = 'OCLQSSUTQ';
+                    }
+                    /*for(var i=0; i<accessInfo.odeRoles.length; i++) {
+                        if(accessInfo.odeRoles[i] == 'OCLQSOwner') {
+                            mainRole = 'OCLQSOwner';
+                        }
+                        else if(accessInfo.odeRoles[i] == 'OCLQSAdministrator' && mainRole != 'OCLQSOwner'){
+                            mainRole = 'OCLQSOwner';
+                        }
+                        else if((accessInfo.odeRoles[i] == 'OCLQSLicensing' || accessInfo.odeRoles[i] == 'OCLQSSUTQ') && (mainRole != 'OCLQSOwner' && mainRole != 'OCLQSAdministrator')){
+                            mainRole = '';
+                        }
+                    }*/
+                    //mainRole = accessInfo.odeRoles[position];
+                }
+                else if(accessInfo.odeRoles.length == 1) {
+                    mainRole = accessInfo.odeRoles[0];
+                }
+                if(accessInfo.transactionRecordType == 'Application - ODE Program' || accessInfo.transactionRecordType == 'Amendment - ODE - Change of Location') {
+                    if(mainRole == 'OCLQSOwner'){
+                        $(".reviewedErrorsBtn").hide();
+                        $(".reviewedCompleteBtn").show();
+                    } else{
+                        $(".reviewedErrorsBtn").show();
+                        $(".reviewedCompleteBtn").hide();
+                        $(".submitAccess").show();
+                    }
+                }
+                else if(accessInfo.transactionRecordType == 'SUTQ - Ongoing Registration' || accessInfo.transactionRecordType == 'SUTQ - Initial Registration' || accessInfo.transactionRecordType == 'SUTQ - Annual Report') {
+                    if(mainRole == 'OCLQSOwner' || mainRole == 'OCLQSAdministrator' || mainRole == 'OCLQSSUTQ'){
+                        $(".reviewedErrorsBtn").hide();
+                        $(".reviewedCompleteBtn").show();
+                    } else{
+                        $(".reviewedErrorsBtn").show();
+                        $(".reviewedCompleteBtn").hide();
+                        $(".submitAccess").show();
+                    }
+                }
+                else {
+                    if(mainRole == 'OCLQSOwner' || mainRole == 'OCLQSAdministrator' || mainRole == 'OCLQSLicensing'){
+                        $(".reviewedErrorsBtn").hide();
+                        $(".reviewedCompleteBtn").show();
+                    } else{
+                        $(".reviewedErrorsBtn").show();
+                        $(".reviewedCompleteBtn").hide();
+                        $(".submitAccess").show();
+                    }
+                }
+            }
+    },
+
+    getErrors : function()
+    {
+        REVIEWCOMPNS.removeErrors(); // It will clear all errors from page
+        
+        REVIEWCOMPNS.pBarStatusCollectionObj = [];
+        var isFullPageIsValid = true ;
+        // If already completed review once
+        $(".reviewedErrors").show();
+        $(".reviewedErrorsBtn").show();
+        $(".reviewInProgress").hide();
+
+        //Clear out existing error if any
+        $("#appendErrorList").empty();
+        ATTACHMENTCOMPNS.loadRecords(); //11961
+
+        //Iterating through all Section
+        $.each(validationObj, function(i, eachSection)
+        {
+            var isSectionValid = true ;
+            var sectionHtmlError =$("<div>").addClass("row") ;
+            //Building error header
+            sectionHtmlError.append(
+                $("<h3>").html(eachSection.name)
+            );
+            //Iterating through all subsections
+            $.each(eachSection.subSectionObjMap, function(j, subSection)
+            {
+                if(subSection.sType =='Fieldset')
+                {
+                    $.each(subSection.fieldObjMap, function(k, eachField)
+                    {
+                        // If it has error message
+                        if (eachField.errorMessage != null)
+                        {
+                            // Add error message
+                            $("#fl" + eachField.id).text(eachField.errorMessage);
+                            $("#fl" + eachField.id).parent().addClass("error");
+                            var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , eachField.label + " - " +eachField.errorMessage , "fl" + eachField.id ) ;
+                            sectionHtmlError.append(eachErrorNode) ;
+                            isSectionValid = false ;
+                        }
+                    });
+                }else if(subSection.sType =='Component')
+                {
+                    
+                    if(subSection.componentName =="PGFQuestionsComp")
+                    {
+                        // TextArea
+                        $(".parent_oclqs_textarea_question").each(function(e)
+                        {
+                            $(this).find('.textarea_question_body').removeClass("errorElement");
+                            // Empty text area for each question
+                            if ($(this).siblings('.parent_oclqs_textarea_question_container').find('input[id*="parentTextAns"]').val().trim().length == 0)
+                            {
+                                $(this).find('.textarea_question_body').addClass("errorElement");
+                                var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).find('.textarea_question_body').text().trim() + " - Answer Required" , $(this).attr("id") );
+                                sectionHtmlError.append(eachErrorNode) ;
+                                isSectionValid = false ;
+                            }
+                        });
+                        // Picklist
+                        $(".ParentquestionUserResponseCollected").each(function(e)
+                        {
+                            $(this).closest(".parent_oclqs_question_container").find(".parentQuestionLabel").removeClass("errorElement") ;
+                            if($(this).val() == 'NO')
+                            {
+                                $(this).closest(".parent_oclqs_question_container").find(".parentQuestionLabel").addClass("errorElement") ;
+                                var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).closest(".parent_oclqs_question_container").find(".questionBodyContent").val() + " - Answer Required" , $(this).attr("id") ) ;
+                                sectionHtmlError.append(eachErrorNode) ;
+                                isSectionValid = false ;
+                            } 
+                        });
+                        // Multiselect
+                        $('[class*="parent_oclqs_multiselect_question_container"]').each(function(e)
+                        {
+                            $(this).find('.multiselect_question_body').removeClass("errorElement");
+                            // No checkboxes selected in grouped multiselects
+                            if ($(this).children('div.styled-checkbox').find('input[id*="ckbox"]:checked').length == 0) 
+                            {
+                                $(this).find('.multiselect_question_body').addClass("errorElement");
+							// TFS 9666 - WAPL - replace the trim function here with a REPLACE function, possibly some other regex if needed
+                                var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).find('.multiselect_question_body').text().replace('*','') + " - Answer Required" , $(this).attr("id") );
+							//	var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).find('.multiselect_question_body').text().trim() + " - Answer Required" , $(this).attr("id") );
+                                sectionHtmlError.append(eachErrorNode) ;
+                                isSectionValid = false ;
+                            }
+                        });
+                    }else if(subSection.componentName =="PGFAttachmentsComp")
+                    {
+                        $(".AttachmentValidationContainer").each(function(e)
+                        {
+                            if($(this).find("#AttachmentCompleted").val() == 'NO')
+                            {
+                                var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).find("#AttachmentName").val() + " - Attachment Required" , $(this).closest(".eachNewAttachment").attr("id") ) ;
+                                sectionHtmlError.append(eachErrorNode) ;
+                                isSectionValid = false ;
+                                 
+                            }
+                        });
+                    }else if(subSection.componentName =="PGFTableComp")
+                    {
+                        $(".TableCompValidationContainer").each(function(e)
+                        {
+                            if($(this).attr("id").replace('ValidationContainer','') == subSection.id )
+                            {
+                                if($(this).find("#tableCompCompleted").val() == 'NO')
+                                {
+                                    var headEle = $(this).parent().find(".tableCompSubSectionContainer").find("header") ;
+                                    headEle.after($("<p>").addClass("errorElement tableCompIndError").html($(this).find("#tableCompErrorMessage").val()));
+                                    
+                                    var eachErrorNode = REVIEWCOMPNS.createHtmlErrorNode(eachSection , subSection , $(this).find("#tableCompErrorMessage").val()  ,  $(this).attr("id") ) ;
+                                    sectionHtmlError.append(eachErrorNode) ;
+                                    isSectionValid = false ;
+                                     
+                                } 
+
+                            }
+                        });
+                    }
+                    
+                }
+            });
+
+            var thatSectionDiv = $("div[orderNumber='" + eachSection.orderNumber + "']");
+            if(isSectionValid == false )
+            {
+                isFullPageIsValid = false ;
+                $("#appendErrorList").append(sectionHtmlError);
+                thatSectionDiv.addClass("error") ;
+                if(thatSectionDiv.hasClass("complete"))
+                {
+                    thatSectionDiv.removeClass("complete");
+                }
+                
+                var pbStatusComp = {
+                                        'secondaryStatus': 'error',
+                                        'sectionId' : eachSection.id
+                                     };
+                REVIEWCOMPNS.pBarStatusCollectionObj.push(pbStatusComp);
+
+            }else
+            {
+                thatSectionDiv.addClass("complete") ;
+                if(thatSectionDiv.hasClass("error"))
+                {
+                    thatSectionDiv.removeClass("error");
+                }
+            }
+        });
+
+        //At the end check validity of complete component and move to next step
+        if(isFullPageIsValid== true )
+        {   
+            REVIEWCOMPNS.checkAccess();
+            // $(".reviewedErrorsBtn").hide();
+            // $(".reviewedCompleteBtn").show();
+            $(".reviewedErrors").hide() ;
+            $(".reviewedComplete").show()
+            $(".reviewedCompleteSign").show();
+            REVIEWCOMPNS.removeErrors();
+            var reviewSectionNumber = progressBarWidget.progressbar("getReviewSection") ;
+            $("div[orderNumber='" + reviewSectionNumber + "']").removeClass("error").addClass("complete") ;
+        }else
+        {   
+            $(".reviewedErrorsBtn").show();
+            $(".reviewedCompleteBtn").hide();
+            $(".reviewedCompleteSign").hide();
+            $(".reviewedErrors").show() ;
+            $(".reviewedComplete").hide() ;
+            var reviewSectionNumber = progressBarWidget.progressbar("getReviewSection") ;
+            $("div[orderNumber='" + reviewSectionNumber + "']").removeClass("complete").addClass("error") ;
+        }
+    },
+    
+    checkFinalTransactionStatus : function()
+    {
+        var retRes = false ;
+        var pageResult = JSON.parse($("#singleSectPageRes").val());
+        retRes = pageResult.isSuccess ;
+        return retRes ;
+    }
+}

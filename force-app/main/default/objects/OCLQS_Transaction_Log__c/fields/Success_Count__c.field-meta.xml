@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Success_Count__c</fullName>
+    <externalId>false</externalId>
+    <label>Success Count</label>
+    <summaryFilterItems>
+        <field>OCLQS_Transaction_Monitor__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Pass</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OCLQS_Transaction_Monitor__c.Transaction_Log__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

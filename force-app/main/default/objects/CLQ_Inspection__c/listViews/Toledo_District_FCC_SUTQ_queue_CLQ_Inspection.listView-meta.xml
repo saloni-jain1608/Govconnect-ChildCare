@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Toledo_District_FCC_SUTQ_queue_CLQ_Inspection</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Toledo District FCC SUTQ queue</label>
+    <queue>Toledo_District_FCC_SUTQ_queue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

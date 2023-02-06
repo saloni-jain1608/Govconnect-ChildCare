@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_2_Star_Reapply_Validation_Rules__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Bypass 2-Star Reapply Validation Rules - checking this box will clear the program&apos;s CLQ_2_Star_Reapplying_Date__c, allowing the 2-star program to reapply, prior to the required 4 year waiting period.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box will clear the program&apos;s 2-star reapply date, allowing the 2-star program to reapply for a 2-star rating before its required 4 year waiting period is complete.</inlineHelpText>
+    <label>Allow 2 Star Override</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

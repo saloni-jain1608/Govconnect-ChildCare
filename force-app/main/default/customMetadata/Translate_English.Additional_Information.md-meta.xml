@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Additional Information</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Programs that plan to provide publicly funded child care must have a Step Up To Quality rating by July 1, 2020.  Programs that are exempt from SUTQ are able to provide publicly funded child care without a SUTQ rating.</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">Additional Information</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Programme, die eine öffentlich finanzierte Kinderbetreuung planen, müssen bis zum 1. Juli 2020 über eine Step Up To Quality-Bewertung verfügen. Programme, die von SUTQ ausgenommen sind, können öffentlich finanzierte Kinderbetreuung ohne SUTQ-Bewertung anbieten.</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">Los programas que planean brindar cuidado infantil financiado con fondos públicos deben tener una calificación Step Up To Quality antes del 1 de julio de 2020. Los programas que están exentos de SUTQ pueden brindar cuidado infantil financiado con fondos públicos sin una calificación SUTQ.</value>
+    </values>
+</CustomMetadata>

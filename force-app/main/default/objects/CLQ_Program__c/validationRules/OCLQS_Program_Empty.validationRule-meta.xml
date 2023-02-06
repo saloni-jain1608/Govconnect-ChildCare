@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OCLQS_Program_Empty</fullName>
+    <active>true</active>
+    <description>Program name cannot be empty</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(
+OR(
+ ISPICKVAL($Profile.UserType, &apos;PowerCustomerSuccess&apos;),
+ ISPICKVAL($Profile.UserType, &apos;CspLitePortal&apos;) 
+),
+  ISBLANK(Name) 
+)</errorConditionFormula>
+    <errorMessage>Program name cannot be empty</errorMessage>
+</ValidationRule>

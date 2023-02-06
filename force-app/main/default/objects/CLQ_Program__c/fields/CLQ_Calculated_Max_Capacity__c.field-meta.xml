@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Calculated_Max_Capacity__c</fullName>
+    <description>The sum of square footage for all indoor approved primary space rooms marked as serving children Over 2 ½ divided by 35 +  the sum of the total Number of Children Allowed for all indoor approved primary space rooms where “Will children in this room be over or under 2 1/2?” is marked Under or Both</description>
+    <externalId>false</externalId>
+    <label>Calculated Max Capacity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

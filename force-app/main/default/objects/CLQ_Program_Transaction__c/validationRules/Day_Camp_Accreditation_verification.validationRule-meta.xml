@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Camp_Accreditation_verification</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(RecordType.Name == &apos;Registration - Day Camp&apos;, 
+
+RecordType.Name == &apos;Renewal - Day Camp&apos;, 
+
+RecordType.Name == &apos;Update Day Camp&apos; 
+
+),  CLQ_ACA_Accredited__c = true,  ISPICKVAL( CLQ_AccreditationVerified__c, &apos;&apos;), ISPICKVAL(  CLQ_Transaction_Status__c , &apos;Approved&apos;) )</errorConditionFormula>
+    <errorDisplayField>CLQ_AccreditationVerified__c</errorDisplayField>
+    <errorMessage>Please verify the Accreditation</errorMessage>
+</ValidationRule>

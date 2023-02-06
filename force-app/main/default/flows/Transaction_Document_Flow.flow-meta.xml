@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Transaction_Document_Decision</name>
+        <label>Transaction Document Decision</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Transaction_Document_Decision_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CLQ_Update_Assigned_To_Email</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.ExecutionControlSetting__c.Run_Workflow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_Assigned_to_email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Assigned_User_Email_on_Trans_Doc</targetReference>
+            </connector>
+            <label>CLQ Update Assigned To Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Transaction_Document_Decision_0</name>
+        <label>Transaction Document Decision</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_All_Comments_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.ExecutionControlSetting__c.Run_Workflow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CLQ_Document_Comments__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Blank_Out_Document_Comment_0</targetReference>
+            </connector>
+            <label>Update All Comments</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Transaction Document Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Transaction Document Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Blank_Out_Document_Comment_0</name>
+        <label>Blank Out Document Comment</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <inputAssignments>
+            <field>CLQ_Document_Comments__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Assigned_User_Email_on_Trans_Doc</name>
+        <label>Set Assigned User Email on Trans Doc</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Transaction_Document_Decision_0</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CLQ_Assigned_User_Email__c</field>
+            <value>
+                <elementReference>$Record.CLQ_Assigned_to_email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Transaction_Document_Decision</targetReference>
+        </connector>
+        <object>CLQ_Transaction_Document__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

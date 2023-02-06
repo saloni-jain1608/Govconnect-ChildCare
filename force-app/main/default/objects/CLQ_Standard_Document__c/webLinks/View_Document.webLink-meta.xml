@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Document</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>View Document</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName(&apos;body&apos;)[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+console.log(x);
+console.log(y);
+
+function viewDocument() {
+
+window.open(&apos;/apex/Integration_ONBASE_OpenDoc?refId={!CLQ_Standard_Document__c.Id}&apos;,&apos;Documents&apos;,&apos;menubar=0,resizable=1,directories=0,titlebar=0,toolbar=0,location=0,status=0,scrollbars=1,fullscreen=1,top=150,left=250, height=880, width=880&apos;)
+
+}
+
+viewDocument();</url>
+</WebLink>

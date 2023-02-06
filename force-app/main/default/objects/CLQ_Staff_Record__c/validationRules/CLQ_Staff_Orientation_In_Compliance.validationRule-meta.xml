@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Staff_Orientation_In_Compliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;In Compliance&apos;), 
+OR( 
+INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODE - Not available&apos;), INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODJFS - No Orientation Training&apos;), 
+INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODJFS - Trainer Not Qualified&apos;), 
+INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODJFS - Form Not Complete&apos;), INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODJFS - Pending verification&apos;), 
+INCLUDES(CLQ_Staff_Orientation_Training_Completed__c, &apos;ODJFS - Not Applicable&apos;) 
+) 
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Staff_Orientation_Training_Completed__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for Staff Orientation Training Completed.</errorMessage>
+</ValidationRule>

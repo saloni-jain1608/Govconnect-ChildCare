@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Ongoing_Reg_less_than_6_months_ago__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Annual Report- Ongoing Registration less than 6 months ago</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box allows a program to create an Annual Report after it completed an Ongoing Registration in the last 6 months.</inlineHelpText>
+    <label>Annual Report/Ongoing Exception Override</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

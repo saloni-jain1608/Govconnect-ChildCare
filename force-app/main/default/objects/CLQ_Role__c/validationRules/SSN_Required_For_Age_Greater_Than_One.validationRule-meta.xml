@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSN_Required_For_Age_Greater_Than_One</fullName>
+    <active>true</active>
+    <description>When Age is greater than one then SSN is required for FCC Resident</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( OR($Profile.Name = &apos;OCLQS Customer Community Login User&apos;, $Profile.Name = &apos;OCLQS Customer Community Plus Login User&apos;,$Profile.Name = &apos;OCLQS Customer Community Plus Login User ODE SSO&apos;)  ,OR(  CLQ_Program_Transaction_Source__r.CLQ_Program__r.RecordType.Name  = &apos;FCC - Type A Home&apos;, CLQ_Program_Transaction_Source__r.CLQ_Program__r.RecordType.Name = &apos;FCC - Type B Home&apos;), RecordType.Name =&apos;Resident&apos;,  (  TODAY()  - CLQ_Contact__r.CLQ_Date_of_Birth__c )  &gt; 365,  CLQ_Contact__r.CLQ_SSN__c   = null  )</errorConditionFormula>
+    <errorMessage>SSN is required for age greater than one</errorMessage>
+</ValidationRule>

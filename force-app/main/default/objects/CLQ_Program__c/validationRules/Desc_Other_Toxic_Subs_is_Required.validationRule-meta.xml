@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desc_Other_Toxic_Subs_is_Required</fullName>
+    <active>true</active>
+    <description>Describe Other Toxic subsances is Required if Other Toxic Substances is Yes</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL( CLQ_Other_Toxic_Substances__c ,&quot;Yes&quot;),
+ISBLANK( CLQ_Describe_Other_Toxic_Substances__c ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Describe_Other_Toxic_Substances__c</errorDisplayField>
+    <errorMessage>Please describe other toxic substances</errorMessage>
+</ValidationRule>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Activity_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PAO Being Drafted</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>PAO Being Drafted</label>
+            </value>
+            <value>
+                <fullName>PAO Sent</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>PAO Sent</label>
+            </value>
+            <value>
+                <fullName>Suspension Order Delivered</fullName>
+                <default>false</default>
+                <label>Suspension Order Delivered</label>
+            </value>
+            <value>
+                <fullName>Hearing Requested</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Hearing Requested</label>
+            </value>
+            <value>
+                <fullName>Post Hearing</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Post Hearing</label>
+            </value>
+            <value>
+                <fullName>AO Mailed</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>AO Mailed</label>
+            </value>
+            <value>
+                <fullName>AO Appealed</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>AO Appealed</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Unable to Locate</fullName>
+                <default>false</default>
+                <label>Unable to Locate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

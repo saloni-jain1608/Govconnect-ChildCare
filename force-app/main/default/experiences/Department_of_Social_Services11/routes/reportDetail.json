@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "449cb15a-a6a5-4561-8e4a-12d357bc59c4",
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "configurationTags" : [ ],
+  "id" : "bd2258da-3cb0-41be-96d6-e77ba5d6ea7e",
+  "label" : "Report Detail",
+  "routeType" : "detail-00O",
+  "type" : "route",
+  "urlPrefix" : "report"
+}

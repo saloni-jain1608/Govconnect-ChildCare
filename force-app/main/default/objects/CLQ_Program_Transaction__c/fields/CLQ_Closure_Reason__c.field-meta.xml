@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Closure_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Closure Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CLQ_Closure_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Changed Type</fullName>
+                <default>false</default>
+                <label>Changed Type</label>
+            </value>
+            <value>
+                <fullName>Change in Jurisdiction</fullName>
+                <default>false</default>
+                <label>Change in Jurisdiction</label>
+            </value>
+            <value>
+                <fullName>Closed - Financial</fullName>
+                <default>false</default>
+                <label>Closed - Financial</label>
+            </value>
+            <value>
+                <fullName>Licensed in Error</fullName>
+                <default>false</default>
+                <label>Licensed in Error</label>
+            </value>
+            <value>
+                <fullName>Low Enrollment</fullName>
+                <default>false</default>
+                <label>Low Enrollment</label>
+            </value>
+            <value>
+                <fullName>ODE - Charter Revoked</fullName>
+                <default>false</default>
+                <label>ODE - Charter Revoked</label>
+            </value>
+            <value>
+                <fullName>ODE - Organization/Affiliation Change</fullName>
+                <default>false</default>
+                <label>ODE - Organization/Affiliation Change</label>
+            </value>
+            <value>
+                <fullName>ODE - Organization Merge</fullName>
+                <default>false</default>
+                <label>ODE - Organization Merge</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Closed through Settlement</fullName>
+                <default>false</default>
+                <label>ODJFS - Closed through Settlement</label>
+            </value>
+            <value>
+                <fullName>ODJFS - License Revoked</fullName>
+                <default>false</default>
+                <label>ODJFS - License Revoked</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Ownership Change</fullName>
+                <default>false</default>
+                <label>ODJFS - Ownership Change</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Voluntary/Enforcement</fullName>
+                <default>false</default>
+                <label>ODJFS - Voluntary/Enforcement</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Renovation/Construction</fullName>
+                <default>false</default>
+                <label>Renovation/Construction</label>
+            </value>
+            <value>
+                <fullName>Suspension</fullName>
+                <default>false</default>
+                <label>Suspension</label>
+            </value>
+            <value>
+                <fullName>Unsafe/Damaged Building</fullName>
+                <default>false</default>
+                <label>Unsafe/Damaged Building</label>
+            </value>
+            <value>
+                <fullName>Voluntary Closure</fullName>
+                <default>false</default>
+                <label>Voluntary Closure</label>
+            </value>
+            <value>
+                <fullName>Location change</fullName>
+                <default>false</default>
+                <label>Location change</label>
+            </value>
+            <value>
+                <fullName>No longer accredited</fullName>
+                <default>false</default>
+                <label>No longer accredited</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Closed - Financial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <valueName>Low Enrollment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODE - Organization/Affiliation Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODE - Organization Merge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <valueName>Renovation/Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <valueName>Suspension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <valueName>Unsafe/Damaged Building</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary</controllingFieldValue>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Voluntary Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Changed Type</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Change in Jurisdiction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Licensed in Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODE - Charter Revoked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODJFS - Closed through Settlement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODJFS - License Revoked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODJFS - Ownership Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>ODJFS - Voluntary/Enforcement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>Location change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Permanent</controllingFieldValue>
+            <valueName>No longer accredited</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

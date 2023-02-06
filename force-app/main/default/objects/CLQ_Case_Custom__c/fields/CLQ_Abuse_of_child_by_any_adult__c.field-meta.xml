@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Abuse_of_child_by_any_adult__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Abuse of child by any adult</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

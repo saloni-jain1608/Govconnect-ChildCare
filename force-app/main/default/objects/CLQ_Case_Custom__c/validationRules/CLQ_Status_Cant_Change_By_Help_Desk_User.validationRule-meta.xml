@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Status_Cant_Change_By_Help_Desk_User</fullName>
+    <active>true</active>
+    <description>When help desk user changes Status, display Error Message - Status can not be changed</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name = &apos;Alleged Ops Submitted&apos;, 
+    TEXT(CLQ_Status__c) != &apos;Not Submitted&apos;,
+    CONTAINS($Profile.Name,&quot;Help Desk&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Status__c</errorDisplayField>
+    <errorMessage>Help Desk Users can not edit fields if Submitted</errorMessage>
+</ValidationRule>

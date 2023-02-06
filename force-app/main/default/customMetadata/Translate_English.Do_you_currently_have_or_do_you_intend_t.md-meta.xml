@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Do you currently have or do you intend t</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Do you currently have or do you intend to complete a provider agreement to serve families receiving Publicly Funded Child Care (PFCC)?</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Provider_Agreement__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Haben Sie derzeit oder beabsichtigen Sie, eine Anbietervereinbarung abzuschließen, um Familien zu unterstützen, die öffentlich finanzierte Kinderbetreuung (PFCC) erhalten?</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Program_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿Actualmente tiene o tiene la intención de completar un acuerdo de proveedor para servir a las familias que reciben cuidado infantil financiado con fondos públicos (PFCC)?</value>
+    </values>
+</CustomMetadata>

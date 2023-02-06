@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Action_Required__c</fullName>
+    <externalId>false</externalId>
+    <label>Action Required</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CAP</fullName>
+                <default>false</default>
+                <label>CAP</label>
+            </value>
+            <value>
+                <fullName>TA</fullName>
+                <default>false</default>
+                <label>TA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

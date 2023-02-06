@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approve</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Approve</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var Cap= new sforce.SObject(&quot;CLQ_Corrective_Action_Plan__c&quot;);
+Cap.Id = &apos;{!CLQ_Corrective_Action_Plan__c.Id}&apos;;
+Cap.CLQ_CAP_Status__c =&apos;Approved&apos;;
+var result = sforce.connection.update([Cap]);
+if(result[0].getBoolean(&quot;success&quot;))
+{
+window.location.reload();
+}
+else{
+alert(&apos;Error : &apos;+result);
+}</url>
+</WebLink>

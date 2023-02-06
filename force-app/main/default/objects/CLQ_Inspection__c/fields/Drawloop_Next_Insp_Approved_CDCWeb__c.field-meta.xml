@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_Insp_Approved_CDCWeb__c</fullName>
+    <description>(Forms/Reports) Drawloop next field for Inspection Full Report for Inspection record type for CDC Web purposes (ODE &amp; JFS)
+DDP: Licensing Inspection Full Report
+Delivery Option: SMTP - Inspection Approved (CDC Web only)</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Inspection__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000xtEP;Deploy:a01r0000001LWSk&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DL Next Inspection Approved (CDC Web)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

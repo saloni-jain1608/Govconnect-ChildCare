@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CCC_Field_Officers__c</name>
+    <picklistValues>
+        <masterLabel>VDSS/CENTRAL LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/CHILD_WELFARE_LICENSING</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/EASTERN LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/FAIRFAX LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/NORTHERN LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/PENINSULA LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/PIEDMONT LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/VALLEY LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VDSS/WESTERN LICENSING OFFICE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

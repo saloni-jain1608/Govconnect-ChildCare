@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>9E63C76E-B15A-4047-923C-C3C7F7EAE411</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="8.926 18.652 4 13.725 5.767 11.957 8.841 15.031 17.959 5 19.808 6.682"></polygon>
+    </defs>
+    <g id="Needs-Assessment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NA---Domain-Selection" transform="translate(-797.000000, -509.000000)">
+            <g id="Group-8" transform="translate(789.000000, 501.000000)">
+                <g id="Icon/Success" transform="translate(4.000000, 3.000000)">
+                    <rect id="Bounding-Box" x="0" y="0" width="24" height="24"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g id="Mixin/Fill/White" mask="url(#mask-2)" fill-rule="evenodd" fill="#FFFFFF">
+                        <rect id="Box" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

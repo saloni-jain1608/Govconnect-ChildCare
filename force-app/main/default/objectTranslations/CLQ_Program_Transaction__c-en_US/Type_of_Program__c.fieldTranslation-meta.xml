@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Type_of_Program__c</name>
+    <picklistValues>
+        <masterLabel>OOS Center Home</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OOS Family Child Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

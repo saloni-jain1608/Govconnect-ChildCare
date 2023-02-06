@@ -1,0 +1,14 @@
+<template>
+    <div if:true={isLoading}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+        </lightning-spinner>
+    </div>
+
+    <!--c-program-license-form json-data={jsonData}></c-program-license-form-->
+    <template if:true={isJsonDataRetrieved}>
+        <c-program-license-form json-data={jsonData} program-id={selectedProgramId} program-application-id={programTransactionId}   languageselected={Lang_Selected}></c-program-license-form>
+        <!--c-program-license-form></c-program-license-form-->
+    </template>
+    
+</template>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Address_Reqd_Day_Camp_Registration</fullName>
+    <active>true</active>
+    <description>Physical Address Required for Day Camp if Transaction type = Registration</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(  CLQ_Registration_Status__c  , &apos;Submitted&apos;), ISPICKVAL( CLQ_Transaction_Type__c , &apos;Registration&apos;), RecordType.Name = &apos;Day Camp&apos;,  OR( ISBLANK( CLQ_ProgTrans_Street_Address__c ),ISBLANK(  CLQ_ProgTrans_City__c ),ISBLANK(  CLQ_Program_Phone__c ), ISBLANK( CLQ_ProgTrans_Program_Email_Address__c ), ISBLANK(  CLQ_ProgTrans_Zip_Code__c ),ISBLANK(  TEXT(  CLQ_ProgTrans_State__c ) ) )  )</errorConditionFormula>
+    <errorDisplayField>A_LP_Criteria__c</errorDisplayField>
+    <errorMessage>Physical Address is Required for Registration</errorMessage>
+</ValidationRule>

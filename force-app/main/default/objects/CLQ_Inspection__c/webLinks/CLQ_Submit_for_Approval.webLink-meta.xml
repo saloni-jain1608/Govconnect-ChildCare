@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Submit_for_Approval</fullName>
+    <availability>online</availability>
+    <description>This applies to Lsc Inspections not SUTQ.
+[Ramana, 5/18/2017]: Redesigned for CR 11182. Now we are using same button for both Licensing and SUTQ Inspections.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Description: Applies to both Licensing and SUTQ Inspections.
+//Assumptions: 1. This button will be used by Internal users only, not by External users.
+//2. The logic is based on User SFDC Role, all Intenal Users must have proper SFDC Role (Sys Admins excluded).
+//3. There should be atleast 1 inspector exist for a given Inspection.
+//Change History: 1. [Ramana, 5/3/2017]: Updated for bug 10897 to handle Inspection Rejected scenario.
+//2. [Ramana, 5/18/2017]: Redesigned for CR 11182.
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+
+//16011
+var today = new Date();
+//16011
+var date = (today.getMonth() + 1) + &apos;/&apos; + today.getDate() + &apos;/&apos; + today.getFullYear();
+var proname = &apos;{!$Profile.Name}&apos;;
+var rolename = &apos;{!$UserRole.Name}&apos;; //alert(&apos;User Role: &apos; +rolename);
+var InspQry = sforce.connection.query(&quot;SELECT Id, Name, OwnerId, Owner.Type, CLQ_Visit_Status__c, CLQ_Inspection_Status__c, CLQ_Inspection_Owner__r.Manager.IsActive, CLQ_Inspection_Type__c,CLQ_Program_Transaction__r.CLQ_Transaction_Assigned_To__c, CLQ_Program__r.CLQ_Licensing_Specialist__c, CLQ_Inspection__c.CLQ_Program_Transaction__c,CLQ_Inspection_Owner__r.ManagerId FROM CLQ_Inspection__c WHERE Id =&apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+var InspectionRecs = InspQry.getArray(&apos;records&apos;);
+var InspOwnerId = &apos;{!CLQ_Inspection__c.OwnerId}&apos;;
+var InspectorsQry = sforce.connection.query(&quot;SELECT Id, Name, CLQ_Inspector_Name__c FROM CLQ_Inspector__c WHERE CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+var Inspectors = InspectorsQry.getArray(&apos;records&apos;); //alert(&apos;Inspectors: &apos; +Inspectors)
+var enrollmentGroupsQry = sforce.connection.query(&quot;SELECT Id, Name FROM CLQ_Enrollment_Group__c WHERE CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+
+var enrollmentGroups = enrollmentGroupsQry.getArray(&apos;records&apos;);
+var InspectorIds = [];
+if (Inspectors != null) {
+    for (var i = 0; i &lt; Inspectors.length; i++) {
+        InspectorIds.push(Inspectors[i].CLQ_Inspector_Name__c);
+    }
+    InspectorIds = InspectorIds.toString().replace(/,/g, &quot;,&quot;);
+    //alert(&apos;InspectorIds: &apos; +InspectorIds);
+}
+var bypassval = false;
+var CanSubmitForApproval = false;
+var ErrMsg = &apos;Error - Cannot submit for approvals.&apos;;
+var ProgCounty = &apos;{!CLQ_Inspection__c.CLQ_County__c}&apos;;
+var InspectionRT = &apos;{!CLQ_Inspection__c.Inspection_Record_Type__c}&apos;;
+//var JFSsfdcRoles = &apos;{!$Label.JFS_SFDC_Roles}&apos;;
+//var ODEsfdcRoles = &apos;{!$Label.ODE_SFDC_Roles}&apos;; //alert(&apos;ODEsfdcRoles: &apos; +ODEsfdcRoles);
+var sfdcAdminProfiles = &apos;{!$Label.SFDC_Admin_Profiles}&apos;;
+var NACOCcounties = &apos;{!$Label.JFS_NACOC_Counties}&apos;;
+var SCcounties = &apos;{!$Label.JFS_SouthCentral_Counties}&apos;;
+
+var strCombinedCounties = &apos;&apos;;
+var ptCountyUC = ProgCounty.toUpperCase();
+if (rolename != null &amp;&amp; rolename.toLowerCase().indexOf(&apos;county&apos;) &gt;= 0) {
+    var usrCounty = rolename.substring(0, rolename.toLowerCase().indexOf(&apos;county&apos;)).trim().toUpperCase();
+    var combinedCountyRec = sforce.connection.query(&quot;Select CLQ_Combined_Counties__c from CLQ_Combined_Counties__mdt where DeveloperName = &apos;&quot; + usrCounty + &quot;&apos; and CLQ_Process_Combined_County__c = true&quot;);
+    var records = combinedCountyRec.getArray(&quot;records&quot;);
+
+    if (records.length &gt; 0) {
+        strCombinedCounties = records[0].CLQ_Combined_Counties__c;
+    }
+}
+
+
+
+//To check Approved Capacities on PT
+if (&apos;{!CLQ_Inspection__c.CLQ_Program_Transaction__c}&apos; != &apos;&apos; &amp;&amp; InspectionRT == &apos;Inspection&apos;) {
+    var PTrec = sforce.connection.query(&quot;Select name,id,recordtypeid,CLQ_Approved_Total_Capacity__c,CLQ_Approved_Capacity_Under_2_1_2__c,CLQ_Approved_Capacity_Under_2__c,CLQ_New_Approved_All_Groups_Capacity__c,CLQ_New_Approved_Under_2_Capacity__c,CLQ_New_Approved_Capacity_Under_2_1_2__c from CLQ_Program_Transaction__c where id=\&apos;&quot; + InspectionRecs[0].CLQ_Program_Transaction__c + &quot;\&apos;&quot;);
+    var PT = PTrec.getArray(&quot;records&quot;);
+    var rectype = sforce.connection.query(&quot;SELECT Name,Id from recordtype where Id=\&apos;&quot; + PT[0].RecordTypeId + &quot;\&apos;&quot;);
+    var rectyperecs = rectype.getArray(&quot;records&quot;);
+    var rtype = rectyperecs[0].Name;
+
+    if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Pending Processing&apos; &amp;&amp; (rtype == &apos;Amendment - Center - Change of Location&apos; || rtype == &apos;Amendment - ODE - Change of Location&apos;) &amp;&amp; ((PT[0].CLQ_Approved_Total_Capacity__c != null &amp;&amp; PT[0].CLQ_Approved_Total_Capacity__c != 0) || (PT[0].CLQ_Approved_Capacity_Under_2_1_2__c != null &amp;&amp; PT[0].CLQ_Approved_Capacity_Under_2_1_2__c != 0))) {
+        bypassval = true;
+    }
+    if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Pending Processing&apos; &amp;&amp; (rtype == &apos;Amendment - FCC - Change of Location&apos;) &amp;&amp; ((PT[0].CLQ_Approved_Total_Capacity__c != null &amp;&amp; PT[0].CLQ_Approved_Total_Capacity__c != 0) || (PT[0].CLQ_Approved_Capacity_Under_2__c != null &amp;&amp; PT[0].CLQ_Approved_Capacity_Under_2__c != 0))) {
+        bypassval = true;
+    }
+
+    if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Pending Processing&apos; &amp;&amp; (rtype == &apos;Amendment- FCC - Change of Capacity / Space&apos;) &amp;&amp; ((PT[0].CLQ_New_Approved_All_Groups_Capacity__c != null &amp;&amp; PT[0].CLQ_New_Approved_All_Groups_Capacity__c != 0) || (PT[0].CLQ_New_Approved_Under_2_Capacity__c != null &amp;&amp; PT[0].CLQ_New_Approved_Under_2_Capacity__c != 0))) {
+        bypassval = true;
+    }
+    if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Pending Processing&apos; &amp;&amp; (rtype == &apos;Amendment - ODE and Center - Change of Capacity / Space&apos;) &amp;&amp; ((PT[0].CLQ_New_Approved_All_Groups_Capacity__c != null &amp;&amp; PT[0].CLQ_New_Approved_All_Groups_Capacity__c != 0) || (PT[0].CLQ_New_Approved_Capacity_Under_2_1_2__c != null &amp;&amp; PT[0].CLQ_New_Approved_Capacity_Under_2_1_2__c != 0))) {
+        bypassval = true;
+    }
+}
+if (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Owner__c}&apos; == &apos;&apos; || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Owner__c}&apos; == null)
+    ErrMsg = &apos;Inspection Owner is not assigned - Cannot submit for approvals.&apos;;
+else if ({!ISBLANK(CLQ_Inspection__c.CLQ_Owner_Manager__c)} || InspectionRecs[0].CLQ_Inspection_Owner__r.Manager.IsActive == &apos;false&apos; )
+ErrMsg = &apos;User Manager is Missing or Inactive. Please update and submit for approvals.&apos;;
+//16011
+else if ((&apos;{!CLQ_Inspection__c.Onsite_Rating__c}&apos; == 2) &amp;&amp; (date &lt; &apos;{!CLQ_Inspection__c.X2star_re_reg_field__c}&apos;)) {
+
+    ErrMsg = &apos;Onsite rating is 2 and current date falls before the 2 star re-register date&apos;;
+}
+// 15275 - Adding valdiation to check if Total Enrollment is zero
+else if (enrollmentGroups == &apos;&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Total_Enrollment__c}&apos; == 0 &amp;&amp; (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Annual&apos; || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Provisional&apos; || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Compliance&apos; || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Follow-up&apos;))
+    ErrMsg = &apos;{!$Label.Cannot_Submit_Inspection_with_Total_Enrollment_NULL}&apos;;
+/*else if (InspectionRT == &apos;Inspection&apos; &amp;&amp; (&apos;{!CLQ_Inspection__c.CLQ_Visit_Status__c}&apos; != &apos;Visit Completed&apos; || (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Pending Processing&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; != &apos;Returned to Reviewer&apos;) || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Pre-license&apos;
+    || &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; == &apos;Technical Assistance&apos;)) {
+    ErrMsg = &apos;Check the following Entry Criteria before submitting for approval :\r\n 1.Visit Status should be Visit Completed \r\n 2.Inspection Status should be Pending Processing or Returned to Reviewer\r\n 3.Inspection Type should not be Pre-license or Technical Assistance&apos;;
+}*/
+else if (InspectionRT == &apos;Onsite Visit Record Type&apos; &amp;&amp; (&apos;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&apos; == &apos;Rating Assessment Complete&apos;)) {
+    ErrMsg = &apos;Cannot submit inspection that is already in Rating Assessment Complete Status&apos;;
+}
+//alert(&apos;flag value - &apos; + bypassval);
+else if (bypassval)
+    ErrMsg = &apos;The Approved Capacity values on the Program Transaction need to be Blank or Zero.&apos;;
+else if (sfdcAdminProfiles.indexOf(proname) != -1)
+    CanSubmitForApproval = true;
+else if (rolename == &apos;&apos; || rolename == null)
+    ErrMsg = &apos;You do not have a Role - Cannot submit for approvals. Please contact OCLQS Help Desk.&apos;;
+/*else if ((strCombinedCounties.length == 0 || strCombinedCounties.indexOf(ptCountyUC) &lt; 0) &amp;&amp; {!NOT(ISNULL($UserRole.Name))} &amp;&amp; $UserRole.Name.toLowerCase()includes(&apos;county&apos;) &amp;&amp; !$UserRole.Name.toLowerCase().includes(CLQ_Inspection__c.CLQ_County__c.toLowerCase()) &amp;&amp; $Label.JFS_County_Program_Record_Type.includes( CLQ_Inspection__c.CLQ_Program_Record_Type__c)) {
+    ErrMsg = &apos;{!$Label.Approval_Submit_Error_Message}&apos;;
+}*/
+//Inspection - CCC Programs
+//Onsite - CCC/FCCC Programs
+else if ((InspectionRT == &apos;Inspection&apos; &amp;&amp; (&quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;Child Care Center&quot; || &quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;Day Camp&quot;)) || (InspectionRT == &apos;Onsite Visit Record Type&apos; &amp;&amp; (&quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;Child Care Center&quot; || &quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;FCC - Type A Home&quot; || &quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;FCC - Type B Home&quot;))) {
+    var rolenameUC = rolename.toUpperCase();
+    var usrCounty = &apos;&apos;;
+    if (rolenameUC.indexOf(&apos;COUNTY&apos;) &gt;= 0) {
+        usrCounty = rolenameUC.substring(0, rolenameUC.indexOf(&apos;COUNTY&apos;)).trim();
+    }
+
+    if (rolename == &apos;JFS State Admin&apos; || rolename == &apos;JFS Supervisor&apos; || rolenameUC.indexOf(&apos;NOCAC&apos;) || rolenameUC.indexOf(&apos;SOUTH CENTRAL&apos;) || ((rolename == &apos;JFS Specialist&apos; || (usrCounty != &apos;&apos; &amp;&amp; (&apos;{!$Label.SUTQ_AKRON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_CLEVELAND_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_COLUMBUS_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_DAYTON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_TOLEDO_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0))) &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1)))
+        CanSubmitForApproval = true;
+    else
+        ErrMsg = &apos;You do not have a &quot;JFS State Admin/Supervisor Role&quot; or You are not an Inspector for this Inspection - Cannot submit for approvals.&apos;;
+}
+//Inspection and Onsite - ODE Programs
+else if (&quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;Pre School&quot; || &quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;School Age Child Care&quot;) {
+    if (rolename == &apos;ODE State Admin&apos; || rolename == &apos;ODE Supervisor&apos; || (rolename == &apos;ODE Specialist&apos; &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1)))
+        CanSubmitForApproval = true;
+    else
+        ErrMsg = &apos;You do not have a &quot;ODE State Admin/Supervisor Role&quot; or You are not an Inspector for this Inspection - Cannot submit for approvals.&apos;;
+}
+//Inspection - FCC Programs
+else if (InspectionRT == &apos;Inspection&apos; &amp;&amp; (&quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;FCC - Type A Home&quot; || &quot;{!CLQ_Inspection__c.CLQ_Program_Record_Type__c}&quot; == &quot;FCC - Type B Home&quot;)) {
+    if (ProgCounty != &apos;&apos; &amp;&amp; ProgCounty != null) {
+        var rolenameLC = rolename.toLowerCase();
+        var ProgCountyLC = ProgCounty.toLowerCase();
+        //NACOC Roles
+        if ((NACOCcounties.indexOf(ProgCounty) != -1) &amp;&amp; (rolenameLC.indexOf(ProgCountyLC) != -1 || rolename.indexOf(&apos;NOCAC&apos;) != -1) &amp;&amp; (rolename.indexOf(&apos;Approver&apos;) != -1 || (rolename.indexOf(&apos;Reviewer&apos;) != -1 &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1))))
+            CanSubmitForApproval = true;
+        //South Central Roles
+        else if ((SCcounties.indexOf(ProgCounty) != -1) &amp;&amp; (rolenameLC.indexOf(ProgCountyLC) != -1 || rolename.indexOf(&apos;South Central&apos;) != -1) &amp;&amp; (rolename.indexOf(&apos;Approver&apos;) != -1 || (rolename.indexOf(&apos;Reviewer&apos;) != -1 &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1))))
+            CanSubmitForApproval = true;
+        else if (strCombinedCounties.indexOf(ptCountyUC) != -1)
+            CanSubmitForApproval = true;
+        else if (rolenameLC.indexOf(ProgCountyLC) != -1 &amp;&amp; (rolename.indexOf(&apos;Approver&apos;) != -1 || rolename.indexOf(&apos;Admin&apos;) != -1 || (rolename.indexOf(&apos;Reviewer&apos;) != -1 &amp;&amp; (InspOwnerId.indexOf(&apos;{!$User.Id}&apos;) != -1 || InspectorIds.indexOf(&apos;{!$User.Id}&apos;) != -1))))
+            CanSubmitForApproval = true;
+        else
+            ErrMsg = &apos;You do not have a &apos; + ProgCounty + &apos; County Approver Role or You are not an Inspector for this Inspection - Cannot submit for approvals.&apos;;
+    }
+    else
+        ErrMsg = &apos;County is blank for this FCC program - Cannot submit for approvals.&apos;;
+}
+
+
+//Adding validation for 14973 for allowing only Open, Inactive and Enforcement Programs to submit the onsite Inspections for Approval
+if (InspectionRT == &apos;Onsite Visit Record Type&apos; &amp;&amp; (&apos;{!CLQ_Inspection__c.CLQ_Program_Status__c}&apos; != &apos;Open&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Program_Status__c}&apos; != &apos;Enforcement&apos; &amp;&amp; &apos;{!CLQ_Inspection__c.CLQ_Program_Status__c}&apos; != &apos;Inactive&apos;)) {
+    ErrMsg = &apos;Onsite visit can be submitted for approval only if the Program is Open, Inactive or Enforcement&apos;;
+    CanSubmitForApproval = false;
+}
+
+//To check for all findings being rated 14778
+if (&apos;{!CLQ_Inspection__c.CLQ_Program_Transaction__c}&apos; != &apos;&apos; &amp;&amp; InspectionRT == &apos;Onsite Visit Record Type&apos;) {
+    var rulesInspected = sforce.connection.query(&quot;SELECT Id, Name FROM CLQ_Rules_Inspected__c where CLQ_Inspection_No__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+    var rulesInspectedList = rulesInspected.getArray(&quot;records&quot;);
+    var findings = sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;);
+    var findingsList = findings.getArray(&quot;records&quot;);
+    var sizeRL = rulesInspectedList.length;
+    var sizeFL = findingsList.length;
+
+    if (sizeRL != sizeFL) {
+        ErrMsg = &apos;All Onsite Standard Findings must have a rating or point value before the visit can be submitted for approval.&apos;;
+        CanSubmitForApproval = false;
+    }
+}
+//end 14778
+
+//alert(&apos;final flag value - &apos; + CanSubmitForApproval);
+if (CanSubmitForApproval) {
+    if ((Modal.confirm &amp;&amp; Modal.confirm(&apos;Once you submit this record for approval, you might not be able to edit it or recall it from the approval process depending on your settings. Continue?&apos;)) || (!Modal.confirm &amp;&amp; window.confirm(&apos;Once you submit this record for approval, you might not be able to edit it or recall it from the approval process depending on your settings. Continue?&apos;))) {
+        //Invoke Approval Process
+        var sUrlFull = &apos;{!$Api.Enterprise_Server_URL_350}&apos;;
+        var sUrl = sUrlFull.substring(0, sUrlFull.indexOf(&apos;.com&apos;));
+        var xhr = new XMLHttpRequest();
+        xhr.open(&quot;POST&quot;, sUrl + &quot;.com/services/data/v30.0/process/approvals/&quot;, false);
+        xhr.setRequestHeader(&quot;Content-type&quot;, &quot;application/json; charset=UTF-8&quot;);
+        xhr.setRequestHeader(&quot;Authorization&quot;, &quot;Bearer &quot; + &quot;{!$Api.Session_Id}&quot;);
+
+        var strBodyJson = &apos;{&quot;requests&quot; : [{&quot;actionType&quot;: &quot;Submit&quot;, &quot;contextActorId&quot;: &quot;{!$User.Id}&quot;, &quot;contextId&quot;: &quot;{!CLQ_Inspection__c.Id}&quot;, &quot;comments&quot;: &quot;&quot;, &quot;processDefinitionNameOrId&quot;: &quot;&quot;, &quot;skipEntryCriteria&quot;: &quot;true&quot;}]}&apos;;
+        xhr.send(strBodyJson);
+
+        var rText = myFunction(eval(xhr.responseText));
+        if (!rText || rText === &apos;undefined&apos;) {
+            alert(&quot;Submitted successfully&quot;);
+            ////////Task Alert for Approve Upon Approval Submission////////
+            var today = new Date();
+            var noOfDays = 7;
+            today.setDate(today.getDate() + noOfDays);
+            var tsk = new sforce.SObject(&apos;Task&apos;);
+            tsk.Subject = &apos;Approve Inspection: &apos; + &apos;{!CLQ_Inspection__c.CLQ_Inspection_Type__c}&apos; + &apos; - &apos; + &apos;{!CLQ_Inspection__c.Name}&apos;;
+            //alert(&apos;the value is&apos;+InspectionRecs[0].CLQ_Inspection_Owner__r.ManagerId);
+            tsk.OwnerId = InspectionRecs[0].CLQ_Inspection_Owner__r.ManagerId;
+            tsk.WhatId = &apos;{!CLQ_Inspection__c.Id}&apos;;
+            tsk.ActivityDate = today;
+            tsk.Priority = &apos;Normal&apos;;
+            tsk.Status = &apos;Open&apos;;
+            result = sforce.connection.create([tsk]);
+            if (result[0].success == &apos;true&apos;) {
+                window.location.reload();
+            }
+        }
+        else {
+            alert(rText);
+        }
+
+        function myFunction(arr) {
+            var out = &quot;&quot;;
+            var i;
+            for (i = 0; i &lt; arr.length; i++) {
+                out += arr[i].message;
+            }
+            return out;
+        }
+    }
+}
+else
+    alert(ErrMsg);</url>
+</WebLink>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Age_Groups_Serving__c</fullName>
+    <description>Which of the following age groups will the program serve? (check all that apply)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which of the following age groups will the program serve? (check all that apply)</inlineHelpText>
+    <label>Age Groups Serving</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Infant</fullName>
+                <default>false</default>
+                <label>Infant</label>
+            </value>
+            <value>
+                <fullName>Toddler</fullName>
+                <default>false</default>
+                <label>Toddler</label>
+            </value>
+            <value>
+                <fullName>Preschool</fullName>
+                <default>false</default>
+                <label>Preschool</label>
+            </value>
+            <value>
+                <fullName>School-Age</fullName>
+                <default>false</default>
+                <label>School-Age</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

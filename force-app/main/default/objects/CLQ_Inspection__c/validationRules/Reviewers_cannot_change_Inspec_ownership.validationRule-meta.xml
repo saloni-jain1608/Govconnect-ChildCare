@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewers_cannot_change_Inspec_ownership</fullName>
+    <active>true</active>
+    <description>Inspection ownership cannot be changed by reviewers</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND (ISCHANGED( OwnerId ), CONTAINS($Profile.Name,&quot;Reviewer&quot;), 
+NOT(CONTAINS($Profile.Name,&quot;Approver&quot;)), 
+NOT(CONTAINS($Profile.Name,&quot;State Admin&quot;)) )</errorConditionFormula>
+    <errorMessage>You cannot change Inspection owner, please contact your Manager / OCLQS help desk.</errorMessage>
+</ValidationRule>

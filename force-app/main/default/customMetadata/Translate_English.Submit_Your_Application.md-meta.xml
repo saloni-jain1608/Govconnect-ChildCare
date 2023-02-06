@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Submit Your Application</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Your application is not yet submitted. If there is a fee associated with your application you will be directed to the payment page. You must make your payment to finish processing the application. If your payment is unsuccessful, your application will not be considered submitted.&lt;/p&gt;</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Ihr Antrag wurde noch nicht eingereicht. Wenn mit Ihrem Antrag eine Gebühr verbunden ist, werden Sie zur Zahlungsseite weitergeleitet. Sie müssen Ihre Zahlung leisten, um die Bearbeitung des Antrags abzuschließen. Wenn Ihre Zahlung nicht erfolgreich ist, wird Ihre Bewerbung als nicht eingereicht betrachtet.&lt;/p&gt;</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">&lt;p&gt;Su solicitud aún no se ha enviado. Si hay una tarifa asociada con su solicitud, será dirigido a la página de pago. Debe realizar su pago para terminar de procesar la solicitud. Si su pago no se realiza correctamente, su solicitud no se considerará enviada.&lt;/p&gt;</value>
+    </values>
+</CustomMetadata>

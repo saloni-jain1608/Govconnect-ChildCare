@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Complaint_cant_be_recorded</fullName>
+    <active>true</active>
+    <description>A Complaint cannot be recorded on a program having the following license status:
+o Pending
+o Denied</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(ISNEW(), AND (NOT(ISNEW()),NOT(CONTAINS( $Label.State_Admin_Profiles, $Profile.Name)))), CONTAINS(RecordType.Name, &apos;Complaint&apos;),OR(ISPICKVAL(CLQ_Program__r.CLQ_Program_Status__c, &apos;Pending&apos;) ,ISPICKVAL(CLQ_Program__r.CLQ_Program_Status__c, &apos;Denied&apos;), ISPICKVAL(CLQ_Program__r.CLQ_Program_Status__c, &apos;Closed&apos;)))</errorConditionFormula>
+    <errorMessage>A Complaint cannot be recorded on a program having the following Program Status:Pending,Denied</errorMessage>
+</ValidationRule>

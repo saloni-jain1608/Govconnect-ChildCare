@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Time__c</fullName>
+    <description>Holds the Start Time of any System Maintenance. To be used with the &quot;Maintenance&quot; Record Type.</description>
+    <externalId>false</externalId>
+    <label>Start Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

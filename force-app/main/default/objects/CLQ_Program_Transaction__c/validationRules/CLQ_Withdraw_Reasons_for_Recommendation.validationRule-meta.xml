@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Withdraw_Reasons_for_Recommendation</fullName>
+    <active>true</active>
+    <description>If Recommendation is Deny, Deny reasons are required</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL( CLQ_Recommendation__c , &apos;Withdraw&apos;) , 
+OR(ISBLANK( TEXT( CLQ_Withdraw_Reasons__c ) ),  ISBLANK( CLQ_Reviewer_Notes__c ) ) 
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_Recommendation__c</errorDisplayField>
+    <errorMessage>Specify Withdraw Reasons and Reviewer Comments</errorMessage>
+</ValidationRule>

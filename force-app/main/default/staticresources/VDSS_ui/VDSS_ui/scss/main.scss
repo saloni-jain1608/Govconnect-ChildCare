@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// button css
+
+.slds-button {
+    &_brand {
+        background-image: linear-gradient(to bottom,#35456d,#465b8f);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight:400;
+        &:hover{
+            background-image: linear-gradient(to bottom,#10276d,#173799);
+        }
+    }
+}
+
+.vc {
+    &-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/bg_texture.jpg);
+        background-color: white;
+    }
+
+    &-header {
+        width: 100%;
+
+        .brand-logo {
+            img {
+                height: 60px;
+                width: auto;
+            }
+        }
+    }
+
+    &-footer {
+        margin-top: auto;
+        background-color: #d9d9d9;
+        border-top: 10px solid #999;
+
+        .brand-logo {
+            img {
+                height: 60px;
+                width: auto;
+            }
+        }
+
+        .footer-nav {
+            flex-grow: 1;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    color: #10276d;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// login form comp css
+.login {
+    &-container {
+        border-radius: 3px;
+        width: 100%;
+        padding: 25px;
+        background-color: #fff;
+        box-shadow: 0 0 3px #999;
+    }
+
+    &-header {
+        color: gray;
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2.1em;
+            color: #10276d;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &-form {
+        &--body {
+            background-image: url(../img/login-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border: 5px solid #d9d9d9;
+            padding: 100px 50px;
+            display: flex;
+            justify-content: flex-end;
+
+            .slds-form-element__label {
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+        }
+
+        &--header {
+            background-color: #35456d;
+            background-image: linear-gradient(to bottom, #35456d, #465b8f);
+            background-repeat: repeat-x;
+            margin: 10px -5px;
+            padding: 3px 15px;
+            color: white;
+
+            h4 {
+                font-size: 1.4em;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-style: italic;
+                color: #ccc;
+            }
+        }
+
+        &--card {
+            background: rgba(white, .7);
+            max-width: 500px;
+        }
+
+        &--footer {
+            background-color: white;
+            // padding: 15px;
+        }
+    }
+
+
+}
+
+.comm-page-login-home {
+    .slds-col--padded.contentRegion.comm-layout-column {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

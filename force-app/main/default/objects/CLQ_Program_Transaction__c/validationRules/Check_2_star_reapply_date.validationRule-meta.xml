@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_2_star_reapply_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT( Skip_Validation__c) &amp;&amp; AND(CLQ_Program__r.CLQ_2_Star_Reapplying_Date__c &gt;= TODAY(), TEXT(Rating_Proposed_By_Program__c ) = &apos;2&apos;)</errorConditionFormula>
+    <errorMessage>2 Star rating can be given once in 4 years.</errorMessage>
+</ValidationRule>

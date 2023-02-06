@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Issue_Date_is_Required</fullName>
+    <active>true</active>
+    <description>Issue Date is required on Licensed Programs</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(ISPICKVAL(CLQ_License_Registration_Status__c,&quot;Licensed&quot;)
+,ISPICKVAL(CLQ_License_Registration_Status__c,&quot;Licensed/Certified&quot;)),
+ ISBLANK( CLQ_License_Issue_Date__c ), AND(RecordType.Name  &lt;&gt; &apos;Out of State Registration&apos;, RecordType.Name  &lt;&gt; &apos;In-Home Aide&apos;,RecordType.Name  &lt;&gt; &apos;Day Camp&apos;) )</errorConditionFormula>
+    <errorDisplayField>CLQ_License_Issue_Date__c</errorDisplayField>
+    <errorMessage>Please enter License Issue Date</errorMessage>
+</ValidationRule>

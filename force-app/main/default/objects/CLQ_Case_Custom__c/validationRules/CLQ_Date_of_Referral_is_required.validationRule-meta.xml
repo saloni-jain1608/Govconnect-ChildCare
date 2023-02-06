@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Date_of_Referral_is_required</fullName>
+    <active>true</active>
+    <description>If the ‘Referral Taken by (individual’s name):’ field is entered, and a Date of Referral is not entered, then display error message: Date of Referral is required</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name  = &apos;Alleged Ops&apos;,
+!ISBLANK( CLQ_Referral_Taken_by__c ), ISBLANK( CLQ_Date_of_Referral__c ))</errorConditionFormula>
+    <errorMessage>Date of Referral is required</errorMessage>
+</ValidationRule>

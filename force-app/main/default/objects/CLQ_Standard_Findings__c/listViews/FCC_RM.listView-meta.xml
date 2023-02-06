@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCC_RM</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CLQ_Domain_Rule__c</columns>
+    <columns>CLQ_Finding_Applicable_To__c</columns>
+    <columns>CLQ_Finding_Code__c</columns>
+    <columns>CLQ_Finding_Effective_Date__c</columns>
+    <columns>CLQ_Licensing_Domain__c</columns>
+    <columns>CLQ_Program_Type__c</columns>
+    <columns>CLQ_Rules__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Program_Type__c</field>
+        <operation>excludes</operation>
+        <value>Pre School</value>
+    </filters>
+    <filters>
+        <field>CLQ_Program_Type__c</field>
+        <operation>excludes</operation>
+        <value>School Age Child Care</value>
+    </filters>
+    <filters>
+        <field>CLQ_Finding_Applicable_To__c</field>
+        <operation>equals</operation>
+        <value>Licensing</value>
+    </filters>
+    <filters>
+        <field>CLQ_Program_Type__c</field>
+        <operation>excludes</operation>
+        <value>Child Care Center</value>
+    </filters>
+    <label>FCC- RM</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" controller="CAPQuickActionController" > 
+               <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<aura:html tag="style">
+    .slds-backdrop {
+    background: rgba(43, 40, 38, 0) !important;
+    visibility: hidden !important;
+    }
+    .slds-fade-in-open {
+    display:none !important;
+    }
+    .slds-modal {
+    display: none;
+    visibility: hidden !important;
+    }
+</aura:html>
+ </aura:component>

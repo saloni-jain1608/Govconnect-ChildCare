@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values34</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Submitted__Application Revised==Submitted**YES
+CLQ_Transaction_Document__c===&gt;Submitted__Withdrawn by Program==Submitted**YES
+CLQ_Transaction_Document__c===&gt;Submitted__Closed at Applicant’s Request==Submitted**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Submitted__Withdrawn at Applicant&apos;s Request==Submitted**YES
+CLQ_Transaction_Document__c===&gt;Submitted__Returned to Reviewer==Submitted**YES
+CLQ_Transaction_Document__c===&gt;Submitted__Cancelled==Submitted**YES</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Registration_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Registration Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+                <label>Not Submitted</label>
+            </value>
+            <value>
+                <fullName>Withdrawn by Provider</fullName>
+                <default>false</default>
+                <label>Withdrawn by Provider</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Review in Progress</fullName>
+                <default>false</default>
+                <label>Review in Progress</label>
+            </value>
+            <value>
+                <fullName>Under Specialist or Reviewer Review</fullName>
+                <default>false</default>
+                <label>Under Specialist or Reviewer Review</label>
+            </value>
+            <value>
+                <fullName>Closed by System</fullName>
+                <default>false</default>
+                <label>Closed by System</label>
+            </value>
+            <value>
+                <fullName>Closed at Applicant’s Request</fullName>
+                <default>false</default>
+                <label>Closed at Applicant’s Request</label>
+            </value>
+            <value>
+                <fullName>Returned for Revision</fullName>
+                <default>false</default>
+                <label>Returned for Revision</label>
+            </value>
+            <value>
+                <fullName>Under Supervisor or Approver Review</fullName>
+                <default>false</default>
+                <label>Under Supervisor or Approver Review</label>
+            </value>
+            <value>
+                <fullName>Application Revised</fullName>
+                <default>false</default>
+                <label>Application Revised</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Licensed</fullName>
+                <default>false</default>
+                <label>Licensed</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Resubmitted</fullName>
+                <default>false</default>
+                <label>Resubmitted</label>
+            </value>
+            <value>
+                <fullName>Under Reviewer&apos;s Review</fullName>
+                <default>false</default>
+                <label>Under Reviewer&apos;s Review</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Returned to Reviewer</fullName>
+                <default>false</default>
+                <label>Returned to Reviewer</label>
+            </value>
+            <value>
+                <fullName>Approver Review in Progress</fullName>
+                <default>false</default>
+                <label>Approver Review in Progress</label>
+            </value>
+            <value>
+                <fullName>Under Reviewer Review</fullName>
+                <default>false</default>
+                <label>Under Reviewer Review</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Withdrawn at Applicant&apos;s Request</fullName>
+                <default>false</default>
+                <label>Withdrawn at Applicant&apos;s Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

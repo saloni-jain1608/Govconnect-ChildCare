@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Integration_Version_1_Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Salesforce Id of the master document transaction record against which the very first integration document version is created.</description>
+    <externalId>false</externalId>
+    <label>Version One Parent Document</label>
+    <referenceTo>CLQ_Standard_Document__c</referenceTo>
+    <relationshipLabel>Standard Documents (Version One Parent Document)</relationshipLabel>
+    <relationshipName>Integration_Version_1_Parent_Documents</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

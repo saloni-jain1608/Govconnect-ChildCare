@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_Role__c</fullName>
+    <description>Comma separated Role Name For TO</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comma separated Role Name for To</inlineHelpText>
+    <label>To Role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

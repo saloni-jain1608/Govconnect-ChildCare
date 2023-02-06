@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Discriminatory Information</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Federal and state law and the policies of the US Department of Health and Human Services (HHS) and the Ohio Department of Job and Family Services (ODJFS) dictate that ODJFS must not discriminate on the basis of race, color, national origin, sex, age, or disability. To file a discrimination complaint, contact HHS or ODJFS at the following addresses.\n&lt;div style=\&quot;margin-left: 40px;\&quot;&gt;&lt;br&gt;HHS Director, Office of Civil Rights - Region V&lt;br&gt;U.S. Department of Health and Human Services&lt;br&gt;233 N. Michigan Ave., Suite 240&lt;br&gt;Chicago, IL 60601&lt;br&gt;(312) 889-2359, (310) 353-5693 (TDD)&lt;br&gt;(312) 886-1807 (fax)&lt;br&gt;Website: http://www.hhs.gov/ocr&lt;br&gt;&lt;br&gt;ODJFS, Bureau of Civil Rights&lt;br&gt;30 E. Broad St., 37th Floor&lt;br&gt;Columbus, OH 43215&lt;br&gt;(614) 644-2703 (voice)&lt;br&gt;1(866) 227-6353 (Toll Free)&lt;br&gt;TTY (614) 995-9961 or Toll Free 1-866-221-6700&lt;br&gt;Website: http://jfs.ohio.gov/civilrights/complaint.stm&lt;/div&gt;</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Bundes- und Landesgesetze sowie die Richtlinien des US-Gesundheitsministeriums (HHS) und des Ohio Department of Job and Family Services (ODJFS) schreiben vor, dass ODJFS nicht aufgrund von Rasse, Hautfarbe, nationaler Herkunft, Geschlecht, Alter oder Behinderung. Um eine Diskriminierungsbeschwerde einzureichen, wenden Sie sich unter den folgenden Adressen an HHS oder ODJFS.\n&lt;div style=\&quot;margin-left: 40px;\&quot;&gt;&lt;br&gt;HHS Director, Office of Civil Rights - Region V&lt;br&gt;U.S. Ministerium für Gesundheit und menschliche Dienste&lt;br&gt;233 N. Michigan Ave., Suite 240&lt;br&gt;Chicago, IL 60601&lt;br&gt;(312) 889-2359, (310) 353-5693 (TDD)&lt;br&gt;(312) 886-1807 (Fax)&lt;br&gt;Website: http://www.hhs.gov/ocr&lt;br&gt;&lt;br&gt;ODJFS, Bureau of Civil Rights&lt;br&gt;30 E. Broad St., 37th Floor&lt;br&gt;Columbus , OH 43215&lt;br&gt;(614) 644-2703 (Sprache)&lt;br&gt;1(866) 227-6353 (gebührenfrei)&lt;br&gt;TTY (614) 995-9961 oder gebührenfrei 1-866-221-6700&lt; br&gt;Website: http://jfs.ohio.gov/civilrights/complaint.stm&lt;/div&gt;</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">Las leyes federales y estatales y las políticas del Departamento de Salud y Servicios Humanos de los EE. UU. (HHS) y el Departamento de Trabajo y Servicios para la Familia de Ohio (ODJFS) dictan que el ODJFS no debe discriminar por motivos de raza, color, origen nacional, sexo, edad o discapacidad. Para presentar una queja por discriminación, comuníquese con el HHS o el ODJFS en las siguientes direcciones.\n&lt;div style=\&quot;margin-left: 40px;\&quot;&gt;&lt;br&gt;Director del HHS, Oficina de Derechos Civiles - Región V&lt;br&gt;EE. UU. Departamento de Salud y Servicios Humanos&lt;br&gt;233 N. Michigan Ave., Suite 240&lt;br&gt;Chicago, IL 60601&lt;br&gt;(312) 889-2359, (310) 353-5693 (TDD)&lt;br&gt;(312) 886-1807 (fax)&lt;br&gt;Sitio web: http://www.hhs.gov/ocr&lt;br&gt;&lt;br&gt;ODJFS, Oficina de Derechos Civiles&lt;br&gt;30 E. Broad St., piso 37&lt;br&gt;Columbus , OH 43215&lt;br&gt;(614) 644-2703 (voz)&lt;br&gt;1(866) 227-6353 (llamada gratuita)&lt;br&gt;TTY (614) 995-9961 o llamada gratuita 1-866-221-6700&lt; br&gt;Sitio web: http://jfs.ohio.gov/civilrights/complaint.stm&lt;/div&gt;</value>
+    </values>
+</CustomMetadata>

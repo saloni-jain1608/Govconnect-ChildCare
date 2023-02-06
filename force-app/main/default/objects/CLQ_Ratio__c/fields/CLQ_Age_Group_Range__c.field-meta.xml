@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Age_Group_Range__c</fullName>
+    <externalId>false</externalId>
+    <label>Age Group / Range</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 to &lt; 12 months</fullName>
+                <default>false</default>
+                <label>0 to &lt; 12 months</label>
+            </value>
+            <value>
+                <fullName>12 months to &lt; 18 months</fullName>
+                <default>false</default>
+                <label>12 months to &lt; 18 months</label>
+            </value>
+            <value>
+                <fullName>18 months to &lt; 30 months</fullName>
+                <default>false</default>
+                <label>18 months to &lt; 30 months</label>
+            </value>
+            <value>
+                <fullName>30 months to &lt; 36 months</fullName>
+                <default>false</default>
+                <label>30 months to &lt; 36 months</label>
+            </value>
+            <value>
+                <fullName>3 years to &lt; 4 years</fullName>
+                <default>false</default>
+                <label>3 years to &lt; 4 years</label>
+            </value>
+            <value>
+                <fullName>4 years to &lt; 5 years</fullName>
+                <default>false</default>
+                <label>4 years to &lt; 5 years</label>
+            </value>
+            <value>
+                <fullName>5 years to &lt; Kindergarten</fullName>
+                <default>false</default>
+                <label>5 years to &lt; Kindergarten</label>
+            </value>
+            <value>
+                <fullName>School-Age to &lt; 11 years</fullName>
+                <default>false</default>
+                <label>School-Age to &lt; 11 years</label>
+            </value>
+            <value>
+                <fullName>11 years +</fullName>
+                <default>false</default>
+                <label>11 years +</label>
+            </value>
+            <value>
+                <fullName>Mixed Age Group</fullName>
+                <default>false</default>
+                <label>Mixed Age Group</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

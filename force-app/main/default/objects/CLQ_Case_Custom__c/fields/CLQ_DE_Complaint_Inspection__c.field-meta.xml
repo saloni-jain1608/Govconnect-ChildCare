@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_DE_Complaint_Inspection__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Number field not visible to the user. Used for firing WF rule to send complaint inspection report for CDC web solution - DE Programs only</description>
+    <externalId>false</externalId>
+    <label>CLQ DE Complaint Inspection Approved</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

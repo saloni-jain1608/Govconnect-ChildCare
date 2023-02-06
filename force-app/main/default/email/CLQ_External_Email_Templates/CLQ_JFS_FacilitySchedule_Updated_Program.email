@@ -1,0 +1,119 @@
+<messaging:emailTemplate subject="{!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} Facility Schedule Program Transaction has been Updated" recipientType="User" relatedToType="CLQ_Program_Transaction__c">
+<messaging:htmlEmailBody >
+
+<p>The program {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} has been Updated.</p>
+
+<p>The list of fields that has been updated are:</p>
+<table border="1" rules="all" style="padding-top:3rem;padding-bottom:3rem;">
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Age Groups Served</td>
+    
+    <td>{!relatedTo.CLQ_Age_Groups_Served_Global__c}</td>
+   </tr>
+    <tr>
+    <td>Attendance Options</td>
+    
+    <td>{!relatedTo.CLQ_Attendance_Options_Global__c}</td>
+   </tr> 
+   <tr>
+    <td>Services Offered</td>
+    
+    <td>{!relatedTo.CLQ_Services_Offered_Global__c}</td>
+   </tr> 
+   
+   
+</tbody>
+</table>
+
+ 
+<apex:repeat value="{!relatedTo.Facility_Schedules__r}" var="fs">
+ <apex:outputText label="Facility Schedule Name" >{!fs.name}</apex:outputText> 
+<table border="1" rules="all" style="padding-top:3rem;padding-bottom:3rem;">
+
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Time 1 Start</td>
+    <td>{!fs.CLQ_Prior_Time_1_Start__c}</td>
+    <td>{!fs.CLQ_HOO_Time_1_Start__c}</td>
+    
+   </tr>
+    <tr>
+    <td>Time 1 End</td>
+    <td>{!fs.CLQ_Prior_Time_1_End__c}</td>
+    <td>{!fs.CLQ_HOO_Time_1_End__c}</td>
+    
+   </tr>
+   <tr>
+    <td>Time 2 Start</td>
+    <td>{!fs.CLQ_Prior_Time_2_Start__c}</td>
+    <td>{!fs.CLQ_HOO_Time_2_Start__c}</td>
+    
+   </tr> 
+    <tr>
+    <td>Time 2 End</td>
+    <td>{!fs.CLQ_Prior_Time_2_End__c}</td>
+    <td>{!fs.CLQ_HOO_Time_2_End__c}</td>
+    
+   </tr>
+      <tr>
+    <td>Days Of Operation</td>
+    <td>{!fs.CLQ_Prior_Days_Of_Operation__c}</td>
+    <td>{!fs.CLQ_Days_of_Operation__c}</td>
+    
+   </tr>
+    <tr>
+    <td>Months of Operation</td>
+    <td>{!fs.CLQ_Prior_Months_Of_Operation__c}</td>
+    <td>{!fs.Months_of_Operation__c}</td>    
+    
+   </tr>
+    <tr>
+    <td>Program Schedule Name</td>
+    <td>{!fs.CLQ_Prior_Program_Schedule_Name__c}</td>
+    <td>{!fs.CLQ_Program_Schedule_Name__c}</td>    
+    
+   </tr>
+    <tr>
+    <td>Funding Source</td>
+    <td>{!fs.CLQ_Prior_Funding_Source__c}</td>
+    <td>{!fs.CLQ_Funding_Source_Picklist__c}</td>    
+    
+   </tr>       
+   
+</tbody>
+</table>
+</apex:repeat>
+ 
+
+
+
+
+
+<p>Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</p>
+
+<p>The Ohio Child Licensing and Quality System Team.</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

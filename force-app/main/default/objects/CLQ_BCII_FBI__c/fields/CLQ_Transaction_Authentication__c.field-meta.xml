@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Transaction_Authentication__c</fullName>
+    <description>Tracking Number used by OHIO AFIS to log the transaction activity.</description>
+    <externalId>false</externalId>
+    <label>Transaction/Authentication #</label>
+    <length>16</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Complete_Incident_Injury_Review</fullName>
+    <active>true</active>
+    <description>you cannot complete the review on incident injury unless the related inspection is approved or or &quot;under approver review&quot;</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; RecordType.Name = &quot;Incident / Injury / Illness&quot; &amp;&amp; 
+CLQ_Complete_Review__c &amp;&amp;
+CLQ_No_Investigation_Required__c = false &amp;&amp;  !(ISPICKVAL( CLQ_Inspection__r.CLQ_Inspection_Status__c , &quot;Approved&quot;)  || ISPICKVAL(CLQ_Inspection__r.CLQ_Inspection_Status__c , &quot;Under Approver Review&quot;))</errorConditionFormula>
+    <errorMessage>Inspection status must equal Approved or Under Approver Review to complete the review</errorMessage>
+</ValidationRule>

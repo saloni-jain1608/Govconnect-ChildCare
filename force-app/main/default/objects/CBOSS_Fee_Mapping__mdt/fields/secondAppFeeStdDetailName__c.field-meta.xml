@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>secondAppFeeStdDetailName__c</fullName>
+    <description>Adding a new field for tracking the Second Application Fee for the new SUTQ Registration Process Question on FCC and CCC Programs</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>secondAppFeeStdDetailName</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

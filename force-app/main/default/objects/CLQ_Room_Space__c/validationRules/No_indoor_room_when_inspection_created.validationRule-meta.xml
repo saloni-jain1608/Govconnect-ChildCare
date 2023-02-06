@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_indoor_room_when_inspection_created</fullName>
+    <active>true</active>
+    <description>When inspection created is checked in program transaction then no Indoor Room/Space can be added by external user</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR($Profile.Name   = &apos;OCLQS Customer Community Login User&apos; , $Profile.Name  = &apos;OCLQS Customer Community Plus Login User&apos;, $Profile.Name  = &apos;OCLQS Customer Community Plus Login User ODE SSO&apos; ), CLQ_Program_Transaction__r.CLQ_Inspection_Created__c, RecordType.Name = &apos;Indoor Room/Space&apos;)</errorConditionFormula>
+    <errorMessage>Indoor Room/Space cannot be added once the inspection has begun.</errorMessage>
+</ValidationRule>

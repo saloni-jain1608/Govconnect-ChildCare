@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limited_Liability_Company_LLC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>A limited liability company is an unincorporated association of one or more members (the owners) who share in the profits and losses of the company’s business. It is managed in accordance with an operating agreement by one or more members</inlineHelpText>
+    <label>Limited Liability Company (LLC)</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

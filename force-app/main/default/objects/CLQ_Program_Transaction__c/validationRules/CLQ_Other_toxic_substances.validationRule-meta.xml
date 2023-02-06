@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Other_toxic_substances</fullName>
+    <active>true</active>
+    <description>Description of other toxic substances should be mandatory if Other Toxic Substances is YES</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name =&apos;Amendment - FCC - Change of Location&apos;,ISPICKVAL(CLQ_Other_Toxic_Substances__c , &apos;Yes&apos;), ISBLANK( CLQDescription_of_other_toxic_substances__c))</errorConditionFormula>
+    <errorDisplayField>CLQDescription_of_other_toxic_substances__c</errorDisplayField>
+    <errorMessage>Description of Other Toxic Substances required if Other Toxic Substances is YES</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Get_Prg_LicenseNumber</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Get Staff &amp; Training Records</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+var myId = &quot;{!CLQ_Inspection__c.Id}&quot;; 
+//{!CLQ_Program_Transaction__c.Id}sforce.connection.sessionId = &apos;{!$Api.Session_ID}&apos;; 
+var message = sforce.apex.execute(&quot;CLQ_FetchStaffRecords&quot;,&quot;fectchStaffRecords&quot;, {ObjId:myId});
+if(message) 
+window.location.reload();
+else
+alert(&apos;No Staff Records Exist&apos;);</url>
+</WebLink>

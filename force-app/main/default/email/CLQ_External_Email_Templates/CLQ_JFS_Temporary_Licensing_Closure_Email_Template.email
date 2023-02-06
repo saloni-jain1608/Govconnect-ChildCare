@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2" style="color: rgb(0, 0, 0);">{!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} has been placed in a&nbsp; temporarily closed/inactive status&nbsp; effective&nbsp;{!CLQ_Program_Transaction__c.CLQ_Effective_Date_of_Closure_formula__c}</font><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style="color: rgb(0, 0, 0);"><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</span></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">The Ohio Child Licensing and Quality System Team</span></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span></font></div></div><div><font face="Verdana, Helvetica, sans-serif" size="2" color="#ffffff"><span style="line-height: 20px;"><br></span></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><div><font color="#ffffff">ref: {!CLQ_Program_Transaction__c.Id}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div></span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

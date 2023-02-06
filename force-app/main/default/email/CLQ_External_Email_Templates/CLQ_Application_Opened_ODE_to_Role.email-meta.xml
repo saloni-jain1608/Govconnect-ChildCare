@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Application Opened ODE email template to send to ODE Roles. [4/26/2017]: Updated for bug# 11041</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Application Opened ODE to Role</name>
+    <style>freeForm</style>
+    <subject>{!$Label.EducationDept} {!CLQ_Role__c.CLQ_Program_Type_Formula__c} program {!CLQ_Role__c.CLQ_Program_Number_Formula__c} created for {!CLQ_Role__c.CLQ_Program_name_Formula__c}</subject>
+    <textOnly>{!$Label.EducationDept} {!CLQ_Role__c.CLQ_Program_Type_Formula__c} program {!CLQ_Role__c.CLQ_Program_Number_Formula__c} has been successfully created for {!CLQ_Role__c.CLQ_Program_name_Formula__c}. The application must be completed and submitted within 120 days.  Failure to submit the application within 120 days will result in the application being deleted by the system.
+
+The {!$Label.StateName} Child Licensing and Quality System Team. This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Role__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

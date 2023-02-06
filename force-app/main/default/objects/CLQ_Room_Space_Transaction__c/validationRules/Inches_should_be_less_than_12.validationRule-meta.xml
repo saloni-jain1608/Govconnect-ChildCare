@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inches_should_be_less_than_12</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR( CLQ_Length_Inches__c &gt;=12, CLQ_Length2_Inches__c &gt;=12, CLQ_Width_Inches__c &gt;=12, CLQ_Width2_Inches__c &gt;=12)</errorConditionFormula>
+    <errorDisplayField>CLQ_Length_Inches__c</errorDisplayField>
+    <errorMessage>Inches cannot be greater than 11.99</errorMessage>
+</ValidationRule>

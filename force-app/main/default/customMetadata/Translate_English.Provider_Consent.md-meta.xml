@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Provider Consent</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">I certify that my answers are true and to the best of my knowledge. By checking this box I understand that I am singing this application electronically.</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">CLQ_Provider_Consent__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Ich versichere, dass meine Antworten der Wahrheit entsprechen und nach bestem Wissen und Gewissen erfolgen. Durch Ankreuzen dieses Kästchens erkläre ich mich damit einverstanden, dass ich diese Bewerbung elektronisch einsende.</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Program_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">Certifico que mis respuestas son verdaderas ya mi leal saber y entender. Al marcar esta casilla, entiendo que estoy cantando esta aplicación electrónicamente.</value>
+    </values>
+</CustomMetadata>

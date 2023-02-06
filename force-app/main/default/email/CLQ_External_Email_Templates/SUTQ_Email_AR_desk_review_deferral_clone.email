@@ -1,0 +1,9 @@
+A Step Up To Quality (SUTQ) Annual Report Desk Review has been completed for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}. Your program was not able to demonstrate that it meets the standards for SUTQ, Ohio's voluntary quality rating system, and has been given a deferral.  Your program will be sent an additional notification containing your Annual Report Desk Review Summary with further information regarding your deferral. 
+
+For further information, refer to the Step Up To Quality Rules.
+
+The Step Up To Quality Online Team
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+Test Email Body ref: {!CLQ_Program_Transaction__c.Id}

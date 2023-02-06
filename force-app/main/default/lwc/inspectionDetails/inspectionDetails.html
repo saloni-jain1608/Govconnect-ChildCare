@@ -1,0 +1,19 @@
+<template>
+    <div class="second-col" data-aura-rendered-by="183:2;a">
+        <div class="rect-card slds-size_12-of-12 slds-large-size_12-of-12" data-aura-rendered-by="202:2;a">
+            <div class="card cDEL_FHA_DashboardCard" data-aura-rendered-by="194:2;a"
+                data-aura-class="cDEL_FHA_DashboardCard" data-ol-has-click-handler="">
+                <div class="topic-name" data-aura-rendered-by="197:2;a"><span class="topic"
+                        data-aura-rendered-by="198:2;a">Inspection Details</span></div>
+
+                <div>
+                    <lightning-combobox name="progress" label="Status" value={value} placeholder="Select Status"
+                        options={options} onchange={handleChange}></lightning-combobox>
+                    <lightning-input type="date" name="inspectionDate" label="Inspection Date"></lightning-input>
+                    <lightning-input type="checkbox" label="If any action required" onchange={handleChangeCheckBox}>
+                    </lightning-input>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

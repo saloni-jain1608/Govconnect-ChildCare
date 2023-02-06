@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Max_Capacity_Under_2_5_Years__c</fullName>
+    <description>The sum of the total number of children allowed for all indoor approved primary space rooms where “Will children in this room be over or under 2 1/2?” is marked Under or Both. 
+
+Value is determined based on room dimensions for rooms marked as serving children under 2 1/2 on the Classroom overlay(s) on the Room Information tab screen. 
+
+System displays whole number only, rounded down</description>
+    <externalId>false</externalId>
+    <label>Max Capacity Under 2 1/2 Years</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

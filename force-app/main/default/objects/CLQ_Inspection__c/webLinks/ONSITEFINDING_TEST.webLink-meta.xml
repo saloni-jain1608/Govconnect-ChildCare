@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONSITEFINDING_TEST</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>ONSITEFINDING TEST</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+
+
+var Findings = sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where Program_Transaction__c =&apos;{!CLQ_Inspection__c.CLQ_Program_TransactionId__c}&apos; &quot;); 
+findingList = Findings.getArray(&quot;records&quot;); 
+
+
+if(findingList.length == 0){ 
+alert(&apos;Desk Review Findings need to be created prior to creating Onsite Findings&apos;); 
+} 
+
+else{
+
+window.location = &apos;/apex/CLQ_OnsiteReviewFinding?id={!CLQ_Inspection__c.Id}&apos;; 
+}</url>
+</WebLink>

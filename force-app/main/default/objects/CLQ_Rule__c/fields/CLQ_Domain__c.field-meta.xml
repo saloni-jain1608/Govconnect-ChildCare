@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Domain__c</fullName>
+    <externalId>false</externalId>
+    <label>Domain</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Staff Files (FT)</fullName>
+                <default>false</default>
+                <label>Staff Files (FT)</label>
+            </value>
+            <value>
+                <fullName>Written Policies &amp; Procedures(FT)</fullName>
+                <default>false</default>
+                <label>Written Policies &amp; Procedures(FT)</label>
+            </value>
+            <value>
+                <fullName>Indoor-Outdoor Space(FT)</fullName>
+                <default>false</default>
+                <label>Indoor-Outdoor Space(FT)</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Safety (FT)</fullName>
+                <default>false</default>
+                <label>Health &amp; Safety (FT)</label>
+            </value>
+            <value>
+                <fullName>Safe &amp; Sanitary Envt (RST)</fullName>
+                <default>false</default>
+                <label>Safe &amp; Sanitary Envt (RST)</label>
+            </value>
+            <value>
+                <fullName>Program Info(FT)</fullName>
+                <default>false</default>
+                <label>Program Info(FT)</label>
+            </value>
+            <value>
+                <fullName>Children&apos;s Files (FT)</fullName>
+                <default>false</default>
+                <label>Children&apos;s Files (FT)</label>
+            </value>
+            <value>
+                <fullName>Postings &amp; Equipment (RST)</fullName>
+                <default>false</default>
+                <label>Postings &amp; Equipment (RST)</label>
+            </value>
+            <value>
+                <fullName>Ratio Info (FT)</fullName>
+                <default>false</default>
+                <label>Ratio Info (FT)</label>
+            </value>
+            <value>
+                <fullName>Observations (RST)</fullName>
+                <default>false</default>
+                <label>Observations (RST)</label>
+            </value>
+            <value>
+                <fullName>License &amp; Approvals(FT)</fullName>
+                <default>false</default>
+                <label>License &amp; Approvals(FT)</label>
+            </value>
+            <value>
+                <fullName>Diapering &amp; InfantCare(FT)</fullName>
+                <default>false</default>
+                <label>Diapering &amp; InfantCare(FT)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

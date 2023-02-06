@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif" style="" size="2">{!CLQ_Program__c.Name},
+{!CLQ_Program__c.CLQ_Program_Number__c}&nbsp;has accumulated at least 19 serious and moderate
+risk points from all inspections during the provisional license period. Please
+discuss with your supervisor if you plan to recommend the center for continuous
+license.<o:p></o:p></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif" size="2">&nbsp;</font></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team.</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><font color="#ffffff" face="Verdana, Helvetica, sans-serif" size="2">Reference Id ref: {!CLQ_Program__c.Id}</font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2">&nbsp;</font></o:p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

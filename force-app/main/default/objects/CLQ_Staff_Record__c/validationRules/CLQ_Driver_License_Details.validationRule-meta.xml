@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Driver_License_Details</fullName>
+    <active>true</active>
+    <description>Driver’s License on File and Driver Training completed are required when Member Will Operate Vehicles is marked Yes.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(ISBLANK(CLQ_Driver_s_License_on_File__c),ISBLANK( CLQ_Driver_Training_Completed__c )),ISPICKVAL( CLQ_Staff_Member_Will_Operate_Vehicles__c , &apos;Yes&apos;))</errorConditionFormula>
+    <errorMessage>Driver’s License on File and Driver Training Completed are required when Member Will Operate Vehicles is marked Yes.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Withdraw</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Withdraw</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+if(confirm(&apos;You are about to Withdraw the Step Up To Quality (SUTQ) Registration for  {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} , {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}.   Are you sure?&apos;))
+{
+var myId = &quot;{!CLQ_Program_Transaction__c.Id}&quot;; 
+//{!CLQ_Program_Transaction__c.Id}sforce.connection.sessionId = &apos;{!$Api.Session_ID}&apos;; 
+sforce.apex.execute(&quot;CLQ_UpdateStatusToWithDrawn&quot;,&quot;updateStatus&quot;, {ObjId:myId}); 
+window.location.reload();
+}</url>
+</WebLink>

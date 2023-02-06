@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Name__c</fullName>
+    <description>Applicant Full Name derived by combing First Name, Middle Name and Last Name</description>
+    <externalId>false</externalId>
+    <formula>IF( Middle_Name__c != Null, First_Name__c  &amp;&apos; &apos; &amp;   Middle_Name__c  &amp;&apos; &apos;  &amp;  Last_Name__c, First_Name__c  &amp;&apos; &apos; &amp;  Last_Name__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Applicant Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

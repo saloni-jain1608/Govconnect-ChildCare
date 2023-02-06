@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>JFS - OCLQS - Accreditation Certificate</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Accreditation Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Administrator Education/Experience/Qualifications</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Administrator Education/Experience/Qualifications</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Administrator Non-Conviction Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Administrator Non-Conviction Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Administrator Updates</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Administrator Updates</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Annual Survey Process and Questions</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Annual Survey Process and Questions</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Annual Vehicle Inspection</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Annual Vehicle Inspection</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Articles of Incorporation</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Articles of Incorporation</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Assistant Teacher Updates</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Assistant Teacher Updates</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Attendance Records</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Attendance Records</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Background Checks</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Background Checks</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Building Approval</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Building Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Child Assessment Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Child Assessment Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Child Medical</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Child Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Classroom Self-Assessment Action Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Classroom Self-Assessment Action Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Classroom Self Assessment Tool Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Classroom Self Assessment Tool Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Community Partner Agreements</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Community Partner Agreements</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Community Resources Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Community Resources Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Continuous Improvement Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Continuous Improvement Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Crib Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Crib Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Curriculum Assessment Alignment Tool</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Curriculum Assessment Alignment Tool</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Curriculum Selection Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Curriculum Selection Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Daily Schedule</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Daily Schedule</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Description of PD Planning Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Description of PD Planning Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Description of Supports</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Description of Supports</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Developmental and Educational Goals</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Developmental and Educational Goals</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Developmental Screening Referral Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Developmental Screening Referral Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Developmental Screening Tool Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Developmental Screening Tool Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Driver Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Driver Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Education</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Education</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Emergency Postings</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Emergency Postings</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Emergency Substitute Caregiver Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Emergency Substitute Caregiver Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Enrollment Form</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Enrollment Form</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Equipment Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Equipment Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Evening Care Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Evening Care Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Family Education Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Family Education Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Family Engagement Activities</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Family Engagement Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Family Engagement Model</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Family Engagement Model</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Family Information Form</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Family Information Form</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - FCC Provider Education/Experience/Qualifications</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - FCC Provider Education/Experience/Qualifications</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Fire Approval</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Fire Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Fire Inspection</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Fire Inspection</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Floor Plan Diagram</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Floor Plan Diagram</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Food License</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Food License</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Food License Exemption</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Food License Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Food Service Exemption</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Food Service Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Food Service License</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Food Service License</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Guidance Document</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Guidance Document</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Handbook</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Handbook</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health/Safety Training</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health/Safety Training</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health and Child Development Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health and Child Development Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health and Safety Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health and Safety Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health Care Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health Care Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health Referral Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health Referral Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Health Screening Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Health Screening Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Incident Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Incident Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Indoor Diagram</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Indoor Diagram</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Indoor Space Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Indoor Space Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Infant Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Infant Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Lead Teacher Updates</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Lead Teacher Updates</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Liability Insurance</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Liability Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Meal Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Meal Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Medical Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Medical Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Medication</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Medication</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Menu</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Menu</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Non-Conviction Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Non-Conviction Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Observation Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Observation Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - ODE Professional Development Tracking</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - ODE Professional Development Tracking</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Outdoor Diagram</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Outdoor Diagram</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Outdoor Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Outdoor Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Owner&apos;s Authorized Representative/Partnership Form</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Owner&apos;s Authorized Representative/Partnership Form</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Owner Non-Conviction Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Owner Non-Conviction Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Parent Group Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Parent Group Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Parent Handbook</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Parent Handbook</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Permission Slips</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Permission Slips</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Pet Records</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Pet Records</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Plan of Operation</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Plan of Operation</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Playground Inspection</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Playground Inspection</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Process to Use Child Assessment Results</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Process to Use Child Assessment Results</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Professional Development</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Professional Development</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Professional Development Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Professional Development Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Professional Development Plan Annual Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Professional Development Plan Annual Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Program Self-Assessment Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Program Self-Assessment Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Program Transition Policies</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Program Transition Policies</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Provider Non-Conviction Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Provider Non-Conviction Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Provider Req for Child Abuse and Neglect Report Info</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Provider Req for Child Abuse and Neglect Report Info</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Records Transfer Policy</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Records Transfer Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Req for Child Abuse and Neglect  Report Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Req for Child Abuse and Neglect  Report Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Resident Non-Conviction Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Resident Non-Conviction Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Safe Environment Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Safe Environment Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Sample Daily Activity Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Sample Daily Activity Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Sample Professional Development Plan</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Sample Professional Development Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Sample Teacher Observation form</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Sample Teacher Observation form</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Sample Transition Activities</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Sample Transition Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Sanitary Environment Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Sanitary Environment Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Space Heater Permission</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Space Heater Permission</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Staff Medical</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Staff Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Swimming Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Swimming Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Teacher Observation Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Teacher Observation Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Transition Information</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Transition Information</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Transition Meeting Process</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Transition Meeting Process</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Transportation Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Transportation Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Water Test Verification</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Water Test Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Weekly Vehicle Inspection</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Weekly Vehicle Inspection</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Written Policies</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Written Policies</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Written Procedures</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Written Procedures</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Written Wage Schedule</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Written Wage Schedule</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Zoning Approval</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Zoning Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>OCLQS - Inspection Documents</fullName>
+        <default>false</default>
+        <label>OCLQS - Inspection Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - In Home Aide Assurances</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - In Home Aide Assurances</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Child Abuse and Neglect Training (IHA)</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Child Abuse and Neglect Training (IHA)</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Verification of Pre-Certification Training (IHA)</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Verification of Pre-Certification Training (IHA)</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Copy of License/Certification/Exemption</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Copy of License/Certification/Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Inspection Documents</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Inspection Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Complaint Alleged Op Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Complaint Alleged Op Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - In Home Aide Certificate</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - In Home Aide Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - License Face Certificate</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - License Face Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Application Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Application Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Corrective Action Plan Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Corrective Action Plan Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Day Camp Registration Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Day Camp Registration Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Incident Injury Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Incident Injury Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Inspection Complaint Full Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Inspection Complaint Full Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Summary Report Full Inspection Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Summary Report Full Inspection Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Licensing Compliance Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Licensing Compliance Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Payment Processing Receipt Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Payment Processing Receipt Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Annual Report Desk Review Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Annual Report Desk Review Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Annual Report Registration Summary</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Annual Report Registration Summary</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Rating Certificate</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Rating Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ On-site Verification Summary Report - Final</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ On-site Verification Summary Report - Final</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Registration Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Registration Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Desk Review Summary Report</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Desk Review Summary Report</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Employee Record Chart and Childrens Record Review</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Employee Record Chart and Childrens Record Review</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Outdoor Space Diagram</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Outdoor Space Diagram</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Immunization Documentation</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Immunization Documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Adjudicated a Delinquent Child Statement</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Adjudicated a Delinquent Child Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - SUTQ Expedited Program List</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - SUTQ Expedited Program List</label>
+    </customValue>
+    <customValue>
+        <fullName>JFS - OCLQS - Inspection Document</fullName>
+        <default>false</default>
+        <label>JFS - OCLQS - Inspection Document</label>
+    </customValue>
+    <description>Document type for Integration - OnBase Add new Document</description>
+    <masterLabel>Integration OnBase Document Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

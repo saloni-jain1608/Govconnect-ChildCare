@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Permission_Slips__c</fullName>
+    <description>Select all the applicable options.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all the applicable options.</inlineHelpText>
+    <label>Routine Swim/Fieldtrip</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>Routine Form Incomplete</fullName>
+                <default>false</default>
+                <label>Routine Form Incomplete</label>
+            </value>
+            <value>
+                <fullName>Swimming Form Incomplete</fullName>
+                <default>false</default>
+                <label>Swimming Form Incomplete</label>
+            </value>
+            <value>
+                <fullName>Field Trip Form Incomplete</fullName>
+                <default>false</default>
+                <label>Field Trip Form Incomplete</label>
+            </value>
+            <value>
+                <fullName>No Routine Permission</fullName>
+                <default>false</default>
+                <label>No Routine Permission</label>
+            </value>
+            <value>
+                <fullName>No Field Trip Permission</fullName>
+                <default>false</default>
+                <label>No Field Trip Permission</label>
+            </value>
+            <value>
+                <fullName>No Swimming Permission</fullName>
+                <default>false</default>
+                <label>No Swimming Permission</label>
+            </value>
+            <value>
+                <fullName>Routine Form Not Updated</fullName>
+                <default>false</default>
+                <label>Routine Form Not Updated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

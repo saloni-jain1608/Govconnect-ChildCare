@@ -1,0 +1,84 @@
+<!--
+**************************************************************************************************************
+** Name             : CLQ_AllegedRuleViolation
+** Description      : Overrides View/ Edit/ New button and Domain rule look up filter
+** Version          : 1.0
+**------------------------------------------------------------------------------------------------------------
+** Modification Log:
+**------------------
+** Developer			Date				Version		Description
+**------------------------------------------------------------------------------------------------------------
+** Neetu Ojha			11-08-2017			1.0			TFS#11415 : Initial Version		
+**
+************************************************************************************/ 
+-->
+
+<apex:page standardController="CLQ_Alleged_Rule_Violation__c" id="Page" tabstyle="CLQ_Alleged_Rule_Violation__c" >
+
+    <!-- View -->
+    <apex:detail id="detail" inlineEdit="false" rendered="{!($CurrentPage.parameters.Id != null && $CurrentPage.parameters.retURL == null)}"/>  
+    
+    <!-- New/Edit -->
+    <apex:sectionHeader title="{!$ObjectType.CLQ_Alleged_Rule_Violation__c.label} Edit" subtitle="{!CLQ_Alleged_Rule_Violation__c.name}" rendered="{!($CurrentPage.parameters.Id != null && $CurrentPage.parameters.retURL != null)}"/>
+    <apex:sectionHeader title="{!$ObjectType.CLQ_Alleged_Rule_Violation__c.label} Edit" subtitle="New {!$ObjectType.CLQ_Alleged_Rule_Violation__c.label}" rendered="{!($CurrentPage.parameters.Id == null && $CurrentPage.parameters.retURL != null)}"/>
+    
+    <apex:form id="myForm">
+        <apex:pageBlock id="pbId" title="{!$ObjectType.CLQ_Alleged_Rule_Violation__c.label} Edit" mode="edit" rendered="{!$CurrentPage.parameters.retURL != null}">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection id="pbsId" title="Information" columns="2">
+                <apex:repeat id="rptId" value="{!$ObjectType.CLQ_Alleged_Rule_Violation__c.FieldSets.CLQ_AllegedRuleViolation_FS}" var="f">
+                	<apex:inputField value="{!CLQ_Alleged_Rule_Violation__c[f]}" rendered="{! (f =='Name' && $CurrentPage.parameters.Id != null)}"/>
+                    <apex:inputField value="{!CLQ_Alleged_Rule_Violation__c[f]}" rendered="{! (f !='OwnerId' && f !='Name' && f !='CLQ_Domain_Rule__c')}"/>
+                    <apex:inputField id="domainRule" value="{!CLQ_Alleged_Rule_Violation__c[f]}" rendered="{! f == 'CLQ_Domain_Rule__c'}" required="{!OR(f.required, f.dbrequired)}"/>
+                    <apex:outputField value="{!CLQ_Alleged_Rule_Violation__c[f]}" rendered="{!(f=='OwnerId' && $CurrentPage.parameters.Id != null)}"/>
+                </apex:repeat> 
+            </apex:pageBlockSection>
+        </apex:pageBlock>           
+    </apex:form>
+    
+    <script type="text/javascript"> 
+        function openLookup(baseURL, width, modified, searchParam){
+            var originalbaseURL = baseURL;
+            var originalwidth = width;
+            var originalmodified = modified;
+            var originalsearchParam = searchParam;
+            var isCustomLookup = false;
+            var lookupType = baseURL.substr(baseURL.length-3, 3);
+
+            if (modified == '1') baseURL = baseURL + searchParam;
+    
+            // Following is the lookup type for Domain Rule object
+            if(lookupType == "a0T"){
+                var urlArr = baseURL.split("&");
+                var txtId = '';
+                if(urlArr.length > 2) {
+                    urlArr = urlArr[1].split('=');
+                    txtId = urlArr[1];
+                }
+            
+                baseURL = '/apex/CLQ_DomainRuleLookupSearch?txt='+txtId;
+                baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.myForm}");
+                
+                if (modified == '1') {
+                    baseURL = baseURL + "&lksearch=" + searchParam;
+                }
+        
+                if(txtId.indexOf('domainRule') > -1 ){
+                    isCustomLookup = true;
+                }
+            }
+
+            if(isCustomLookup == true){
+                openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }else {
+                if (modified == '1') 
+                    originalbaseURL = originalbaseURL + originalsearchParam;
+                    openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+                } 
+        }
+    </script>    
+</apex:page>

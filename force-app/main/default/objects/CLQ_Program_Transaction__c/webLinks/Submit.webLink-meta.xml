@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit</fullName>
+    <availability>online</availability>
+    <description>submits a program transaction of type continuous license</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+
+var progTranID = &quot;{!CLQ_Program_Transaction__c.Id}&quot;;
+var objType = &apos;{!CLQ_Program_Transaction__c.RecordTypeId}&apos;;
+
+var retrn= sforce.apex.execute(&apos;CLQ_GlobalWebserviceUtility&apos;, &apos;submitProgTrans&apos;, 
+{ objectID: progTranID,
+objType: objType
+}); 
+var n = retrn.toString();
+
+if (n.indexOf(&apos;Error&apos;,0) &gt; -1){
+   alert(n);
+}
+else{
+   window.location.reload();
+}</url>
+</WebLink>

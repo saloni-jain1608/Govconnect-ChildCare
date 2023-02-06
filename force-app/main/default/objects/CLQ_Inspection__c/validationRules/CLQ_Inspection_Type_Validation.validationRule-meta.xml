@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Type_Validation</fullName>
+    <active>true</active>
+    <description>[10/12/2017]: Removed the conditions for Complaint and Incident/Injury/Illness.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+AND(NOT(ISNEW()),ISCHANGED(CLQ_Inspection_Type__c),OR( 
+AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Amendment - change of location&quot;)), 
+AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Amendment - change of capacity&quot;)), 
+AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Pre-license&quot;)) 
+))</errorConditionFormula>
+    <errorMessage>You cannot change the inspection type when inspection type is either (Amendment - COL,Amendment - COC/COS , Pre-License)</errorMessage>
+</ValidationRule>

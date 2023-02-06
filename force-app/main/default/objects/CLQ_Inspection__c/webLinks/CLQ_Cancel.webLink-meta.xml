@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Cancel</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Cancel</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var Insp= new sforce.SObject(&quot;CLQ_Inspection__c&quot;); 
+Insp.Id = &apos;{!CLQ_Inspection__c.Id}&apos;; 
+
+
+Insp.CLQ_Cancel_Day_Camp__c = 1;
+
+
+var result = sforce.connection.update([Insp]); 
+if(result[0].getBoolean(&quot;success&quot;)) 
+{ 
+window.location.reload(); 
+} 
+else{ 
+alert(&apos;Error : &apos;+result); 
+}</url>
+</WebLink>

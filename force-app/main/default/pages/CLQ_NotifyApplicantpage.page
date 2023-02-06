@@ -1,0 +1,3 @@
+<apex:page controller="CLQ_NotifyApplicant" action="{!notification}" showHeader="false" sidebar="false">
+  
+</apex:page>

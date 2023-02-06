@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Full Day</fullName>
+        <default>false</default>
+        <label>Full Day</label>
+    </customValue>
+    <customValue>
+        <fullName>Partial Day</fullName>
+        <default>false</default>
+        <label>Partial Day</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Week</fullName>
+        <default>false</default>
+        <label>Full Week</label>
+    </customValue>
+    <customValue>
+        <fullName>Partial Week</fullName>
+        <default>false</default>
+        <label>Partial Week</label>
+    </customValue>
+    <customValue>
+        <fullName>Drop In</fullName>
+        <default>false</default>
+        <label>Drop In</label>
+    </customValue>
+    <customValue>
+        <fullName>Weekends</fullName>
+        <default>false</default>
+        <label>Weekends</label>
+    </customValue>
+    <description>Global picklist for objects Program, Program Transaction and Inspection</description>
+    <masterLabel>Attendance Options</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

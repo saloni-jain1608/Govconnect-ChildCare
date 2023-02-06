@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_Agency_Name__c</fullName>
+    <description>Created for TFS #11910 to reduce the number of documents being used in the DDP</description>
+    <externalId>false</externalId>
+    <formula>if(RecordType.Name = &quot;Pre School&quot; || RecordType.Name = &quot;School Age Child Care&quot;, &quot;Ohio Department of Education&quot;,&quot;Ohio Department of Job and Family Services&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Drawloop Next Agency Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Meals Provided</fullName>
+        <default>false</default>
+        <label>Meals Provided</label>
+    </customValue>
+    <customValue>
+        <fullName>Before School Care</fullName>
+        <default>false</default>
+        <label>Before School Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Evening Care</fullName>
+        <default>false</default>
+        <label>Evening Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Swimming</fullName>
+        <default>false</default>
+        <label>Swimming</label>
+    </customValue>
+    <customValue>
+        <fullName>Transportation</fullName>
+        <default>false</default>
+        <label>Transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>After School Care</fullName>
+        <default>false</default>
+        <label>After School Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Overnight Care</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Overnight Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Field Trips</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Field Trips</label>
+    </customValue>
+    <customValue>
+        <fullName>Early Childhood Expansion (ECE) Grantee</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Early Childhood Expansion (ECE) Grantee</label>
+    </customValue>
+    <customValue>
+        <fullName>Head Start</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Head Start</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Kindergarten</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Private Kindergarten</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Needs Child Care</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Special Needs Child Care</label>
+    </customValue>
+    <description>Global picklist for objects Program, Program Transaction and Inspection</description>
+    <masterLabel>Services Offered</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

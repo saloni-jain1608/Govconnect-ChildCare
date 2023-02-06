@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Integration_Document_Type__c</fullName>
+    <description>field to display document type that has to be sent to ONBASE</description>
+    <externalId>false</externalId>
+    <label>Document Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Integration_OnBase_Document_Types</valueSetName>
+    </valueSet>
+</CustomField>

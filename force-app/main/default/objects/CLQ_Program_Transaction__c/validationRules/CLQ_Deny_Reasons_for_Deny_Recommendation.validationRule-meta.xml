@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Deny_Reasons_for_Deny_Recommendation</fullName>
+    <active>true</active>
+    <description>If Recommendation is Deny, Deny reasons are required</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL( CLQ_Recommendation__c , &apos;Deny&apos;) , 
+OR(ISBLANK( TEXT(CLQ_Deny_Reasons__c) ), ISBLANK( CLQ_Reviewer_Notes__c ) ) ,  RecordType.Name  &lt;&gt; &apos;Reactivate Transaction&apos;)</errorConditionFormula>
+    <errorDisplayField>CLQ_Recommendation__c</errorDisplayField>
+    <errorMessage>If Recommendation is “Deny” you must provide  &quot;Reviewer Comments&quot; and &quot;Deny Reasons”</errorMessage>
+</ValidationRule>

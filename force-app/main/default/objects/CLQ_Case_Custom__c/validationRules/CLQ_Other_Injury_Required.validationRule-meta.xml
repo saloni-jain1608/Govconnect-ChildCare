@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Other_Injury_Required</fullName>
+    <active>true</active>
+    <description>If the check box is selected for Other Injury Requiring Medical Treatment The user is required to enter the details in the Comment box&quot;</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR( RecordType.Name = &apos;Incident / Injury / Illness&apos;, RecordType.Name = &apos;Incident Injury Submitted&apos;), CLQ_Other_injury_requiring_medical_trmt__c,  LEN(CLQ_Other_Injury_Requiring_Medical_Treat__c  ) &lt; 1)</errorConditionFormula>
+    <errorDisplayField>CLQ_Other_Injury_Requiring_Medical_Treat__c</errorDisplayField>
+    <errorMessage>If &quot;Other injury requiring medical treatment&quot; is checked then the &quot;Other injury requiring medical treatment description&quot; is required</errorMessage>
+</ValidationRule>

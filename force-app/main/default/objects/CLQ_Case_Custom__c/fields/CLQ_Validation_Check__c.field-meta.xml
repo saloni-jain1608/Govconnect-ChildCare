@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Validation_Check__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When the case status is submitted this checkbox will be true, which is used in the validation rule to not allow the help desk user to make the change to the case record.</description>
+    <externalId>false</externalId>
+    <label>Validation Check</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

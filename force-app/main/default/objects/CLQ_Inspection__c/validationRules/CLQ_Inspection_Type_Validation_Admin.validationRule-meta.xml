@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Type_Validation_Admin</fullName>
+    <active>true</active>
+    <description>This Validation Rule is to provide Approvers and State Admins the ability to Change the Inspection Type from Complaint to Incident/Injury/Illness</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+ OR(NOT(Contains($Label.Admin_Approver_Profiles, $Profile.Name)), 
+ CONTAINS(LOWER($UserRole.Name), &apos;county&apos;) &amp;&amp; CONTAINS(LOWER($UserRole.Name) ,  LOWER(CLQ_Program__r.Program_County__c ))) &amp;&amp;
+AND(NOT(ISNEW()), OR(CLQ_Program_Record_Type__c = &quot;Child Care Center&quot;,CLQ_Program_Record_Type__c = &quot;Pre School&quot;,
+CLQ_Program_Record_Type__c = &quot;	School Age Child Care&quot;,CLQ_Program_Record_Type__c = &quot;FCC - Type B Home&quot;,
+CLQ_Program_Record_Type__c = &quot;FCC - Type A Home&quot;),OR(CLQ_License_Type__c == &quot;Continuous&quot;,CLQ_License_Type__c = &quot;Provisional&quot; ), ISCHANGED(CLQ_Inspection_Type__c),
+OR(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Complaint&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Incident / Injury / Illness&quot;)),AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Incident / Injury / Illness&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Complaint&quot;))))</errorConditionFormula>
+    <errorMessage>Only Approvers/State Admins can change the Inspection Type</errorMessage>
+</ValidationRule>

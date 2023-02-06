@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Get_License_Number</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Get ERC</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var pickVal = &quot;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&quot;;
+var recordtype=&quot;{!CLQ_Program_Transaction__c.RecordTypeId}&quot;
+
+if(pickVal==&apos;Onsite Visit Pending&apos;)
+{
+alert(&apos;Transaction is under Onsite Visit Pending Status you are not allowed to pull staff and training records&apos;);
+}
+else
+{
+window.location = &apos;apex/CLQ_ERC_Staff_Rec_Integration?id={!CLQ_Program_Transaction__c.Id}&amp;&amp;source=PT&amp;&amp;recordtypeid=recordtype&apos;;
+}</url>
+</WebLink>

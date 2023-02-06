@@ -1,0 +1,125 @@
+<template>
+    <div class="slds-p-around_medium program-container">
+        <div class="program-header slds-p-vertical_medium">
+            <div class="slds-text-heading--large">{Programs}
+               
+            <!--    <lightning-combobox
+                style="display: -webkit-inline-box;margin-left: 70%;"
+                name="Language"
+                label="Select Language"
+                value={value}
+                placeholder="English"
+                options={options}
+                onchange={handleLanguageChange} ></lightning-combobox>
+           -->
+            </div>
+            
+        </div>
+        
+      
+        <div class="all-programs">
+            <div class="slds-grid slds-wrap">
+
+                <!-- This is for creating a new application -->
+                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4">
+                    <div class="program-cards slds-p-around_medium slds-m-around_medium" style="text-align:center;padding-top:45%;background-image: url(/vdss1/resource/1606923540000/CardBackground);
+                    background-size: cover;">
+                        <!--lightning-icon icon-name="utility:add" alternative-text="Create New Application" title="Create New Application"></lightning-icon-->
+                        <div class="slds-p-vertical_x-small continue-application-btn">
+                            <lightning-button variant="brand-outline" label={Create_an_Application}
+                                title="Create an Application" onclick={handle_CreateNewApplication}></lightning-button> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This is a repeat section for all programs -->
+                <template for:each={all_programs} for:item="item" for:index="index">
+                    <template if:false={item.isWithdrawn}> 
+                        <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4" key={item.Id}>
+                            <div class="flip-card program-cards slds-p-around_medium slds-m-around_medium">
+                                <div class="flip-card-inner" data-programid="" data-flipid={item.Id}>
+                                    <div class="flip-card-front" data-programid="">
+
+                                        <!-- Program card header -->
+                                        <div class="program-card-header slds-border_bottom slds-p-vertical_x-small">
+                                           <!-- <img src={item.ProgramIconForPortal} class="program-card-image" />-->
+                                            <div class="slds-text-body--regular"
+                                                style="font-weight:bold;font-size: 1.25rem;">{item.Name}</div>
+                                            <div class="slds-text-body--regular">{item.ProgramNumber}</div>
+                                        </div>
+                                        <!-- Program card body -->
+                                        <div class="program-card-body slds-p-vertical_x-small slds-text-body--regular">
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">{Program_Status}: </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block"><b>{item.ProgramStatus}</b>
+                                            </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">{License_Status}: </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">
+                                                <b>{item.LicenseRegistrationStatus}</b></div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">{License_Type}: </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block"><b>{item.LicenseType}</b>
+                                            </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">{License_Begin_Date}: </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">
+                                                <b>{item.LicenseBeginDate}</b></div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">{License_End_Date}: </div>
+                                            <div class="slds-size_1-of-2 slds-show_inline-block">
+                                                <b>{item.LicenseEndDate}</b></div>
+                                        </div>
+                                        <template if:true={item.ActionRequired}>
+                                            <div class="slds-m-vertical_small" style="text-align: center;">
+                                                <div>
+                                                    <h3 class="slds-text-color_error slds-text-heading_small">{Action_Required}</h3>
+                                                </div>
+                                                <div>
+                                                    <a href={item.InspectionsURL}>{Click_here}</a>
+                                                </div>
+                                            </div>
+                                        </template>
+                                        <div class="slds-p-vertical_x-small continue-application-btn">
+                                            <!--lightning-button variant="brand" label="Edit" title="Edit" onclick={handle_EditApplication} data-id={item.Id}></lightning-button-->
+                                            <!--lightning-button-icon icon-name="utility:replace"  alternative-text="More Options" title="More Options"></lightning-button-icon-->
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <!-- Program card header -->
+                                        <div class="program-card-header slds-border_bottom slds-p-vertical_x-small"
+                                            style="margin-bottom: 1rem;">
+                                            <!--img src={item.Program_Icon_For_Portal__c} class="program-card-image"/-->
+                                            <div class="slds-text-body--regular"
+                                                style="font-weight:bold;font-size: 1.25rem;">{item.Name}</div>
+                                            <div class="slds-text-body--regular">{item.ProgramNumber}</div>
+                                        </div>
+                                        <c-vdss_programoptionslwccmp program-submission-status={item.ProgramTransactionStatus} program-status={item.LicenseRegistrationStatus} cap-raised={item.ActionRequired} 
+                                            card-id={item.Id} languageselected={LangSelected} languagedata={LanguageData} app-id={item.programTransactionId} onremovecard={removeCard}>
+                                        </c-vdss_programoptionslwccmp>
+                                    </div>
+                                </div>
+                                <!--Flip Icon-->
+                                <div class="flip-icon">
+                                    <lightning-button-icon icon-name="utility:rotate" size="medium" variant="inverse"
+                                        alternative-text="Flip" data-flipbtnid={item.Id} title="Flip" onclick={flipCardHorizontal}>
+                                    </lightning-button-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <template if:true={showWithdrawPopup}> 
+                    <c-kreator-modal>
+                        <div slot="header" class="popup-header">{withdrawPopupHeader}</div>
+                        <div slot="body" class="popup-body">
+                            <p class="popup-ques">{popupQuesLabel}</p>
+                            <lightning-textarea class="text-box" name="comments" label={popupComments} placeholder={popupCommentsPlaceholder} value={textBoxValue} onchange={handleTextBox} max-length="200"></lightning-textarea>
+                        </div>
+                        <div slot="footer" class="popup-footer">
+                            <div class="popup-btns">
+                                <lightning-button class="no-btn" data-id={noBtnLabel} label={noBtnLabel} onclick={closePopup}></lightning-button>
+                                <lightning-button class="yes-btn slds-m-left_medium" data-id={yesBtnLabel} label={yesBtnLabel} onclick={withdrawApplication} variant="brand"></lightning-button>
+                            </div>
+                        </div>
+                    </c-kreator-modal>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

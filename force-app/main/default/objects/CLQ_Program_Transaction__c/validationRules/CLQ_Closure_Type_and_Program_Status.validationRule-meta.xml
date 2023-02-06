@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Closure_Type_and_Program_Status</fullName>
+    <active>true</active>
+    <description>Closure type can be Temporary only for &apos;Open&apos; Programs, only when trans status is Not Submitted,
+Submitted,
+Under Reviewer Review,
+Returned to Reviewer,
+Approver Review in Progress,</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( or(ISPICKVAL(CLQ_Transaction_Status__c,&apos;Not Submitted&apos;),ISPICKVAL(CLQ_Transaction_Status__c,&apos;Submitted&apos;),ISPICKVAL(CLQ_Transaction_Status__c,&apos;Under Reviewer Review&apos;),ISPICKVAL(CLQ_Transaction_Status__c,&apos;Returned to Reviewer&apos;),ISPICKVAL(CLQ_Transaction_Status__c,&apos;Approver Review in Progress&apos;)   ),  OR(RecordType.Name  = &apos;Registration Closure&apos; , RecordType.Name  = &apos;Licensing - Closure&apos;), ISPICKVAL(CLQ_Closure_Type__c , &apos;Temporary&apos;)  , CLQ_Program_Status__c  &lt;&gt; &apos;Open&apos;)</errorConditionFormula>
+    <errorDisplayField>CLQ_Closure_Type__c</errorDisplayField>
+    <errorMessage>Closure type can be &apos;Temporary&apos; only for Programs with Program Status as &apos;Open&apos;</errorMessage>
+</ValidationRule>

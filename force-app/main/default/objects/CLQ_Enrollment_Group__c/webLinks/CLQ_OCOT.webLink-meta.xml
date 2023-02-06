@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_OCOT</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>OCOT</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if (&quot;{!CLQ_Enrollment_Group__c.Recommended_rating__c}&quot; == null || &quot;{!CLQ_Enrollment_Group__c.Recommended_rating__c}&quot; == &quot;0&quot; || &quot;{!CLQ_Enrollment_Group__c.Recommended_rating__c}&quot; == &quot;1&quot; || &quot;{!CLQ_Enrollment_Group__c.Recommended_rating__c}&quot; == &quot;2&quot;){ 
+alert(&apos;An OCOT does not need to be performed for a one or two star program.&apos;); 
+} 
+else 
+window.location.href= &apos;/apex/CLQ_OCOTSelection?id={!CLQ_Enrollment_Group__c.Id}&apos;;</url>
+</WebLink>

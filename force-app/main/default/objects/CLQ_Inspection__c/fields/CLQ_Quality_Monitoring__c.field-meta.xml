@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Quality_Monitoring__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>CR 13879 - new inspection type, &apos;Quality Monitoring&apos; in inspections to work exactly the same as other monitoring inspections except the points will count.  Staff will need the ability to select this new inspection type from the current checkbox.</description>
+    <externalId>false</externalId>
+    <label>Quality Monitoring</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

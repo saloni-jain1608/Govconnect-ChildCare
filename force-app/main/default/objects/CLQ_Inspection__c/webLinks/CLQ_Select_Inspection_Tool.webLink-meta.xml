@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Select_Inspection_Tool</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Select Inspection Tool</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if({!IF( CLQ_Inspection__c.CLQ_Inspection_Tool__c  != null, true,false)}){ 
+alert(&apos;An Inspection Tool has already been used for this visit.&apos;); 
+} 
+ 
+else if({!IF(TEXT(CLQ_Inspection__c.CLQ_Use_Rules_Effective_On__c) =&quot;&quot;,true,false)} || &apos;{!CLQ_Inspection__c.CLQ_Method__c}&apos; == &apos;&apos;){ 
+alert(&apos;You can not select tool without Rules Effective date and Method value&apos;); 
+}
+else{ 
+window.location.href = &apos;/apex/CLQ_InspectionToolSelection?id={!CLQ_Inspection__c.Id }&apos;; 
+}</url>
+</WebLink>

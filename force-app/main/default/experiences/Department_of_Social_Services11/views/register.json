@@ -1,0 +1,64 @@
+{
+  "appPageId" : "b3c9b8e4-0860-419d-ae09-bca424e1fb93",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "65a14072-b364-47b0-a722-36fe8a2ff601",
+  "label" : "Register",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<center><img src=\"{!contentAsset.GovConnectTMpng.1}\" style=\"width:45%;\" /></center>\n<p style=\"font-size:40px;text-align:center\">Register</p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "29063704-88f2-4c50-b42c-691162b2e2fe",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "accountName" : "Account Name",
+        "accountnameval" : "",
+        "confirmPasswordLabel" : "Confirm Password",
+        "emailLabel" : "Email",
+        "emailval" : "",
+        "extraFieldsFieldSet" : "",
+        "firstnameLabel" : "First Name",
+        "firstnameval" : "",
+        "includePasswordField" : true,
+        "lastnameLabel" : "Last Name",
+        "lastnameval" : "",
+        "passwordLabel" : "Create Password",
+        "passwordval" : "",
+        "regConfirmUrl" : "./CheckPasswordResetEmail",
+        "repasswordval" : "",
+        "startUrl" : "",
+        "submitButtonLabel" : "Sign Up"
+      },
+      "componentName" : "c:selfRegister",
+      "id" : "4090018e-ae31-46ed-a7f6-2756e61d2587",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5b17eca4-13b5-4ad6-aab9-c11805b41af4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Register"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1a07e186-3cf2-4eff-b2fc-3bda7add48c1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "27215b9c-a4b4-4261-938b-a5ef8f944102",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "self-register"
+}

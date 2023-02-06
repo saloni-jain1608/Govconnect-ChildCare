@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Discontinue_Date</fullName>
+    <active>true</active>
+    <description>TFS#16566 Add a validation that when Rating Removed is selected, then a Rating Discontinue Date is mandatory.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Unable_to_Rate_Reasons__c, &quot;Rating Removed&quot;),
+ ISNULL(Rating_Discontinue__c) 
+)</errorConditionFormula>
+    <errorMessage>Please select Rating Reduction Date.</errorMessage>
+</ValidationRule>

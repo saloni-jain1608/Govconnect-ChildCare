@@ -1,0 +1,2 @@
+<apex:page showHeader="true" sidebar="true" standardController="CLQ_Program_Transaction__c" extensions="CLQ_CreateOnsiteVisitInspectionExtn" action="{!onLoad}">  
+</apex:page>

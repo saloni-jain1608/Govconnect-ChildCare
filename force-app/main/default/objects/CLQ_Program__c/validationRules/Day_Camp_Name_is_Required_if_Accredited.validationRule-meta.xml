@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Camp_Name_is_Required_if_Accredited</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(CLQ_ACA_Accredited__c = true,
+ ISBLANK(CLQ_Day_Camp_Name__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Day_Camp_Name__c</errorDisplayField>
+    <errorMessage>Day Camp Name is required</errorMessage>
+</ValidationRule>

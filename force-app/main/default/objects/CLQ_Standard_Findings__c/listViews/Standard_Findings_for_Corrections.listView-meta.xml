@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Findings_for_Corrections</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Finding_Code__c</columns>
+    <columns>CLQ_Program_Type__c</columns>
+    <columns>CLQ_Finding_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Program_Type__c</field>
+        <operation>equals</operation>
+        <value>Child Care Center</value>
+    </filters>
+    <label>Standard Findings for Corrections</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

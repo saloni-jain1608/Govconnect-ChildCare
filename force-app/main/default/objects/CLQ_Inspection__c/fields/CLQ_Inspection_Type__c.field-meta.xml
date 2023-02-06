@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-license</fullName>
+                <default>false</default>
+                <label>Pre-license</label>
+            </value>
+            <value>
+                <fullName>Provisional</fullName>
+                <default>false</default>
+                <label>Provisional</label>
+            </value>
+            <value>
+                <fullName>Annual</fullName>
+                <default>false</default>
+                <label>Annual</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Monitor</fullName>
+                <default>false</default>
+                <label>Monitor</label>
+            </value>
+            <value>
+                <fullName>Incident / Injury / Illness</fullName>
+                <default>false</default>
+                <label>Incident / Injury / Illness</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Amendment - change of location</fullName>
+                <default>false</default>
+                <label>Amendment - change of location</label>
+            </value>
+            <value>
+                <fullName>Amendment - change of capacity</fullName>
+                <default>false</default>
+                <label>Amendment - change of capacity</label>
+            </value>
+            <value>
+                <fullName>Initial Registration</fullName>
+                <default>false</default>
+                <label>Initial Registration</label>
+            </value>
+            <value>
+                <fullName>Ongoing Registration</fullName>
+                <default>false</default>
+                <label>Ongoing Registration</label>
+            </value>
+            <value>
+                <fullName>Technical Assistance</fullName>
+                <default>false</default>
+                <label>Technical Assistance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_FCC_Type_Cant_fill_Under_2_and_half</fullName>
+    <active>true</active>
+    <description>If the program record type is FCC under 2 1/2 should not be filled in.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(CONTAINS(CLQ_Program__r.RecordType.Name,&apos;FCC&apos;),
+OR(NOT(ISBLANK(CLQ_Number_of_Children_Under_2_5__c)), NOT(ISBLANK(TEXT(CLQ_Used_by_Under_or_Over_2_1_2__c)))))</errorConditionFormula>
+    <errorDisplayField>CLQ_Number_of_Children_Under_2_5__c</errorDisplayField>
+    <errorMessage>Under 2 1/2 information cannot be filled in for FCC type records.</errorMessage>
+</ValidationRule>

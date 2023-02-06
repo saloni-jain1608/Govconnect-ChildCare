@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_CAP_or_TA_should_be_selected</fullName>
+    <active>false</active>
+    <description>only one of CAP and TA can be checked</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( CLQ_CAP__c = true,  CLQ_TA__c = true)</errorConditionFormula>
+    <errorMessage>Cannot check both CAP and TA</errorMessage>
+</ValidationRule>

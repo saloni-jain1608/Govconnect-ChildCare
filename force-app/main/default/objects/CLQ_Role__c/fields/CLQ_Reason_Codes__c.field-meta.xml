@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reason_Codes__c</fullName>
+    <externalId>false</externalId>
+    <label>Qualifications</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Promoted/Courses Due</fullName>
+                <default>false</default>
+                <label>Promoted/Courses Due</label>
+            </value>
+            <value>
+                <fullName>CDA</fullName>
+                <default>false</default>
+                <label>CDA</label>
+            </value>
+            <value>
+                <fullName>Experience</fullName>
+                <default>false</default>
+                <label>Experience</label>
+            </value>
+            <value>
+                <fullName>College/CD courses</fullName>
+                <default>false</default>
+                <label>College/CD courses</label>
+            </value>
+            <value>
+                <fullName>Experience/CD Courses</fullName>
+                <default>false</default>
+                <label>Experience/CD Courses</label>
+            </value>
+            <value>
+                <fullName>AA Child Dev./ECE</fullName>
+                <default>false</default>
+                <label>AA Child Dev./ECE</label>
+            </value>
+            <value>
+                <fullName>BS Child Dev./ECE</fullName>
+                <default>false</default>
+                <label>BS Child Dev./ECE</label>
+            </value>
+            <value>
+                <fullName>Ph.D. Child Dev/ECE</fullName>
+                <default>false</default>
+                <label>Ph.D. Child Dev/ECE</label>
+            </value>
+            <value>
+                <fullName>AS 12 sem/18 qtr hrs CD/ECE</fullName>
+                <default>false</default>
+                <label>AS 12 sem/18 qtr hrs CD/ECE</label>
+            </value>
+            <value>
+                <fullName>BS 12 sem/18 qtr hrs CD/ECE</fullName>
+                <default>false</default>
+                <label>BS 12 sem/18 qtr hrs CD/ECE</label>
+            </value>
+            <value>
+                <fullName>Masters</fullName>
+                <default>false</default>
+                <label>Masters</label>
+            </value>
+            <value>
+                <fullName>Career Pathways Level 1</fullName>
+                <default>false</default>
+                <label>Career Pathways Level 1</label>
+            </value>
+            <value>
+                <fullName>Career Pathways Level 2</fullName>
+                <default>false</default>
+                <label>Career Pathways Level 2</label>
+            </value>
+            <value>
+                <fullName>Career Pathways Level 3</fullName>
+                <default>false</default>
+                <label>Career Pathways Level 3</label>
+            </value>
+            <value>
+                <fullName>ODE Preschool License</fullName>
+                <default>false</default>
+                <label>ODE Preschool License</label>
+            </value>
+            <value>
+                <fullName>Montessori Credential</fullName>
+                <default>false</default>
+                <label>Montessori Credential</label>
+            </value>
+            <value>
+                <fullName>Ohio Administrator Credential</fullName>
+                <default>false</default>
+                <label>Ohio Administrator Credential</label>
+            </value>
+            <value>
+                <fullName>Does NOT meet requirements</fullName>
+                <default>false</default>
+                <label>Does NOT meet requirements</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Camp_Req_Met_No_Approval_End_Date</fullName>
+    <active>true</active>
+    <description>Validation for Approval End Date not to be empty when the flag is checked.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+RecordType.Name = &apos;Day Camp&apos; &amp;&amp; 
+($Profile.Name == &apos;State Admin - State user&apos; || $Profile.Name == &apos;System Administrator&apos;) &amp;&amp; CLQ_Approval_Terminated_by_ODJFS__c == true &amp;&amp; ISNULL(Approval_End_Date__c)</errorConditionFormula>
+    <errorDisplayField>Approval_End_Date__c</errorDisplayField>
+    <errorMessage>Approval End Date should be populated when the Approval Terminated for ODJFS is checked.</errorMessage>
+</ValidationRule>

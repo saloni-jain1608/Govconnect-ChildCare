@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2">{!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c} has accumulated at least thirteen (13) points from all inspections. A review of the program and the infraction is required.</font></span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></div><div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team.</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span></font></div></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><font color="#333333" face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="color: rgb(255, 255, 255);">ref: {!CLQ_Program_Transaction__c.Id</span><span style="color: rgb(255, 255, 255);">}</span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

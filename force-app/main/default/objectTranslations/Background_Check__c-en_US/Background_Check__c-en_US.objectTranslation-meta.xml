@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Background Check</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Background Check</value>
+    </caseValues>
+    <layouts>
+        <layout>Background Check Layout</layout>
+        <sections>
+            <label></label>
+            <section>Child Protective Index</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Criminal Histroy</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fingerprint Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Sex Offender Registry</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

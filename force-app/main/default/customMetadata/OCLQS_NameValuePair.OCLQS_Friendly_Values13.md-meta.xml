@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values13</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Denied__Supervisor On-Site Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Denied__Annual Report Disapproved==Denied**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Denied__Rating Assessment Complete==Denied**YES
+CLQ_Transaction_Document__c===&gt;Denied__Completed==Denied**YES
+CLQ_Transaction_Document__c===&gt;Denied__Withdrawn at Applicant&apos;s Request==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Denied__Unable to Rate==Denied**YES
+CLQ_Transaction_Document__c===&gt;Denied__Onsite Visit Pending==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Denied__Rating Recommended for Review==Under Review**YES</value>
+    </values>
+</CustomMetadata>

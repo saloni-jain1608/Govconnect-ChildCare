@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Required_for_Role__c</fullName>
+    <description>This field is used to ensure that a document is required for each contact of a specific role.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the roles that require this document type to be on file.  If this field is not populated it is assumed that this document type is a program level document and won&apos;t be checked for each member of the organization&apos;s contacts.</inlineHelpText>
+    <label>Document Required for Role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrator</fullName>
+                <default>false</default>
+                <label>Administrator</label>
+            </value>
+            <value>
+                <fullName>Authorized Rep</fullName>
+                <default>false</default>
+                <label>Authorized Rep</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Resident</fullName>
+                <default>false</default>
+                <label>Resident</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

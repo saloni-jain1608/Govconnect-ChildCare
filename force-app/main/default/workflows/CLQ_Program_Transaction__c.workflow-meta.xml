@@ -1,0 +1,2716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Annual_Report_Overall_Requirements_Defferal</fullName>
+        <description>Annual Report Overall Requirements Defferal</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_AR_desk_review_deferral</template>
+    </alerts>
+    <alerts>
+        <fullName>Annual_Report_Overall_Requirements_Defferal_Clone</fullName>
+        <ccEmails>mymessagepoc@q-3gqc1h8146emazn45rnpagpjs.r-joseay.cs32.apex.sandbox.salesforce.com</ccEmails>
+        <description>Annual Report Overall Requirements Defferal Clone</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_AR_desk_review_deferral_clone</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Application_Opened_ODE_Email_Alert</fullName>
+        <description>Application Opened ODE Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Application_Opened_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Application_Opened_ODJFS_Email_Alert</fullName>
+        <description>Application Opened ODJFS Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Application_Opened_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Closed_by_System_ODE_Email_Alert</fullName>
+        <description>Closed by System ODE Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Closed_by_System_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Closed_by_System_ODJFS_Email_Alert</fullName>
+        <description>Closed by System ODJFS Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Closed_by_System_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Day_Camp_Application_Approved_Email_Alert</fullName>
+        <description>Day Camp Application Approved Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/Day_Camp_Application_Approved_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_Alert_ODE_Initial_License_Application_Approved</fullName>
+        <description>Email Alert - ODE Initial License Application Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Initial_License_Application_Approved_for_Provisional_License</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_alert_Day_Camp_Registration_Notification</fullName>
+        <description>Email alert - Day Camp Registration Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_To_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Day_Camp_Registration_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_alert_IHA_Initial_Application</fullName>
+        <description>Email alert - IHA Initial Application</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/IHA_Registration_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_alert_JFS_License_Application_Approved</fullName>
+        <description>Email alert - JFS License Application Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Initial_License_Application_Approved_for_Provisional_License</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Email_alert_for_reviewer_to</fullName>
+        <description>Email alert for reviewer to review the application</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Application_ready_for_review</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_IHA_Application_Approval_Email_Alert</fullName>
+        <description>IHA Application Approval Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_IHA_Application_Approval_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_IHA_Application_Received_Email_Alert</fullName>
+        <description>IHA Application Received Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_IHA_Application_Received_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_IHA_Application_Renewal_Email_Alert</fullName>
+        <description>IHA Application Renewal Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_IHA_Application_Renewal_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Initial_Application_Submitted_ODE_Email_Alert</fullName>
+        <description>Initial Application Submitted ODE Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Initial_Application_Submitted_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Initial_Application_Submitted_ODJFS_Email_Alert</fullName>
+        <description>Initial Application Submitted ODJFS Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Initial_Application_Submitted_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Amendments_State_Supervisor_Returns_to_Specialist_Email_Alert</fullName>
+        <description>JFS Amendments State Supervisor Returns to Specialist Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Manager_s_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Amendments_State_Supervisor_Returns_to_Specialist</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Application_Withdrawn</fullName>
+        <description>JFS Application Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Application_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Application_at_Risk_Email_Alert</fullName>
+        <description>JFS Application at Risk Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Application_is_at_Risk</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Application_is_Closed</fullName>
+        <description>JFS Application is Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Application_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Authorized_Rep_Info_Updated_Program_Email_Alert</fullName>
+        <description>JFS Authorized Rep Info Updated Program Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Auth_Rep_Info_Updated_Program</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COA_Amendment_Request_Decision_Approved</fullName>
+        <description>JFS - COA Amendment Request Decision Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_To_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_COA_Amendment_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COA_Amendment_Request_Decision_Denied</fullName>
+        <description>JFS - COA Amendment Request Decision Denied</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_COA_Amendment_Request_Denied</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COA_Amendment_Request_Decision_Submitted</fullName>
+        <description>JFS - COA Amendment Request Decision Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_COA_Amendment_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COA_Amendment_Request_Decision_Withdrawn</fullName>
+        <description>JFS - COA Amendment Request Decision Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_COA_Amendment_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COC_Amendment_Request_Decision_Approved</fullName>
+        <description>JFS - COC Amendment Request Decision Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COC_Amendment_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COC_Amendment_Request_Decision_Submitted</fullName>
+        <description>JFS - COC Amendment Request Decision Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COC_Amendment_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COC_Amendment_Request_Decision_Withdrawn</fullName>
+        <description>JFS - COC Amendment Request Decision Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COC_Amendment_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COL_Amendment_Request_Decision_Approved</fullName>
+        <description>JFS - COL Amendment Request Decision Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COL_Request_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COL_Amendment_Request_Decision_Submitted</fullName>
+        <description>JFS - COL Amendment Request Decision Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COL_Request_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_COL_Amendment_Request_Decision_Withdrawn</fullName>
+        <description>JFS - COL Amendment Request Decision Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_COL_Request_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Email_alert_to_be_sent_if_Reactivation_is_Approved</fullName>
+        <description>JFS Email alert to be sent if Reactivation is Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Reactivation_Transaction_Approval_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_FCC_Resident_Update_Email_Alert</fullName>
+        <description>JFS FCC Resident Update Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_FCC_Resident_Info_Updated_Prog</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Facility_Schedule_Update_Email_Alert</fullName>
+        <description>JFS Facility Schedule Update Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_FacilitySchedule_Updated_Program</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Onsite_Contact_Info_Update_Email_Alert</fullName>
+        <description>JFS Onsite Contact Info Update Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Onsite_Contact_Info_Updated_Prog</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Outdoor_Space_Info_Updated_Program_Email_Alert</fullName>
+        <description>JFS Outdoor Space Info Updated Program Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Outdoor_Space_Updated_Program</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Permanent_Licensing_Closure_Email_Alert</fullName>
+        <description>JFS Permanent Licensing Closure Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Permanent_Licensing_Closure_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Temporary_Licensing_Closure_Email_Alert</fullName>
+        <description>JFS Temporary Licensing Closure Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_Temporary_Licensing_Closure_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_Transaction_Resubmitted</fullName>
+        <description>JFS Transaction Resubmitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Documents_Re_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_New_PT_for_ODE</fullName>
+        <description>CLQ New PT for ODE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_NewPT_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_New_PT_for_ODJFS</fullName>
+        <description>CLQ New PT for ODJFS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_NewPT_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Application_Update_Submitted</fullName>
+        <description>ODE- Application Update Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Application_Update_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Application_needs_Recommendation_at_risk</fullName>
+        <description>ODE Application needs Recommendation (at risk)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Application_is_at_Risk</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COC_Amendment_Request_Decision_Approved</fullName>
+        <description>ODE - COC Amendment Request Decision Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COC_Amendment_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COC_Amendment_Request_Decision_Submitted</fullName>
+        <description>ODE - COC Amendment Request Decision Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Submitter__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COC_Amendment_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COC_Amendment_Request_Decision_Withdrawn</fullName>
+        <description>ODE - COC Amendment Request Decision Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COC_Amendment_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COL_Amendment_Request_Decision_Approved</fullName>
+        <description>ODE - COL Amendment Request Decision Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COL_Request_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COL_Amendment_Request_Decision_Submitted</fullName>
+        <description>ODE - COL Amendment Request Decision Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COL_Request_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_COL_Amendment_Request_Decision_Withdrawn</fullName>
+        <description>ODE - COL Amendment Request Decision Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COL_Request_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Email_alert_to_be_sent_if_Reactivation_is_Approved</fullName>
+        <description>ODE Email alert to be sent if Reactivation is Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_To_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Reactivation_Transaction_Approval_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Facility_Schedule_Update_Email_Alert</fullName>
+        <description>ODE Facility Schedule Update Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_FacilitySchedule_Updated_Program</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Notification_Amendment_Request_Decision_Denied</fullName>
+        <description>Notification - Amendment Request Decision Denied</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_COA_Amendment_Request_Denied</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Onsite_Contact_Info_Update_Email_Alert</fullName>
+        <description>ODE Onsite Contact Info Update Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Onsite_Contact_Info_Updated_Prog</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Outdoor_Space_Info_Updated_Program_Email_Alert</fullName>
+        <description>ODE Outdoor Space Info Updated Program Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Outdoor_Space_Updated_Program</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Transaction_Resubmitted</fullName>
+        <description>ODE Transaction Resubmitted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Documents_Re_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODS_Application_Withdrawn</fullName>
+        <description>ODS Application Withdrawn</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODS_Application_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_OOS_Program_Approved_Email_Alert</fullName>
+        <description>OOS Program Approved Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_OOS_Program_Approved_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Program_Inactive_after_335_days_of_Creation</fullName>
+        <description>Program Inactive after 335 days of Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Program_Inactive_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Withdraw_Application_ODE_Email_Alert</fullName>
+        <description>Withdraw Application ODE Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Withdraw_Application_ODE</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Withdraw_Application_ODJFS_Email_Alert</fullName>
+        <description>Withdraw Application ODJFS Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Withdraw_Application_ODJFS</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_JFS_Out_Of_State_Registration_Approved</fullName>
+        <description>Email Alert - JFS Out Of State Registration Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/JFS_Out_Of_State_Regi</template>
+    </alerts>
+    <alerts>
+        <fullName>Not_Complete_to_Withdrawn_status</fullName>
+        <description>Not Complete to Withdrawn status</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_Registration_ExternalUser_Withdraw</template>
+    </alerts>
+    <alerts>
+        <fullName>Not_Complete_to_Withdrawn_status_clone</fullName>
+        <ccEmails>mymessagepoc@q-3gqc1h8146emazn45rnpagpjs.r-joseay.cs32.apex.sandbox.salesforce.com</ccEmails>
+        <description>Not Complete to Withdrawn status clone</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_Registration_ExternalUser_Withdraw_Clone</template>
+    </alerts>
+    <alerts>
+        <fullName>ODE_Application_is_Closed</fullName>
+        <description>ODE Application is Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Transaction_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_Application_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Outbound_Message_when_PT_is_in_Deferral</fullName>
+        <description>Outbound Message when PT is in Deferral</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OCLQS_State_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_ER_RR_CO_desk_review_deferral</template>
+    </alerts>
+    <alerts>
+        <fullName>SUTQ_Email_Program_Annual_Report_Not_Met</fullName>
+        <description>SUTQ - Email Program Annual Report Not Met</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_Program_Annual_Report_Not_Met</template>
+    </alerts>
+    <alerts>
+        <fullName>Test</fullName>
+        <description>Test</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OCLQS_State_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/PTDeletedTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdraw_Status_for_program_transaction</fullName>
+        <description>Withdraw Status for program transaction</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_COC_Amendment_Request_Withdrawn</template>
+    </alerts>
+    <alerts>
+        <fullName>Withdraw_Status_for_program_transaction_clone</fullName>
+        <ccEmails>mymessagepoc@q-3gqc1h8146emazn45rnpagpjs.r-joseay.cs32.apex.sandbox.salesforce.com</ccEmails>
+        <description>Withdraw Status for program transaction clone</description>
+        <protected>false</protected>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/SUTQ_Email_InternalUser_Withdraw_Reg_Clone</template>
+    </alerts>
+    <alerts>
+        <fullName>Zero_Transaction_Documents</fullName>
+        <description>Zero Transaction Documents</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OCLQS_Dev_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>OCLQS_State_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/ZeroDocsTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>somw</fullName>
+        <description>somw</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OCLQS_State_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_Amendment_Request_Approved</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Set_Approved_by_Manager_to_True</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Approved by Manager to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_UnFlag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>UnFlag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assign_To_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>DC_Admin</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Assign To Queue</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Approved_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approved Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Assign_to_Application_Unit_1_queue</fullName>
+        <description>On Registration - Day Camp Transaction When Transaction Status = Submitted AND  ACA Accredited Checkbox= True then Assign to &quot;Application Unit 1&quot; Queue.</description>
+        <field>OwnerId</field>
+        <lookupValue>CLQ_Application_Unit_1</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>CLQ-Assign to Application Unit 1 queue</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Change_Status_to_Approver_Review</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Approver Review In Progress</literalValue>
+        <name>Change Status to Approver Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Change_Status_to_UnderReviewerReview</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Under Reviewer Review</literalValue>
+        <name>Change Status to &quot;Under Reviewer Review&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Change_Transaction_Status_to_ARP</fullName>
+        <description>Change Transaction Status to &quot;Approver Review In Progress&quot;</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Approver Review In Progress</literalValue>
+        <name>Change Transaction Status to ARP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_City</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_City__c</field>
+        <formula>CLQ_Program__r.CLQ_City__c</formula>
+        <name>City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Clear_Queue_Name</fullName>
+        <description>Hidden field used to filter the Views on PT</description>
+        <field>CLQ_Queue_Name__c</field>
+        <name>Clear Queue Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_County</fullName>
+        <description>Updates the Program Address to PT</description>
+        <field>CLQ_Old_County__c</field>
+        <formula>CLQ_Program__r.CLQ_County__r.Name</formula>
+        <name>County</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Flag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Flag &quot;Rejected By Manager&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Foster_Children</fullName>
+        <field>CLQ_XPrior_Foster_Children__c</field>
+        <formula>TEXT( CLQ_Program__r.CLQ_Foster_Children__c )</formula>
+        <name>Foster Children</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Foster_Parent</fullName>
+        <field>CLQ_XPrior_Are_you_a_Foster_Parent__c</field>
+        <formula>TEXT( CLQ_Program__r.CLQ_Are_you_Foster_Parent__c )</formula>
+        <name>Foster Parent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Number_of_Residents</fullName>
+        <field>CLQ_XPrior_Number_of_Residents__c</field>
+        <formula>CLQ_Program__r.CLQ_Number_of_Residents__c</formula>
+        <name>Number of Residents</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Program_Email_Address</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_Program_Email_Address__c</field>
+        <formula>CLQ_Program__r.CLQ_Program_Email__c</formula>
+        <name>Program Email Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Program_Phone_Number</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_Phone_Number__c</field>
+        <formula>CLQ_Program__r.CLQ_Phone__c</formula>
+        <name>Program Phone Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Program_Street_Address</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_Program_Street_Address__c</field>
+        <formula>CLQ_Program__r.CLQ_Street_Address_1__c</formula>
+        <name>Program Street Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Program_Street_Address2</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_Program_Street_Address_2__c</field>
+        <formula>CLQ_Program__r.CLQ_Street_Address_2__c</formula>
+        <name>Program Street Address2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Reg_Status_Return_to_Reviewer</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Returned to Reviewer</literalValue>
+        <name>Registration Status Returned to Reviewer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Registration_Status_Is_Denied</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Denied</literalValue>
+        <name>Registration Status Is Denied</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Registration_Status_Withdrawn</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Withdrawn</literalValue>
+        <name>Registration Status Withdrawn</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Reset_Approved_by_Manager_Flag</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Approved by Manager Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Reset_SkipValidation_Flag</fullName>
+        <description>Update Skip Validation to False</description>
+        <field>Skip_Validation__c</field>
+        <literalValue>0</literalValue>
+        <name>CLQ_Reset_SkipValidation_Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Reset_Start_Approval</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Start Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_ReturntoReviewer_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Returned to Reviewer</literalValue>
+        <name>Returned to Reviewer Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Set_Approved_by_Manager_to_FALSE</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Set &quot;Approved by Manager&quot; to FALSE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Set_Approved_by_Manager_to_True</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Approved by Manager to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Set_Trans_Status_To_Denied</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Denied</literalValue>
+        <name>Set Trans. Status To Denied</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Set_Transaction_Status_To_Approved</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set Transaction_Status_To_Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Specialized_Home</fullName>
+        <field>CLQ_XPrior_Specialized_Foster_Home__c</field>
+        <formula>TEXT( CLQ_Program__r.CLQ_Specialized_Foster_Home__c )</formula>
+        <name>Specialized Home</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_UnFlag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>UnFlag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Uncheck_Resubmission_Complete</fullName>
+        <field>CLQ_Resubmission_Complete__c</field>
+        <literalValue>0</literalValue>
+        <name>CLQ_Uncheck Resubmission Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Approval_Check</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Approval Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Approved_By_Manager</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Approved By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Start_Approval</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Start_Approval_Check</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Start_Approval_Check_ODE</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval Check-ODE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Start_Approval_ODE</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval -ODE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Unflag_Start_Approval_Recall</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval Recall</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_120_Days_checkbox</fullName>
+        <field>CLQ_Check_for_120_Days__c</field>
+        <literalValue>1</literalValue>
+        <name>Update 120 Days checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Approval_Date</fullName>
+        <description>Set the date to Today() when the PT Status = Approved</description>
+        <field>CLQ_Approval_Date__c</field>
+        <formula>Today()</formula>
+        <name>Update Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Assigned_To_Email</fullName>
+        <field>CLQ_Assigned_To_Email__c</field>
+        <formula>CLQ_Transaction_Assigned_To__r.Email</formula>
+        <name>Update Assigned To Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Closure_Status</fullName>
+        <field>CLQ_Closure_Status__c</field>
+        <literalValue>Pending Processing</literalValue>
+        <name>Update Closure Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Effective_Day_of_Closure</fullName>
+        <field>CLQ_XEffective_Date_of_Closure__c</field>
+        <formula>CLQ_Last_Day_of_Operation__c</formula>
+        <name>Update Effective Day of Closure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Effective_date_of_closure</fullName>
+        <field>CLQ_XEffective_Date_of_Closure__c</field>
+        <formula>TODAY() +1</formula>
+        <name>Update Effective date of closure</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_City</fullName>
+        <field>CLQ_Mailing_City__c</field>
+        <formula>CLQ_ProgTrans_City__c</formula>
+        <name>CLQ Update Mailing City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Street_1</fullName>
+        <field>CLQ_Mailing_Street_Address__c</field>
+        <formula>CLQ_ProgTrans_Street_Address__c</formula>
+        <name>CLQ Update Mailing Street 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Street_2</fullName>
+        <field>CLQ_Mailing_Street_Address_2__c</field>
+        <formula>CLQ_ProgTrans_Street_Address_2__c</formula>
+        <name>CLQ Update Mailing Street 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Mailing_Zipcode</fullName>
+        <field>CLQ_Mailing_ZipCode__c</field>
+        <formula>CLQ_ProgTrans_Zip_Code__c</formula>
+        <name>CLQ Update Mailing Zipcode</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Manager_s_Email_Address</fullName>
+        <field>CLQ_Manager_s_Email_Address__c</field>
+        <formula>CLQ_Transaction_Assigned_To__r.Manager.Email</formula>
+        <name>Update Manager&apos;s Email Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_OOS_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Approver Review in Progress</literalValue>
+        <name>Update OOS Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Program_Name</fullName>
+        <field>CLQ_Program_Name_OOS__c</field>
+        <formula>CLQ_Program__r.Name</formula>
+        <name>CLQ_Update Program Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Program_email_address</fullName>
+        <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+        <formula>CLQ_Program__r.CLQ_Program_Email__c</formula>
+        <name>Update Program email address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Queue_Name</fullName>
+        <description>Hidden field used to filter the Views on PT</description>
+        <field>CLQ_Queue_Name__c</field>
+        <formula>$Label.CLQ_Program_App_Queue_Name_AppUnitAppl</formula>
+        <name>Update Queue Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Queue_Name_AppUnit2</fullName>
+        <field>CLQ_Queue_Name__c</field>
+        <formula>$Label.CLQ_Program_App_Queue_Name_ApplicationUnit</formula>
+        <name>Update Queue Name AppUnit2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_RegStatus_UnderReviewerReview</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Under Reviewer Review</literalValue>
+        <name>Update Reg Status Under Reviewer Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Reg_to_Returned_for_Revision</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Returned for Revision</literalValue>
+        <name>CLQ_Update Reg to Returned for Revision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Closed by System</literalValue>
+        <name>Update Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Registration_Status_Date</fullName>
+        <field>CLQ_Registration_Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Registration Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Status_Date</fullName>
+        <description>Update Status Date</description>
+        <field>CLQ_Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>CLQ_Update Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Transaction_Status</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Closed by System</literalValue>
+        <name>Update Transaction Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Transaction_Status_Date</fullName>
+        <field>CLQ_Transaction_Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>CLQ_Update Transaction Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Zip_Code</fullName>
+        <description>Updates the Current Program Address</description>
+        <field>CLQ_Old_Zip_Code__c</field>
+        <formula>CLQ_Program__r.CLQ_Zip_Code__c</formula>
+        <name>Zip Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Returned_to_Reviewer</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Returned to Reviewer</literalValue>
+        <name>Change Status to Returned to Reviewer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Close_the_PT_After_30_days_for_Expedited</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>System Deleted</literalValue>
+        <name>Close the PT After 30 days for Expedited</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IsApprovedOnGoingCheck</fullName>
+        <field>IsApproved_PrgTran__c</field>
+        <literalValue>1</literalValue>
+        <name>IsApprovedOnGoingCheck</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Original_Submission_Date_Field_Update</fullName>
+        <field>Original_Submission_Date__c</field>
+        <formula>Submission_Date1__c</formula>
+        <name>Original Submission Date Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rating_Reason_Update</fullName>
+        <field>Desk_Review_Rating_Reason__c</field>
+        <literalValue>Change of Owner</literalValue>
+        <name>Rating Reason Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_Status_Returned_to_Reviewer</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Returned to Reviewer</literalValue>
+        <name>Status Returned to Reviewer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_UnCheck_Approved_by_Manager</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>UnCheck Approved by Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_Unflag_Rejected_by_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Rejected by Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_Flag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Flag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Unflag_Start_Approval</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetOwner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CLQ_Application_Unit_3</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>SetOwner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Registration_Status_To_Approved</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set Registration Status To Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Transaction_Status_to_WAR</fullName>
+        <description>Updates Transaction Status to Withdrawn at Applicant&apos;s Request</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Withdrawn at Applicant&apos;s Request</literalValue>
+        <name>Set Transaction Status to WAR</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Transaction_Status_to_withdrawn</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Withdraw</literalValue>
+        <name>Set Transaction Status to withdrawn</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusUpdate</fullName>
+        <description>Not met condition &amp; Approved then update the status value as &apos;Annual Report Disapproved&apos;.</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Annual Report Disapproved</literalValue>
+        <name>StatusUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_Transaction</fullName>
+        <description>Update transaction status to submitted</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Submit Transaction</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Temp</fullName>
+        <field>Accreditaion__c</field>
+        <name>Temp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Test</fullName>
+        <field>A_LP_Criteria__c</field>
+        <name>Test</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Test_Update</fullName>
+        <field>Desk_Review_Rating_Reason__c</field>
+        <literalValue>Voluntarily Discontinue Participation in SUTQ</literalValue>
+        <name>Test Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Transaction_Status_to_Resubmitted</fullName>
+        <description>Changes the Transaction Status of the Program Transaction record to &quot;Resubmitted.&quot;</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Resubmitted</literalValue>
+        <name>Transaction Status to Resubmitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UnFlag_Rejected_By_Manager</fullName>
+        <description>UnFlag Rejected By Manager</description>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>UnFlag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unflag_Start_Approval</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unflag_Start_Approval_Check</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Unflag Start Approval Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateEmailID</fullName>
+        <description>UpdateEmailID on program transaction from program email</description>
+        <field>CLQ_ProgTrans_Program_Email_Address__c</field>
+        <formula>CLQ_Program__r.CLQ_Program_Email__c</formula>
+        <name>UpdateEmailIDprogramTransaction</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateIsApproved</fullName>
+        <description>As soon as program transaction - annual report gets approved</description>
+        <field>IsApproved_PrgTran__c</field>
+        <literalValue>1</literalValue>
+        <name>UpdateIsApproved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateIsPending</fullName>
+        <field>IsPending__c</field>
+        <literalValue>1</literalValue>
+        <name>UpdateIsPending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateIsPending2</fullName>
+        <field>IsPending__c</field>
+        <literalValue>0</literalValue>
+        <name>UpdateIsPending2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Application_Approved_Date_field</fullName>
+        <description>Task 11734 - Update Application Approved field when Initial ODE Application is approved</description>
+        <field>CLQ_Application_Approved__c</field>
+        <formula>Today()</formula>
+        <name>Update Application Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_Date</fullName>
+        <field>CLQ_Application_Approved__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Approved_Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_OwnerId</fullName>
+        <field>OwnerId</field>
+        <lookupValue>System_Admin_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update OwnerId</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_Status</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Unable to Rate</literalValue>
+        <name>Update PT Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_Status_SUTQ</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Rating Assessment Complete</literalValue>
+        <name>Update PT Status - SUTQ</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_Status_to_Submitted</fullName>
+        <description>When criteria is met, this will update the Program Transaction status to Submitted</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update PT Status to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_Status_to_System_Deleted</fullName>
+        <description>Changes Transaction Status of PT to System Deleted</description>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>System Deleted</literalValue>
+        <name>Update PT Status to System Deleted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_Status_under_review</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Under Reviewer Review</literalValue>
+        <name>Update PT Status under review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PT_status_to_Pending_Approval</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update PT status to Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Registration_Status</fullName>
+        <field>CLQ_Registration_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update Registration Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status</fullName>
+        <field>CLQ_Transaction_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Submission_Date</fullName>
+        <field>Submission_Date1__c</field>
+        <formula>NOW()</formula>
+        <name>Update Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_start_approval_to_false</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Update start approval to false</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_the_status</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Update the status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Day_Camp_ACA_Verified_OBM</fullName>
+        <apiVersion>40.0</apiVersion>
+        <description>Day Camp ACA Verified.</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_DayCamp_ACA_Verified__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>Day Camp ACA Verified OBM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Day_Camp_IA_Submitted_OM</fullName>
+        <apiVersion>42.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): Day Camp Initial Application Submitted</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_DC_IA_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>Day Camp IA Submitted OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Day_Camp_Registration_Submitted_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Day Camp Registration Submitted</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_DayCamp__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>Day Camp Registration Submitted OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_COA_Approved_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (Drawloop): ODJFS COA Approved OM</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_COA_Approved__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS COA Approved OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_COC_Approved_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (Drawloop): ODJFS COC Approved OM</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_COC_Approved__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE COC Approved OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_COL_Approved_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (Drawloop): ODJFS/ODE COL (Change of Location) Approved OM</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_COL_Approved__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE COL Approved OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_Cont_Lcs_Approved_OM</fullName>
+        <apiVersion>40.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop) 8/14/17: ODJFS/ODE Continuous License Approved.
+DDP: License Face Certificate ; Delivery: SMTP - CL Approved, SMTP - ODE CL Approved</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_Cont_Lcs_Approved__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE Cont Lcs Approved OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_IA_Approved_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): ODJFS/ODE Initial Application Approved</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_IA_Approved__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE IA Approved OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_IA_Submitted_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): ODJFS/ODE Initial Application Submitted</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_IA_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE IA Submitted OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>ODJFS_ODE_IA_Updated_OM</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (Drawloop): ODJFS/ODE Initial Application Updated OM</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_IA_Updated__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>ODJFS/ODE IA Updated OM</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Outbound_Message_When_PT_in_Deferral</fullName>
+        <apiVersion>47.0</apiVersion>
+        <description>Outbound Message When PT in Deferral</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_SUTQ_Deferral__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>Outbound Message When PT in Deferral</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Annual_Report_Deferral</fullName>
+        <apiVersion>40.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): SUTQ Email - Annual Report Deferral. Created for CR #11200</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_AR_Deferral__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Annual Report Deferral</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Annual_Report_Met</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms&amp;Reports (DrawLoop): SUTQ Email - Annual Report Met</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_AR_Met__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Annual Report Met</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Annual_Report_NotMet</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): SUTQ Email - Annual Report Not Met</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_AR_NotMet__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Annual Report Not Met</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Annual_Report_Submitted</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): SUTQ Email - Annual Report Submitted</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_AR_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Annual Report Submitted</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_COO_Denied</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_COO_Denied__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - COO Denied</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_COO_Rated</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_COO_Rated__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - COO Rated</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_COO_Registration</fullName>
+        <apiVersion>44.0</apiVersion>
+        <description>SUTQ Email- COO Registration</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_COO_Reg_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email- COO Registration</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Desk_Review_OnSite</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms&amp;Reports (DrawLoop): SUTQ Email - Desk Review - On-Site</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_I_O_DR__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Desk Review - On-Site</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Desk_Review_UnableToRate</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms&amp;Reports (DrawLoop): SUTQ Email - Desk Review - Unable to Rate (Initial / Ongoing)</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_I_O_DR_Unable_to_Rate__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Desk Review - UnableToRate</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Expedited_Denied</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_Expedited_Denied__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Expedited Denied</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Expedited_Rated</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_Expedited_Rated__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Expedited Rated</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Expedited_Rating_Denied</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_Denied__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - Expedited Rating Denied</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Expedited_Registration</fullName>
+        <apiVersion>44.0</apiVersion>
+        <description>SUTQ Email-Expedited Registration</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_Expedited_Reg_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email-Expedited Registration</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_Initial_Ongoing_Registration</fullName>
+        <apiVersion>38.0</apiVersion>
+        <description>Forms &amp; Reports (DrawLoop): SUTQ Email - Initial/Ongoing Registration - Submitted</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_I_O_Reg_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email-Initial/Ongoing Registration</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_RR_Denied</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_RR_Denied__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - RR Denied</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_RR_Rated</fullName>
+        <apiVersion>44.0</apiVersion>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_SUTQ_RR_Rated__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email - RR Rated</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>SUTQ_Email_RR_Registration</fullName>
+        <apiVersion>44.0</apiVersion>
+        <description>SUTQ Email -  RR Registration</description>
+        <endpointUrl>https://apps.drawloop.com/package/111</endpointUrl>
+        <fields>Drawloop_Next_RR_Reg_Submitted__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>jshivakumar@govconnect.childcarelicesing.com</integrationUser>
+        <name>SUTQ Email -  RR Registration</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>CLQ JFS Application at Risk</fullName>
+        <active>true</active>
+        <description>JFS Application a risk - 335 days of submission</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;  OR( ISPICKVAL( CLQ_Transaction_Status__c , &apos;Submitted&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Under Reviewer Review&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Approver Review In Progress&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned to Reviewer&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned for Revision&apos;)) &amp;&amp;  OR( CLQ_Program_Record_Type__c = &apos;Child Care Center&apos; ,CLQ_Program_Record_Type__c = &apos;FCC - Type A Home&apos; , CLQ_Program_Record_Type__c = &apos;FCC - Type B Home&apos; , CLQ_Program_Record_Type__c = &apos;Day Camp&apos; , CLQ_Program_Record_Type__c = &apos;In-Home Aide&apos; , CLQ_Program_Record_Type__c = &apos;Out of State Registration&apos;)  &amp;&amp;   OR( RecordType.Name = &apos;Application - CC Center&apos;,RecordType.Name = &apos;Application - FCC&apos; , RecordType.Name = &apos;Application - ODE Program&apos; , RecordType.Name = &apos;Registration - Day Camp&apos; , RecordType.Name = &apos;Registration - Out of State&apos; , RecordType.Name = &apos;Registration - In-Home Aid&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_JFS_Application_at_Risk_Email_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>CLQ_Program_Transaction__c.CLQ_Old_Submission_Date1__c</offsetFromField>
+            <timeLength>335</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>CLQ JFS Close the Application</fullName>
+        <active>true</active>
+        <description>JFS Close the Application - 395 days after submission if it isn&apos;t approved or denied</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp; OR( ISPICKVAL( CLQ_Transaction_Status__c , &apos;Submitted&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Under Reviewer Review&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Approver Review In Progress&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned to Reviewer&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned for Revision&apos;),ISPICKVAL( CLQ_Transaction_Status__c , &apos;Application Revised&apos;)) &amp;&amp; OR( CLQ_Program_Record_Type__c = &apos;Child Care Center&apos; ,CLQ_Program_Record_Type__c = &apos;FCC - Type A Home&apos; , CLQ_Program_Record_Type__c = &apos;FCC - Type B Home&apos; , CLQ_Program_Record_Type__c = &apos;Day Camp&apos; , CLQ_Program_Record_Type__c = &apos;In-Home Aide&apos; , CLQ_Program_Record_Type__c = &apos;Out of State Registration&apos;) &amp;&amp; OR( RecordType.Name = &apos;Application - CC Center&apos;,RecordType.Name = &apos;Application - FCC&apos; , RecordType.Name = &apos;Registration - Day Camp&apos; , RecordType.Name = &apos;Registration - Out of State&apos; , RecordType.Name = &apos;Registration - In-Home Aid&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_Update_Transaction_Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CLQ_Program_Transaction__c.Submission_Date1__c</offsetFromField>
+            <timeLength>395</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>CLQ JFS Close the Application-Email</fullName>
+        <active>true</active>
+        <description>JFS Close the Application - 395 days after submission if it isn&apos;t approved or denied</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp; OR( ISPICKVAL( CLQ_Transaction_Status__c , &apos;Submitted&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Under Reviewer Review&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Approver Review In Progress&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned to Reviewer&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned for Revision&apos;)) &amp;&amp; OR( CLQ_Program_Record_Type__c = &apos;Child Care Center&apos; ,CLQ_Program_Record_Type__c = &apos;FCC - Type A Home&apos; , CLQ_Program_Record_Type__c = &apos;FCC - Type B Home&apos; , CLQ_Program_Record_Type__c = &apos;Day Camp&apos; , CLQ_Program_Record_Type__c = &apos;In-Home Aide&apos; , CLQ_Program_Record_Type__c = &apos;Out of State Registration&apos;) &amp;&amp; OR( RecordType.Name = &apos;Application - CC Center&apos;,RecordType.Name = &apos;Application - FCC&apos; , RecordType.Name = &apos;Application - ODE Program&apos; , RecordType.Name = &apos;Registration - Day Camp&apos; , RecordType.Name = &apos;Registration - Out of State&apos; , RecordType.Name = &apos;Registration - In-Home Aid&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_JFS_Application_is_Closed</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>CLQ_Program_Transaction__c.Submission_Date1__c</offsetFromField>
+            <timeLength>395</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>CLQ ODE Application at Risk</fullName>
+        <active>true</active>
+        <description>ODE Application a risk - 335 days of submission</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;  OR( ISPICKVAL( CLQ_Transaction_Status__c , &apos;Submitted&apos;) ,ISPICKVAL( CLQ_Transaction_Status__c , &apos;Under Reviewer Review&apos;) , ISPICKVAL( CLQ_Transaction_Status__c , &apos;Returned for Revision&apos;)) &amp;&amp;  OR( CLQ_Program_Record_Type__c = &apos;School Age Child Care&apos; ,CLQ_Program_Record_Type__c = &apos;Pre School&apos;)  &amp;&amp;   RecordType.Name = &apos;Application - ODE Program&apos;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_ODE_Application_needs_Recommendation_at_risk</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>CLQ_Program_Transaction__c.CLQ_Old_Submission_Date1__c</offsetFromField>
+            <timeLength>335</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>CLQ ODE Close the Application</fullName>
+        <active>true</active>
+        <description>ODEClose the Application - 395 days after submission if it isn&apos;t approved or denied</description>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp;  NOT(ISNULL(Submission_Date1__c)) &amp;&amp; (NOT(ISPICKVAL( CLQ_Transaction_Status__c , &apos;Approved&apos;)) || NOT(ISPICKVAL( CLQ_Transaction_Status__c , &apos;Denied&apos;))) &amp;&amp; OR( CLQ_Program_Record_Type__c = &apos;School Age Child Care&apos; ,CLQ_Program_Record_Type__c = &apos;Pre School&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>ODE_Application_is_Closed</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>CLQ_Update_Transaction_Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CLQ_Program_Transaction__c.Submission_Date1__c</offsetFromField>
+            <timeLength>395</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Annual_Report_Overall_Req_Not_Met</fullName>
+        <assignedTo>Supervisor</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>An Annual Report&apos;s Overall Requirement is &quot;not met&quot; and requires review.</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Annual Report Overall Req Not Met</subject>
+    </tasks>
+    <tasks>
+        <fullName>CLQ_Approve_Continuous_License</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Approve Continuous License</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Approve Continuous License</subject>
+    </tasks>
+    <tasks>
+        <fullName>CLQ_Transaction_Approved</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Transaction Approved</subject>
+    </tasks>
+    <tasks>
+        <fullName>CLQ_Transaction_Rejected</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Transaction Rejected</subject>
+    </tasks>
+    <tasks>
+        <fullName>Coming_near_outbound</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Program_Transaction__c.CLQ_Actual_Last_Day_of_Operation__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Coming near outbound</subject>
+    </tasks>
+    <tasks>
+        <fullName>Continuous_lcs_Approved</fullName>
+        <assignedTo>arrelekar@govtconnect.dev</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Test Task</description>
+        <dueDateOffset>10</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Program_Transaction__c.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Continuous lcs Approved</subject>
+    </tasks>
+    <tasks>
+        <fullName>Please_review_new_registration</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Please review the new SUTQ registration you have been assigned</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Please review new registration</subject>
+    </tasks>
+    <tasks>
+        <fullName>Revise_Annual_Report_Details</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Revise Annual Report Details</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Revise Annual Report Details</subject>
+    </tasks>
+    <tasks>
+        <fullName>Revise_Desk_Review</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Please revise desk review</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Revise Desk Review</subject>
+    </tasks>
+    <tasks>
+        <fullName>Transaction_Deferral_Task_Review</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Program_Transaction__c.DeferralDueDate__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Transaction Deferral Task Review</subject>
+    </tasks>
+</Workflow>

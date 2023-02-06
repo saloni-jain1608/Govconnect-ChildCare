@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top" class="td1"><p class="p2"><br><span class="s2"></span></p><p class="p2">Team,&nbsp;</p><p class="p2"><br></p><p class="p2">This is to notify that the below Program Transaction was deleted,</p><p class="p2"><br></p><p class="p2">Program Transaction number :&nbsp;{!CLQ_Program_Transaction__c.Name}&nbsp;</p><p class="p2"><span style="font-size: 12pt;">Program Name :&nbsp;{!CLQ_Program_Transaction__c.CLQ_Program_Name__c}&nbsp;&nbsp;</span></p><p class="p2"><span style="font-size: 12pt;">Program Number :&nbsp;{!CLQ_Program_Transaction__c.CLQ_Program_Number__c}&nbsp;</span></p><p class="p2"><br></p><p class="p2">Please review it once and take necessary actions against it.&nbsp;</p><p class="p1"><br></p><p class="p1"><br></p><p class="p1"><br></p>
+<p class="p1"><span class="s1">The Ohio Child Licensing and Quality System Team.</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited</span></p>
+</td>
+</tr>
+</tbody>
+</table>]]></td>
+</tr>
+</table>

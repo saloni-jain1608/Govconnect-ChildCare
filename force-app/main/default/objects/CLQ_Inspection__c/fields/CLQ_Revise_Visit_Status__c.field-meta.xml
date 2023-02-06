@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Revise_Visit_Status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, Visit Status is set back to Scheduled if the prior status was Visit Completed</description>
+    <externalId>false</externalId>
+    <label>Revise Visit Status</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

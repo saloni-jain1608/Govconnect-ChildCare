@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Summeronly_Allround</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(INCLUDES(Months_of_Operation__c, &apos;Summer Only&apos;),INCLUDES(Months_of_Operation__c, &apos;Year Round&apos;), INCLUDES( Months_of_Operation__c , &apos;School Year&apos;) ), 
+OR(INCLUDES(Months_of_Operation__c, &apos;January&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;February&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;March&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;April&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;May&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;June&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;July&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;August&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;September&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;October&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;November&apos;), 
+INCLUDES(Months_of_Operation__c, &apos;December&apos;) 
+))</errorConditionFormula>
+    <errorDisplayField>Months_of_Operation__c</errorDisplayField>
+    <errorMessage>Cannot select month if its &apos;Summer Only&apos;  or &apos;Year Round&apos; or  &apos;School Year&apos;.</errorMessage>
+</ValidationRule>

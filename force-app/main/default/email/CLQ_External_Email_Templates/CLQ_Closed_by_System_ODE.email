@@ -1,0 +1,8 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font style="color: rgb(0, 0, 0);" face="Verdana, Helvetica, sans-serif" size="2">{!CLQ_Program_Transaction__c.RecordType} {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c} {!CLQ_Program_Transaction__c.Name} {!CLQ_Role__c.CLQ_Program_Transaction_Name__c} &nbsp;has been closed by the system because it was not submitted within 120 days after it was created. If you wish to continue with the licensing process a new application must be created.</font><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style=""><font face="Verdana, Helvetica, sans-serif" size="2">The&nbsp;</font><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">{!$Label.StateName}</span><font face="Verdana, Helvetica, sans-serif" size="2">&nbsp;Child Licensing and Quality System Team.</font></div><div style=""><font color="#ffffff" face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style=""><font color="#ffffff" face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style=""><font color="#ffffff" style="" face="Verdana, Helvetica, sans-serif" size="2">Reference Id ref: {!CLQ_Program_Transaction__c.Id}</font></div>]]></td>
+</tr>
+</table>

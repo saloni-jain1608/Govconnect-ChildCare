@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_OLAS_Attorney_Assigned__c</fullName>
+    <externalId>false</externalId>
+    <label>OLAS Attorney Assigned</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bob Welsh</fullName>
+                <default>false</default>
+                <label>Bob Welsh</label>
+            </value>
+            <value>
+                <fullName>Denise Pleska</fullName>
+                <default>false</default>
+                <label>Denise Pleska</label>
+            </value>
+            <value>
+                <fullName>Harvey Sukienik</fullName>
+                <default>false</default>
+                <label>Harvey Sukienik</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

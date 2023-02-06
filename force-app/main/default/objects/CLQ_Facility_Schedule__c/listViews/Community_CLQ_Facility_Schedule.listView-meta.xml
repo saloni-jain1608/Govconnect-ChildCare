@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_CLQ_Facility_Schedule</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Community</label>
+    <queue>Community</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

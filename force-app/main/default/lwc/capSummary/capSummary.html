@@ -1,0 +1,197 @@
+<template>
+    <template if:true={isLoading}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-around_medium"
+                    style="background-color: transparent; box-shadow:none" id="modal-content-id-1">
+                    <div class="slds-spinner_container"
+                        style="background-color: transparent; position: relative;padding: 20px">
+                        <div role="status" class="slds-spinner slds-spinner_medium" style="position: relative;">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" style="background: rgb(250, 250, 249, 0.3);"></div>
+    </template>
+<template if:true={isSaving}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" style="z-index: 9009">
+        </section>
+        <div class="slds-modal__container"
+            style="position: fixed;width: auto;min-width: auto;height: auto;left: 48%;top: 48%;z-index: 9009;padding: 0px">
+            <div class="slds-modal__content slds-p-around_medium"
+                style="background-color: transparent; box-shadow:none">
+                <div class="slds-spinner_container"
+                    style="background-color: transparent; position: relative;padding: 20px">
+                    <div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand"
+                        style="position: relative;">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+<template if:true={showFileModal}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Record</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-file-upload
+                        label="Upload Document"
+                        name="fileUploader"
+                        accept={acceptedFormats}
+                        record-id={documentId}
+                        onuploadfinished={handleUploadFinished}
+                        >
+                    </lightning-file-upload>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+<div class="slds-card">
+    <div class="slds-m-around_medium">
+        <h2 class="slds-p-vertical--medium slds-grid slds-m-bottom--medium slds-section__title-action slds-text-heading--medium" style="background-color: rgb(47 144 228);">Inspection Information</h2>
+        <div class="slds-m-left_medium">
+            <lightning-record-form record-id={inspectionID} object-api-name="CLQ_Inspection__c" fields={inspectionFIelds} columns="2" mode="readonly" onsubmit={handleSubmit}>
+            </lightning-record-form>
+        </div>
+    </div>
+    <div class="slds-m-around_x-large">
+        <h2 class="slds-p-vertical--medium slds-grid slds-m-bottom--medium slds-section__title-action slds-text-heading--small" style="background-color: rgb(47 144 228);">Corrective Action Plan Response Submission</h2>
+        <h2 class="slds-p-vertical--small slds-grid slds-m-bottom--medium slds-section__title-action slds-text-heading--small" style="background-color: rgb(248, 248, 248);">CAP's Action Required</h2>
+        <lightning-accordion class="slds-m-top_medium" active-section-name={activeActionCap}>
+            <template for:each={inspectionCaps} for:item="cap">
+                    <template if:false={cap.isReadOnly}>
+                        <lightning-accordion-section key={cap.Id} name={cap.Id} label={cap.Title}
+                            onsectiontoggle={handleActionToggleSection}>
+                            <div class="slds-m-bottom_medium">
+                                <p>{cap.NonComplianceFinding}</p>
+                            </div>
+
+                            <lightning-record-form record-id={cap.Id} id={cap.Id}
+                                object-api-name="CLQ_Corrective_Action_Plan__c" fields={fields} columns="1" mode="edit"
+                                onsubmit={handleSubmit} onsuccess={handleSuccess} onerror={handleError}>
+                            </lightning-record-form>
+
+                            <lightning-record-form record-id={cap.Id} id={cap.Id} 
+                                object-api-name="CLQ_Corrective_Action_Plan__c" fields={CapDisableFields} columns="1" mode="readonly"
+                                onsubmit={handleSubmit} >
+                         </lightning-record-form>
+                           <div class="slds-m-vertical_medium" style="background-color: rgb(248, 248, 248); display: flex; justify-content: space-between;">
+                                <div class="slds-m-vertical_small">
+                                    <h2 class="slds-text-heading--small slds-m-left_medium slds-p-top_small">CAP Documents</h2>
+                                </div>
+                                <div class="slds-m-vertical_medium slds-text-heading--small slds-m-right_medium">
+                                    <lightning-button variant="brand" name={cap.Id} label="Upload Document" onclick={handleUploadDocument}></lightning-button>
+                                </div>
+                            </div>
+                            <div class="slds-m-vertical_medium">
+                                <template for:each={cap.Documents} for:item="doc">
+                                    <div class="slds-m-vertical_small slds-m-left_medium" key={doc.Id}>
+                                        <a href="#">{doc.ContentDocument.Title}</a>
+                                    </div>
+                                </template>
+    </div>
+    </lightning-accordion-section>
+    </template>
+    </template>
+    </lightning-accordion>
+
+    <h2 class="slds-p-vertical--small slds-grid slds-m-bottom--medium slds-section__title-action slds-text-heading--small" style="background-color: rgb(248, 248, 248);">CAP's under Process</h2>
+
+    <lightning-accordion class="slds-m-top_medium" active-section-name={activeUnderProcessCap}>
+        <template for:each={inspectionCaps} for:item="cap">
+                <template if:false={cap.isApproved}>
+                    <template if:true={cap.isUnderProcess}>
+                        <lightning-accordion-section key={cap.Id} name={cap.Id} label={cap.Title}
+                            onsectiontoggle={handleUnderProcessToggleSection}>
+                            <div class="slds-m-bottom_medium">
+                                <p>{cap.NonComplianceFinding}</p>
+                            </div>
+
+                            <lightning-record-form record-id={cap.Id} object-api-name="CLQ_Corrective_Action_Plan__c"
+                                fields={fields} columns="1" mode="readonly" onsubmit={handleSubmit}>
+                            </lightning-record-form>
+
+                            <div class="slds-m-vertical_medium" style="background-color: rgb(248, 248, 248); display: flex; justify-content: space-between;">
+                                <div class="slds-m-vertical_small">
+                                    <h2 class="slds-text-heading--small slds-m-left_medium slds-p-top_small">CAP Documents</h2>
+                                </div>
+                                <div class="slds-m-vertical_medium slds-text-heading--small slds-m-right_medium">
+                                    <lightning-button variant="brand" name={cap.Id} label="Upload Document" onclick={handleUploadDocument}></lightning-button>
+                                </div>
+                            </div>
+                            <div class="slds-m-vertical_medium">
+                                <template for:each={cap.Documents} for:item="doc">
+                                    <div class="slds-m-vertical_small slds-m-left_medium" key={doc.Id}>
+                                        <a href="#">{doc.ContentDocument.Title}</a>
+                                    </div>
+                                </template>
+</div>
+</lightning-accordion-section>
+</template>
+</template>
+</template>
+</lightning-accordion>
+
+
+<h2 class="slds-p-vertical--small slds-grid slds-m-bottom--medium slds-section__title-action slds-text-heading--small" style="background-color: rgb(248, 248, 248);">CAP's Approved</h2>
+
+<lightning-accordion class="slds-m-top_medium" active-section-name={activeApprovedCap}>
+    <template for:each={inspectionCaps} for:item="cap">
+                    <template if:true={cap.isApproved}>
+                        <lightning-accordion-section key={cap.Id} name={cap.Id} label={cap.Title}
+                            onsectiontoggle={handleApprovedToggleSection}>
+                            <div class="slds-m-bottom_medium">
+                                <p>{cap.NonComplianceFinding}</p>
+                            </div>
+
+                            <lightning-record-form record-id={cap.Id} object-api-name="CLQ_Corrective_Action_Plan__c"
+                                fields={fields} columns="1" mode="readonly" onsubmit={handleSubmit}>
+                            </lightning-record-form>
+
+                            <div class="slds-m-vertical_medium" style="background-color: rgb(248, 248, 248); display: flex; justify-content: space-between;">
+                                <div class="slds-m-vertical_small">
+                                    <h2 class="slds-text-heading--small slds-m-left_medium slds-p-top_small">CAP Documents</h2>
+                                </div>
+                                <div class="slds-m-vertical_medium slds-text-heading--small slds-m-right_medium">
+                                    <lightning-button variant="brand" name={cap.Id} label="Upload Document" onclick={handleUploadDocument}></lightning-button>
+                                </div>
+                            </div>
+                            <div class="slds-m-vertical_medium">
+                                <template for:each={cap.Documents} for:item="doc">
+                                    <div class="slds-m-vertical_small slds-m-left_medium" key={doc.Id}>
+                                        <a href="#">{doc.ContentDocument.Title}</a>
+                                    </div>
+                                </template>
+    </div>
+    </lightning-accordion-section>
+    </template>
+    </template>
+</lightning-accordion>
+
+
+</div>
+</div>
+</template>

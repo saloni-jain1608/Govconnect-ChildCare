@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_HOO_Time_1_Start__c</fullName>
+    <description>User can set 2 ranges for start/end time for each schedule.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Hours of Operation start time for range 1.</inlineHelpText>
+    <label>Start Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CLQ_Time_Intervals</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_isFocused__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to track if the rule derived from tool having scope as &quot;Focused&quot;</description>
+    <externalId>false</externalId>
+    <label>isFocused?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

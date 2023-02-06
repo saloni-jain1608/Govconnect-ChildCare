@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Denied</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Denied</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var clqtd= new sforce.SObject(&quot;CLQ_Transaction_Document__c&quot;); 
+clqtd.Id = &apos;{!CLQ_Transaction_Document__c.Id}&apos;; 
+clqtd.CLQ_Document_Status__c=&apos;Denied&apos;;
+var result = sforce.connection.update([clqtd]); 
+if(result[0].getBoolean(&quot;success&quot;)) 
+{ 
+window.location.reload(); 
+} 
+else{ 
+alert(&apos;Error : &apos;+result); 
+}</url>
+</WebLink>

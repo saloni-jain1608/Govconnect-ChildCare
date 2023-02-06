@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_All_Historical_Licensing_Domain_Rules</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CLQ_Domain__c</columns>
+    <columns>CLQ_Rule_Short_Name__c</columns>
+    <columns>CLQ_Rule__c</columns>
+    <columns>CLQ_Rule_Effective_Date__c</columns>
+    <columns>CLQ_Rule_Expiration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Rule_Expiration_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CLQ_Rule_Expiration_Date__c</field>
+        <operation>lessThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>All Historical Licensing Domain Rules</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Portal_Document_Comments__c</fullName>
+    <description>Created by JSC on 9/28/2016 in order to bypass the field CLQ_Document_Comments__c as this can not be written to through the API.  Instead, this will be hidden to the user and used to augment the CLQ_All_Comments__c field.</description>
+    <externalId>false</externalId>
+    <label>Portal Document Comments</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

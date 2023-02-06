@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Name_Cannot_be_Edited_Reviewer</fullName>
+    <active>true</active>
+    <description>Reviewers should not be able to edit the program name</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name,&quot;Reviewer&quot;),
+ISCHANGED(Name)
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Reviewers do not have permissions to edit Program Name</errorMessage>
+</ValidationRule>

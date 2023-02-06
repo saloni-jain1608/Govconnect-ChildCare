@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="470px" viewBox="0 0 320 470" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>C2E18E68-8675-4E8D-8F38-8F1A9B8CAB43</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M0,630.407075 C171.254029,562.629283 321.101304,528.740387 449.541825,528.740387 C642.202607,528.740387 713.598316,652 898.366105,652 C1021.54463,652 1162.4226,601.016705 1321,499.050115 L1267.18414,0 L193.491039,0 L0,630.407075 Z" id="path-1"></path>
+        <filter x="-0.6%" y="-1.2%" width="101.2%" height="102.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0235294118   0 0 0 0 0.0980392157   0 0 0 0 0.203921569  0 0 0 0.2 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Public-Content" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-Mobile">
+            <g id="Group-3" transform="translate(-252.000000, -82.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-5">
+                    <use fill="#2F90E5" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+                <path d="M84,634.484202 C161.138757,539.073261 258.319609,491.367791 375.542554,491.367791 C551.376972,491.367791 631.428824,560.881476 807.263242,560.881476 C983.09766,560.881476 1161.37908,401 1337.2135,401 C1454.43644,401 1508.73653,444.078587 1500.11377,530.23576 L1500.11377,1075 L93.438428,1066.52161 L84,634.484202 Z" id="Rectangle-5" fill-opacity="0.150000006" fill="#F9FBFD" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

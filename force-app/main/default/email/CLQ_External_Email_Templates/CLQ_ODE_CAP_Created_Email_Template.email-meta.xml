@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The system will send a notification to the program when one or more CAPs have been created. Only 1 notification will be sent, not 1 notification per CAP.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE CAP Created Email Template</name>
+    <style>formalLetter</style>
+    <subject>Corrective Action Plan(s) Required for {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c}</subject>
+    <textOnly>The inspection report completed on {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c}  for {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c}  identified one or more  areas of non-compliance that require a corrective action plan to be submitted.  Refer to the inspection report or the individual corrective action plan(s) to view the date by which your response is required to be submitted.  To submit a corrective action plan, log in to OCLQS at &lt;insert link&gt; and select the Corrective Action Plan tab under the Licensing section.  If you have any questions, contact your Licensing Specialist.
+
+The Ohio Child Licensing and Quality System Team.  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

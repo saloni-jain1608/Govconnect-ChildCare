@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_BCI_Processed_In_Compliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(INCLUDES(CLQ_BCI_Processed__c, &apos;In Compliance&apos;),
+OR(
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODE - Not available&apos;),  INCLUDES(CLQ_BCI_Processed__c, &apos;ODE - Not updated&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Not Requested&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Results Not Received&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - No Update&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Results Not Sent to Program&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Results Not Sent to State&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Results Not Onsite&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Returned, Not Resubmitted&apos;), INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Rehired, No Update&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Conviction/Child Removed&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - No Rehabilitation Doc&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Previous employer’s record on file&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Incomplete results&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Refused to be fingerprinted&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Pending verification&apos;), 
+INCLUDES(CLQ_BCI_Processed__c, &apos;ODJFS - Not Applicable&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>CLQ_BCI_Processed__c</errorDisplayField>
+    <errorMessage>&apos;In Compliance&apos; cannot be selected with any other reason for BCI Processed</errorMessage>
+</ValidationRule>

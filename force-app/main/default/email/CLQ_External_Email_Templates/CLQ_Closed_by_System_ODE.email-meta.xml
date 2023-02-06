@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Closed by system after 120 days - ODE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Closed by System ODE</name>
+    <style>freeForm</style>
+    <subject>{!CLQ_Program_Transaction__c.CLQ_Program__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} Closed by System</subject>
+    <textOnly>{!CLQ_Program_Transaction__c.RecordType} {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c} {!CLQ_Program_Transaction__c.Name} {!CLQ_Role__c.CLQ_Program_Transaction_Name__c}  has been closed by the system because it was not submitted within 120 days after it was created. If you wish to continue with the licensing process a new application must be created.
+
+The {!$Label.StateName} Child Licensing and Quality System Team.
+
+
+Reference Id ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

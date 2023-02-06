@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_XExisting_Room__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For Update Outdoor Room/Space. Makes this true when copying the exsiting room/space records from program to PT</description>
+    <externalId>false</externalId>
+    <label>XExisting Room</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

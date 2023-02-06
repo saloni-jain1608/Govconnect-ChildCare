@@ -1,0 +1,14 @@
+<aura:component implements="lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name='recordId' type='string'/>
+    <aura:attribute name='recordtype' type='string'/>
+    <aura:attribute name='ProgTransBool' type='boolean' default='false'/>
+    <aura:attribute name='InspectBool' type='boolean' default='false'/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.ProgTransBool}">
+    <c:deskReviewFindingLwc aura:id="deskReviewCompId" progtransid="{!v.recordId}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.InspectBool}">
+    <c:onsiteReviewFindingLwc aura:id="onsiteReviewCompId" inspid="{!v.recordId}"/>
+    </aura:if>
+</aura:component>

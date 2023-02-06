@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_All_above_and_nonpublic_school__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Any program providing child care that meets all of the following requirements and, on October 20, 1987, was being operated by a nonpublic school that holds a charter issued by the state board of education for kindergarten only.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Any program providing child care that meets all of the following requirements and, on October 20, 1987, was being operated by a nonpublic school that holds a charter issued by the state board of education for kindergarten only.</inlineHelpText>
+    <label>All above and chartered nonpublic school</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

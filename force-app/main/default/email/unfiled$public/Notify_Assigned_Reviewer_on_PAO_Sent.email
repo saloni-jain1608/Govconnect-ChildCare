@@ -1,0 +1,1 @@
+Case Activity status has been changed to {!CLQ_Case_Custom__c.CLQ_Activity_Status__c}. Please refer Case {!CLQ_Case_Custom__c.Name}.

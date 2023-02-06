@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inspection_Revision_Complete_Check_True</fullName>
+    <active>true</active>
+    <description>Allow this checkbox to be checked only when Inspection Status = &apos;Revision in Progress&apos;
+Options</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name &lt;&gt; &apos;Inspection&apos;,     TEXT(CLQ_Inspection_Status__c ) &lt;&gt; &apos;Revision in Progress&apos;, CLQ_Inspection_Revision_Complete__c = true)</errorConditionFormula>
+    <errorMessage>Can only be checked when Inspection Status is in &apos;Revision in Progress&apos;</errorMessage>
+</ValidationRule>

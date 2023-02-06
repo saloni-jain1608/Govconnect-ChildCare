@@ -1,0 +1,71 @@
+{
+  "appPageId" : "b3c9b8e4-0860-419d-ae09-bca424e1fb93",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "c8036476-9cda-4b07-89cc-2f31f6f90348",
+  "label" : "Login",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<center><img src=\"{!contentAsset.GovConnectTMpng.1}\" style=\"width:40%;\" /></center>\n<p style=\"font-size:20px;text-align:center;margin:1rem;\">Welcome to the Provider Portal </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "7150d9ae-c06a-45bf-974e-b613f44e558d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "forgotPasswordLabel" : "Forgot your password?",
+        "forgotPasswordUrl" : "/ForgotPassword",
+        "loginButtonLabel" : "Log in",
+        "passwordLabel" : "Password",
+        "selfRegisterLabel" : "Not a member?",
+        "selfRegisterUrl" : "/SelfRegister",
+        "startUrl" : "",
+        "usernameLabel" : "Username"
+      },
+      "componentName" : "salesforceIdentity:loginForm2",
+      "id" : "df45f070-3752-4ea9-b892-54b1980f450b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "354d6517-b6f6-4e23-a923-e5c442d3e853",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Login"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6ec5e98d-5676-4a9e-8e60-be6ac606f218",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2861e805-75bf-406d-b32b-16b1364d1fdc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "b05ece58-6ddb-4724-8dea-95f08f9be7d8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "3303a565-14fc-4776-a620-55c36b458d15",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "id" : "1b0517f1-b893-44ac-bac1-a1a3f570fec0",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "7b91a68f-3b33-4110-8a49-f96203d87db1",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "login-home"
+}

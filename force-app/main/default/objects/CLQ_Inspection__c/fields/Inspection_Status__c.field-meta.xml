@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inspection_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Complete</fullName>
+                <default>false</default>
+                <label>Not Complete</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Withdraw</fullName>
+                <default>false</default>
+                <label>Withdraw</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Deferral</fullName>
+                <default>false</default>
+                <label>Deferral</label>
+            </value>
+            <value>
+                <fullName>Return for Revision</fullName>
+                <default>false</default>
+                <label>Return for Revision</label>
+            </value>
+            <value>
+                <fullName>System Deleted</fullName>
+                <default>false</default>
+                <label>System Deleted</label>
+            </value>
+            <value>
+                <fullName>Resubmitted</fullName>
+                <default>false</default>
+                <label>Resubmitted</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

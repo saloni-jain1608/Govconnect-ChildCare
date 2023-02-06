@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CLQ_JFS_CAP_Created_Email_Alert</fullName>
+        <description>JFS CAP Created Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_CAP_Created_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_JFS_CAP_Returned_for_Revision_Email_Alert</fullName>
+        <description>JFS CAP Returned for Revision Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_CAP_Returned_for_Revision_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_CAP_Created_Email_Alert</fullName>
+        <description>ODE CAP Created Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_CAP_Created_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_CAP_Returned_for_Revision_Email_Alert</fullName>
+        <description>ODE CAP Returned for Revision Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Inspection_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_CAP_Returned_for_Revision_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>JFS_CAP_Overdue_Email_Notification</fullName>
+        <description>JFS CAP Overdue Email Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Inspection_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Program_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_JFS_CAP_Overdue_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>ODE_CAP_Overdue_Email_Notification</fullName>
+        <description>ODE CAP Overdue Email Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Inspection_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>clq_message_process_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/CLQ_ODE_CAP_Overdue_Email_Template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CAP_Due_Date</fullName>
+        <field>CLQ_CAP_Due_Date__c</field>
+        <formula>IF(CLQ_Findings__r.CLQ_Risk_Level__c == &apos;Serious&apos;,Today()+5,Today()+30)</formula>
+        <name>CAP Due Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_CAP_Status_Default</fullName>
+        <field>CLQ_CAP_Status__c</field>
+        <literalValue>Not Submitted</literalValue>
+        <name>CLQ_CAP Status Default</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_CAP_Status_to_CAP_Revised</fullName>
+        <description>Update CAP Status to CAP Revised</description>
+        <field>CLQ_CAP_Status__c</field>
+        <literalValue>CAP Revised</literalValue>
+        <name>CLQ Update CAP Status to CAP Revised</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Inspection_Owner_Email</fullName>
+        <field>CLQ_Inspection_Owner_Email__c</field>
+        <formula>CLQ_Inspection__r.CLQ_Inspection_Owner__r.Email</formula>
+        <name>Update Inspection Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Program_Email_Address</fullName>
+        <field>CLQ_Program_Email_Address__c</field>
+        <formula>CLQ_Program__r.CLQ_Program_Email__c</formula>
+        <name>Update Program Email Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Status_Date</fullName>
+        <field>CLQ_Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>CLQ_Update Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CAP_Status_Change_Date</fullName>
+        <field>CLQ_CAP_Status_Change_Date__c</field>
+        <formula>Today()</formula>
+        <name>Update CAP Status Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Email_Sent_Flag</fullName>
+        <field>CLQ_CAP_Email_Sent__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Email Sent Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

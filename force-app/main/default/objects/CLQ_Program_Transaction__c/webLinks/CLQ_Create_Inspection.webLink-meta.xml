@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Create_Inspection</fullName>
+    <availability>online</availability>
+    <description>[Ramana, 5/17/2017]: Redesigned for CR# 11182</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Inspection</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Description: Creates new Pre-License, COL, COC Inspections.
+//Assumptions: This button will be used by Internal users only, not by External users.
+//The logic is based on User SFDC Role, all Intenal Users must have proper SFDC Role (Sys Admins excluded).
+//[Ramana, 5/17/2017]: Redesigned for CR 11182.
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var proname=&apos;{!$Profile.Name}&apos;;
+var rolename = &apos;{!$UserRole.Name}&apos;; //alert(&apos;User Role: &apos; +rolename);
+var CountyFormula = &apos;&apos;;
+var CreateInspection = false;
+var ErrMsg = &apos;Error: System cannot create a new Inspection.&apos;;
+var JFSsfdcRoles = &apos;{!$Label.JFS_SFDC_Roles}&apos;;
+var ODEsfdcRoles = &apos;{!$Label.ODE_SFDC_Roles}&apos;; //alert(&apos;ODEsfdcRoles: &apos; +ODEsfdcRoles);
+var sfdcAdminProfiles = &apos;{!$Label.SFDC_Admin_Profiles}&apos;;
+var NACOCcounties = &apos;{!$Label.JFS_NACOC_Counties}&apos;;
+var SCcounties = &apos;{!$Label.JFS_SouthCentral_Counties}&apos;;
+
+
+if (&quot;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&quot; == &quot;&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c}&quot; == null)
+	ErrMsg = &apos;Licensing Reviewer is not assigned - System cannot create a new Inspection.&apos;; 
+else if(sfdcAdminProfiles.indexOf(proname) != -1)
+	CreateInspection = true;
+else if(rolename == &apos;&apos; || rolename ==  null)
+	ErrMsg = &apos;You do not have a Role - System cannot create a new Inspection. Please contact OCLQS Help Desk.&apos;;
+//CCC Programs
+else if (&quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;Child Care Center&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;Day Camp&quot;)
+{
+	if(JFSsfdcRoles.indexOf(rolename) != -1)
+	CreateInspection = true;
+	else
+	ErrMsg = &apos;You do not have a &quot;JFS Role&quot; - System cannot create a new Inspection for this Child Care Center program.&apos;;
+}
+//ODE Programs
+else if (&quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;Pre School&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;School Age Child Care&quot;)
+{
+	if(ODEsfdcRoles.indexOf(rolename) != -1)
+	CreateInspection = true;
+	else
+	ErrMsg = &apos;You do not have a &quot;ODE Role&quot; - System cannot create a new Inspection for this ODE program.&apos;;
+}
+//FCC Programs
+else if (&quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;FCC - Type A Home&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;FCC - Type B Home&quot;)
+{
+	var rolenameLC = rolename.toLowerCase();
+	var strCombinedCounties = &apos;&apos;;
+	
+	if(rolenameLC.indexOf(&apos;county&apos;) &gt;=0){
+		var usrCounty = rolenameLC.substring(0, rolenameLC.indexOf(&apos;county&apos;)).trim().toUpperCase();
+		var combinedCountyRec = sforce.connection.query(&quot;Select CLQ_Combined_Counties__c from CLQ_Combined_Counties__mdt where DeveloperName = &apos;&quot;+usrCounty+&quot;&apos; and CLQ_Process_Combined_County__c = true&quot;);
+		var records = combinedCountyRec.getArray(&quot;records&quot;);
+		
+		if(records.length&gt;0){
+			strCombinedCounties = records[0].CLQ_Combined_Counties__c;
+		}
+	}
+
+	if(&quot;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&quot; == &quot;Application - FCC&quot;) //Initial Application
+		CountyFormula = &apos;{!CLQ_Program_Transaction__c.CLQ_ProgTrans_County__c}&apos;;
+	else if(&quot;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&quot; == &quot;Amendment- FCC - Change of Capacity / Space&quot; || &quot;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&quot; == &quot;Amendment - Change of Administrator&quot;) //COC, COA
+		CountyFormula = &apos;{!CLQ_Program_Transaction__c.CLQ_County__c}&apos;;
+	else if(&quot;{!CLQ_Program_Transaction__c.clq_recordtypename__c}&quot; == &quot;Amendment - FCC - Change of Location&quot;) //COL
+		CountyFormula = &apos;{!CLQ_Program_Transaction__c.CLQ_New_County__c}&apos;;
+	//alert(&apos;County Formula: &apos; +CountyFormula);
+	if(CountyFormula != &apos;&apos; &amp;&amp; CountyFormula != null)
+	{
+	var CountyFormulaLC = CountyFormula.toLowerCase();
+	var CountyFormulaUC = CountyFormula.toUpperCase();
+
+	//NACOC Roles
+	if((NACOCcounties.indexOf(CountyFormula) != -1) &amp;&amp; ((rolenameLC.indexOf(CountyFormulaLC) != -1) || (rolename.indexOf(&apos;NOCAC&apos;) != -1)))
+		CreateInspection = true;
+	//South Central Roles
+	else if((SCcounties.indexOf(CountyFormula) != -1) &amp;&amp; ((rolenameLC.indexOf(CountyFormulaLC) != -1) || (rolename.indexOf(&apos;South Central&apos;) != -1)))
+		CreateInspection = true;
+	else if(rolenameLC.indexOf(CountyFormulaLC) != -1)
+		CreateInspection = true;	
+	else if(strCombinedCounties.indexOf(CountyFormulaUC) != -1)
+		CreateInspection = true;
+	else
+		ErrMsg = &apos;You do not have a &apos; +CountyFormula+ &apos; County Role - System cannot create a new Inspection for this FCC program.&apos;;
+	}
+	else
+	ErrMsg = &apos;County is blank for this FCC program - System cannot create a new Inspection.&apos;;
+}
+
+//alert(&apos;flag: &apos; +CreateInspection)
+if(CreateInspection){
+window.location.href= &apos;/apex/CLQ_CreateTransactionInspection?id={!CLQ_Program_Transaction__c.Id}&apos;;
+
+}
+	
+else 
+	alert(ErrMsg);</url>
+</WebLink>

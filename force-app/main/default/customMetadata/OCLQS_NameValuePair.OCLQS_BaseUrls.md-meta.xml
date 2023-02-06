@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_BaseUrls</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">MOCK1==https://mock1-oclqs.cs33.force.com
+MOCKBUILD==https://mockbuild-oclqs.cs33.force.com
+TRN==https://trn-oclqs.cs33.force.com
+UAT==https://uat-oclqs.cs33.force.com</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">PROD==https://oclqs.force.com
+CRDEVBUILD==https://crdevbuild-oclqs.cs32.force.com
+CRDEVGOLD==https://crdevgold-oclqs.cs32.force.com</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">DEV==https://dev-oclqs.cs33.force.com
+DEVBUILD==https://devbuild-oclqs.cs32.force.com
+SAT==https://sat-jfstest1.cs32.force.com
+SIT==https://sit-oclqs.cs33.force.com</value>
+    </values>
+</CustomMetadata>

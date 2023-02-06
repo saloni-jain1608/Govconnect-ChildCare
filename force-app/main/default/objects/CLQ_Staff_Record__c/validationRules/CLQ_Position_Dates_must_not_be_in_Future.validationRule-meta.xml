@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Position_Dates_must_not_be_in_Future</fullName>
+    <active>true</active>
+    <description>Future dates are not allowed in either the To or From Position date fields. If a future date is entered, a field- and condition-specific message is displayed.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR( Position_Start_Date__c &gt; TODAY(),  Position_End_Date__c &gt; TODAY() )</errorConditionFormula>
+    <errorMessage>Position Start and End Dates cannot be in the Future. Please enter current date or past date</errorMessage>
+</ValidationRule>

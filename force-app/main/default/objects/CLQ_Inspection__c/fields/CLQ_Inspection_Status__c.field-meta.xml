@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending Processing</fullName>
+                <default>true</default>
+                <label>Pending Processing</label>
+            </value>
+            <value>
+                <fullName>Under Approver Review</fullName>
+                <default>false</default>
+                <label>Under Approver Review</label>
+            </value>
+            <value>
+                <fullName>Returned to Reviewer</fullName>
+                <default>false</default>
+                <label>Returned to Reviewer</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Revised</fullName>
+                <default>false</default>
+                <label>Revised</label>
+            </value>
+            <value>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+                <label>Deleted</label>
+            </value>
+            <value>
+                <fullName>Deferral</fullName>
+                <default>false</default>
+                <label>Deferral</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Revision In Progress</fullName>
+                <default>false</default>
+                <label>Revision In Progress</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Rating Assessment Complete</fullName>
+                <default>false</default>
+                <label>Rating Assessment Complete</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_operating_budget__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>The budget form on the public website contains the information required for initial application. It is a model forms o applicants may submit their own budget or one from their accountant as along as the budget contains information</inlineHelpText>
+    <label>Annual operating budget</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

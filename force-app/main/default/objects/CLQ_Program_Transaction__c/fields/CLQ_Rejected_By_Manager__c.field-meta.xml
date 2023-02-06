@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Rejected_By_Manager__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to True in the Approval Process when a Transaction is rejected</description>
+    <externalId>false</externalId>
+    <label>Rejected By Manager</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_FCC_Type_Should_Fill_Under_2_Info</fullName>
+    <active>false</active>
+    <description>For the FCC Recordtype records Under 2 years information is required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(CONTAINS(CLQ_Program__r.RecordType.Name,&apos;FCC&apos;),OR(ISBLANK(TEXT(CLQ_Used_By_Under_or_Over_2__c)),ISBLANK(CLQ_Number_of_Children_Under_2__c)))</errorConditionFormula>
+    <errorMessage>No. of children Under 2 years and If used by over and Under are required for FCC Type.</errorMessage>
+</ValidationRule>

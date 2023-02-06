@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Provisional_Inspection_Type_Change2</fullName>
+    <active>false</active>
+    <description>Program Type = Child Care; PS; SACC; AND License Type= Provisional
+Default Inspection Type = Provisional; Option to change to Inspection Type = Monitor</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( NOT(ISNEW()),  OR(CLQ_Program_Record_Type__c = &quot;Child Care Center&quot;,CLQ_Program_Record_Type__c = &quot;Pre School&quot;,CLQ_Program_Record_Type__c = &quot;	School Age Child Care&quot;) 
+,OR(CLQ_License_Type__c == &quot;Provisional&quot;),ISCHANGED(CLQ_Inspection_Type__c), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Provisional&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Monitor&quot;))) 
+)</errorConditionFormula>
+    <errorMessage>You can change Inspection type to &apos;Monitor&apos; only</errorMessage>
+</ValidationRule>

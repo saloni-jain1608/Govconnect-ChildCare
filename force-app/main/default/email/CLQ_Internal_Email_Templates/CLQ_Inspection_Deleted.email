@@ -1,0 +1,6 @@
+Your assigned inspection <{!CLQ_Inspection__c.Name}> associated to Provider - <{!CLQ_Inspection__c.CLQ_Program__c}> has been deleted by
+{!CLQ_Inspection__c.LastModifiedBy}.
+
+If you need to check the current status of the Inspection, please login to Salesforce through this link: {!CLQ_Inspection__c.Link}.
+
+The {!$Label.StateName} Child Licensing and Quality System Team.

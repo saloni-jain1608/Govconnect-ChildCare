@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_New_Day_Camp_Audit</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Day Camp Audit</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var Prg= new sforce.SObject(&quot;CLQ_Program__c&quot;);
+Prg.Id = &apos;{!CLQ_Program__c.Id}&apos;;
+if(&apos;{!CLQ_Program__c.CreatedDate}&apos; != &apos;&apos;  &amp;&amp; &apos;{!CLQ_Program__c.CLQ_Assigned_Reviewer__c}&apos; != &apos;&apos;  &amp;&amp;  &apos;{!CLQ_Program__c.CLQ_Program_Status_Text__c}&apos; != &apos;Inactive&apos; &amp;&amp;  &apos;{!CLQ_Program__c.CLQ_Program_Status_Text__c}&apos; != &apos;Closed by System&apos;){
+Prg.CLQ_Create_Day_Camp_Audit__c=1; 
+}else{
+alert(&apos;Day Camp Audit cannot be created if Reviewer is Null Or Program Status is Closed or Inactive&apos;);
+}
+var result = sforce.connection.update([Prg]); 
+if(result[0].getBoolean(&quot;success&quot;)) 
+{ 
+window.location.reload(); 
+} 
+else{ 
+alert(&apos;Error : &apos;+result); 
+}</url>
+</WebLink>

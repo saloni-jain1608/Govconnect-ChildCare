@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_DefaultAccountOwnerUsername</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">MOCK1==oclqs.cloudadmin@oclqs.com.mock1
+MOCKBUILD==oclqs.cloudadmin@oclqs.com.mockbuild
+TRN==oclqs.cloudadmin@oclqs.com.trn
+UAT==oclqs.cloudadmin@oclqs.com.uat
+QA==jshivakumar@deloitte.com.clqs.gclicqaorg</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">PROD==oclqs.cloudadmin@oclqs.com</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">DEVBUILD==oclqs.cloudadmin@oclqs.com.devbuild
+DEV==oclqs.cloudadmin@oclqs.com.dev
+SAT==oclqs.cloudadmin@oclqs.com.sat
+SIT==oclqs.cloudadmin@oclqs.com.sit</value>
+    </values>
+</CustomMetadata>

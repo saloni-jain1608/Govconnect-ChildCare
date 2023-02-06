@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>JFS Licensing Closure Template - Temporary</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>JFS Temporary Licensing Closure Email Template</name>
+    <style>formalLetter</style>
+    <subject>{!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} Temporary Closure/Inactive Approved.</subject>
+    <textOnly>{!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} has been placed in a  temporarily closed/inactive status  effective {!CLQ_Program_Transaction__c.CLQ_Effective_Date_of_Closure_formula__c}
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

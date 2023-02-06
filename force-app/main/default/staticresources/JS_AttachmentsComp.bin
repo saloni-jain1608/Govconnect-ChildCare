@@ -1,0 +1,1913 @@
+/*******************************************************************************
+* Name          :   JS_AttachmentsComp.resource
+* Author        :   J. Scott Cromie
+* Copyright     :   2017 Deloitte LLP
+* Date          :   12/27/2016
+* Group         :   Static Resource
+* Description   :   Main logic for the Application 
+*-------------------------------------------------------------------------------
+UPDATES
+Version         Developer               Date            Description             
+--------------------------------------------------------------------------------
+1.0             J. Scott Cromie         1/24/2017       Initial Release
+1.1             Pradeep Ravi			9/28/2017		Updated Building approval button
+														display for 11351
+1.2             Pavan Ayta              11/29/2017      Updated Building approval button 
+														display for 11884														
+--------------------------------------------------------------------------------
+*******************************************************************************/
+
+
+;ATTACHMENTCOMPNS = {
+
+  
+    
+  /* Function for loading all events */
+   loadEvents: function() {
+    var fileContents; //file contents will be stored in this global variable (Nishit)
+    //Event fires when the document button is clicked.
+    $("[id^=addApprAtt]").on("click", function(e) {
+      var btnId = $(this).attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnId);
+      if (idObj) {
+         var btnSaveRecord = $("#saveModal" + idObj.uniqueId);
+         var btnCloneRecord = $("#cloneModal" + idObj.uniqueId);
+         btnSaveRecord.hide();
+         btnCloneRecord.hide();
+		 
+		 ATTACHMENTCOMPNS.cancelButtonClick(e, $(this).attr("id")); //invoke cancel to clear cache
+		 
+         ATTACHMENTCOMPNS.getApprovedDocs(e, btnId);
+		 
+		 
+		 
+         $("#attachmentFileName" + idObj.uniqueId).show();
+      } else {
+          throw new UserException("Bad Id Object");
+      }
+    });
+
+     //Event fires when the document selection modal is shown.
+     $("[id^=documentListModal]").on('show.bs.modal', function (event) {
+     console.log('--------inside ----');
+      var btn = $(event.relatedTarget) // Button that triggered the modal
+      var btnId = btn.attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnId);
+      if (idObj) {
+        var stdDocDetId = idObj.stdDetailId;
+      //adjust column headers on the datatable.
+        var dataTable = $(this).closest('table').attr('id');
+        console.log('dataTable ---- '+dataTable);
+        $("#" + dataTable).DataTable().columns.adjust().draw();
+        var modal = $(this)
+      //Turn the row click event on when the modal is entered.
+        $('.dataTableHolder tbody').on('click.DT', 'tr', function(e) {
+          var datatableId = $(this).closest('table').attr('id');
+          var dataRow = $("#" + datatableId).DataTable().row(this._DT_RowIndex).data();
+          var stdParentId = dataRow.Id;
+          var stdParentName = dataRow.Name;
+          datatableId = datatableId.substring(datatableId.length - 18);
+          $("#attachmentFileName" + datatableId).text(stdParentName);
+          $("#attachmentFileName" + datatableId).show();
+          $("#saveModal" + datatableId).hide();
+          $("#cloneModal" + datatableId).show();
+          $("#stdDocId" + datatableId).text(stdParentId);
+//          console.log('Got the Standard Document Id: ' + $("#attachmentFileName" + datatableId).text() + '!');
+        });
+        modal.find("[attachmentFileName"+stdDocDetId+"]").val('');
+      } else {
+          throw new UserException("Bad Id Object");
+      }
+    });
+
+	$("[id^=addAttachmentBtn]").on("click", function(e) {
+		this.value = null;
+		var btnAddAttId = $(this).attr("id");
+        var idObj = ATTACHMENTCOMPNS.getIdObject(btnAddAttId);
+		if (idObj) {
+			var uniqueId = idObj.uniqueId;
+			$("#saveModal" + uniqueId).hide();
+		}	
+	});
+	
+    // Event fires when the add attachment button is clicked.
+    $("[id^=addAttachmentBtn]").on("change", function(e) {
+	  var btnAddAttId = $(this).attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnAddAttId);
+      if (idObj) {
+        var btnSaveRecord = $("#saveModal" + idObj.uniqueId);
+        var btnCloneRecord = $("#cloneModal" + idObj.uniqueId);
+        var fileHasChanged = $("#fileHasChanged" + idObj.uniqueId)[0];
+        fileHasChanged.value = "true";  //moved in below condition-sanjeev
+        //btnSaveRecord.show(); //moved in below condition-sanjeev
+        btnCloneRecord.hide();
+        if (ATTACHMENTCOMPNS.addAttachmentClick(e,btnAddAttId)==true){
+			$("#addAttachBtn" + idObj.uniqueId).hide();
+			$("#replaceAttachBtn" + idObj.uniqueId).show();
+			btnSaveRecord.show(); 
+		}
+
+      } else {
+          throw new UserException("Bad Id Object");
+      }
+    });
+
+		
+	//Fires just on button click
+	$("[id^=replaceAttBtn]").on("click", function(e) { 
+		this.value = null;
+		var btnAddAttId = $(this).attr("id");
+        var idObj = ATTACHMENTCOMPNS.getIdObject(btnAddAttId);
+		if (idObj) {
+			var uniqueId = idObj.uniqueId;
+			$("#saveModal" + uniqueId).hide();
+		}	
+	});	 
+	
+	
+    //Event fires when the replace button is clicked.
+    $("[id^=replaceAttBtn]").on("change", function(e) {
+      var btnAddAttId = $(this).attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnAddAttId);
+      if (idObj) {
+        var uniqueId = idObj.uniqueId;
+        var btnSaveRecord = $("#saveModal" + uniqueId);
+        var btnCloneRecord = $("#cloneModal" + uniqueId);
+        var fileHasChanged = $("#fileHasChanged" + idObj.uniqueId)[0];
+        fileHasChanged.value = "true";
+        if(ATTACHMENTCOMPNS.addAttachmentClick(e,btnAddAttId)==true){
+			btnSaveRecord.show();
+			btnCloneRecord.hide();
+		}
+      } else {
+        throw new UserException("Bad Id Object");
+      }
+	  
+    });
+
+    //Event fires when the comments field is edited.
+    $("[id^=addAttachmentComment").on("change keyup paste click", function(e) {
+      var btnId = $(this).attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnId);
+      if (idObj) {
+        var btnSaveRecord = $("#saveModal" + idObj.uniqueId);
+        var btnCloneRecord = $("#cloneModal" + idObj.uniqueId);
+        //if the Clone button is active, let it stay active
+        //if the Save button is active, let it stay active
+        //if neither is active, then activate the Save button.
+        if ((!btnSaveRecord.visible) && (!btnCloneRecord.visible)) btnSaveRecord.show();
+      }
+    });
+
+    //Event fires when the save button is clicked.
+    $("[id^=saveModal").on("click", function(e) {
+      var btnId = $(this).attr("id");	  
+      ATTACHMENTCOMPNS.saveButtonClick(e, btnId);
+      var idObj = ATTACHMENTCOMPNS.getIdObject(btnId);
+      if (idObj) {
+        var fileHasChanged = $("#fileHasChanged" + idObj.uniqueId);
+        fileHasChanged.value = "false";
+      }
+    });
+
+    //Event fires when the clone button is clicked. 
+    $("[id^=cloneModal]").on("click", function(e) {
+      OH_NOTIFICATIONS.spinnerStart();
+      //You have the Standard Document Id to clone from the stdDocId control
+      var controlId = $(this).attr("id");
+      var idObj = ATTACHMENTCOMPNS.getIdObject(controlId);
+      var stdDetailId = idObj.stdDetailId;
+      var uniqueId = idObj.uniqueId;
+      if (idObj) {
+         var btnSaveRecord = $("#saveModal" + uniqueId);
+         var btnCloneRecord = $("#cloneModal" + uniqueId);
+         var stdDocDetId = stdDetailId;
+         var stdDocId = $("#stdDocId" + uniqueId).text().trim();
+         ATTACHMENTCOMPNS.cloneStandardDocumentRecord(controlId, stdDocId);
+      } else {
+          throw new UserException("Bad Id Object");
+      }
+    });
+
+    //Event fires when the Cancel button is clicked
+    $("[id^=cancelModal]").on("click", function(e) {   
+      ATTACHMENTCOMPNS.cancelButtonClick(e, $(this).attr("id"));
+    });
+
+  },
+
+  /* Function for loading data */
+
+  loadRecords: function(docType, existingId) {
+    //attachmentsList is built in the Attachments Component.  We're expecting an array in here.  During testing the Licensing side the attachmentsList became
+    //undefined when it came in here.  This will make sure it still gets assigned to #jsonAtt
+    
+    if (!attachmentsList) {
+      var attachmentsList = JSON.parse($("#jsonAtt").text());
+    }
+    var attachmentList = [];
+    var userRecord = JSON.parse($("#oclqs_global_info").val()).uRecord;
+    var qExcludedDocsArray = [];
+    
+    // Clear attachments
+    $(".eachNewAttachment").empty();
+
+
+    try {
+      // Initialize markup variable
+      var innerHtml = '';
+      var len = attachmentsList.length;
+      var attObject = {};
+      // deduplicate attachment records
+      for (var i=0;i<len;i++) {
+        attObject[attachmentsList[i].id] = attachmentsList[i];
+        attObject[attachmentsList[i].id].ReasonCode = 'Default document for this RT and Application';
+      };
+
+      attachmentsList.length = 0;
+      var theKeys = Object.keys(attObject);
+
+      var qSOQL1 = "SELECT Id, AssociatedQuestion__c, AssociatedQuestion__r.Name,Answer_Text__c ";
+      qSOQL1 +=    "FROM Answer__c ";
+      qSOQL1 +=    "WHERE Program_Transaction__c = '" + $('#TransactionIdString')[0].innerText.trim() + "'";
+
+      var currentAnswers = sforce.connection.query(qSOQL1).getArray("records");
+      var lstQuestions = [];
+      if (currentAnswers && (currentAnswers.length > 0)) {
+        for (var i = 0; i<currentAnswers.length; i++) {
+          if (currentAnswers[i]) lstQuestions.push("'" + currentAnswers[i].AssociatedQuestion__c + "'");
+        }  
+        attachmentList = ATTACHMENTCOMPNS.questionHandler(currentAnswers);
+      }
+
+      /*-----------Existing Document Logic starts here -------------------*/
+
+      var strSOQL = "Select c.Name ";
+      if(docType == "CAP_Document" && existingId) {
+        strSOQL +=    ", c.CLQ_Standard_Detail_Document__r.Id";
+        strSOQL +=    ", c.CLQ_Standard_Detail_Document__c";
+        strSOQL +=    ", c.CLQ_Standard_Document__c";
+        strSOQL +=    " From CLQ_CAP_Documents__c c";
+        strSOQL +=    " where c.CLQ_Corrective_Action_Plan__c =  '" + existingId.trim() + "'";
+      }
+      else {
+        strSOQL +=    ", c.CLQ_Standard_Detail_Document__r.Id";
+        strSOQL +=    ", c.CLQ_Contact__c";
+        strSOQL +=    ", c.CLQ_Contact__r.Name"
+        strSOQL +=    ", c.CLQ_Standard_Detail_Document__r.CLQ_Detail_Name__c";
+        strSOQL +=    ", c.CLQ_Standard_Detail_Document__c";
+        strSOQL +=    ", c.CLQ_Program_Transaction__r.Id";
+        strSOQL +=    " From CLQ_Transaction_Document__c c";
+        strSOQL +=    " where c.CLQ_Program_Transaction__c =  '" + $('#TransactionIdString')[0].innerText.trim() + "'";
+        strSOQL +=    " and CLQ_Portal_Marked_for_Delete__c <> true";
+      }
+      
+      var existingDocList = sforce.connection.query(strSOQL).getArray("records");
+      var existingDocTypeArray = [];
+      var existingDocNameArray = [];
+      var existingDocSDTypeArray = [];
+      if (existingDocList) {
+          for (var i=0;i<existingDocList.length;i++) {
+            var uniqueId = (existingDocList[i].CLQ_Contact__c) ? 'XNOROLEAVAILABLEXX_' + existingDocList[i].CLQ_Contact__c + '_' + existingDocList[i].CLQ_Standard_Detail_Document__c : existingDocList[i].CLQ_Standard_Detail_Document__c;
+            existingDocTypeArray[i] = uniqueId;
+            existingDocNameArray[uniqueId] = existingDocList[i].Name;
+            existingDocSDTypeArray[uniqueId] = existingDocList[i].CLQ_Standard_Detail_Document__r.CLQ_Detail_Name__c;
+            if (existingDocList[i].CLQ_Contact__c) existingDocSDTypeArray[uniqueId] += ' (' + existingDocList[i].CLQ_Contact__r.Name + ')';
+          }
+      }
+      //reorganize the keys to account for contact-based keys
+      existingDocTypeArray.forEach(function(theExistingDoc) {
+        theKeys.forEach(function(key) {
+          if ($.inArray(key, theExistingDoc.split('_')) >= 0) {
+            theKeys.push(theExistingDoc);
+            attObject[theExistingDoc] = {       ReasonCode : "Contact Existing",
+                                         isAlreadyExisting : true,
+                                               description : existingDocSDTypeArray[theExistingDoc],
+                                                        id : theExistingDoc, 
+                                            attachmentName : null,
+                                               isDependent : false};
+          }
+        });
+      });
+
+      theKeys.forEach(function(key) {
+        if ($.inArray(key, existingDocTypeArray) >= 0) {
+          attObject[key].isAlreadyExisting = true;
+          attObject[key].attachmentName = existingDocNameArray[key];
+        } else {
+          attObject[key].isAlreadyExisting = false;
+          attObject[key].attachmentName = '';
+        }
+        if (attObject[key]) attachmentList.push(attObject[key]); //add to the official list
+      });
+/*-- Existing Document Logic ends here --*/
+//    specialized functions for specific rules go here  
+       attachmentsList = attachmentList.concat(attachmentsList);
+      //CAP Specific logic
+      //If there are no attachments and we're dealing with CAP documents, make up fake attachment data and properly ID the modal
+      if(attachmentsList.length == 0 && docType == "CAP_Document" && existingId) {
+        attachmentsList.push({isAlreadyExisting: false, attachmentName: '', description: 'New CAP Document', id: existingId.trim(), name: ''});
+      }
+
+      //DO NOT CALL 'getContactList' OR 'createStandardDocumentRecord' BEFORE existingId AND docType ARE APPENDED TO THE DOM!
+      innerHtml +=       '<input type="hidden" value="' + existingId + '" id="CAPS_Existing_Id"/>';
+      innerHtml +=       '<input type="hidden" value="' + docType + '" id="CAPS_DocType" />';
+      $(".eachNewAttachment").append(innerHtml);
+      innerHtml = '';
+
+      if (window.location.pathname !== "/OCLQS_DocumentDetailView") {
+      }
+      attachmentsList = ATTACHMENTCOMPNS.addContactRequiredDocuments(attachmentsList);
+// ensure that the documents that were already selected show up that way.
+      for (var i in attachmentsList) {
+          if (attObject[attachmentsList[i].id]) attachmentsList[i].isAlreadyExisting = attObject[attachmentsList[i].id].isAlreadyExisting;
+      } 
+
+//deduplicate the attachments list and remove the dependent ones.
+      var newAttList = {};
+      for (var i in attachmentsList) {
+        if (!attachmentsList[i].isDependent) {
+          newAttList[attachmentsList[i].id] = attachmentsList[i];
+        }
+      };
+      var ownershipTypeDocuments = ATTACHMENTCOMPNS.ownershipTypeDocuments(JSON.parse($("#jsonAtt").text()));
+      for (var i in ownershipTypeDocuments) {
+          if (!newAttList[ownershipTypeDocuments[i].id]) {
+             newAttList[ownershipTypeDocuments[i].id] = ownershipTypeDocuments[i];
+          }
+      } 
+      attachmentsList = $.map(newAttList, function(value, index) {
+        return [value];
+      });
+// finally, dedup by description field.  This is the button name.
+      newAttList = {};
+      for (var i in attachmentsList) {
+        var thisAttachment = attachmentsList[i];
+        var desc = thisAttachment.description;
+        newAttList[desc] = (!newAttList[desc]) ? {} : newAttList[desc];        
+        for (var propName in thisAttachment) {
+          var theValue = thisAttachment[propName];
+          newAttList[desc][propName] = (!newAttList[desc][propName]) ? ((theValue) ? theValue : null) : newAttList[desc][propName]; 
+        }     
+      }
+      attachmentsList = [];
+      var keys = Object.keys(newAttList);
+      for (var i in keys) {
+        attachmentsList.push(newAttList[keys[i]]);
+      }
+      var reqAttUniqueIds = [];
+      for (var i in attachmentsList) {
+        reqAttUniqueIds.push(attachmentsList[i].id)
+      }
+      ATTACHMENTCOMPNS.cleanup(reqAttUniqueIds);
+
+      //The Contact Rule is causing items to be marked as if they exist, where they really shouldn't.  Clear out that flag if there is no value in the attachmentName field.
+      for (var i in attachmentsList) {
+        if (!attachmentsList[i].attachmentName) {
+          attachmentsList[i].isAlreadyExisting = false;
+        }
+      }
+    var disableButton = 'false';
+if (attachmentsList.length > 0) {
+    $.each(attachmentsList, function(i, val) {
+    
+    var cnt = val.description.indexOf('(');
+    //console.log('tp: '+(cnt > -1)+ '>>> '+(val.newDoc == null));
+    //ATTACHMENTCOMPNS.logMessages('tp: '+(cnt > -1)+ '>>> '+(val.newDoc == null));
+    if(val.newDoc == null && cnt > -1 ) {
+          disableButton = 'true';
+    }
+    });
+}
+	  
+      if (attachmentsList.length > 0) {
+      
+        $.each(attachmentsList, function(i, val) {
+ //***** UNCOMMENT THE BELOW LINE TO KNOW THE REASON WHY A DOCUMENT WAS SELECTED *****//                  
+            console.log('Displaying ' + val.description + ' because ' + val.ReasonCode + 'ID ' +val.id + 'val.newDoc' +val.newDoc + ' val already exist '+val.isAlreadyExisting);
+            //ATTACHMENTCOMPNS.logMessages('Displaying ' + val.description + ' because ' + val.ReasonCode);
+            // Build markup
+            innerHtml +=         '<div class="eachNewAttachment" id="attDiv'+val.id+'">';
+            //---------------Add Button definition----------------------//
+            innerHtml +=           '<div class="dataTableHolder">';
+            //Updated to not add building approval button for ODE SAAC program if the answer selected is 'Yes' - 11351
+	        if(val.ReasonCode != 'Building Approval special rule for ODE - No')
+	      	{            
+	            if (val.isAlreadyExisting) {
+		              innerHtml +=             '<div class="row new-attachment-row">';
+		              innerHtml +=                '<div class="col-sm-6">';
+		               if(val.newDoc == 'true'){
+		                innerHtml +=                  '<button type="button" enabled=" '+val.newDoc+' " id="addApprAtt' + val.id + '" �class="btn btn-primary attachment attachment-uploaded" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description  + ' (added)</button>';
+		              }
+		              else if(val.newDoc == 'false' && val.ReasonCode == 'Contact Existing'){
+		                innerHtml +=                  '<button type="button" disabled = "true" id="addApprAtt' + val.id + '" class="btn btn-primary attachment attachment-uploaded" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description  + ' (added)</button>';
+		              }
+		              else if((val.newDoc == 'undefined' || val.newDoc == null) && val.ReasonCode == 'Contact Existing' && disableButton == 'true'){
+		                innerHtml +=                  '<button type="button" disabled = "true" id="addApprAtt' + val.id + '" class="btn btn-primary attachment attachment-uploaded" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description  + ' (added)</button>';
+		              }
+		              else if((val.newDoc == 'undefined' || val.newDoc == null) && val.ReasonCode == 'Building Approval special rule for Center/ODE' && disableButton == 'true'){
+		                innerHtml +=                  '<button type="button" disabled = "true" id="addApprAtt' + val.id + '" class="btn btn-primary attachment attachment-uploaded" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description  + ' (added)</button>';
+		              }
+		              else {
+		                	innerHtml +=                  '<button type="button" id="addApprAtt' + val.id + '" �class="btn btn-primary attachment attachment-uploaded" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description  + ' (added)</button>';
+		              }
+		              innerHtml +=                '</div>';
+		              innerHtml +=                '<div class="col-sm-6">';
+		              innerHtml +=                  '<span id="loadedFileName' + val.id + '">' + val.attachmentName + '</span>';
+		              innerHtml +=                '</div>';
+		              innerHtml +=              '</div>';
+	              
+	            } else {
+	              innerHtml +=             '<div class="row">';
+	              innerHtml +=                '<div class="col-sm-6">';            
+	              innerHtml +=                  '<button type="button" id="addApprAtt' + val.id + '" class="btn btn-primary attachment" data-toggle="modal" data-target="#documentListModal' + val.id + '">' + val.description + '</button>';
+	              innerHtml +=                '</div>';
+	              innerHtml +=                '<div class="col-sm-6">';
+	              innerHtml +=                  '<span id="loadedFileName' + val.id + '"></span>';
+	              innerHtml +=                '</div>';
+	              innerHtml +=              '</div>';
+	            }
+            }
+            //--------------------------Begin hidden modal-------------------//
+            //-------------Dynamic Values don't work for bootstrap modals.  Use the modal as a tool to get the file, then populate the parent with it.-----------------------//
+            innerHtml +=               '<div class="modal fade attach-modal" tabindex="-1" role="dialog" id="documentListModal' + val.id + '" aria-labelledby="documentListModal" aria-hidden="true">';
+            innerHtml +=                 '<div class="modal-dialog modal-lg" role="document">';
+            innerHtml +=                   '<div class="modal-content">';
+            innerHtml +=                     '<div class="modal-header no-pad">';
+            innerHtml +=                       '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            innerHtml +=                       '<h4>Choose a document</h4>';
+            innerHtml +=                     '</div>';
+            //---------------Begin attach/replace button----------------//
+            innerHtml +=                   '<div class="row">';
+            innerHtml +=                     '<div class="col-sm-3">';
+            innerHtml +=                       '<div id="addAttachBtn' + val.id + '" ' + (val.isAlreadyExisting ? 'style="display:none">': '>');
+            innerHtml +=                         '<span class="button">Add New Attachment<input type="file" class="addAttachmentBtn" id="addAttachmentBtn' + val.id + '" style="width:100%;height:100%;"/></span>';
+            innerHtml +=                       '</div>'; //--End add button
+            innerHtml +=                       '<div id="replaceAttachBtn' + val.id + '" ' + (val.isAlreadyExisting ? '>' : 'style="display:none">');
+            innerHtml +=                         '<span class="button">Replace this Attachment<input type="file" class="replaceAttachmentBtn" id="replaceAttBtn' + val.id + '" style="width:100%;height:100%;"/></span>';
+            innerHtml +=                       '</div>'; //--End replace button
+            innerHtml +=                     '</div>'; //--End Buttons column
+            innerHtml +=                     '<div class="col-sm-9">';
+            innerHtml +=                       '<div id="attachmentFileName' + val.id + '" class="file-name">';
+            innerHtml +=                         '<span id="okGlyph' + val.id + '" class=""></span>';
+            innerHtml +=                         '<span class="name">' + (val.isAlreadyExisting ? val.attachmentName :'') + '</span>';
+            innerHtml +=                       '</div>'; //--End file name
+            innerHtml +=                     '</div>'; //--End filename column
+            innerHtml +=                   '</div>'; //--End row
+            //---------------End attach/replace button------------------//
+
+            //--------------------------Generated list of approved documents-----------//
+            innerHtml +=                   '<div class="row">';
+            innerHtml +=                     '<div class="col-sm-12">';
+            innerHtml +=                        'If there are any approved documents for your use, they will appear here.  Double-click the document name to attach it to this application.';
+            innerHtml +=                      '</div>';
+            innerHtml +=                   '</div>';
+            innerHtml +=                   '<div class="row">';
+            innerHtml +=                     '<div class="col-sm-12">';
+            innerHtml +=                '<!-- start of datatable -->';
+            innerHtml +=                       '<table id="theDataTable' + val.id + '" class="table datatable" display="none">';
+            innerHtml +=                         '<thead>';
+            innerHtml +=                           '<tr>';
+            innerHtml +=                             '<th></th>';
+            innerHtml +=                             '<th>Document Link</th>';
+            innerHtml +=                             '<th>Name</th>';
+            innerHtml +=                             '<th>Rating</th>';
+            innerHtml +=                             '<th>Points</th>';
+            innerHtml +=                             '<th>Affiliation</th>';
+            innerHtml +=                           '</tr>';
+            innerHtml +=                         '</thead>';
+            innerHtml +=                         '<tbody />';
+            innerHtml +=                       '</table>';
+            innerHtml +=                     '</div>';
+            innerHtml +=                   '</div>';
+            //--------------------------End of generated list of approved documents----//
+            //---------------Begin Comments field-----------------------//
+            innerHtml +=                   '<div class="row">';
+            innerHtml +=                     '<div class="col-sm-9">';
+            innerHtml +=                       '<label class="comments-label">Comments</label>';
+            innerHtml +=                       '<textarea id="addAttachmentComment' + val.id + '"></textarea>';
+            innerHtml +=                     '</div>';
+            innerHtml +=                   '</div>';
+            innerHtml +=                   '<div id="fileBlobControl' + val.id + '">';
+            innerHtml +=                     '<span class="blob"></span>';
+            innerHtml +=                   '</div>'; //--End file name
+            //---------------End Comments field-------------------------//
+            innerHtml +=                 '<div class="modal-footer">';
+            innerHtml +=                   '<button class="modal-attach-btn" id="cancelModal' + val.id + '" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>';
+            innerHtml +=                   '<button class="modal-attach-btn" id="saveModal' + val.id + '" type="button" class="btn btn-primary" data-dismiss="modal_00">Save</button>';
+            innerHtml +=                   '<button class="modal-attach-btn" id="cloneModal' + val.id + '" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>';
+            innerHtml +=                 '</div>';
+            innerHtml +=               '</div>';
+            innerHtml +=             '</div>';
+            //---------------------------End hidden modal-------------------//
+            //---------------The button name field-----------------------//
+            innerHtml +=             '<div class="row">';
+            innerHtml +=               '<div class="col-sm-9">';
+            innerHtml +=                 '<input type="hidden" id="transD'+val.id+'" value=""/>';
+            innerHtml +=                 '<input type="hidden" id="attD'+val.id+'" value=""/>';
+            innerHtml +=                 '<output id="theFile'+val.id+'"></output>';
+            innerHtml +=               '</div>';
+            innerHtml +=             '</div>';
+            innerHtml +=           '</div>';  //End Data Table Holder
+            //---------------End button name field-----------------------//
+            innerHtml +=           '<input type="hidden" id="fileHasChanged'+val.id+'" value="false" style="display:none"/>';
+            innerHtml +=           '<input type="hidden" id="hiddenAttId'+val.id+'" value="" style="display:none"/>';
+            innerHtml +=           '<input type="hidden" id="subId'+val.id+'" value="" style="display:none"/>';
+            innerHtml +=           '<input type="hidden" id="stdDocId'+val.id+'" value="" style="display:none"/>';
+            innerHtml +=           '<input type="hidden" id="currentContactId" value="" style="display:none"/>';
+            innerHtml +=           '<div class="AttachmentValidationContainer" style="display:none;">';
+            if (val.isAlreadyExisting || val.ReasonCode == 'Building Approval special rule for ODE - No') {
+              innerHtml +=             '<input type="hidden" value="' + val.description + '" id="AttachmentName"/>';
+              innerHtml +=             '<input type="hidden" value="YES" id="AttachmentCompleted"/>';
+            } else {
+              innerHtml +=             '<input type="hidden" value="' + val.description + '" id="AttachmentName"/>';
+              innerHtml +=             '<input type="hidden" value="NO" id="AttachmentCompleted"/>';
+            }
+            innerHtml +=           '</div>';
+            innerHtml +=         '</div>';
+            innerHtml +=       '</div>';
+            innerHtml +=     '</div>';
+          });
+      } else {
+         innerHtml +=         '<div class="row">';
+         innerHtml +=           '<span>No documents are required to submit this request</span>';
+         innerHtml +=         '</div>'
+      }
+      // Inject markup
+      $(".eachNewAttachment").append(innerHtml);
+
+      // Load previously attached files
+
+      $.each(attachmentsList, function(i, val) {
+
+        if(val.isAttested == true) {
+          $("#attestationText" + val.id).text('Attestation complete.');
+        }
+
+        $("#subId" + val.id).val(val.id);
+
+        if(val.attachmentList) {
+          $.each(val.attachmentList, function(j, val2) {
+            // Update UI
+            $("#hiddenAttId" + val.id).val(val2.Id);
+            $("#attachmentFileName" + val.id).show().find('.name').text(val2.Name);
+            $("#addAttachBtn" + val.id).hide();
+            $("#replaceAttachBtn" + val.id).show();
+          });
+        }
+      });
+
+
+      // Load events
+      ATTACHMENTCOMPNS.loadEvents();
+      //Set up the DataTable for approved objects
+      $("#theDataTable").DataTable({"pageLength":3,"lengthChange":true});
+    } catch(theErr) {
+      //console.log('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+      ATTACHMENTCOMPNS.logMessages('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+    }
+  },
+
+  /* Function for loading attachments based on questions */
+  addConditionalAttachments : function() {
+    $.each(attachmentsList, function(k, val3) {
+      $.each(val3.triggeringResponses, function(j, resp) {
+        $.each(questionsList, function(i, val) {
+
+          if(val3.isDependent && val3.parentQuestion == val.id) {
+            if(val.answerText.indexOf(resp) >= 0) {
+              $("#attDiv" + val3.id).show();
+            }
+          }
+          else {
+            $.each(val.childQueList, function(j, val2) {
+
+                if(val3.isDependent && val3.parentQuestion == val2.id && val2.answerText == resp) {
+                  $("#attDiv" + val3.id).show();
+                }
+            });
+          }
+        });
+      });
+    });
+  },
+
+  /* Function for saving attachments */
+ addAttachmentClick: function(e, currentId) {
+		localStorage.msgCount = '0'; //counter for logging flag check(Nishit)
+		localStorage.enableLogs = 'false';//flag to check enabled logging from Integration Setting(Nishit)
+		//clear out local storage
+		delete localStorage.fileName;
+		delete localStorage.conMIMEType;
+		delete localStorage.currentId;
+		delete localStorage.UID; //Added by sanjeev for logging purpose
+
+		localStorage.UID = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "getUID", {}); //Added by sanjeev for getting UID for logging
+  
+		ATTACHMENTCOMPNS.logMessages(ATTACHMENTCOMPNS.getBrowserDetials() );
+    var  MAXFILESIZEINMB = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "maxFileSizeAllowed", {});
+		if(MAXFILESIZEINMB == null || MAXFILESIZEINMB == "") {
+        MAXFILESIZEINMB = 10;
+    }
+    var MAXFILESIZEINBYTES = MAXFILESIZEINMB * 1048576; //10 MB limit
+		var idObj = ATTACHMENTCOMPNS.getIdObject(currentId);
+		if (idObj) {
+				var sfdcId 		= idObj.uniqueId;
+				var theFileList = e.target.files;
+				
+				var theFile 	= theFileList[0];
+				var reader 		= new FileReader();
+				reader.onload 	= function(event) {
+					var theResult = event.target.result;
+					fileContents = (String(event.target.result)).substr(String((event.target.result)).indexOf(',') + 1);
+					ATTACHMENTCOMPNS.logMessages('Attachment size(string) is: '+fileContents.length + ' Bytes');//log messages to the screen console and integration log INT-008.6(Nishit)  
+				};
+		reader.readAsDataURL(theFile);//reads the file content and spits the data as a URL representing the file's data as a base64 encoded string (Nishit)
+		
+		//Validate file contents and max size
+		var fileSize = theFile.size;
+    console.log('fileSize: '+fileSize);
+		if (fileSize <=0){
+			fileContents = null;
+			OH_NOTIFICATIONS.spinnerStop();
+			ATTACHMENTCOMPNS.logMessages('Attachment file is empty: Size is ' + fileSize + ' Bytes');
+			OH_MODAL_UTILITY.errorMessageModal('Document is empty. Please upload a valid document.','Document Empty');
+			return false;
+		}else if (fileSize > MAXFILESIZEINBYTES) {
+			fileContents = null;
+			OH_NOTIFICATIONS.spinnerStop();
+			ATTACHMENTCOMPNS.logMessages('Attachment file size greater then allowed('+MAXFILESIZEINMB+'MB ).\nCurrent size: ' + fileSize + ' Bytes');
+			OH_MODAL_UTILITY.errorMessageModal('Maximum document upload size is '+MAXFILESIZEINMB+' MB. Please reduce the size of the document and try again.','Document Size Limit');
+			return false;
+		}		
+				
+      //Validation: File Name Length
+      var theFileName = theFile.name;
+      if (theFileName.length > 80) {
+        fileContents = null;
+		OH_NOTIFICATIONS.spinnerStop();
+        ATTACHMENTCOMPNS.logMessages('Attachment name "'+theFileName+'" is greater then 80 chars.\nFileName Length: ' + theFileName.length );
+		OH_MODAL_UTILITY.errorMessageModal('Maximum file name length is greater than 80 characters', 'Please rename the file and try again.');
+		return false;
+      }
+	  
+      var theFileExtension = ATTACHMENTCOMPNS.getFileExt(theFileName); //theFileName.substring(theFileName.lastIndexOf('.') + 1).toLowerCase().trim();
+	  if( typeof theFileExtension === 'undefined' || theFileExtension === null || theFileExtension === '' ){
+		fileContents = null;
+		OH_NOTIFICATIONS.spinnerStop();
+		ATTACHMENTCOMPNS.logMessages('File extension missing: ' + theFileExtension + ' File Name: '+theFileName);
+		OH_MODAL_UTILITY.errorMessageModal('File extension is missing. Please try again with a valid file type','Missing File Extension');
+        return false;
+      }
+
+      //Validation: MIME Type
+      var conMIMEType = ATTACHMENTCOMPNS.checkMIMEType(theFileExtension);
+      if (!conMIMEType) {
+        fileContents = null;
+		    OH_NOTIFICATIONS.spinnerStop();
+        ATTACHMENTCOMPNS.logMessages('Attachment file type: ' + conMIMEType + '\nFile Name: ' + theFileName);
+		    OH_MODAL_UTILITY.errorMessageModal('This file type is not supported.</br>Valid file types are:  doc, docx, htm, html, jpeg, jpg, pdf, png, rtf, text, tif, tiff, txt, xls, xlsx</br>Please try again with a valid file type.','Invalid File Type');
+        return false;
+      }
+
+      var fileNameControl = $("#attachmentFileName" + sfdcId);
+      var fileTypeButtonControl = $("#addApprAtt" + sfdcId);
+      var replaceButtonControl = $("#replaceAttachBtn" + sfdcId);
+      var addButtonControl = $("#addAttachmentBtn" + sfdcId);
+	  //Set the control and localStorage values
+      fileTypeButtonControl.label = fileTypeButtonControl.label + ": (selected)";
+      fileNameControl.show().text(theFileName);
+
+      localStorage.fileName 	= theFileName;
+      localStorage.conMIMEType  = conMIMEType;
+      localStorage.currentId 	= currentId;
+
+      ATTACHMENTCOMPNS.logMessages('Local Storage Values\nFileName: ' + localStorage.fileName + '\nMimeType : '+localStorage.conMIMEType + '\nHTML Button Id: '+localStorage.currentId + '\nPassed all validations,continue..');
+
+	  return true;
+	  
+    } else {
+		fileContents = null;
+		OH_NOTIFICATIONS.spinnerStop();
+        OH_MODAL_UTILITY.errorMessageModal('Bad Id Object','Error');
+        ATTACHMENTCOMPNS.logMessages('Bad Id Object');
+		return false;
+        //throw new UserException("Bad Id Object");
+    }
+  },
+
+
+  //**********************************************************************
+  // saveButtonClick: when the save button is clicked,                  //
+  //                  create the Standard Document, the transaction     //
+  //                  document, and then call readFile to finish the    //
+  //                  upload.                                           //
+  //*********************************************************************/
+
+  saveButtonClick: function(e, sfdcId) {
+    //By this time the localStorage obect has the fileName, conMIMEType, and currentId.  Get them and delete the localStorage fields.
+    console.log('Inside Manager');
+    $("[id^=documentListModal]").modal('hide');
+	OH_NOTIFICATIONS.spinnerStart();
+
+
+    var idObj = ATTACHMENTCOMPNS.getIdObject(sfdcId);
+    if (idObj) {
+			var uniqueId 		  = idObj.uniqueId;
+			var theFileName 	  = $("#attachmentFileName" + uniqueId)[0].textContent.trim();
+			var conMIMEType 	  = localStorage.conMIMEType;
+			var addButtonControl  = $("#addAttachmentBtn" + uniqueId);
+			var saveButtonControl = e.currentTarget;
+			var btnFileTypeName   = $("#attachmentFileName" + uniqueId);
+			var strAttComments    = $("#addAttachmentComment" + uniqueId)[0].value.trim();
+			
+			//Check if document name is present
+			if( typeof theFileName === 'undefined' || theFileName === null || theFileName === "" || theFileName.length === 0 ){
+				OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+				OH_MODAL_UTILITY.errorMessageModal('There is no attachment.</br></br>Please add/replace attachment','Attachment Missing');
+				return;
+			}//endif-no file selected
+			
+			//No comment, file contents is empty
+			if( typeof strAttComments === 'undefined' || strAttComments === null || strAttComments === "" ){
+				if(typeof fileContents === 'undefined' ){
+					OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+					OH_MODAL_UTILITY.errorMessageModal('Please attach a document','Document Missing');
+					return;
+				}
+				
+				if( fileContents === "" || fileContents === null ){
+					OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+					OH_MODAL_UTILITY.errorMessageModal('Please attach a document','Document Missing');
+					return;
+				}
+			}//end-if
+			
+			//file contents is empty but comments are present
+			if(typeof fileContents === 'undefined'  ){
+				if( strAttComments != "" ){
+					ATTACHMENT_DML.addComment(uniqueId);
+					OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+					return;
+				}	
+			}//end if 
+				
+			if( fileContents === "" ||  fileContents === null){
+				if( strAttComments != "" ){
+					ATTACHMENT_DML.addComment(uniqueId);
+					OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+					return;
+				}
+
+      //Check if mimetype is getting lost
+      if(conMIMEType === null || conMIMEType === ""){
+        OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+        OH_MODAL_UTILITY.errorMessageModal('Please add/replace the document and try again.','Upload issue');
+        return;
+      }//endif-mimetype is lost
+			}//end if 
+				
+		//}//end-if (idObj) {
+					
+			//OH_NOTIFICATIONS.spinnerStart();
+			
+			ATTACHMENTCOMPNS.logMessages('In saveButtonClick: the length of the file is: ' + fileContents.length);//log messages (Nishit)
+			
+			var incomingFile = {name:theFileName,MIMEType:conMIMEType};
+
+			ATTACHMENTCOMPNS.logMessages('Prepare to create Standard & Transaction Document\nIncomingFile Property: ' + JSON.stringify(incomingFile));				  
+						  
+			if ($("#fileHasChanged" + uniqueId)[0].value === "true") {
+				var sd = ATTACHMENT_DML.createStandardDocumentRecord(uniqueId,incomingFile);
+				ATTACHMENTCOMPNS.logMessages('\nCreate Standard Document Result: ' + JSON.stringify(sd));
+				if (sd.success) {
+					sd = sd.sd;
+					var td = ATTACHMENT_DML.createTransactionDocumentRecord(uniqueId, sd, incomingFile);
+					ATTACHMENTCOMPNS.logMessages('\nCreate Transaction Document Result: ' + JSON.stringify(td));
+					if (td.success) {
+						td = (td.td[0]) ? td.td[0]: (td.td) ? td.td: td;
+						
+						ATTACHMENTCOMPNS.logMessages('After Save\nTransaction Doc Id: ' + td.Id + '\nStandard Doc Id '+sd.Id);
+						
+						var fileParams = {	'fileName':theFileName,
+											'uniqueId': uniqueId,
+											'transactionDocId':td.Id,
+											'standardDocId':sd.Id,
+											'conMIMEType':conMIMEType,
+											'fileDesc': td.CLQ_Portal_Document_Comments__c
+										};
+						ATTACHMENTCOMPNS.logMessages('\n\nCreate Attachment with fileParams:\n' + JSON.stringify(fileParams) + '\n\n');
+						
+						// Create attachment object with required fields
+						var att 			= new sforce.SObject("Attachment");
+						att.Name 			= theFileName;//theFile.fileName;
+						att.ContentType     = conMIMEType;//theFile.conMIMEType;
+						att.ParentId 		= td.Id;//theFile.transactionDocId;
+						att.Description     = td.CLQ_Portal_Document_Comments__c;//theFile.fileDesc;
+						att.IsPrivate 	    = false;
+						att.body 			= fileContents;
+						  
+						ATTACHMENTCOMPNS.logMessages('Ready to create SFDC attachment now with content size ' + att.body.length + ' Bites');
+
+						sforce.connection.create([att], {
+							onSuccess : function(result, source) {
+											//setup the attachment Id to be passed on to the parent.
+											ATTACHMENTCOMPNS.logMessages('SFDC attachment success result: ' + JSON.stringify(result));
+											attachmentId = result[0].id;
+          
+											//Verify that the attachment made it to SFDC ok.  If not, reupload the attachment.
+											var savedAttBody = sforce.connection.retrieve("Id, Body, BodyLength, Contenttype, CreatedDate, Description, IsDeleted, IsPrivate, Name, OwnerId, SystemModstamp", "Attachment", [attachmentId])[0].Body;
+											var savedAttBodyLength = sforce.connection.retrieve("Id, Body, BodyLength, Contenttype, CreatedDate, Description, IsDeleted, IsPrivate, Name, OwnerId, SystemModstamp", "Attachment", [attachmentId])[0].BodyLength;
+
+											if (ATTACHMENTCOMPNS.hashCode(fileContents) === ATTACHMENTCOMPNS.hashCode(savedAttBody)) {
+												ATTACHMENTCOMPNS.logMessages('\nFile Content hashCode is "'+ATTACHMENTCOMPNS.hashCode(fileContents)+'" same as SFDC file content hasCode "'+ATTACHMENTCOMPNS.hashCode(savedAttBody)+'" ');
+												
+												try {
+														var wsResult = JSON.parse(sforce.apex.execute("OCLQS_IntegrationUtility", "insertAttachmentWSwithUID", {
+																standardDocId: sd.Id,//theFile.standardDocId,
+																attachmentId: attachmentId,
+																UID: localStorage.UID,
+                                transactionDocId: td.Id,
+                                executionType: 'New'
+														})[0]);
+														
+														ATTACHMENTCOMPNS.logMessages('\n\nOnBase integration response:\n' +JSON.stringify(wsResult) + '\n\n');		
+														if (!wsResult.success) {
+																if(wsResult.errorMessage == 'Success!') {
+																	OH_NOTIFICATIONS.spinnerStop(); //sanjeev  
+																	ATTACHMENTCOMPNS.logMessages('return..');		
+																	return;
+																}
+																else{
+																	ATTACHMENTCOMPNS.logMessages('Display error to user');	
+                                  console.log('OnBase thrown');	
+																	throw(wsResult.errorMessage);
+																}
+														}
+														else {
+															ATTACHMENTCOMPNS.logMessages('All good..continue');		
+															//OH_NOTIFICATIONS.spinnerStop();
+                              var theFileAtt = {  'id': wsResult.attachmentId,
+                                  'wsResult':wsResult.success,
+                                  'wsResultMessage': wsResult.errorMessage,
+                                  'transactionDocId': td.Id,//theFile.transactionDocId,
+                                  'standardDocId': sd.Id,//theFile.standardDocId,
+                                  'fileName': theFileName,//theFile.fileName,
+                                  'uniqueId': uniqueId,//theFile.uniqueId,
+                                  'fileLength': savedAttBodyLength
+                                };
+                              ATTACHMENTCOMPNS.logMessages('Perform final steps\ntheFileAtt details:\n' + JSON.stringify(theFileAtt) + '\n\n');
+                              console.log('upload sucess called from insert attachment method'+theFileAtt);
+                              ATTACHMENTCOMPNS.afterUploadSuccess(theFileAtt);
+							  
+							  
+														}
+
+												} catch (attachWSError) {
+													//error in integration call to onbase
+													OH_MODAL_UTILITY.errorMessageModal(attachWSError.toString());
+													ATTACHMENTCOMPNS.logMessages('Exception while making OnBase integration call: ' + attachWSError.toString());
+													OH_NOTIFICATIONS.spinnerStop();
+													var log = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "errorCondition_performCleanup_Ajax", {
+																	standardDocId: sd.Id,//theFile.standardDocId,
+																	transactionDocId: td.Id//theFile.transactionDocId
+														});
+													ATTACHMENTCOMPNS.logMessages('Cleanup Details: ' + log);
+												} //End catch
+                      } else {
+												//SFDC attachment size mismatch issue
+												ATTACHMENTCOMPNS.logMessages('Document could not be uploaded due to content issue\nFile Content hashCode is "'+ATTACHMENTCOMPNS.hashCode(fileContents)+'" where as SFDC file content hasCode is "'+ATTACHMENTCOMPNS.hashCode(savedAttBody)+'" ');
+												var log = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "errorCondition_performCleanup_Ajax", {
+																standardDocId: sd.Id,
+																transactionDocId: null
+												});
+												ATTACHMENTCOMPNS.logMessages('Cleanup Details: ' + log);//log messages (Nishit)
+												OH_NOTIFICATIONS.spinnerStop(); //sanjeev   
+												throw('Document could not be uploaded due to content issue.</br></br>Please try again');
+											}//End attachment upload contents are not matching in HashMatch
+							},onFailure : function(error, source) {
+								//error while creating SFDC attachment
+								ATTACHMENTCOMPNS.logMessages('SFDC attachment error result: ' + JSON.stringify(error));
+								OH_NOTIFICATIONS.spinnerStop();
+								ATTACHMENTCOMPNS.afterUploadFailure(error, source, sd.Id,td.Id);//Nishit
+							} //end if - SFDC attachment failure
+						});//End create SFDC attachment record
+					}//Transaction Document created-Success
+            else {
+					//Error while creating tranaction document
+					ATTACHMENTCOMPNS.logMessages('Error creating transaction document');
+          OH_MODAL_UTILITY.errorMessageModal(td.errorMessage.errors.message,'Error');
+					var log = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "errorCondition_performCleanup_Ajax", {
+                        standardDocId: sd.Id,
+                        transactionDocId: null
+                      });
+					ATTACHMENTCOMPNS.logMessages('Cleanup Details: ' + log);//log messages (Nishit)
+					OH_NOTIFICATIONS.spinnerStop(); //sanjeev  
+			}//End if - transaction document error 
+        } //End if Standard Document created correctly
+        btnFileTypeName.show().find('.name').text(btnFileTypeName.find('.name') + ': (' + theFileName + ' selected.)');
+        $("#addApprAtt" + uniqueId).show();
+      } else {
+        ATTACHMENT_DML.addComment(uniqueId);
+      }
+      //OH_NOTIFICATIONS.spinnerStop();
+    } else {
+          throw new UserException("Bad Id Object");
+    }
+
+  },
+
+  //**********************************************************************************
+  // addContactRequiredDocuments: add the "Contact Required" Documents              //
+  //                              to the list of required attachments.              //
+  //*********************************************************************************/
+    addContactRequiredDocuments: function(attachmentsList) {
+    var adultDocumentArray = [];
+
+    //attachmentsList is the list of attachments that are derived from the attachments component.
+    try {
+        
+      var txnId = $("#TransactionIdString")[0].innerText.trim();
+
+      var conQueryStr = "Select Id";
+      conQueryStr += ", CLQ_Contact__c";
+      conQueryStr += ", CLQ_Role__c";
+      conQueryStr += ", CLQ_Program_Transaction_Source__c";
+      conQueryStr += ", CLQ_Organization__c";
+      conQueryStr += ", CLQ_Contact__r.Name";
+    conQueryStr += ", CLQ_Portal_New_Role__c";
+      conQueryStr += ", CLQ_Contact__r.BirthdateText_DoNotDisplay__c";      
+      conQueryStr += " from CLQ_Role__c";
+      conQueryStr += " where CLQ_Program_Transaction_Source__c = '" + txnId + "'"
+      conQueryStr += " and CLQ_Portal_New_Role__c = true";
+
+      var conResult = sforce.connection.query(conQueryStr).getArray("records");
+      if (conResult) {
+
+        var roleQueryStr = "Select Id";
+        roleQueryStr +=    ", CLQ_Detail_Name__c";
+        roleQueryStr +=    ", CLQ_Description__c";
+        roleQueryStr +=    ", CLQ_Integration_Document_Type__c";
+        roleQueryStr +=    ", Document_Required_for_Role__c";
+        roleQueryStr +=    " from CLQ_Standard_Detail__c";
+        roleQueryStr +=    " where Document_Required_for_Role__c != ''";
+
+        var roleResult = sforce.connection.query(roleQueryStr).getArray("records");
+
+//must limit the role Result to only those connected to the configuration
+        var programQueryStr = "Select CLQ_Program__r.CLQ_OCLQS_configuration__c";
+        programQueryStr +=    " from CLQ_Program_Transaction__c";
+        programQueryStr +=    " where Id = '" + txnId + "'";
+
+        var programResult = sforce.connection.query(programQueryStr).getArray("records");
+        if (programResult) {
+          var validConfigQueryStr = "Select CLQ_Standard_Detail__c from CLQ_OCLQS_Configuration_Detail__c where CLQ_OCLQS_Configuration__c = '" + programResult[0].CLQ_Program__r.CLQ_OCLQS_Configuration__c + "'";
+          var validConfigResult = sforce.connection.query(validConfigQueryStr).getArray("records");
+          var configMap = [];
+          for (var i in validConfigResult) {
+            configMap.push(validConfigResult[i].CLQ_Standard_Detail__c);
+          }
+          var newRoleResult = []
+          for (var i in roleResult) {
+            if (configMap.indexOf(roleResult[i].Id) > 0) {
+              newRoleResult.push(roleResult[i]);
+            }              
+          }
+        }
+        roleResult = newRoleResult;
+
+        var existingContactDocsSOQL =  "Select Id";
+        existingContactDocsSOQL +=     ", CLQ_Standard_Detail_Document__c";        
+        existingContactDocsSOQL +=     ", Name";
+        existingContactDocsSOQL +=     ", Document_Type__c";
+        existingContactDocsSOQL +=     ", CLQ_Contact__c";
+        existingContactDocsSOQL +=     " from CLQ_Transaction_Document__c";
+        existingContactDocsSOQL +=     " where CLQ_Program_Transaction__c = '" + txnId + "'";
+        existingContactDocsSOQL +=     " and CLQ_Contact__c <> ''";
+        existingContactDocsSOQL +=     " and CLQ_Portal_Marked_for_Delete__c <> true";
+        var existingContactDocs = sforce.connection.query(existingContactDocsSOQL).getArray("records");
+        var existingContactArray = [];
+        for (var i in existingContactDocs) {
+          existingContactArray.push(existingContactDocs[i].CLQ_Contact__c + '_' + existingContactDocs[i].CLQ_Standard_Detail_Document__c);
+        }
+        //existingContactArray contains the combination of StdDetail records and Contact records that already exist for the txn.  Compare against it
+        //to determine if the doc is already there for this contact.
+        var ruleRoleMap = {};
+
+        if (roleResult) {
+          for (var i in roleResult) {
+            var arrRoles = roleResult[i].Document_Required_for_Role__c.split(';');
+            for (var j in arrRoles) {
+              var currentRole = arrRoles[j];
+              if(!ruleRoleMap[currentRole]) {
+               var reqDocs = [];
+               ruleRoleMap[currentRole] = {};
+              } else {
+               reqDocs  = ruleRoleMap[currentRole].reqDocs;
+              }
+              if (roleResult[i]) reqDocs.push(roleResult[i]);
+              ruleRoleMap[currentRole].reqDocs = reqDocs;
+            }
+          }
+
+    // at this point the ruleRoleMap will contain each role with the rule it corresponds with.
+    // then just get the role from this map each time to see if it's required
+    // you must deal with existing contact documents in here too.
+
+          for (var con in conResult) {
+//Check for 18+ documents.  If requiredFor18 is true, and the contact is 18+, require the document.
+            for (var theAtt in attachmentsList) {
+              if ((conResult[con].CLQ_Contact__r) && (conResult[con].CLQ_Role__c == 'Resident') && (ATTACHMENTCOMPNS.getAge(conResult[con].CLQ_Contact__r.BirthdateText_DoNotDisplay__c) > 17) &&
+                (attachmentsList[theAtt].requiredFor18)) {
+                    var residentDocs = ruleRoleMap.Resident.reqDocs;
+                    for (var theDoc in residentDocs) {
+                      if (attachmentsList[theAtt].id === residentDocs[theDoc].Id) {
+                        var newAdultAttachment = {ReasonCode:'Adult Document Rule',
+                                                  attachmentList:[],
+                                                  attachmentName: null,
+                                                  description: attachmentsList[theAtt].description + " (" + conResult[con].CLQ_Contact__r.Name + ")",
+                                                  endorsementId: null,
+                                                  //duplicate the contact Id for the first position.  We don't have a Role for these contacts at this point.
+                                                  id: conResult[con].CLQ_Contact__c + '_' +conResult[con].CLQ_Contact__c + '_' + attachmentsList[theAtt].id,
+                                                  isAlreadyExisting: (idxExistingContact > -1) ? true : false,
+                                                  isAttested: null,
+                          newDoc: conResult[con].CLQ_Portal_New_Role__c,
+                                                  isDependent: false,
+                                                  licenseObjId: null,
+                                                  name: null,
+                                                  parent: null,
+                                                  parentQuestion: null,
+                                                  renewalReinstatementId: null,
+                                                  submissionType: null,
+                                                  triggeringResponses:[]}
+
+                      adultDocumentArray.push(newAdultAttachment);
+                     }
+                   }
+                }
+            }
+            var theContactRole = conResult[con];
+            var theMapping = ruleRoleMap[theContactRole.CLQ_Role__c];
+
+            if (theMapping) {
+              var theDocs = theMapping.reqDocs;
+
+              if (theDocs) {
+                for (var doc in theDocs) {
+                  //ensure no duplicates exist in the new list
+                  var newId = theContactRole.Id + '_' + theDocs[doc].Id;
+                  for (var att in attachmentsList) {
+                    if (attachmentsList[att].id === newId) {
+                      newId = 'PreventThisDup';
+                    }
+                  }
+                  //Apply the 18+ rule
+                  if ((newId !== 'PreventThisDup')  && !((theContactRole.CLQ_Role__c === 'Resident') && (ATTACHMENTCOMPNS.getAge(conResult[con].CLQ_Contact__r.BirthdateText_DoNotDisplay__c) < 17))){
+                    var uniqueId = theContactRole.CLQ_Contact__c + '_' + theDocs[doc].Id;
+                    var idxExistingContact = existingContactArray.indexOf(uniqueId);
+
+                    var newAttachmentItem = {ReasonCode:'Contact Rule',
+                                             attachmentList:[],
+                                             attachmentName: ((idxExistingContact > -1) ? existingContactDocs[idxExistingContact].Name : null),
+                                             description: theDocs[doc].CLQ_Detail_Name__c + " (" + theContactRole.CLQ_Contact__r.Name + ")",
+                                             endorsementId: null,
+                                             id: theContactRole.Id + '_' + theContactRole.CLQ_Contact__c + '_' + theDocs[doc].Id,
+                                             isAlreadyExisting: (idxExistingContact > -1) ? true : false,
+                                             isAttested: null,
+                       newDoc: conResult[con].CLQ_Portal_New_Role__c,
+                                             isDependent: false,
+                                             licenseObjId: null,
+                                             name: null,
+                                             parent: null,
+                                             parentQuestion: null,
+                                             renewalReinstatementId: null,
+                                             submissionType: null,
+                                             triggeringResponses:[]}
+                    if (newAttachmentItem) attachmentsList.push(newAttachmentItem);
+                  }
+                }
+              }
+            } else {    
+ //             console.log('Contact ' + theContactRole.CLQ_Contact__r.Name + ' with role ' + theContactRole.CLQ_Role__c + ' requires no documents');
+                //ATTACHMENTCOMPNS.logMessages('In saveButtonClick: the length of the file is: ' + fileBlob.length);
+            }
+          }
+        }
+      }
+    } catch(theErr) {
+      //console.log('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+      ATTACHMENTCOMPNS.logMessages('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+    }
+    attachmentsList = attachmentsList.concat(adultDocumentArray);
+    return attachmentsList;
+  },
+
+  getApprovedDocs: function(e, currentId, tableData) {
+    var idObj = ATTACHMENTCOMPNS.getIdObject(currentId);
+    if (idObj) {
+      currentId = idObj.stdDetailId;
+      var txnId = $("#TransactionIdString")[0].innerHTML.trim();
+      var uInfo = JSON.parse($("#oclqs_global_info").val());
+      var roleMap = uInfo.roleMap;
+      var profileType = uInfo.userProfileType;
+      var programList = [];
+      var accountId = uInfo.valueOf().cProfile.AccountId;
+    //get Contact Info
+      var accountContactListQuery = "SELECT Id, Name from Contact where AccountId = '" + accountId + "'";
+      var accountContactListResult = sforce.connection.query(accountContactListQuery);
+    //get Org Info (for ODE)
+      var orgQuery = "Select Id, CLQ_Program__c, CLQ_Associated_Organization__c from CLQ_Program_Transaction__c where Id = '" + txnId + "'";
+      var orgQueryResult = sforce.connection.query(orgQuery);
+      if ((orgQueryResult.done === 'true') && orgQueryResult.records && orgQueryResult.records.CLQ_Associated_Organization__c) {
+        var progAssocAccountId = orgQueryResult.records.CLQ_Associated_Organization__c;
+      }
+      var programSearchKey = ProgramIdString.textContent.trim();
+      for (var roleId in roleMap) {
+        if (roleMap.hasOwnProperty(roleId)) {
+          if (roleMap[roleId].CLQ_Program__c) programList.push(roleMap[roleId].CLQ_Program__c);
+        }
+      }
+      var docType;
+      var docTypeQuery = "SELECT CLQ_Integration_Document_Type__c from  CLQ_Standard_Detail__c where Id = '" + currentId + "'";
+//      console.log(docTypeQuery);
+      var docTypeResult = sforce.connection.query(docTypeQuery);
+      if (docTypeResult.done === 'true' && docTypeResult.records && docTypeResult.records.CLQ_Integration_Document_Type__c) {
+        docType = docTypeResult.records.CLQ_Integration_Document_Type__c;
+      }
+      var orgId = accountId;
+      var soqlFields = 'CLQ_Integration_Document_Link__c, ';
+      soqlFields += 'Id, ';
+      soqlFields += 'Name, ';
+      soqlFields += 'CLQ_Document_Rating__c, ';
+      soqlFields += 'CLQ_Document_Points__c, ';
+      soqlFields += 'CLQ_Document_Affiliation__c, ';
+      soqlFields += 'CLQ_Standard_Document_Status__c ';
+      var soqlTable = 'from CLQ_Standard_Document__c where ';
+      var soqlBase = "Select " + soqlFields + soqlTable;
+      var orgCriteria = (progAssocAccountId) ? "  (CLQ_Document_Affiliation__c = 'Organization' and CLQ_Organization__c = '"+ progAssocAccountId + "') " : '';
+      var programCriteria = " (CLQ_Standard_Document_Status__c = 'Approved' and (CLQ_Document_Affiliation__c = 'Program' and CLQ_Program__c = '" + programSearchKey + "' )) ";
+      var commonCriteria = " CLQ_Integration_Document_Type__c = '" + docType + "' ";
+
+      var strSOQL;
+      if (uInfo.userProfileType === 'JFS') {
+        strSOQL = soqlBase + commonCriteria + ' and (' + orgCriteria + ' or ' + programCriteria + ')';
+      } else {
+        if (profileType === 'ODE') {
+        strSOQL = soqlBase + commonCriteria + ' and ' + orgCriteria;
+        } else {
+          throw "Invalid Profile Type, not JFS or ODE";
+        }
+      }
+
+
+ //     console.log('Getting the approved documents with this SOQL: ' + strSOQL);
+      try {
+        var approvedDocs = sforce.connection.query(strSOQL);
+        var approvedDocsArray = [];
+        var newData = [];
+        if ((approvedDocs.done === 'true') && (approvedDocs.size > 0)){
+          approvedDocsArray.push(JSON.parse(JSON.stringify(approvedDocs.records)));
+          if (approvedDocs.size === "1") {
+            if (approvedDocsArray[0]) newData.push({"Id":approvedDocsArray[0].Id,
+                           "CLQ_Integration_Document_Link__c":approvedDocsArray[0].CLQ_Integration_Document_Link__c,
+                           "Name":approvedDocsArray[0].Name,
+                           "CLQ_Document_Rating__c":approvedDocsArray[0].CLQ_Document_Rating__c,
+                           "CLQ_Document_Points__c":approvedDocsArray[0].CLQ_Document_Points__c,
+                           "CLQ_Document_Affiliation__c":approvedDocsArray[0].CLQ_Document_Affiliation__c
+                           });
+          } else {
+            var theRecordSet = approvedDocsArray[0];
+            for (var i = 0; i < theRecordSet.length; i++) {
+              if (theRecordSet[i]) newData.push({"Id":theRecordSet[i].Id,
+                           "CLQ_Integration_Document_Link__c":theRecordSet[i].CLQ_Integration_Document_Link__c,
+                           "Name":theRecordSet[i].Name,
+                           "CLQ_Document_Rating__c":theRecordSet[i].CLQ_Document_Rating__c,
+                           "CLQ_Document_Points__c":theRecordSet[i].CLQ_Document_Points__c,
+                           "CLQ_Document_Affiliation__c":theRecordSet[i].CLQ_Document_Affiliation__c
+                           });
+
+            }
+          }
+
+         //The documents were found.  Get the data in JSON format and feed to DataTable.
+
+          $('#theDataTable' + currentId).DataTable({
+             destroy: true,
+             dom: 'Bfrtip',
+             buttons: [
+             {
+               text: 'Add new button',
+               action: function ( e, dt, node, config ) {
+                 dt.button().add( 1, {
+                        text: 'Button '+(counter++),
+                        action: function () {
+                          this.remove();
+                        }
+                 } );
+               }
+             }],
+             data:newData,
+             columns: [
+                       { "data": "Id"},
+                       { "data": "CLQ_Integration_Document_Link__c"},
+                       { "data": "Name" },
+                       { "data": "CLQ_Document_Rating__c" },
+                       { "data": "CLQ_Document_Points__c" },
+                       { "data": "CLQ_Document_Affiliation__c"}
+             ],
+             columnDefs: [
+               {
+                 "targets": [ 0 ],
+                 "visible": false,
+                 "searchable": true
+               }
+             ]
+           }).clear().rows.add(newData).draw();
+        } else {
+ //         console.log('-----------------> There are no approved documents for this account');
+        }
+      } catch (theErr) {
+        //console.log('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+        ATTACHMENTCOMPNS.logMessages('There was an error: ' + theErr.message + ':\n' + theErr.stack);
+      }
+    } else {
+          throw new UserException("Bad Id Object");
+    }
+  },
+
+  cloneStandardDocumentRecord: function(controlId, sDocId) {
+    OH_NOTIFICATIONS.spinnerStart();
+    var idObj = ATTACHMENTCOMPNS.getIdObject(controlId);
+    var uniqueId = idObj.uniqueId;
+
+    var attValidationName = $("#attDiv" + uniqueId).find(".dataTableHolder").find(".AttachmentValidationContainer").find("#AttachmentName");
+    var attValidationCompleted = $("#attDiv" + uniqueId).find(".dataTableHolder").find(".AttachmentValidationContainer").find("#AttachmentCompleted");
+
+    var stdDocDetId = idObj.stdDetailId;
+    var uInfo = JSON.parse($("#oclqs_global_info").val());
+    var userId = uInfo.uRecord.Id;
+    var stdDocParent = sforce.connection.retrieve("Id, CLQ_Document_Rating__c, CLQ_Document_Points__c, CLQ_Standard_Document_Status__c, OwnerId, CLQ_Integration_File_Name__c, CLQ_Integration_Doc_MIMEType__c, CLQ_Integration_Document_Type__c, Name,CLQ_Document_Affiliation__c, CLQ_Program__c", "CLQ_Standard_Document__c", [sDocId])[0];
+    
+    var strAttComments = $("#addAttachmentComment" + uniqueId)[0].value;
+    var selectedContactId = idObj.contactId;
+    var theFileName = $("#attachmentFileName" + uniqueId)[0].textContent.trim();
+    var conMIMEType = stdDocParent.CLQ_Integration_Doc_MIMEType__c;
+    
+    var incomingFile = {name: theFileName,
+                        mimeType: conMIMEType}
+    
+    var td = ATTACHMENT_DML.createTransactionDocumentRecord(controlId, stdDocParent, incomingFile);
+    if (td.success) {
+      var theFileAtt = {'id': uniqueId,
+                        'wsResult':true,  // the document was already uploaded.
+                        'wsResultMessage':'Pre-existing txn document',
+                        'transactionDocId': td.Id,
+                        'standardDocId': sDocId,
+                        'fileName': theFileName,
+                        'uniqueId': uniqueId,
+                        'fileLength': 999};
+      console.log('upload sucess called from TD'+theFileAtt);
+      ATTACHMENTCOMPNS.afterUploadSuccess(theFileAtt);
+      var theButtonCtl = $("#addApprAtt" + uniqueId)[0];
+      theButtonCtl.innerText = (theButtonCtl.innerText.indexOf(' (added)') > -1) ? theButtonCtl.innerText : theButtonCtl.innerText + ' (added)';
+      $("#addApprAtt" + uniqueId).addClass('attachment-uploaded').show();
+      attValidationName[0].value = theFileAtt.fileName;
+      attValidationCompleted[0].value = 'YES';
+      $("#loadedFileName" + uniqueId).text(theFileAtt.fileName);
+      OH_NOTIFICATIONS.spinnerStop();
+    } else {
+      OH_NOTIFICATIONS.spinnerStop();
+      OH_MODAL_UTILITY.errorMessageModal(td.errorMessage, 'Upload Error');
+      attValidationName[0].value = '';
+      attValidationCompleted[0].value = 'NO';
+    }
+  },
+
+  cancelButtonClick: function(e, currentId) {
+    var idObj = ATTACHMENTCOMPNS.getIdObject(currentId);
+    console.log('Inside cancel');
+    if (idObj) {
+      delete localStorage.fileName;
+      delete localStorage.conMIMEType;
+      delete localStorage.currentId;
+      delete localStorage.UID;
+      delete localStorage.msgCount;
+      delete localStorage.enableLogs;
+    
+	  //clear file contents 	
+	  if(typeof fileContents != 'undefined' ){fileContents = null;}
+		
+      currentId = idObj.uniqueId;
+      $("#addAttachmentComment" + currentId).val('');
+      $("#attachmentFileName" + currentId).val('').hide();
+      $("#addApprAtt" + currentId).show();
+    }
+  },
+
+  
+
+    /* Function for handling after upload operation success */
+  afterUploadSuccess: function(theFileAtt) {
+    var uniqueId = theFileAtt.uniqueId;
+    var attValidationName = $("#attDiv" + uniqueId).find(".dataTableHolder").find(".AttachmentValidationContainer").find("#AttachmentName");
+    var attValidationCompleted = $("#attDiv" + uniqueId).find(".dataTableHolder").find(".AttachmentValidationContainer").find("#AttachmentCompleted");
+    console.log('theFileAtt.wsResult1: '+theFileAtt.wsResult);
+    if (theFileAtt.wsResult) {
+    console.log('theFileAtt.wsResult2: '+theFileAtt.wsResult);
+    // Update fields from standard document
+      var stdD = new sforce.SObject("CLQ_Standard_Document__c");
+      stdD.Id = theFileAtt.standardDocId;
+      stdD.CLQ_Integration_Document_Size__c = theFileAtt.fileLength;
+      var result = sforce.connection.update([stdD]);
+      if (result[0].success === 'false') {
+        var BADSTANDARDDOCUMENTERROR = 'The Standard Document Record could not be updated in Salesforce.  Please check your data and try again.';
+        ATTACHMENTCOMPNS.logMessages('Failure updating the standard document(file size update)\n Result:\n ' + JSON.stringify(result)+'\n');//log messages (Nishit)
+        throw (BADSTANDARDDOCUMENTERROR);
+      }
+       // Update UI
+      $("#hiddenAttId" + uniqueId).val(theFileAtt.id);
+      $("#transD" + uniqueId).val(theFileAtt.transactionDocId);
+      $("#attD" + uniqueId).val(theFileAtt.id);
+      $("#attachmentFileName" + uniqueId).show().find('.name').text(theFileAtt.fileName);
+      $("#addAttachBtn" + uniqueId).hide();
+      $("#replaceAttachBtn" + uniqueId).show();
+      var addButtonControl = $("#addApprAtt" + uniqueId)[0];
+      var addButtonCaption = addButtonControl.innerText;
+      if(addButtonCaption.substring(addButtonCaption.length - 8) !== ' (added)') {
+        //assumes the button doesn't already end with " (added)"
+        addButtonControl.innerText = addButtonCaption + ' (added)';
+        //add checkmark
+        $("#addApprAtt" + uniqueId).addClass('attachment-uploaded');
+      }
+      attValidationName[0].value = theFileAtt.fileName;
+      attValidationCompleted[0].value = 'YES';
+      $("#loadedFileName" + uniqueId).text(theFileAtt.fileName);
+	  
+	  ATTACHMENTCOMPNS.logMessages('\n\nPROCESS COMPLETED\n\n');
+      OH_NOTIFICATIONS.spinnerStop();
+    } else {
+        // Show error
+      OH_NOTIFICATIONS.spinnerStop();
+      ATTACHMENTCOMPNS.logMessages('Error:'+ theFileAtt.wsResultMessage);
+      console.log('Upload Called');
+	  OH_MODAL_UTILITY.errorMessageModal(theFileAtt.wsResultMessage, 'Upload Error');
+      attValidationName[0].value = '';
+      attValidationCompleted[0].value = 'NO';
+    }
+  },
+
+  /* Function for handling after upload operation failure */
+  afterUploadFailure: function(error, source, parentId, transDocId) {
+    // Show error
+    localStorage.UID = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "logBrowserConsoleError", {
+                        UID: localStorage.UID,
+                        message: error
+    });
+    OH_NOTIFICATIONS.spinnerStop();
+    OH_MODAL_UTILITY.errorMessageModal('An error has occurred. '+ '</br></br>(Ref Id: '+localStorage.UID+')' , 'Upload Error');
+    $("#attachmentFileName" + parentId).hide().find('.name').val("");
+    var log = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "errorCondition_performCleanup_Ajax", {
+                        standardDocId: parentId,
+                        transactionDocId: transDocId
+                      });
+    ATTACHMENTCOMPNS.logMessages('Cleanup ' + log);//log messages (Nishit)
+    
+  },
+
+  //************************************************************//
+  // SPECIALIZED RULE SECTION                                   //
+  //************************************************************//
+
+  ownershipTypeDocuments: function(attachmentsList) {
+    ownershipTypeDocuments = [];
+    for (var theAttachment in attachmentsList) {
+      if (JSON.parse($("#oclqs_global_info").val()).cProfile.Account.Ownership === attachmentsList[theAttachment].parentQuestion) {
+        attachmentsList[theAttachment].ReasonCode = (attachmentsList[theAttachment].ReasonCode) ? attachmentsList[theAttachment].ReasonCode + '; Ownership Type Documents rule' : 'Ownership Type Documents rule';
+        if (attachmentsList[theAttachment]) ownershipTypeDocuments.push(attachmentsList[theAttachment]);
+      }     
+    }
+    return ownershipTypeDocuments;
+  },
+
+  ageSensitiveDocuments: function(attachmentsList, birthDate) {
+    ageSensitiveDocuments = [];
+    for (var theAttachment in attachmentsList) {
+      if ((attachmentsList[theAttachment].requiredFor18) && (ATTACHMENTCOMPNS.getAge(birthDate) > 17)) {
+        attachmentsList[theAttachment].ReasonCode = (attachmentsList[theAttachment].ReasonCode) ? attachmentsList[theAttachment].ReasonCode + '; Age Sensitive Document Rule' : 'Age Sensitive Dcument Rule';
+        if (attachmentsList[theAttachment]) ageSensitiveDocuments.push(attachmentsList[theAttachment]);
+      }
+    }
+    return ageSensitiveDocuments;
+  },
+
+  getBldgApprovalDoc: function(currentAnswers, isOdeProgram) {
+    //Necessary as a specialized rule.  You should always have a building approval document unless certain criteria are true:
+    //  For Centers, 
+    //    If the program is servicing School Age children as well as another age group, and
+    //    the program is operating in an existing public school or a chartered nonpublic school
+    //  
+
+    var answerMap = {};
+    for (var i in currentAnswers) {
+      answerMap[currentAnswers[i].AssociatedQuestion__r.Name] = currentAnswers[i].Answer_Text__c;
+      console.log('currentAnswers[i].AssociatedQuestion__r.Name '+currentAnswers[i].AssociatedQuestion__r.Name);
+	  console.log('currentAnswers[i].Answer_Text__c '+currentAnswers[i].Answer_Text__c);      
+    }
+    console.log('answerMap'+answerMap);
+	console.log('answerMap["SDL-00006"]  '+answerMap["SDL-00006"] );
+	console.log('Provider Type-->'+JSON.parse($("#oclqs_global_info").val()).portalAccount.RecordType.Name );
+	console.log('isOdeProgram**'+isOdeProgram);
+	(JSON.parse($("#oclqs_global_info").val()).portalAccount.Provider_Type__c === 'Child Care Center')
+    //SDL-00005 corresponds to the question "Which of the following age groups will the program serve? (check all that apply)"
+    //SDL-00006 corresponds to the question "If you are only serving school-age children, will you be operating in an existing public school or chartered nonpublic school building?"
+    //If the answers meet these conditions, return an array of an empty object.
+    if (answerMap["SDL-00005"]) {
+      if (answerMap["SDL-00005"].includes('School-Age') && (answerMap["SDL-00005"] !== 'School-Age')) { //It must be another category in addition to School Age.
+        if (answerMap["SDL-00006"] === 'Yes') {
+          if (JSON.parse($("#oclqs_global_info").val()).portalAccount.Provider_Type__c === 'Child Care Center') {
+            return [];
+          }
+        }
+      }
+    } 
+
+    //else, go get the Building Inspection (if it exists)
+
+    BLDGINSPECTIONDOCTYPE = 'JFS - OCLQS - Building Approval';
+    var txnId = $("#TransactionIdString")[0].innerText.trim();
+
+    var strSOQL = "Select Id, Name, CLQ_Detail_Name__c from CLQ_Standard_Detail__c where CLQ_Integration_Document_Type__c = '" + BLDGINSPECTIONDOCTYPE + "'";
+    var theRecord = sforce.connection.query(strSOQL).getArray("records")[0];
+    var docList = [{}];
+    if (theRecord) {
+      var existingBldgDocsSOQL =  "Select Id";
+          existingBldgDocsSOQL +=     ", CLQ_Standard_Detail_Document__c"; 
+          existingBldgDocsSOQL +=     ", CLQ_Standard_Detail_Document__r.CLQ_Integration_Document_Type__c";       
+          existingBldgDocsSOQL +=     ", Name";
+          existingBldgDocsSOQL +=     ", Document_Type__c";
+          existingBldgDocsSOQL +=     ", CLQ_Contact__c";
+          existingBldgDocsSOQL +=     " from CLQ_Transaction_Document__c";
+          existingBldgDocsSOQL +=     " where CLQ_Program_Transaction__c = '" + txnId + "'";
+          existingBldgDocsSOQL +=     " and CLQ_Standard_Detail_Document__r.CLQ_Integration_Document_Type__c = '" + BLDGINSPECTIONDOCTYPE + "'";
+          existingBldgDocsSOQL +=     " and CLQ_Portal_Marked_for_Delete__c <> true";
+      var existingBldgDocsSOQLResult = sforce.connection.query(existingBldgDocsSOQL).getArray("records")[0];
+      var isExisting = false;
+      var attachmentName = null;
+
+      if (existingBldgDocsSOQLResult) {
+        isExisting = true;
+        attachmentName = existingBldgDocsSOQLResult.Name;
+      }  
+	  
+	  // Updated to add new reason code if the "SDL-00006" answer is "Yes" - 11351
+	  if((answerMap["SDL-00006"] === 'Yes' || (answerMap["SDL-00057"] === 'No' && answerMap["SDL-00058"] === 'No')) && isOdeProgram)
+	  {
+	      docList = [{ReasonCode:'Building Approval special rule for ODE - No', 
+	                 attachmentList:{},
+	                 attachmentName:attachmentName,
+	                 description:theRecord.CLQ_Detail_Name__c,
+	                 endorsementId:null,
+	                 id:theRecord.Id,
+	                 isAlreadyExisting: isExisting, 
+	                 isAttested:null,
+	                 isDependent: false,
+	                 licenseObjId:null,
+	                 name:theRecord.Name,
+	                 parent: null,
+	                 parentQuestion: null,
+	                 renewalReinstatementId: null,
+	                 submissionType: null,
+	                 triggeringResponses: null
+	                 }];
+	    }
+	    else
+	    {
+	       docList = [{ReasonCode:'Building Approval special rule for Center/ODE',
+	                 attachmentList:{},
+	                 attachmentName:attachmentName,
+	                 description:theRecord.CLQ_Detail_Name__c,
+	                 endorsementId:null,
+	                 id:theRecord.Id,
+	                 isAlreadyExisting: isExisting,
+	                 isAttested:null,
+	                 isDependent: false,
+	                 licenseObjId:null,
+	                 name:theRecord.Name,
+	                 parent: null,
+	                 parentQuestion: null,
+	                 renewalReinstatementId: null,
+	                 submissionType: null,
+	                 triggeringResponses: null
+	                 }];
+	    }
+
+    } 
+    return docList; 
+  },
+
+  questionHandler: function(currentAnswers) {
+    //Prepare the existing documents for the SUTQ flow
+    //Get the Program type
+
+    var txnRecordSOQL = "SELECT Id, RecordType.Name, CLQ_Program_Record_Type__c from CLQ_Program_Transaction__c where Id = '" + $("#TransactionIdString").text().trim() + "'";
+ 
+    var theProgTxnArray = sforce.connection.query(txnRecordSOQL).getArray("records");
+
+    if (theProgTxnArray.length > 0) {
+      var isSUTQ = (theProgTxnArray[0].RecordType.Name.substring(0,4) === 'SUTQ');
+      var txnRTName = theProgTxnArray[0].RecordType.Name;
+      //Get Program Record Type - 11351
+      var ptTxPrgType = theProgTxnArray[0].CLQ_Program_Record_Type__c;
+    }
+    
+ //   console.log('This is a ' + ((isSUTQ) ? 'SUTQ' : 'Licensing') + ' application');
+
+    var strExistingDocsSOQL = "SELECT Id, Name, Document_Type__c, CLQ_Program_Transaction__r.RecordType.Name FROM CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = '" + $("#TransactionIdString").text().trim() + "' and CLQ_Portal_Marked_for_Delete__c <> true"; 
+    
+//    console.log('Existing Document SOQL is: ' + strExistingDocsSOQL);
+
+    var txnDocs = sforce.connection.query(strExistingDocsSOQL).getArray('records');
+    var existingDocTypes = {};
+    
+    if (txnDocs.length > 0) {
+      for (var j in txnDocs) {
+        existingDocTypes[txnDocs[j].Document_Type__c] = txnDocs[j];
+      }
+    }  
+
+    var sutqAttachments = []; 
+    var answerIdArray = [];
+    for (var i in currentAnswers) {
+      answerIdArray.push("'" + currentAnswers[i].Id + "'");
+    }
+//for each currently selected answer
+      //prepare the list of questions and the answer they gave
+
+    var strSOQL = 'Select Id';
+    strSOQL += ', Name';
+    strSOQL += (isSUTQ) ? ', CLQ_TriggeringAttachmentValue__c' : ', CLQ_TriggeringParentAnswer__c';
+    strSOQL += ', CLQ_Integration_Document_Type__c';
+    strSOQL += ', CLQ_Detail_Name__c';
+    strSOQL += ', CLQ_ParentQuestion__c';
+    strSOQL += ' FROM CLQ_Standard_Detail__c';
+    strSOQL += ' WHERE CLQ_ParentQuestion__c in (';
+    strSOQL += 'Select AssociatedQuestion__c from Answer__c where Id in (' + answerIdArray + '))';
+    strSOQL += " and RecordType.Name = 'Document'";
+
+//    console.log('sutqAnswerKey query is:\n' + strSOQL);
+    var sutqDocs = sforce.connection.query(strSOQL).getArray("records");
+    var sutqAnswerKey = {};
+    var theAnswers = [];
+
+    //create lookup table for the sutqAnswerKey
+    if (sutqDocs) {
+      for (var i in sutqDocs) {
+        var sutqRecord = sutqDocs[i];
+        theAnswers = sutqAnswerKey[sutqRecord.CLQ_ParentQuestion__c];
+        if(theAnswers) {
+            theAnswers.push(sutqRecord);
+            sutqAnswerKey[sutqRecord.CLQ_ParentQuestion__c] = theAnswers;
+        } else {
+            sutqAnswerKey[sutqRecord.CLQ_ParentQuestion__c] = [sutqRecord];
+        }
+      }
+    }
+    //adjust currentAnswers to allow for multiple (Mainly for SUTQ)
+    for (var i in currentAnswers) {
+      var userAnswerArray = currentAnswers[i].Answer_Text__c.replace(/\s/g,'').split(';');
+      var questionIdArray = currentAnswers[i].AssociatedQuestion__c.split(';');
+      for (var theQuestionId in questionIdArray) {
+        var questionAnswer = sutqAnswerKey[questionIdArray[theQuestionId]];
+        for (var j in questionAnswer) {
+          var compareAnsValues = [];
+          var actualAnsValues = [];
+          var triggerValues = '';
+          if (isSUTQ) {
+            triggerValues = questionAnswer[j].CLQ_TriggeringAttachmentValue__c;
+          } else {
+            triggerValues = questionAnswer[j].CLQ_TriggeringParentAnswer__c;
+          } 
+          if (triggerValues) {
+            compareAnsValues = triggerValues.replace(/\s/g,'').split(';');
+            actualAnsValues = triggerValues.split(';');
+          }
+         
+           if (existingDocTypes) {  //check for existing documents
+            var isExisting = (existingDocTypes[questionAnswer[j].CLQ_Integration_Document_Type__c]) ? true : false;
+            var attachmentName = (isExisting) ? existingDocTypes[questionAnswer[j].CLQ_Integration_Document_Type__c].Name : null;
+          } else {
+            var isExisting = false;
+            var attachmentName = null;
+          }
+
+          for (var theUserAnswer in userAnswerArray) {//check to see if the answers match up
+            if(compareAnsValues.indexOf(userAnswerArray[theUserAnswer]) > -1) {
+              var newAnswerKey = {ReasonCode:'Answer to Question',
+                                  attachmentList:{},
+                                  attachmentName : attachmentName,
+                                  description:questionAnswer[j].CLQ_Detail_Name__c,
+                                  endorsementId:null,
+                                  id:questionAnswer[j].Id,
+                                  isAlreadyExisting: isExisting,
+                                  isAttested:null,
+                                  isDependent: false,
+                                  licenseObjId:null,
+                                  name: questionAnswer[j].Name,
+                                  parent: null,
+                                  parentQuestion: questionAnswer[j].ParentQuestion__c,
+                                  renewalReinstatementId: null,
+                                  submissionType: null,
+                                  triggeringResponses: actualAnsValues
+                                };
+              sutqAttachments.push(newAnswerKey);
+              console.log('Inside expecrted newAnswerKey: ');
+            }
+          }
+        }
+      }
+    }
+    console.log('Inside expecrted: ');
+	//sr  Add the building approval document if it passes the conditions , CR#13554 - Added Renew App Dc
+    if ( (( (JSON.parse($("#oclqs_global_info").val()).portalAccount.Provider_Type__c === 'Child Care Center') || (JSON.parse($("#oclqs_global_info").val()).portalAccount.Provider_Type__c === 'Day Camp')) &&
+         (['Amendment - Center - Change of Location','Application - CC Center', 'Application - Day Camp' , 'Renew Application - Day Camp'].indexOf(txnRTName) > -1)) 
+        ||
+         ((JSON.parse($("#oclqs_global_info").val()).portalAccount.RecordType.Name === 'ODE Organization') &&
+         (['Amendment - ODE - Change of Location','Application - ODE Program','Amendment - ODE and Center - Change of Capacity / Space'].indexOf(txnRTName) > -1)))  
+     {
+         var odeSAAC = false;
+         //Included Pre School for TFS #11884
+         if((JSON.parse($("#oclqs_global_info").val()).portalAccount.RecordType.Name === 'ODE Organization') && ((['School Age Child Care'].indexOf(ptTxPrgType) > -1) || (['Pre School'].indexOf(ptTxPrgType) > -1)))
+         {
+         	odeSAAC = true;
+         }
+         var bldgApprovalDoc = ATTACHMENTCOMPNS.getBldgApprovalDoc(currentAnswers, odeSAAC);
+  		 if (bldgApprovalDoc.length > 0) sutqAttachments = sutqAttachments.concat(bldgApprovalDoc);
+    }
+//    deduplicate the list of attachments
+    var dedupNames = {};
+    for (var i in sutqAttachments) {
+      dedupNames[sutqAttachments[i].description] = sutqAttachments[i];
+    }
+
+    sutqAttachments.length = 0;
+    for (var id in dedupNames) {
+      sutqAttachments.push(dedupNames[id]);
+    }
+//     remove the back-end documents for those that don't apply anymore
+    return sutqAttachments;
+  },
+
+  cleanup: function(reqAttIds) {
+  //If there are questions whose answers changed, get rid of the old transaction document and standard document
+    for (var i in reqAttIds) {
+      reqAttIds[i] = reqAttIds[i].split('_');
+      if (reqAttIds[i].length > 1) {
+        reqAttIds[i] = (reqAttIds[i][2]) ? reqAttIds[i][1] + '_' + reqAttIds[i][2] : reqAttIds[i][0] + '_' + reqAttIds[i][1];
+      } else {
+        reqAttIds[i] = reqAttIds[i][0];
+      }
+    }
+    var ptId = $("#TransactionIdString")[0].innerHTML.trim();
+    var attachedDocs = [];
+    var attachedDocsSOQL = "Select Id";
+        attachedDocsSOQL += ", CLQ_Standard_Detail_Document__c";  // Associated Standard Detail Doc
+        attachedDocsSOQL += ", CLQ_Contact__c";                   // Associated Contact
+        attachedDocsSOQL += ", Program_Documents__c";             // Program
+        attachedDocsSOQL += ", CLQ_Document__c";                  // Standard Document
+        attachedDocsSOQL += ", CLQ_Document_Status__c";           // Document Status
+        attachedDocsSOQL += ", Document_Type__c";                 // Document Type
+        attachedDocsSOQL += " from CLQ_Transaction_Document__c";
+        attachedDocsSOQL += " where CLQ_Program_Transaction__c = '" + ptId + "'";
+        attachedDocsSOQL += " and CLQ_Portal_Marked_for_Delete__c <> true";
+ //   console.log('The SOQL to retrieve all of the current attached documents is:\n\n ' + attachedDocsSOQL + '\n\n');
+    attachedDocs = sforce.connection.query(attachedDocsSOQL).getArray("records");
+
+//  Get all the contacts associated to roles in this transaction to make sure they are deleted properly.
+    var contactRoleSOQL = "Select CLQ_Contact__c";
+        contactRoleSOQL += " from CLQ_Role__c"
+        contactRoleSOQL += " where CLQ_Program_Transaction_Source__c = '" + ptId + "'";
+
+    contactRoles = sforce.connection.query(contactRoleSOQL).getArray("records");
+
+//Get all the contact row ids so that we can search by Id
+    var contactRoleContactIds = [];
+    for (var i in contactRoles) {
+      if (contactRoles[i].CLQ_Contact__c) {
+        contactRoleContactIds.push(contactRoles[i].CLQ_Contact__c);
+      }
+    }
+    
+    var removeDocs = [];
+    var td = {};
+    
+    if (contactRoleContactIds.length > 0) {
+      for (var i in attachedDocs) {
+        var roleContactId = attachedDocs[i].CLQ_Contact__c;
+        if (roleContactId) {
+          if (contactRoleContactIds.indexOf(attachedDocs[i].CLQ_Contact__c) === -1) { 
+          //mark for delete the records in attachedDocs that don't have roles associated with the Program Transaction
+            td = new sforce.SObject("CLQ_Transaction_Document__c");
+            td.Id = attachedDocs[i].Id;
+            td.CLQ_Portal_Marked_for_Delete__c = true;
+            removeDocs.push(td);
+          }
+        } 
+      }
+    }
+
+    for (var i in attachedDocs) {
+      var conId = attachedDocs[i].CLQ_Contact__c;
+      var stdId = attachedDocs[i].CLQ_Standard_Detail_Document__c;
+
+      checkId = (conId) ? conId + '_' + stdId : stdId;
+      // If the stored transaction document type is not part of the list of currently required documents, remove it.
+      if (reqAttIds.indexOf(checkId) === -1) { // if the stored document is not in the list of required documents.
+        td = new sforce.SObject("CLQ_Transaction_Document__c");
+        td.Id = attachedDocs[i].Id;
+        td.CLQ_Portal_Marked_for_Delete__c = true; 
+        removeDocs.push(td);
+      }
+    }
+    if (removeDocs.length > 0) {
+      var result = sforce.connection.update(removeDocs);
+      var updateErrors = [];
+      for (var i in result) {
+        if (result[i].success === 'false') {
+          updateErrors.push(result[i]);
+        }
+      }
+
+      if (updateErrors.length > 0) {
+        var BADTXNDDOCUMENTERROR = 'The following Transaction Document records could not be marked for deletion in Salesforce.  Please check your data and try again.' + ': ' + JSON.stringify(updateErrors);
+        //console.log(BADTXNDDOCUMENTERROR);
+        ATTACHMENTCOMPNS.logMessages(BADTXNDDOCUMENTERROR);
+        throw (BADTXNDDOCUMENTERROR);
+      }
+      return 'Marked all orphaned answers for deletion.'
+    } else {
+      return 'No orphaned answers exist.'
+    }
+  },
+
+// UTILITY FUNCTIONS
+//function to log console messages and also to log console messages in integration log INT-008.6(Nishit)
+  logMessages: function(consoleMessage) {
+        localStorage.msgCount = localStorage.msgCount + 1;//
+        if(localStorage.msgCount == '01') {
+        console.log('localStorage.msgCount '+localStorage.msgCount);
+            //uLogIdd = null;
+            localStorage.enableLogs = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "isEnableConsoleLogs", {});
+        }
+        if(localStorage.enableLogs == 'true') {
+          localStorage.UID = sforce.apex.execute("OCLQS_ONBASE_UploadFile", "logBrowserConsole", {
+                UID: localStorage.UID,
+                message: consoleMessage + '\n' 
+          });
+          console.log('Log_'+localStorage.msgCount+' >:'+consoleMessage);
+        }
+        
+    return;
+  },
+
+  hashCode: function(hashThis) {
+    var hash = 0, i=0, len = hashThis.length, chr;
+    while (i < len) {
+      hash = ((hash << 5) - hash + hashThis.charCodeAt(i++)) << 0;
+    }
+    return hash;
+  },
+
+  getAge: function(dateString) {
+    //dateString from SFDC comes in as UTC ('YYYY-MM-DD') yet this constructor doesn't work well with it.
+    //break it down to it's components and rebuild the date.
+    var dateArray = dateString.split('-');
+    //dateArray[0] is the year, dateArray[1] is the month (must subtract 1 for 0-base), dateArray[2] is the day
+    var birthDate = new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  },
+
+  getIdObject: function(controlId) {
+     var objControl = {};  
+     var idArray = controlId.split('_');
+     if (controlId.indexOf('_') > -1) {
+        var roleId = idArray[0].substring(idArray[0].length - 18);
+        var ctlName = idArray[0].substring(0, idArray[0].length - 18);
+        var contactId = idArray[1];
+        var stdDetailId = idArray[2];
+     } else {
+        var stdDetailId = idArray[0].substring(idArray[0].length - 18);
+        var ctlName = idArray[0].substring(0, idArray[0].length - 18);
+        var roleId = null;
+        var contactId = null;
+     }
+    
+    //Create the unique Id for the controls
+    var uniqueId = stdDetailId;
+    if (contactId) uniqueId = contactId + '_' + uniqueId;
+    if (roleId) uniqueId = roleId + '_' + uniqueId;
+    
+
+    objControl = {ctlName: ctlName,
+                  stdDetailId: stdDetailId,
+                  srcCtrlName: controlId,
+                  uniqueId: uniqueId,
+                  roleId: roleId,
+                  contactId: contactId}
+
+    return objControl;
+  },
+
+  checkMIMEType: function(fileExtension) {
+    var customMIMEType = sforce.connection.query("Select Id, File_Extension__c, MIME_Type__c from Integration_OnBase_Mime_Types__mdt where File_Extension__c like '" + fileExtension + "' LIMIT 1");
+    records = customMIMEType.getArray("records");
+    if(records.length > 0){ return records[0].MIME_Type__c.trim(); }
+    else { return null; }
+  },
+
+  exclude:  function(mainList, takeOut){
+        return mainList.filter(function(e) { return e !== takeOut;});
+  },
+
+  getFileExt: function (filename){
+    var ext = filename.split('.').pop();
+    if(ext == filename){ return ""};
+    return ext;
+  },
+  
+  getBrowserDetials: function (){
+    var nVer = navigator.appVersion;
+    var nAgt = navigator.userAgent;
+    var browserName  = navigator.appName;
+    var fullVersion  = ''+parseFloat(navigator.appVersion); 
+    var majorVersion = parseInt(navigator.appVersion,10);
+    var nameOffset,verOffset,ix;
+
+    // In Opera 15+, the true version is after "OPR/" 
+    if ((verOffset=nAgt.indexOf("OPR/"))!=-1) {
+     browserName = "Opera";
+     fullVersion = nAgt.substring(verOffset+4);
+    }
+    // In older Opera, the true version is after "Opera" or after "Version"
+    else if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+     browserName = "Opera";
+     fullVersion = nAgt.substring(verOffset+6);
+     if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+       fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In MSIE, the true version is after "MSIE" in userAgent
+    else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+     browserName = "Microsoft Internet Explorer";
+     fullVersion = nAgt.substring(verOffset+5);
+    }
+    // In Chrome, the true version is after "Chrome" 
+    else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+     browserName = "Chrome";
+     fullVersion = nAgt.substring(verOffset+7);
+    }
+    // In Safari, the true version is after "Safari" or after "Version" 
+    else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+     browserName = "Safari";
+     fullVersion = nAgt.substring(verOffset+7);
+     if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+       fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In Firefox, the true version is after "Firefox" 
+    else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+     browserName = "Firefox";
+     fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In most other browsers, "name/version" is at the end of userAgent 
+    else if ((nameOffset=nAgt.lastIndexOf(' ')+1) < (verOffset=nAgt.lastIndexOf('/'))) 
+    {
+     browserName = nAgt.substring(nameOffset,verOffset);
+     fullVersion = nAgt.substring(verOffset+1);
+     if (browserName.toLowerCase()==browserName.toUpperCase()) {
+      browserName = navigator.appName;
+     }
+    }
+    // trim the fullVersion string at semicolon/space if present
+    if ((ix=fullVersion.indexOf(";"))!=-1)
+       fullVersion=fullVersion.substring(0,ix);
+    if ((ix=fullVersion.indexOf(" "))!=-1)
+       fullVersion=fullVersion.substring(0,ix);
+
+    majorVersion = parseInt(''+fullVersion,10);
+    if (isNaN(majorVersion)) {
+     fullVersion  = ''+parseFloat(navigator.appVersion); 
+     majorVersion = parseInt(navigator.appVersion,10);
+    }
+
+     var details = '\nUser Browser Details:\n--------------------------\n' + 'Browser name  = '+browserName+'\n';
+     details = details + 'Full version  = '+fullVersion+'\n';
+     details = details + 'Major version = '+majorVersion+'\n';
+     details = details + 'navigator.appName = '+navigator.appName + '\n';
+     details = details + 'navigator.userAgent = '+navigator.userAgent+'\n------------------------------\n\n';
+     return details;
+  } 
+}

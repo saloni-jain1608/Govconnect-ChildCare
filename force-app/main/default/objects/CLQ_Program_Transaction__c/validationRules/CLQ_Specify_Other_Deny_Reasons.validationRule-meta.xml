@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Specify_Other_Deny_Reasons</fullName>
+    <active>true</active>
+    <description>&apos;Specify other deny reasons&apos; if &apos;Deny Reasons&apos; is &apos;Other&apos;</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL( CLQ_Deny_Reasons__c , &apos;Other&apos;) , ISBLANK( CLQ_Specify_Other_Deny_Reasons__c ) )</errorConditionFormula>
+    <errorDisplayField>CLQ_Specify_Other_Deny_Reasons__c</errorDisplayField>
+    <errorMessage>Specify Other Deny Reasons</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	
+    <div class="lp-main-container parent-container" role="main" id="lp_main_container">
+        <lightning:layout multipleRows="true" class="landing-section slds-p-bottom_medium slds-p-top_medium">
+            <lightning:layoutItem size="12" mediumDeviceSize="6" class="title-container">
+                <div class="main-title">
+                    <h1>Helping your every step of the way</h1></div>
+                <div class="sub-title">Apply for benefits, manage your case, and explore resources.</div>
+                <div class="btn-wrapper slds-align_absolute-center">
+                    <lightning:button class="login-btn" name="login-btn" label="Login" onclick="{!c.loginRegisterButton}" variant="brand" />
+                    <lightning:button class="register-btn" name="register-btn" label="Register" onclick="{!c.loginRegisterButton}" variant="brand" />
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" mediumDeviceSize="6">
+                <!-- Video Will Come Here --> <!--https://www.youtube.com/embed/G-yn9nKLPXA-->
+                <img src="{!$Resource.vdss_image}" width="600" height="900"/>
+                <!--iframe frameborder="0" scrolling="no" marginheight="0" aura:id="vfFrame" src="../apex/ISD_YoutubePlayer" onload="{!c.iframeOnLoad}" width="100%" height="100%" class="video-container" /-->
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout multipleRows="true" class="landing-section">
+            <lightning:layoutItem size="12" mediumDeviceSize="6" class="title-container">
+                
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" mediumDeviceSize="6">
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+        <br/>
+    </div>
+</aura:component>

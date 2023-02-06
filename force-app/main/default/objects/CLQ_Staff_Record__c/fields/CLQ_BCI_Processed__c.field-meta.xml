@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_BCI_Processed__c</fullName>
+    <externalId>false</externalId>
+    <label>BCI Processed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Compliance</fullName>
+                <default>false</default>
+                <label>In Compliance</label>
+            </value>
+            <value>
+                <fullName>ODE - Not available</fullName>
+                <default>false</default>
+                <label>ODE - Not available</label>
+            </value>
+            <value>
+                <fullName>ODE - Not updated</fullName>
+                <default>false</default>
+                <label>ODE - Not updated</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Not Requested</fullName>
+                <default>false</default>
+                <label>ODJFS - Not Requested</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Results Not Received</fullName>
+                <default>false</default>
+                <label>ODJFS - Results Not Received</label>
+            </value>
+            <value>
+                <fullName>ODJFS - No Update</fullName>
+                <default>false</default>
+                <label>ODJFS - No Update</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Results Not Sent to Program</fullName>
+                <default>false</default>
+                <label>ODJFS - Results Not Sent to Program</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Results Not Sent to State</fullName>
+                <default>false</default>
+                <label>ODJFS - Results Not Sent to State</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Results Not Onsite</fullName>
+                <default>false</default>
+                <label>ODJFS - Results Not Onsite</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Returned, Not Resubmitted</fullName>
+                <default>false</default>
+                <label>ODJFS - Returned, Not Resubmitted</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Rehired, No Update</fullName>
+                <default>false</default>
+                <label>ODJFS - Rehired, No Update</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Conviction/Child Removed</fullName>
+                <default>false</default>
+                <label>ODJFS - Conviction/Child Removed</label>
+            </value>
+            <value>
+                <fullName>ODJFS - No Rehabilitation Doc</fullName>
+                <default>false</default>
+                <label>ODJFS - No Rehabilitation Doc</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Previous employer’s record on file</fullName>
+                <default>false</default>
+                <label>ODJFS - Previous employer’s record on file</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Incomplete results</fullName>
+                <default>false</default>
+                <label>ODJFS - Incomplete results</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Refused to be fingerprinted</fullName>
+                <default>false</default>
+                <label>ODJFS - Refused to be fingerprinted</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Pending verification</fullName>
+                <default>false</default>
+                <label>ODJFS - Pending verification</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Not Applicable</fullName>
+                <default>false</default>
+                <label>ODJFS - Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

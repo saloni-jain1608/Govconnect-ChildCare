@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Regulated_by_other_state_departments__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Programs that provide child care funded and regulated, or operated and regulated, by state departments, other than the ODJFS or the ODE.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Programs that provide child care funded and regulated, or operated and regulated, by state departments, other than the ODJFS or the ODE.</inlineHelpText>
+    <label>Regulated by other state departments</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

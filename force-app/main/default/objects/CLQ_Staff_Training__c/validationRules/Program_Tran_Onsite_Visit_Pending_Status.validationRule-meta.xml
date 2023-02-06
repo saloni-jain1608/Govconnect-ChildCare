@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Tran_Onsite_Visit_Pending_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ISPICKVAL(CLQ_Staff_Record__r.CLQ_Program_Transaction__r.CLQ_Transaction_Status__c ,&apos;Onsite Visit Pending&apos;)</errorConditionFormula>
+    <errorMessage>Program transaction status is Onsite Pending</errorMessage>
+</ValidationRule>

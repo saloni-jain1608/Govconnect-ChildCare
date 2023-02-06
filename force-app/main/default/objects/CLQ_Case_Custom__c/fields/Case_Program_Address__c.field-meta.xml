@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Program_Address__c</fullName>
+    <description>Program address field concatenated into a single custom field</description>
+    <externalId>false</externalId>
+    <formula>CLQ_Program_Street_Address1__c &amp; &quot;, &quot; &amp; CLQ_Program_City__c &amp; &quot;, &quot; &amp;  CLQ_Program_State__c &amp; &quot;, &quot; &amp; CLQ_Program_Zipcode__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Case Program Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

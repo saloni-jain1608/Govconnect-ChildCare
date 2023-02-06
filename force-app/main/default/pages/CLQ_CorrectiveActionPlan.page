@@ -1,0 +1,48 @@
+<!-- 
+/**************************************************************************************************************
+** Name             : CLQ_CorrectiveActionPlan
+** Version          : 1.0
+**------------------------------------------------------------------------------------------------------------
+** Modification Log:
+**------------------
+**  Developer           Date            Version     Description
+**------------------------------------------------------------------------------------------------------------
+**  Vijay Gurusamy		8/22/2019		1.0			TFS#15705 : Base version to restrict access based on CAP status.
+**************************************************************************************************************/ 
+-->
+
+<apex:page standardController="CLQ_Corrective_Action_Plan__c">
+    
+      <apex:includeScript value="{!$Resource.JQueryMin}" />
+
+    <style type="text/css">
+        .btn.disabled, .btn[disabled] {
+            cursor: default;
+            background-image: none;
+            opacity: 0.65;
+            filter: alpha(opacity=65);
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            color: #333;
+            background-color: #E6E6E6;
+        }    
+    </style>
+    <apex:detail subject="{!CLQ_Corrective_Action_Plan__c}" relatedList="true" title="true" />
+    <script type="text/javascript">
+        $j = jQuery.noConflict();
+        $j(document).ready(function() { 
+           
+            
+		var capStatus = "{!CLQ_Corrective_Action_Plan__c.CLQ_CAP_Status__c}";
+
+        if (capStatus == "Approved") {
+            $j("input[name=edit]").hide();
+            $j("input[name=del]").hide();
+            }           
+
+        });
+    </script>
+    
+    
+</apex:page>

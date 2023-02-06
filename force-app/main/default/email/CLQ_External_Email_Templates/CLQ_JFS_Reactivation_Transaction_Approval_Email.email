@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2"><span style="background-color: rgb(255, 255, 255);"><font color="#333333">{!CLQ_Program_Transaction__c.CLQ_Program_Name__c},&nbsp;{!CLQ_Program_Transaction__c.CLQ_Program_Number__c}&nbsp;has been reactivated effective&nbsp;</font></span><font color="#333333">{!CLQ_Program_Transaction__c.CLQ_Reactivation_Date__c}</font></font><div><font face="Verdana, Helvetica, sans-serif" size="2"><font color="#333333"><br></font></font></div><div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">C</span></font><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">ontact the Child Care Help Desk for additional assistance at 1-877-302-2347.</span></font></div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">The Ohio Child Licensing and Quality System Team.</span></font></div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;">This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span></font></div></div><div style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="line-height: 20px;"><br></span></font></div><div style="background-color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px;">ref: {!CLQ_Program_Transaction__c.Id</span><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px;">}</span></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

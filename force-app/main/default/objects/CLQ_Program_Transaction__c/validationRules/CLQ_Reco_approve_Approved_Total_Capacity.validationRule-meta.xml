@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reco_approve_Approved_Total_Capacity</fullName>
+    <active>true</active>
+    <description>If Recommendation = Approve, then CLQ_Approved_Total_Capacity__c should not be Zero</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp;
+RecordType.Name &lt;&gt; &apos;Renew Application - Day Camp&apos; &amp;&amp;
+RecordType.Name &lt;&gt; &apos;Application - Day Camp&apos; &amp;&amp; OR( AND(OR(CONTAINS(RecordType.Name , &apos;Application&apos;) ,CONTAINS(RecordType.Name , &apos;Change of Location&apos;) ), ISPICKVAL(CLQ_Recommendation__c , &apos;Approve&apos;),   OR(CLQ_Approved_Total_Capacity__c = 0, ISBLANK(CLQ_Approved_Total_Capacity__c))), AND (CONTAINS(RecordType.Name , &apos;Change of Capacity&apos;), ISPICKVAL(CLQ_Recommendation__c , &apos;Approve&apos;), OR (CLQ_New_Approved_All_Groups_Capacity__c=0, ISBLANK(CLQ_New_Approved_All_Groups_Capacity__c))))</errorConditionFormula>
+    <errorDisplayField>CLQ_Approved_Total_Capacity__c</errorDisplayField>
+    <errorMessage>Approved Total Capacity should not be zero or blank if Recommendation is Approve</errorMessage>
+</ValidationRule>

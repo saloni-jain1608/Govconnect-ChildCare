@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Day_Camp_Inspection_Type_Change</fullName>
+    <active>true</active>
+    <description>Validation rules for Day Camp Inspection</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Program_Record_Type__c = &quot;Day Camp&quot; &amp;&amp; 
+AND(NOT(ISNEW()), ISCHANGED(CLQ_Inspection_Type__c),
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Annual&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Monitor&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Monitor&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Annual&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Complaint&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Incident / Injury / Illness&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Incident / Injury / Illness&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Complaint&quot;))) 
+)</errorConditionFormula>
+    <errorMessage>You cannot change the Inspection Type to the selected value</errorMessage>
+</ValidationRule>

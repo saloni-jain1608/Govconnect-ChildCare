@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Case_Owner_Cant_Change</fullName>
+    <active>true</active>
+    <description>When Alleged Ops Report completed, Case Owner Id cant change</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; And(
+  RecordType.Name = &apos;Alleged Ops Completed&apos;,
+ TEXT(CLQ_Status__c) = &apos;Complete&apos;,
+ $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ ISCHANGED(OwnerId)  
+ )</errorConditionFormula>
+    <errorMessage>The Alleged Ops Report has completed. Case Owner can not  change.</errorMessage>
+</ValidationRule>

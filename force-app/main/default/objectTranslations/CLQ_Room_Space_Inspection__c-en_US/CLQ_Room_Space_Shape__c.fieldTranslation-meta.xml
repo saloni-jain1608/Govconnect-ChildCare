@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CLQ_Room_Space_Shape__c</name>
+    <picklistValues>
+        <masterLabel>Irregular</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Square/Rectangle/L-Shaped</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

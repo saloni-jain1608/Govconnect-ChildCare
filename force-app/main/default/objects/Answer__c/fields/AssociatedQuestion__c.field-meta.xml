@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssociatedQuestion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Associated Question</description>
+    <externalId>false</externalId>
+    <label>Associated Question</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>CLQ_Standard_Detail__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Question</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CLQ_Standard_Detail__c</referenceTo>
+    <relationshipLabel>Answers</relationshipLabel>
+    <relationshipName>Answers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

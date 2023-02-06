@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SandboxOrgIdMapping</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">00Dr00000000kxd==MOCK1
+00D350000000XSi==MOCKBUILD
+00D350000000WM1==TRN
+00D350000000X3Q==UAT
+00D8G0000008iS5UAI==DEV</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">00Dt0000000GzHC==PROD</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">00Dr00000000jOS==DEVBUILD
+00D8G0000008iS5UAI==DEV
+00Dr00000000iaN==SAT
+00D350000000X0Y==SIT</value>
+    </values>
+</CustomMetadata>

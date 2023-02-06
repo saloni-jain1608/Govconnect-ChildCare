@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Portal_New_Role__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to denote new contact roles from the portal.  Created by JSC on 1/5/2017 Updated 1/17/2017 - set to false on default, and the portal code will set this to true when it inserts a new record.</description>
+    <externalId>false</externalId>
+    <label>Portal New Role</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

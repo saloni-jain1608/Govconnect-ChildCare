@@ -1,0 +1,25 @@
+<apex:page standardController="Account" >
+      <apex:includeScript value="{!$Resource.JQueryMin}" />
+            <apex:detail subject="{!Account}" relatedList="true" title="true" />
+      
+     
+            <script type="text/javascript">
+                    $j = jQuery.noConflict();        
+                    $j(document).ready(function() {            
+                    //Hide the following button if the user's Profile is 'State System Help Desk - State User'  
+                    var ProfName = "{!$Profile.Name}";                        
+                                                  
+                    if( ProfName == "State System Provider Help Desk - State User") {                                                                              
+                        $j("input[name=task]").hide();
+                        $j("input[name=event]").hide();
+                        $j("input[name=newNote]").hide();
+                        $j("input[name=NewFile]").hide();
+                        $j("input[name=new]").hide();
+                        $j("input[name=mm]").hide();
+                        $j("input[name=email]").hide();                                            
+                       }            
+                   });
+                                     
+             </script>
+         
+</apex:page>

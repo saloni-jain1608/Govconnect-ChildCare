@@ -1,0 +1,9 @@
+A Step Up To Quality (SUTQ) Onsite Visit has been completed for {!CLQ_Inspection__c.CLQ_Program__c}, {!CLQ_Inspection__c.Program_Number__c}. Your program was not able to demonstrate that it meets the standards for SUTQ, Ohio's quality rating and improvement system, and has been given a deferral. Please use the attached report to determine the required documentation you must submit in order to meet the deferral requirements by {!CLQ_Program_Transaction__c.DeferralDueDate__c}. All deferral materials should be sent to the e-mail address specified during the on-site visit {!CLQ_Program_Transaction__c.CLQ_Assigned_To_Email__c}. 
+
+If you have further questions about your rating, contact your specialist. 
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. 
+
+The Ohio Child Licensing and Quality System Team. 
+
+Reference Id ref: {!CLQ_Inspection__c.CLQ_ProgramId__c}

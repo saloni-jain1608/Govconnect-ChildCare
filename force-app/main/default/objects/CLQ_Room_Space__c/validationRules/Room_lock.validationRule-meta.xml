@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Room_lock</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Inspection__r.Inspection_Complete__c</errorConditionFormula>
+    <errorMessage>Inspection complete</errorMessage>
+</ValidationRule>

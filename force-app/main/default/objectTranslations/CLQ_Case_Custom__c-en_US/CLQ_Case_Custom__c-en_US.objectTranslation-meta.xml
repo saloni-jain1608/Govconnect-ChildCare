@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Case</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cases</value>
+    </caseValues>
+    <layouts>
+        <layout>CLQ - Alleged Operation Report</layout>
+        <sections>
+            <label></label>
+            <section>Alleged Operator details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Children Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Complainant</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>General Information of Childcare Services</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Intake</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Record Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referral</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Alleged Operation Report Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Alleged Operator details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Children Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Complainant</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>General Information of Childcare Services</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Intake</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Record Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referral</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Complaint</layout>
+        <sections>
+            <label></label>
+            <section>Complainant</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Complaint Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Investigation &amp; Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referral</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Complaint Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Complainant</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Complaint Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Investigation &amp; Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referral</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Enforcement/Suspension</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enforcement/Suspension Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Enforcement/Suspension Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enforcement/Suspension Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Incident / Injury / Illness</layout>
+        <sections>
+            <label></label>
+            <section>Action Taken</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Report</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection and Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Not Needed</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reporter</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Incident</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Injury or Illness</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Incident/ Injury / Illness Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Action Taken</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Report</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection and Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Not Needed</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reporter</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Incident</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Injury or Illness</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Complaint Submitted</layout>
+        <sections>
+            <label></label>
+            <section>Complainant</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Complaint Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Investigation &amp; Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Referral</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Enforcement/Suspension_Submitted</layout>
+        <sections>
+            <label></label>
+            <section>Activity Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enforcement</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enforcement/Suspension Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Suspension</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Incident_Injury_Submitted</layout>
+        <sections>
+            <label></label>
+            <section>Action Taken</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Report</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection and Disposition</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Not Needed</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address and Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reporter</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Incident</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Type of Child Injury or Illness</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Custom Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Suspension</layout>
+        <sections>
+            <label></label>
+            <section>Activity Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Suspension Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Suspension Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Activity Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Suspension Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Alleged_Ops</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Alleged_Ops_Completed</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Alleged_Ops_Submitted</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Complaint</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Complaint_Submitted</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Enforcement_Suspension</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Enforcement_Suspension_Submitted</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Incident_Injury_Illness</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Suspension</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Incident_Injury_Submitted</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Action_Taken_Required_For_Injury_ill</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Alleged_OPS_County_Only_For_OH</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_An_Agency_Referral_Type_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Case_Owner_Cant_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Compl_County_Required_If_State_Ohio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Complainant_County_Only_For_OH</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Complaint_cant_be_recorded</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Complete_Incident_Injury_Review</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_County_Required_If_State_Ohio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Date_of_Referral_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_If_Other_Describe_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_IncidentInjury_cant_be_recorded</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Cant_be_linked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_If_Other_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Lookup_Filter</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Update_Allow_State_Admin</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_with_allegation_cannot_be</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Intake_Date_cannot_be_a_Future_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Name_is_required_if_not_Anonymous</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Other_Action_Desc_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Other_Injury_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Other_Relationship_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Phone_Number_must_be_a_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Phone_Number_or_Email_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Program_Status_Licensed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reason_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Related_Case_Record_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Restrict_Edit_for_Help_Desk_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Select_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Status_Cant_Change_By_Help_Desk_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_must_select_incident_Injury_ill</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Inspection_Visit_Completed_Lookup</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>No_Enforce_Sus_Case_if_Prog_Status_Same</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Reviewers_cannot_change_Case_ownership</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Review_Complaint_Approval</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Review_Complaint_Report_Custom</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Review_Complaint_Report_Custom1</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Revise_Complaint_Review</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

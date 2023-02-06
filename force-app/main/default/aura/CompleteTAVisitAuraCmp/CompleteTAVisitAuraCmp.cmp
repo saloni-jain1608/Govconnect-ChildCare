@@ -1,0 +1,12 @@
+<aura:component
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+    access="global" extends="c:ActionsBase">
+
+    <aura:attribute name="recordId" type="String" />
+
+    <c:customLightningAction recordId="{!v.recordId}" objectApiName="CLQ_Inspection__c" buttonLabel="Complete TA Visit"
+        callApexOrLaunchComponent="Apex" apexClassName="InspectionCtrl" apexMethodName="completeTAVisit"
+        validate="false" validationMethod="" fireOnLoad="true" oncloseQuickAction="{!c.closeModal}">
+    </c:customLightningAction>
+
+</aura:component>

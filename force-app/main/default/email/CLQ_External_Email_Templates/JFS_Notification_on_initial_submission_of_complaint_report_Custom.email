@@ -1,0 +1,5 @@
+A complaint was received for {!CLQ_Case_Custom__c.CLQ_Program_Name_Formula__c}, {!CLQ_Case_Custom__c.CLQ_Program_Number_Formula__c} on {!CLQ_Case_Custom__c.CLQ_Intake_Date__c}. Please log in at https://clqs--gclicqaorg.lightning.force.com/{!CLQ_Case_Custom__c.Id} to view the complaint details.
+
+The Ohio Child Licensing and Quality System Team.
+
+Reference Id ref: {!CLQ_Case_Custom__c.Name}

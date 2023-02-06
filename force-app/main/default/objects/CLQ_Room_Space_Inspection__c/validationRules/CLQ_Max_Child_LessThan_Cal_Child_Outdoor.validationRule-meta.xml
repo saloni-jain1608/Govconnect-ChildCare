@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Max_Child_LessThan_Cal_Child_Outdoor</fullName>
+    <active>true</active>
+    <description>For Outdoor Space record type</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name = &apos;Outdoor Space&apos;,(CLQ_Number_of_Children_Allowed__c &gt;  CLQ_Calc_Nb_of_Children_Allowed_Outdoor__c ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Number_of_Children_Allowed__c</errorDisplayField>
+    <errorMessage>Number of Children Allowed cannot be greater than Calculated Max Total Number of Children Allowed</errorMessage>
+</ValidationRule>

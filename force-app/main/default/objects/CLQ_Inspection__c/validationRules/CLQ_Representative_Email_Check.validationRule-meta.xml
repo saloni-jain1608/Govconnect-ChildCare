@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Representative_Email_Check</fullName>
+    <active>true</active>
+    <description>Representative Email is mandatory If &apos;yes&apos; is selected for On-site representative present.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; (IF
+(AND
+(ISPICKVAL(CLQ_On_Site_Representative_Present__c ,&quot;Yes&quot;), ISBLANK( CLQ_Representative_Email__c )), true,false))</errorConditionFormula>
+    <errorDisplayField>CLQ_Representative_Email__c</errorDisplayField>
+    <errorMessage>Please enter Representative Email</errorMessage>
+</ValidationRule>

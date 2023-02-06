@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_XExisting_Role__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Makes this value true when copied from Program to PT</description>
+    <externalId>false</externalId>
+    <label>XExisting Role</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

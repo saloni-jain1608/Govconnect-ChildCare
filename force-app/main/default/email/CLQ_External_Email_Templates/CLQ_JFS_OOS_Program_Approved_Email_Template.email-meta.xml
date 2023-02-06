@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>OOS Program Approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>OOS Program Approved Email Template</name>
+    <style>formalLetter</style>
+    <subject>Ohio Registration Approved for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}</subject>
+    <textOnly>An Ohio registration has been approved for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}, a program {!CLQ_Program_Transaction__c.Type_of_License__c} in {!CLQ_Program_Transaction__c.State_of_License_Certification_Exemption__c}. The Ohio Out of State Registration Number for this program is {!CLQ_Program_Transaction__c.CLQ_OOS_ProgramNumber__c}.
+
+Ohio will not reimburse for publicly funded child care at this location until the Ohio Department of Job &amp; Family Services (ODJFS) Provider Agreement has been submitted. To submit your ODJFS Provider Agreement go to http://jfs.ohio.gov/cdc/CCIDS.stm.
+If your license/certification/exemption has expired or been revoked, notify the ODJFS Help Desk at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team.
+
+ref: {!CLQ_Program_Transaction__c.Id}
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_Inspection_Updated__c</fullName>
+    <description>[DrawLoop]: Used in Outbound Messages
+[Task 11630] DDP = Licensing Inspection Full Report Deploy = SMTP - ODJFS Insp Updated &amp; SMTP - ODE Insp Updated</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(CLQ_Program__r.RecordType.Name = &quot;FCC - Type A Home&quot;,CLQ_Program__r.RecordType.Name = &quot;FCC - Type B Home&quot;,CLQ_Program__r.RecordType.Name = &quot;Child Care Center&quot;) , &quot;SFCLQ_Inspection__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf6;Deploy:a0135000000kgnP&quot;, IF( OR(CLQ_Program__r.RecordType.Name = &quot;Pre School&quot;,CLQ_Program__r.RecordType.Name = &quot;School Age Child Care&quot;) , &quot;SFCLQ_Inspection__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf6;Deploy:a0135000000kgnN&quot;, &quot;&quot;) )</formula>
+    <label>DEL_Drawloop_Next Inspection Updated</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

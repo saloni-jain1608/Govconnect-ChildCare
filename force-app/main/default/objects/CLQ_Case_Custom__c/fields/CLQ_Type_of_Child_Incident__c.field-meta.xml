@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Type_of_Child_Incident__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Child Incident</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abuse of child by any adult</fullName>
+                <default>false</default>
+                <label>Abuse of child by any adult</label>
+            </value>
+            <value>
+                <fullName>Child unattended off-site program</fullName>
+                <default>false</default>
+                <label>Child unattended off-site program</label>
+            </value>
+            <value>
+                <fullName>Child unattended on-site inside program</fullName>
+                <default>false</default>
+                <label>Child unattended on-site inside program</label>
+            </value>
+            <value>
+                <fullName>Child Unattended On-site Outside Program</fullName>
+                <default>false</default>
+                <label>Child Unattended On-site Outside Program</label>
+            </value>
+            <value>
+                <fullName>Death of a Child</fullName>
+                <default>false</default>
+                <label>Death of a Child</label>
+            </value>
+            <value>
+                <fullName>Inappropriate touching/sexual play (between children or adult and children)</fullName>
+                <default>false</default>
+                <label>Inappropriate touching/sexual play (between children or adult and children)</label>
+            </value>
+            <value>
+                <fullName>Intruder Enters the Program</fullName>
+                <default>false</default>
+                <label>Intruder Enters the Program</label>
+            </value>
+            <value>
+                <fullName>Medication error</fullName>
+                <default>false</default>
+                <label>Medication error</label>
+            </value>
+            <value>
+                <fullName>Natural / Man-made Disaster</fullName>
+                <default>false</default>
+                <label>Natural / Man-made Disaster</label>
+            </value>
+            <value>
+                <fullName>Prohibitive discipline techniques(spanking included)</fullName>
+                <default>false</default>
+                <label>Prohibitive discipline techniques(spanking included)</label>
+            </value>
+            <value>
+                <fullName>Threat of violence</fullName>
+                <default>false</default>
+                <label>Threat of violence</label>
+            </value>
+            <value>
+                <fullName>Vehicle accident</fullName>
+                <default>false</default>
+                <label>Vehicle accident</label>
+            </value>
+            <value>
+                <fullName>Weapon found</fullName>
+                <default>false</default>
+                <label>Weapon found</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

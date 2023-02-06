@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PD_Class1_Hours__c</fullName>
+    <description>Class hours value</description>
+    <externalId>false</externalId>
+    <label>PD Class1 Hours</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

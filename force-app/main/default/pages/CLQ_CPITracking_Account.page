@@ -1,0 +1,29 @@
+<apex:page standardcontroller="Account" showHeader="false" applyHtmlTag="false">
+    <apex:includeScript value="{!$Resource.JQueryMin}" /> 
+    <apex:includeScript value="{!$Resource.Integration_JqueryLibrary}/JqueryBlockUI.js" />
+    <script type="text/javascript">var __sfdcSessionId = '{!GETSESSIONID()}';
+    <script type="text/javascript" src="{!$Resource.Integration_JqueryLibrary}/jquery-ui.min.js"></script>
+    <script src="/soap/ajax/33.0/connection.js" type="text/javascript"></script>
+    <script src="/soap/ajax/33.0/apex.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+    $j = jQuery.noConflict();   
+    $j(document).ready(function(){
+    debugger;
+        var url = document.referrer;
+        var recId;
+        var myID;
+        
+        if(url.includes("id")){
+           recId = url.match(/id\=\w{15}|id\=\w{18}/);
+           myID = recId[0].substring(3, recId.length[0]);
+        }else{         
+           recId = url.match(/\.com\/\w{15}|\.com\/\w{18}/);           
+           myID = recId[0].substring(5, recId[0].length);
+        }
+        
+        sforce.apex.execute("CLQ_CPITracking_Util","logCPIFields",{objectName:"Account",recordId:recId,screenURL:url});       
+    });   
+    </script>   
+    
+</apex:page>

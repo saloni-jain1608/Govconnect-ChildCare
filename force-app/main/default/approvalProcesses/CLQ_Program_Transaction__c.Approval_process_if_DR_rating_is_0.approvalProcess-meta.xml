@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Recommended_Rating__c</field>
+        <field>Rating_Estimated_By_System__c</field>
+        <field>Rating_Proposed_By_Program__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>SUTQ Desk Review rating is 0</description>
+        <label>Submit DR to supervisor</label>
+        <name>Submit_DR_to_supervisor</name>
+        <rejectionActions>
+            <action>
+                <name>Revise_Desk_Review</name>
+                <type>Task</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>SUTQ Approval Process for Desk Review rating is 0.
+Forms/Reports: Updated to add drawloop OBM.
+[6/12/17]: Updated criteria as per CR# 11200</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>(RecordType.Name= $Label.CLQ_Program_App_SUTQ_Ongoing_Registration_RecType || RecordType.Name= $Label.CLQ_Program_App_SUTQ_Initial_Registration_RecType ) &amp;&amp; TEXT(Recommended_Rating__c) = $Label.CLQ_Program_App_Recommended_Rating &amp;&amp; (NOT(CONTAINS(CLQ_Program_Record_Type__c, $Label.CLQ_Program_App_Custom_Record_Type)) || (CONTAINS(CLQ_Program_Record_Type__c, $Label.CLQ_Program_App_Custom_Record_Type) &amp;&amp; (((CONTAINS($Label.SUTQ_AKRON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_DAYTON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_TOLEDO_District_Counties, UPPER(CLQ_County__c))) &amp;&amp; NOT(TEXT(CLQ_Rating_Confirmed_by_Program__c) = $Label.CLQ_Program_Transaction_Rating_Confirmed_By_Program_1|| TEXT(CLQ_Rating_Confirmed_by_Program__c) = $Label.CLQ_Program_Transaction_Rating_Confirmed_By_Program_2)) || NOT(CONTAINS($Label.SUTQ_AKRON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_CLEVELAND_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_COLUMBUS_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_DAYTON_District_Counties, UPPER(CLQ_County__c)) || CONTAINS($Label.SUTQ_TOLEDO_District_Counties, UPPER(CLQ_County__c))))))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>IsApprovedOnGoingCheck</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>SUTQ_Email_Desk_Review_UnableToRate</name>
+            <type>OutboundMessage</type>
+        </action>
+        <action>
+            <name>Update_PT_Status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Update_PT_Status_under_review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Update_PT_status_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approval process if DR rating is 0</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

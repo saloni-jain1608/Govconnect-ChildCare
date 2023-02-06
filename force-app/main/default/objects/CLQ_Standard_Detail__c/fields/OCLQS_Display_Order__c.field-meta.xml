@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OCLQS_Display_Order__c</fullName>
+    <description>Display order of buttons on the flip card for OCLQS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Display order of buttons on the flip card.</inlineHelpText>
+    <label>Display Order</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

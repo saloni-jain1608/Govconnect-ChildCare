@@ -1,0 +1,87 @@
+{
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "81d30c9d-1dfe-4591-bbc4-359cc45db6aa",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"width:100%;margin:1rem auto;color: #0070d2;font-size:large;background:#FFF;\">\n    <div class=\"slds-grid slds-wrap slds-p-vertical_small slds-m-horizontal_xx-large\" style=\"width:75%;margin:0 auto;\">\n        <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-3\">\n            <img src=\"https://gcccldev-childcare.cs219.force.com/vdss1/file-asset/link_1?v=3\" style=\"height:18rem;border: 5px solid #80AA5E;\n                                                                                                             border-radius: 50%;\">\n        </div>\n        <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_2-of-3\" style=\"color:#65788C;\">\n            <div style=\"font-size:3rem;margin:1rem;color:#000;\">Learn More</div>\n            <div style=\"font-size:1.5rem;margin:1rem;\">\n                <a href=\"\" style=\"color:#65788C;display:block;\">Child Care Subsidy Program</a>\n                <a href=\"\" style=\"color:#65788C;display:block;\">Child Support</a>\n                <a href=\"\" style=\"color:#65788C;display:block;\">Energy Assistance</a>\n            </div>\n        </div>\n    </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "98aa5565-8bc0-42e1-8b10-7d1f7a25fbcd",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"width:100%;margin:1rem auto;color: #0070d2;font-size:large;background:#FFF;\">\n    <div class=\"slds-grid slds-wrap slds-p-vertical_small slds-m-horizontal_xx-large\" style=\"width:75%;margin:0 auto;\">\n       \n        <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_2-of-3\" style=\"color:#65788C;\">\n            <div style=\"font-size:3rem;margin:1rem;color:#000;\">Search For Programs</div>\n            <div style=\"font-size:1.5rem;margin:1rem;\">\n                <a href=\"\" style=\"color:#65788C;display:block\">Early Learning and Development Programs</a>\n                <a href=\"\" style=\"color:#65788C;display:block\">Licensed Preschool Programs</a>\n            </div>\n        </div>\n         <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-3\">\n            <img src=\"https://gcccldev-childcare.cs219.force.com/vdss1/file-asset/VA_HomeLogo2?v=2\" style=\"height:18rem;border: 5px solid #F86865;\n                                                                                                             border-radius: 50%;\">\n        </div>\n    </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "a8187d02-1e12-44a6-b801-faf05f1bd176",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"width:100%;margin:1rem auto;color: #0070d2;font-size:large;background:#FFF;\">\n    <div class=\"slds-grid slds-wrap slds-p-vertical_small slds-m-horizontal_xx-large\" style=\"width:75%;margin:0 auto;\">\n        <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-3\">\n            <img src=\"https://gcccldev-childcare.cs219.force.com/vdss1/file-asset/VA_HomeLogo3?v=2\" style=\"height:18rem;border: 5px solid #FFD26C;\n                                                                                                             border-radius: 50%;\">\n        </div>\n        <div class=\"slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_2-of-3\" style=\"color:#65788C;\">\n            <div style=\"font-size:3rem;color:#000;\">Become Licensed</div>\n            <div style=\"font-size:1.5rem;margin:1rem;\">\n                <a href=\"\" style=\"color:#65788C;display:block;\">Child Care Licensing</a>\n                <a href=\"\" style=\"color:#65788C;display:block;\">Program Licensing</a>\n            </div>\n        </div>\n    </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "6949cc8c-3ccd-410a-b17a-e9f2917b7640",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"background:#2F90E4;padding:5rem 12rem;\">\n    <div class=\"slds-show_inline-block\" style=\"font-size:3rem;color:#FFF;\">Get started today</div>\n\n    <div class=\"slds-show_inline-block\" style=\"float:right;\">\n        <a href=\"login\" class=\"slds-show_inline-block\" style=\"margin:0 1.5rem;\">\n            <button class=\"slds-button slds-button_outline-brand\" style=\"width: 11.25rem;\n                                                                         height: 3.75rem;\n                                                                         background-color: #0070d2;\n                                                                         color: #FFF;\n                                                                         font-size: 1.525rem;\n                                                                         line-height: 1.4;\n                                                                         border: 2px solid;\">Login</button>\n        </a>\n        <a href=\"/login/SelfRegister/\" class=\"slds-show_inline-block\">\n            <button class=\"slds-button slds-button_outline-brand\" style=\"width: 11.25rem;\n                                                                         height: 3.75rem;\n                                                                         background-color: #FFF;\n                                                                         color: #0070d2;\n                                                                         font-size: 1.525rem;\n                                                                         line-height: 1.4;\n                                                                         border:none;\">Register</button>\n        </a>\n    </div>\n\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "aa8fe5b2-31a6-4b89-9c02-aa673b84a749",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div class=\"slds-grid slds-wrap\" style=\"width:60%;margin:2rem auto;color: #0070d2;font-size:large;\">\n    <div class=\"slds-small-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-5\" style=\"border-left: 1px solid;border-right: 1px solid;text-align: center;\">Home</div>\n    <div class=\"slds-small-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-5\" style=\"border-right: 1px solid;text-align: center;\">Contact</div>\n    <div class=\"slds-small-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-5\" style=\"border-right: 1px solid;text-align: center;\">Policies</div>\n    <div class=\"slds-small-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-5\" style=\"border-right: 1px solid;text-align: center;\">Community Partner</div>\n    <div class=\"slds-small-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-5\" style=\"border-right: 1px solid;text-align: center;\">Mandated Reporters</div>\n</div>\n<div style=\"font-size:large;\">Copyright © 2020 United States of America. All rights reserved.</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "645be23e-8e59-4434-8aec-3050e9f587ac",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e3a3b7c9-0495-43f7-8738-ab08a5e0c4f4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "ccf1576b-b460-4e2e-bf9a-e868a5c9f413",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "e4f8d900-56a0-4417-83cd-b5fc32d19bde",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "c32d344e-d12d-478c-9594-0494bce789ad",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7b8de729-45c3-4725-a8c2-871d1707f70c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8e29f943-bee2-487e-a457-788d76b9c545",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

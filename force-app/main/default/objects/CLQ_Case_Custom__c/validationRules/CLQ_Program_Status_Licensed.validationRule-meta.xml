@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Program_Status_Licensed</fullName>
+    <active>true</active>
+    <description>Program linked with Case of record type &apos;Injury/Illness&apos; or &apos;Complaint&apos; should be Active.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+ OR(RecordType.Name=&apos;Complaint&apos;,RecordType.Name=&apos;Complaint Submitted&apos;,RecordType.Name=&apos;Incident / Injury / Illness&apos;,RecordType.Name=&apos;Incident Injury Submitted&apos;) &amp;&amp; 
+ISPICKVAL(CLQ_Program__r.CLQ_License_Registration_Status__c,&apos;Not Licensed&apos;)</errorConditionFormula>
+    <errorDisplayField>CLQ_Program__c</errorDisplayField>
+    <errorMessage>Program should be Licensed</errorMessage>
+</ValidationRule>

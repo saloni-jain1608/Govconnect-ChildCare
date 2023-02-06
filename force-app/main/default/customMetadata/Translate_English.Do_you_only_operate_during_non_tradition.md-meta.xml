@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Do you only operate during non-tradition</label>
+    <protected>false</protected>
+    <values>
+        <field>English__c</field>
+        <value xsi:type="xsd:string">Do you only operate during non-traditional hours (provide care only between 7pm-6am weekdays and/or 12am Saturday -6am Monday)?</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">Non_Traditional_Hours_Only__c</value>
+    </values>
+    <values>
+        <field>German_Translate__c</field>
+        <value xsi:type="xsd:string">Arbeiten Sie nur zu ungewöhnlichen Zeiten (Betreuung nur zwischen 19:00 und 06:00 Uhr an Wochentagen und/oder 00:00 Uhr Samstag -06:00 Uhr Montag)?</value>
+    </values>
+    <values>
+        <field>Language_Selected__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPIName__c</field>
+        <value xsi:type="xsd:string">CLQ_Program_Transaction__c</value>
+    </values>
+    <values>
+        <field>Spanish_Translate__c</field>
+        <value xsi:type="xsd:string">¿Solo opera durante horas no tradicionales (brinda atención solo entre las 7 p. m. y las 6 a. m. de lunes a viernes y/o entre las 12 a. m. del sábado y las 6 a. m. del lunes)?</value>
+    </values>
+</CustomMetadata>

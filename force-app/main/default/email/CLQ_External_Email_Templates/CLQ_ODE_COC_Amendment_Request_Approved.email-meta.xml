@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>An email is sent to the program notifying that their amendment has been Approved.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ODE COC Amendment Request Approved</name>
+    <style>formalLetter</style>
+    <subject>Change of Capacity Capacity/Space Request Approved for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c}</subject>
+    <textOnly>This is to notify you that the {!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c} {!CLQ_Role__c.CLQ_Program_Type_Formula__c} license issued to {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} {!CLQ_Role__c.CLQ_Program_name_Formula__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} {!CLQ_Role__c.CLQ_Program_Number_Formula__c} has been amended effective immediately.
+
+The attached new license reflects the total number of children that may be cared for at any one time. This licensing action is based upon the recent assessment that your program meets the
+requirements for a change in license capacity as required in 5101:2-12 or 5101:2-13 of the  Ohio Administrative Code.
+
+If you are currently serving publicly funded children and have completed a Provider Agreement using the CCIDS Provider Portal, you are encouraged to log on to the Provider Portal to ensure accurate customary rate information has been submitted for each age group that you are licensed to serve.
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347. The Licensing Online Team This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

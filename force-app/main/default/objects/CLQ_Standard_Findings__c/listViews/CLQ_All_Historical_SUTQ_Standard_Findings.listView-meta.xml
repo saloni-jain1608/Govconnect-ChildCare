@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_All_Historical_SUTQ_Standard_Findings</fullName>
+    <booleanFilter>1 AND (2 AND 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CLQ_Finding_Code__c</columns>
+    <columns>CLQ_Finding_Type__c</columns>
+    <columns>CLQ_Finding_Effective_Date__c</columns>
+    <columns>CLQ_Finding_Expiration_Date__c</columns>
+    <columns>CLQ_Integration_Document_Type__c</columns>
+    <columns>CLQ_Risk_Level__c</columns>
+    <columns>CLQ_CAP__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Domain__c</field>
+        <operation>contains</operation>
+        <value>Learning &amp; Development,Administrative &amp; Leadership Practices,Staff Qualificati</value>
+    </filters>
+    <filters>
+        <field>CLQ_Finding_Expiration_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CLQ_Finding_Expiration_Date__c</field>
+        <operation>lessThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>All Historical SUTQ Standard Findings</label>
+</ListView>

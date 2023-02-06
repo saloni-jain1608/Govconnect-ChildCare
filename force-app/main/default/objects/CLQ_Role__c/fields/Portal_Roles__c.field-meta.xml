@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Roles__c</fullName>
+    <externalId>false</externalId>
+    <label>Portal Roles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Role_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OCLQSOwner</fullName>
+                <default>false</default>
+                <label>OCLQSOwner</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Level 4</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <label>Level 3</label>
+            </value>
+            <value>
+                <fullName>Licensing Admin</fullName>
+                <default>false</default>
+                <label>Level 2</label>
+            </value>
+            <value>
+                <fullName>SUTQ Consultant</fullName>
+                <default>false</default>
+                <label>Level 1</label>
+            </value>
+            <value>
+                <fullName>OCLQSSUTQ</fullName>
+                <default>false</default>
+                <label>OCLQSSUTQ</label>
+            </value>
+            <value>
+                <fullName>OCLQSLicensing</fullName>
+                <default>false</default>
+                <label>OCLQSLicensing</label>
+            </value>
+            <value>
+                <fullName>OCLQSAdministrator</fullName>
+                <default>false</default>
+                <label>OCLQSAdministrator</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>JFS</controllingFieldValue>
+            <valueName>Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JFS</controllingFieldValue>
+            <valueName>Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JFS</controllingFieldValue>
+            <valueName>Licensing Admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JFS</controllingFieldValue>
+            <valueName>SUTQ Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ODE</controllingFieldValue>
+            <valueName>OCLQSOwner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ODE</controllingFieldValue>
+            <valueName>OCLQSSUTQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ODE</controllingFieldValue>
+            <valueName>OCLQSLicensing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ODE</controllingFieldValue>
+            <valueName>OCLQSAdministrator</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

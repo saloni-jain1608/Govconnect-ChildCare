@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Inspection_Type__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>CLQ_Inspection_Status__c</columns>
+    <columns>CLQ_Last_Visit_Date__c</columns>
+    <columns>CLQ_Visit_Status__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>CLQ_Inspection__c.Onsite_Visit_Record_Type</value>
+    </filters>
+    <label>All - Onsite</label>
+</ListView>

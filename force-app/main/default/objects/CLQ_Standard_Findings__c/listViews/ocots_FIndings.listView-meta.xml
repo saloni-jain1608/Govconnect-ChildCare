@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ocots_FIndings</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Interview_Question__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Is_Related_to_OCOT__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>ocots FIndings</label>
+</ListView>

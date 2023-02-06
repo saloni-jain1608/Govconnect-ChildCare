@@ -1,0 +1,28 @@
+<messaging:emailTemplate subject="Inspection Completed for {!relatedTo.CLQ_Program__r.Name},{!relatedTo.Program_Number__c} {!relatedTo.CLQ_Program__r.CLQ_Associated_Organization__r.Name}" recipientType="User" relatedToType="CLQ_Inspection__c">
+<messaging:HtmlEmailBody >
+
+<p>The purpose of this email is to provide you with a copy  of the <apex:outputText value=" {!relatedTo.CLQ_Inspection_Start_Date__c}"/>, inspection report for {!relatedTo.CLQ_Program__r.Name},{!relatedTo.Program_Number__c} </p>
+
+<p>Please be reminded inspection reports are required to be printed and posted in a conspicuous place at the program.</p>
+
+
+<p>If you have any questions regarding the inspection report, contact your Licensing Specialist.</p>
+
+<apex:outputText rendered="{!CONTAINS(relatedTo.CLQ_Program__r.RecordType.Name,'FCC') || CONTAINS(relatedTo.CLQ_Program__r.RecordType.Name,'Child Care Center') }">
+
+<p>Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</p>
+
+<p>The Ohio Child Licensing and Quality System Team.</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</p>
+</apex:outputText>
+
+<apex:outputText rendered="{!CONTAINS(relatedTo.CLQ_Program__r.RecordType.Name,'School') }">
+
+<p>The Licensing Online Team</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</p>
+</apex:outputText>
+
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

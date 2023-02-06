@@ -1,0 +1,58 @@
+.instruction-card-layout{
+    /*box-shadow: 0 0 5px #ddd;*/
+    border-radius: 0.5rem;
+    background: #FFF;
+    border: 1px solid #ccc;
+    min-height: 25rem;
+    width: 95%; 
+    margin: 1rem auto;
+    box-shadow: 0 0 10px #a1a1a1;
+    border-radius: 1rem;
+    color: rgba(0,0,0,.65);
+}
+
+.instructon-header{
+    background-image: url(/dss/resource/1607194429000/VDSSPortalThemeBg?);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0;
+}
+
+.instuction-text{
+    font-size: medium;
+    padding: 1rem 3rem;
+    margin: 1rem auto;
+    text-align: justify;
+}
+
+/* For desktop and higher */
+@media only screen 
+    and (min-width: 800px) {
+        .instruction-card-layout{
+            width: 55%;
+        }
+
+        .instuction-text{
+            padding: 1rem 5rem;
+        }
+
+        .custom-position-right{
+            float:right;
+        }
+
+    }
+
+
+
+.instruction-headerText{
+    font-size: 300%;
+    margin: 1rem auto;
+}
+
+
+
+.instruction-icon{
+    margin: 1rem auto;
+    text-align:center;
+}

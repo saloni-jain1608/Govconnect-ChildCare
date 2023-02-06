@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approved_first_day_and_last_day_365</fullName>
+    <active>true</active>
+    <description>The Approved First Day of Operation at New Location’ cannot be more that 365 days in the future from the ‘Last Day of Operation at Old Location’.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Approved_First_Day_at_New_Address__c &gt;  CLQ_Approved_Last_Day_at_Current_Address__c + 365</errorConditionFormula>
+    <errorDisplayField>CLQ_Approved_First_Day_at_New_Address__c</errorDisplayField>
+    <errorMessage>The Approved First Day of Operation at New Location’ cannot be more that 365 days in the future from the ‘Last Day of Operation at Old Location’</errorMessage>
+</ValidationRule>

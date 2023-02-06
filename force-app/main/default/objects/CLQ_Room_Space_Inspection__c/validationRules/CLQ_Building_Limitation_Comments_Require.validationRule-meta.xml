@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Building_Limitation_Comments_Require</fullName>
+    <active>true</active>
+    <description>When building limitation is checked the comments are required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(TEXT(CLQ_Building_Limitation__c)=&apos;Yes&apos;,ISBLANK( CLQ_Building_Limitation_Comments__c))</errorConditionFormula>
+    <errorDisplayField>CLQ_Building_Limitation_Comments__c</errorDisplayField>
+    <errorMessage>Building limitation Comments are required.</errorMessage>
+</ValidationRule>

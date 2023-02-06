@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_COA_Approved__c</fullName>
+    <description>[DrawLoop]: Used in WF Outbound Message
+[Task 11630] DDP = License Face Certificate ; Delivery = SMTP - COA Approved</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf0;Deploy:a0135000000kgn3&quot;</formula>
+    <label>Drawloop_Next COA Approved</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

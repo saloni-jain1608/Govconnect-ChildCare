@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewers_Allowed_Edit</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ($Profile.Name = &apos;Lic and SUTQ Reviewer - State User&apos; ||
+$Profile.Name = &apos;Licensing Reviewer - State User&apos; ||
+$Profile.Name = &apos;ODE Lic and SUTQ Reviewer - State User&apos; ||
+$Profile.Name = &apos;ODE Licensing Reviewer - State User&apos; ||
+$Profile.Name = &apos;ODJFS FCC Reviewer - County Role&apos; ||
+$Profile.Name = &apos;ODJFS FCC Application Reviewer - State User&apos;) &amp;&amp; !ISCHANGED(Enter_new_comments__c)</errorConditionFormula>
+    <errorMessage>Reviewers can only update the comments section</errorMessage>
+</ValidationRule>

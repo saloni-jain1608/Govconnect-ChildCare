@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_First_Aid__c</fullName>
+    <externalId>false</externalId>
+    <label>First Aid</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Compliance</fullName>
+                <default>false</default>
+                <label>In Compliance</label>
+            </value>
+            <value>
+                <fullName>Trainer Qualifications</fullName>
+                <default>false</default>
+                <label>Trainer Qualifications</label>
+            </value>
+            <value>
+                <fullName>Form Not Complete</fullName>
+                <default>false</default>
+                <label>Form Not Complete</label>
+            </value>
+            <value>
+                <fullName>Form Does Not Meet Req.</fullName>
+                <default>false</default>
+                <label>Form Does Not Meet Req.</label>
+            </value>
+            <value>
+                <fullName>No Original Course</fullName>
+                <default>false</default>
+                <label>No Original Course</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>Pending Verification</fullName>
+                <default>false</default>
+                <label>Pending Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>CLQ_Program__c</field>
+        <field>Owner</field>
+        <field>Annual_Report_Overall_Requirements__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>SUTQ Annual Report Not Met</description>
+        <label>Send AR to supervisor</label>
+        <name>Send_AR_to_supervisor</name>
+        <rejectionActions>
+            <action>
+                <name>Revise_Annual_Report_Details</name>
+                <type>Task</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>SUTQ Approval Process: It applies If AR is Not Met.
+Forms/Reports: Updated to add Drawloop OBM in final approved actions.
+[6/12/17]: Updated Criteria and Recall actions as per CR #11200.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>TEXT(Annual_Report_Overall_Requirements__c) =  $Label.CLQ_Program_App_Overall_Requirement &amp;&amp; RecordType.Name =  $Label.CLQ_Program_App_SUTQ_Annual_Report_RecType</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>StatusUpdate</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>SUTQ_Email_Annual_Report_NotMet</name>
+            <type>OutboundMessage</type>
+        </action>
+        <action>
+            <name>UpdateIsApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UpdateIsPending2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Update_PT_Status_under_review</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UpdateIsPending2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Annual_Report_Overall_Req_Not_Met</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Update_PT_status_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UpdateIsPending</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approval process if AR is not met</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>Update_PT_Status_under_review</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>UpdateIsPending2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

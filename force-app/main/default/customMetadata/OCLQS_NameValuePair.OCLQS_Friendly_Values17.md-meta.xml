@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values17</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Approved__Supervisor On-Site Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Approved__Annual Report Disapproved==Approved**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Approved__Rating Assessment Complete==Approved**YES
+CLQ_Transaction_Document__c===&gt;Approved__Completed==Approved**YES
+CLQ_Transaction_Document__c===&gt;Approved__Withdrawn at Applicant&apos;s Request==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Approved__Onsite Visit Pending==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Approved__Rating Recommended for Review==Under Review**YES</value>
+    </values>
+</CustomMetadata>

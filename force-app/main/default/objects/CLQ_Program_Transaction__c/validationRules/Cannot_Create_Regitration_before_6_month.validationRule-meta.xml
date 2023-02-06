@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Create_Regitration_before_6_month</fullName>
+    <active>false</active>
+    <description>CR Item: 11158 - edited validation rule error message</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT(Skip_Validation__c) &amp;&amp; AND(!00N8G000000YLDC.00N8G000000YLKB,
+ISPICKVAL( CLQ_Program__r.CLQ_License_Type__c ,&quot;Provisional&quot;), 
+OR(	RecordType.DeveloperName == &apos;Annual_Report&apos;, 
+	RecordType.DeveloperName == &apos;Ongoing_Quality_Rating_Registration&apos; 
+	),
+
+Date(YEAR(CLQ_Program__r.CLQ_License_Issue_Date__c),MONTH(CLQ_Program__r.CLQ_License_Issue_Date__c),DAY(CLQ_Program__r.CLQ_License_Issue_Date__c)) + 180 &gt; Today() 
+)</errorConditionFormula>
+    <errorMessage>Your program must wait 180 days or more after obtaining its provisional license to register for SUTQ.</errorMessage>
+</ValidationRule>

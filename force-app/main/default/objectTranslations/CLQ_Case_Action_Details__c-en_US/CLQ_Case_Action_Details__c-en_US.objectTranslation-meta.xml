@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Case Action Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Case Action Details</value>
+    </caseValues>
+    <layouts>
+        <layout>Case Action - Alleged Ops</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Action - Enforcement/Suspension</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Action Detail Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Case_Action_Enforcement_Suspension</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Case_Action_Alleged_Ops</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Case_Action_Enforcement</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>CLQ_Deadline_Date_to_Request_Hearing_Certified_Mail</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

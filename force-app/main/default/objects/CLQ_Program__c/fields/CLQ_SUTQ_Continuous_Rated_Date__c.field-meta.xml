@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_SUTQ_Continuous_Rated_Date__c</fullName>
+    <description>Populated with the date from which the Program has been continuously rated for SUTQ</description>
+    <externalId>false</externalId>
+    <label>Continuously Rated since</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

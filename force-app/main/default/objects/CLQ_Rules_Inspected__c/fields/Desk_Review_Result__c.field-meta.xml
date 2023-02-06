@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desk_Review_Result__c</fullName>
+    <description>Picklist value to filter standard findings based on the conditions mentioned in the picklist field</description>
+    <externalId>false</externalId>
+    <label>Desk Review Result</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Met</fullName>
+                <default>false</default>
+                <label>Met</label>
+            </value>
+            <value>
+                <fullName>Not Met</fullName>
+                <default>false</default>
+                <label>Not Met</label>
+            </value>
+            <value>
+                <fullName>Deferal</fullName>
+                <default>false</default>
+                <label>Deferal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

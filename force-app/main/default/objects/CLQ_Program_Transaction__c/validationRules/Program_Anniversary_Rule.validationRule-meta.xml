@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Anniversary_Rule</fullName>
+    <active>false</active>
+    <description>If the program anniversary date is beyond today - 30 days it shouldn&apos;t allow annual report || if the anniversary date falls - 120 days from today it should allow annual report.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name == &apos;Annual Report&apos;, 
+OR( 
+IF(MONTH( CLQ_Program__r.Rating_Anniversary_Date__c ) &gt; 4,DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c),MONTH(CLQ_Program__r.Rating_Anniversary_Date__c)-4,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)), IF(MONTH(CLQ_Program__r.Rating_Anniversary_Date__c) == 4, DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c)-1,12,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)), 
+IF(MONTH(CLQ_Program__r.Rating_Anniversary_Date__c) == 3, DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c)-1,11,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)), IF(MONTH(CLQ_Program__r.Rating_Anniversary_Date__c) == 2, DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c)-1,10,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)), IF(MONTH(CLQ_Program__r.Rating_Anniversary_Date__c) == 1, DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c)-1,9,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)) , null) ) ) ) ) &gt;= TODAY() 
+, 
+IF(MONTH(CLQ_Program__r.Rating_Anniversary_Date__c) &gt; 1,DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c),MONTH(CLQ_Program__r.Rating_Anniversary_Date__c)-1,DAY(CLQ_Program__r.Rating_Anniversary_Date__c)), DATE(YEAR(CLQ_Program__r.Rating_Anniversary_Date__c)-1,12,DAY(CLQ_Program__r.Rating_Anniversary_Date__c))) &lt;= TODAY() 
+))</errorConditionFormula>
+    <errorMessage>Rating anniversary date not satisfying.</errorMessage>
+</ValidationRule>

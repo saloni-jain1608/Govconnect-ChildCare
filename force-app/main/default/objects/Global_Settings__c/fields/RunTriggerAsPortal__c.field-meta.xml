@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RunTriggerAsPortal__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This value is a workaround to be able to run certain triggers as the external user  until the Portal development is complete enough to test the functionality.</description>
+    <externalId>false</externalId>
+    <label>RunTriggerAsPortal</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

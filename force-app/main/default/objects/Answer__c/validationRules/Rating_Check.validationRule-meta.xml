@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Check</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+AND( Domain_Name__c != &apos;Points 4 &amp; 5&apos;,
+Domain_Name__c != &apos;Expedited Registration Questions&apos; , Domain_Name__c != &apos;Change of Owner Registration Questions&apos; ,
+Domain_Name__c != &apos;Reinstate Rating Questions&apos; , 
+Rating_Number__c &gt;3)</errorConditionFormula>
+    <errorMessage>The Rating should be less than or equal to 3.</errorMessage>
+</ValidationRule>

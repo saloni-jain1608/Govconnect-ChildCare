@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_must_select_incident_Injury_ill</fullName>
+    <active>true</active>
+    <description>an incident or injury checkbox must be selected</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; OR( RecordType.Name = &apos;Incident / Injury / Illness&apos;, RecordType.Name = &apos;Incident Injury Submitted&apos;) &amp;&amp;
+(AND(!CLQ_Allergic_Reaction_Asthma_Attack__c,
+!CLQ_Broken_Disclosed_Bone__c,
+!CLQ_Collapse_Faint__c,
+!CLQ_No_Pulse_Not_Breathing__c,
+!CLQ_Poisoning__c,
+!CLQ_Sprain_Strain__c,
+!CLQ_Tooth_injury__c,
+!CLQ_Blow_or_Bump_to_the_Head__c,
+!CLQ_Outbreak_of_illness__c,
+!CLQ_Deep_Cut_Laceration__c,
+!CLQ_Object_inserted_into_body_part__c,
+!CLQ_Seizure__c,
+!CLQ_Suspected_broken_bone_dislocation__c,
+!CLQ_Other_injury_requiring_medical_trmt__c,
+!CLQ_Abuse_of_child_by_any_adult__c,
+!CLQ_Child_Unattended_On_site_Outside_Pgm__c,
+!CLQ_Death_of_a_Child__c,
+!CLQ_Intruder_Enters_the_Program__c,
+!CLQ_Natural_Man_made_Disaster__c,
+!CLQ_Threat_of_violence__c,
+!CLQ_Weapon_found__c,
+!CLQ_Child_unattended_on_site_inside_pgm__c,
+!CLQ_Child_unattended_off_site_program__c,
+!CLQ_Inappropriate_touching_sexual_play__c,
+!CLQ_Medication_error__c,
+!CLQ_Prohibitive_discipline_techniques__c,
+!CLQ_Vehicle_accident__c))</errorConditionFormula>
+    <errorMessage>You must check something from the &apos;Type of Child Injury or Illness&apos; or the &apos;Type of Child Incident&apos; section.</errorMessage>
+</ValidationRule>

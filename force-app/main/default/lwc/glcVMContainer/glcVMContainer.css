@@ -1,0 +1,12 @@
+.card-border {
+    border-bottom: 1px solid rgb(221, 219, 218);
+}
+.filter-search {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(221, 219, 218);
+    min-width: 300px;
+    padding-top: 10px;
+    padding-left: 10px;
+}

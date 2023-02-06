@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Last_Day_At_old_First_day_at_New</fullName>
+    <active>true</active>
+    <description>First day at new address cannot be prior to or equal to Last day at Current address</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Approved_First_Day_at_New_Address__c &lt;=   CLQ_Approved_Last_Day_at_Current_Address__c</errorConditionFormula>
+    <errorDisplayField>CLQ_Approved_First_Day_at_New_Address__c</errorDisplayField>
+    <errorMessage>Approved First Day of Operation at New Location cannot be prior or equal to the Last Date of Operation at Old Location</errorMessage>
+</ValidationRule>

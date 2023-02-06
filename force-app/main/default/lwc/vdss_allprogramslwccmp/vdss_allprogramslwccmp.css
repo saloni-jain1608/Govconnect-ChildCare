@@ -1,0 +1,121 @@
+.program-cards{
+    /*box-shadow: 0 0 5px #ddd;*/
+    border-radius: 0.5rem;
+    background: #FFF;
+    border: 1px solid #ccc;
+    min-height: 25rem;
+}
+
+.program-cards:hover{
+    box-shadow: 0 0 5px #ccc;
+    border: none;
+}
+
+.program-card-header{
+    background-image: url(/vdss1/resource/1606923540000/CardBackground);
+    background-size: cover;
+    border-radius: .5rem;
+    background-repeat: round;
+    border: 0;
+    box-shadow: 0 0 2px #2F90E4;
+}
+
+.program-card-header,.continue-application-btn{
+    text-align:center;
+}
+
+.program-card-body{
+    line-height: 2rem;
+}
+
+.program-header{
+    color: #516273;
+    font-weight: 500;
+}
+
+.program-container{
+    background: #FFF;
+    min-height:50rem;
+}
+
+.program-card-image{
+    width:3.5rem;
+    margin: 0.5rem;
+}
+
+.program-cards-btn{
+    margin: 0.5rem 0;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background:#FFF;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /*.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }*/
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    color: #000;
+    transform: rotateY(180deg);
+    text-align: center;
+  }
+
+  /* Flip Icon */
+  .flip-icon {
+    position: absolute;
+    top: 90%;
+    left: 88%;
+  }
+
+.popup-header {
+  font-size: 2rem;
+}
+.popup-body {
+  padding: 1rem 0;
+}
+.popup-ques {
+  font-size: 1.25rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.text-box {
+  padding: 0 20%;
+}
+.popup-btns {
+  text-align: center;
+  padding: 0.5rem 0;
+
+}
+/* can't set custom width, only stretch/full
+.no-btn, .yes-btn {
+  --sdc-c-button-width: 7rem; 
+}*/

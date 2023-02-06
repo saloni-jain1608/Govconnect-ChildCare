@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Level_of_Radon_Gas__c</fullName>
+    <description>If radon gas selected, then provide level of radon gas.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If radon gas selected, then provide level of radon gas.</inlineHelpText>
+    <label>Level of Radon Gas</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

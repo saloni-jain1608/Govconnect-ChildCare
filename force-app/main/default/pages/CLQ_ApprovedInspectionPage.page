@@ -1,0 +1,79 @@
+<apex:page standardController="CLQ_Inspection__c">
+<apex:includeScript value="{!URLFOR($Resource.JQueryMin)}"/>
+    <style>
+        .btn{display:none;}
+        input[name=new00Nr0000000QbWQ]{
+        display:inline;
+        }        
+        input[name=run_ddp] {    
+        display:inline;
+        } 
+        .actionLink{display:none;}
+        .actionColumn{display:none;}
+        .actionColumn .actionLink{
+        pointer-events: auto;
+        cursor: pointer;
+        }
+        
+        .dataCol {
+        pointer-events: none;
+        cursor: default;
+        }
+        
+        .linklet {
+        pointer-events: none;
+        cursor: default;
+        }
+        .listHoverLinks .linklet{
+        pointer-events: auto;
+        cursor: pointer;
+        }
+        
+        .RLPanel {
+        display:none;
+        }
+        .rls_top {
+        display:none;
+        }
+        .rls_bottom {
+        display:none;
+        }
+    </style>
+
+    <script>
+        $jq=jQuery.noConflict();
+    alert();
+        function disableAllDataCellLinks() {
+            $jq('.dataCell').each(function(){$jq(this).css("pointerEvents","none");});
+        }
+
+        function enableActionLink(){
+            var edit = ['Edit'];
+            var id = $jq("a:contains('actionLink')").attr('href');
+            $jq(this).css("pointerEvents", "auto");
+        }
+
+        function enableRelatedList() {
+            var enabledList = ['Corrective Action Plans'];
+            enabledList.forEach(function(el){
+
+                if(el!==undefined) {
+                    var id = $jq("h3:contains('"+el+"')").attr('id').split('_title')[0];
+                    $jq("#"+id+"_body").find("a").each(function(){
+                        $jq(this).css("pointerEvents","auto");
+                    });
+                }
+            });    
+        }
+        $jq('document').ready(function(){
+            //enableActionLink();
+            disableAllDataCellLinks();
+            enableRelatedList();
+        });
+    </script>    
+    
+    <apex:outputPanel style="font-weight:bold" rendered="{!CLQ_Inspection__c.CLQ_Offline_Lock__c == true}">
+        <apex:pageMessage escape="false" summary="This inspection is being used in the offline visit app and is locked. Go to the offline visit app and upload the inspection before selecting this action." severity="Info" strength="2" />
+    </apex:outputPanel>
+    <apex:detail subject="{!CLQ_Inspection__c}" relatedList="true" title="true" />
+</apex:page>

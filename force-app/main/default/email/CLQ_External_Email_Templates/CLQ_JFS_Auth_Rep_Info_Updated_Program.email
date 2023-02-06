@@ -1,0 +1,60 @@
+<messaging:emailTemplate subject=" {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} Authorized Rep Info Program" recipientType="User" relatedToType="CLQ_Program_Transaction__c">
+<messaging:htmlEmailBody >
+
+<p>The program information has been updated.</p>
+
+
+<apex:repeat value="{!relatedTo.Roles__r}" var="r">
+ <apex:outputText label="Role Name" >{!r.name}</apex:outputText> 
+<table border="1" rules="all" style="padding-top:3rem;padding-bottom:3rem;">
+
+<thead>
+<tr>
+       <th>Field Name</th>
+       <th>Original Value</th>
+       <th>New Value</th>
+</tr>
+</thead>
+
+<tbody>
+ 
+   <tr>
+    <td>Role</td>
+    <td>{!r.CLQ_Prior_Role__c}</td>
+    <td>{!r.CLQ_Role__c}</td>
+   </tr>
+    <tr>
+    <td>Contact</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+    <td>{!r.CLQ_Contact__r.Name}</td>
+   </tr>
+    <tr>
+    <td>Start Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_Start_Date__c}" /></apex:outputText></td>    
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Start_Date__c}" /></apex:outputText></td>
+   </tr>
+      <tr>
+    <td>End Date</td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_Prior_End_Date__c}" /></apex:outputText></td>
+    <td><apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!r.CLQ_End_Date__c}" /></apex:outputText></td>
+   </tr>
+    <tr>
+    <td>Contact Age</td>
+    <td>{!r.CLQ_Age_Formula__c}</td>
+    <td></td>
+   </tr>  
+   
+</tbody>
+</table>
+</apex:repeat>
+
+
+<p>Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</p>
+
+<p>The Ohio Child Licensing and Quality System Team.</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

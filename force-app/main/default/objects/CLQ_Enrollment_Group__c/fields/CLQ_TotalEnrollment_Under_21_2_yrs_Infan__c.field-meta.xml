@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_TotalEnrollment_Under_21_2_yrs_Infan__c</fullName>
+    <externalId>false</externalId>
+    <formula>CLQ_Infant__c  +  CLQ_No_of_Infants__c  +  CLQ_No_of_Young_Toddler__c  +  CLQ_Younger_Toddler__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total Enrollment (Under 2 1/2 yrs)</inlineHelpText>
+    <label>Total Enrollment (Under 2 1/2)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,331 @@
+// function to Test the validity of the field checks for the following cases:
+// 1. required && valid
+// 2. required
+// 3. valid
+var Validator = function (field) {
+    this.id = field.id || null;;
+    this.name = field.name;
+    this.isValid = true;
+    this.validator = field.validator
+        ? field.validator
+        : null;
+    this.required = field.required;
+    this.regex = field.regex
+        ? field.regex
+        : null;
+    this.error = null;
+	this.msg = field.msg;
+    this.watch = field.watch
+        ? field.watch
+        : true;
+    this._event = field.event
+        ? field.event
+        : 'blur';
+    this._isTouched = false;
+    this.engineScope = field.engineScope;
+    this._isCustomValidation = false;
+
+    field.element
+      ? this.element = field.element
+      : this.element = field._form
+          ? field._form.find("[id$=" + this.id + "]")
+          : $("[id$=" + this.id + "]")
+
+
+    // private function to add the error class on the element based on the field validity
+    this._applyStyle = function () {
+        this.isValid
+            ? this.element.parent().removeClass("errorElement")
+            : this.element.parent().addClass("errorElement");
+    };
+
+    if (field.applyCustomStyle && typeof field.applyCustomStyle === "function") {
+        this.applyCustomStyle = field.applyCustomStyle;
+    } else {
+        this.applyCustomStyle = this._applyStyle;
+    }
+
+    var _this = this;
+
+    if (this.watch) { 
+        this.element.on(this._event, function (event) {
+            this._isTouched = true;
+            _this.validate();
+        });
+    }
+
+    this.validate = function () {
+        var fieldValue = this.element.val();
+		//var oldPasswordBool = true;
+		if(this._isCustomValidation && this.required){
+          this.customValidate(this);
+		  	
+          if (fieldValue == null || fieldValue == "") {
+              this.error = this.name + " cannot be empty";
+              this.isValid = false;
+			  alert('from line 63');
+			  
+
+              // field is required and is not null run the test
+          } else if (fieldValue != null) {
+             
+			 this.customValidate(this);
+			  	
+          }
+        } else if(this._isCustomValidation){
+          this.customValidate(this);
+		  	alert('4 else loop');
+          // Test if it is required and needs validation
+        } else if (this.required && this.validator) {
+            // console.log(`${this.id} is required and needs validation`); if field is required and is null its not valid
+            if (fieldValue == null || fieldValue == "") {
+                this.error = this.name + " cannot be empty";
+                this.isValid = false;
+					alert('5 else loop');
+                // field is required and is not null run the test
+            } else if (fieldValue != null) {
+                this.isValid = this.regex.test(fieldValue);
+					alert('6 else loop');
+                this.isValid
+                    ? this.error = null
+                    : this.error = this.name + " is in an invalid format";
+            }else if(fieldValue!=null && this.name=="exceptionMessage"){
+				this.isValid = false;
+				this.error = "invalid repeated password";
+				alert('My testing loop');
+			} 
+			else {
+                this.error = this.error = this.name + " is in an invalid format";
+                this.isValid = false;
+					alert('7 else loop');
+            }
+            //Test if the field is required only
+        } else if (this.required) {
+            // console.log(`${this.id} is required `);
+            if (fieldValue != "") {
+                this.error = null;
+                this.isValid = true;
+					alert('8 else loop');
+            } else {
+                this.error = this.name + " can not be empty";
+                this.isValid = false;
+					alert('9 else loop');
+            }
+
+            //Test if the field is valid
+        } else if (this.validator) {
+            // console.log(`${this.id} needs validation`);
+            if(fieldValue != ""){
+                this.isValid = this.regex.test(fieldValue);
+					alert('10 else loop');
+                this.isValid
+                    ? this.error = null
+                    : this.error = this.error = this.name + " is in an invalid format";
+                } else {
+                    this.isValid = true;
+                    this.error = null;
+						alert('11 else loop');
+                }
+                
+        }else {
+			alert('Last else loop');
+			this.error = "this is my own error";
+          //this.error = null;
+        }
+		//var excepMsg = "{!exceptionMessage}";
+		//this.error = this.name;
+		//this.isValid = false;
+		
+		
+
+
+        // apply the appropriate style
+        this.applyCustomStyle(this.element, this.isValid);
+        // console.log(this);o
+        return this.isValid;
+    };
+
+    if(field.customValidator && typeof field.customValidator === "function"){
+      this.customValidate = field.customValidator
+      this._isCustomValidation = true;
+    } else {
+      this.checkValidation = null;
+      this._isCustomValidation = false;
+
+    }
+
+};
+
+var ValidationEngine = function (validationFieldObject) {
+
+    // region Constructor
+    this.name = validationFieldObject.name || null;
+    this.error = null;
+    this._validationFields = validationFieldObject.fields;
+    this._validators = [];
+    this._validatorsMap = {};
+    this._runOnLoad = false;
+    this._defaultEvent = validationFieldObject.defaultEvent || null;
+    this._form = validationFieldObject.form || null;
+
+    if (typeof validationFieldObject.defaultStyle === "function") {
+        this._validationFields = this._validationFields.map(function (e) {
+            if (e.applyCustomStyle && typeof e.applyCustomStyle === "function") {
+                return e
+            };
+            e.applyCustomStyle = validationFieldObject.defaultStyle;
+            return e;
+        })
+    };
+
+    if (this._defaultEvent) {
+        this._validationFields = this._validationFields.map(function (e) {
+            if (e.event) {
+                return e
+            };
+            e.event = this._defaultEvent;
+        })
+    }
+
+    var _this = this;
+
+    if (this._form) {
+        this.validationFields = this._validationFields.map(function (e) {
+            e._form = _this._form;
+            return e;
+        })
+    }
+
+    // This Mapper has the validation regex rules Any new regex for a particular validator goes here
+    this._regexMap = {
+        Phone: /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/,
+        Email: /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+        SSN: /^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$/,
+        Date: /^((0?[13578]|10|12)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[01]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1}))|(0?[2469]|11)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[0]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1})))$/,
+        Number: /^\d+$/,
+        Zip: /^[0-9]{5}(?:-[0-9]{4})?$/,
+       // SSN_LastFour: /^[*]{5}\d{4}$/,  // To validate last 4 of SSN
+       "Text-Only" : /^[A-z]+$/     
+    };
+    // endregion
+
+    this._buildValidators = function () {
+        var _this = this;
+        this._validators = [];
+        this._validatorsMap = {};
+        for (var i = 0; i < this._validationFields.length; i++) {
+            var field = this._validationFields[i];
+            field.engineScope = this;
+            field.validator
+                ? field.regex = _this._regexMap[field.validator]
+                : field.regex = null;
+            var validator = new Validator(field);
+            _this._validators.push(validator);
+            _this._validatorsMap[validator.id] = validator;
+        }
+    }
+
+    this._buildValidators();
+
+    // Valdion engine
+    this.runValidations = function () {
+        for (var i = 0; i < this._validators.length; i++) {
+            var validator = this._validators[i];
+            validator.validate();
+
+        }
+    };
+
+    this.checkRequiredFields = function () {
+        var isSuccess = true;
+        $.each($('input,textarea,select').filter('[required]:visible'), function () {
+            if ($(this).val() == '') {
+                isSuccess = false;
+            }
+        });
+        return isSuccess;
+    }
+
+    // returns the list of validators
+    this.validators = function () {
+        this.runValidations();
+        return this._validators;
+    };
+
+    // region helpers
+    this.validatorsMap = function () {
+        this.runValidations();
+        return this._validatorsMap;
+    }
+
+    this.errors = function () {
+        this.runValidations();
+        return this._validators.map(function (e) {
+            return e;
+        }).filter(function (e) {
+            return !e.isValid
+        })
+    }
+
+    this.errorHtml = function () {
+        return "<ul>" + this.errors().map(function (e) {
+            return "<li>" + e.error + "</li>"
+        }).join("") + "</ul>";
+    };
+
+    this.performValidation = function () {
+        if (this.errors().length <= 0) {
+
+            this._onSucess();
+        } else {
+            this._onFailure()
+        }
+    }
+
+    this.displayErrorModal = function () {
+        //event.preventDefault();
+        OH_MODAL_UTILITY.errorMessageModal(this.errorHtml());
+    };
+
+    this._onSucess = validationFieldObject.onValidationSuccess || null;
+    this._onFailure = validationFieldObject.onValidationFailure || this.displayErrorModal;
+
+    // this.performValidation = new Promise() endRegion
+
+};
+
+var ValidationManager = function(obj){
+  this.validationEngines = [];
+  this.validationEnginesMap = {};
+
+  this._engineKeys = [];
+
+  this._buildEngines = function(){
+    for(var i = 0 ; i < obj.validators.length; i++){
+      var engine = new ValidationEngine(obj.validators[i]);
+      this.validationEngines.push(engine);
+      this.validationEnginesMap[engine.name] = obj.validators[i];
+    }
+  }
+
+  this.addEngine = function(engine){
+
+  };
+
+  this.removeEngine = function(){
+
+
+  }
+
+  this._testDupes = function(engine){
+    if(this._engineKeys.indexOf(engine.name) > -1){
+      throw "Cannot add validation engine with the same name as previously defined"
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  this._buildEngines();
+
+};

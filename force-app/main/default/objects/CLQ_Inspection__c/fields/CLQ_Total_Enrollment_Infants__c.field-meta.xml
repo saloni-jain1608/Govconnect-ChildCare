@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Total_Enrollment_Infants__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Enrollment(Infants)</label>
+    <summarizedField>CLQ_Enrollment_Group__c.CLQ_Total_No_of_Infants__c</summarizedField>
+    <summaryForeignKey>CLQ_Enrollment_Group__c.CLQ_Inspection__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

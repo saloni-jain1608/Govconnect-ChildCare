@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OCLQS_Role_Allowed__c</fullName>
+    <description>Role allowed to see the buttons on the flip card for OCLQS</description>
+    <externalId>false</externalId>
+    <label>Role Allowed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>JFS Director</fullName>
+                <default>false</default>
+                <label>JFS Director</label>
+            </value>
+            <value>
+                <fullName>JFS Licensing Admin</fullName>
+                <default>false</default>
+                <label>JFS Licensing Admin</label>
+            </value>
+            <value>
+                <fullName>JFS Owner</fullName>
+                <default>false</default>
+                <label>JFS Owner</label>
+            </value>
+            <value>
+                <fullName>JFS SUTQ Consultant</fullName>
+                <default>false</default>
+                <label>JFS SUTQ Consultant</label>
+            </value>
+            <value>
+                <fullName>ODE OCLQSAdministrator</fullName>
+                <default>false</default>
+                <label>ODE OCLQSAdministrator</label>
+            </value>
+            <value>
+                <fullName>ODE OCLQSLicensing</fullName>
+                <default>false</default>
+                <label>ODE OCLQSLicensing</label>
+            </value>
+            <value>
+                <fullName>ODE OCLQSOwner</fullName>
+                <default>false</default>
+                <label>ODE OCLQSOwner</label>
+            </value>
+            <value>
+                <fullName>ODE OCLQSSUTQ</fullName>
+                <default>false</default>
+                <label>ODE OCLQSSUTQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

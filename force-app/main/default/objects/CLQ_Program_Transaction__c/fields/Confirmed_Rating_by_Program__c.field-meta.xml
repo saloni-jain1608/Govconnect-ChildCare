@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmed_Rating_by_Program__c</fullName>
+    <description>DrawLoop: Created for Forms &amp; Reports.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;0&quot;),&quot;0&quot;,
+IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;1&quot;),&quot;1&quot;, 
+IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;2&quot;),&quot;2&quot;, 
+IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;3&quot;),&quot;3&quot;, 
+IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;4&quot;),&quot;4&quot;, 
+IF( ISPICKVAL( CLQ_Rating_Confirmed_by_Program__c , &quot;5&quot;),&quot;5&quot;, 
+
+
+&quot;&quot; 
+))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Confirmed Rating by Program</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

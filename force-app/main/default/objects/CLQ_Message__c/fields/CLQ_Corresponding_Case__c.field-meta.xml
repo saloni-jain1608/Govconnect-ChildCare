@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Corresponding_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Link the message to the corresponding Case record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link the message to the corresponding Case record.</inlineHelpText>
+    <label>Corresponding Case</label>
+    <referenceTo>CLQ_Case_Custom__c</referenceTo>
+    <relationshipLabel>Messages</relationshipLabel>
+    <relationshipName>Messages</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

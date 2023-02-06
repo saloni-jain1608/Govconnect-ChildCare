@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2" style="color: rgb(0, 0, 0);"><span style="background-color: rgb(255, 255, 255);"><font color="#333333" style=""><span style="line-height: 20px;">{!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c}&nbsp;</span><font color="#000000" style=""><span style="line-height: 20px;">has been in a temporarily&nbsp;closed/inactive status for 11 months.</span></font></font></span></font><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team.</font></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br style="color: rgb(51, 51, 51); line-height: 20px; background-color: rgb(255, 255, 255);"><span style="color: rgb(51, 51, 51); line-height: 20px; background-color: rgb(255, 255, 255);">Please contact the program to determine if they plan to reopen, or begin the closure process.</span></font></div><div style=""><font face="Verdana, Helvetica, sans-serif" size="2" style=""><span style="line-height: 20px; background-color: rgb(255, 255, 255);"><br></span></font></div><div style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2" color="#ffffff"><span style="background-color: rgb(255, 255, 255);">ref: {!CLQ_Program_Transaction__c.Id</span><span style="background-color: rgb(255, 255, 255);">}</span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

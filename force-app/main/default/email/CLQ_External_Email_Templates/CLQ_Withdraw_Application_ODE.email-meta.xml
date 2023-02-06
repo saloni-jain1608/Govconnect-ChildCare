@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Withdraw Application ODE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Withdraw Application ODE</name>
+    <style>freeForm</style>
+    <subject>{!CLQ_Program_Transaction__c.RecordType} {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c}, {!CLQ_Program_Transaction__c.Name} {!CLQ_Role__c.CLQ_Program_Transaction_Name__c} has been succesfully withdrawn</subject>
+    <textOnly>{!CLQ_Program_Transaction__c.CLQ_Program_Name__c} - {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}, {!CLQ_Program_Transaction__c.RecordType} {!CLQ_Role__c.CLQ_Program_Transaction_RecordType__c} , {!CLQ_Program_Transaction__c.Name}{!CLQ_Role__c.CLQ_Program_Transaction_Name__c} has been successfully withdrawn
+
+
+The Licensing Online Team  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

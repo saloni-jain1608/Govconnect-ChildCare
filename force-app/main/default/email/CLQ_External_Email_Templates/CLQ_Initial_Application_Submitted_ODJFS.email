@@ -1,0 +1,25 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2"><font><font face="arial"><span style="font-size: 12pt; white-space: pre-wrap;">You have successfully submitted an application for licensure. A copy of the application is attached to this email. You will be contacted about the next steps in the process. It can take a minimum of 60 days from the application submission date to be approved for a license.
+
+
+New BCI/FBI background checks must be submitted for the following individuals:
+*Type A Administrators
+*Type B Providers
+*All residents 18 years of age or older in Type A and Type B homes 
+*Center Administrators 
+*Individual Owners
+
+Go to http://jfs.ohio.gov/CDC/childcare.stm for more information on the BCI/FBI requirements.
+
+Access the Facility Information screen by using your Program Number, </span></font><span style="white-space: pre-wrap;">{!CLQ_Program_Transaction__c.CLQ_Program_Number__c}</span><font face="arial"><span style="font-size: 12pt; white-space: pre-wrap;"> , through the My Programs tab located at the top of the OCLQS Home screen. This information must be completed prior to license approval.
+
+To view the details of this request, log </span></font></font><span style="color: rgb(152, 0, 0); font-family: arial; font-size: 12pt; white-space: pre-wrap;">on to</span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; white-space: pre-wrap;"> OCLQS.  (insert OCLQS log in link) </span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2">Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team.
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</font></span><span style="font-size: 13px; font-family: calibri; white-space: pre-wrap; background-color: rgb(255, 255, 255);">
+</span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">ref: {!CLQ_Program_Transaction__c.Id</span><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">}</span></div>]]></td>
+</tr>
+</table>

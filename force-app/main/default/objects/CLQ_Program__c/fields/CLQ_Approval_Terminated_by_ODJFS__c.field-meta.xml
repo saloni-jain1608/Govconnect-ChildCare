@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approval_Terminated_by_ODJFS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Approval Terminated by ODJFS - Added for Day Camp admins to terminate the application</description>
+    <externalId>false</externalId>
+    <label>Approval Terminated by ODJFS</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

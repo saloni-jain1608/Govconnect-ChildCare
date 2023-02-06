@@ -1,0 +1,26 @@
+<aura:component
+    implements="lightning:isUrlAddressable,force:lightningQuickAction,lightning:actionOverride,force:hasRecordId,flexipage:availableForAllPageTypes"
+    access="global">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="closeSignature" event="c:GLC_CloseSignModal" action="{!c.closeSignModal}" />
+
+    <aura:attribute name="render" type="boolean" default="false" />
+    <aura:attribute name="renderRules" type="boolean" default="true" />
+    <aura:attribute name="sign" type="boolean" default="false" />
+
+    <aura:attribute name="recordId" type="String" />
+
+    <aura:if isTrue="{!v.render}">
+        <div class="slds-align_absolute-center"><b>Visit Mode Complete!</b></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.sign}">
+        <c:GLC_SignInspection recordId="{!v.recordId}" />
+    </aura:if>
+
+    <aura:if isTrue="{!v.renderRules}">
+        <c:glcVMContainer recordId="{!v.recordId}" onvisitCompleted="{!c.handleVisitCompeltion}" />
+    </aura:if>
+
+</aura:component>

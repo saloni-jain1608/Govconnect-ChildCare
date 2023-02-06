@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_License_Inspection_Tool</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Application_To_Inspection_Type__c</field>
+        <operation>equals</operation>
+        <value>Pre-license</value>
+    </filters>
+    <label>Pre License Inspection Tool</label>
+    <language>en_US</language>
+</ListView>

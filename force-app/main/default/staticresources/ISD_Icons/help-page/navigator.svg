@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g fill="none" fill-rule="nonzero">
+        <ellipse cx="14.682" cy="14.907" fill="#324A5E" rx="14.682" ry="14.907"/>
+        <ellipse cx="14.635" cy="14.907" fill="#E6E9EE" rx="12.274" ry="12.471"/>
+        <path fill="#FF7058" d="M16.974 17.343l2.76-7.6-7.46 2.812z"/>
+        <path fill="#54C0EB" d="M12.296 12.569l-2.76 7.6 7.46-2.812z"/>
+        <ellipse cx="14.635" cy="15.004" fill="#FFF" rx="1.511" ry="1.559"/>
+        <ellipse cx="25.068" cy="14.956" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="4.202" cy="14.956" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="14.682" cy="25.575" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="14.682" cy="4.336" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="22.047" cy="22.458" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="7.223" cy="7.453" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="7.223" cy="22.458" fill="#ACB3BA" rx="1" ry="1"/>
+        <ellipse cx="22.047" cy="7.453" fill="#ACB3BA" rx="1" ry="1"/>
+    </g>
+</svg>

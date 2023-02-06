@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Education_Verified__c</fullName>
+    <externalId>false</externalId>
+    <label>Education Verified</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>In Compliance</fullName>
+                <default>false</default>
+                <label>In Compliance</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>No Educational Verification</fullName>
+                <default>false</default>
+                <label>No Educational Verification</label>
+            </value>
+            <value>
+                <fullName>Not High School Grad</fullName>
+                <default>false</default>
+                <label>Not High School Grad</label>
+            </value>
+            <value>
+                <fullName>HS Needs Translated/Equivalency</fullName>
+                <default>false</default>
+                <label>HS Needs Translated/Equivalency</label>
+            </value>
+            <value>
+                <fullName>Home School Documentation Missing</fullName>
+                <default>false</default>
+                <label>Home School Documentation Missing</label>
+            </value>
+            <value>
+                <fullName>Missing Refugee Documentation</fullName>
+                <default>false</default>
+                <label>Missing Refugee Documentation</label>
+            </value>
+            <value>
+                <fullName>Vocational Information Missing</fullName>
+                <default>false</default>
+                <label>Vocational Information Missing</label>
+            </value>
+            <value>
+                <fullName>College Credit Information Missing</fullName>
+                <default>false</default>
+                <label>College Credit Information Missing</label>
+            </value>
+            <value>
+                <fullName>Pending Verification</fullName>
+                <default>false</default>
+                <label>Pending Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

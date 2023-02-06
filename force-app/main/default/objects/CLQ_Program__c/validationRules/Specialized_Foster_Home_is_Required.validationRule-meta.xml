@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialized_Foster_Home_is_Required</fullName>
+    <active>true</active>
+    <description>Specialized Foster Home is Required if Foster Parent is Yes</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL( CLQ_Are_you_Foster_Parent__c  ,&quot;Yes&quot;),
+ISBLANK(TEXT( CLQ_Specialized_Foster_Home__c )))</errorConditionFormula>
+    <errorDisplayField>CLQ_Specialized_Foster_Home__c</errorDisplayField>
+    <errorMessage>Please select Specialized Foster Home</errorMessage>
+</ValidationRule>

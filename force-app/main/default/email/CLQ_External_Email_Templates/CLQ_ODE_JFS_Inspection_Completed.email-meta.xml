@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>37.0</apiVersion>
+    <available>true</available>
+    <description>If an inspection is submitted for approval and it is not a revision, the new report is emailed to the program when the user elects to send the notification to the program.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ODE/ JFS Inspection Completed</name>
+    <style>none</style>
+    <subject>Inspection Completed for ,</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

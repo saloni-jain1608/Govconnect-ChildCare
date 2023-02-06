@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Foster_Children_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL( CLQ_Are_you_a_foster_parent__c ,&quot;Yes&quot;),
+ISBLANK(TEXT(CLQ_Foster_Children__c)))</errorConditionFormula>
+    <errorDisplayField>CLQ_Foster_Children__c</errorDisplayField>
+    <errorMessage>Foster Children is Required if Foster Parent is Yes</errorMessage>
+</ValidationRule>

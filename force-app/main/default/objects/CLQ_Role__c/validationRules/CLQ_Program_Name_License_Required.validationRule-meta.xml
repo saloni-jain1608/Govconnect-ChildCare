@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Program_Name_License_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL(Individual_an_Admin_at_other_locations__c, &apos;Yes&apos;) , OR(ISBLANK( CLQ_Program_Name1__c ),ISNULL( CLQ_X1_License_No__c )))</errorConditionFormula>
+    <errorMessage>Select at least one Program Name/License No.</errorMessage>
+</ValidationRule>

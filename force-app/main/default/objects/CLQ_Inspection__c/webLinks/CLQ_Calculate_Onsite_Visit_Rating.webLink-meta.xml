@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Calculate_Onsite_Visit_Rating</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Calculate Onsite Visit Rating</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var pickVal = &quot;{!CLQ_Inspection__c.CLQ_Inspection_Status__c}&quot;; 
+var CanSubmitForApproval = true; //15653
+
+//15653 - Removed Rating is equal to Null as some findings will have points in findings and we need to conider
+//var Findings = sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos; and Rating__c != null &quot;); 
+var Findings = sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where CLQ_Inspection__c = &apos;{!CLQ_Inspection__c.Id}&apos; &quot;);
+findingList = Findings.getArray(&quot;records&quot;);
+
+//15653 - starts
+var rulesInspected = sforce.connection.query(&quot;SELECT Id, Name FROM CLQ_Rules_Inspected__c where CLQ_Inspection_No__c = &apos;{!CLQ_Inspection__c.Id}&apos;&quot;); 
+var rulesInspectedList = rulesInspected.getArray(&quot;records&quot;); 
+
+var sizeRL = rulesInspectedList.length; 
+var sizeFL = findingList.length; 
+
+if(sizeRL != sizeFL){ 
+	CanSubmitForApproval = false;
+}
+//15653 - Ends
+var isFindDef = false;
+var size = findingList.length;
+
+for(i=0;i&lt;size;i++)
+{
+	if(findingList[i].Rating__c == &apos;D&apos;)
+	{
+		isFindDef = true;
+	}
+}
+
+if(findingList.length == 0){ 
+	alert(&apos;Please perform all Onsite Visit actions prior to calculating Onsite Visit Rating&apos;); 
+} 
+else{
+	if(!isFindDef)
+	{
+		if(pickVal == &apos;Deferral&apos;){
+			alert(&apos;Inspection Status is Deferral, Onsite Rating cannot be Calculated&apos;);
+		}
+		else if(pickVal == &apos;Rating Assessment Complete&apos;){
+			alert(&apos;Inspection Status is Rating Assessment Complete, Onsite Rating cannot be Re-Calculated&apos;);
+		}		
+		else{//15653
+			if(CanSubmitForApproval == false){
+				alert(&apos;All Onsite Standard Findings must have a rating or point value before the Onsite Rating can be calculated.&apos;);
+			}else{
+				window.location = &apos;/apex/CLQ_CalculateOnsiteVisitRating?id={!CLQ_Inspection__c.Id}&apos;;
+			}
+		}
+	}
+	else
+	{
+		alert(&apos;Calculate Onsite Rating cannot be performed, one or more Findings are in Deferral status&apos;);
+	}
+}</url>
+</WebLink>

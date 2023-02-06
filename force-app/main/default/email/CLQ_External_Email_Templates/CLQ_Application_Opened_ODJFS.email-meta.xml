@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Application Opened ODJFS</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Application Opened ODJFS</name>
+    <style>freeForm</style>
+    <subject>{!CLQ_Program_Transaction__c.RecordType} , {!CLQ_Program_Transaction__c.Name} Created</subject>
+    <textOnly>{!CLQ_Program_Transaction__c.RecordType} , {!CLQ_Program_Transaction__c.Name} has been successfully created. The application must be completed and submitted within 120 days.  Failure to submit the application within 120 days will result in the application being deleted by the system.
+Contact the Child Care Help Desk for additional assistance at {!$Label.ChildHelpDeskNum}.  The {!$Label.StateName} Child Licensing and Quality System Team.  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

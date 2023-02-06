@@ -1,0 +1,8 @@
+<apex:page controller="DownloadLicenseController" renderAs="Pdf" >
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <center><apex:image url="{!$Resource.SD_Logo}" width="300" height="65"/>
+  <h2 style='color:blue'>LICENSE TO OPERATE</h2></center>
+  <apex:outputText value="{!programid}" />
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

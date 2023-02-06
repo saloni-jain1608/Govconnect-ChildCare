@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Field_Officers__c</fullName>
+    <externalId>false</externalId>
+    <label>CCC Field Office</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VDSS/CENTRAL LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/CENTRAL LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/PIEDMONT LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/PIEDMONT LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS_CHILD_WELFARE_LICENSING</fullName>
+                <default>false</default>
+                <label>VDSS/CHILD_WELFARE_LICENSING</label>
+            </value>
+            <value>
+                <fullName>VDSS/PENINSULA LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/PENINSULA LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/EASTERN LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/EASTERN LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/VALLEY LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/VALLEY LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/FAIRFAX LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/FAIRFAX LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/WESTERN LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/WESTERN LICENSING OFFICE</label>
+            </value>
+            <value>
+                <fullName>VDSS/NORTHERN LICENSING OFFICE</fullName>
+                <default>false</default>
+                <label>VDSS/NORTHERN LICENSING OFFICE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

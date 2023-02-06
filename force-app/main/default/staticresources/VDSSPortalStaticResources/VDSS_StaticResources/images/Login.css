@@ -1,0 +1,27 @@
+/*Login and Registration*/
+.salesforceIdentityLoginBody2 .cCenterPanel{
+    left: 20%;
+    width: 20%;
+}
+.salesforceIdentityLoginBody2 .inputBox{
+    width:88%!important;
+}
+
+.salesforceIdentityLoginBody2 .inputContainer{
+    padding: 5px!important;
+    border-radius: 0.25rem!important;
+}
+
+.salesforceIdentityLoginBody2 .uiButton {
+    width: 35%!important;
+    border-radius: 0.25rem!important;
+    padding: 0.5rem!important;
+}
+.forceCommunityThemeNav .mainNavItem .linkBtn{
+    font-size:large!important;
+}
+
+/*Home Page*/
+.citizenHomeHero .ctaButtons{
+	font-size: large;
+}

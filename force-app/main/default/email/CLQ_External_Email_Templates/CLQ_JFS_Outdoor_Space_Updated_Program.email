@@ -1,0 +1,29 @@
+<messaging:emailTemplate subject=" {!relatedTo.CLQ_Program_Number__c}, {!relatedTo.CLQ_Program_Name__c} Outdoor Space Info Program" recipientType="User" relatedToType="CLQ_Program_Transaction__c">
+<messaging:htmlEmailBody >
+
+<p>The program information has been updated.</p>
+
+
+<apex:repeat value="{!relatedTo.Room_Space_Transactions__r}" var="r">
+ <apex:outputText rendered="{!NOT ISBLANK(r.clq_formatted_change_table__c)}" label="Room/Space Transaction Name"> {!r.name}</apex:outputText><br/> 
+
+<apex:outputText value="{!r.clq_formatted_change_table__c}" escape="false" /> 
+</apex:repeat>
+
+
+List of newly added Outdoor Space:<br/>
+<apex:repeat value="{!relatedTo.Room_Space_Transactions__r}" var="r">
+ <Strong><apex:outputText rendered="{!NOT(r.CLQ_XExisting_Room__c)}" label="Room/Space Transaction Name"> {!r.name}</apex:outputText><br/> </strong>
+</apex:repeat>
+
+
+
+<p>Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</p>
+
+<p>The Ohio Child Licensing and Quality System Team.</p>
+
+<p>This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

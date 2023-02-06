@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344" height="73" viewBox="0 0 344 73">
+    <g fill="none" fill-rule="evenodd" transform="translate(22 5)">
+        <g transform="translate(9 9)">
+            <rect width="283" height="44" fill="#04844B" rx="4"/>
+            <text fill="#FFF" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20">
+                <tspan x="105.395" y="28.48">Submit</tspan>
+            </text>
+        </g>
+        <rect width="294" height="57" x="3" y="3" stroke="#F8E71C" stroke-width="6" rx="6"/>
+    </g>
+</svg>

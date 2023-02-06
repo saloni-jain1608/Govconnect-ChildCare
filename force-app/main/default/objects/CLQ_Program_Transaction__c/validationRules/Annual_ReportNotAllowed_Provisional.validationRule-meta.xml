@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_ReportNotAllowed_Provisional</fullName>
+    <active>true</active>
+    <description>The annual report is not allowed if the program license type is &apos;Provisional&apos;.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT(Skip_Validation__c) &amp;&amp; AND(!CLQ_Program__r.ByPass_Annual_ReportNotAllowed_Provision__c, RecordType.Name == &apos;SUTQ - Annual Report&apos;, 
+ TEXT(CLQ_Program__r.CLQ_License_Type__c) == &apos;Provisional&apos;)</errorConditionFormula>
+    <errorMessage>Program license type shouldn&apos;t be provisional for annual report.</errorMessage>
+</ValidationRule>

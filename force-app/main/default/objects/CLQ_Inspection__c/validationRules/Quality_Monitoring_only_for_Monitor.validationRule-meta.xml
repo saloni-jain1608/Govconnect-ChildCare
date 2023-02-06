@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Monitoring_only_for_Monitor</fullName>
+    <active>true</active>
+    <description>Only allow Quality Monitoring field to be edited when the Inspection Type is Monitor</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp;
+ (CLQ_Quality_Monitoring__c=TRUE) &amp;&amp; NOT( ISPICKVAL( CLQ_Inspection_Type__c , &apos;Monitor&apos;) )</errorConditionFormula>
+    <errorMessage>Quality Monitoring can only be selected for Inspections of Type: Monitor</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_COC_Approved__c</fullName>
+    <description>[DrawLoop]: Used in WF Outbound Message
+[Task 11630] DDP = License Face Certificate ; Delivery = SMTP - ODJFS COC Approved &amp; SMTP - ODE COC Approved</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(CLQ_Program_Record_Type__c = &quot;FCC - Type A Home&quot;,CLQ_Program_Record_Type__c = &quot;FCC - Type B Home&quot;,CLQ_Program_Record_Type__c = &quot;Child Care Center&quot;) , &quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf0;Deploy:a0135000000kgn9&quot;, IF( OR(CLQ_Program_Record_Type__c = &quot;Pre School&quot;,CLQ_Program_Record_Type__c = &quot;School Age Child Care&quot;) , &quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a0335000002RUf0;Deploy:a0135000000kgn8&quot;, &quot;&quot;) )</formula>
+    <label>Drawloop_Next COC Approved</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

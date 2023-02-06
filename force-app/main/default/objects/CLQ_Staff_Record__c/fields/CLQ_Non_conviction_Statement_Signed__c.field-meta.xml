@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Non_conviction_Statement_Signed__c</fullName>
+    <externalId>false</externalId>
+    <label>Non-conviction Statement Signed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Compliance</fullName>
+                <default>false</default>
+                <label>In Compliance</label>
+            </value>
+            <value>
+                <fullName>ODE - Not available</fullName>
+                <default>false</default>
+                <label>ODE - Not available</label>
+            </value>
+            <value>
+                <fullName>Missing Signature</fullName>
+                <default>false</default>
+                <label>Missing Signature</label>
+            </value>
+            <value>
+                <fullName>ODE - Not updated</fullName>
+                <default>false</default>
+                <label>ODE - Not updated</label>
+            </value>
+            <value>
+                <fullName>ODJFS - No Statement on File</fullName>
+                <default>false</default>
+                <label>ODJFS - No Statement on File</label>
+            </value>
+            <value>
+                <fullName>ODJFS - No Annual Update</fullName>
+                <default>false</default>
+                <label>ODJFS - No Annual Update</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Dates Missing</fullName>
+                <default>false</default>
+                <label>ODJFS - Dates Missing</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Admin. Signature Missing</fullName>
+                <default>false</default>
+                <label>ODJFS - Admin. Signature Missing</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Missing Back Page</fullName>
+                <default>false</default>
+                <label>ODJFS - Missing Back Page</label>
+            </value>
+            <value>
+                <fullName>ODJFS - Pending verification</fullName>
+                <default>false</default>
+                <label>ODJFS - Pending verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

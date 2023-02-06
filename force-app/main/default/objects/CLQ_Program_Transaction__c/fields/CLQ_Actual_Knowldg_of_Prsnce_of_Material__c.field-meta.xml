@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Actual_Knowldg_of_Prsnce_of_Material__c</fullName>
+    <description>Do you have actual knowledge of the presence of any of the below identified materials on the property?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do you have actual knowledge of the presence of any of the below identified materials on the property?</inlineHelpText>
+    <label>Actual Knowledge of Presence of Material</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lead based paint</fullName>
+                <default>false</default>
+                <label>Lead based paint</label>
+            </value>
+            <value>
+                <fullName>Asbestos</fullName>
+                <default>false</default>
+                <label>Asbestos</label>
+            </value>
+            <value>
+                <fullName>Underground storage of hazards</fullName>
+                <default>false</default>
+                <label>Underground storage of hazards</label>
+            </value>
+            <value>
+                <fullName>Radon Gas</fullName>
+                <default>false</default>
+                <label>Radon Gas</label>
+            </value>
+            <value>
+                <fullName>Other toxic substances</fullName>
+                <default>false</default>
+                <label>Other toxic substances</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

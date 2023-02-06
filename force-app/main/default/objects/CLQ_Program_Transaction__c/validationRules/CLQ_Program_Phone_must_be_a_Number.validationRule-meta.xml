@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Program_Phone_must_be_a_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name = &apos;Day Camp&apos;, NOT(ISBLANK(CLQ_Program_Phone__c)),
+OR( NOT(ISNUMBER(CLQ_Program_Phone__c)),AND(ISNUMBER( CLQ_Program_Phone__c ), LEN(CLQ_Program_Phone__c)&lt;&gt; 10) ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Program_Phone__c</errorDisplayField>
+    <errorMessage>Program Phone must be a 10 digit number and cannot contain Alphabets</errorMessage>
+</ValidationRule>

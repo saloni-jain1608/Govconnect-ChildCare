@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Total__c</fullName>
+    <description>Forms &amp; Reports (DrawLoop): Used in DDPs</description>
+    <externalId>false</externalId>
+    <formula>VALUE( Learning_And_Development_Domain_Points__c)  +  VALUE(A_LP_Domain_Points__c) +  VALUE(SQ_PD_Domain_Points__c) +  VALUE(F_CP_Domain_Points__c) +  VALUE(Accreditation_Domain_Points__c) + VALUE(Ratio_Group_Size_Domain_Points__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Overall Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

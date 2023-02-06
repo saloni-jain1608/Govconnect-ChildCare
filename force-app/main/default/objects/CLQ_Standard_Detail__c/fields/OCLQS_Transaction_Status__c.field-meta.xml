@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OCLQS_Transaction_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Transaction Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual Report Disapproved</fullName>
+                <default>false</default>
+                <label>Annual Report Disapproved</label>
+            </value>
+            <value>
+                <fullName>Application Revised</fullName>
+                <default>false</default>
+                <label>Application Revised</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Approver Review In Progress</fullName>
+                <default>false</default>
+                <label>Approver Review In Progress</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Certified</fullName>
+                <default>false</default>
+                <label>Certified</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Closed at Applicant’s Request</fullName>
+                <default>false</default>
+                <label>Closed at Applicant’s Request</label>
+            </value>
+            <value>
+                <fullName>Closed by System</fullName>
+                <default>false</default>
+                <label>Closed by System</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Deferral</fullName>
+                <default>false</default>
+                <label>Deferral</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Ineligible</fullName>
+                <default>false</default>
+                <label>Ineligible</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Licensed</fullName>
+                <default>false</default>
+                <label>Licensed</label>
+            </value>
+            <value>
+                <fullName>Not Complete</fullName>
+                <default>false</default>
+                <label>Not Complete</label>
+            </value>
+            <value>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+                <label>Not Submitted</label>
+            </value>
+            <value>
+                <fullName>Onsite Visit Pending</fullName>
+                <default>false</default>
+                <label>Onsite Visit Pending</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Rating Assessment Complete</fullName>
+                <default>false</default>
+                <label>Rating Assessment Complete</label>
+            </value>
+            <value>
+                <fullName>Rating Recommended for Review</fullName>
+                <default>false</default>
+                <label>Rating Recommended for Review</label>
+            </value>
+            <value>
+                <fullName>Registered</fullName>
+                <default>false</default>
+                <label>Registered</label>
+            </value>
+            <value>
+                <fullName>Registration Assigned</fullName>
+                <default>false</default>
+                <label>Registration Assigned</label>
+            </value>
+            <value>
+                <fullName>Resubmitted</fullName>
+                <default>false</default>
+                <label>Resubmitted</label>
+            </value>
+            <value>
+                <fullName>Returned for Revision</fullName>
+                <default>false</default>
+                <label>Returned for Revision</label>
+            </value>
+            <value>
+                <fullName>Returned to Reviewer</fullName>
+                <default>false</default>
+                <label>Returned to Reviewer</label>
+            </value>
+            <value>
+                <fullName>Return for Revision</fullName>
+                <default>false</default>
+                <label>Return for Revision</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Supervisor Desk Review</fullName>
+                <default>false</default>
+                <label>Supervisor Desk Review</label>
+            </value>
+            <value>
+                <fullName>Supervisor On-Site Review</fullName>
+                <default>false</default>
+                <label>Supervisor On-Site Review</label>
+            </value>
+            <value>
+                <fullName>System Deleted</fullName>
+                <default>false</default>
+                <label>System Deleted</label>
+            </value>
+            <value>
+                <fullName>Unable to Rate</fullName>
+                <default>false</default>
+                <label>Unable to Rate</label>
+            </value>
+            <value>
+                <fullName>Under Reviewer Review</fullName>
+                <default>false</default>
+                <label>Under Reviewer Review</label>
+            </value>
+            <value>
+                <fullName>Withdraw</fullName>
+                <default>false</default>
+                <label>Withdraw</label>
+            </value>
+            <value>
+                <fullName>Withdrawn at Applicant&apos;s Request</fullName>
+                <default>false</default>
+                <label>Withdrawn at Applicant&apos;s Request</label>
+            </value>
+            <value>
+                <fullName>Withdrawn by Program</fullName>
+                <default>false</default>
+                <label>Withdrawn by Program</label>
+            </value>
+            <value>
+                <fullName>Revision In Progress</fullName>
+                <default>false</default>
+                <label>Revision In Progress</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

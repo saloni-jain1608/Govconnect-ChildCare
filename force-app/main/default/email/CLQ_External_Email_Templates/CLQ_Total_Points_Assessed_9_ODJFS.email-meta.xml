@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>[6/14/2017] CR#11200</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Total Points Assessed_9-ODJFS</name>
+    <style>formalLetter</style>
+    <subject>Non-Compliance Point Accumulation Threshold for {!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c} Achieved.</subject>
+    <textOnly>{!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c} has accumulated at least 15 serious and moderate risk points from all inspections during the provisional license period. Please discuss a plan with your supervisor to continue monitoring this programs compliance during the provisional period.
+
+The Ohio Child Licensing and Quality System Team
+
+
+Reference Id ref: {!CLQ_Program__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

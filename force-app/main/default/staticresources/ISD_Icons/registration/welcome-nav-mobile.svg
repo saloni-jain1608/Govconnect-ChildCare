@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="138" height="137" viewBox="0 0 138 137">
+    <defs>
+        <ellipse id="a" cx="65" cy="65.073" rx="65" ry="65.073"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(4 3.258)">
+            <use fill="#068BFF" xlink:href="#a"/>
+            <ellipse cx="65" cy="65.073" stroke="#FFF" stroke-width="6.19" rx="61.905" ry="61.978"/>
+            <ellipse cx="65" cy="65.073" stroke="#068BFF" stroke-width="3.095" rx="66.548" ry="66.621"/>
+        </g>
+        <g fill-rule="nonzero" transform="translate(41.143 34.781)">
+            <path fill="#FFF" d="M53.783 0H3.108A2.514 2.514 0 0 0 .595 2.51v60.185a2.51 2.51 0 0 0 2.513 2.51H53.78a2.51 2.51 0 0 0 2.512-2.51V2.51A2.508 2.508 0 0 0 53.783 0zM5.62 60.184V5.024h45.647v55.16H5.62z"/>
+            <rect width="21.033" height="5.051" x="23.813" y="17.988" fill="#00437D" rx="2.526"/>
+            <rect width="21.033" height="5.051" x="23.813" y="29.963" fill="#00437D" rx="2.526"/>
+            <rect width="9.194" height="9.185" x="12.381" y="40.308" fill="#FFF" rx="4.592"/>
+            <rect width="9.194" height="9.185" x="12.381" y="27.899" fill="#00437D" rx="4.592"/>
+            <rect width="9.194" height="9.185" x="12.381" y="16.272" fill="#00437D" rx="4.592"/>
+            <rect width="21.033" height="5.048" x="23.813" y="42.21" fill="#FFF" rx="2.524"/>
+        </g>
+    </g>
+</svg>

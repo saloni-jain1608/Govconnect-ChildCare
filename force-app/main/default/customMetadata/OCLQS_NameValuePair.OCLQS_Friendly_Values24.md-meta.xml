@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCLQS_Friendly_Values24</label>
+    <protected>false</protected>
+    <values>
+        <field>Value1__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Not Verified__Ineligible==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Registration Assigned==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Return for Revision==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value2__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Not Verified__Supervisor Desk Review==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Unable to Rate==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Onsite Visit Pending==Under Review**YES</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">CLQ_Transaction_Document__c===&gt;Not Verified__Deferral==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__Pending Approval==Under Review**YES
+CLQ_Transaction_Document__c===&gt;Not Verified__System Deleted==Under Review**YES</value>
+    </values>
+</CustomMetadata>

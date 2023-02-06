@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Annual Report desk review deferral. [6/12/17]: Updated for CR #11200</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SUTQ Email - AR_desk_review_deferral</name>
+    <style>none</style>
+    <subject>{!CLQ_Program_Transaction__c.CLQ_Program_Name__c}, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} has been given a SUTQ deferral</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Rule__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field implements the master-detail relationship between the master Rules object and the detail CLQ_Junction_RuleRegs object</description>
+    <externalId>false</externalId>
+    <label>Rule</label>
+    <referenceTo>CLQ_Rule__c</referenceTo>
+    <relationshipLabel>Associated Regulations</relationshipLabel>
+    <relationshipName>CLQ_Junction_RuleRegs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

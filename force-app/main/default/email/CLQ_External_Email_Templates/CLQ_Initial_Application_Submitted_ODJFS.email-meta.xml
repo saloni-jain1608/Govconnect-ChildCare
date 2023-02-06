@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>Initial Application Submitted ODJFS</name>
+    <style>freeForm</style>
+    <subject>Initial Application for Licensure Submitted for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c} , {!CLQ_Program_Transaction__c.CLQ_Program_Number__c}</subject>
+    <textOnly>You have successfully submitted an application for licensure. A copy of the application is attached to this email. You will be contacted about the next steps in the process. It can take a minimum of 60 days from the application submission date to be approved for a license.   New BCI/FBI background checks must be submitted for the following individuals: *Type A Administrators *Type B Providers *All residents 18 years of age or older in Type A and Type B homes *Center Administrators *Individual Owners  Go to http://jfs.ohio.gov/CDC/childcare.stm for more information on the BCI/FBI requirements.  Access the Facility Information screen by using your Program Number, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} , through the My Programs tab located at the top of the OCLQS Home screen. This information must be completed prior to license approval.  To view the details of this request, log on to OCLQS.  (insert OCLQS log in link)
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.  The Ohio Child Licensing and Quality System Team.  This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

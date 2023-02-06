@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_No__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection No</label>
+    <referenceTo>CLQ_Inspection__c</referenceTo>
+    <relationshipLabel>Rules Inspected</relationshipLabel>
+    <relationshipName>Rules_Inspected</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

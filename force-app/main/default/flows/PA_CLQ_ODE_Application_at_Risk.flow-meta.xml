@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>ODE_Application_needs_Recommendation_at_risk</name>
+        <label>ODE Application needs Recommendation (at risk)</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <actionName>CLQ_Program_Transaction__c.CLQ_ODE_Application_needs_Recommendation_at_risk</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <interviewLabel>PA CLQ ODE Application at Risk {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PA CLQ ODE Application at Risk</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>( 1 OR 2 OR 3 ) AND ( 4 OR 5 ) AND 6</filterLogic>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Under Reviewer Review</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Transaction_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Returned for Revision</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>School Age Child Care</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CLQ_Program_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Pre School</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>clq_recordtypename__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application - ODE Program</stringValue>
+            </value>
+        </filters>
+        <object>CLQ_Program_Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X335_Days_After_Program_Application_XOld_Submission_Date1</name>
+            <connector>
+                <targetReference>ODE_Application_needs_Recommendation_at_risk</targetReference>
+            </connector>
+            <label>335 Days After Program Application: XOld Submission Date1</label>
+            <offsetNumber>335</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>CLQ_Old_Submission_Date1__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

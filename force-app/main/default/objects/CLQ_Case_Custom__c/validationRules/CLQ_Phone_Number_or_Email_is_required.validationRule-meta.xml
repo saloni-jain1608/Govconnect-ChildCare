@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Phone_Number_or_Email_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name = &apos;Alleged Ops&apos;,
+!ISBLANK( CLQ_Referral_Taken_by__c ), ISBLANK(CLQ_Referral_Phone__c), ISBLANK(CLQ_Referral_Email__c))</errorConditionFormula>
+    <errorMessage>Phone number or email is required if ‘Referral Taken By (individual’s name):’ is entered.</errorMessage>
+</ValidationRule>

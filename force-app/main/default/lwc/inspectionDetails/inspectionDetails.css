@@ -1,0 +1,74 @@
+.card-one, .cDEL_FHA_Dashboard .card-two {
+    padding: 20px;
+}
+.cDEL_FHA_Dashboard .custom-margin {
+    margin-bottom: 1.5rem;
+}
+.cDEL_FHA_Dashboard .notif-container, .cDEL_FHA_Dashboard .card-one, .cDEL_FHA_Dashboard .card-two {
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-shadow: 0 2px 12px 1px rgba(8, 55, 109, 0.1);
+}
+.cDEL_FHA_Dashboard .cardone-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #516174;
+    padding-bottom: 16px;
+    border-bottom: solid 1px #e0e5ee;
+}
+.second-col {
+    padding: 16px 0;
+}
+.rect-card {
+    padding: 1rem;
+}
+.cDEL_FHA_DashboardCard.card {
+    cursor: pointer;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-shadow: 0 2px 12px 1px rgba(8, 55, 109, 0.1);
+    border-width: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+.img-container {
+    text-align: center;
+}
+.topic-img {
+    width: 94px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+.topic-name {
+    text-align: center;
+    padding-top: 16px;
+    font-size: 28px;
+}
+.topic {
+    width: 140px;
+}
+.foster-requirements-list-wrapper {
+    list-style: inherit;
+    margin: auto;
+    width: 50%;
+    padding: .5rem 0;
+    text-align: left;
+    color: var(--c-ISDLocateResourceCardsDetailsInfoType,#66788c);
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}

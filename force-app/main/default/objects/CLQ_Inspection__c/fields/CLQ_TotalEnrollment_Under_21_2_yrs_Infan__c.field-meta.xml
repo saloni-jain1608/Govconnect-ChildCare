@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_TotalEnrollment_Under_21_2_yrs_Infan__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total Enrollment (Under 2 1/2 yrs - Infants &amp; YT)</inlineHelpText>
+    <label>Total Enrollment (Under 2 1/2)</label>
+    <summarizedField>CLQ_Enrollment_Group__c.CLQ_TotalEnrollment_Under_21_2_yrs_Infan__c</summarizedField>
+    <summaryForeignKey>CLQ_Enrollment_Group__c.CLQ_Inspection__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

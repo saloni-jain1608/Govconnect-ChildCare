@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_In_Home_Aides_Not_Eligible_For_SUTQ</fullName>
+    <active>true</active>
+    <description>In-Home Aides are not eligible for SUTQ</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND (
+( OR (
+RecordType.Name == &apos;SUTQ - Annual Report&apos;, 
+RecordType.Name == &apos;SUTQ - Initial Registration&apos;,
+RecordType.Name == &apos;SUTQ - Ongoing Registration&apos;
+)),
+ CLQ_Program__r.CLQ_Program_Type__c  == &apos;In-Home Aide&apos;
+)</errorConditionFormula>
+    <errorMessage>In-Home Aides are not eligible for Step Up To Quality.</errorMessage>
+</ValidationRule>

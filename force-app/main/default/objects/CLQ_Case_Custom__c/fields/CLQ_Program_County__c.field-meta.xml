@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Program_County__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CLQ_Program__r.CLQ_County__c != null, CLQ_Program__r.CLQ_County__r.Name, IF(CLQ_County_Alleged_Ops__c != null, CLQ_County_Alleged_Ops__r.Name, CLQ_County_Complainant__r.Name))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Program County</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

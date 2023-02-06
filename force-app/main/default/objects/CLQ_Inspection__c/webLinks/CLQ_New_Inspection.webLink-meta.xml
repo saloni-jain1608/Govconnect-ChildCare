@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_New_Inspection</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Inspection</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a0C/e?retURL=%2Fa0C%2Fo&amp;CF00N3600000MgRup={!$User.FirstName}+{!$User.LastName}&amp;CF00N3600000L5V6b={!CLQ_Program__c.Name}&amp;CF00N3600000L5V6k={!CLQ_Program_Transaction__c.Name}</url>
+</WebLink>

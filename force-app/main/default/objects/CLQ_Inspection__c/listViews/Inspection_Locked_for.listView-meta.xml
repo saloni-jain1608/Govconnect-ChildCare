@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inspection_Locked_for</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>CLQ_Inspection_Status__c</columns>
+    <columns>CLQ_Program__c</columns>
+    <columns>Program_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Offline_Lock__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Inspection Locked for Offline Mode</label>
+</ListView>

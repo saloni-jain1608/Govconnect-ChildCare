@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Select_Other</fullName>
+    <active>true</active>
+    <description>When some one selects other in the picklist, other field should be required</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISPICKVAL(CLQ_Disposition__c,&apos;Other&apos;),RecordType.Name =&apos;Complaint&apos;,ISBLANK(CLQ_Other__c))</errorConditionFormula>
+    <errorMessage>Please enter a value for &apos;Other&apos; disposition</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font size="2" face="Verdana, Helvetica, sans-serif" style=""><div style="">{!CLQ_Program__c.Name}, {!CLQ_Program__c.CLQ_Program_Number__c}</div><font style="">&nbsp;has accumulated at least 15 serious and moderate risk points from all inspections during the provisional license period. Please discuss a plan with your supervisor to continue monitoring this programs compliance during the provisional period.</font></font><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team</font></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2"><span style="background-color: rgb(255, 255, 255);">Reference Id ref: {!CLQ_Program__c.Id}</span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

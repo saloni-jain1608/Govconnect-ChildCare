@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Assign_Task_Ownership__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Custom field to trigger Process flow to create a task action with Inspection Owner, manger as the assigned to owner of the task, as part of approval process .</description>
+    <externalId>false</externalId>
+    <label>Assign Task Ownership</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

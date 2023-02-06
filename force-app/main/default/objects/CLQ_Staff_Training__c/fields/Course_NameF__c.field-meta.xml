@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_NameF__c</fullName>
+    <description>Formula field to hold course name for different record types.</description>
+    <externalId>false</externalId>
+    <formula>CASE(RecordType.Name, &apos;Health &amp; Safety Training&apos;, TEXT(CLQ_Course_Name__c), &apos;Professional Development Training&apos;, CLQ_Trn_Course_Name__c,&apos;&apos;)</formula>
+    <label>Course Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

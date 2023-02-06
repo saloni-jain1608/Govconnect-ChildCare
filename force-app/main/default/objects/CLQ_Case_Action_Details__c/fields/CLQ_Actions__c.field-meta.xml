@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Actions__c</fullName>
+    <externalId>false</externalId>
+    <label>Actions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+                <label>Additional Information Requested</label>
+            </value>
+            <value>
+                <fullName>Recommendation Accepted</fullName>
+                <default>false</default>
+                <label>Recommendation Accepted</label>
+            </value>
+            <value>
+                <fullName>Recommendation Denied</fullName>
+                <default>false</default>
+                <label>Recommendation Denied</label>
+            </value>
+            <value>
+                <fullName>Case Received by Enforcement Specialist</fullName>
+                <default>false</default>
+                <label>Case Received by Enforcement Specialist</label>
+            </value>
+            <value>
+                <fullName>All Supporting Documents Received</fullName>
+                <default>false</default>
+                <label>All Supporting Documents Received</label>
+            </value>
+            <value>
+                <fullName>Employment Status Notice Delivered</fullName>
+                <default>false</default>
+                <label>Employment Status Notice Delivered</label>
+            </value>
+            <value>
+                <fullName>Employment Status Response Received</fullName>
+                <default>false</default>
+                <label>Employment Status Response Received</label>
+            </value>
+            <value>
+                <fullName>SO Hand Delivered</fullName>
+                <default>false</default>
+                <label>SO Hand Delivered</label>
+            </value>
+            <value>
+                <fullName>SO Mailed Certified Mail</fullName>
+                <default>false</default>
+                <label>SO Mailed Certified Mail</label>
+            </value>
+            <value>
+                <fullName>SO Signature Certified Mail</fullName>
+                <default>false</default>
+                <label>SO Signature Certified Mail</label>
+            </value>
+            <value>
+                <fullName>SO Returned by USPS</fullName>
+                <default>false</default>
+                <label>SO Returned by USPS</label>
+            </value>
+            <value>
+                <fullName>SO Mailed Certificate of Mailing</fullName>
+                <default>false</default>
+                <label>SO Mailed Certificate of Mailing</label>
+            </value>
+            <value>
+                <fullName>PAO to Licensing for Review</fullName>
+                <default>false</default>
+                <label>PAO to Licensing for Review</label>
+            </value>
+            <value>
+                <fullName>PAO to Enforcement Supervisor for Review</fullName>
+                <default>false</default>
+                <label>PAO to Enforcement Supervisor for Review</label>
+            </value>
+            <value>
+                <fullName>PAO to OLAS for Review</fullName>
+                <default>false</default>
+                <label>PAO to OLAS for Review</label>
+            </value>
+            <value>
+                <fullName>PAO to  Deputy Director for Signature</fullName>
+                <default>false</default>
+                <label>PAO to  Deputy Director for Signature</label>
+            </value>
+            <value>
+                <fullName>PAO Mailed Certified Mail</fullName>
+                <default>false</default>
+                <label>PAO Mailed Certified Mail</label>
+            </value>
+            <value>
+                <fullName>PAO Signature Certified Mail</fullName>
+                <default>false</default>
+                <label>PAO Signature Certified Mail</label>
+            </value>
+            <value>
+                <fullName>Caretaker Notices Mailed</fullName>
+                <default>false</default>
+                <label>Caretaker Notices Mailed</label>
+            </value>
+            <value>
+                <fullName>PAO Returned by USPS</fullName>
+                <default>false</default>
+                <label>PAO Returned by USPS</label>
+            </value>
+            <value>
+                <fullName>PAO Mailed Certificate of Mailing</fullName>
+                <default>false</default>
+                <label>PAO Mailed Certificate of Mailing</label>
+            </value>
+            <value>
+                <fullName>Hearing Requested</fullName>
+                <default>false</default>
+                <label>Hearing Requested</label>
+            </value>
+            <value>
+                <fullName>Case Documents Sent to AAG</fullName>
+                <default>false</default>
+                <label>Case Documents Sent to AAG</label>
+            </value>
+            <value>
+                <fullName>Pre-Hearing</fullName>
+                <default>false</default>
+                <label>Pre-Hearing</label>
+            </value>
+            <value>
+                <fullName>Hearing</fullName>
+                <default>false</default>
+                <label>Hearing</label>
+            </value>
+            <value>
+                <fullName>Report &amp; Recommendation Issued</fullName>
+                <default>false</default>
+                <label>Report &amp; Recommendation Issued</label>
+            </value>
+            <value>
+                <fullName>Report &amp; Recommendation Received by Enforcement</fullName>
+                <default>false</default>
+                <label>Report &amp; Recommendation Received by Enforcement</label>
+            </value>
+            <value>
+                <fullName>AO Sent to OLAS for Signature</fullName>
+                <default>false</default>
+                <label>AO Sent to OLAS for Signature</label>
+            </value>
+            <value>
+                <fullName>AO Mailed Certified Mail</fullName>
+                <default>false</default>
+                <label>AO Mailed Certified Mail</label>
+            </value>
+            <value>
+                <fullName>AO Signature Certified Mail</fullName>
+                <default>false</default>
+                <label>AO Signature Certified Mail</label>
+            </value>
+            <value>
+                <fullName>AO Returned by USPS</fullName>
+                <default>false</default>
+                <label>AO Returned by USPS</label>
+            </value>
+            <value>
+                <fullName>AO Mailed Certificate of Mailing</fullName>
+                <default>false</default>
+                <label>AO Mailed Certificate of Mailing</label>
+            </value>
+            <value>
+                <fullName>AO Appealed</fullName>
+                <default>false</default>
+                <label>AO Appealed</label>
+            </value>
+            <value>
+                <fullName>AO Appealed with a Stay</fullName>
+                <default>false</default>
+                <label>AO Appealed with a Stay</label>
+            </value>
+            <value>
+                <fullName>Program Closure Notice Mailed</fullName>
+                <default>false</default>
+                <label>Program Closure Notice Mailed</label>
+            </value>
+            <value>
+                <fullName>Program Closed in the System</fullName>
+                <default>false</default>
+                <label>Program Closed in the System</label>
+            </value>
+            <value>
+                <fullName>AO Certification Date/Suspension Date</fullName>
+                <default>false</default>
+                <label>AO Certification Date/Suspension Date</label>
+            </value>
+            <value>
+                <fullName>AO Certification Date/Closure Date</fullName>
+                <default>false</default>
+                <label>AO Certification Date/Closure Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title={cardTitle}>
+
+        <lightning-button-group class="slds-align_absolute-center">
+            <template for:each={actions} for:item="action">
+                <c-custom-action-button-child key={action.MasterLabel} 
+                    button-label={action.Button_Label__c} 
+                    apex-method-name={action.Class_Method__c}
+                    apex-class-name={action.Class_Name__c}
+                    call-apex-or-launch-component={action.Component_Type__c}
+                    object-api-name={action.Object_API_Name__c} 
+                    validate={action.Validation_Required__c}
+                    validation-method={action.Validation_Method__c} 
+                    record-id={recordId}
+                    ontestevent={handleEvent}>
+                </c-custom-action-button-child>
+            </template>
+        </lightning-button-group>
+
+    </lightning-card>
+</template>

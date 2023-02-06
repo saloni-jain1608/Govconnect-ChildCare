@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Inspection</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Inspections</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>ODE_Integration</name>
+    </fieldSets>
+    <layouts>
+        <layout>Day Camp Audit Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Audit Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Disable</layout>
+        <sections>
+            <label></label>
+            <section>Child Records Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Non-Compliance Points</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>On-Site Representative at the Time of Visit</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requirements &amp; Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inspection Approver/Admin Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Non-Compliance Points</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>On-Site Representative at the Time of Visit</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inspection Layout</layout>
+        <sections>
+            <label></label>
+            <section>Child Records Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Non-Compliance Points</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>On-Site Representative at the Time of Visit</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requirements &amp; Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inspection Reviewer Layout</layout>
+        <sections>
+            <label></label>
+            <section>Child Records Summary</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Inspection Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Non-Compliance Points</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>On-Site Representative at the Time of Visit</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requirements &amp; Notes</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Onsite Visit Layout</layout>
+        <sections>
+            <label></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Onsite Calculation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Onsite Visit Reviewer Layout</layout>
+        <sections>
+            <label></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Onsite Calculation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Visit Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Schedule_Visit</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Day_Camp_Audit</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Inspection</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Onsite_Visit_Record_Type</name>
+    </recordTypes>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Continuous_Inspection_Type_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Continuous_Inspection_Type_Change2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Day_Camp_Inspection_Type_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Status_Change_Approved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Type_Change_RevisionInPro</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Inspection_Type_Validation_Admin</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_On_Site_Representative_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Provisional_Inspection_Type_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Provisional_Inspection_Type_Change2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Representative_Email_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reviewers_Cannot_Change_Visit_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Revise_Visit_Status_on_Prelicese</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_cannot_change_scope_tool_selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Follow_up_Inspection_Date_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Inspection_Capacity_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Inspection_Revision_Complete_Check_True</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Quality_Monitoring_only_for_Monitor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Reviewers_cannot_change_Inspec_ownership</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Calculate_Onsite_Visit_Rating</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Cancel</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Create_Follow_Up</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Delete_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_New_DayCamp_Audit</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_New_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Select_Inspection_Tool</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Staff_Details_from_Previous_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Submit_for_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Visit_Mode</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Complete_TA_Visit</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Get_LicenseNum_InspProg</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Get_Prg_LicenseNumber</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>New_Inspection_Record</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>ONSITEFINDING_TEST</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Onsite_Review_Rating</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Print</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Visit_Mode_LWC</name>
+    </webLinks>
+    <workflowTasks>
+        <description></description>
+        <name>Approval_Inspection</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>DferralDueDate</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Review_Onsite_Visit_Details</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Revise_Inspection</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

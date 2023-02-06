@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length_1Feet_and_Width_1Feet_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR( ISBLANK(CLQ_Length_Feet__c) , ISBLANK( CLQ_Width_Feet__c ) ), ISPICKVAL( CLQ_Room_Space_Shape__c , &apos;Square/Rectangle/L-Shaped&apos;), RecordType.Name  = &apos;Indoor Room/Space&apos; )</errorConditionFormula>
+    <errorDisplayField>CLQ_Length_Feet__c</errorDisplayField>
+    <errorMessage>Length 1 Feet and Width 1 Feet are Required</errorMessage>
+</ValidationRule>

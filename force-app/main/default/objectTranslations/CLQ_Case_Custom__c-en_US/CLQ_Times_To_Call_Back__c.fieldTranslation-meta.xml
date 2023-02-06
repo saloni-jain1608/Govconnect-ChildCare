@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CLQ_Times_To_Call_Back__c</name>
+    <picklistValues>
+        <masterLabel>12 pm to 2 pm</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 pm to 5 pm</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8 am to 12 pm</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>After 5 pm</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Alleged Rule Violation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Alleged Rule Violations</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>CLQ_AllegedRuleViolation_FS</name>
+    </fieldSets>
+    <layouts>
+        <layout>Alleged Rule Violation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

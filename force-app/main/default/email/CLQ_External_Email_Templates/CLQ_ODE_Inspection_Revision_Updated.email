@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><font style="color: rgb(0, 0, 0);">The purpose of this email is to notify you that the results
+of the inspection for {!CLQ_Inspection__c.CLQ_Program_Name__c}&nbsp;</font><font style="color: rgb(0, 0, 0);">{!CLQ_Role__c.CLQ_Program_name_Formula__c}</font><font style="color: rgb(0, 0, 0);">, {!CLQ_Inspection__c.Program_Number__c}</font><font style="color: rgb(0, 0, 0);">{!CLQ_Role__c.CLQ_Program_Number_Formula__c}</font><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;completed
+on {!CLQ_Inspection__c.CLQ_Inspection_End_Date__c}&nbsp;</span>{!CLQ_Role__c.CLQ_Inspection_End_Date__c}<span style="color: rgb(0, 0, 0);">&nbsp;has been revised.</span></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></p>
+
+<p class="MsoNormal" style=""><font face="Verdana, Helvetica, sans-serif" size="2" style=""><font face="arial"><span style="font-size: 12pt;">A copy of the revised report is attached. Please discard the
+previous version. The licensing inspection report will identify</span></font><font face="arial"><span style="font-size: 12pt;">&nbsp;if a corrective action response is required. The program must submit the corrective action plan through OCLQS for each noncompliance that requires a response.</span></font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2">If you have any questions regarding the inspection report
+revisions, contact your department representative or the Child Care Help Desk at 1-877-302-2347.</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><span style="white-space: pre-wrap;">The Ohio Child Licensing and Quality System Team.</span><font face="arial"><span style="font-size: 12pt; white-space: pre-wrap;">
+<br></span></font></font></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">ref: {!CLQ_Program_Transaction__c.Id</span><span style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">}</span></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

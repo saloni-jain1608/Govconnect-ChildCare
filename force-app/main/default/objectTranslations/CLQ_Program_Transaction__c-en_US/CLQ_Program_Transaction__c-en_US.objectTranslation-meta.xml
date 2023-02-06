@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Program Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Program Applications</value>
+    </caseValues>
+    <layouts>
+        <layout>Annual Report - Reviewer Layout</layout>
+        <sections>
+            <label></label>
+            <section>Annual Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Annual Report page layout</layout>
+        <sections>
+            <label></label>
+            <section>Annual Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Amendment - Center- Change of Location</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Building/Site Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Old Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Amendment - Change of Administrator</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Amendment - FCC- Change of Location</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Enrollment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Building/Site Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Old Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Amendment - ODE - Change of Location</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Building/Site Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Old Location</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Application FCC Layout</layout>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Physical Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pre-Screen Questionnaire - Section 1 to 4</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Pre-Screen Questionnaire - Section 5</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program and Organization</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Space Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Continuous License</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Licensing Closure</layout>
+        <sections>
+            <label></label>
+            <section>Closure Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Registration Closure</layout>
+        <sections>
+            <label></label>
+            <section>Closure Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program and Organization</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ - Update FCC Resident Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Application - CC Center</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Building Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>License Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Rating Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reviewer Checklist for Approval</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Application - Day Camp</layout>
+        <sections>
+            <label></label>
+            <section>Building Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Application - FCC</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Building Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Address &amp; Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Application - ODE Program</layout>
+        <sections>
+            <label></label>
+            <section>Building Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Services Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Update Onsite Contact Information</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ Update Onsite Contact Information ODE</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ-Amendment - ODE and Center -Change of Capacity / Space</layout>
+        <sections>
+            <label></label>
+            <section>Approved Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Current Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requested Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submitter Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ-Amendment -FCC-Change of Capacity / Space</layout>
+        <sections>
+            <label></label>
+            <section>Capacity Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Missing Elements for Reviewer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Authorizes Rep</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Outdoor Space</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CLQ_Reactivate Transaction</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FCC Program - Transaction and Program</layout>
+        <sections>
+            <label></label>
+            <section>Applicant&apos;s History</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Program and Organization</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Generic Page Layout</layout>
+        <sections>
+            <label></label>
+            <section>Annual Report Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Review</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Ongoing Program Transaction for SUTQ</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Initial Desk Review Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Calculation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PB Test Registration Day Camp</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Physical Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Program Transaction Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Service Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Program Transaction SUTQ Expedited</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Initial Desk Review Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Calculation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Program Transaction for SUTQ</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Initial Desk Review Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registration Calculation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registration - Out of State</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Physical Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registration Day Camp</layout>
+        <sections>
+            <label></label>
+            <section>Associated Fee</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Mailing Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Day Camp Physical Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registration In-Home-Aide</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Internal Review</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Provider Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Submission Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Transaction Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Virginia Back Agent Demo Page Layout</layout>
+        <sections>
+            <label></label>
+            <section>Application Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Site Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>GCLIC_PT_Complete_Document_Review</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Submit_for_Approval_Flow</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Amendment_ODE_and_Center_Change_of_Capacity_Space</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Annual_Report</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Application_Day_Camp</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>ApprovalProcess_Restricted</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Approval_Closure</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Amendment_Change_of_Administrator</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Amendment_Change_of_Capacity_Space</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Amendment_Change_of_Location</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Amendment_FCC_Change_of_Location</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Amendment_ODE_Change_of_Location</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Application_CC_Center</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Application_FCC</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Application_ODE_Program</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Licensing_Closure</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Reactivate_Transaction</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CLQ_Registration_Closure</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Registration_Day_Camp</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Registration_In_Home_Aide</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Registration_Out_of_State</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Update_Contact_Information</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Update_FCC_Resident_Information</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Update_Facility_Information</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Update_On_site_Contact_Information</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CLQ_Update_Outdoor_Space_Information</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Continuous_License</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Ongoing_Quality_Rating_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Quality_Rating_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Renew_Application_Day_Camp</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>SUTQ_Change_of_Owner_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>SUTQ_Expedited_Registration</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>SUTQ_Reinstate_Rating_after_Temporary_Closure</name>
+    </recordTypes>
+    <sharingReasons>
+        <label></label>
+        <name>County_Admin_Sharing</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Annual_ReportNotAllowed_Provisional</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>ApprovedCapacity_Reqd_Approve_RecCOC_FCC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_2Star_Not_In180_270Days</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_2_Star_Ongoing_Not_180_to_270</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_ACA_Certified_Requires_Day_Camp_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Address_Reqd_Day_Camp_Registration</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Address_Reqd_for_OOS_Registration</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Approved_first_day_and_last_day_365</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Approver_Comments_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_ApprvdTotCap_less_than_CalMaxCap</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Closure_Type_and_Program_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Continuous_License_Start_Date_Reqd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Continuous_License_prog_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Day_Camps_Not_Eligible_For_SUTQ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Deny_Reasons_for_Deny_Recommendation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_FCC_TypeA_Program_Approved_Capacity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_FCC_TypeB_Program_Approved_Capacity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Foster_Children_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Full_Part_Time_Options_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_IHA_Certification_Issue_Date_Approve</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_In_Home_Aides_Not_Eligible_For_SUTQ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Initial_Appln_Program_Status_IHA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Last_Day_At_old_First_day_at_New</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_LicenseStartDt_ProvisionalExpDt</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_No_SUTQ_Reg_Clsd_Pgm</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_No_SUTQ_Reg_Suspended_Pgm</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_No_SUTQ_Reg_Temp_Clsd_Pgm</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_ODE_AppCap_less_than_CalMaxCap2_1_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Other_Closure_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Other_toxic_substances</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Out_of_State_Not_Eligible_For_SUTQ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Previous_Program_Name_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Program_Phone_must_be_a_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Proposed_Open_Date_for_Applications</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Radon_Gas_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reactivate_Recommendation_Deny</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reactivation_date_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reco_approve_Approved_Total_Capacity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Recom_Approve_First_Day_at_Address</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Recommendation_Approve_Reactivate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Recommendation_License_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Reviewer_comments_reqd_if_Accred_No</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Specialized_Foster_Home_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Specify_Other_Deny_Reasons</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Specify_Other_Withdraw_Reasons</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Storage_of_Hazardous_Toxic_Material</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_SummerOnly_Not_Eligible_For_SUTQ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Type_A_Programs_Maximum_Capacity_12</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Type_B_Programs_Maximum_Capacity_6</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Unlicensed_Not_Eligible_For_SUTQ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Validate_ApprovedTransaction</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Validate_MaxCapUnder_2_1_2_All</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Validate_MaxCapUnder_2_1_2_TypeB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CLQ_Withdraw_Reasons_for_Recommendation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cannot_Create_Regitration_before_6_month</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cannot_change_rating_proposed_by_Program</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Check_2_star_reapply_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CountyAdmin_Cannot_Change_OTH_PT_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Day_Camp_Accreditation_verification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Initial_Registration_Not_Allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>OnGoing_Transaction_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>ProgramRatingAnnualReportnotAllowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Program_Anniversary_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Reviewers_cannot_change_PR_ownership</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>SUTQ_Deferral_Duration_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>SUTQ_Deferral_Update_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Test</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Test_Doc</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validation_on_Expired_Program</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validation_on_Open_Program</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Approve</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Complete_Document_Review</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Create_Inspection</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Desk_Review_Findings</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Submit_for_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>CLQ_Submit_for_Approval_Old</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Calculate_Desk_Review_Rating</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Complete_Desk_Review</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Complete_Document_Review_Test</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Create_Onsite_Visit</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Deny</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Desk_Review_Finding_test</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Desk_Review_Tool</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Get_License_Number</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>NewProgramTransactionRecType</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Submit</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Test</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Withdraw</name>
+    </webLinks>
+    <workflowTasks>
+        <description></description>
+        <name>Annual_Report_Overall_Req_Not_Met</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>CLQ_Approve_Continuous_License</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>CLQ_Transaction_Approved</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>CLQ_Transaction_Rejected</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Coming_near_outbound</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Continuous_lcs_Approved</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Please_review_new_registration</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Revise_Annual_Report_Details</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Revise_Desk_Review</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Transaction_Deferral_Task_Review</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

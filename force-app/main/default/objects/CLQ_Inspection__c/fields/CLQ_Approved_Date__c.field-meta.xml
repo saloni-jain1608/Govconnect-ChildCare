@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Approved_Date__c</fullName>
+    <description>This Field will be used to populate the &quot;Approved Date&quot; once the inspection is Approved. It is used only for Reporting Purpose for Inspection records created from September 8, 2017</description>
+    <externalId>false</externalId>
+    <label>Approved Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

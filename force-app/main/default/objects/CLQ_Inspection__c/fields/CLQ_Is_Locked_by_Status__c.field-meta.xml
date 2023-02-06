@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Is_Locked_by_Status__c</fullName>
+    <description>Determines if the current Inspection record should be locked for a specific status.</description>
+    <externalId>false</externalId>
+    <formula>AND((RecordType.Name == &quot;Inspection&quot;),
+OR( 
+ISPICKVAL(CLQ_Inspection_Status__c , &quot;Revised&quot;), 
+ISPICKVAL(CLQ_Inspection_Status__c , &quot;Closed&quot;), 
+ISPICKVAL(CLQ_Inspection_Status__c , &quot;Deleted&quot;), 
+ISPICKVAL(CLQ_Inspection_Status__c , &quot;Approved&quot;) 
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Locked by Status</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Closing_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Closing Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Program&apos;s User Withdrawal</fullName>
+                <default>false</default>
+                <label>Program&apos;s User Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Closed By Applicant</fullName>
+                <default>false</default>
+                <label>Closed By Applicant</label>
+            </value>
+            <value>
+                <fullName>Approved and Processed</fullName>
+                <default>false</default>
+                <label>Approved and Processed</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Closed At Applicant&apos;s Request</fullName>
+                <default>false</default>
+                <label>Closed At Applicant&apos;s Request</label>
+            </value>
+            <value>
+                <fullName>Closed By System (120 days without submission)</fullName>
+                <default>false</default>
+                <label>Closed By System (120 days without submission)</label>
+            </value>
+            <value>
+                <fullName>New Version Created</fullName>
+                <default>false</default>
+                <label>New Version Created</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

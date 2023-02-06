@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Related_Case_Record_Type</fullName>
+    <active>true</active>
+    <description>TFS 12003: Relating Custom Case Record Types</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c  &amp;&amp; IF((ISBLANK(CLQ_Related_Case__c)) || (CONTAINS(CLQ_Case_Custom_RTName__c, &apos;Complaint&apos;) &amp;&amp; CONTAINS(CLQ_Related_Case__r.CLQ_Case_Custom_RTName__c, &apos;Complaint&apos;)) || (CONTAINS(CLQ_Case_Custom_RTName__c, &apos;Alleged Ops&apos;) &amp;&amp; CONTAINS(CLQ_Related_Case__r.CLQ_Case_Custom_RTName__c, &apos;Alleged Ops&apos;)) ||  (CONTAINS(CLQ_Case_Custom_RTName__c, &apos;Enforcement&apos;) &amp;&amp; CONTAINS(CLQ_Related_Case__r.CLQ_Case_Custom_RTName__c, &apos;Enforcement&apos;)) || (CONTAINS(CLQ_Case_Custom_RTName__c, &apos;Incident&apos;) &amp;&amp; CONTAINS(CLQ_Related_Case__r.CLQ_Case_Custom_RTName__c, &apos;Incident&apos;)), false, true)</errorConditionFormula>
+    <errorDisplayField>CLQ_Related_Case__c</errorDisplayField>
+    <errorMessage>Related case must be the same record type as this case</errorMessage>
+</ValidationRule>

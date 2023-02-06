@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2" style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">The </span><span style="color: rgb(0, 0, 0);">{!CLQ_Program_Transaction__c.RecordType}&nbsp;Request for </span><span style="color: rgb(0, 0, 0);">{!CLQ_Program_Transaction__c.CLQ_Program_Name__c},&nbsp;</span>{!CLQ_Program_Transaction__c.CLQ_Program_Number__c}&nbsp;was returned to the assigned specialist for revisions on {!CLQ_Program_Transaction__c.CLQ_Transaction_Status_Date__c}&nbsp;. To view the details of this request, log into OCLQS.</font><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><div style="color: rgb(0, 0, 0);">Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.</div><div style="color: rgb(0, 0, 0);"><br></div><div style="color: rgb(0, 0, 0);">The Ohio Child Licensing and Quality System Team.</div><div style="color: rgb(0, 0, 0);"><br></div><div style="color: rgb(0, 0, 0);">This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</div><div style="color: rgb(0, 0, 0);"><br></div><div><div><font color="#ffffff">ref: {!CLQ_Program_Transaction__c.Id}</font></div></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

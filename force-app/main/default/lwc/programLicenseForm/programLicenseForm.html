@@ -1,0 +1,118 @@
+<template>
+
+    <div if:true={isLoading}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+        </lightning-spinner>
+    </div>
+ <!--  <div class="program-header slds-p-vertical_medium">
+        <div class="slds-text-heading--large">
+            <lightning-combobox
+            style="display: -webkit-inline-box;margin-left: 70%;"
+            name="Language"
+            label="Select Language"
+            value={value}
+            placeholder={value}
+            options={options}
+            onchange={handleLanguageChange} ></lightning-combobox>
+       
+        </div>
+        
+    </div>-->
+
+    <c-pdf-pop-up onpdfmodalevent={handlepdfmodalevent}></c-pdf-pop-up>
+
+    <!-- Instructions Page -->
+    <template if:false={canContinueToApplication}>
+        <c-vdss_dynamic-qn-framework_-instruction-page
+            oncontinuetoapplication={handleContinueToApplication}
+            instruction-text={jsonData.Instructions_to_Application} languagedata={langmetadata}
+        ></c-vdss_dynamic-qn-framework_-instruction-page>
+    </template>
+
+    <!-- Main Application Pages -->
+    <template if:true={canContinueToApplication}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 page-header-title" style="margin: 0.5rem 0 1rem;background:#FFF;border-radius: 0.5rem;">
+                <lightning-icon icon-name="utility:edit_form" class="slds-show--inline-block page-title-icon" alternative-text="Application Form Icon" title="Application Form Icon"></lightning-icon>            
+                <h1 class="slds-show--inline-block page-title">{jsonData.PageTitle}</h1>
+                <br/>
+            </div>
+            
+            <div class="slds-col slds-size--1-of-1 slds-medium-size--4-of-12 slds-large-size--3-of-12">            
+                    <!--<template if:true={jsonData}>
+                        <template for:each={jsonData.sections} for:item="sec">                        
+                            <li key={sec.name}>{sec.name}</li>
+                        </template>
+                    </template>-->            
+                <div class="left-nav-pane" style="background-color:white;border-radius: 0.5rem;padding-bottom: 1rem;">
+                    <lightning-vertical-navigation class='vertival-nav' onselect={handleSection} selected-item={activeSection} data-id="vert">
+                        <lightning-vertical-navigation-section>
+                            <template if:true={jsonData}>
+                                <template for:each={jsonData.Sections} for:item="sec" for:index="index">
+                                    <div key={sec.Label} class="leftnav-items">                                       
+                                        <lightning-vertical-navigation-item-icon
+                                            label={sec.Label} name={sec.Id} data-id={sec.Label} data-name={index} icon-name="utility:macros">
+                                        </lightning-vertical-navigation-item-icon>
+                                        <template if:false={sec.isCompleted}>
+                                            <lightning-icon icon-name="utility:note" alternative-text="Draft" title="success variant small" size="small" class="tick-img"></lightning-icon>                    
+                                        </template>
+                                        <template if:true={sec.isCompleted}>
+                                            <lightning-icon icon-name="utility:success" alternative-text="Success" variant="success" title="success variant small" size="small" class="tick-img"></lightning-icon>                    
+                                        </template>
+                                    </div>
+                                </template>
+                            </template>
+                                                    
+                        </lightning-vertical-navigation-section>
+                    </lightning-vertical-navigation>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size--1-of-1 slds-medium-size--8-of-12 slds-large-size--9-of-12">
+                <div class="dynamic-comp-main-body" style="background-color:white;border-radius: 0.5rem;">
+                    <template for:each={subSectionData.SubSections} for:item="subsection" for:index="index">  
+                        <div key={subsection.Label}>  
+                            <c-vdss_dynamicframeworkcmplwc_subsections subsection={subsection} json-data={jsonData} languageselected={languageselected}  onvaluechange={handleValueChange} program-id={programId} program-transaction-id={programApplicationId}></c-vdss_dynamicframeworkcmplwc_subsections>
+                        </div>
+                    
+                        <!--div key={subsection.Label} class="slds-p-around_large">  
+                            <template if:true={subsection.IsATextBlockType}>
+                                <h1 class="sub-section-text-block" key={subsection.Label}>
+                                    <lightning-formatted-rich-text value={subsection.TextBlockBody}></lightning-formatted-rich-text>
+                                </h1>
+                            </template>         
+                            <template if:false={subsection.IsATextBlockType}>
+                                <h1 class="sub-section" key={subsection.Label}>{subsection.Label}</h1>
+                                <div class="slds-grid slds-wrap">
+                                    <template for:each={subsection.Fields} for:item="field" for:index="fieldIndex">  
+                                        <div key={field.Label} class={field.CSSClasses}>
+                                            <c-form-input-field-lwc field={field} data-id={index} data-name={fieldIndex} onvaluechange={handleValueChange}></c-form-input-field-lwc>
+                                            </div>
+                                    </template>
+                                </div>  
+                            </template>                          
+                        </div-->
+                    </template>
+                    <template if:true={showSubmitterInformation}>
+                        <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2 slds-show--inline-block" style="padding: 0 2rem 3rem;width: 35%;">
+                            <lightning-input label={Submitted_Date} value={currentDateTime} type="text" disabled="true">                                        
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2 slds-show--inline-block" style="padding: 0 2rem 3rem;width: 35%;">
+                            <lightning-input label={Submitted_By} value={currentUserName} type="text" disabled="true">                                        
+                            </lightning-input>
+                        </div>
+                    </template>
+                    <div class="divClass slds-p-bottom_large" style="text-align: center;margin: 0 2rem;">
+                        <lightning-button class="custom-position-left" disabled={backBtnDisable} data-id="backbtn" onclick={handleBack} label={backBtnLabel}></lightning-button>
+                        <!--lightning-button class="" data-id="saveasdraftbtn" onclick={handleSaveDraft} label="Save as Draft" variant="brand"></lightning-button-->
+                        <lightning-button class="custom-position-right"  data-id={continueBtnLabel} label={TranslatecontinueBtnLabel} onclick={handleContinue} variant="brand" disabled={SubmitBtnDisable}></lightning-button>
+                    </div><!--disabled={SubmitBtnDisable}-->
+                </div>
+            </div>
+        </div>
+       
+    </template>
+
+</template>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Object_Fields</fullName>
+    <columns>NAME</columns>
+    <columns>ObjectAPIName__c</columns>
+    <columns>Page_Id__c</columns>
+    <columns>ReadOnly__c</columns>
+    <columns>Required__c</columns>
+    <columns>Validator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ObjectAPIName__c</field>
+        <operation>equals</operation>
+        <value>Contact</value>
+    </filters>
+    <label>Standard Object Fields</label>
+</ListView>

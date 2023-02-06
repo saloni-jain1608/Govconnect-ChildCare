@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_One_Parent_Per_Child_On_Premise__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Programs in which the Ohio Department of Job and Family Services determines that at least one parent, custodian, or guardian of each child is on the premises of the program offering child care and is readily accessible at all times, except that child care provided on the premises at which a parent, custodian, or guardian is employed more than two and one-half hours a day shall be licensed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Programs in which the Ohio Department of Job and Family Services determines that at least one parent, custodian, or guardian of each child is on the premises of the program offering child care and is readily accessible at all times, except that child care</inlineHelpText>
+    <label>One Parent Per Child On-Premise</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

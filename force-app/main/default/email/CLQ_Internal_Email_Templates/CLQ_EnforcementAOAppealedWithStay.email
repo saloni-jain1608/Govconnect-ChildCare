@@ -1,0 +1,5 @@
+{!CLQ_Case_Custom__c.CLQ_Program_Name_Formula__c}, {!CLQ_Case_Custom__c.CLQ_Program_Number_Formula__c} has requested an appeal with a stay of the issued Adjudication Order to the Court of Common Pleas. This means that the enforcement process is not completed.  The program can continue to operate because of the type of appeal requested.  Please contact the enforcement worker assigned to the case with any questions.  
+
+Thank you.
+
+The {!$Label.StateName} Child Licensing and Quality System Team.

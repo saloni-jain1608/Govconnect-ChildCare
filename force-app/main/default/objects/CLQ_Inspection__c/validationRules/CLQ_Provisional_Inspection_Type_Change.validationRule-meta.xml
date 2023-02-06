@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Provisional_Inspection_Type_Change</fullName>
+    <active>false</active>
+    <description>[10/12/17] - Merged PS, SACC and Childcare
+Program Type = Type A; B;Child Care; PS; SACC AND License Type= Provisional
+Then default Inspection Type = Provisional; But have the option to change to Inspection Type = Monitor</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+AND( NOT(ISNEW()), 
+OR(CLQ_Program_Record_Type__c = &quot;FCC - Type B Home&quot;,CLQ_Program_Record_Type__c = &quot;FCC - Type A Home&quot;,CLQ_Program_Record_Type__c = &quot;Child Care Center&quot;,CLQ_Program_Record_Type__c = &quot;Pre School&quot;,CLQ_Program_Record_Type__c = &quot;	School Age Child Care&quot;) 
+,CLQ_License_Type__c == &quot;Provisional&quot;,
+ISCHANGED(CLQ_Inspection_Type__c), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Provisional&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Monitor&quot;))),
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Provisional&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Follow-up&quot;))),
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Complaint&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Incident / Injury / Illness&quot;))), 
+NOT(AND(ISPICKVAL(PRIORVALUE(CLQ_Inspection_Type__c),&quot;Incident / Injury / Illness&quot;),ISPICKVAL(CLQ_Inspection_Type__c,&quot;Complaint&quot;))) 
+)</errorConditionFormula>
+    <errorMessage>You can change Inspection type to &apos;Monitor&apos; or &apos;Follow-up&apos; only</errorMessage>
+</ValidationRule>

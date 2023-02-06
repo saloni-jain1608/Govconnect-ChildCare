@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Rating_OSNum__c</fullName>
+    <description>DrawLoop: Field displays the Overall System Calculated Rating or ODE Site Number based on the Record Type Application - CC Center or Application - FCC</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+ CLQ_Program_Record_Type__c ,
+&apos;Child Care Center&apos; , &quot;Overall System Calculated Rating: Star Rating&quot;  &amp;  &quot; &quot;  &amp;   Estimated_Rating_by_System__c,
+&apos;FCC - Type A Home&apos; , &quot;Estimated Additional Points if Registering for a 4 or 5 Star Rating:&quot;  &amp;  &quot; &quot;  &amp;  ODE_Site_Number__c,
+&apos;FCC - Type B Home&apos; , &quot;Estimated Additional Points if Registering for a 4 or 5 Star Rating:&quot;  &amp;  &quot; &quot;  &amp;  ODE_Site_Number__c,
+
+
+NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Overall Rating/OSNum</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

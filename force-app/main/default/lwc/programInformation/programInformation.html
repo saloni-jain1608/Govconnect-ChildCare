@@ -1,0 +1,150 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+            <lightning-textarea name="input1" value={strNameofFacility} label="Name of Facility as it isto appear on license" ></lightning-textarea>
+        </div>
+        <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+            <div class = "slds-grid slds-grid_vertical">
+            <lightning-input type="number" value={intPhonNum} name="input1" label="Facility Phone Number" ></lightning-input>
+            <!-- <div class ="slds-col slds-size--1-of-2 slds-p-around_medium"> -->
+                <lightning-input type="number" value={intFaxNum} name="input1" label="Fax Number" ></lightning-input>
+            <!-- </div> -->
+        </div>
+        </div>
+
+        <!-- Physical Address -->
+        <div class ="slds-col slds-size--6-of-12 slds-p-around_medium">
+            <lightning-textarea value={strPhyAddress} name="input1" label="Street Address of Facility (physical address)" ></lightning-textarea>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strPhyCity} type="text" name="input1" label="City/County" ></lightning-input>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strPhyState} type="text" name="input1" label="State" ></lightning-input>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strPhyZipCd} type="text" name="input1" label="Zip Code" ></lightning-input>
+        </div>
+
+        <!-- Mailing Address -->
+        <div class ="slds-col slds-size--6-of-12 slds-p-around_medium">
+            <lightning-textarea value={strMailAddress} name="input1" label="Mailing Address of Facility (if different fromphysical address)" ></lightning-textarea>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strMailCity} type="text" name="input1" label="City/County" ></lightning-input>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strMailZipCd} type="text" name="input1" label="State" ></lightning-input>
+        </div>
+        <div class ="slds-col slds-size--2-of-12 slds-p-around_medium">
+            <lightning-input value={strMailState} type="text" name="input1" label="Zip Code" ></lightning-input>
+        </div>
+
+        <!-- Email Address -->
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+            <lightning-input value={strEmail} type="text" name="input1" label="Facility E-mail Address(used for VDSS correspondence only)" ></lightning-input>
+        </div>
+
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+            <lightning-radio-group name="radioGroup"
+                          label="Are there any other programsthat operate in the building during childcare hours?"
+                          options={options}
+                          value={strOtherPrgms}
+                          type="radio"></lightning-radio-group>
+        </div>
+        <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+            <lightning-input value={intNumBuildings} type="number" name="input1" label="Number of buildings license requested for:" ></lightning-input>
+        </div>
+        <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+            <lightning-radio-group name="radioGroup"
+            label="Are you a DSS subsidy vendor?"
+            options={options}
+            value={strDSS}
+            type="radio"></lightning-radio-group>
+        </div>
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+        <p>Asbestos:</p>
+        </div>
+
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+            <lightning-radio-group name="radioGroup"
+                          label="1. Isthe building in which the center islocated a currently operating public school or state owned building??"
+                          options={options}
+                          value={strCurrentBldng}
+                          type="radio"></lightning-radio-group>
+        </div>
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+            <lightning-radio-group name="radioGroup"
+                          label="2. If the answer to #1 is “No,” was your building in which the center is located built before 1978?"
+                          options={options}
+                          value={strBldngChildCare}
+                          type="radio"></lightning-radio-group>
+        </div>
+        <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+            <p>If the answer to #2 is “Yes,” please see required asbestos information under facility required attachments. Regulations require that all day<br/>
+                care centers built before 1978 be inspected by a licensed asbestos inspector. Model forms and detailed instructions are available online at<br/>
+                <lightning-formatted-url value="http://www.dss.virginia.gov/facility/child_care/licensed/child_day_centers/index.cgi" target="_blank"></lightning-formatted-url></p>
+                </p>
+            </div>
+
+            <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+
+                <!-- <lightning-checkbox-group name="Months of Operation (check all that apply):"
+                    label="Months of Operation (check all that apply):"
+                    options={optionsMonths}
+                    value={valueMonth}
+                    onchange={handleChange}></lightning-checkbox-group> -->
+
+                    <lightning-checkbox-group name="Checkbox Group"
+                              label="Months of Operation (check all that apply):"
+                              options={optionsMonths}
+                              value={value}
+                              onchange={handleChange}></lightning-checkbox-group>
+            </div>
+            <div class ="slds-col slds-size--1-of-2 slds-p-around_medium">
+            <lightning-checkbox-group name="Checkbox Group"
+                              label="Days of Operation (check all that apply)"
+                              options={optionsDays}
+                              value={value}
+                              onchange={handleChange}></lightning-checkbox-group>
+            </div>
+            <div class ="slds-col slds-size--1-of-3 slds-p-around_medium">
+                <lightning-input value={intNumHrs} type="number" name="input1" label="Hours of Operation:" ></lightning-input>
+            </div>
+            <div class ="slds-col slds-size--1-of-3 slds-p-around_medium">
+                <lightning-radio-group name="radioGroup"
+                label="Do you offer evening care?
+                (7 p.m. but not through the night)"
+                options={options}
+                value={strEveCare}
+                type="radio"></lightning-radio-group>
+            </div>
+            <div class ="slds-col slds-size--1-of-3 slds-p-around_medium">
+                <lightning-radio-group name="radioGroup"
+                label="Do you offer overnight care?
+                (7 p.m. and through the night)"
+                options={options}
+                value={strOvernightCare}
+                type="radio"></lightning-radio-group>
+            </div>
+            <div class ="slds-col slds-size--3-of-6 slds-p-around_medium">
+                <lightning-input value={intNumHrs} type="number" name="input1" label="Requested Capacity (number of children you wish to be licensed for):" ></lightning-input>
+            </div>
+            
+            <div class ="slds-col slds-size--1-of-1 slds-p-around_medium">
+                <p>Requested AgeRange</p>
+                </div>
+            <div class ="slds-col slds-size--6-of-12 slds-p-around_medium">
+                <lightning-input value={intMinAge} type="number" name="input1" label="MinimumAge:" ></lightning-input>
+            </div>
+            <div class ="slds-col slds-size--6-of-12 slds-p-around_medium">
+                <lightning-input value={intMaxAge} type="number" name="input1" label="to Maximum Age(Age 12 years is the maximum)" ></lightning-input>
+            </div>
+
+            
+            <div class ="slds-col slds-size--2-of-6 slds-p-around_medium">
+                <lightning-input value={strNameofDirec} type="text" name="input1" label="Name of ProgramDirector:" ></lightning-input>
+            </div>
+    </div>
+    
+</template>

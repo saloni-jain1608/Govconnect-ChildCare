@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Akron_District_FCC_SUTQ_queue_CLQ_Inspection</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Akron District FCC SUTQ queue</label>
+    <queue>Akron_District_FCC_SUTQ_queue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

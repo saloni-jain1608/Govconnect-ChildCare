@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Proposed_Open_Date_for_Applications</fullName>
+    <active>true</active>
+    <description>Date must be in the future, but less than 1 year from current date. If not, error.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; NOT(Skip_Validation__c) &amp;&amp; AND(ISCHANGED(CLQ_Proposed_Open_Date__c), TEXT(CLQ_Transaction_Status__c) = &apos;Submitted&apos;, 
+OR( RecordType.Name = &apos;Application - CC Center&apos;,RecordType.Name = &apos;Application - FCC&apos;, RecordType.Name = &apos;Application - ODE Program&apos; ) , OR( CLQ_Proposed_Open_Date__c &lt; TODAY(), CLQ_Proposed_Open_Date__c &gt; (TODAY() + 365)),
+NOT(CONTAINS($Profile.Name,&apos;OCLQS Customer Community&apos;)))</errorConditionFormula>
+    <errorDisplayField>CLQ_Proposed_Open_Date__c</errorDisplayField>
+    <errorMessage>Proposed Open Date should be in the future and less than 1 year</errorMessage>
+</ValidationRule>

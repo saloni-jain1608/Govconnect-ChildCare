@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Ready_for_Approval2__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(NOT(CONTAINS(RecordType.Name, &quot;SUTQ&quot;)), 
+OR(
+ AND(OR(CONTAINS(RecordType.Name, &quot;Application&quot;),CONTAINS(RecordType.Name, &quot;Administrator&quot;)), CLQ_Application_Ready_for_Approval__c = True),
+ AND(CONTAINS(RecordType.Name, &quot;Location&quot;), CLQ_COL_Ready_for_Approval__c = True),
+ AND(CONTAINS(RecordType.Name, &quot;Capacity&quot;), CLQ_COC_Ready_for_Approval__c = True),
+ OR(CONTAINS(RecordType.Name, &quot;Continuous&quot;), CONTAINS(RecordType.Name, &quot;Closure&quot;))
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ready for Approval</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

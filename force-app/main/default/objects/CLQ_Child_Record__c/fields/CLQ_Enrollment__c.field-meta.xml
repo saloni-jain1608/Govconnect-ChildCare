@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Enrollment__c</fullName>
+    <description>Select all the options that are applicable.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all the options that are applicable.</inlineHelpText>
+    <label>Enrollment (JFS 01234)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>No Enrollment Form</fullName>
+                <default>false</default>
+                <label>No Enrollment Form</label>
+            </value>
+            <value>
+                <fullName>Parent Information Incomplete</fullName>
+                <default>false</default>
+                <label>Parent Information Incomplete</label>
+            </value>
+            <value>
+                <fullName>Parent List Info Incomplete</fullName>
+                <default>false</default>
+                <label>Parent List Info Incomplete</label>
+            </value>
+            <value>
+                <fullName>Emergency Contact Incomplete</fullName>
+                <default>false</default>
+                <label>Emergency Contact Incomplete</label>
+            </value>
+            <value>
+                <fullName>Physician Information Incomplete</fullName>
+                <default>false</default>
+                <label>Physician Information Incomplete</label>
+            </value>
+            <value>
+                <fullName>Health Information Incomplete</fullName>
+                <default>false</default>
+                <label>Health Information Incomplete</label>
+            </value>
+            <value>
+                <fullName>Additional Info – Box Checked Yes</fullName>
+                <default>false</default>
+                <label>Additional Info – Box Checked Yes</label>
+            </value>
+            <value>
+                <fullName>ETA Information Incomplete</fullName>
+                <default>false</default>
+                <label>ETA Information Incomplete</label>
+            </value>
+            <value>
+                <fullName>Diapering Information Incomplete</fullName>
+                <default>false</default>
+                <label>Diapering Information Incomplete</label>
+            </value>
+            <value>
+                <fullName>Handbook Statement Incomplete</fullName>
+                <default>false</default>
+                <label>Handbook Statement Incomplete</label>
+            </value>
+            <value>
+                <fullName>Parent Signature Missing</fullName>
+                <default>false</default>
+                <label>Parent Signature Missing</label>
+            </value>
+            <value>
+                <fullName>Administrator Signature Missing</fullName>
+                <default>false</default>
+                <label>Administrator Signature Missing</label>
+            </value>
+            <value>
+                <fullName>No Annual Update</fullName>
+                <default>false</default>
+                <label>No Annual Update</label>
+            </value>
+            <value>
+                <fullName>Not on Current JFS 01234</fullName>
+                <default>false</default>
+                <label>Not on Current JFS 01234</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

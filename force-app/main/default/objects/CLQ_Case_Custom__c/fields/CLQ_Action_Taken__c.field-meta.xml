@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Action_Taken__c</fullName>
+    <externalId>false</externalId>
+    <label>Action Taken</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Emergency Services (police/fire/ambulance) 911 Called</fullName>
+                <default>false</default>
+                <label>Emergency Services (police/fire/ambulance) 911 Called</label>
+            </value>
+            <value>
+                <fullName>Emergency Services Transported Child or Child Transported to the Hospital</fullName>
+                <default>false</default>
+                <label>Emergency Services Transported Child or Child Transported to the Hospital</label>
+            </value>
+            <value>
+                <fullName>Local Health Department Contacted</fullName>
+                <default>false</default>
+                <label>Local Health Department Contacted</label>
+            </value>
+            <value>
+                <fullName>Parent followed up with Medical/Dental Care</fullName>
+                <default>false</default>
+                <label>Parent followed up with Medical/Dental Care</label>
+            </value>
+            <value>
+                <fullName>Public Children Services Agency Contacted</fullName>
+                <default>false</default>
+                <label>Public Children Services Agency Contacted</label>
+            </value>
+            <value>
+                <fullName>Poison Control Contacted</fullName>
+                <default>false</default>
+                <label>Poison Control Contacted</label>
+            </value>
+            <value>
+                <fullName>Program Recommended Medical/Dental Care</fullName>
+                <default>false</default>
+                <label>Program Recommended Medical/Dental Care</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_ODE_Type_Should_Fill_Under_2_an_half</fullName>
+    <active>false</active>
+    <description>For the ODE and Center Recordtypes Under 2 years information is required.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(CONTAINS(CLQ_Program__r.RecordType.Name,&apos;Child Care&apos;),CLQ_Program__r.RecordType.Name = &apos;Pre School&apos;),OR(ISBLANK(CLQ_Number_of_Children_Under_2_5__c),ISBLANK(TEXT(CLQ_Used_by_Under_or_Over_2_1_2__c))))</errorConditionFormula>
+    <errorMessage>No. of children Under 2 1/2 years and If used by over and Under are required for ODE &amp; Center Types.</errorMessage>
+</ValidationRule>

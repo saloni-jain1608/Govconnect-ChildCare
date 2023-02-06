@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_If_Other_Describe_is_required</fullName>
+    <active>true</active>
+    <description>When the Agency Referral Type is selected ‘Other’ and the If &apos;Other&apos; Describe text box is blank, display error message.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name  = &apos;Alleged Ops&apos;,
+ ISPICKVAL(  CLQ_Agency_Referral_Type__c , &apos;Other&apos;),  ISBLANK( CLQ_If_Other_Describe__c)  )</errorConditionFormula>
+    <errorMessage>If &apos;Other&apos; Describe is a required when the ‘Agency Referral Type’ of ‘Other’ is selected</errorMessage>
+</ValidationRule>

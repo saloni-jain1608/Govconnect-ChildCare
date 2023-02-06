@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NDL_Next_Complaint_Insp_Approved_CDC_Web__c</fullName>
+    <description>(Forms/Reports) Drawloop next field for Inspection Complaint Full Report for Complaint record type for CDC Web purposes
+Not in Use</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Inspection__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000nV3p;Deploy:a01r0000000k9ih&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NDL Next Complaint Insp Approved CDC Web</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

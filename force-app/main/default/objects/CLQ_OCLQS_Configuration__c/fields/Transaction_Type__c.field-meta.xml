@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Type__c</fullName>
+    <description>Program transaction type</description>
+    <externalId>false</externalId>
+    <label>Transaction Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SUTQ - Initial Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Initial Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Ongoing Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Ongoing Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Annual Report</fullName>
+                <default>false</default>
+                <label>SUTQ - Annual Report</label>
+            </value>
+            <value>
+                <fullName>New Application</fullName>
+                <default>false</default>
+                <label>New Application</label>
+            </value>
+            <value>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+                <label>Amendment</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Update</fullName>
+                <default>false</default>
+                <label>Update</label>
+            </value>
+            <value>
+                <fullName>Continuous Licensing</fullName>
+                <default>false</default>
+                <label>Continuous Licensing</label>
+            </value>
+            <value>
+                <fullName>License Closure</fullName>
+                <default>false</default>
+                <label>License Closure</label>
+            </value>
+            <value>
+                <fullName>Program Close</fullName>
+                <default>false</default>
+                <label>Program Close</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+                <label>Under Review</label>
+            </value>
+            <value>
+                <fullName>Return for Revision</fullName>
+                <default>false</default>
+                <label>Return for Revision</label>
+            </value>
+            <value>
+                <fullName>Remove After Approved</fullName>
+                <default>false</default>
+                <label>Remove After Approved</label>
+            </value>
+            <value>
+                <fullName>Returned for Revision</fullName>
+                <default>false</default>
+                <label>Returned for Revision</label>
+            </value>
+            <value>
+                <fullName>Resubmitted</fullName>
+                <default>false</default>
+                <label>Resubmitted</label>
+            </value>
+            <value>
+                <fullName>Withdraw</fullName>
+                <default>false</default>
+                <label>Withdraw</label>
+            </value>
+            <value>
+                <fullName>Not Complete</fullName>
+                <default>false</default>
+                <label>Not Complete</label>
+            </value>
+            <value>
+                <fullName>Deferral</fullName>
+                <default>false</default>
+                <label>Deferral</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>System Deleted</fullName>
+                <default>false</default>
+                <label>System Deleted</label>
+            </value>
+            <value>
+                <fullName>Ineligible</fullName>
+                <default>false</default>
+                <label>Ineligible</label>
+            </value>
+            <value>
+                <fullName>Registration Assigned</fullName>
+                <default>false</default>
+                <label>Registration Assigned</label>
+            </value>
+            <value>
+                <fullName>Supervisor Desk Review</fullName>
+                <default>false</default>
+                <label>Supervisor Desk Review</label>
+            </value>
+            <value>
+                <fullName>Unable To Rate</fullName>
+                <default>false</default>
+                <label>Unable To Rate</label>
+            </value>
+            <value>
+                <fullName>Onsite Visit Pending</fullName>
+                <default>false</default>
+                <label>Onsite Visit Pending</label>
+            </value>
+            <value>
+                <fullName>Rating Recommended for Review</fullName>
+                <default>false</default>
+                <label>Rating Recommended for Review</label>
+            </value>
+            <value>
+                <fullName>Rating Assessment Complete</fullName>
+                <default>false</default>
+                <label>Rating Assessment Complete</label>
+            </value>
+            <value>
+                <fullName>Withdrawn at Programs Request</fullName>
+                <default>false</default>
+                <label>Withdrawn at Programs Request</label>
+            </value>
+            <value>
+                <fullName>Application - CC Center</fullName>
+                <default>false</default>
+                <label>Application - CC Center</label>
+            </value>
+            <value>
+                <fullName>Application - FCC</fullName>
+                <default>false</default>
+                <label>Application - FCC</label>
+            </value>
+            <value>
+                <fullName>Application - ODE Program</fullName>
+                <default>false</default>
+                <label>Application - ODE Program</label>
+            </value>
+            <value>
+                <fullName>Amendment - Center - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - Center - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - FCC - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - FCC - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE - Change of Location</fullName>
+                <default>false</default>
+                <label>Amendment - ODE - Change of Location</label>
+            </value>
+            <value>
+                <fullName>Amendment - ODE and Center - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment - ODE and Center - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Amendment- FCC - Change of Capacity / Space</fullName>
+                <default>false</default>
+                <label>Amendment- FCC - Change of Capacity / Space</label>
+            </value>
+            <value>
+                <fullName>Day Camp</fullName>
+                <default>false</default>
+                <label>Day Camp</label>
+            </value>
+            <value>
+                <fullName>In-Home Aide</fullName>
+                <default>false</default>
+                <label>In-Home Aide</label>
+            </value>
+            <value>
+                <fullName>Registration - Out of State</fullName>
+                <default>false</default>
+                <label>Registration - Out of State</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Update Authorized Rep</fullName>
+                <default>false</default>
+                <label>Update Authorized Rep</label>
+            </value>
+            <value>
+                <fullName>Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>Renew Application - Day Camp</fullName>
+                <default>false</default>
+                <label>Renew Application - Day Camp</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Expedited Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Expedited Registration</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Reinstate Rating after Temporary Closure</fullName>
+                <default>false</default>
+                <label>SUTQ - Reinstate Rating after Temporary Closure</label>
+            </value>
+            <value>
+                <fullName>SUTQ - Change of Owner Registration</fullName>
+                <default>false</default>
+                <label>SUTQ - Change of Owner Registration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

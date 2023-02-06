@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Domain__c</columns>
+    <columns>CLQ_Rule_Short_Name__c</columns>
+    <columns>CLQ_Rule__c</columns>
+    <columns>CLQ_Rule_Effective_Date__c</columns>
+    <columns>CLQ_Rule_Expiration_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

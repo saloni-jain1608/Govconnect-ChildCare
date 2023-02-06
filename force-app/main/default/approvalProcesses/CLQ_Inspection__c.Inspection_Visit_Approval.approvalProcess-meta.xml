@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>County_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>JFS_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ODE_Roles_Submit_for_Approvals</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>CLQ_Inspection_Status__c</field>
+        <field>CLQ_Visit_Status__c</field>
+        <field>CLQ_Program__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Inspection_Status_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Uncheck_Assign_Task_Checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Close_Task_Checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Licensing Inspection Visit</description>
+        <label>Initial Approval</label>
+        <name>Initial_Approval</name>
+        <rejectionActions>
+            <action>
+                <name>Inspection_Status_Returned_To_Reviewer</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Revise_Inspection</name>
+                <type>Task</type>
+            </action>
+            <action>
+                <name>Uncheck_Assign_Task_Checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Close_Task_Checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>OJLS-680 &amp; 681
+[4/24/2017]: Added Recall actions as per bug# 11106
+[Ramana, 5/23/2017]: Updated Initial Submitters for CR# 11182
+[Pavan, 8/17/2017]: Added &quot;Update Approved Date&quot; for TFS #11629</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>TEXT(CLQ_Visit_Status__c) = $Label.CLQ_Inspection_Visit_Status_Completed &amp;&amp; (TEXT(CLQ_Inspection_Status__c) = $Label.CLQ_Inspection_Status_Pending_Processing || TEXT(CLQ_Inspection_Status__c) = $Label.CLQ_Inspection_Status_Returned_to_Reviewer ) &amp;&amp; (TEXT(CLQ_Inspection_Type__c) &lt;&gt; $Label.CLQ_Inspection_Type_Pre_license &amp;&amp; TEXT(CLQ_Inspection_Type__c) &lt;&gt; $Label.CLQ_Inspection_Type_Technical_Assistance ) &amp;&amp; RecordType.Name = $Label.CLQ_Inspection_RecType &amp;&amp; CLQ_Program_Record_Type__c &lt;&gt; $Label.CLQ_Inspection_Program_RecType</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Inspection_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Approved_Date</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Inspection_Status_Returned_To_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Update_Inspection_Status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Inspection Visit Approval</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>3</processOrder>
+    <recallActions>
+        <action>
+            <name>CLQ_Inspection_Status_Pending_Processing</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

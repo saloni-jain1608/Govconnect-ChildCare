@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_IncidentInjury_cant_be_recorded</fullName>
+    <active>true</active>
+    <description>An Incident/Injury/Illness can only be recorded on a program having the following program types :
+o FCC Type A
+o FCC Type B
+o Centers
+o Day Camps
+o Pre-School
+o School Age</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name =&apos;Incident / Injury / Illness&apos;,OR(Program_Record_Type__c = &apos;In-Home Aide&apos;  ,Program_Record_Type__c = &apos;Out of State Registration&apos;) )</errorConditionFormula>
+    <errorMessage>An Incident/Injury/Illness can only be recorded on a program having the following program types : FCC Type A, FCC Type B, Centers, Day Camps, Pre-School,  School Age</errorMessage>
+</ValidationRule>

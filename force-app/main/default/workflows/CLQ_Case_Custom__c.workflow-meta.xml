@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CLQ_JFS_Complaint_Alert_to_Approver_Custom</fullName>
+        <description>CLQ JFS Complaint Alert to Approver Custom</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Approver_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/JFS_Notification_on_initial_submission_of_complaint_report_Custom</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_ODE_Complaint_Email_Alert_to_Approver_Custom</fullName>
+        <description>CLQ ODE Complaint Email Alert to Approver Custom</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Approver_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/ODE_Notification_on_initial_submission_of_complaint_report_Custom</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Suspension_Hearing_Requested_No_Custom</fullName>
+        <description>Suspension Hearing Requested - No</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Requestor_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Specialist_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Suspension_Hearing_Requested_No</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Suspension_Hearing_Requested_Yes_Custom</fullName>
+        <description>Suspension Hearing Requested - Yes</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Requestor_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Specialist_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Suspension_Hearing_Requested_Yes</template>
+    </alerts>
+    <alerts>
+        <fullName>CLQ_Suspension_Request_Suspension_Status_Custom</fullName>
+        <description>Suspension Request Suspension Status</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>saljain@govconnect.childcarelicesing.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_Suspension_Request_Suspension_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assigned_Reviewer_when_Reason_for_Closure_is_Revoked</fullName>
+        <description>Notify Assigned Reviewer when Reason for Closure is Revoked</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_Specialist_Reviewer__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_Internal_Email_Templates/CLQ_EnforcementRequestToCloseProvider</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assigned_Reviewer_whenever_Activity_Status_changes_to_PAO_Sent</fullName>
+        <description>Notify Assigned Reviewer whenever Activity Status changes to &apos;PAO Sent&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_Specialist_Reviewer__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notify_Assigned_Reviewer_on_PAO_Sent</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Enforcement_Coordinator</fullName>
+        <description>Notify Enforcement Coordinator</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_Specialist_Reviewer__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Notify_Assigned_Reviewer_on_Inspection_Field_Change</template>
+    </alerts>
+    <alerts>
+        <fullName>Request_Rejected_by_Approver</fullName>
+        <description>Request Rejected by Approver Custom</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OCLQS_State_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Assigned_Specialist_Reviewer__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/Rejection_status_information_to_user_custom</template>
+    </alerts>
+    <alerts>
+        <fullName>Request_Rejected_by_Approver_Custom</fullName>
+        <description>Request Rejected by Approver Custom</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CLQ_Assigned_Specialist_Reviewer__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CLQ_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CLQ_External_Email_Templates/Rejection_status_information_to_user_custom</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Alleged_Ops_Completed_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CLQ_Alleged_Ops_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Alleged Ops Completed RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Alleged_Ops_Submitted_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CLQ_Alleged_Ops_Submitted</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Alleged Ops Submitted RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Start_False</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Approval Start False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Approval_Start_False</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Approval Start False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Case_Closed_Custom</fullName>
+        <field>CLQ_Activity_Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>CLQ_Case Closed Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Check_Approved_by_Manager_field</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Approved by Manager field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Check_Level1_Completed</fullName>
+        <field>CLQ_Level1_Approval_Completed__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Level1 Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Close_Case</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>CLQ Close Case</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Complaint_Submitted_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CLQ_Complaint_Submitted</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Complaint Submitted RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Enforcement_Submitted_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CLQ_Enforcement_Suspension_Submitted</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Enforcement Submitted RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Flag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Flag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Pending_Approval</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Reset_Complete_Allegation_Custom</fullName>
+        <field>CLQ_Completed_Allegation_Review__c</field>
+        <name>Reset Complete Allegation Review Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Returned_For_Reviewer</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Return to Specialist/Reviewer</literalValue>
+        <name>Returned For Reviewer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Start_Approval_False</fullName>
+        <field>CLQ_Start_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>Start Approval False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Status_Update_Approval</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status Update Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Status_Update_Return_to_Reviewer</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Return to Specialist/Reviewer</literalValue>
+        <name>Status Update Return to Reviewer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Uncheck_Approval_status_field</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Approval status field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Uncheck_Approved_by_Manager_field</fullName>
+        <field>CLQ_Approved_by_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Approved by Manager field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Under_Review_No_Reevaluate</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Under Review</literalValue>
+        <name>Under Review No Reevaluate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Approver_Email_Custom</fullName>
+        <description>Update User&apos;s Manager&apos;s Email address</description>
+        <field>CLQ_Approver_s_Email__c</field>
+        <formula>CLQ_Assigned_To__r.Manager.Email</formula>
+        <name>CLQ - Update Approver Email Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Assigned_to_Email_Custom</fullName>
+        <field>CLQ_Assigned_to_Email__c</field>
+        <formula>CLQ_Assigned_To__r.Email</formula>
+        <name>CLQ Update Assigned to Email Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_Update_Case_Status_to_Under_Review</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Under Review</literalValue>
+        <name>Update Case Status to Under Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CLQ_unFlag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>unFlag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Enforcement_Suspension_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CLQ_Enforcement_Suspension_Submitted</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Enforcement Suspension RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Incident_Injury_Submitted_RT_Custom</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Incident_Injury_Submitted</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Incident Injury Submitted RT Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Approval</fullName>
+        <field>CLQ_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Complete_Inspection_Date_Custom</fullName>
+        <field>CLQ_Complete_Inspection_Date__c</field>
+        <name>Reset Complete Inspection Date Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Complete_Allegation_Review_Date_Cust</fullName>
+        <field>CLQ_Completed_Allegation_Review__c</field>
+        <formula>TODAY()</formula>
+        <name>Set Complete Allegation Review Date Cust</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Complete_Inspection_Date_Custom</fullName>
+        <field>CLQ_Complete_Inspection_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Set Complete Inspection Date Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UnFlag_Rejected_By_Manager</fullName>
+        <field>CLQ_Rejected_By_Manager__c</field>
+        <literalValue>0</literalValue>
+        <name>UnFlag Rejected By Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Date_Custom</fullName>
+        <description>Update Status Date</description>
+        <field>CLQ_Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Status Date Custom</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>test1</fullName>
+        <field>CLQ_Complainant_Phone__c</field>
+        <name>test1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CLQ_Enforcement Closed Custom</fullName>
+        <active>true</active>
+        <formula>$Setup.ExecutionControlSetting__c.Run_Workflow__c &amp;&amp; CLQ_Case_Custom_RTName__c = &apos;Enforcement Suspension Submitted&apos; &amp;&amp; CLQ_Case_Closure_Date__c &lt;&gt; NULL &amp;&amp; ISPICKVAL(CLQ_Status__c, &apos;Complete&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>CLQ_Case_Closed_Custom</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>CLQ_Case_Custom__c.CLQ_Case_Closure_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Review_Complaint_Approval</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Review Complaint Approval</subject>
+    </tasks>
+    <tasks>
+        <fullName>Review_Complaint_Report_Custom</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Case_Custom__c.CLQ_Submitted_Date_Incident__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Review Complaint Report Custom</subject>
+    </tasks>
+    <tasks>
+        <fullName>Review_Complaint_Report_Custom1</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Case_Custom__c.CLQ_Submitted_Date_Incident__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Review Complaint Report Custom</subject>
+    </tasks>
+    <tasks>
+        <fullName>Revise_Complaint_Review</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>CLQ_Case_Custom__c.CLQ_Submitted_Date_Incident__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Revise Complaint Review</subject>
+    </tasks>
+</Workflow>

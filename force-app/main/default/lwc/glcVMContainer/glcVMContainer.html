@@ -1,0 +1,94 @@
+<template>
+
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon class="slds-m-right_small" icon-name="standard:visit_templates" size="small">
+            </lightning-icon>
+            Visit Mode - {inspectionNumber}
+        </h3>
+
+        <div class="slds-grid slds-gutters">
+            <div class={contentClass}>
+                <lightning-accordion allow-multiple-sections-open onsectiontoggle={handleSectionToggle}>
+
+                    <template for:each={domainWrapperList} for:item="domain">
+                        <template if:true={domain.showDomain}>
+                            <lightning-accordion-section key={domain.domainID} name={domain.domainName}
+                                label={domain.domainName}>
+                                <template for:each={domain.rulelist} for:item="rule">
+                                    <template if:true={rule.showRule}>
+                                        <div class="card-border" key={rule.ruleRecord.Id}>
+                                            <c-glc-v-m-rule-card rule-record={rule.ruleRecord} key={rule.ruleRecord.Id}
+                                                sfinding-code={rule.sfindingCode} result-options={rule.ruleResultList}>
+                                            </c-glc-v-m-rule-card>
+                                        </div>
+                                    </template>
+                                </template>
+                            </lightning-accordion-section>
+                        </template>
+                    </template>
+
+                </lightning-accordion>
+            </div>
+
+            <div class={filterClass}>
+                <template if:true={showFilter}>
+                    <lightning-card>
+                        <div class="filter-search slds-m-right_small slds-p-around_small">
+
+                            <lightning-combobox data-id="search-result-input" options={searchResultValues}
+                                class="slds-m-top_small" label="Result" required
+                                message-when-value-missing="Please select an option"
+                                onchange={handleSearchResultChange}>
+                            </lightning-combobox>
+                            <lightning-combobox data-id="search-domain-input" options={searchDomainValues}
+                                class="slds-m-top_small" label="Domain" required
+                                message-when-value-missing="Please select an option"
+                                onchange={handleSearchDomainChange}>
+                            </lightning-combobox>
+
+                            <lightning-button label="Search" onclick={handleSearch} variant="brand"
+                                style="display:grid; width: 100%;" class="slds-m-top_medium"></lightning-button>
+
+                            <template if:true={searched}>
+                                <lightning-combobox options={applyResultValues} data-id="apply-result-input"
+                                    class="slds-m-top_small" label="Apply Result" required
+                                    message-when-value-missing="Please select an option"
+                                    onchange={handleApplyResultChange}>
+                                </lightning-combobox>
+
+                                <lightning-button label="Apply" onclick={handleApply} variant="brand"
+                                    style="display:grid; width: 100%;" class="slds-m-top_medium"></lightning-button>
+                            </template>
+                        </div>
+                    </lightning-card>
+                </template>
+            </div>
+
+        </div>
+
+        <div slot="actions">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-button-group>
+                        <lightning-button label="Save" onclick={handleSave}></lightning-button>
+                        <lightning-button label="Complete Visit Mode" onclick={handleComplete}></lightning-button>
+                        <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+                        <lightning-button-icon icon-name="utility:filterList" onclick={toggleFilter}>
+                        </lightning-button-icon>
+                    </lightning-button-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-1">
+
+                </div>
+            </div>
+        </div>
+
+        <template if:true={showSpinner}>
+            <lightning-spinner class="page-spinner" alternative-text="Loading..." variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+    </lightning-card>
+</template>

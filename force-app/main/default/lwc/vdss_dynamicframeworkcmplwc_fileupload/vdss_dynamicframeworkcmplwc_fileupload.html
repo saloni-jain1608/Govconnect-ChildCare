@@ -1,0 +1,75 @@
+<template>
+    <div if:true={isLoading}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+        </lightning-spinner>
+    </div>
+
+    <div class="slds-size_1-of-1" style="font-size: medium;">
+        <div>
+            {upload_documents_each_type}
+        </div>
+        <div class="fileuploadbtnsection">
+            <lightning-button class="fileuploadbtn fileuploadchild" data-documentname="Plan of operation" label={Plan_of_operation} onclick={handleInitiateFileUpload} variant="brand" disabled={isDoc1Uploaded}></lightning-button>
+
+            <template if:true={isDoc1Uploaded}>
+                <lightning-icon class="fileuploadchild fileuploadchildIcn slds-size_1-of-8" icon-name="action:approval" alternative-text="Approved" title="Approved" size="x-small"></lightning-icon>
+                <div class="fileuploadchild slds-size_3-of-8">{File_uploaded_successfully}</div>
+            </template>
+</div>
+<div class="fileuploadbtnsection">
+    <lightning-button class="fileuploadbtn fileuploadchild" data-documentname="Budget details" label={Budget_details} onclick={handleInitiateFileUpload} variant="brand" disabled={isDoc2Uploaded}></lightning-button>
+    <template if:true={isDoc2Uploaded}>
+                <lightning-icon class="fileuploadchild fileuploadchildIcn slds-size_1-of-8" icon-name="action:approval" alternative-text="Approved" title="Approved" size="x-small"></lightning-icon>
+                <div class="fileuploadchild slds-size_3-of-8">{File_uploaded_successfully}</div>
+            </template>
+</div>
+<div class="fileuploadbtnsection">
+    <lightning-button class="fileuploadbtn fileuploadchild" data-documentname="Building approval" label={Building_approval} onclick={handleInitiateFileUpload} variant="brand" disabled={isDoc3Uploaded}></lightning-button>
+    <template if:true={isDoc3Uploaded}>
+                <lightning-icon class="fileuploadchild fileuploadchildIcn slds-size_1-of-8" icon-name="action:approval" alternative-text="Approved" title="Approved" size="x-small"></lightning-icon>
+                <div class="fileuploadchild slds-size_3-of-8">{File_uploaded_successfully}</div>
+            </template>
+</div>
+</div>
+
+<template if:true={isModalOpen}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Upload file</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-file-upload
+                        label="Upload Document"
+                        name="fileUploader"
+                        accept={acceptedFormats}
+                        record-id={documentId}
+                        onuploadfinished={handleUploadFinished}
+                        >
+                    </lightning-file-upload>
+                    
+                    <template if:true={fileUploadedSuccessfully}>
+                        <div>The file have been uploaded successfully. You may close this window now.</div>
+                    </template>
+</div>
+<!-- Modal/Popup Box LWC footer starts here -->
+<!--footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">Save</button>
+                </footer-->
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+</template>

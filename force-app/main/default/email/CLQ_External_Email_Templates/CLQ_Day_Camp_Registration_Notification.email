@@ -1,0 +1,8 @@
+The above referenced day camp has been registered effective {!CLQ_Program_Transaction__c.Submission_Date1__c}
+through {!CLQ_Program_Transaction__c.CLQ_Expiration_Date__c}. 
+
+Contact Child Care Help Desk for additional assistance at 1-877-302-2347. 
+
+The Ohio Child Licensing and Quality System Team. 
+
+Reference Id ref: {!CLQ_Program_Transaction__c.Id}

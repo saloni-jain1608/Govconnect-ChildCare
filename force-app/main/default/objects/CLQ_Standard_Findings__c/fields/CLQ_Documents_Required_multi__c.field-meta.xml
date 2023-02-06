@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Documents_Required_multi__c</fullName>
+    <externalId>false</externalId>
+    <label>Documents Required</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Building Approval</fullName>
+                <default>false</default>
+                <label>Building Approval</label>
+            </value>
+            <value>
+                <fullName>Fire Approval</fullName>
+                <default>false</default>
+                <label>Fire Approval</label>
+            </value>
+            <value>
+                <fullName>Food Service License</fullName>
+                <default>false</default>
+                <label>Food Service License</label>
+            </value>
+            <value>
+                <fullName>Food Service Exemption</fullName>
+                <default>false</default>
+                <label>Food Service Exemption</label>
+            </value>
+            <value>
+                <fullName>Background Checks</fullName>
+                <default>false</default>
+                <label>Background Checks</label>
+            </value>
+            <value>
+                <fullName>Non-Conviction Statement</fullName>
+                <default>false</default>
+                <label>Non-Conviction Statement</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Staff Medical</fullName>
+                <default>false</default>
+                <label>Staff Medical</label>
+            </value>
+            <value>
+                <fullName>Health/Safety Training</fullName>
+                <default>false</default>
+                <label>Health/Safety Training</label>
+            </value>
+            <value>
+                <fullName>Professional Development</fullName>
+                <default>false</default>
+                <label>Professional Development</label>
+            </value>
+            <value>
+                <fullName>Driver Information</fullName>
+                <default>false</default>
+                <label>Driver Information</label>
+            </value>
+            <value>
+                <fullName>Child MedicalEnrollment Form</fullName>
+                <default>false</default>
+                <label>Child MedicalEnrollment Form</label>
+            </value>
+            <value>
+                <fullName>Medication</fullName>
+                <default>false</default>
+                <label>Medication</label>
+            </value>
+            <value>
+                <fullName>Health Care Plan</fullName>
+                <default>false</default>
+                <label>Health Care Plan</label>
+            </value>
+            <value>
+                <fullName>Health and Safety Verification</fullName>
+                <default>false</default>
+                <label>Health and Safety Verification</label>
+            </value>
+            <value>
+                <fullName>Pet Records</fullName>
+                <default>false</default>
+                <label>Pet Records</label>
+            </value>
+            <value>
+                <fullName>Space Heater Permission</fullName>
+                <default>false</default>
+                <label>Space Heater Permission</label>
+            </value>
+            <value>
+                <fullName>Water Test Verification</fullName>
+                <default>false</default>
+                <label>Water Test Verification</label>
+            </value>
+            <value>
+                <fullName>Incident Report</fullName>
+                <default>false</default>
+                <label>Incident Report</label>
+            </value>
+            <value>
+                <fullName>Emergecy Postings</fullName>
+                <default>false</default>
+                <label>Emergecy Postings</label>
+            </value>
+            <value>
+                <fullName>Menu</fullName>
+                <default>false</default>
+                <label>Menu</label>
+            </value>
+            <value>
+                <fullName>Meal Verification</fullName>
+                <default>false</default>
+                <label>Meal Verification</label>
+            </value>
+            <value>
+                <fullName>Handbook</fullName>
+                <default>false</default>
+                <label>Handbook</label>
+            </value>
+            <value>
+                <fullName>Written Policies</fullName>
+                <default>false</default>
+                <label>Written Policies</label>
+            </value>
+            <value>
+                <fullName>Written Procedures</fullName>
+                <default>false</default>
+                <label>Written Procedures</label>
+            </value>
+            <value>
+                <fullName>Liability Insurance</fullName>
+                <default>false</default>
+                <label>Liability Insurance</label>
+            </value>
+            <value>
+                <fullName>Outdoor Diagram</fullName>
+                <default>false</default>
+                <label>Outdoor Diagram</label>
+            </value>
+            <value>
+                <fullName>Outdoor Verification</fullName>
+                <default>false</default>
+                <label>Outdoor Verification</label>
+            </value>
+            <value>
+                <fullName>Indoor Diagram</fullName>
+                <default>false</default>
+                <label>Indoor Diagram</label>
+            </value>
+            <value>
+                <fullName>Indoor Space Verification</fullName>
+                <default>false</default>
+                <label>Indoor Space Verification</label>
+            </value>
+            <value>
+                <fullName>Playground Inspection</fullName>
+                <default>false</default>
+                <label>Playground Inspection</label>
+            </value>
+            <value>
+                <fullName>Infant Verification</fullName>
+                <default>false</default>
+                <label>Infant Verification</label>
+            </value>
+            <value>
+                <fullName>Crib Verification</fullName>
+                <default>false</default>
+                <label>Crib Verification</label>
+            </value>
+            <value>
+                <fullName>Annual Vehicle Inspection</fullName>
+                <default>false</default>
+                <label>Annual Vehicle Inspection</label>
+            </value>
+            <value>
+                <fullName>Weekly Vehicle Inspection</fullName>
+                <default>false</default>
+                <label>Weekly Vehicle Inspection</label>
+            </value>
+            <value>
+                <fullName>Permission Slips</fullName>
+                <default>false</default>
+                <label>Permission Slips</label>
+            </value>
+            <value>
+                <fullName>Transportation Verification</fullName>
+                <default>false</default>
+                <label>Transportation Verification</label>
+            </value>
+            <value>
+                <fullName>Swimming Verification</fullName>
+                <default>false</default>
+                <label>Swimming Verification</label>
+            </value>
+            <value>
+                <fullName>Evening Care Verification</fullName>
+                <default>false</default>
+                <label>Evening Care Verification</label>
+            </value>
+            <value>
+                <fullName>Safe Environment Verification</fullName>
+                <default>false</default>
+                <label>Safe Environment Verification</label>
+            </value>
+            <value>
+                <fullName>Sanitary Environment Verification</fullName>
+                <default>false</default>
+                <label>Sanitary Environment Verification</label>
+            </value>
+            <value>
+                <fullName>Daily Schedule</fullName>
+                <default>false</default>
+                <label>Daily Schedule</label>
+            </value>
+            <value>
+                <fullName>Equipment Verification</fullName>
+                <default>false</default>
+                <label>Equipment Verification</label>
+            </value>
+            <value>
+                <fullName>Attendance Records</fullName>
+                <default>false</default>
+                <label>Attendance Records</label>
+            </value>
+            <value>
+                <fullName>Observation Verification</fullName>
+                <default>false</default>
+                <label>Observation Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

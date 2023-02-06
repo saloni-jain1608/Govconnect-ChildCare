@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evidence_of_required_insurance_coverage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Evidence of required insurance coverage</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

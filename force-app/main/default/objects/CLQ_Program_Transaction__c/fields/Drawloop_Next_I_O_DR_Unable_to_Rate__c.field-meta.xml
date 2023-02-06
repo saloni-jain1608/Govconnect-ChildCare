@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawloop_Next_I_O_DR_Unable_to_Rate__c</fullName>
+    <description>[DrawLoop]: Used in Outbound Message
+[Task 11630] DDP= SUTQ Summary Desk Review ; Delivery = SMTP - DR UnableToRate</description>
+    <externalId>false</externalId>
+    <formula>&quot;SFCLQ_Program_Transaction__c:&quot; &amp; Id &amp; &quot;;DDPId:a03r0000000xtEC;Deploy:a01r0000001LWRh&quot;</formula>
+    <label>Drawloop_Next I/O DR Unable to Rate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

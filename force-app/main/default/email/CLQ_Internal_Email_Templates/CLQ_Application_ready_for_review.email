@@ -1,0 +1,3 @@
+Dear {!CLQ_Program_Transaction__c.CLQ_Transaction_Assigned_To__c},
+
+The {!CLQ_Program_Transaction__c.RecordType} for {!CLQ_Program_Transaction__c.CLQ_Program__c} ({!CLQ_Program_Transaction__c.CLQ_Program_Number__c}), has been assigned to you. Log into {!$Label.ChildLicensingQualitySystem} to claim task and begin the review.

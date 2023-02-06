@@ -1,0 +1,225 @@
+<template>
+    <template if:true={isLoading}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-around_medium"
+                    style="background-color: transparent; box-shadow:none" id="modal-content-id-1">
+                    <div class="slds-spinner_container"
+                        style="background-color: transparent; position: relative;padding: 20px">
+                        <div role="status" class="slds-spinner slds-spinner_medium" style="position: relative;">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" style="background: rgb(250, 250, 249, 0.3);"></div>
+    </template>
+<template if:true={showModal}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">{Close}</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{New_Record}</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <template if:false={hasRecordType}>
+                        <lightning-record-edit-form object-api-name={objectApiName} onsubmit={handleSubmit}
+                            onsuccess={handleSuccess} onerror={handleError}>
+                            <template for:each={formFields} for:item="field">
+                                <div key={field}>
+                                    {field.Label}
+                                    <lightning-input-field variant = "label-hidden" field-name={field.FieldName}></lightning-input-field>
+                                </div>
+                            </template>
+<div class="slds-m-top_medium">
+    <lightning-button class="slds-m-top_small" label={Cancel} onclick={closeModal}>
+    </lightning-button>
+    <lightning-button class="slds-m-top_small" type="submit" label={Save_Record}>
+    </lightning-button>
+</div>
+</lightning-record-edit-form>
+</template>
+<template if:true={hasRecordType}>
+                        <lightning-record-edit-form object-api-name={objectApiName} record-type-id={recordTypeId}
+                            onsubmit={handleSubmit} onsuccess={handleSuccess} onerror={handleError}>
+                            <template for:each={formFields} for:item="field">
+                                <div key={field}>
+                                    {field.Label}
+                                    <lightning-input-field variant = "label-hidden" field-name={field.FieldName}></lightning-input-field>
+                                </div>
+                            </template>
+<div class="slds-m-top_medium">
+    <lightning-button class="slds-m-top_small" label={Cancel} onclick={closeModal}>
+    </lightning-button>
+    <lightning-button class="slds-m-top_small" type="submit" label={Save_Record}>
+    </lightning-button>
+</div>
+</lightning-record-edit-form>
+</template>
+</div>
+<!-- Modal/Popup Box LWC footer starts here -->
+<!--footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">Save</button>
+                </footer-->
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+<template if:true={showMultiModel}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">{Close}</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">{New_Record}</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <template if:true={showParentForm}>
+                        <lightning-record-edit-form object-api-name={lookupObjectApiName} onsubmit={handleParentSubmit}
+                            onsuccess={handleParentSuccess} onerror={handleParentError}>
+                            <template for:each={parentFormFields} for:item="field">
+                                <div key={field}>
+                                    {field.Label}
+                                    <lightning-input-field variant = "label-hidden" field-name={field.FieldName}></lightning-input-field>
+                                </div>
+                            </template>
+<div class="slds-m-top_medium">
+    <lightning-button class="slds-m-top_small" label={Cancel} onclick={closeModal}>
+    </lightning-button>
+    <lightning-button class="slds-m-top_small" type="submit" label={Next}>
+    </lightning-button>
+</div>
+</lightning-record-edit-form>
+</template>
+<template if:false={showParentForm}>
+                        <template if:false={hasRecordType}>
+                            <div class="slds-p-bottom_large">
+                                <lightning-record-view-form record-id={parentRecordId}
+                                    object-api-name={lookupObjectApiName}>
+                                    <div class="slds-box">
+                                        <template for:each={parentFormFields} for:item="field">
+                                           
+                                            <lightning-output-field field-name={field.FieldName} key={field}>
+                                            </lightning-output-field>
+                                        </template>
+</div>
+</lightning-record-view-form>
+</div>
+<lightning-record-edit-form object-api-name={objectApiName} onsubmit={handleSubmit} onsuccess={handleSuccess} onerror={handleError}>
+    <template for:each={formFields} for:item="field">
+                                    <div key={field}>
+                                        {field.Label}
+                                        <lightning-input-field variant = "label-hidden" field-name={field.FieldName}></lightning-input-field>
+                                    </div>
+                                </template>
+    <div class="slds-m-top_medium">
+        <lightning-button class="slds-m-top_small" label={Cancel} onclick={closeModal}>
+        </lightning-button>
+        <lightning-button class="slds-m-top_small" type="submit" label={Save_Record}>
+        </lightning-button>
+    </div>
+</lightning-record-edit-form>
+</template>
+<template if:true={hasRecordType}>
+                            <div class="slds-p-bottom_large">
+                                <lightning-record-view-form record-id={parentRecordId}
+                                    object-api-name={lookupObjectApiName}>
+                                    <div class="slds-box">
+                                        <template for:each={parentFormFields} for:item="field">
+                                            
+                                            <lightning-output-field field-name={field.FieldName} key={field}>
+                                            </lightning-output-field>
+                                        </template>
+</div>
+</lightning-record-view-form>
+</div>
+<lightning-record-edit-form object-api-name={objectApiName} record-type-id={recordTypeId} onsubmit={handleChildSubmit} onsuccess={handleChildSuccess} onerror={handleChildError}>
+    <template for:each={formFields} for:item="field">
+                                    <div key={field}>
+                                        {field.Label}
+                                        <lightning-input-field  variant = "label-hidden" field-name={field.FieldName}></lightning-input-field>
+                                    </div>
+                                </template>
+    <div class="slds-m-top_medium">
+        <lightning-button class="slds-m-top_small" label={Cancel} onclick={closeModal}>
+        </lightning-button>
+        <lightning-button class="slds-m-top_small" type="submit" label={Save_Record}>
+        </lightning-button>
+    </div>
+</lightning-record-edit-form>
+</template>
+</template>
+</div>
+<!-- Modal/Popup Box LWC footer starts here -->
+<!--footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">Save</button>
+                </footer-->
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+<div class="slds-p-top_medium slds-p-bottom_medium">
+    <div class="slds-m-top_medium slds-m-bottom_medium">
+        <template if:true={hasParentForm}>
+                <lightning-button variant="brand" label={Create_New} title="New Record" onclick={handleNewMultiClick}>
+                </lightning-button>
+            </template>
+        <template if:false={hasParentForm}>
+                <lightning-button variant="brand" label={Create_New} title="New Record" onclick={handleNewClick}>
+                </lightning-button>
+            </template>
+    </div>
+    <template if:true={showtable}>
+    <div class="slds-center"  style="border-style: groove;">
+        <div class="slds-table--header-fixed_container">
+            <div class="slds-scrollable_y" style="height:100%;">
+                <table class="slds-table slds-table_bordered slds-table--header-fixed" style="table-layout: fixed;
+                width: 100%;">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <template for:each={tableHeaders} for:item="header">
+                                    <th scope="col" key={header} style="white-space: normal;">
+                                        <div  class="slds-truncate slds-cell-fixed">{header}</div>
+                                    </th>
+                                </template>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={tableData} for:item="tableRow">
+                                <tr key={tableRow.Id} data-id={tableRow.Id} onclick={handleClick}>
+                                    <template for:each={tableRow.Columns} for:item="tableColumn">
+                                        <td key={tableColumn}  style="white-space: normal;word-wrap: break-word;">{tableColumn}</td>
+                                    </template>
+                        </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+</div>
+</template>

@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AR_DDP</fullName>
+        <categories>Drawloop</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AR DDP</shortDescription>
+        <value>a03r0000000n4mj</value>
+    </labels>
+    <labels>
+        <fullName>AR_Submitted_DO</fullName>
+        <categories>Drawloop</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AR Submitted DO</shortDescription>
+        <value>a01r0000000jP9O</value>
+    </labels>
+    <labels>
+        <fullName>Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account ApplicationFormCtrl</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>Admin_Approver_Profiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Admin/Approver Profiles</shortDescription>
+        <value>Approver - State User, ODE Approver - State User, ODJFS FCC Approver - State User, ODJFS FCC Approver - County Role, ODJFS Day Camp Approver - State User, ODJFS County Admin - County Role, ODE State Admin - State User, State Admin - State user, System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>Alleged_Rule_Results</fullName>
+        <categories>Visit Mode</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Alleged Rule Results</shortDescription>
+        <value>Substantiated, Unsubstantiated, Unable to be determined</value>
+    </labels>
+    <labels>
+        <fullName>AllowUserUpdateProfile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AllowUserUpdateProfile</shortDescription>
+        <value>State System Provider Help Desk State User</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionA</shortDescription>
+        <value>A. Program provides families information regarding resources and community services.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionAcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionAcc</shortDescription>
+        <value>A. The program provides information regarding a minimum of at least two resources and community services to families.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionB</shortDescription>
+        <value>B. Program obtains information about the family structure and routines that is important to the child&apos;s development.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionBcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionBcc</shortDescription>
+        <value>B. Program obtains information from families about their structure and routines that is important to the child&apos;s development.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionC</shortDescription>
+        <value>C. The program offers at least one opportunity for all families to engage in activities annually.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionCcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionCcc</shortDescription>
+        <value>C.The program offers at least one opportunity for all families to engage in activities annually.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionD</shortDescription>
+        <value>D. Program communicates with families using at least two different modes of communication, and at least one mode promotes two-way communication.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionDcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionDcc</shortDescription>
+        <value>D. Program communicates with families using different modes of communication, and at least one mode promotes two-way communication.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionE</shortDescription>
+        <value>E. The program provides families with combined or separate information on at least one health topic and one child development topic annually that are appropriate to all age groups served at the program.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionF</shortDescription>
+        <value>F. Programs and parents work collaboratively to create annual written, developmental and education goals for children.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionFcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionFcc</shortDescription>
+        <value>F. Programs and parents create annual written, developmental and/or education goals for children.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionG</shortDescription>
+        <value>G.The program has written policies and procedures to ensure that children have received comprehensive health screenings or  families have been provided information on the importance of health screenings.    The program has written policies and procedures for its referral process to community resources that support families and children. This is not required for school-age children.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionGcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionGcc</shortDescription>
+        <value>G.The program has written policies and procedures to ensure that children have received comprehensive health screenings or families have been provided information on the importance of health screenings. The program has written policies and procedures for its referral process to community resources that support families and children.  This is not required for school-age children.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionH</shortDescription>
+        <value>H. The program offers at least one educational training, workshop or event to support families&apos; engagement in children&apos;s learning and development annually for each age group served.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionHcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionHcc</shortDescription>
+        <value>H. The program offers at least one educational training, workshop or event to support families’ engagement in children’s learning and development annually for each age group served.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionI</shortDescription>
+        <value>I. None of the above.</value>
+    </labels>
+    <labels>
+        <fullName>AnswerOptionIcc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AnswerOptionIcc</shortDescription>
+        <value>I. None of the above</value>
+    </labels>
+    <labels>
+        <fullName>ApexCodeCoverageAggregate</fullName>
+        <categories>ApexCodeCoverage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApexCodeCoverageAggregate</shortDescription>
+        <value>SELECT+ApexClassOrTriggerId,ApexClassOrTrigger.Name,NumLinesCovered,NumLinesUncovered,Coverage+FROM+ApexCodeCoverageAggregate+ORDER+BY+ApexClassOrTrigger.Name</value>
+    </labels>
+    <labels>
+        <fullName>ApexOrgWideCoverage</fullName>
+        <categories>ApexCodeCoverage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApexOrgWideCoverage</shortDescription>
+        <value>SELECT+PercentCovered+FROM+ApexOrgWideCoverage</value>
+    </labels>
+    <labels>
+        <fullName>Applicable_Transaction_for_Withdraw</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Applicable Transaction for Withdraw</shortDescription>
+        <value>Application - CC Center,Application - FCC,Application - ODE Program,Amendment - Change of Administrator,Amendment - Center - Change of Location	,Amendment - FCC - Change of Location,Amendment - ODE - Change of Location,Amendment- FCC - Change of Capacity / Space,Amendment - ODE and Center - Change of Capacity / Space,Licensing - Closure</value>
+    </labels>
+    <labels>
+        <fullName>Applicable_Transaction_for_Withdraw_At_Applicant_Req</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Applicable Transaction for Withdraw At Applicant Req</shortDescription>
+        <value>Application - CC Center,Application - FCC,Application - ODE Program,Amendment - Change of Administrator,Amendment - Center - Change of Location	,Amendment - FCC - Change of Location,Amendment - ODE - Change of Location,Amendment- FCC - Change of Capacity / Space,Amendment - ODE and Center - Change of Capacity / Space,Licensing - Closure,Continuous License</value>
+    </labels>
+    <labels>
+        <fullName>Application_Review_Task</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Review Task</shortDescription>
+        <value>Application Review</value>
+    </labels>
+    <labels>
+        <fullName>Approval_Submit_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Submit Error Message</shortDescription>
+        <value>You cannot submit for approval because you do not have the required county role</value>
+    </labels>
+    <labels>
+        <fullName>Approved_Transaction_Restricted_Profiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approved_Transaction_Restricted_Profiles</shortDescription>
+        <value>ODE Licensing Reviewer - State User,ODE Lic and SUTQ Reviewer - State User</value>
+    </labels>
+    <labels>
+        <fullName>ApproverAllowedProfilestoEditProgram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ApproverAllowedProfilestoEditProgram</shortDescription>
+        <value>ODJFS FCC Approver - County Role;ODJFS FCC Approver - State User;ODJFS County Admin - County Role;ODE Approver - State User</value>
+    </labels>
+    <labels>
+        <fullName>Approvers_and_Reviewers_for_Case_Inspection_Update</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approvers and Reviewers for Case Inspection Update</shortDescription>
+        <value>JFS Specialist,ODE Specialist,JFS Supervisor,ODE Supervisor,Approver,Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>BatchDeleteProgramTrans_Query</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchDeleteProgramTrans_Query</shortDescription>
+        <value>select Id,Name,Recordtype.name,CLQ_Program__c,CLQ_Program__r.Id,CLQ_Program__r.CLQ_Associated_Organization__r.id,CLQ_Program__r.Recordtype.name,CLQ_Program__r.CLQ_Program_Email__c,CLQ_ProgTrans_Program_Email_Address__c,CLQ_Transaction_Status__c,CLQ_Program__r.SUTQ_Reviewer__c,CLQ_Program__r.SUTQ_Reviewer__r.email,CreatedDate from CLQ_Program_Transaction__c WHERE  DAY_ONLY(CreatedDate)   &lt;=: todaysDate  AND CLQ_Transaction_Status__c IN (&apos;Not Submitted&apos;,&apos;Not Complete&apos;) AND RecordType.Name IN (&apos;SUTQ - Annual Report&apos;, &apos;SUTQ - Ongoing Registration&apos;,&apos;SUTQ - Initial Registration&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>ByPassSelectiveTrigger</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ByPassSelectiveTrigger</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>CAPOverdue_BatchSize</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAPOverdue_BatchSize</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>CAP_EmailAlert_Fields</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAP_EmailAlert_Fields</shortDescription>
+        <value>CLQ_Program_Email_Address__c, CLQ_Inspection_Owner_Email__c,clq_message_process_email__c</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_120_Day_Annual_InspDueRemndr_Query</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_120_Day_Annual_InspDueRemndr_Query</shortDescription>
+        <value>SELECT id, OwnerId, CLQ_Licensing_Specialist__c, CLQ_Jurisdiction__c,
+(select Id,CLQ_Inspection_Type__c  from Inspections__r where ((CLQ_Inspection_Type__c IN (&apos;Annual&apos;,&apos;Provisional&apos;) AND Program_Jurisdiction__c  = &apos;JFS&apos;) OR (CLQ_Inspection_Type__c = &apos;Annual&apos; AND Program_Jurisdiction__c  = &apos;ODE&apos;)) AND CreatedDate &gt;=: startDate AND CreatedDate &lt;=: endDate) 
+FROM CLQ_Program__c 
+WHERE CLQ_Program_Record_Type__c IN (&apos;Child Care Center&apos;,&apos;Pre School&apos;,&apos;School Age Child Care&apos;)
+AND CLQ_Program_Status__c IN (&apos;Open&apos;,&apos;Enforcement&apos;)
+AND CLQ_License_Type__c = &apos;Continuous&apos;
+AND CLQ_Licensing_Specialist__c != NULL</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_30_Days_Reminder_Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_30_Days_Reminder_Query</shortDescription>
+        <value>Select id,Program_Rating__c,CLQ_Program_Email__c from CLQ_Program__c where Rating_Expiration_Date__c != null and Rating_Expiration_Date__c &lt;=: todayPlus30Days and Rating_Expiration_Date__c &gt;: todayDate AND (CLQ_Program_Status__c = &apos;Open&apos; OR CLQ_Program_Status__c = &apos;Enforcement&apos; OR CLQ_Program_Status__c = &apos;Pending&apos;) and id=&apos;a0ir0000000wdg5&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_90_60_30_Days_Reminder_Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_90_60_30_Days_Reminder_Query</shortDescription>
+        <value>Select id,Program_Rating__c,CLQ_Program_Email__c,CLQ_Licensing_Specialist__c from CLQ_Program__c where Rating_Expiration_Date__c != null and Rating_Expiration_Date__c &lt;=: todayPlus180Days and Rating_Expiration_Date__c &gt;: todayDate AND (CLQ_Program_Status__c = &apos;Open&apos; OR CLQ_Program_Status__c = &apos;New&apos; OR CLQ_Program_Status__c = &apos;Enforcement&apos; )</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_AnnualReminderInsp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_AnnualReminderInsp</shortDescription>
+        <value>Select id , CLQ_Jurisdiction__c , (select id, CreatedDate  from Inspections__r where CLQ_Inspection_Type__c = &apos;Annual&apos; and  DAY_ONLY(CreatedDate) &gt; 
+ :FiscalYearStartDate ) from CLQ_Program__c where CLQ_Program_Status__c in (&apos;Open&apos; , &apos;Pending&apos;) and id = &apos;a0ir00000005CrL&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Batch_Size_for_Risk_Point_Batch</fullName>
+        <categories>Batch Size</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Batch Size for Risk Point Batch</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Activity_Type_Enforcement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Activity_Type_Enforcement</shortDescription>
+        <value>Enforcement</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Complaint_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Complaint_RecType</shortDescription>
+        <value>Complaint</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Complaint_Submitted_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Complaint_Submitted_RecType</shortDescription>
+        <value>Complaint Submitted</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Enforcement_Suspension_Submitted_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Enforcement_Suspension_Submitted_RecType</shortDescription>
+        <value>Enforcement Suspension Submitted</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Incident_Injury_Illness_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Incident_Injury_Illness_RecType</shortDescription>
+        <value>Incident / Injury / Illness</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Case_Incident_Injury_Submitted_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Case_Incident_Injury_Submitted_RecType</shortDescription>
+        <value>Incident Injury Submitted</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_CloseAllPendingSUTQs</fullName>
+        <categories>Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_CloseAllPendingSUTQs</shortDescription>
+        <value>SELECT ID,CLQ_License_Issue_Date__c ,CLQ_Reactivation_Date__c,(SELECT ID, CLQ_Transaction_Status__c, clq_recordtypename__c  FROM Program_Transactions__r WHERE clq_recordtypename__c in (&apos;SUTQ - Expedited Registration&apos; , &apos;SUTQ - Change of Owner Registration&apos; , &apos;SUTQ - Reinstate Rating after Temporary Closure&apos;) AND CLQ_Transaction_Status__c = &apos;Not Complete&apos;) FROM  CLQ_Program__c  WHERE CLQ_Program_Status__c in (&apos;Open&apos; , &apos;Enforcement&apos; ) and 
+( CLQ_Reactivation_Date__c = :todayMinusThirty or CLQ_License_Issue_Date__c = :todayMinusThirty ) and 
+CLQ_Program_Record_Type__c IN (&apos;FCC - Type A Home&apos; , &apos;FCC - Type B Home&apos; , &apos;Child Care Center&apos; , &apos;Pre School&apos; , &apos;School Age Child Care&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Close_Annual_InspDueRemndr_Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Close_Annual_InspDueRemndr_Query</shortDescription>
+        <value>SELECT Id,WhatID FROM Task where Subject = &apos;Annual Licensing Inspection Due Reminder&apos; AND Status = &apos;Open&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_CompleteVisitMode_AlertMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_CompleteVisitMode_AlertMsg</shortDescription>
+        <value>1. Visit start date should not be in the future or greater than the visit completion date.\n2. Visit start date should not be in the past more or equal to 14 days of completion date.\n3. Status of all open events should be canceled, except for the current one, if there is more than one event or visit.</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Default_BatchSize</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Default_BatchSize</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Contains_FCC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Contains_FCC</shortDescription>
+        <value>FCC</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Onsite_Visit_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Onsite_Visit_RecType</shortDescription>
+        <value>Onsite Visit Record Type</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Program_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Program_RecType</shortDescription>
+        <value>Day Camp</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_RecType</shortDescription>
+        <value>Inspection</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Status_Approved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Status_Approved</shortDescription>
+        <value>Approved</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Status_Pending_Processing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Status_Pending_Processing</shortDescription>
+        <value>Pending Processing</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Status_Rating_Assessment_Complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Status_Rating_Assessment_Complete</shortDescription>
+        <value>Rating Assessment Complete</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Status_Returned_to_Reviewer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Status_Returned_to_Reviewer</shortDescription>
+        <value>Returned to Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Status_Under_Approver_Review</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Status_Under_Approver_Review</shortDescription>
+        <value>Under Approver Review</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Type_Pre_license</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Type_Pre_license</shortDescription>
+        <value>Pre-license</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Type_Technical_Assistance</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Type_Technical_Assistance</shortDescription>
+        <value>Technical Assistance</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Inspection_Visit_Status_Completed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Inspection_Visit_Status_Completed</shortDescription>
+        <value>Visit Completed</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_LicensingClosureBatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_LicensingClosureBatch</shortDescription>
+        <value>select Id, CLQ_Last_Day_of_Operation__c, CLQ_Closure_Status__c, CLQ_Program__r.id,CLQ_Effective_Date_of_Closure_formula__c,  CLQ_Closure_Type__c, CLQ_Closure_Reason__c,                                                                  CLQ_Program__r.CLQ_Closure_Date__c, CLQ_Previous_Program_Name__c,CLQ_Program__r.CLQ_Temporary_Closure_Date__c, CLQ_Previous_Program_Number__c,                                                                    CLQ_Program__r.CLQ_Reactivation_Date__c
+from CLQ_Program_Transaction__c where CLQ_License_Closure_Processed__c = false 
+and CLQ_Effective_Date_of_Closure_formula__c &lt; TODAY
+and (recordTypeID = :licClosure OR recordTypeID = :regClosure)
+and CLQ_Transaction_Status__c = &apos;Approved&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_LicensingSupportEmails</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_LicensingSupportEmails</shortDescription>
+        <value>pradravi@deloitte.com
+neojha@deloitte.com
+srahimeen@deloitte.com</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_NonCompliant_Results</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_NonCompliant_Results</shortDescription>
+        <value>Non-Compliant;Substantiated</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Pro_Period_Exceeded_JFS_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Pro_Period_Exceeded_JFS_BatchQuery</shortDescription>
+        <value>SELECT Id, CLQ_License_Expiration_Date__c, Pro_License_Exp_Date__c FROM CLQ_Program__c WHERE RecordType.name NOT IN (&apos;Pre School&apos;, &apos;School Age Child Care&apos;) AND CLQ_Continuous_License_Status__c = &apos;started&apos; AND CLQ_License_Type__c = &apos;Provisional&apos; AND CLQ_License_Registration_status__c = &apos;Licensed&apos; AND CLQ_Licensing_Specialist__c != null AND CLQ_Closure_Date__c != null AND Pro_License_Exp_Date__c = YESTERDAY</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Pro_Period_Exceeded_ODE_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Pro_Period_Exceeded_ODE_BatchQuery</shortDescription>
+        <value>SELECT Id, CLQ_License_Expiration_Date__c, Pro_License_Exp_Date__c FROM CLQ_Program__c WHERE RecordType.name IN (&apos;Pre School&apos;, &apos;School Age Child Care&apos;) AND CLQ_Continuous_License_Status__c = &apos;started&apos; AND CLQ_License_Type__c = &apos;Provisional&apos; AND CLQ_License_Registration_status__c = &apos;Licensed&apos; AND CLQ_Licensing_Specialist__c != null AND CLQ_Closure_Date__c != null AND Pro_License_Exp_Date__c = YESTERDAY</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_ProfilesToExcludeBCIFBIValidation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_ProfilesToExcludeBCIFBIValidation</shortDescription>
+        <value>ODJFS County Admin - County Role, ODJFS FCC Approver - County Role, ODJFS FCC Reviewer - County Role</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_Center_Change_of_Location_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_Center_Change_of_Location_RecType</shortDescription>
+        <value>Amendment - Center - Change of Location</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_Change_of_Administrator_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_Change_of_Administrator_RecType</shortDescription>
+        <value>Amendment - Change of Administrator</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_FCC_Change_of_Location_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_FCC_Change_of_Location_RecType</shortDescription>
+        <value>Amendment - FCC - Change of Location</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_FCC_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_FCC_RecType</shortDescription>
+        <value>Amendment- FCC - Change of Capacity / Space</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_ODE_Centre_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_ODE_&amp;_Centre_RecType</shortDescription>
+        <value>Amendment - ODE and Center - Change of Capacity / Space</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Amendment_ODE_Change_of_Location_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Amendment_ODE_Change_of_Location_RecType</shortDescription>
+        <value>Amendment - ODE - Change of Location</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Application_CC_Center_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Application_CC_Center_RecType</shortDescription>
+        <value>Application - CC Center</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Application_FCC_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Application_FCC_RecType</shortDescription>
+        <value>Application - FCC</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Application_ODE_Program_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Application_ODE_Program_RecType</shortDescription>
+        <value>Application - ODE Program</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_ContainTypeA_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_ContainTypeA_RecType</shortDescription>
+        <value>Type A</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Custom_Record_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Custom_Record_Type</shortDescription>
+        <value>FCC</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Overall_Requirement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Overall_Requirement</shortDescription>
+        <value>Not Met</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Queue_Name_AppUnitAppl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Queue_Name_AppUnitAppl</shortDescription>
+        <value>App Unit Appl</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Queue_Name_ApplicationUnit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Queue_Name_ApplicationUnit</shortDescription>
+        <value>Application Unit</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Reactivate_Transaction_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Reactivate_Transaction_RecType</shortDescription>
+        <value>Reactivate Transaction</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Recommended_Rating</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Recommended_Rating</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_SUTQ_Annual_Report_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_SUTQ_Annual_Report_RecType</shortDescription>
+        <value>SUTQ - Annual Report</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_SUTQ_Initial_Registration_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_SUTQ_Initial_Registration_RecType</shortDescription>
+        <value>SUTQ - Initial Registration</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_SUTQ_Ongoing_Registration_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_SUTQ_Ongoing_Registration_RecType</shortDescription>
+        <value>SUTQ - Ongoing Registration</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Transaction_Status_Returned_to_Reviewer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Transaction_Status_Returned_to_Reviewer</shortDescription>
+        <value>Returned to Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_App_Transaction_Status_Under_Reviewer_Review</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_App_Transaction_Status_Under_Reviewer_Review</shortDescription>
+        <value>Under Reviewer Review</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_FCC_Type_A_Home</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_FCC_Type_A_Home</shortDescription>
+        <value>FCC - Type A Home</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_FCC_Type_B_Home</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_FCC_Type_B_Home</shortDescription>
+        <value>FCC - Type B Home</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_Transaction_Rating_Confirmed_By_Program_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_Transaction_Rating_Confirmed_By_Program_1</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Program_Transaction_Rating_Confirmed_By_Program_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_Program_Transaction_Rating_Confirmed_By_Program_2</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_RemoveProgramRatingAfter90DayTempClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_RemoveProgramRatingAfter90DayTempClosed</shortDescription>
+        <value>Select ID, CLQ_Temporary_Closure_Date__c from CLQ_Program__c where CLQ_Temporary_Closure_Date__c &lt;=: todayplusninty and CLQ_Program_Status__c = &apos;Inactive&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_RiskPointCalculationQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_RiskPointCalculationQuery</shortDescription>
+        <value>SELECT ID,CLQ_SRNC__c , CLQ_MRNC__c , CLQ_LRNC__c, CLQ_Total_Points_Assessed__c , 
+(SELECT ID,CLQ_SRNC__c , CLQ_MRNC__c , CLQ_LRNC__c , CLQ_Total_Risk_Points__c, CLQ_Inspection_Type__c, CLQ_Quality_Monitoring__c FROM Inspections__r WHERE RecordTypeId=&apos;012r00000004Pig&apos; AND CLQ_Inspection_Status__c IN (&apos;Approved&apos;, &apos;Under Approver Review&apos; ) AND CLQ_Last_Visit_Date__c&gt;= :noOfMonthsBefore AND (CLQ_Inspection_Type__c NOT IN (&apos;Pre-license&apos;, &apos;Amendment - change of location&apos;, &apos;Incident / Injury / Illness&apos;, &apos;Monitor&apos;) OR (CLQ_Inspection_Type__c=&apos;Monitor&apos; AND CLQ_Quality_Monitoring__c=TRUE))) FROM CLQ_Program__c WHERE CLQ_Program_Status__c IN ( &apos;Open&apos; , &apos;Inactive&apos;, &apos;Enforcement&apos; , &apos;Suspended&apos;) AND CLQ_License_Registration_Status__c = &apos;Licensed&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_SecurityPageMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ_SecurityPageMsg</shortDescription>
+        <value>&lt;b&gt;&lt;font color=&quot;red&quot;&gt;Due to system maintenance on Sunday, January 6th, the system will be unavailable. System users will be unable to access OCLQS from 10 AM to 8 PM on Sunday, January 6th, 2019. The next maintenance release is scheduled for February 7, 2019.&lt;/font&gt;&lt;/b&gt;
+&lt;br/&gt; &lt;br/&gt;
+&lt;p&gt;&lt;b&gt;You are accessing a restricted information system. The system may be monitored, recorded, and subject to audit.  Unauthorized use or access of this information system is prohibited and may be subject to criminal and/or civil penalties. Use of the information system acknowledges consent to monitoring and recording. &lt;/b&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>CLQ_Update_Program_Override_Batch_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLQ Update Program Override Batch Label</shortDescription>
+        <value>Select id,Program_Rating__c,CLQ_Program_Email__c, Rating_Effective_Date__c, Rating_Anniversary_Date__c from CLQ_Program__c where ((Rating_Effective_Date__c != null and Rating_Effective_Date__c =: todayDate) OR (Rating_Anniversary_Date__c != null and Rating_Anniversary_Date__c =: yestDate)) AND (CLQ_Program_Status__c = &apos;Open&apos; OR CLQ_Program_Status__c = &apos;Enforcement&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>CPIEmailAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CPIEmailAddress</shortDescription>
+        <value>oclqs-bkend_script_non-prod@jfs.ohio.gov</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Button_Record_Types</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Button Record Types</shortDescription>
+        <value>Update Facility Information;Update FCC Resident Information;Update Outdoor Space Information;Update On-site Contact Information;Update Authorized Rep Info;</value>
+    </labels>
+    <labels>
+        <fullName>Cannot_Submit_Inspection_with_Total_Enrollment_NULL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cannot Submit Inspection with Total Enrollment NULL</shortDescription>
+        <value>Please make sure there is at least one Enrollment Group added to the Inspection before submitting for Approval.</value>
+    </labels>
+    <labels>
+        <fullName>Center_Inactive_Group</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>County Admin Group</shortDescription>
+        <value>County Admin</value>
+    </labels>
+    <labels>
+        <fullName>ChildHelpDeskNum</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChildHelpDeskNum</shortDescription>
+        <value>1-877-302-2347</value>
+    </labels>
+    <labels>
+        <fullName>ChildLicensingQualitySystem</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChildLicensingQualitySystem</shortDescription>
+        <value>OCLQS</value>
+    </labels>
+    <labels>
+        <fullName>Clone_Findings_and_CAP_for_Revised_Insp_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clone Findings and CAP for Revised Insp Label</shortDescription>
+        <value>Select Id, CLQ_Original_Inspection__c, (Select ID, CLQ_Domain_Rule__c, CLQ_Rule__c, CLQ_Result__c From Rules_Inspected__r),
+(Select Id, CLQ_Findings__c, CLQ_Findings__r.CLQ_Stnd_Finding__c, CLQ_Findings__r.CLQ_Rules_Inspected__r.CLQ_Domain_Rule__c from Corrective_Action_Plans__r),
+(Select Id, CLQ_Rules_Inspected__c, CLQ_Rules_Inspected__r.CLQ_Domain_Rule__c from Findings__r)
+from CLQ_Inspection__c where CLQ_Inspection_status__c = &apos;Revised&apos; 
+and CLQ_Original_Inspection__c != null and (CLQ_Is_Findings_Cloned__c = false or CLQ_Is_CAP_Cloned__c = false)
+and Createddate = TODAY</value>
+    </labels>
+    <labels>
+        <fullName>CloseNotSubmittedPT_BatchSize</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseNotSubmittedPT_BatchSize</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>CloseNotSubmittedPT_DaysBefore</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseNotSubmittedPT_DaysBefore</shortDescription>
+        <value>120</value>
+    </labels>
+    <labels>
+        <fullName>Closed_Application_PT_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Closed Application PT Status</shortDescription>
+        <value>Closed by System;Withdrawn at Applicant&apos;s Request;Closed at Applicant’s Request;Withdraw;Closed by System;</value>
+    </labels>
+    <labels>
+        <fullName>CommunityProfileIds</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommunityProfileIds</shortDescription>
+        <value>00er0000000Lu84AAC;00er0000000LumEAAS;00er0000000LuoFAAS;00et0000000YK8qAAG;00et0000000YK8rAAG;00e8G000000UCFGQA4;</value>
+    </labels>
+    <labels>
+        <fullName>CommunityQueueId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommunityQueueId</shortDescription>
+        <value>00Gr0000000x4yj</value>
+    </labels>
+    <labels>
+        <fullName>ContinueOrWithdrawApps</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContinueOrWithdrawApps</shortDescription>
+        <value>Licensing - Closure</value>
+    </labels>
+    <labels>
+        <fullName>County_Admin_Group</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>County Admin Group</shortDescription>
+        <value>County Admin</value>
+    </labels>
+    <labels>
+        <fullName>DCAppsNonApprovedPTS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCAppsNonApprovedPTS</shortDescription>
+        <value>SELECT Id, Name, CLQ_Program_Number__c, CLQ_Program__c, Submission_Date_NoTime__c, CLQ_Transaction_Approval_Date__c, CLQ_Registration_Status_Date__c,CLQ_Application_Approved__c,CLQ_Transaction_Status__c FROM CLQ_Program_Transaction__c WHERE (CLQ_Program_Record_Type__c=&apos;Day Camp&apos;) AND clq_recordtypename__c IN (&apos;Application - Day Camp&apos;,&apos;Renew Application - Day Camp&apos;) AND CLQ_Transaction_Status__c NOT IN (&apos;Approved&apos;) and CreatedDate = THIS_YEAR</value>
+    </labels>
+    <labels>
+        <fullName>DCPortalRole_Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCPortalRole Query</shortDescription>
+        <value>Select Id, CLQ_Contact__r.Email,Portal_Roles__c,CLQ_Program__c, CLQ_Program_Transaction_Source__r.CLQ_Program__c, CLQ_Role__c from CLQ_Role__c where (CLQ_Program__c IN : setProgramID OR CLQ_Program_Transaction_Source__c IN : setPrgTransId) AND CLQ_Contact__r.Email != null AND RecordTypeID =: orgRoleRecId AND CLQ_Role__c IN : lstPortalRoles AND CLQ_Status__c NOT IN (&apos;Inactive&apos;, &apos;Denied&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>DCStartDateBatchQuery</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCStartDateBatchQuery</shortDescription>
+        <value>Select Id,CLQ_Start_Date__c,CLQ_End_Date__c,CLQ_Mailing_Address__c,CLQ_Mailing_Address_2__c,CLQ_Mailing_ZIP_Code__c,CLQ_Is_Day_Camp_ACA_Certified__c,Name_of_Day_Camp_from_ACA__c, (Select id, clq_recordtypename__c,CreatedDate, CLQ_Food_Service__c,CLQ_Services_Offered_Day_Camp__c, CLQ_Transaction_Status__c,CLQ_Same_as_Program_Address__c, CLQ_Mailing_City__c,CLQ_Mailing_State__c,CLQ_Mailing_Street_Address__c,CLQ_Mailing_Street_Address_2__c,CLQ_Registration_Status__c,CLQ_Mailing_ZipCode__c,CLQ_Is_the_Day_Camp_ACA_Certified__c,CLQ_Name_of_Day_Camp_on_ACA_Certificate__c,CLQ_Transaction_Type__c FROM Program_Transactions__r WHERE
+(CreatedDate&gt;=:startDateCheckStart AND CreatedDate&lt;=: startDateCheckEnd)) FROM CLQ_Program__c WHERE CLQ_Program_Status__c=&apos;Open&apos; and CLQ_Registration_Status__c= &apos;Registered&apos; and CLQ_Program_Type__c=&apos;Day Camp&apos;</value>
+    </labels>
+    <labels>
+        <fullName>DC_Portal_Roles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DC Portal Roles</shortDescription>
+        <value>Owner, Authorized Representative, Partner</value>
+    </labels>
+    <labels>
+        <fullName>DateFieldForBatchDeleteInactiveProg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DateFieldForBatchDeleteInactiveProg</shortDescription>
+        <value>CreatedDate</value>
+    </labels>
+    <labels>
+        <fullName>DateFieldForBatchDeleteProgram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DateFieldForBatchDeleteProgram</shortDescription>
+        <value>CreatedDate</value>
+    </labels>
+    <labels>
+        <fullName>DeactivateJFSRole_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeactivateJFSRole_BatchQuery</shortDescription>
+        <value>Select Id,CLQ_Status__c, Portal_Sharing_Counter__c from CLQ_Role__c where RecordTypeID =&apos;0126w0000000AAkAAM&apos; AND Role_Type__c = &apos;JFS&apos; AND CLQ_End_Date__c&lt;TODAY AND CLQ_Status__c NOT IN (&apos;Inactive&apos;, &apos;Denied&apos;) and Portal_Sharing_Counter__c  != null</value>
+    </labels>
+    <labels>
+        <fullName>DeactivateRole_BatchSize</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeactivateRole_BatchSize</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>DeactivateUsers_Query</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeactivateUsers_Query</shortDescription>
+        <value>select Id,IsActive,name,email, profile.name from User where IsActive = true AND ProfileId not in :prfIdSet  AND ((profile.name NOT IN :externalUserProfilesList AND ( (DAY_ONLY(CreatedDate) &lt;:pdeacDate AND LastLoginDate = null)  or DAY_ONLY(LastLoginDate) &lt; :pdeacDate )) OR ( profile.name IN :externalUserProfilesList AND (( DAY_ONLY(CreatedDate) &lt;:extpdeacDate AND LastLoginDate= null)  or DAY_ONLY(LastLoginDate) &lt;:extpdeacDate) ))</value>
+    </labels>
+    <labels>
+        <fullName>DeferralAdminProfiles</fullName>
+        <categories>String</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeferralAdminProfiles</shortDescription>
+        <value>Approver - State User,ODE Approver - State User,ODE State Admin - State User,ODJFS County Admin - County Role,ODJFS FCC Approver - County Role,ODJFS FCC Approver - State User,ODJFS Day Camp Approver - State User,State Admin - State user,State Program Admin State User,System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>Draft</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Use in ApplicationFormCtrl.cls</shortDescription>
+        <value>Draft</value>
+    </labels>
+    <labels>
+        <fullName>EducationDept</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EducationDept</shortDescription>
+        <value>ODE</value>
+    </labels>
+    <labels>
+        <fullName>Email_Batch_Size</fullName>
+        <categories>Batch Size</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Batch Size</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>Error_InvalidData</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error_InvalidData</shortDescription>
+        <value>Please make sure that your information is correct</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_for_Rating_Discontinue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for Rating Discontinue</shortDescription>
+        <value>Your program\&apos;s rating for SUTQ was discontinued today, you can&apos;t register for a rating until tomorrow.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_for_Rating_Effective</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for Rating Effective</shortDescription>
+        <value>Registration cannot be started until the Rating is effective.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_for_Rating_Reduced</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for Rating Reduced</shortDescription>
+        <value>Your program&apos;s rating was reduced. You cannot submit any type of registration within 60 days of your rating discontinue date.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_for_Rating_Removed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for Rating Removed</shortDescription>
+        <value>Your program&apos;s rating was removed within the last 12 months. You cannot submit any type of registration within 12 months of your rating discontinue date</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_for_voluntarily_withdrawn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for voluntarily withdrawn</shortDescription>
+        <value>Your program has voluntarily withdrawn from SUTQ within the last 6 months.  You must wait 6 months before you can start and submit a new SUTQ registration.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Required_Fields</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error_Required_Fields</shortDescription>
+        <value>Complete all fields highlighted in red before continuing to the next page.</value>
+    </labels>
+    <labels>
+        <fullName>ExternalUserDeactivationTime</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExternalUserDeactivationTime</shortDescription>
+        <value>210</value>
+    </labels>
+    <labels>
+        <fullName>ExternalUserProfiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExternalUserProfiles</shortDescription>
+        <value>Customer Community Login User, 	Customer Community Plus Login User, 	OCLQS Customer Community Login User, OCLQS Customer Community Plus Login User, OCLQS Customer Community Plus Login User ODE SSO</value>
+    </labels>
+    <labels>
+        <fullName>FlowErrors_ToEmails</fullName>
+        <categories>Flows</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FlowErrors_ToEmails</shortDescription>
+        <value>neojha@deloitte.com, pradravi@deloitte.com, srahimeen@deloitte.com</value>
+    </labels>
+    <labels>
+        <fullName>ISDConsoleLog</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISDConsoleLog</shortDescription>
+        <value>Yes|Yes</value>
+    </labels>
+    <labels>
+        <fullName>ISDErrorLog</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISDErrorLog</shortDescription>
+        <value>No|No|Yes|Yes</value>
+    </labels>
+    <labels>
+        <fullName>ISDErrorMaskMsg</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISDErrorMaskMsg</shortDescription>
+        <value>No|An unexpected error occurred. Please contact your administrator</value>
+    </labels>
+    <labels>
+        <fullName>ISD_Maximum_Valid_Date</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_Maximum_Valid_Date</shortDescription>
+        <value>4000-12-31T00:00:00Z</value>
+    </labels>
+    <labels>
+        <fullName>ISD_Minimum_Valid_Date</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_Minimum_Valid_Date</shortDescription>
+        <value>1700-01-01T00:00:00Z</value>
+    </labels>
+    <labels>
+        <fullName>ISD_NotAMichiganCounty</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_NotAMichiganCounty</shortDescription>
+        <value>Not a Michigan County</value>
+    </labels>
+    <labels>
+        <fullName>ISD_ReqError_IncFormat</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_ReqError_IncFormat</shortDescription>
+        <value>Check that all information is entered correctly and required fields are complete</value>
+    </labels>
+    <labels>
+        <fullName>ISD_RestrictedEmailDomains</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_RestrictedEmailDomains</shortDescription>
+        <value>michigan.gov, audgen.michigan.gov, senate.michigan.gov, legislature.mi.gov, house.mi.gov, michigan.org</value>
+    </labels>
+    <labels>
+        <fullName>ISD_SuccessAltText</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_SuccessAltText</shortDescription>
+        <value>Approval Notification</value>
+    </labels>
+    <labels>
+        <fullName>ISD_User_Register_Page_URL</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_User_Register_Page_URL</shortDescription>
+        <value>isd-user-registration</value>
+    </labels>
+    <labels>
+        <fullName>ISD_ValidDateErrMsg</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ISD_ValidDateErrMsg</shortDescription>
+        <value>Enter a valid date</value>
+    </labels>
+    <labels>
+        <fullName>InspectionNewBtnProfileAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InspectionNewBtnProfileAccess</shortDescription>
+        <value>Admin Read-Only, System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>InspectionStatusClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InspectionStatusClosed</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>Inspection_Error_Message</fullName>
+        <categories>String</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inspection Error Message</shortDescription>
+        <value>There is already an Provisional/Annual/Follow-Up inspection associated to program other than Approved or Revised Status</value>
+    </labels>
+    <labels>
+        <fullName>JFSPortalRole_Query</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFSPortalRole Query</shortDescription>
+        <value>Select Id, CLQ_Contact__r.Email,Portal_Roles__c,CLQ_Program__c, CLQ_Program_Transaction_Source__r.CLQ_Program__c from CLQ_Role__c where (CLQ_Program__c IN : setProgramID OR CLQ_Program_Transaction_Source__c IN : setPrgTransId) AND CLQ_Contact__r.Email != null AND RecordTypeID =: portalRoleRecId AND Role_Type__c = &apos;JFS&apos; AND Portal_Roles__c IN : lstPortalRoles AND CLQ_Status__c NOT IN (&apos;Inactive&apos;, &apos;Denied&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>JFS_CAPOverdue_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_CAPOverdue_BatchQuery</shortDescription>
+        <value>Select Id from CLQ_Corrective_Action_Plan__c where CLQ_CAP_Status__c = &apos;Not Submitted&apos; AND CLQ_Program__r.RecordType.Name IN (&apos;Child Care Center&apos;,&apos;FCC - Type A Home&apos;,&apos;FCC - Type B Home&apos;) AND CLQ_CAP_Due_Date__c != null AND CLQ_CAP_Due_Date__c = YESTERDAY AND CLQ_Program_Email_Address__c != null AND CLQ_Inspection_Owner_Email__c != null AND CLQ_Program__r.CLQ_Program_Status__c != &apos;Closed&apos;</value>
+    </labels>
+    <labels>
+        <fullName>JFS_CAPOverdue_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_CAPOverdue_EmailTemplate</shortDescription>
+        <value>CLQ_JFS_CAP_Overdue_Email_Template</value>
+    </labels>
+    <labels>
+        <fullName>JFS_CC_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_CC_Counties</shortDescription>
+        <value>COLUMBIANA,CARROLL</value>
+    </labels>
+    <labels>
+        <fullName>JFS_CloseNotSubmittedPTBatch_Query</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_CloseNotSubmittedPTBatch_Query</shortDescription>
+        <value>Select Id, Name, CLQ_Transaction_Status__c, CLQ_Registration_Status__c, CLQ_Program__c from CLQ_Program_Transaction__c where RecordType.Name IN (&apos;Application - FCC&apos;, &apos;Application - CC Center&apos;) AND (CLQ_Transaction_Status__c = &apos;Not Submitted&apos; OR CLQ_Registration_Status__c = &apos;Not Submitted&apos;) AND DAY_ONLY(CreatedDate) &lt;=: dateFilterNotSubmittedPT</value>
+    </labels>
+    <labels>
+        <fullName>JFS_ClosedBySystem_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_ClosedBySystem_EmailTemplate</shortDescription>
+        <value>CLQ_Closed_by_System_ODJFS</value>
+    </labels>
+    <labels>
+        <fullName>JFS_County_Program_Record_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS County Program Record Type</shortDescription>
+        <value>FCC - Type A Home,FCC - Type B Home,In-Home Aide</value>
+    </labels>
+    <labels>
+        <fullName>JFS_Link</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_Link</shortDescription>
+        <value>www.jfs.ohio.gov/cdc/CCIDS.stm</value>
+    </labels>
+    <labels>
+        <fullName>JFS_NACOC_Counties</fullName>
+        <categories>Create Inspection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS NACOC Counties</shortDescription>
+        <value>AUGLAIZE, DEFIANCE, FULTON, HANCOCK, HARDIN, PAULDING, VAN WERT, WILLIAMS</value>
+    </labels>
+    <labels>
+        <fullName>JFS_OtherPRG_Update_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_OtherPRG_Update_Error_Message</shortDescription>
+        <value>You are allowed to update FCC - Type A Home,FCC - Type B Home and In-Home Aide</value>
+    </labels>
+    <labels>
+        <fullName>JFS_Portal_Roles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS Portal Roles</shortDescription>
+        <value>Owner,Director,Licensing Admin,SUTQ Consultant</value>
+    </labels>
+    <labels>
+        <fullName>JFS_PrgUpdatesAction_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS_PrgUpdatesAction_EmailTemplate</shortDescription>
+        <value>CLQ_JFS_Provisional_Period_Exceeded</value>
+    </labels>
+    <labels>
+        <fullName>JFS_SFDC_Roles</fullName>
+        <categories>Create Inspection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS SFDC Roles</shortDescription>
+        <value>JFS State Admin, JFS Supervisor, JFS Specialist, JFS Program Admin</value>
+    </labels>
+    <labels>
+        <fullName>JFS_SouthCentral_Counties</fullName>
+        <categories>Create Inspection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JFS SouthCentral Counties</shortDescription>
+        <value>HOCKING, ROSS, VINTON</value>
+    </labels>
+    <labels>
+        <fullName>JobFamilyDept</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>JobFamilyDept</shortDescription>
+        <value>ODJFS</value>
+    </labels>
+    <labels>
+        <fullName>List_of_CAP_Exempts</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of CAP Exempts</shortDescription>
+        <value>Approved;Closed - Not Addressed;</value>
+    </labels>
+    <labels>
+        <fullName>List_of_Document_Status_to_exempt</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of Document Status to exempt</shortDescription>
+        <value>Approved;Denied;Not Verified;</value>
+    </labels>
+    <labels>
+        <fullName>List_of_Inspections_to_exempt</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of Inspections to exempt</shortDescription>
+        <value>Approved;Revised;deleted;deferral;closed;Not Verified;</value>
+    </labels>
+    <labels>
+        <fullName>List_of_PT_Status_to_exempt_from_updating</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of PT Status to exempt from updating</shortDescription>
+        <value>Approved;System Deleted;Ineligible;Withdrawn at Applicant&apos;s Request;Cancelled;Application Revised;Withdrawn by Program;Closed at Applicant’s Request;Closed;Rating Assessment Complete;Closed by System;Denied;Cancelled;System Deleted;Completed;</value>
+    </labels>
+    <labels>
+        <fullName>Locked_Transaction_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Locked_Transaction_Status</shortDescription>
+        <value>Approved;Return for Revision;Returned for Revision;Approver Review In Progress;Pending Approval;Rating Assessment Complete</value>
+    </labels>
+    <labels>
+        <fullName>LookUpSearch_RowSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LookUpSearch_RowSize</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>MiLoginLogoutURL</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MiLoginLogoutURL</shortDescription>
+        <value>https://newmibridgesloginqa.michigan.gov/pkmslogout</value>
+    </labels>
+    <labels>
+        <fullName>MisMatchType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatchType</shortDescription>
+        <value>MisMatchType</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Org_IRN_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Org IRN - Name</shortDescription>
+        <value>Org IRN - Name</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Type_Org_IRN_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Type Org IRN - Status</shortDescription>
+        <value>Org IRN - Status</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Type_Site_IRN_Location_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Type Site IRN - Location Type</shortDescription>
+        <value>Site IRN - Location Type</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Type_Site_IRN_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Type  Site IRN - Name</shortDescription>
+        <value>Site IRN - Name</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Type_Site_IRN_Physical_address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Type Site IRN - Physical address</shortDescription>
+        <value>Site IRN - Physical address</value>
+    </labels>
+    <labels>
+        <fullName>MisMatch_Type_Site_IRN_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MisMatch Type Site IRN - Status</shortDescription>
+        <value>Site IRN - Status</value>
+    </labels>
+    <labels>
+        <fullName>MyMessageEmailBatchSize</fullName>
+        <categories>Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MyMessageEmailBatchSize</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>NewInspectionAlert</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewInspectionAlert</shortDescription>
+        <value>This button cannot be used to make new Inspections!</value>
+    </labels>
+    <labels>
+        <fullName>NewValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewValue</shortDescription>
+        <value>NewValue</value>
+    </labels>
+    <labels>
+        <fullName>NoSUTQReviewrAndCountyError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoSUTQReviewrAndCountyError</shortDescription>
+        <value>SUTQ Reviewer or Program County is needed to submit an Ongoing Registration</value>
+    </labels>
+    <labels>
+        <fullName>Non_Eng_Paste_Error</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non Eng Paste Error</shortDescription>
+        <value>You tried pasting the letter &apos;{0}&apos; in our system, but unfortunately, we do not allow non-english / special characters on our system.</value>
+    </labels>
+    <labels>
+        <fullName>Non_Eng_Type_Error</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non Eng Type Error</shortDescription>
+        <value>You tried typing the letter &apos;{0}&apos; in our system, but unfortunately, we do not allow non-english / special characters on our system.</value>
+    </labels>
+    <labels>
+        <fullName>Notification_Close</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Notification_Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>OCCRA_AttendanceValidationError_DC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCCRA_AttendanceValidationError_DC</shortDescription>
+        <value>OPIN check has failed because the required pre-camp orientation training is not verified in your OPR account. Individuals applying to be an approved day camp require pre-camp orientation training. For more information, contact the ODJFS Child Care Help Desk at 1-877-302-2347 Option 4.</value>
+    </labels>
+    <labels>
+        <fullName>OCCRRA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCCRRA</shortDescription>
+        <value>OCCRRA</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_AccountActLinkExpirationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_AccountActLinkExpirationMessage</shortDescription>
+        <value>The activation link has expired. Please request a new activation link here</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_AccountActivationValidityMinutes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_AccountActivationValidityMinutes</shortDescription>
+        <value>1440</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_GoogleReSiteKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS Google Re-Captcha Site key</shortDescription>
+        <value>6LeBTSYTAAAAAA2SXizmcZvE-h1JL7T-KgD3xXvM</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_NewsRecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_NewsRecordTypeId</shortDescription>
+        <value>News</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_ODEDashboardWaitMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_ODEDashboardWaitMessage</shortDescription>
+        <value>Please wait while your account is being configured…</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_PortalSupportEmails</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_PortalSupportEmails</shortDescription>
+        <value>pradravi@deloitte.com
+neojha@deloitte.com
+srahimeen@deloitte.com</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_ProdDataUpdateBatchQuery</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_ProdDataUpdateBatchQuery</shortDescription>
+        <value>Select Id, CLQ_Inspection_Type__c, CLQ_Program__c, CLQ_Program_Transaction__r.RecordTypeId, CLQ_Program_Transaction__r.CLQ_Total_Enrollment__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_Infants__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_Older_Toddler__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_Preschool__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_School_Age__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_Under_2_1_2__c, CLQ_Program_Transaction__r.CLQ_Total_Enrollment_Young_Toddler__c, CLQ_Program_Transaction__c, CLQ_Program__r.CLQ_Total_Enrollment__c, CLQ_Program__r.CLQ_Total_Enrollment_Infants__c, CLQ_Program__r.CLQ_Total_Enrollment_Older_Toddler__c, CLQ_Program__r.CLQ_Total_Enrollment_Preschool__c, CLQ_Program__r.CLQ_Total_Enrollment_School_Age__c, CLQ_Program__r.CLQ_Total_Enrollment_Young_Toddler__c, CLQ_Program__r.CLQ_Total_Enrollment_Under_2_years__c 
+ From CLQ_Inspection__c</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_ProdDataUpdateBatchQuery2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_ProdDataUpdateBatchQuery2</shortDescription>
+        <value>Select Id from CLQ_Inspection__c WHERE RecordTypeId=&apos;012r00000004Pig&apos; AND CLQ_Inspection_Status__c IN (&apos;Approved&apos;, &apos;Under Approver Review&apos; ) AND CLQ_Inspection_Type__c NOT IN (&apos;Pre-license&apos;, &apos;Monitor&apos;, &apos;Amendment - change of location&apos;, &apos;Incident / Injury / Illness&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>OCLQS_SFDCChunkSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCLQS_SFDCChunkSize</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>ODEPortalRole_Query</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODEPortalRole Query</shortDescription>
+        <value>Select Id, CLQ_Contact__r.Email,Portal_Roles__c,CLQ_Program__c,CLQ_Organization__c, CLQ_Program__r.CLQ_Associated_Organization__c from CLQ_Role__c where (CLQ_Program__c IN : setProgramID OR CLQ_Organization__c IN : setOrgId) AND CLQ_Contact__r.Email != null AND RecordTypeID =: portalRoleRecId AND Role_Type__c = &apos;ODE&apos; AND Portal_Roles__c IN : lstPortalRoles AND CLQ_Status__c NOT IN (&apos;Inactive&apos;, &apos;Denied&apos;)</value>
+    </labels>
+    <labels>
+        <fullName>ODE_CAPOverdue_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_CAPOverdue_BatchQuery</shortDescription>
+        <value>Select Id from CLQ_Corrective_Action_Plan__c where CLQ_CAP_Status__c = &apos;Not Submitted&apos; AND CLQ_CAP_Due_Date__c != null AND CLQ_CAP_Due_Date__c = YESTERDAY AND CLQ_Program__r.RecordType.Name IN (&apos;Pre School&apos;,&apos;School Age Child Care&apos;) AND CLQ_Program__r.CLQ_Program_Status__c != &apos;Closed&apos;</value>
+    </labels>
+    <labels>
+        <fullName>ODE_CAPOverdue_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_CAPOverdue_EmailTemplate</shortDescription>
+        <value>CLQ_ODE_CAP_Overdue_Email_Template</value>
+    </labels>
+    <labels>
+        <fullName>ODE_CloseNotSubmittedPTBatch_Query</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_CloseNotSubmittedPTBatch_Query</shortDescription>
+        <value>Select Id, Name, CLQ_Transaction_Status__c, CLQ_Registration_Status__c, CLQ_Associated_Organization__c, CLQ_Program__c, CLQ_Check_for_120_Days__c from CLQ_Program_Transaction__c where RecordType.Name = &apos;Application - ODE Program&apos; AND (CLQ_Transaction_Status__c = &apos;Not Submitted&apos; OR CLQ_Registration_Status__c = &apos;Not Submitted&apos;) AND DAY_ONLY(CreatedDate)&lt;=: dateFilterNotSubmittedPT</value>
+    </labels>
+    <labels>
+        <fullName>ODE_ClosedBySystem_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_ClosedBySystem_EmailTemplate</shortDescription>
+        <value>CLQ_Closed_by_System_ODE</value>
+    </labels>
+    <labels>
+        <fullName>ODE_LoginFailure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_LoginFailure</shortDescription>
+        <value>Please check your SAFE account username, password and email address and verify that you have been assigned OCLQS roles in OEDS by your OEDS-R Administrator.&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;If you have Assigned roles in OEDS and were able to login to OCLQS previously, Please click on Forgot Password hyperlink on login screen to change your SAFE Password. Please remember to use your SAFE user name that you were using previously and not the newly created OH/ID till further notice&lt;/Font&gt;</value>
+    </labels>
+    <labels>
+        <fullName>ODE_Portal_Roles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE Portal Roles</shortDescription>
+        <value>OCLQSOwner,OCLQSLicensing,OCLQSAdministrator,OCLQSSUTQ</value>
+    </labels>
+    <labels>
+        <fullName>ODE_PrgUpdatesAction_EmailTemplate</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE_PrgUpdatesAction_EmailTemplate</shortDescription>
+        <value>CLQ_ODE_Provisional_Period_Exceeded</value>
+    </labels>
+    <labels>
+        <fullName>ODE_SFDC_Roles</fullName>
+        <categories>Create Inspection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ODE SFDC Roles</shortDescription>
+        <value>ODE State Admin, ODE Supervisor, ODE Specialist</value>
+    </labels>
+    <labels>
+        <fullName>OEDSMismatchReport</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OEDSMismatchReport</shortDescription>
+        <value>pradravi@deloitte.com;neojha@deloitte.com;srahimeen@deloitte.com</value>
+    </labels>
+    <labels>
+        <fullName>Oclqs_DuplicateEmailError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Oclqs_DuplicateEmailError</shortDescription>
+        <value>This email address is already registered - please return to the homepage to reset your password.</value>
+    </labels>
+    <labels>
+        <fullName>OnsiteSFError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OnsiteSFError</shortDescription>
+        <value>Desk Review Findings need to be created prior to creating Onsite Findings</value>
+    </labels>
+    <labels>
+        <fullName>OrgId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrgId</shortDescription>
+        <value>OrgId</value>
+    </labels>
+    <labels>
+        <fullName>PTDeletionNotificationGroup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PTDeletionNotificationGroup</shortDescription>
+        <value>Vijay.Gurusamy@das.ohio.gov</value>
+    </labels>
+    <labels>
+        <fullName>PT_EmailAlert_Fields</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PT_EmailAlert_Fields</shortDescription>
+        <value>CLQ_Assigned_To_Email__c,CLQ_ProgTrans_Program_Email_Address__c,Licensing_Reviewer_Email__c,CLQ_Submitter__r.Email,clq_message_process_email__c,CLQ_Program__r.CLQ_Licensing_Specialist__r.Manager.Email,CLQ_Manager_s_Email_Address__c</value>
+    </labels>
+    <labels>
+        <fullName>PreSchoolRecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PreSchoolRecType</shortDescription>
+        <value>Pre School</value>
+    </labels>
+    <labels>
+        <fullName>Prg_EmailAlert_Fields</fullName>
+        <categories>Email Alerts</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prg_EmailAlert_Fields</shortDescription>
+        <value>CLQ_Program_Email__c, CLQ_Licensing_Specialist__r.Email, clq_message_process_email__c</value>
+    </labels>
+    <labels>
+        <fullName>ProfileDetails_Michigan</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileDetails_Michigan</shortDescription>
+        <value>Michigan</value>
+    </labels>
+    <labels>
+        <fullName>ProgramID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramID</shortDescription>
+        <value>a0ir</value>
+    </labels>
+    <labels>
+        <fullName>ProgramIdValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramIdValue</shortDescription>
+        <value>ProgramId</value>
+    </labels>
+    <labels>
+        <fullName>ProgramRenewalRegStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramRenewalRegStatus</shortDescription>
+        <value>Not Submitted;Submitted;Review in Progress;Under Specialist or Reviewer Review;Returned for Revision;Under Supervisor or Approver Review;Application Revised;Under Reviewer&apos;s Review;Resubmitted;Approved;Returned to Reviewer;Approver Review in Progress;Under Reviewer Review;</value>
+    </labels>
+    <labels>
+        <fullName>ProgramTransactionId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramTransactionId</shortDescription>
+        <value>a0hr</value>
+    </labels>
+    <labels>
+        <fullName>ProgramTransactionStatusNotComplete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramTransactionStatusNotComplete</shortDescription>
+        <value>Not Complete</value>
+    </labels>
+    <labels>
+        <fullName>ProgramTransactionStatusSubmitted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramTransactionStatusSubmitted</shortDescription>
+        <value>Submitted</value>
+    </labels>
+    <labels>
+        <fullName>ProgramTransactionStatusWithdraw</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProgramTransactionStatusWithdraw</shortDescription>
+        <value>Withdraw</value>
+    </labels>
+    <labels>
+        <fullName>RMCAssetsVehiclesYearError</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMCAssetsVehiclesYearError</shortDescription>
+        <value>Enter a valid year using all four digits, for example 1990.</value>
+    </labels>
+    <labels>
+        <fullName>RMCCurrentPastDate</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMCCurrentPastDate</shortDescription>
+        <value>A future date cannot be used. Enter a valid date (either today or a date in the past).</value>
+    </labels>
+    <labels>
+        <fullName>RMCFutureDateCheck</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMCFutureDateCheck</shortDescription>
+        <value>A past date cannot be used. Enter a valid date (either today or a date in the future).</value>
+    </labels>
+    <labels>
+        <fullName>RMCSSNValidationError</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMCSSNValidationError</shortDescription>
+        <value>Enter a valid year using all four digits, for example 1990.</value>
+    </labels>
+    <labels>
+        <fullName>ResetPaymentProcessedFlag_BatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ResetPaymentProcessedFlag_BatchQuery</shortDescription>
+        <value>Select Id, CLQ_IsPaymentProcessed__c, Skip_Validation__c from CLQ_Program_Transaction__c where CreatedDate&lt;= TODAY and LastmodifiedDate&lt;= TODAY and CLQ_IsPaymentProcessed__c = true</value>
+    </labels>
+    <labels>
+        <fullName>ReviewerAllowedProfilestoEditProgram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewerAllowedProfilestoEditProgram</shortDescription>
+        <value>Lic and SUTQ Reviewer - State User;Licensing Reviewer - State User,ODE;ODE Licensing Reviewer - State User;ODJFS FCC Reviewer - County Role;ODJFS FCC Application Reviewer - State User</value>
+    </labels>
+    <labels>
+        <fullName>ReviewerTaskPriority</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewerTaskPriority</shortDescription>
+        <value>Normal</value>
+    </labels>
+    <labels>
+        <fullName>ReviewerTaskStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewerTaskStatus</shortDescription>
+        <value>Not Started</value>
+    </labels>
+    <labels>
+        <fullName>ReviewerTaskSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewerTaskSubject</shortDescription>
+        <value>Review the Program Transaction</value>
+    </labels>
+    <labels>
+        <fullName>ReviewerTaskType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewerTaskType</shortDescription>
+        <value>Action</value>
+    </labels>
+    <labels>
+        <fullName>RqdValMissingAndIncorFormat</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RqdValMissingAndIncorFormat</shortDescription>
+        <value>Please make sure all of the information is correct and the required fields are completed.</value>
+    </labels>
+    <labels>
+        <fullName>SACCRecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SACCRecType</shortDescription>
+        <value>School Age Child Care</value>
+    </labels>
+    <labels>
+        <fullName>SFDC_Admin_Profiles</fullName>
+        <categories>Create Inspection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFDC Admin Profiles</shortDescription>
+        <value>Admin Read-Only, System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_AKRON_District_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ AKRON District Counties</shortDescription>
+        <value>BELMONT;CARROLL;COLUMBIANA;COSHOCTON;GUERNSEY;HARRISON;HOLMES;JEFFERSON;KNOX;MONROE;MUSKINGUM;NOBLE;STARK;SUMMIT;TUSCARAWAS;WAYNE;MORGAN</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_AnnualReportFinalStatus</fullName>
+        <categories>SUTQ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ_AnnualReportFinalStatus</shortDescription>
+        <value>Unable to Rate;Closed;Closed by System;Withdraw;System Deleted;Annual Report Disapproved;Rating Assessment Complete;Completed;Withdrawn at Applicant&apos;s Request;Withdrawn by Program;Closed at Applicant’s Request;Ineligible;</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Application_Submitted_Status</fullName>
+        <categories>String</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Application Submitted Status</shortDescription>
+        <value>Submitted;Under Reviewer Review;Resubmitted;Returned for Revision;</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_CLEVELAND_District_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ CLEVELAND District Counties</shortDescription>
+        <value>ASHLAND;ASHTABULA;CUYAHOGA;ERIE;GEAUGA;HURON;LAKE;LORAIN;MAHONING;MEDINA;PORTAGE;RICHLAND;SANDUSKY;SENECA;TRUMBULL</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_COLUMBUS_District_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ COLUMBUS District Counties</shortDescription>
+        <value>ATHENS;DELAWARE;FAIRFIELD;FRANKLIN;GALLIA;HOCKING;JACKSON;LAWRENCE;LICKING;MADISON;MEIGS;PERRY;PICKAWAY;PIKE;ROSS;SCIOTO;UNION;VINTON;WASHINGTON</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Change_of_Owner_Allowed_Programs</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Change of Owner Allowed Programs</shortDescription>
+        <value>FCC - Type A Home;Child Care Center;</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_DAYTON_District_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ DAYTON District Counties</shortDescription>
+        <value>ALLEN;ADAMS;BROWN;BUTLER;CLERMONT;CLINTON;DARKE;FAYETTE;GREENE;HAMILTON;HIGHLAND;LOGAN;MIAMI;MONTGOMERY;PREBLE;WARREN;CLARK;CHAMPAIGN</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Expedited_allowed_Programs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Expedited allowed Programs</shortDescription>
+        <value>FCC - Type A Home;Child Care Center;Pre School;School Age Child Care</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_NewPTValidationErrorMsg</fullName>
+        <categories>SUTQ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ_NewPTValidationErrorMsg</shortDescription>
+        <value>You cannot start a new Registration because your program currently has a Registration in progress.</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_OngoingRegFinalStatus</fullName>
+        <categories>SUTQ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ_OngoingRegFinalStatus</shortDescription>
+        <value>Unable to Rate;Closed;Closed by System;Withdraw;System Deleted;Annual Report Disapproved;Rating Assessment Complete;Completed;Withdrawn at Applicant&apos;s Request;Withdrawn by Program;Closed at Applicant’s Request;Ineligible;</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Open_status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Open status</shortDescription>
+        <value>Rating Assessment Complete;Withdraw;System Deleted;Ineligible;Rate;Withdrawn at Applicants Request;Closed at Applicants Request;Withdrawn at Applicant&apos;s Request;Unable to Rate</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Rating_Reinstate_Allowed_Programs</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Rating Reinstate Allowed Programs</shortDescription>
+        <value>FCC - Type A Home;FCC - Type A Home;Child Care Center;Pre School;School Age Child Care;</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_Registrations_Record_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ Registrations Record Type</shortDescription>
+        <value>SUTQ - Change of Owner Registration;SUTQ - Expedited Registration;SUTQ - Reinstate Rating after Temporary Closure</value>
+    </labels>
+    <labels>
+        <fullName>SUTQ_TOLEDO_District_Counties</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTQ TOLEDO District Counties</shortDescription>
+        <value>AUGLAIZE;CRAWFORD;DEFIANCE;FULTON;HANCOCK;HARDIN;HENRY;LUCAS;MARION;MERCER;MORROW;OTTAWA;PAULDING;PUTNAM;VAN;WERT;WILLIAMS;WOOD;WYANDOT;SHELBY</value>
+    </labels>
+    <labels>
+        <fullName>SecondaryRolePreSchool</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SecondaryRolePreSchool</shortDescription>
+        <value>OCLQSPS</value>
+    </labels>
+    <labels>
+        <fullName>SecondaryRoleSACC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SecondaryRoleSACC</shortDescription>
+        <value>OCLQSSACC</value>
+    </labels>
+    <labels>
+        <fullName>ShowNewCaseButtonOnProgram</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShowNewCaseButtonOnProgram</shortDescription>
+        <value>ODJFS Enforcement - State User</value>
+    </labels>
+    <labels>
+        <fullName>Site_Admin_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Site Admin Email</shortDescription>
+        <value>oclqs_do_not_reply@jfs.ohio.gov</value>
+    </labels>
+    <labels>
+        <fullName>StateName</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StateName</shortDescription>
+        <value>Ohio</value>
+    </labels>
+    <labels>
+        <fullName>State_Admin_Profiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StateAdminProfiles</shortDescription>
+        <value>ODE State Admin - State User, State Admin - State user, System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>TAAllowedProfiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TAAllowedProfiles</shortDescription>
+        <value>ODE State Admin - State User;State Admin - State user;State Program Admin State User;System Administrator;Approver - State User;Lic and SUTQ Reviewer - State User;Licensing Reviewer - State User;ODJFS FCC Approver - State User;ODJFS FCC Application Reviewer - State User</value>
+    </labels>
+    <labels>
+        <fullName>Tooling_API</fullName>
+        <categories>ApexCodeCoverage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tooling API</shortDescription>
+        <value>.salesforce.com/services/data/v36.0/tooling/</value>
+    </labels>
+    <labels>
+        <fullName>TransactionStatusDeskReviewPending</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TransactionStatusDeskReviewPending</shortDescription>
+        <value>Onsite Visit Pending</value>
+    </labels>
+    <labels>
+        <fullName>Transaction_Approval_Role</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transaction Approval Role</shortDescription>
+        <value>JFS State Admin,JFS Program Admin</value>
+    </labels>
+    <labels>
+        <fullName>Transaction_Status_To_Skip_Validation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transaction Status To Skip Validation</shortDescription>
+        <value>Returned for Revision,Resubmitted</value>
+    </labels>
+    <labels>
+        <fullName>TurnOn_Drawloop_WF_Rules</fullName>
+        <categories>WF Rules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TurnOn Drawloop WF Rules</shortDescription>
+        <value>TRUE</value>
+    </labels>
+    <labels>
+        <fullName>Unable_to_Rate_Reason_Voluntary_discontinue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unable to Rate Reason Voluntary discontinue</shortDescription>
+        <value>Voluntarily Discontinue Participation in SUTQ</value>
+    </labels>
+    <labels>
+        <fullName>Unable_to_Rate_Reasons_Rating_Reduced</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unable to Rate Reasons Rating Reduced</shortDescription>
+        <value>Rating Reduced</value>
+    </labels>
+    <labels>
+        <fullName>Unable_to_Rate_Reasons_Rating_Removed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unable to Rate Reasons Rating Removed</shortDescription>
+        <value>Rating Removed</value>
+    </labels>
+    <labels>
+        <fullName>Update_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Update_Error_Message</shortDescription>
+        <value>You cannot take this action as you do not have required role.</value>
+    </labels>
+    <labels>
+        <fullName>UserDeactivationDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserDeactivationDays</shortDescription>
+        <value>120</value>
+    </labels>
+    <labels>
+        <fullName>UserManTableSelectPastDateError</fullName>
+        <categories>Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserManTableSelectPastDateError</shortDescription>
+        <value>Please select today&apos;s date or a date in the past.</value>
+    </labels>
+    <labels>
+        <fullName>VDSS_News_Content</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VDSS_News_Content</shortDescription>
+        <value>This FREE online course introduces child care staff to important health and safety information and addresses other topics such as child development, inclusion, and Virginia&apos;s Subsidy and Licensing Programs. Participants will earn a 10-hour training certificate upon completion and a CEU! Completion of the training is required for all staff who work in a program that participates in Virginia’s Child Care Subsidy Program, but all Virginia child care staff are welcome and strongly encouraged to take this FREE course. Please check with your employer to determine if your program participates in Virginia’s Subsidy Program and you are required to complete the training.</value>
+    </labels>
+    <labels>
+        <fullName>You_are_not_authorized_to_modify_this_inspection</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You are not authorized to modify this inspection.</shortDescription>
+        <value>You are not authorized to modify approved inspection.</value>
+    </labels>
+    <labels>
+        <fullName>id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>id</shortDescription>
+        <value>id</value>
+    </labels>
+    <labels>
+        <fullName>listOfCAPPendingStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>listOfCAPPendingStatus</shortDescription>
+        <value>Not Submitted;Returned for Revision</value>
+    </labels>
+    <labels>
+        <fullName>oclqs_OCCRA_AttendanceValidationError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>oclqs_OCCRA_AttendanceValidationError</shortDescription>
+        <value>OPIN check has failed because the required Pre-License Training is not verified in your OPR account. Individuals applying to open a Child Care Center require Center Pre-Licensing, individuals applying to open a Type A or Type B Home require Family Child Care Pre-Licensing. Individuals applying to be an In-Home Aide require In-Home Aide pre-certification training.
+For further questions, contact the ODJFS Child Care Help Desk at 1-877-302-2347 Option 4</value>
+    </labels>
+    <labels>
+        <fullName>startUrlForISD_CommunityLoginController</fullName>
+        <categories>Hardcoded</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>startUrlForISD_CommunityLoginController</shortDescription>
+        <value>/s/del-dashboard</value>
+    </labels>
+</CustomLabels>

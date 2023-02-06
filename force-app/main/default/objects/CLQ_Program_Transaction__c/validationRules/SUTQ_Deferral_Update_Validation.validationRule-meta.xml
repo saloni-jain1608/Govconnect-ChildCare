@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SUTQ_Deferral_Update_Validation</fullName>
+    <active>true</active>
+    <description>To allow edit access to this field for certain profiles</description>
+    <errorConditionFormula>AND(
+!ISNEW(),ISPICKVAL(CLQ_Transaction_Status__c,&apos;Deferral&apos;),
+AND(
+   OR(ISCHANGED(SUTQ_Deferral_Duration__c),ISCHANGED( SUTQ_Deferral_Due_Date__c )),
+  AND($Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+  $Profile.Name &lt;&gt; &apos;Approver - State User&apos;,
+  $Profile.Name &lt;&gt; &apos;ODE Approver - State User&apos;,
+  $Profile.Name &lt;&gt; &apos;ODE State Admin - State User&apos;,
+  $Profile.Name &lt;&gt; &apos;ODE Super State Admin - State user&apos;,
+  $Profile.Name &lt;&gt; &apos;ODJFS Day Camp Approver - State User&apos;,
+  $Profile.Name &lt;&gt; &apos;ODJFS FCC Approver - State User&apos;,
+  $Profile.Name &lt;&gt; &apos;State Admin - State user&apos;,
+  $Profile.Name &lt;&gt; &apos;Super State Admin - State user&apos;,
+  $Profile.Name &lt;&gt; &apos;ODJFS Day Camp Approver - State User&apos;))
+  )</errorConditionFormula>
+    <errorMessage>You do not have enough access to modify Deferral Duration and Due Date</errorMessage>
+</ValidationRule>

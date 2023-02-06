@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><div style=""><span style="background-color: rgb(255, 255, 255);"><font face="arial"><span style="white-space: pre-wrap;">The Corrective Action Plan(CAP) for {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Number__c} for the inspection on {!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} has not been submitted by the deadline indicated in the report. 
+
+Log in to OCLQS at https://oclqs.force.com/oclqs_home to submit the required CAP. Your immediate response is required. 
+
+If you have any questions about the inspection of CAP, contact your specialist. 
+
+The Ohio Child Licensing and Quality System Team 
+
+ref: {!CLQ_Corrective_Action_Plan__c.Id}
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</span></font><br></span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font color="#ffffff" face="Verdana, Helvetica, sans-serif" size="2" style=""><span style="background-color: rgb(255, 255, 255);">ref: {!</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">CLQ_Corrective_Action_Plan</span><span style="background-color: rgb(255, 255, 255);">__c.Id</span><span style="background-color: rgb(255, 255, 255);">}</span></font></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

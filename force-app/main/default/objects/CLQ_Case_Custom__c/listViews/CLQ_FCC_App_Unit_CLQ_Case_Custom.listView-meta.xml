@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_FCC_App_Unit_CLQ_Case_Custom</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FCC App Unit</label>
+    <queue>CLQ_FCC_App_Unit</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

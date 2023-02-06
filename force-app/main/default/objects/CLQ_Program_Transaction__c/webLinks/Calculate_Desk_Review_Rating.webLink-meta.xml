@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculate_Desk_Review_Rating</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Calculate Desk Review Rating</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var pickVal = &quot;{!CLQ_Program_Transaction__c.CLQ_Transaction_Status__c}&quot;; 
+//TFS#15987
+var DefFindings= sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; and Rating__c = &apos;D&apos; and Rating__c != null &quot;); 
+DefList = DefFindings.getArray(&quot;records&quot;); 
+var AllFindings= sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; &quot;); 
+AllList = AllFindings.getArray(&quot;records&quot;); 
+//TFS#15987
+var Findings = sforce.connection.query(&quot;Select Id,Points__c,Rating__c from CLQ_Findings__c where Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; and Rating__c != &apos;D&apos; and Rating__c != null &quot;); 
+findingList = Findings.getArray(&quot;records&quot;); 
+
+var TransDoc = sforce.connection.query(&quot;Select Id,Document_Points__c,Rating__c from CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND Rating__c != null &quot;); 
+docList = TransDoc.getArray(&quot;records&quot;); 
+
+var Answers = sforce.connection.query(&quot;Select Id,Points__c,Rating_Number__c from Answer__c where Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; AND Domain_Name__c != &apos;Staff Quals and PD&apos; And Rating_Number__c != null&quot;); 
+answerList = Answers.getArray(&quot;records&quot;); 
+
+//15770 - starts 
+var rulesInspected = sforce.connection.query(&quot;SELECT Id, Name FROM CLQ_Rules_Inspected__c where ProgramTransaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos;&quot;); 
+var rulesInspectedList = rulesInspected.getArray(&quot;records&quot;); 
+var sizeRL = rulesInspectedList.length; 
+var sizeFL = findingList.length; 
+//TFS#15987 starts
+if(DefList.length&gt;0)
+{
+alert(&apos;Rating Cannot be calculated as one or more findings are in Deferral Status&apos;);
+} //TFS#15987 ends
+else if(sizeRL != AllList.length){ 
+alert(&apos;All Desk Review Findings must have a rating or point value before the Onsite Visit can be created&apos;); 
+} 
+//15770 - Ends 
+else 
+if(findingList.length == 0 || docList.length == 0 || answerList.length == 0){ 
+	alert(&apos;Please perform all Desk Review actions prior to calculating Desk Review Rating&apos;); 
+} 
+
+else{ 
+if(pickVal==&apos;Onsite Visit Pending&apos; || pickVal==&apos;Pending Approval&apos; || pickVal==&apos;Rating Assessment Complete&apos;) 
+	{ 
+		if(pickVal==&apos;Onsite Visit Pending&apos;){
+		alert(&apos;Transaction Status is Onsite Visit Pending, Desk Review Rating cannot be re-calculated&apos;); 
+		}
+		if(pickVal==&apos;Pending Approval&apos;) 
+		{ 
+		alert(&apos;Transaction Status is Pending Approval, Desk Review Rating cannot be Re-Calculated&apos;); 
+		}
+		if(pickVal==&apos;Rating Assessment Complete&apos;) 
+		{ 
+		alert(&apos;Transaction Status is Rating Assessment Complete, Desk Review Rating Cannot be Re-Calculated&apos;); 
+		}
+	}
+	else 
+	{ 
+	window.location = &apos;/apex/CLQ_CalculateDeskReviewRating?id={!CLQ_Program_Transaction__c.Id}&apos;; 
+	} 
+
+}</url>
+</WebLink>

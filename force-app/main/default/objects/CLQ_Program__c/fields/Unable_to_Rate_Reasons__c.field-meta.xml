@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unable_to_Rate_Reasons__c</fullName>
+    <externalId>false</externalId>
+    <label>Rating Reasons</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Change of Location</fullName>
+                <default>false</default>
+                <label>Change of Location</label>
+            </value>
+            <value>
+                <fullName>Change of Owner Rating</fullName>
+                <default>false</default>
+                <label>Change of Owner Rating</label>
+            </value>
+            <value>
+                <fullName>Does not meet requirements of the Administrative Practices</fullName>
+                <default>false</default>
+                <label>Does not meet requirements of the Administrative Practices</label>
+            </value>
+            <value>
+                <fullName>Does not meet requirements of the Family and Community Partnership domain</fullName>
+                <default>false</default>
+                <label>Does not meet requirements of the Family and Community Partnership domain</label>
+            </value>
+            <value>
+                <fullName>Does not meet requirements of the Learning and Development domain</fullName>
+                <default>false</default>
+                <label>Does not meet requirements of the Learning and Development domain</label>
+            </value>
+            <value>
+                <fullName>Does not meet requirements of the Staff Qualifications and Professional Development domain</fullName>
+                <default>false</default>
+                <label>Does not meet requirements of the Staff Qualifications and Professional Development domain</label>
+            </value>
+            <value>
+                <fullName>FCC change of provider type</fullName>
+                <default>false</default>
+                <label>FCC change of provider type</label>
+            </value>
+            <value>
+                <fullName>Intent to Revoke</fullName>
+                <default>false</default>
+                <label>Intent to Revoke</label>
+            </value>
+            <value>
+                <fullName>Rating Reduced</fullName>
+                <default>false</default>
+                <label>Rating Reduced</label>
+            </value>
+            <value>
+                <fullName>Rating Removed</fullName>
+                <default>false</default>
+                <label>Rating Removed</label>
+            </value>
+            <value>
+                <fullName>Required Compliance</fullName>
+                <default>false</default>
+                <label>Required Compliance</label>
+            </value>
+            <value>
+                <fullName>Voluntarily Discontinue Participation in SUTQ</fullName>
+                <default>false</default>
+                <label>Voluntarily Discontinue Participation in SUTQ</label>
+            </value>
+            <value>
+                <fullName>Expedited Rating</fullName>
+                <default>false</default>
+                <label>Expedited Rating</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

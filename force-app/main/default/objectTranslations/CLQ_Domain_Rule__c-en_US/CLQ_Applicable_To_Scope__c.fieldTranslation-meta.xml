@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CLQ_Applicable_To_Scope__c</name>
+    <picklistValues>
+        <masterLabel>Focused</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

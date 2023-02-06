@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection_If_Other_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(RecordType.Name  = &apos;Incident / Injury / Illness&apos;,  ISPICKVAL(CLQ_Reason_for_No_Investigation__c, &apos;Other&apos; ), Inspection_Reason_If_Other_Describe__c =null)</errorConditionFormula>
+    <errorDisplayField>Inspection_Reason_If_Other_Describe__c</errorDisplayField>
+    <errorMessage>If &apos;Other&apos; Describe is required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Standard Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Standard Documents</value>
+    </caseValues>
+    <layouts>
+        <layout>Document Layout</layout>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Integration Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Document with Attachments</layout>
+        <sections>
+            <label></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Integration Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCLQS Portal Read Only</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Standard Document Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>OCLQS_Portal_Sharing</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label></label>
+        <name>View_Document</name>
+    </webLinks>
+</CustomObjectTranslation>

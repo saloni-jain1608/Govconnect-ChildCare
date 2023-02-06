@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Process_Combined_County__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True - If combined county needs to be processed
+False - If combined county need not to be processed</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Process Combined County</label>
+    <type>Checkbox</type>
+</CustomField>

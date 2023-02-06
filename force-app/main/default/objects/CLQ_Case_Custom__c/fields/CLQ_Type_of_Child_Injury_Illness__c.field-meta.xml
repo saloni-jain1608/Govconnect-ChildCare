@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Type_of_Child_Injury_Illness__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Child Injury/Illness</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergic Reaction / Asthma Attack</fullName>
+                <default>false</default>
+                <label>Allergic Reaction / Asthma Attack</label>
+            </value>
+            <value>
+                <fullName>Blow or Bump to the Head</fullName>
+                <default>false</default>
+                <label>Blow or Bump to the Head</label>
+            </value>
+            <value>
+                <fullName>Broken / Disclosed Bone</fullName>
+                <default>false</default>
+                <label>Broken / Disclosed Bone</label>
+            </value>
+            <value>
+                <fullName>Collapse / Faint</fullName>
+                <default>false</default>
+                <label>Collapse / Faint</label>
+            </value>
+            <value>
+                <fullName>Deep Cut / Laceration</fullName>
+                <default>false</default>
+                <label>Deep Cut / Laceration</label>
+            </value>
+            <value>
+                <fullName>No Pulse / Not Breathing</fullName>
+                <default>false</default>
+                <label>No Pulse / Not Breathing</label>
+            </value>
+            <value>
+                <fullName>Object inserted into body part</fullName>
+                <default>false</default>
+                <label>Object inserted into body part</label>
+            </value>
+            <value>
+                <fullName>Outbreak of illness(County Health Department reportable)</fullName>
+                <default>false</default>
+                <label>Outbreak of illness(County Health Department reportable)</label>
+            </value>
+            <value>
+                <fullName>Poisoning</fullName>
+                <default>false</default>
+                <label>Poisoning</label>
+            </value>
+            <value>
+                <fullName>Seizure</fullName>
+                <default>false</default>
+                <label>Seizure</label>
+            </value>
+            <value>
+                <fullName>Sprain / Strain</fullName>
+                <default>false</default>
+                <label>Sprain / Strain</label>
+            </value>
+            <value>
+                <fullName>Suspected broken bone/dislocation</fullName>
+                <default>false</default>
+                <label>Suspected broken bone/dislocation</label>
+            </value>
+            <value>
+                <fullName>Tooth injury</fullName>
+                <default>false</default>
+                <label>Tooth injury</label>
+            </value>
+            <value>
+                <fullName>Other injury requiring medical treatment (Please describe below)</fullName>
+                <default>false</default>
+                <label>Other injury requiring medical treatment (Please describe below)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

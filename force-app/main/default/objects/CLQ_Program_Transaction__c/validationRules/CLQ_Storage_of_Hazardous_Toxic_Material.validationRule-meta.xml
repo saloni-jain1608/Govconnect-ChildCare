@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Storage_of_Hazardous_Toxic_Material</fullName>
+    <active>true</active>
+    <description>Storage of Hazardous/Toxic Material – when the value is NO, the field Materials stored in tanks should not be mandatory.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( RecordType.Name =&apos;Amendment - FCC - Change of Location&apos;,ISPICKVAL( CLQ_Storage_of_Hazardous_Toxic_Material__c , &apos;Yes&apos;), ISBLANK( CLQ_Materials_stored_in_Tanks__c ))</errorConditionFormula>
+    <errorDisplayField>CLQ_Materials_stored_in_Tanks__c</errorDisplayField>
+    <errorMessage>Please provide Materials stored in tanks.</errorMessage>
+</ValidationRule>

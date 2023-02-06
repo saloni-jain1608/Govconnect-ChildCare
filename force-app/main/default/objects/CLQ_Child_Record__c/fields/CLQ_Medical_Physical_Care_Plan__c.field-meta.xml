@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Medical_Physical_Care_Plan__c</fullName>
+    <description>Select all the applicable options.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all the applicable options.</inlineHelpText>
+    <label>Medical/Physical Care Plan (JFS 01236)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>No Plan on File</fullName>
+                <default>false</default>
+                <label>No Plan on File</label>
+            </value>
+            <value>
+                <fullName>Signatures Missing</fullName>
+                <default>false</default>
+                <label>Signatures Missing</label>
+            </value>
+            <value>
+                <fullName>Plan Incomplete</fullName>
+                <default>false</default>
+                <label>Plan Incomplete</label>
+            </value>
+            <value>
+                <fullName>No Trained Staff</fullName>
+                <default>false</default>
+                <label>No Trained Staff</label>
+            </value>
+            <value>
+                <fullName>Trained Staff Not Present</fullName>
+                <default>false</default>
+                <label>Trained Staff Not Present</label>
+            </value>
+            <value>
+                <fullName>No Separate Form Each Condition</fullName>
+                <default>false</default>
+                <label>No Separate Form Each Condition</label>
+            </value>
+            <value>
+                <fullName>Plan Not Updated</fullName>
+                <default>false</default>
+                <label>Plan Not Updated</label>
+            </value>
+            <value>
+                <fullName>Non-Trained Staff Performed</fullName>
+                <default>false</default>
+                <label>Non-Trained Staff Performed</label>
+            </value>
+            <value>
+                <fullName>Not Implemented/Followed</fullName>
+                <default>false</default>
+                <label>Not Implemented/Followed</label>
+            </value>
+            <value>
+                <fullName>Plan Not Accessible</fullName>
+                <default>false</default>
+                <label>Plan Not Accessible</label>
+            </value>
+            <value>
+                <fullName>Not on File One Year</fullName>
+                <default>false</default>
+                <label>Not on File One Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

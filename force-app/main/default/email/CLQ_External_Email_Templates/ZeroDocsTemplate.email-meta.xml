@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>ZeroDocsTemplate</name>
+    <style>freeForm</style>
+    <subject>{!CLQ_Program_Transaction__c.clq_recordtypename__c} , {!CLQ_Program_Transaction__c.Name} Submitted without Documents</subject>
+    <textOnly>The program {!CLQ_Program__c.CLQ_Program_Number__c}, {!CLQ_Program__c.Name} has been Updated.
+
+
+
+The list of information that has been updated are
+
+
+
+&lt;table&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Name &lt;/td&gt;
+&lt;td&gt;{!CLQ_Facility_Schedule__c.CLQ_Days_of_Operation__c}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+
+
+The Ohio Child Licensing and Quality System Team.
+
+
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

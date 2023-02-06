@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Enforce_Sus_Case_if_Prog_Status_Same</fullName>
+    <active>true</active>
+    <description>If Program Status = Enforcement
+Prevent the user from creating a case with Activity Type = Enforcement
+If Program Status = Suspension
+Prevent the user from creating a case with Activity Type = Suspension</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(ISNEW(), CONTAINS(RecordType.Name,&quot;Enforcement&quot;),
+OR(
+AND(CLQ_Program_Status__c ==  &quot;Enforcement&quot;, CONTAINS(TEXT(CLQ_Activity_Type__c),CLQ_Program_Status__c)),
+AND(CLQ_Program_Status__c ==  &quot;Suspended&quot;, CONTAINS(TEXT(CLQ_Activity_Type__c),&quot;Suspen&quot;))))</errorConditionFormula>
+    <errorMessage>Cannot create this case since a similar case is in progress.</errorMessage>
+</ValidationRule>

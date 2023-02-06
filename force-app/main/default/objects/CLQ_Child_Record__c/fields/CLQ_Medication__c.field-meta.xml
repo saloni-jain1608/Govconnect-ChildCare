@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Medication__c</fullName>
+    <description>Select all the applicable options.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all the applicable options.</inlineHelpText>
+    <label>Medication (JFS 01217)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Falsified</fullName>
+                <default>false</default>
+                <label>Falsified</label>
+            </value>
+            <value>
+                <fullName>No Medication Form</fullName>
+                <default>false</default>
+                <label>No Medication Form</label>
+            </value>
+            <value>
+                <fullName>No Separate Form Each Med</fullName>
+                <default>false</default>
+                <label>No Separate Form Each Med</label>
+            </value>
+            <value>
+                <fullName>Not Current Version JFS 01217</fullName>
+                <default>false</default>
+                <label>Not Current Version JFS 01217</label>
+            </value>
+            <value>
+                <fullName>Medication Form Expired</fullName>
+                <default>false</default>
+                <label>Medication Form Expired</label>
+            </value>
+            <value>
+                <fullName>Medication Form Incomplete</fullName>
+                <default>false</default>
+                <label>Medication Form Incomplete</label>
+            </value>
+            <value>
+                <fullName>Instructions Not Followed</fullName>
+                <default>false</default>
+                <label>Instructions Not Followed</label>
+            </value>
+            <value>
+                <fullName>Medication Expired</fullName>
+                <default>false</default>
+                <label>Medication Expired</label>
+            </value>
+            <value>
+                <fullName>No Rx Label/No Box 2</fullName>
+                <default>false</default>
+                <label>No Rx Label/No Box 2</label>
+            </value>
+            <value>
+                <fullName>Rx Label Incorrect/Expired</fullName>
+                <default>false</default>
+                <label>Rx Label Incorrect/Expired</label>
+            </value>
+            <value>
+                <fullName>Sample Rx No Instructions</fullName>
+                <default>false</default>
+                <label>Sample Rx No Instructions</label>
+            </value>
+            <value>
+                <fullName>Non Rx Underage</fullName>
+                <default>false</default>
+                <label>Non Rx Underage</label>
+            </value>
+            <value>
+                <fullName>Medication Not Labeled</fullName>
+                <default>false</default>
+                <label>Medication Not Labeled</label>
+            </value>
+            <value>
+                <fullName>Not Original Container</fullName>
+                <default>false</default>
+                <label>Not Original Container</label>
+            </value>
+            <value>
+                <fullName>Wrong Medication Administered</fullName>
+                <default>false</default>
+                <label>Wrong Medication Administered</label>
+            </value>
+            <value>
+                <fullName>Wrong Dose Administered</fullName>
+                <default>false</default>
+                <label>Wrong Dose Administered</label>
+            </value>
+            <value>
+                <fullName>No Prior Dose</fullName>
+                <default>false</default>
+                <label>No Prior Dose</label>
+            </value>
+            <value>
+                <fullName>Administered Longer than Permitted</fullName>
+                <default>false</default>
+                <label>Administered Longer than Permitted</label>
+            </value>
+            <value>
+                <fullName>Modified Diet No Written Approval</fullName>
+                <default>false</default>
+                <label>Modified Diet No Written Approval</label>
+            </value>
+            <value>
+                <fullName>Medical Foods/Supplements</fullName>
+                <default>false</default>
+                <label>Medical Foods/Supplements</label>
+            </value>
+            <value>
+                <fullName>Not on File One Year</fullName>
+                <default>false</default>
+                <label>Not on File One Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

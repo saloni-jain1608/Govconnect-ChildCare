@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>checkNumericalForProgramNumber</fullName>
+    <active>true</active>
+    <description>Validation to check if the user entered only numerical value for Program number</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; 
+AND(
+Domain_Name__c = &apos;Change of Owner Registration Questions&apos; ,
+AssociatedQuestion__r.Name = &apos;SE - 00016&apos; ,
+NOT(ISBLANK(Answer_Text__c)) , 
+NOT(ISNUMBER( Answer_Text__c)) 
+
+)</errorConditionFormula>
+    <errorMessage>Program number should have only numerical value</errorMessage>
+</ValidationRule>

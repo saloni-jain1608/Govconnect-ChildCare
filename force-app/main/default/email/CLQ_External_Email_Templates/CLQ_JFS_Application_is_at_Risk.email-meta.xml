@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CLQ_Letterhead</letterhead>
+    <name>JFS Application is at Risk</name>
+    <style>formalLetter</style>
+    <subject>{!CLQ_Program_Transaction__c.CLQ_Program_Name__c},  {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} Application is at Risk</subject>
+    <textOnly>The application for {!CLQ_Program_Transaction__c.CLQ_Program_Name__c},  {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} is at risk of being closed by the system. You have 60 days remaining to make a recommendation before the system will close the application
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347.
+
+The Ohio Child Licensing and Quality System Team
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.
+
+ref: {!CLQ_Program_Transaction__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

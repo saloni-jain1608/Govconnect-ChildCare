@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Contact_OPIN__c</fullName>
+    <description>To Capture and send to Informatica Job</description>
+    <externalId>false</externalId>
+    <formula>CLQ_Contact__r.OPIN__c</formula>
+    <label>Contact OPIN</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

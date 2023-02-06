@@ -1,0 +1,16 @@
+The Ohio Department of Job and Family Services (ODJFS) has issued a provisional {!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c} license, {!CLQ_Program_Transaction__c.CLQ_Program_Number__c} to {!CLQ_Program_Transaction__c.CLQ_Program_Name__c}. The license is attached to this email and must be printed and posted in a conspicuous space in the child care program. 
+
+The issuance of a provisional {!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c} license is based upon compliance with areas verified during the pre-licensing inspection and your plan to maintain compliance with Ohio Revised Code and Ohio Administrative Code. The provisional license period will allow your program adequate time to become eligible for a continuous license. During the twelve month provisional license period, your program will receive at least two unannounced inspections to review records, observe the daily program, and complete an assessment to verify compliance of the law and rule. 
+
+If you want to provide publicly funded child care services, you must enter into an agreement with ODJFS by completing the JFS 01144 "Provider Agreement for Publicly Funded Child Care Services". Additional information about this process is available at www.jfs.ohio.gov/cdc/CCIDS.stm 
+
+As required by Section 5104.31 of the Ohio Revised Code, beginning July 1, 2020, any licensed child care program that would like to provide publicly funded child care shall be rated through the Step Up To Quality program prior to signing a provider agreement.  There are a few exceptions to this requirement, also included in Section 5104.31 ORC.  Please refer to Chapter 5101:2-17 of the Ohio Administrative Code for the process and requirements to become Step Up To Quality rated.  Please refer to the following links regarding this requirement: 
+
+http://codes.ohio.gov/orc/5104.31
+http://codes.ohio.gov/oac/5101%3A2-17
+
+Contact the Child Care Help Desk for additional assistance at 1-877-302-2347 option 1. 
+
+The Ohio Child Licensing and Quality System Team. 
+
+Reference Id ref: {!CLQ_Program_Transaction__c.Id}

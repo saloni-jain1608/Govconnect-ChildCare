@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Verdana, Helvetica, sans-serif" size="2"><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;">The Corrective Action Plan(CAP) for </span></span><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;"> {!CLQ_Corrective_Action_Plan__c.CLQ_Program_Name__c}, {!CLQ_Corrective_Action_Plan__c</span></span><span style="background-color: rgb(255, 255, 255); white-space: pre-wrap;">.</span><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;">CLQ_Program_Number__c} for inspection on </span></span><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;">{!CLQ_Corrective_Action_Plan__c.CLQ_Inspection_Start_Date__c} has not been submitted by the deadline indicated in the report. 
+
+Log in to OCLQS at </span></span><a href="https://oclqs.force.com/oclqs_home﻿"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">https://oclqs.force.com/oclqs_home</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">﻿</span></a><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;"> to submit the required CAP. Your immediate response is required.</span></span></font><div><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2">
+If you have any questions, contact your Licensing Specialist.</font></span></span><div><span style="background-color: rgb(255, 255, 255);"><span style="white-space: pre-wrap;"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></span></div><div><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2">The Ohio Child Licensing and Quality System Team.
+
+This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain private, confidential, and/or privileged information. Any unauthorized review, use, disclosure, or distribution is prohibited.</font></span></div><div><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></span></div><div><font face="Verdana, Helvetica, sans-serif" size="2"><span style="color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">ref: {!</span><span style="color: rgb(255, 255, 255); white-space: pre-wrap; background-color: rgb(255, 255, 255);">CLQ_Corrective_Action_Plan</span><span style="color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">__c.Id</span><span style="color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">}</span></font></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

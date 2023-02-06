@@ -1,0 +1,65 @@
+{
+  "appPageId" : "ea65f671-57c8-4a3c-b624-642f6fe5b11a",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "1d4ad850-8380-45be-a425-da91a3ede941",
+  "label" : "Apply for Program License",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a0622d7a-8161-47a6-a021-0a9b6667e6bc",
+          "columns" : [ {
+            "UUID" : "9cd0b0a8-062c-4f4f-9170-9d3536c2f865",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a0622d7a-8161-47a6-a021-0a9b6667e6bc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:vdss_dynamicFrameworkParentWrapperLwcCmp",
+          "id" : "e9d64812-b7a2-44c9-b80c-3f31d7dc5518",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9cd0b0a8-062c-4f4f-9170-9d3536c2f865",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a98394ba-020f-4998-aa4f-ad00c6e76939",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "title" : "Apply for Program License"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "45a2c0fe-705d-4918-9bbb-a49fab88282d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "88071c2c-b8af-401f-93fa-24ae23dbbdb4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-program-license"
+}

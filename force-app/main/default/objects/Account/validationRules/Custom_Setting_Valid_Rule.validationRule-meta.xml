@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Setting_Valid_Rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; ISPICKVAL(OEDS_Organization_Status__c  , &apos;New&apos;)</errorConditionFormula>
+    <errorMessage>Not New Error Message. We encounter lot</errorMessage>
+</ValidationRule>

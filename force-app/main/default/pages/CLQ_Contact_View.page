@@ -1,0 +1,24 @@
+<apex:page standardController="Contact" >
+      <apex:includeScript value="{!$Resource.JQueryMin}" />
+            <apex:detail subject="{!Contact}" relatedList="true" title="true" />
+      
+     
+            <script type="text/javascript">
+                    $j = jQuery.noConflict();        
+                    $j(document).ready(function() {            
+                    //Disable 'Log in to Community as User' if the user's Profile is 'State System Help Desk State User'  
+                    var ProfName = "{!$Profile.Name}";                        
+                                                  
+                    if( ProfName == "State System Help Desk State User") {                                                                                                                               
+                         //$j(".portalUserLoginAsLink").hide();                                                                                            
+                       }  
+                       
+                    if( ProfName == "State Program Admin State User") {                                                                                                                               
+                         $j("#workWithPortal").hide();  
+                         $j("#workWithPortalCopy").hide();                                                                                          
+                       }                               
+                   });
+                                     
+             </script>
+         
+</apex:page>

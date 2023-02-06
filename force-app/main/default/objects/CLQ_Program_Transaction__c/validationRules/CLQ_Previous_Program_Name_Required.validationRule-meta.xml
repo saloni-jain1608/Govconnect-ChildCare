@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Previous_Program_Name_Required</fullName>
+    <active>true</active>
+    <description>Previous Program Name Mandatory if Closure Reason  is Ownership change</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(  ISBLANK( CLQ_Previous_Program_Name__c ), ISPICKVAL(  CLQ_Closure_Reason__c , &apos;JFS - Ownership Change&apos;) )</errorConditionFormula>
+    <errorDisplayField>CLQ_Previous_Program_Name__c</errorDisplayField>
+    <errorMessage>Previous Program Name is Required</errorMessage>
+</ValidationRule>

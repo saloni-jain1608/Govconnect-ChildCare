@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_OPIN_Number__c</fullName>
+    <description>What is your OPIN number?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is your OPIN number?</inlineHelpText>
+    <label>OPIN Number</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

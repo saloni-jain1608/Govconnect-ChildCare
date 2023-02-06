@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Desk_Review</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Complete Desk Review</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var PrgTransaction= new sforce.SObject(&quot;CLQ_Program_Transaction__c&quot;);
+PrgTransaction.Id = &apos;{!CLQ_Program_Transaction__c.Id}&apos;;
+
+var transDoc = sforce.connection.query(&quot;Select Id,Name,Rating__c from CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos;&quot;);
+var records = transDoc.getArray(&quot;records&quot;);
+
+var isRatingEmpty = false;
+
+if(transDoc[0]==null)
+	
+	for(var i=0;i&lt;records.length;i++){
+		
+		 if(records[i].Rating__c == null || records[i].Rating__c == &apos;&apos;){
+			 isRatingEmpty = true; 
+			
+			 break;
+			 }
+	  
+	}
+
+
+if( isRatingEmpty == true || (&apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == null || &apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == &apos;&apos;) ){ 
+  alert(&apos;Document Rating is null or Recommeded Rating is null&apos;); 
+ } 
+
+ else{ 
+    PrgTransaction.CLQ_Transaction_Status__c = &apos;{!$Label.TransactionStatusDeskReviewPending}&apos;; 
+	alert(&apos;status updated&apos;); 
+	var result = sforce.connection.update([PrgTransaction]); 
+	window.location.reload();
+ }</url>
+</WebLink>

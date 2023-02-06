@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Program_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>CLQ_Program_Number__c</columns>
+    <columns>CLQ_Program_Status__c</columns>
+    <columns>CLQ_Associated_Organization__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CLQ_Program_Status__c</field>
+        <operation>equals</operation>
+        <value>Pending</value>
+    </filters>
+    <label>Pending Program Requests</label>
+</ListView>

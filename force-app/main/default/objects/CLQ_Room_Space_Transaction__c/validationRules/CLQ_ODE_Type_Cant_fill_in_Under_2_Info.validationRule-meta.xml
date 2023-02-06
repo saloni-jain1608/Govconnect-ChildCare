@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_ODE_Type_Cant_fill_in_Under_2_Info</fullName>
+    <active>false</active>
+    <description>If the Program record type is ODE and Center Under 2 Information should not be filled in.</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(OR(CONTAINS( CLQ_Program_Transaction__r.CLQ_Program__r.RecordType.Name ,&apos;Child Care&apos;),CLQ_Program_Transaction__r.CLQ_Program__r.RecordType.Name = &apos;Pre School&apos;),
+OR(NOT(ISBLANK(TEXT(CLQ_Used_by_Under_or_Over_2__c))),NOT(ISBLANK( CLQ_Number_of_Children_Under_2__c ))))</errorConditionFormula>
+    <errorDisplayField>CLQ_Number_of_Children_Under_2__c</errorDisplayField>
+    <errorMessage>Under 2 information cannot be filled in for ODE or Center type records.</errorMessage>
+</ValidationRule>

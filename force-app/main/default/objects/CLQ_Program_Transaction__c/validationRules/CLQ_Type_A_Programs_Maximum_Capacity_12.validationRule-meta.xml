@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Type_A_Programs_Maximum_Capacity_12</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; CLQ_Program_Record_Type__c = &apos;FCC - Type A Home&apos; &amp;&amp; OR(CLQ_Requested_Total_Capacity__c &gt;12, CLQ_Requested_Under_2_Capacity__c &gt;12, OR(AND(NOT(CONTAINS($Profile.Name, &apos;Customer Community&apos;)), CLQ_Calculated_Maximum_Capacity__c &gt; 12)))</errorConditionFormula>
+    <errorMessage>Max capacity cannot be greater than 12 for Type A Program</errorMessage>
+</ValidationRule>

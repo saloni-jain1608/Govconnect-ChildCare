@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Inspection__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Inspection</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Filter Criteria does not match, Please Select Incident/Complaint Inspection.</errorMessage>
+        <filterItems>
+            <field>CLQ_Inspection__c.CLQ_Inspection_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Deleted</value>
+        </filterItems>
+        <filterItems>
+            <field>CLQ_Inspection__c.CLQ_Inspection_age__c</field>
+            <operation>lessOrEqual</operation>
+            <value>365</value>
+        </filterItems>
+        <filterItems>
+            <field>CLQ_Inspection__c.CLQ_Inspection_Type__c</field>
+            <operation>equals</operation>
+            <value>Incident / Injury / Illness, Complaint</value>
+        </filterItems>
+        <filterItems>
+            <field>CLQ_Inspection__c.CLQ_Program__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.CLQ_Program__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CLQ_Inspection__c</referenceTo>
+    <relationshipName>CLQ_Cases</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

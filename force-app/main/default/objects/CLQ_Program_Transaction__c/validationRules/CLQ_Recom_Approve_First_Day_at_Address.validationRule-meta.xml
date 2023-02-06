@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Recom_Approve_First_Day_at_Address</fullName>
+    <active>true</active>
+    <description>Approved First Day at New Address required if Recommendation is Approve</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL( CLQ_Recommendation__c , &apos;Approve&apos;),  ISBLANK( CLQ_Approved_First_Day_at_New_Address__c ), OR(RecordType.Name = &apos;Amendment - FCC - Change of Location&apos;,RecordType.Name = &apos;Amendment - Center - Change of Location&apos;,RecordType.Name = &apos;	Amendment - ODE - Change of Location&apos; ) )</errorConditionFormula>
+    <errorDisplayField>CLQ_Approved_First_Day_at_New_Address__c</errorDisplayField>
+    <errorMessage>Approved First Day at New Address is Required if Recommendation is Approve</errorMessage>
+</ValidationRule>

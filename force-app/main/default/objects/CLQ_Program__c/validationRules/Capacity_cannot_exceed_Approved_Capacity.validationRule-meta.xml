@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capacity_cannot_exceed_Approved_Capacity</fullName>
+    <active>false</active>
+    <description>Current capacity cannot exceed Approved capacity</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND(NOT(ISNULL(CLQ_Total_Enrollment__c)),
+ CLQ_Total_Enrollment__c &gt;  CLQ_Approved_Total_Capacity__c )</errorConditionFormula>
+    <errorDisplayField>CLQ_Total_Enrollment__c</errorDisplayField>
+    <errorMessage>Current capacity cannot exceed Approved capacity</errorMessage>
+</ValidationRule>

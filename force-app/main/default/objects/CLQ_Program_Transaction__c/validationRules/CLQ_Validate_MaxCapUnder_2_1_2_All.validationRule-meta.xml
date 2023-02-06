@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Validate_MaxCapUnder_2_1_2_All</fullName>
+    <active>true</active>
+    <description>Validates Max capacity under 2.5 for all programs</description>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; (CLQ_Calculated_Max_Capacity_Under_2_5Yr__c &gt; CLQ_Calculated_Maximum_Capacity__c || (CLQ_Calculated_Max_Capacity_Under_2_5Yr__c !=0 &amp;&amp; NOT(ISBLANK(CLQ_Calculated_Max_Capacity_Under_2_5Yr__c)) &amp;&amp; ISBLANK(CLQ_Calculated_Maximum_Capacity__c)))</errorConditionFormula>
+    <errorDisplayField>CLQ_Calculated_Max_Capacity_Under_2_5Yr__c</errorDisplayField>
+    <errorMessage>Max Capacity under 2.5 cannot be greater than Calculated Max Capacity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLQ_Reason_Code_is_Required_for_Admin</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.ExecutionControlSetting__c.Run_Validation_Rule__c &amp;&amp; AND( ISPICKVAL(CLQ_Role__c  , &quot;Administrator&quot;), ISBLANK(TEXT( CLQ_Reason_Codes__c ))  )</errorConditionFormula>
+    <errorDisplayField>CLQ_Reason_Codes__c</errorDisplayField>
+    <errorMessage>Please select reason code</errorMessage>
+</ValidationRule>

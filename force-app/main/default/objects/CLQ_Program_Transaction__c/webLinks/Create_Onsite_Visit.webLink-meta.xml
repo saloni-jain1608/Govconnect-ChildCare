@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Onsite_Visit</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Onsite Visit</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Description: Creates new SUTQ On-Site Inspection.
+//Assumptions: 1. This button will be used by Internal users only, not by External users.
+//2. The logic is based on User SFDC Role, all Intenal Users must have proper SFDC Role (Sys Admins excluded).
+//Change History: [Ramana, 6/5/2017]: Redesigned for CR 11199.
+// TFS#13747 - Updated the rating/point check logic while creating onsite inspection 
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+
+var proname=&apos;{!$Profile.Name}&apos;;
+var rolename = &apos;{!$UserRole.Name}&apos;; //alert(&apos;User Role: &apos; +rolename);
+var ProgCounty = &apos;{!CLQ_Program_Transaction__c.CLQ_County__c}&apos;; //alert(&apos;County: &apos; + ProgCounty);
+var CreateOnSite = false;
+var ErrMsg = &apos;Error: System cannot create a new Inspection.&apos;;
+var JFSsfdcRoles = &apos;{!$Label.JFS_SFDC_Roles}&apos;;
+var ODEsfdcRoles = &apos;{!$Label.ODE_SFDC_Roles}&apos;; //alert(&apos;ODEsfdcRoles: &apos; +ODEsfdcRoles);
+var sfdcAdminProfiles = &apos;{!$Label.SFDC_Admin_Profiles}&apos;;
+//16011	
+var today = new Date();
+//16011
+var date =(today.getMonth()+1)+&apos;/&apos;+today.getDate()+&apos;/&apos;+today.getFullYear();
+var PrgTransaction= new sforce.SObject(&quot;CLQ_Program_Transaction__c&quot;); 
+PrgTransaction.Id = &apos;{!CLQ_Program_Transaction__c.Id}&apos;; 
+
+//To prevent multiple onsite visit records against a singular program transaction.
+var OnsiteExists = false;
+var existingOnsiteVisits = sforce.connection.query(&quot;SELECT Id, CLQ_Program_Transaction__c FROM CLQ_Inspection__c WHERE RecordType.Name = &apos;Onsite Visit Record Type&apos; AND CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos;&quot;);
+var existingOnsiteVisitRecords = existingOnsiteVisits.getArray(&quot;records&quot;);
+if(existingOnsiteVisitRecords.length &gt; 0){
+	OnsiteExists = true;
+}
+
+//To verify for transaction docs with under review
+// 13747 - Updated the query  and checking the points/rating
+var transDocs = sforce.connection.query(&quot;Select Id,Name,Document_Points__c,Rating__c,CLQ_Standard_Detail_Document__r.Possible_Points__c,CLQ_Standard_Detail_Document__r.Possible_Ratings__c from CLQ_Transaction_Document__c where CLQ_Program_Transaction__c = &apos;{!CLQ_Program_Transaction__c.Id}&apos; and CLQ_Document_Status__c NOT IN (&apos;Denied&apos;,&apos;Not Verified&apos;)&quot;) ; 
+var records = transDocs.getArray(&quot;records&quot;);
+var isRatingorPointsNull= false ;
+for(var i=0 ; i&lt; records.length ; i++){
+	
+	// Check for Ratings 
+	if(records[i].CLQ_Standard_Detail_Document__r.Possible_Ratings__c != null ){
+		if(records[i].Rating__c == null){
+			isRatingorPointsNull = true ; 
+		}
+	}
+	// Check for Points 
+	if(records[i].CLQ_Standard_Detail_Document__r.Possible_Points__c != null ){
+		if(records[i].Document_Points__c == null){
+			isRatingorPointsNull = true ; 
+		}
+	}
+
+}
+
+ 
+if(OnsiteExists){
+	ErrMsg = &apos;An Onsite Visit record has already been created for this transaction. Please contact OCLQS Helpdesk for further assistance.&apos;;
+}
+else if( isRatingorPointsNull == true || (&apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == null || &apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == &apos;&apos; || &apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == &apos;0&apos; ) ){ 
+		ErrMsg = &apos;Document Rating/Point is null or Recommended Rating is null - System cannot create a new Onsite Visit.&apos;; 
+	}
+//16011
+else if((&apos;{!CLQ_Program_Transaction__c.Recommended_Rating__c}&apos; == &apos;2&apos;) &amp;&amp; 
+(date &lt; &apos;{!CLQ_Program_Transaction__c.X2_Star_Re_Registration_Date__c}&apos;))
+{
+ErrMsg = &apos;Recommended review rating is 2 and current date falls before the 2 star re-register date&apos;;
+}
+else if(sfdcAdminProfiles.indexOf(proname) != -1){
+	CreateOnSite = true;
+}
+else if(rolename == &apos;&apos; || rolename ==  null){
+	ErrMsg = &apos;You do not have a Role - System cannot create a new Onsite Visit. Please contact OCLQS Helpdesk.&apos;;
+}
+//CCC, FCC Programs
+else if (&quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;Child Care Center&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;FCC - Type A Home&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;FCC - Type B Home&quot;)
+{
+	var rolenameUC = rolename.toUpperCase();
+	var usrCounty = &apos;&apos;;
+	if(rolenameUC.indexOf(&apos;COUNTY&apos;) &gt;=0){
+		usrCounty = rolenameUC.substring(0, rolenameUC.indexOf(&apos;COUNTY&apos;)).trim();
+	}
+	if((usrCounty != &apos;&apos; &amp;&amp; (&apos;{!$Label.SUTQ_AKRON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_CLEVELAND_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_COLUMBUS_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_DAYTON_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0 || &apos;{!$Label.SUTQ_TOLEDO_District_Counties}&apos;.indexOf(usrCounty) &gt;= 0)) || rolenameUC.indexOf(&apos;NOCAC&apos;) || rolenameUC.indexOf(&apos;SOUTH CENTRAL&apos;)){
+		CreateOnSite = true;
+	}else if(JFSsfdcRoles.indexOf(rolename) != -1)
+		CreateOnSite = true;
+	else
+		ErrMsg = &apos;You do not have a &quot;JFS Role&quot; - System cannot create a new Onsite Visit for this Child Care Center program transaction.&apos;;
+}
+//ODE Programs
+else if (&quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;Pre School&quot; || &quot;{!CLQ_Program_Transaction__c.CLQ_Program_Type_Formula__c}&quot; == &quot;School Age Child Care&quot;)
+{
+	if(ODEsfdcRoles.indexOf(rolename) != -1)
+		CreateOnSite = true;
+	else
+		ErrMsg = &apos;You do not have a &quot;ODE Role&quot; - System cannot create a new Onsite Visit for this ODE program transaction.&apos;;
+}
+
+//alert(&apos;flag: &apos; +CreateOnSite)	
+if(CreateOnSite){
+	if(&apos;{!CLQ_Program_Transaction__c.RecordType}&apos; == &quot;SUTQ - Initial Registration&quot; || &apos;{!CLQ_Program_Transaction__c.RecordType}&apos; == &quot;SUTQ - Ongoing Registration&quot;){ 
+		PrgTransaction.CLQ_Transaction_Status__c = &apos;Onsite Visit Pending&apos;; 
+		var result = sforce.connection.update([PrgTransaction]); 
+		window.location.href= &apos;/apex/CLQ_CreateOnsiteVisitInspection?id={!CLQ_Program_Transaction__c.Id}&apos;; 
+	}
+	else{ 
+		alert(&apos;Onsite Visit can only be created from SUTQ Initial or Ongoing registrations.&apos;); 
+	} 
+}
+else 
+	alert(ErrMsg);</url>
+</WebLink>

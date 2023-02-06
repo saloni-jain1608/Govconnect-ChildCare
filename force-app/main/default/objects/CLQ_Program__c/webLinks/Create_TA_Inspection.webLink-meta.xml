@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_TA_Inspection</fullName>
+    <availability>online</availability>
+    <description>This button is used to create TA Inspections</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create TA Inspection</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/apex.js&quot;)}
+
+var progStatus = &apos;{!CLQ_Program__c.CLQ_Program_Status__c}&apos;; 
+var allowedProgStatus = [&apos;Open&apos;,&apos;Enforcement&apos;,&apos;Inactive&apos;];
+var profname = &apos;{!$Profile.Name}&apos;;
+var allowedProfiles = &apos;{!$Label.TAAllowedProfiles}&apos; ; 
+var iscreatable = true;
+var errorMessage = &apos;&apos;;
+
+if(!allowedProgStatus.includes(progStatus)){
+   iscreatable = false;
+   errorMessage = errorMessage + &apos;Program status not in Open, Inactive, Enforcement.&apos;;
+}
+if(allowedProfiles.indexOf(profname) == -1 ){
+   iscreatable = false;
+   errorMessage = errorMessage + &apos;You are not allowed to create this inspection.&apos;;
+}
+  
+
+
+if(iscreatable){
+   window.location.href= &apos;/apex/CLQ_CreateTAInspection?id={!CLQ_Program__c.Id}&apos;;
+}
+else{
+  alert(errorMessage);
+}</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Anniv_Date_120_Days_away__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Annual Report- Anniversary Date greater than 120 days away</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box allows a program to create an Annual Report outside of the eligible time-frame.</inlineHelpText>
+    <label>Late Annual Report Override</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

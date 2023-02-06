@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Enforcement Approvals</description>
+        <label>Manager Review Deny</label>
+        <name>Manager_Review1</name>
+    </approvalStep>
+    <description>This will be used by enforcement deny for the first round of approval</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>CLQ_Start_Approval__c = true &amp;&amp;  RecordType.Name =  $Label.CLQ_Case_Enforcement_Suspension_Submitted_RecType &amp;&amp;   TEXT(CLQ_Activity_Type__c) =  $Label.CLQ_Case_Activity_Type_Enforcement &amp;&amp; CLQ_Closed_Case_Actions_Enforcement__c &gt; 0</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CLQ_Approval_Start_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Close_Case</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>CLQ_Approval_Start_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CLQ_Returned_For_Reviewer</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Enforcement Approval Deny</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>5</processOrder>
+    <recallActions>
+        <action>
+            <name>CLQ_Approval_Start_False</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>
